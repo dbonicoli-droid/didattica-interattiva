@@ -1,4 +1,5 @@
 ---
+body-classes: course-background
 title: "Capire. Sperimentare. Collegare."
 subtitle: "Elettronica, elettrotecnica e automazione"
 page-layout: full

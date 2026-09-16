@@ -1,0 +1,27 @@
+﻿.glossary-link {
+  text-decoration-style: dotted;
+  text-underline-offset: .18em;
+}
+.glossary-tooltip {
+  position: fixed;
+  z-index: 1100;
+  width: max-content;
+  max-width: min(24rem, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  padding: .8rem 1rem;
+  border: 1px solid #bdd4d8;
+  border-top: 3px solid #00838a;
+  border-radius: .5rem;
+  background: #fff;
+  color: #18364f;
+  box-shadow: 0 8px 25px rgb(20 44 68 / 16%);
+  font: 400 .95rem/1.5 system-ui, sans-serif;
+  overflow-wrap: anywhere;
+}
+.glossary-tooltip[hidden] { display: none; }
+.glossary-tooltip strong { display: block; margin-bottom: .25rem; }
+.glossary-tooltip span { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  .glossary-tooltip { scroll-behavior: auto; }
+}

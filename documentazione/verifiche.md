@@ -11,3 +11,10 @@ Data: 16 settembre 2026.
 - PDF distribuiti: copie delle edizioni precedenti, non ancora rigenerate dalle nuove sorgenti Quarto.
 
 La verifica non costituisce revisione scientifica indipendente di tutte le dispense. Rimane la prova fisica con penna e proiezione in aula.
+## Revisione mappe, sfondo e suggerimenti
+
+- Render completo Quarto riuscito.
+- Chrome desktop e mobile: quattro mappe in testo nativo, nessun overflow di pagina.
+- Vignetta caricata correttamente, opacità verificata 0,1; controllo visivo delle mappe.
+- Tooltip verificati su tutti e quattro i corsi; hover, focus, Escape, passaggio al riquadro e navigazione con clic/tocco verificati.
+- Controlli RC ancora superati.

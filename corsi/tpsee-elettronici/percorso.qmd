@@ -1,4 +1,5 @@
 ---
+body-classes: course-background
 title: "La mappa del percorso"
 ---
 
@@ -14,9 +15,58 @@ title: "La mappa del percorso"
   4            [Reti sequenziali](glossario.qmd#gloss-g44)              30             2
                **Totale**                                          **150** 
 
-::: center
-![Schema didattico 1](/assets/dispense/tpsee-elettronici/figura-1.png){fig-alt="Schema didattico 1 della dispensa TPSEE · Elettronici"}
+:::: {.learning-map aria-label="Moduli in ordine di studio"}
+
+::: {.map-card}
+
+### 01 / Progetto di sistemi
+
+- Schemi elettrici e simboli standard.
+- Simulazione di circuiti con [Multisim](glossario.qmd#gloss-g37).
+- Circuiti stampati: [PCB](glossario.qmd#gloss-g41) (Printed Circuit Board), con [Ultiboard](glossario.qmd#gloss-g52).
+
+**20 ore** · [Vai al modulo 1 →](modulo-1.qmd)
+
 :::
+
+::: {.map-card}
+
+### 02 / Elementi di logica
+
+- [Algebra di Boole](glossario.qmd#gloss-g1): operazioni su 0 e 1.
+- Regole logiche e leggi di De Morgan.
+- Semplificazione delle funzioni logiche.
+
+**30 ore** · [Vai al modulo 2 →](modulo-2.qmd)
+
+:::
+
+::: {.map-card}
+
+### 03 / Logica digitale cablata
+
+- Porte logiche e loro combinazioni.
+- Semplificazione: mappe di [Karnaugh](glossario.qmd#gloss-g32).
+- Circuiti per sommare e confrontare.
+- Decodifica, selezione e visualizzazione dei dati: [decoder](glossario.qmd#gloss-g13), [multiplexer](glossario.qmd#gloss-g38) e display.
+
+**70 ore** · [Vai al modulo 3 →](modulo-3.qmd)
+
+:::
+
+::: {.map-card}
+
+### 04 / [Reti sequenziali](glossario.qmd#gloss-g44)
+
+- [Latch](glossario.qmd#gloss-g33) e [flip-flop](glossario.qmd#gloss-g18): memorie di un [bit](glossario.qmd#gloss-g7) (Binary Digit, cifra binaria).
+- Circuiti per contare gli eventi.
+- Contatori asincroni e sincroni: due modi di coordinare il conteggio.
+
+**30 ore** · [Vai al modulo 4 →](modulo-4.qmd)
+
+:::
+
+::::
 
 []{#nav:indice label="nav:indice"}
 

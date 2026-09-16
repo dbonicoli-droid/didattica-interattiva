@@ -1,4 +1,5 @@
 ---
+body-classes: course-background
 title: "La mappa del percorso"
 ---
 
@@ -15,9 +16,75 @@ title: "La mappa del percorso"
        5       Circuiti sequenziali                         2          24
        6       Tempi, eventi e grandezze analogiche         2          24
 
-::: center
-![Schema didattico 1](/assets/dispense/sistemi-automatici/figura-1.png){fig-alt="Schema didattico 1 della dispensa Sistemi automatici"}
+:::: {.learning-map aria-label="Moduli in ordine di studio"}
+
+::: {.map-card}
+
+### 01 / Osservare e modellare
+
+- [Ingressi](glossario.qmd#gloss-s9), [uscite](glossario.qmd#gloss-s26) e modelli.
+- Algoritmi e [Flowgorithm](glossario.qmd#gloss-s6).
+
+[Vai al modulo 1 →](modulo-1.qmd)
+
 :::
+
+::: {.map-card}
+
+### 02 / Ragionare con la logica
+
+- Porte e [tabelle di verità](glossario.qmd#gloss-s50).
+- Semplificare le funzioni.
+
+[Vai al modulo 2 →](modulo-2.qmd)
+
+:::
+
+::: {.map-card}
+
+### 03 / Conoscere il [PLC](glossario.qmd#gloss-s41)
+
+- Architettura, [I/O](glossario.qmd#gloss-s31) e [scansione](glossario.qmd#gloss-s22).
+- Configurare e collaudare.
+
+[Vai al modulo 3 →](modulo-3.qmd)
+
+:::
+
+::: {.map-card}
+
+### 04 / Combinare le condizioni
+
+- [Ladder](glossario.qmd#gloss-s12), blocchi e testo.
+- Confrontare le simulazioni.
+
+[Vai al modulo 4 →](modulo-4.qmd)
+
+:::
+
+::: {.map-card}
+
+### 05 / Organizzare le sequenze
+
+- [Stati](glossario.qmd#gloss-s24), transizioni e [uscite](glossario.qmd#gloss-s26).
+- Memoria e interblocchi.
+
+[Vai al modulo 5 →](modulo-5.qmd)
+
+:::
+
+::: {.map-card}
+
+### 06 / Gestire tempi e misure
+
+- [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61).
+- [Segnali analogici](glossario.qmd#gloss-new75) e [scalatura](glossario.qmd#gloss-s65).
+
+[Vai al modulo 6 →](modulo-6.qmd)
+
+:::
+
+::::
 
 []{#nav:indice label="nav:indice"}
 

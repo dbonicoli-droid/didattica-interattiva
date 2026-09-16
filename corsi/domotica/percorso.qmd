@@ -1,4 +1,5 @@
 ---
+body-classes: course-background
 title: "La mappa del percorso"
 ---
 
@@ -20,15 +21,30 @@ Educazione civica: efficientamento energetico, 2 ore.
 
 Legge di Ohm, collegamenti elettrici, logica booleana e lettura di semplici schemi.
 
-[Riprendi le conoscenze di base con schemi ed esempi](conoscenze-di-base.qmd#sec:basi-dettagli) (p. ). [Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
+[Riprendi le conoscenze di base con schemi ed esempi](conoscenze-di-base.qmd#sec:basi-dettagli). [Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
 
 #### Il filo conduttore
 
 Una richiesta viene verificata insieme ai consensi; il programma aggiorna lo stato; le uscite comandano gli [attuatori](glossario.qmd#gloss-new44). Le misure permettono di osservare ciò che avviene nel processo.
 
-::: center
-![Schema didattico 1](/assets/dispense/domotica/figura-1.png){fig-alt="Schema didattico 1 della dispensa Domotica e automazione"}
+:::: {.process-map aria-label="Dal segnale al comando"}
+
+::: {.map-card}
+### 1 / Richieste e sensori
+Richieste e [sensori](glossario.qmd#gloss-new43).
 :::
+
+::: {.map-card}
+### 2 / PLC
+[PLC](glossario.qmd#gloss-d29): logica e stato.
+:::
+
+::: {.map-card}
+### 3 / Interfacce e attuatori
+Interfacce e [attuatori](glossario.qmd#gloss-new44).
+:::
+
+::::
 
 ## Come usare gli esempi
 

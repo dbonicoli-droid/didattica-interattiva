@@ -61,3 +61,6 @@ format:
 lang: it
 execute:
   enabled: false
+
+filters:
+  - scripts/glossary-filter.lua

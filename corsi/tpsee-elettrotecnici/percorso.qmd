@@ -1,4 +1,5 @@
 ---
+body-classes: course-background
 title: "La mappa del percorso"
 ---
 
@@ -16,9 +17,64 @@ title: "La mappa del percorso"
 
 Educazione civica: 5 ore.
 
-::: center
-![Schema didattico 1](/assets/dispense/tpsee-elettrotecnici/figura-1.png){fig-alt="Schema didattico 1 della dispensa TPSEE · Elettrotecnici"}
+:::: {.learning-map aria-label="Moduli in ordine di studio"}
+
+::: {.map-card}
+
+### 01 / Norme e documenti
+
+- Distinguere leggi e norme tecniche.
+- Riconoscere organismi normatori e documenti dell’[impianto](glossario.qmd#gloss-e47).
+
+[Vai al modulo 1 →](modulo-1.qmd)
+
 :::
+
+::: {.map-card}
+
+### 02 / Disegnare un [impianto](glossario.qmd#gloss-e47)
+
+- Leggere schemi funzionali, unifilari, multifilari e planimetrie.
+- Usare simboli, [legenda](glossario.qmd#gloss-e49) e [ProgeCAD](glossario.qmd#gloss-e36).
+
+[Vai al modulo 2 →](modulo-2.qmd)
+
+:::
+
+::: {.map-card}
+
+### 03 / Scegliere i componenti
+
+- Riconoscere cavi, canalizzazioni, prese e dispositivi di comando.
+- Comprendere [deviatori](glossario.qmd#gloss-e11), [invertitori](glossario.qmd#gloss-e23), relè e servizi dell’abitazione.
+
+[Vai al modulo 3 →](modulo-3.qmd)
+
+:::
+
+::: {.map-card}
+
+### 04 / Conoscere i materiali
+
+- Collegare proprietà elettriche, meccaniche e termiche agli impieghi.
+- Confrontare conduttori, isolanti e comportamento al calore.
+
+[Vai al modulo 4 →](modulo-4.qmd)
+
+:::
+
+::: {.map-card}
+
+### 05 / Progettare l’illuminazione
+
+- Distinguere grandezze fotometriche e sorgenti luminose.
+- Stimare il numero di apparecchi e introdurre [DIALux](glossario.qmd#gloss-e12).
+
+[Vai al modulo 5 →](modulo-5.qmd)
+
+:::
+
+::::
 
 []{#nav:indice label="nav:indice"}
 
