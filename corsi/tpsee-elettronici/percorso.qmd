@@ -1,0 +1,22 @@
+---
+title: "La mappa del percorso"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+
+[]{#nav:mappa}
+
+  **Modulo**   **Titolo**                                          **Ore**   **Periodo**
+  ------------ ------------------------------------------------- --------- -------------
+  1            Il progetto di sistemi elettrici ed elettronici          20             1
+  2            Elementi di logica                                       30             1
+  3            Elettronica digitale in logica cablata                   70             2
+  4            [Reti sequenziali](glossario.qmd#gloss-g44)              30             2
+               **Totale**                                          **150** 
+
+::: center
+![Schema didattico 1](/assets/dispense/tpsee-elettronici/figura-1.png){fig-alt="Schema didattico 1 della dispensa TPSEE · Elettronici"}
+:::
+
+[]{#nav:indice label="nav:indice"}
+

@@ -1,0 +1,87 @@
+---
+title: "Modulo 1 / Normativa e legislazione"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#mod:1}
+
+**Primo periodo · 10 ore**
+
+Un [impianto](glossario.qmd#gloss-e47) deve funzionare, essere documentato e rispettare requisiti di sicurezza. Le norme tecniche danno un linguaggio comune e criteri per progettare, costruire e verificare.
+
+## U.D. 1.1 / Normalizzazione, unificazione e armonizzazione {#ud:1.1}
+
+- **Normalizzazione**: regole condivise su termini, caratteristiche e prove.
+
+- **Unificazione**: dimensioni, simboli e soluzioni comuni.
+
+- **Armonizzazione**: coerenza fra documenti e requisiti di paesi e sistemi diversi.
+
+Un connettore con forma, dimensioni e prestazioni definite può essere identificato correttamente e impiegato con componenti compatibili. La compatibilità meccanica, però, non garantisce da sola quella elettrica.
+
+#### Tre domande utili
+
+- Normalizzare: quali regole condividiamo?
+
+- Unificare: quali soluzioni rendiamo comuni?
+
+- Armonizzare: come rendiamo coerenti regole di contesti diversi?
+
+## U.D. 1.2 / Organismi normatori {#ud:1.2}
+
+- **[IEC](glossario.qmd#gloss-e20)** (International Electrotechnical Commission): livello internazionale.
+
+- **[CENELEC](glossario.qmd#gloss-e8)** (Comité Européen de Normalisation Électrotechnique): livello europeo.
+
+- **[CEI](glossario.qmd#gloss-e6)** (Comitato Elettrotecnico Italiano): normazione elettrotecnica italiana.
+
+- **[UNI](glossario.qmd#gloss-e45)** (Ente Italiano di Normazione): altri settori della normazione italiana.
+
+- Gli organismi normatori elaborano norme tecniche; le autorità competenti emanano le leggi.
+
+::: center
+![Schema didattico 2](/assets/dispense/tpsee-elettrotecnici/figura-2.png){fig-alt="Schema didattico 2 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Relazioni semplificate: una sigla [CEI](glossario.qmd#gloss-e6) [EN](glossario.qmd#gloss-e17) [IEC](glossario.qmd#gloss-e20) può richiamare più livelli di normazione.*
+
+#### Leggere un riferimento
+
+In un progetto compare "[CEI](glossario.qmd#gloss-e6) 64-8". Non è il nome di un componente: è un riferimento normativo per gli [impianti](glossario.qmd#gloss-e47) elettrici utilizzatori di bassa [tensione](glossario.qmd#gloss-new54). Per usarlo occorre individuare l'edizione applicabile, la parte e il requisito pertinente.
+
+**Prova tu.** Perché una [legenda](glossario.qmd#gloss-e49) è utile anche se i simboli sono convenzionali?
+
+*Risposta: chiarisce sigle, varianti e convenzioni adottate nel documento.*
+
+## Leggi e norme nel progetto {#topic:2}
+
+## U.D. 1.3 / Leggi principali nel settore elettrico {#ud:1.3}
+
+- **Legge**: impone obblighi.
+
+- **Norma tecnica**: descrive soluzioni e criteri tecnici; può essere richiamata da una legge.
+
+  **Riferimento**                                                   **Idea da ricordare**
+  ----------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Legge 186/1968                                                    Materiali e [impianti](glossario.qmd#gloss-e47) elettrici ed elettronici devono essere realizzati a regola d'arte; la legge riconosce il ruolo delle norme [CEI](glossario.qmd#gloss-e6).
+  [D.M.](glossario.qmd#gloss-e51) (decreto ministeriale) 37/2008    Disciplina gli [impianti](glossario.qmd#gloss-e47) negli edifici: imprese abilitate, progettazione e dichiarazione di conformità, secondo il campo e le condizioni previsti.
+  [D.Lgs.](glossario.qmd#gloss-e52) (decreto legislativo) 81/2008   Quadro della salute e sicurezza sul lavoro: valutazione dei rischi, prevenzione, formazione e responsabilità.
+  Norma [CEI](glossario.qmd#gloss-e6) 64-8                          Riferimento tecnico per progettazione, scelta dei componenti e verifica degli [impianti](glossario.qmd#gloss-e47) utilizzatori di bassa [tensione](glossario.qmd#gloss-new54).
+
+La documentazione segue l'[impianto](glossario.qmd#gloss-e47): descrive cosa è stato previsto e realizzato e permette di comprenderlo durante manutenzione e verifiche. La dichiarazione di conformità è rilasciata dall'impresa installatrice nei casi previsti, con gli allegati pertinenti.
+
+::: center
+![Schema didattico 3](/assets/dispense/tpsee-elettrotecnici/figura-3.png){fig-alt="Schema didattico 3 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+#### Funzionare non basta
+
+Una lampada può accendersi anche in un [impianto](glossario.qmd#gloss-e47) con connessioni difettose o protezioni inadeguate. La prova funzionale conferma il comportamento; le verifiche di sicurezza controllano altri requisiti, con strumenti e procedure appropriati.
+
+#### Esercizio di documentazione
+
+Una presa funziona, ma nello schema non compare e il [circuito](glossario.qmd#gloss-e46) che la alimenta non è identificato. Qual è il problema?
+
+**Soluzione.** La corrispondenza fra [impianto](glossario.qmd#gloss-e47) e documentazione è incompleta: prima di intervenire servono identificazione e aggiornamento degli elaborati, a cura di chi ne ha competenza.
+

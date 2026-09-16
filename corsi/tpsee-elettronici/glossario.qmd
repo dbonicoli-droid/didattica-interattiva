@@ -1,0 +1,326 @@
+---
+title: Glossario
+---
+
+[← Panoramica del corso](index.qmd)
+
+## Algebra di Boole {#gloss-g1}
+
+Sistema di regole per variabili che assumono i valori logici 0 e 1.
+
+## AND, OR, NOT {#gloss-g2}
+
+Operazioni logiche: congiunzione, disgiunzione inclusiva e negazione.
+
+## ASCII {#gloss-g3}
+
+(American Standard Code for Information Interchange): codifica di caratteri su sette bit.
+
+## Attivo alto/basso {#gloss-g4}
+
+Un comando attivo alto agisce con livello logico 1; un comando attivo basso agisce con livello logico 0. La barra sul nome o una bolla nel simbolo indica il comando attivo basso.
+
+## BCD {#gloss-g5}
+
+Binary Coded Decimal: codifica di ciascuna cifra decimale con quattro bit.
+
+## binary32 {#gloss-g6}
+
+Formato binario in virgola mobile su 32 bit: segno, esponente e frazione.
+
+## Bit {#gloss-g7}
+
+Binary Digit: cifra binaria, 0 oppure 1.
+
+## Breadboard {#gloss-g8}
+
+Basetta riutilizzabile per montare circuiti senza saldature. Contatti metallici interni collegano gruppi di fori; la fessura centrale separa i due gruppi di ciascuna fila.
+
+## Byte {#gloss-g9}
+
+Gruppo di otto bit.
+
+## Carry {#gloss-g10}
+
+Riporto prodotto da una somma binaria e passato alla posizione successiva.
+
+## Clock / CLK {#gloss-g11}
+
+CLK (Clock): segnale temporale usato per coordinare gli aggiornamenti di un circuito sequenziale.
+
+## Comparatore {#gloss-g12}
+
+Circuito che confronta due valori e segnala uguaglianza o relazione di ordine.
+
+## Decoder {#gloss-g13}
+
+Decodificatore: attiva le uscite associate al codice applicato agli ingressi.
+
+## Display a 7 segmenti {#gloss-g14}
+
+Indicatore formato da sette elementi luminosi, combinati per visualizzare cifre.
+
+## DRC {#gloss-g15}
+
+(Design Rule Check): controllo delle regole di progetto del circuito stampato.
+
+## Enable {#gloss-g16}
+
+Ingresso di abilitazione che consente una funzione quando è nello stato attivo.
+
+## ENC {#gloss-g17}
+
+Sigla dell'indirizzo Elettronica usata nella denominazione della classe.
+
+## Flip-flop / FF {#gloss-g18}
+
+FF (Flip-Flop): elemento di memoria che aggiorna lo stato in corrispondenza di un fronte del clock, nel modello studiato.
+
+## Footprint {#gloss-g19}
+
+Impronta del componente sul circuito stampato: piazzole e geometria di montaggio.
+
+## Full adder / FA {#gloss-g20}
+
+FA (Full Adder), sommatore completo: somma due bit e un riporto entrante, producendo somma e riporto uscente.
+
+## GND {#gloss-g21}
+
+(Ground): massa, nodo di riferimento delle tensioni del circuito; non indica necessariamente la terra di protezione.
+
+## Gray {#gloss-g22}
+
+Codice binario in cui due valori consecutivi sono rappresentati da sequenze che differiscono per un solo bit.
+
+## Half adder / HA {#gloss-g23}
+
+HA (Half Adder), semisommatore: somma due bit, senza ingresso di riporto.
+
+## Hex {#gloss-g24}
+
+(Hexadecimal): esadecimale, rappresentazione dei numeri in base sedici.
+
+## IEC {#gloss-g25}
+
+International Electrotechnical Commission: organismo internazionale di normazione elettrotecnica.
+
+## IEEE {#gloss-g26}
+
+(Institute of Electrical and Electronics Engineers): organizzazione che pubblica standard tecnici per elettronica e informatica.
+
+## IETF {#gloss-g27}
+
+(Internet Engineering Task Force): organizzazione che sviluppa standard tecnici per Internet.
+
+## ISO {#gloss-g28}
+
+International Organization for Standardization: organismo internazionale di normazione.
+
+## ITIS {#gloss-g29}
+
+Istituto Tecnico Industriale Statale.
+
+## ITP {#gloss-g30}
+
+Insegnante Tecnico Pratico: docente delle attività tecnico-pratiche e di laboratorio.
+
+## JK {#gloss-g31}
+
+Sigla degli ingressi di un tipo di flip-flop; con J e K entrambi a 1, lo stato commuta al fronte attivo.
+
+## Karnaugh {#gloss-g32}
+
+Mappa per semplificare funzioni booleane raggruppando celle adiacenti, disposte in ordine Gray.
+
+## Latch {#gloss-g33}
+
+Elemento di memoria sensibile a un livello di abilitazione o alle condizioni degli ingressi.
+
+## LED {#gloss-g34}
+
+Light Emitting Diode: diodo che emette luce quando è percorso da corrente nelle condizioni previste.
+
+## LF {#gloss-g35}
+
+(Line Feed): carattere di controllo per l'avanzamento di riga; codice ASCII 10.
+
+## LSB / MSB {#gloss-g36}
+
+LSB (Least Significant Bit) e MSB (Most Significant Bit): bit meno significativo e più significativo di una parola binaria.
+
+## Multisim {#gloss-g37}
+
+Ambiente per disegnare e simulare circuiti elettrici ed elettronici.
+
+## MUX {#gloss-g38}
+
+Multiplexer: seleziona uno fra più ingressi e lo trasferisce all'uscita, secondo i selettori.
+
+## NaN {#gloss-g39}
+
+(Not a Number): valore speciale dei formati in virgola mobile, per risultati numerici non definiti.
+
+## NAND / NOR {#gloss-g40}
+
+NAND (NOT AND) e NOR (NOT OR): negazioni rispettivamente delle operazioni AND e OR; ciascun tipo di porta è universale.
+
+## PCB {#gloss-g41}
+
+Printed Circuit Board: circuito stampato che sostiene e collega i componenti.
+
+## PDF {#gloss-g42}
+
+Portable Document Format: formato usato per distribuire e stampare documenti.
+
+## Rete combinatoria {#gloss-g43}
+
+Circuito la cui uscita dipende dagli ingressi correnti, trascorso il ritardo di propagazione.
+
+## Rete sequenziale {#gloss-g44}
+
+Circuito con memoria: il comportamento dipende anche dallo stato precedente.
+
+## RFC {#gloss-g45}
+
+(Request for Comments): serie di documenti tecnici su Internet; alcuni definiscono standard, come RFC 3629 per la codifica del testo.
+
+## SR {#gloss-g46}
+
+Set--Reset: ingressi o funzione di impostazione e azzeramento di una memoria.
+
+## T {#gloss-g47}
+
+(Toggle): ingresso di un flip-flop che, se attivo, fa commutare lo stato al fronte di clock.
+
+## Tabella di verità {#gloss-g48}
+
+Elenco di tutte le combinazioni degli ingressi e dei corrispondenti valori delle uscite.
+
+## TI {#gloss-g49}
+
+(Texas Instruments): produttore di componenti elettronici.
+
+## TPSEE {#gloss-g50}
+
+Tecnologie e Progettazione di Sistemi Elettrici ed Elettronici.
+
+## U.D. {#gloss-g51}
+
+Unità Didattica: parte di un modulo del programma.
+
+## Ultiboard {#gloss-g52}
+
+Ambiente per la disposizione dei componenti e il disegno delle piste di un PCB.
+
+## Unicode {#gloss-g53}
+
+Standard di codifica dei caratteri mediante punti di codice.
+
+## UTF-8 {#gloss-g54}
+
+(Unicode Transformation Format, 8 bit): codifica dei punti di codice dei caratteri Unicode con sequenze da uno a quattro byte.
+
+## VCC {#gloss-g55}
+
+V indica la tensione, CC richiama i collettori dei transistor bipolari. Sigla del terminale di alimentazione positiva degli integrati qui studiati; il valore va letto nel datasheet.
+
+## XOR {#gloss-g56}
+
+Exclusive OR: con due ingressi vale 1 quando i valori sono diversi.
+
+## Carico {#gloss-g57}
+
+Dispositivo o circuito che assorbe energia elettrica dalla sorgente a cui è collegato. Collegato all'uscita di un circuito, può modificarne la tensione.
+
+## Piedinatura {#gloss-g58}
+
+Disposizione e numerazione dei piedini (pin) di un componente, con la funzione di ciascuno.
+
+## Pilotaggio / driver {#gloss-g59}
+
+Il pilotaggio fornisce a un dispositivo i segnali, la tensione e la corrente necessari al suo funzionamento. Il driver è il circuito che svolge questo compito.
+
+## Strobe {#gloss-g60}
+
+Ingresso di abilitazione: consente o blocca il funzionamento del componente. Nei multiplexer qui studiati è attivo basso: 0 abilita la selezione, 1 la disabilita.
+
+## Modulo di un contatore {#gloss-g61}
+
+Numero di stati distinti del ciclo di conteggio prima che la sequenza si ripeta. Un contatore modulo 8 percorre otto stati, da 0 a 7, poi torna a 0.
+
+## TTL {#gloss-g62}
+
+Transistor-Transistor Logic: famiglia di circuiti logici realizzati con transistor bipolari.
+
+## NPN / PNP {#gloss-g63}
+
+Sequenze dei materiali semiconduttori di tipo N e P che formano i transistor bipolari; identificano i due tipi di transistor.
+
+## Netlist {#gloss-g64}
+
+Elenco delle connessioni elettriche fra i terminali dei componenti di un circuito.
+
+## Complemento a due {#gloss-g65}
+
+Codifica degli interi con segno su un numero fissato di bit. Per ottenere l'opposto, se rappresentabile, si invertono tutti i bit e si aggiunge 1.
+
+## Overflow {#gloss-g66}
+
+Il risultato matematico non rientra nell'intervallo rappresentabile nel formato scelto.
+
+## Rete {#gloss-g67}
+
+Insieme di componenti collegati che realizzano una funzione elettrica o elettronica.
+
+## Tensione {#gloss-new68}
+
+Differenza di potenziale elettrico fra due punti; si misura in volt (V).
+
+## Corrente {#gloss-new69}
+
+Quantità di carica elettrica che attraversa una sezione del circuito nell'unità di tempo; si misura in ampere (A).
+
+## Resistenza {#gloss-new70}
+
+Grandezza che descrive quanto un componente ostacola il passaggio della corrente; si misura in ohm. Per un resistore ohmico vale V = R I.
+
+## Segnale analogico {#gloss-new71}
+
+Segnale il cui valore può variare con continuità entro un intervallo.
+
+## Segnale digitale {#gloss-new72}
+
+Segnale rappresentato mediante un insieme discreto di valori; nel caso binario i valori logici sono 0 e 1.
+
+## Retroazione {#gloss-new73}
+
+Collegamento che riporta una misura dell'uscita all'ingresso del sistema per influenzarne il comportamento.
+
+## Fronte di salita {#gloss-new74}
+
+Passaggio di un segnale logico da 0 a 1; va distinto dal mantenimento del valore 1.
+
+## Fronte di discesa {#gloss-new75}
+
+Passaggio di un segnale logico da 1 a 0; va distinto dal mantenimento del valore 0.
+
+## Variabile booleana {#gloss-new76}
+
+Variabile che può assumere soltanto due valori logici: vero o falso, rappresentati con 1 e 0.
+
+## Integrato {#gloss-new77}
+
+Componente che contiene molti elementi elettronici realizzati e collegati su un piccolo chip di materiale semiconduttore.
+
+## Livello logico {#gloss-new78}
+
+Valore logico 0 o 1 associato a un intervallo di tensioni riconosciuto dal circuito; le soglie dipendono dalla famiglia del componente.
+
+## Sincrono {#gloss-new79}
+
+Sistema in cui gli aggiornamenti dello stato sono coordinati da un segnale di clock comune.
+
+## Asincrono {#gloss-new80}
+
+Sistema in cui i cambiamenti non sono coordinati da un unico clock comune: possono dipendere dagli ingressi o propagarsi fra gli stadi.
+

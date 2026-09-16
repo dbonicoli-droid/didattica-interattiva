@@ -1,0 +1,135 @@
+---
+title: "Modulo 4 / Reti sequenziali"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+
+[]{#mod:4}
+
+**30 ore · Secondo periodo**
+
+Una **[rete sequenziale](glossario.qmd#gloss-g44)** è un circuito con memoria: il suo comportamento dipende dagli ingressi presenti e dallo **stato**, cioè dall'informazione conservata al suo interno. Per esempio, un contatore ricorda quanti impulsi ha ricevuto. Studieremo prima gli elementi che memorizzano un [bit](glossario.qmd#gloss-g7), poi come collegarli per contare.
+
+## La [retroazione](glossario.qmd#gloss-new73): un segnale torna in ingresso
+
+La **[retroazione](glossario.qmd#gloss-new73)** consiste nel riportare un segnale d'uscita a una parte precedente del circuito. In una [rete sequenziale](glossario.qmd#gloss-g44), lo stato conservato nella memoria torna alla logica e contribuisce a determinare ciò che accadrà dopo.
+
+::: center
+![Schema didattico 22](/assets/dispense/tpsee-elettronici/figura-22.png){fig-alt="Schema didattico 22 della dispensa TPSEE · Elettronici"}
+:::
+
+Il [latch](glossario.qmd#gloss-g33) è un esempio elementare: la [retroazione](glossario.qmd#gloss-new73) fra le porte permette di conservare un [bit](glossario.qmd#gloss-g7). Nello schema generale la memoria è mostrata come un blocco; nel [latch](glossario.qmd#gloss-g33) vedremo le porte che la realizzano.
+
+## [Clock](glossario.qmd#gloss-g11), livelli e fronti
+
+Il **[clock](glossario.qmd#gloss-g11)** è un segnale che alterna regolarmente 0 e 1 e scandisce gli aggiornamenti. Il **livello** è il valore mantenuto; il **fronte** è il passaggio fra i due valori: di salita da 0 a 1, di discesa da 1 a 0.
+
+::: center
+![Schema didattico 23](/assets/dispense/tpsee-elettronici/figura-23.png){fig-alt="Schema didattico 23 della dispensa TPSEE · Elettronici"}
+:::
+
+Il **periodo** è la durata di un ciclo; la **frequenza** indica quanti cicli si ripetono in un secondo e si misura in hertz (Hz). Per esempio, 2 Hz significa due cicli al secondo.
+
+## [Sincrono](glossario.qmd#gloss-new79) e [asincrono](glossario.qmd#gloss-new80): chi decide quando cambiare?
+
+- **[Sincrono](glossario.qmd#gloss-new79)**: gli elementi di memoria seguono un riferimento temporale comune. Nei contatori sincroni studiati qui, tutti i [flip-flop](glossario.qmd#gloss-g18) aggiornano lo stato sullo stesso fronte di [clock](glossario.qmd#gloss-g11), con piccoli ritardi reali.
+
+- **[Asincrono](glossario.qmd#gloss-new80)**: i cambiamenti non attendono un fronte comune a tutti gli elementi. Nel contatore [asincrono](glossario.qmd#gloss-new80) il [clock](glossario.qmd#gloss-g11) arriva al primo stadio e il cambiamento passa ai successivi attraverso le uscite.
+
+[Asincrono](glossario.qmd#gloss-new80) non significa quindi necessariamente "senza [clock](glossario.qmd#gloss-g11)". Un comando [asincrono](glossario.qmd#gloss-new80), come un reset, può invece agire senza attendere il fronte di [clock](glossario.qmd#gloss-g11).
+
+## Memorizzare un [bit](glossario.qmd#gloss-g7) {#topic:15}
+
+## U.D. 4.1 / [Latch](glossario.qmd#gloss-g33) e [Flip-Flop](glossario.qmd#gloss-g18) ([SR](glossario.qmd#gloss-g46)) {#ud:4.1}
+
+Il **[latch](glossario.qmd#gloss-g33) [SR](glossario.qmd#gloss-g46)** memorizza un [bit](glossario.qmd#gloss-g7) tramite [retroazione](glossario.qmd#gloss-new73): l'uscita influenza il funzionamento successivo. Consideriamo un [latch](glossario.qmd#gloss-g33) con due [NOR](glossario.qmd#gloss-g40) incrociate e ingressi $S$ (set) e $R$ (reset) [attivi alti](glossario.qmd#gloss-g4).
+
+::: center
+![Schema didattico 24](/assets/dispense/tpsee-elettronici/figura-24.png){fig-alt="Schema didattico 24 della dispensa TPSEE · Elettronici"}
+:::
+
+*Schema funzionale a [NOR](glossario.qmd#gloss-g40) incrociate. L'incrocio centrale senza punto non è un nodo.*
+
+::: center
+   $S$   $R$   $Q^+$  **Azione**
+  ----- ----- ------- ------------------------
+    0     0     $Q$   Memoria
+    1     0      1    Set
+    0     1      0    Reset
+    1     1     --    Condizione non ammessa
+:::
+
+$Q^+$ è lo stato successivo. Con $S=R=1$, entrambe le uscite delle [NOR](glossario.qmd#gloss-g40) sono 0: non sono complementari. Il rilascio simultaneo può produrre uno stato finale imprevedibile. Nel [latch](glossario.qmd#gloss-g33) a [NAND](glossario.qmd#gloss-g40), invece, gli ingressi sono [attivi bassi](glossario.qmd#gloss-g4) e la combinazione vietata è $00$.
+
+## [Latch](glossario.qmd#gloss-g33) abilitato e [flip-flop](glossario.qmd#gloss-g18): il ruolo del tempo
+
+Un [latch](glossario.qmd#gloss-g33) abilitato è sensibile a un **livello**: mentre l'[enable](glossario.qmd#gloss-g16) è attivo risponde agli ingressi. Un [flip-flop](glossario.qmd#gloss-g18) è sensibile a un **fronte** del [clock](glossario.qmd#gloss-g11): aggiorna lo stato soltanto sul fronte previsto e lo mantiene fra due fronti.
+
+Per un [flip-flop](glossario.qmd#gloss-g18) [SR](glossario.qmd#gloss-g46) ideale la tabella precedente si applica al fronte attivo; negli altri istanti lo stato è mantenuto, salvo eventuali comandi asincroni. Gli ingressi devono restare stabili per un breve intervallo prima e dopo il fronte. I [tempi richiesti dal componente](approfondimenti.qmd#app:tempi) sono spiegati a p. . Il triangolo sul [clock](glossario.qmd#gloss-g11) indica il comando a fronte; una bolla sul [clock](glossario.qmd#gloss-g11) indica il [fronte di discesa](glossario.qmd#gloss-new75).
+
+#### Una memoria di evento
+
+Parti da $Q=0$: applica $S=1,R=0$ e poi torna a $S=R=0$. L'uscita resta 1. Applicando $S=0,R=1$ torna a 0. In un [flip-flop](glossario.qmd#gloss-g18) [SR](glossario.qmd#gloss-g46) le azioni avvengono al fronte di [clock](glossario.qmd#gloss-g11), non appena cambia l'ingresso.
+
+## Il contatore che propaga il cambio di stato {#topic:16}
+
+## U.D. 4.2 / Realizzazione di contatori asincroni {#ud:4.2}
+
+Un contatore percorre una sequenza di stati binari. Un [flip-flop](glossario.qmd#gloss-g18) **T** commuta se $T=1$; un [JK](glossario.qmd#gloss-g31) con $J=K=1$ realizza lo stesso comportamento.
+
+In un contatore [asincrono](glossario.qmd#gloss-new80), o **ripple**, soltanto il primo stadio riceve il [clock](glossario.qmd#gloss-g11) esterno; gli altri sono comandati dall'uscita dello stadio precedente. Consideriamo tre [flip-flop](glossario.qmd#gloss-g18) T, tutti con $T=1$ e sensibili al [fronte di discesa](glossario.qmd#gloss-new75).
+
+::: center
+![Schema didattico 25](/assets/dispense/tpsee-elettronici/figura-25.png){fig-alt="Schema didattico 25 della dispensa TPSEE · Elettronici"}
+:::
+
+*Contatore crescente [modulo ](glossario.qmd#gloss-g61)8: si leggono gli stati nell'ordine $Q_2Q_1Q_0$. Reset comune non mostrato.*
+
+Inizializzando a $000$, dopo l'assestamento di ogni impulso si ottiene: $$000\to001\to010\to011\to100\to101\to110\to111\to000.$$ Ogni stadio divide per due la frequenza del precedente: $$f_{Q_0}=\frac{f_{\mathrm{CLK}}}{2},\qquad f_{Q_1}=\frac{f_{\mathrm{CLK}}}{4},\qquad
+f_{Q_2}=\frac{f_{\mathrm{CLK}}}{8}.$$
+
+## Perché si chiama ripple?
+
+Il cambiamento passa da un [flip-flop](glossario.qmd#gloss-g18) al successivo, come un'onda. Le uscite impiegano un breve tempo a stabilizzarsi: i [passaggi intermedi e il calcolo del ritardo](approfondimenti.qmd#app:tempi) sono approfonditi a p. .
+
+#### Dividere la frequenza
+
+Ogni stadio dimezza la frequenza: **frequenza di uscita \[Hz\] = frequenza di ingresso \[Hz\] / 2**. Dopo $n$ stadi, $f_{\mathrm{out}}=f_{\mathrm{clock}}/2^n$; $n$ è il numero di stadi attraversati.
+
+::: center
+![Schema didattico 26](/assets/dispense/tpsee-elettronici/figura-26.png){fig-alt="Schema didattico 26 della dispensa TPSEE · Elettronici"}
+:::
+
+Con [clock](glossario.qmd#gloss-g11) a $800\,\mathrm{Hz}$, il primo stadio divide per 2 e fornisce $400\,\mathrm{Hz}$; il secondo divide ancora per 2 e fornisce $200\,\mathrm{Hz}$; il terzo fornisce $100\,\mathrm{Hz}$.
+
+#### Laboratorio / vedere ciò che il [LED](glossario.qmd#gloss-g34) nasconde
+
+Usa un [clock](glossario.qmd#gloss-g11) lento per osservare la sequenza sui [LED](glossario.qmd#gloss-g34) con [pilotaggio](glossario.qmd#gloss-g59) adatto; usa l'analizzatore logico o l'oscilloscopio per osservare i ritardi. Se il [clock](glossario.qmd#gloss-g11) è un pulsante, serve un segnale senza rimbalzi: una pressione meccanica può generare più fronti e quindi più conteggi.
+
+**Prova tu.** Quanti stati e quale divisione sull'ultimo stadio si ottengono con quattro [flip-flop](glossario.qmd#gloss-g18)? **Risposta:** 16 stati e $f_{\mathrm{CLK}}/16$.
+
+## Il contatore con [clock](glossario.qmd#gloss-g11) comune {#topic:17}
+
+## U.D. 4.3 / Realizzazione di contatori sincroni {#ud:4.3}
+
+In un contatore [sincrono](glossario.qmd#gloss-new79) tutti i [flip-flop](glossario.qmd#gloss-g18) ricevono lo stesso [clock](glossario.qmd#gloss-g11). La logica combinatoria stabilisce quali devono commutare al prossimo fronte. Per un contatore binario crescente a tre [bit](glossario.qmd#gloss-g7) con T [flip-flop](glossario.qmd#gloss-g18): $$\boxed{T_0=1,\qquad T_1=Q_0,\qquad T_2=Q_1Q_0.}$$ Il [bit](glossario.qmd#gloss-g7) meno significativo commuta sempre; il secondo quando il primo vale 1; il terzo quando entrambi i [bit](glossario.qmd#gloss-g7) inferiori valgono 1. Si usano i valori **prima del fronte**.
+
+::: center
+![Schema didattico 27](/assets/dispense/tpsee-elettronici/figura-27.png){fig-alt="Schema didattico 27 della dispensa TPSEE · Elettronici"}
+:::
+
+*Schema funzionale: $T_1$ riceve $Q_0$; una [AND](glossario.qmd#gloss-g2) realizza $T_2=Q_1Q_0$. Reset non mostrato.*
+
+#### Il passaggio da 3 a 4
+
+Prima del fronte lo stato è $Q_2Q_1Q_0=011$. Quindi $T_0=T_1=T_2=1$: al fronte tutti e tre i [bit](glossario.qmd#gloss-g7) commutano e lo stato diventa $100$. Non si attende che il cambiamento di un'uscita generi il [clock](glossario.qmd#gloss-g11) dello stadio successivo.
+
+                                     **[Asincrono](glossario.qmd#gloss-new80)**   **[Sincrono](glossario.qmd#gloss-new79)**
+  ---------------------------------- -------------------------------------------- ----------------------------------------------------------------
+  [Clock](glossario.qmd#gloss-g11)   Si propaga tra gli stadi                     Comune a tutti gli stadi
+  Logica aggiuntiva                  Minima nel binario semplice                  Calcola le commutazioni
+  Ritardo                            Si accumula lungo la catena                  Dipende da [FF](glossario.qmd#gloss-g18) e logica combinatoria
+  Uso didattico                      Divisione e propagazione                     Progetto dello stato successivo
+
+Il [clock](glossario.qmd#gloss-g11) comune coordina gli aggiornamenti, ma i componenti hanno comunque piccoli ritardi. [Approfondimento: tempi reali e contatore da 0 a 9](approfondimenti.qmd#app:tempi) (p. ).
+

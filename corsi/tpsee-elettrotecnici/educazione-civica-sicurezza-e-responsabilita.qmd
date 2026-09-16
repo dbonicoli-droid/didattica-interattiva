@@ -1,0 +1,46 @@
+---
+title: "Educazione civica / Sicurezza e responsabilità"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#sec:civica}
+
+[**Percorso trasversale · 5 ore**]{style="color: teal"}
+
+Il rischio elettrico dipende da [tensione](glossario.qmd#gloss-new54), percorso della [corrente](glossario.qmd#gloss-new55) nel corpo, durata del [contatto](glossario.qmd#gloss-e10) e condizioni ambientali. Il [contatto](glossario.qmd#gloss-e10) diretto riguarda parti attive; quello indiretto riguarda masse divenute pericolose per un guasto.
+
+- La prevenzione unisce organizzazione, formazione, protezioni e comportamento.
+
+- Usa attrezzature integre, segui le indicazioni dei docenti e segnala le anomalie.
+
+- I [DPI](glossario.qmd#gloss-e15) (Dispositivi di Protezione Individuale) dipendono da rischi e procedura: non sostituiscono le misure tecniche e organizzative.
+
+#### Prima di una prova
+
+Comprendi scopo e limiti dell'attività; riconosci alimentazione e comando di arresto; verifica con il docente che banco e strumenti siano pronti. Non improvvisare modifiche su [circuiti](glossario.qmd#gloss-e46) alimentati. In presenza di un'emergenza avvisa subito e segui la procedura del laboratorio.
+
+- Durante la [FSL](glossario.qmd#gloss-eFSL) (Formazione Scuola-Lavoro), indicata anche con [PCTO](glossario.qmd#gloss-e33) (Percorsi per le Competenze Trasversali e per l'Orientamento), rispetta istruzioni, ruoli e riservatezza.
+
+- Non condividere liberamente foto, nominativi, dati dei clienti e documenti aziendali.
+
+- Nella relazione usa solo informazioni autorizzate e necessarie; elimina i dati personali non pertinenti.
+
+## Progetto conclusivo: una stanza da studiare {#sec:progetto-civica}
+
+Progetta sul piano didattico una stanza $4\times3$ m con luce comandata da due punti, due prese nel modello e illuminazione media obiettivo di 300 lx.
+
+1.  Disegna pianta in scala 1:50, simboli, [legenda](glossario.qmd#gloss-e49) e [cartiglio](glossario.qmd#gloss-e48).
+
+2.  Produci lo [schema funzionale](glossario.qmd#gloss-e50) del comando con due [deviatori](glossario.qmd#gloss-e11) e la tabella degli stati.
+
+3.  Descrivi funzione di cavi, tubi, prese e protezioni, indicando quali dati mancano per una scelta esecutiva.
+
+4.  Calcola la quantità di apparecchi usando i dati dell'esercizio 4 e proponi una disposizione da verificare.
+
+5.  Prepara una tabella di collaudo per il banco didattico e una breve relazione.
+
+#### Criteri di riuscita
+
+Il progetto è comprensibile a un compagno: simboli e sigle coerenti; misure e formule con unità; ipotesi dichiarate; distinzione fra verifica funzionale e sicurezza; conclusioni sostenute dai dati.
+

@@ -1,0 +1,75 @@
+---
+title: "Conoscenze di base"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+
+## Numeri, dati e [variabili](glossario.qmd#gloss-s27) {#sec:basi-dettagli}
+
+### Unità e relazioni fra grandezze
+
+- Scrivi sempre l'unità: 30 secondi e 30 minuti descrivono durate diverse.
+
+- Prima di un calcolo rendi coerenti le unità: 2 minuti sono 120 secondi.
+
+- Una tabella associa valori: a ogni istante può corrispondere una temperatura misurata.
+
+### [Bit](glossario.qmd#gloss-s3) e numeri binari
+
+Un [bit](glossario.qmd#gloss-s3) vale 0 oppure 1. Più [bit](glossario.qmd#gloss-s3) permettono di rappresentare più combinazioni.
+
+#### Leggere 101 in binario
+
+I pesi, da sinistra, sono 4, 2 e 1: $1\cdot4+0\cdot2+1\cdot1=5$. Il [bit](glossario.qmd#gloss-s3) a destra è il meno significativo. Con tre [bit](glossario.qmd#gloss-s3) si scrivono otto combinazioni, da 000 a 111.
+
+### [Variabili](glossario.qmd#gloss-s27), assegnazioni e condizioni
+
+- Una [variabile](glossario.qmd#gloss-s27) ha un nome e un valore: per esempio `Temperatura` contiene 22.
+
+- Un'assegnazione aggiorna il valore. `somma = somma + T` aggiunge la nuova lettura alla somma precedente: non è un'uguaglianza da risolvere.
+
+- Una condizione, come $T>30$, restituisce vero o falso.
+
+- Una [variabile](glossario.qmd#gloss-s27) booleana rappresenta una condizione. Una [variabile](glossario.qmd#gloss-s27) numerica conserva una quantità.
+
+### Lavorare con un programma
+
+1.  Salva il file con un nome riconoscibile.
+
+2.  Dichiara [variabili](glossario.qmd#gloss-s27) e valori iniziali.
+
+3.  Esegui un caso semplice e osserva i valori passo per passo.
+
+4.  Conserva una tabella delle prove e una breve spiegazione del risultato.
+
+[Torna alla panoramica](prima-di-iniziare-conoscenze-di-base.qmd#sec:basi).
+
+## Autoverifica {#sec:basi-esercizi}
+
+1.  Converti 3 minuti in secondi.
+
+2.  Quale valore decimale rappresenta il numero binario 110?
+
+3.  Quante combinazioni si possono scrivere con due [bit](glossario.qmd#gloss-s3)?
+
+4.  Se `somma` vale 12 e `T` vale 5, quale valore assume `somma` dopo l'assegnazione `somma = somma + T`?
+
+5.  La condizione $T>30$ è vera quando $T=30$? E quando $T=31$?
+
+[Soluzioni nella pagina seguente](conoscenze-di-base.qmd#sec:basi-soluzioni).
+
+## Soluzioni commentate {#sec:basi-soluzioni}
+
+1.  $3\cdot60=180$ secondi.
+
+2.  $1\cdot4+1\cdot2+0\cdot1=6$.
+
+3.  Quattro: 00, 01, 10 e 11.
+
+4.  17: si somma 5 al valore precedente, 12.
+
+5.  A 30 è falsa; a 31 è vera. Il simbolo $>$ esclude l'uguaglianza.
+
+[Torna alle domande](conoscenze-di-base.qmd#sec:basi-esercizi).
+

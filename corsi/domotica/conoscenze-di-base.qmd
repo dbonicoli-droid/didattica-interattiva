@@ -1,0 +1,105 @@
+---
+title: "Conoscenze di base"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#sec:basi-dettagli}
+
+Questi richiami riprendono i prerequisiti del corso. [Torna alla panoramica iniziale](percorso.qmd#sec:basi-panoramica).
+
+## Grandezze elettriche e legge di Ohm
+
+- **Tensione $V$ \[volt, V\]:** differenza di potenziale fra due punti.
+
+- **Corrente $I$ \[ampere, A\]:** carica elettrica che attraversa una sezione nell'unità di tempo.
+
+- **Resistenza $R$ \[ohm, $\Omega$\]:** grandezza che lega tensione e corrente in un resistore ohmico.
+
+La legge di Ohm si legge: **tensione \[V\] = resistenza \[$\Omega$\] $\times$ corrente \[A\]**. $$V=RI,\qquad I=\frac{V}{R},\qquad R=\frac{V}{I}.$$ Prima di calcolare, rendi coerenti le unità: $1\,\mathrm{k\Omega}=1000\,\Omega$; $1\,\mathrm{mA}=0{,}001\,\mathrm A$.
+
+#### Un resistore alimentato a 5 V
+
+::: center
+![Schema didattico 9](/assets/dispense/domotica/figura-9.png){fig-alt="Schema didattico 9 della dispensa Domotica e automazione"}
+:::
+
+$$I=\frac{5}{1000}=0{,}005\,\mathrm A=5\,\mathrm{mA}.$$ Il calcolo riguarda il resistore indicato: non si applica direttamente a qualunque dispositivo elettronico.
+
+## Serie, parallelo e lettura dello schema
+
+- **Serie:** componenti attraversati dalla stessa corrente, senza diramazioni fra loro.
+
+- **Parallelo:** componenti collegati agli stessi due nodi, quindi sottoposti alla stessa tensione.
+
+- Un **nodo** riunisce punti collegati da conduttori ideali. Il punto pieno nello schema segnala una connessione.
+
+- Per leggere uno schema, individua alimentazione, ritorno, carico e dispositivi che aprono o chiudono il percorso.
+
+::: center
+![Schema didattico 10](/assets/dispense/domotica/figura-10.png){fig-alt="Schema didattico 10 della dispensa Domotica e automazione"}
+:::
+
+## Logica booleana e comandi
+
+Un [bit](glossario.qmd#gloss-new49) assume uno dei due valori 0 e 1. Una variabile [BOOL](glossario.qmd#gloss-d14) rappresenta una condizione falsa o vera; il significato fisico va dichiarato, per esempio "richiesta di avvio presente".
+
+- **AND:** il risultato è vero soltanto quando tutte le condizioni sono vere.
+
+- **OR:** il risultato è vero quando almeno una condizione è vera.
+
+- **NOT:** inverte vero e falso.
+
+#### Due condizioni per dare un consenso
+
+$A$ indica richiesta presente; $B$ indica consenso presente; $Y$ è il comando risultante. Occorrono entrambe le condizioni: $Y=A\,B$, dove il prodotto significa AND.
+
+::: center
+![Schema didattico 11](/assets/dispense/domotica/figura-11.png){fig-alt="Schema didattico 11 della dispensa Domotica e automazione"}
+
+   $A$   $B$   $Y$
+  ----- ----- -----
+    0     0     0
+    0     1     0
+    1     0     0
+    1     1     1
+:::
+
+La tabella di verità elenca tutte le combinazioni: è utile per preparare le prove del programma.
+
+## Dal circuito al programma
+
+- Distingui il **circuito di potenza**, che alimenta il carico, dal **circuito di comando**, che decide quando attivarlo.
+
+- Un contatto normalmente aperto è aperto a riposo; uno normalmente chiuso è chiuso a riposo. "Normale" indica la condizione di riferimento del dispositivo.
+
+- Un'istruzione a contatto in [Ladder](glossario.qmd#gloss-d25) verifica una variabile: non è necessariamente la copia del contatto fisico collegato all'ingresso.
+
+- Dichiara ingressi, uscite e stato iniziale. Un comando combinatorio dipende dagli ingressi attuali; uno sequenziale dipende anche dallo stato memorizzato.
+
+## Autoverifica {#sec:basi-verifica}
+
+1.  Nel circuito a 5 V della pagina precedente sostituisci $R$ con $2\,\mathrm{k\Omega}$. Quale corrente prevedi?
+
+2.  Due resistori collegati agli stessi due nodi sono in serie o in parallelo? Quale grandezza hanno in comune?
+
+3.  Per il consenso $Y=A B$, quanto vale $Y$ con $A=1$ e $B=0$?
+
+4.  Un comando che resta attivo dopo il rilascio di Start richiede memoria? Perché?
+
+[Soluzioni nella pagina seguente](conoscenze-di-base.qmd#sec:basi-soluzioni).
+
+## Soluzioni commentate {#sec:basi-soluzioni}
+
+1.  $I=V/R=5/2000=0{,}0025\,\mathrm A=2{,}5\,\mathrm{mA}$. A tensione costante, raddoppiando la resistenza si dimezza la corrente.
+
+2.  Sono in parallelo e hanno la stessa tensione ai capi. Le correnti possono essere diverse.
+
+3.  $Y=0$: con AND devono essere vere entrambe le condizioni.
+
+4.  Sì. Dopo il rilascio, il comando deve conservare l'informazione dell'avvio precedente: il comportamento dipende anche dallo stato.
+
+[Torna all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica).
+
+[Torna alla panoramica iniziale](percorso.qmd#sec:basi-panoramica).
+

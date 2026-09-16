@@ -1,0 +1,318 @@
+---
+title: Glossario
+---
+
+[← Panoramica del corso](index.qmd)
+
+## Algoritmo {#gloss-s1}
+
+Sequenza di passi non ambigui per risolvere un problema.
+
+## Autoritenuta {#gloss-s2}
+
+Mantiene il comando dopo il rilascio del pulsante, tramite memoria o contatto ausiliario.
+
+## Bit {#gloss-s3}
+
+Binary Digit: cifra binaria, 0 oppure 1.
+
+## CADeSIMU {#gloss-s4}
+
+Software per disegnare e simulare schemi elettrici.
+
+## Disturbo {#gloss-s5}
+
+Azione esterna non comandata che modifica il comportamento del sistema.
+
+## Flowgorithm {#gloss-s6}
+
+Ambiente per costruire ed eseguire algoritmi rappresentati con diagrammi di flusso.
+
+## Gray {#gloss-s7}
+
+Codice binario in cui due valori consecutivi sono rappresentati da sequenze che differiscono per un solo bit.
+
+## Implicante primo {#gloss-s8}
+
+Termine che copre soltanto combinazioni ammesse a 1 e non può essere ampliato eliminando altri letterali.
+
+## Ingresso {#gloss-s9}
+
+Grandezza che agisce sul sistema; se manipolabile, permette di comandarlo.
+
+## Interblocco {#gloss-s10}
+
+Condizione che impedisce l'attivazione simultanea di comandi incompatibili.
+
+## Karnaugh {#gloss-s11}
+
+Mappa per semplificare funzioni booleane raggruppando celle adiacenti, disposte in ordine Gray.
+
+## Ladder {#gloss-s12}
+
+Ladder Diagram: linguaggio grafico basato su reti con contatti, bobine e blocchi.
+
+## Maxtermine {#gloss-s13}
+
+Somma booleana in cui ogni variabile compare una sola volta, diretta o negata; vale 0 per una sola combinazione degli ingressi.
+
+## Mintermine {#gloss-s14}
+
+Prodotto booleano in cui ogni variabile compare una sola volta, diretta o negata; vale 1 per una sola combinazione degli ingressi.
+
+## Modello {#gloss-s15}
+
+Rappresentazione semplificata di un sistema, costruita per rispondere a una domanda.
+
+## OpenPLC {#gloss-s16}
+
+Ambiente di programmazione ed esecuzione per controllori a logica programmabile.
+
+## Parametro {#gloss-s17}
+
+Grandezza che descrive una proprietà del modello, distinta dagli ingressi e dallo stato.
+
+## Quine--McCluskey {#gloss-s18}
+
+Metodo tabellare che semplifica funzioni booleane combinando e coprendo mintermini.
+
+## Retroazione {#gloss-s19}
+
+Collegamento che riporta una misura dell'uscita all'ingresso del sistema per influenzarne il comportamento.
+
+## Riferimento {#gloss-s20}
+
+Valore desiderato dell'uscita di un controllo.
+
+## Runtime {#gloss-s21}
+
+Ambiente che esegue il programma; si distingue dall'editor usato per prepararlo.
+
+## Scansione {#gloss-s22}
+
+Ciclo di lettura degli ingressi, esecuzione del programma e aggiornamento delle uscite.
+
+## Sistema {#gloss-s23}
+
+Insieme di elementi collegati che interagiscono.
+
+## Stato {#gloss-s24}
+
+Informazione memorizzata che serve, insieme agli ingressi, a prevedere l'evoluzione del sistema.
+
+## Task {#gloss-s25}
+
+Unità di esecuzione del controllore, attivata periodicamente o da un evento.
+
+## Uscita {#gloss-s26}
+
+Grandezza osservata per descrivere il risultato del comportamento di un sistema.
+
+## Variabile {#gloss-s27}
+
+Nome associato a un valore che può cambiare durante il funzionamento o il calcolo.
+
+## AND {#gloss-s28}
+
+Congiunzione logica: il risultato è 1 se tutti gli ingressi sono 1.
+
+## BOOL {#gloss-s29}
+
+Boolean: tipo di variabile che rappresenta vero o falso.
+
+## CEI {#gloss-s30}
+
+Comitato Elettrotecnico Italiano: organismo italiano di normazione elettrotecnica.
+
+## I/O {#gloss-s31}
+
+Input/Output: ingressi e uscite.
+
+## IEC {#gloss-s32}
+
+International Electrotechnical Commission: organismo internazionale di normazione elettrotecnica.
+
+## ITP {#gloss-s33}
+
+Insegnante Tecnico Pratico: docente delle attività tecnico-pratiche e di laboratorio.
+
+## LD {#gloss-s34}
+
+Ladder Diagram: linguaggio grafico a contatti e bobine.
+
+## NAND {#gloss-s35}
+
+NOT AND: negazione del risultato di AND.
+
+## NC {#gloss-s36}
+
+Normally Closed: contatto normalmente chiuso nella condizione di riferimento.
+
+## NO {#gloss-s37}
+
+Normally Open: contatto normalmente aperto nella condizione di riferimento.
+
+## NOR {#gloss-s38}
+
+NOT OR: negazione del risultato di OR.
+
+## NOT {#gloss-s39}
+
+Negazione logica: scambia 0 e 1.
+
+## OR {#gloss-s40}
+
+Disgiunzione inclusiva: il risultato è 1 se almeno un ingresso è 1.
+
+## PLC {#gloss-s41}
+
+Programmable Logic Controller: controllore a logica programmabile che acquisisce ingressi ed elabora comandi.
+
+## REAL {#gloss-s42}
+
+Tipo numerico per valori con parte frazionaria, rappresentati con precisione finita.
+
+## SFC {#gloss-s43}
+
+Sequential Function Chart: rappresentazione di sequenze mediante passi, transizioni e azioni.
+
+## U.D. {#gloss-s44}
+
+Unità Didattica: parte di un modulo del programma.
+
+## XOR {#gloss-s45}
+
+Exclusive OR: con due ingressi vale 1 quando i valori sono diversi.
+
+## Contatto {#gloss-s46}
+
+Parte conduttrice che apre, chiude o commuta un collegamento elettrico. Nel Ladder verifica il valore di una variabile.
+
+## Bobina {#gloss-s47}
+
+Conduttore avvolto in spire; percorso da corrente genera un campo magnetico. Nel Ladder la bobina ordinaria assegna il risultato della rete a una variabile.
+
+## Comando combinatorio {#gloss-s48}
+
+Comando il cui risultato dipende dagli ingressi attuali, senza memoria degli stati precedenti.
+
+## Comando sequenziale {#gloss-s49}
+
+Comando il cui risultato dipende anche dallo stato memorizzato.
+
+## Tabella di verità {#gloss-s50}
+
+Elenco di tutte le combinazioni degli ingressi e dei corrispondenti valori delle uscite.
+
+## Variabile booleana {#gloss-s51}
+
+Variabile che può assumere soltanto due valori logici: vero o falso, rappresentati con 1 e 0.
+
+## AND, OR, NOT {#gloss-s52}
+
+Operazioni logiche: congiunzione, disgiunzione inclusiva e negazione.
+
+## ITIS {#gloss-s53}
+
+Istituto Tecnico Industriale Statale.
+
+## FBD {#gloss-s54}
+
+Function Block Diagram: linguaggio grafico che collega blocchi attraverso i segnali.
+
+## ST {#gloss-s55}
+
+Structured Text: linguaggio testuale per assegnazioni, condizioni e calcoli nei PLC.
+
+## IL {#gloss-s56}
+
+Instruction List: linguaggio a istruzioni che elaborano un risultato intermedio.
+
+## Debug {#gloss-s57}
+
+Ricerca e correzione degli errori osservando esecuzione e valori del programma.
+
+## Forzatura {#gloss-s58}
+
+Imposizione temporanea di un valore durante una prova del programma.
+
+## Automa {#gloss-s59}
+
+Modello con stati e regole di transizione che descrive l'evoluzione di un comando o processo.
+
+## Timer {#gloss-s60}
+
+Blocco con memoria che misura una durata e aggiorna le proprie uscite.
+
+## Contatore {#gloss-s61}
+
+Blocco con memoria che conta eventi secondo una regola definita.
+
+## TON {#gloss-s62}
+
+On-Delay Timer: temporizzatore che ritarda l'attivazione finché l'ingresso resta vero per il tempo impostato.
+
+## CTU {#gloss-s63}
+
+Count Up: contatore crescente che incrementa sul fronte di salita e prevede un reset.
+
+## Raw {#gloss-s64}
+
+Valore numerico grezzo restituito dall'acquisizione, da interpretare secondo la codifica del modulo.
+
+## Scalatura {#gloss-s65}
+
+Conversione del dato acquisito in unità fisiche mediante una relazione e un campo dichiarati.
+
+## Isteresi {#gloss-s66}
+
+Comportamento con soglie diverse di attivazione e disattivazione e mantenimento dello stato nella fascia intermedia.
+
+## CPU {#gloss-s67}
+
+Central Processing Unit: unità che esegue le istruzioni e coordina il funzionamento del controllore.
+
+## INT {#gloss-s68}
+
+Integer: tipo di dato per numeri interi, con intervallo rappresentabile limitato.
+
+## TIME {#gloss-s69}
+
+Tipo di dato che rappresenta una durata.
+
+## TOF {#gloss-s70}
+
+Off-Delay Timer: temporizzatore che ritarda la disattivazione dell'uscita.
+
+## TP {#gloss-s71}
+
+Pulse Timer: blocco che genera un impulso di durata impostata secondo le regole del temporizzatore.
+
+## Sensore {#gloss-new72}
+
+Dispositivo che rileva una grandezza fisica e fornisce un segnale che ne rappresenta il valore o la presenza.
+
+## Attuatore {#gloss-new73}
+
+Dispositivo che trasforma un comando in un'azione fisica sul processo, per esempio un motore o una valvola.
+
+## Setpoint {#gloss-new74}
+
+Valore desiderato della grandezza controllata, usato come riferimento nel confronto con la misura.
+
+## Segnale analogico {#gloss-new75}
+
+Segnale il cui valore può variare con continuità entro un intervallo.
+
+## Segnale digitale {#gloss-new76}
+
+Segnale rappresentato mediante un insieme discreto di valori; nel caso binario i valori logici sono 0 e 1.
+
+## Fronte di salita {#gloss-new77}
+
+Passaggio di un segnale logico da 0 a 1; va distinto dal mantenimento del valore 1.
+
+## Fronte di discesa {#gloss-new78}
+
+Passaggio di un segnale logico da 1 a 0; va distinto dal mantenimento del valore 0.
+

@@ -1,0 +1,36 @@
+---
+title: "La mappa del percorso"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#nav:mappa}
+
+   **N.**  **Modulo**                                                                   **Ore**   **Periodo**
+  -------- --------------------------------------------------------------------------- --------- -------------
+     1     Elettromeccanica                                                               ---          1
+     2     Automazione industriale e [PLC](glossario.qmd#gloss-d29)                       ---          2
+     3     Linguaggio [Ladder](glossario.qmd#gloss-d25)                                   ---          2
+     4     Linguaggio [SFC](glossario.qmd#gloss-d38)                                      ---          2
+     5     Programmazione avanzata e applicazioni dei [PLC](glossario.qmd#gloss-d29)      ---          2
+
+Educazione civica: efficientamento energetico, 2 ore.
+
+## Prima di iniziare / Conoscenze di base {#sec:basi-panoramica}
+
+Legge di Ohm, collegamenti elettrici, logica booleana e lettura di semplici schemi.
+
+[Riprendi le conoscenze di base con schemi ed esempi](conoscenze-di-base.qmd#sec:basi-dettagli) (p. ). [Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
+
+#### Il filo conduttore
+
+Una richiesta viene verificata insieme ai consensi; il programma aggiorna lo stato; le uscite comandano gli [attuatori](glossario.qmd#gloss-new44). Le misure permettono di osservare ciò che avviene nel processo.
+
+::: center
+![Schema didattico 1](/assets/dispense/domotica/figura-1.png){fig-alt="Schema didattico 1 della dispensa Domotica e automazione"}
+:::
+
+## Come usare gli esempi
+
+Prima di programmare scrivi ingressi, uscite, stato iniziale e priorità. Prepara una tabella delle prove e confronta il comportamento previsto con la simulazione; le prove fisiche si svolgono sul banco predisposto con i docenti.
+

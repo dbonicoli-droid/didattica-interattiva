@@ -1,0 +1,32 @@
+---
+title: "Educazione civica / Emergenza climatica"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+[]{#sec:civica}
+
+[**Percorso trasversale · ore *\[da completare\]***]{style="color: teal"}
+
+L'automazione può contribuire a evitare funzionamenti inutili, ma per valutarne l'effetto occorrono misure, un confronto omogeneo e ipotesi dichiarate. Un consumo elettrico minore non si traduce in una quantità universale di emissioni evitate: servono dati sul contesto energetico.
+
+#### Un calcolo trasparente
+
+A potenza costante: **energia \[kWh\] = potenza \[kW\] $\times$ tempo \[h\]**, $W=Pt$. Qui $W$ è il simbolo dell'energia, $P$ la potenza e $t$ la durata; l'unità watt si scrive invece W senza corsivo.
+
+::: center
+![Schema didattico 20](/assets/dispense/sistemi-automatici/figura-20.png){fig-alt="Schema didattico 20 della dispensa Sistemi automatici"}
+:::
+
+Una ventola da 80 W resta attiva per 10 h al giorno. Un controllo, nelle condizioni ipotizzate, riduce il tempo a 6 h mantenendo il servizio richiesto.
+
+Indichiamo con $W$ il consumo giornaliero di energia elettrica; i pedici distinguono prima e dopo il controllo.
+
+$W_{prima}=0{,}08\cdot10=0{,}80$ kWh/giorno.
+
+$W_{dopo}=0{,}08\cdot6=0{,}48$ kWh/giorno.
+
+La differenza è 0,32 kWh/giorno. Per un bilancio completo si considerano anche consumi del controllo e condizioni reali di utilizzo.
+
+**Discussione guidata.** Quali dati servono per verificare il risparmio? Il comfort o la qualità dell'aria restano adeguati? Come si distingue una previsione da una misura? Confronta punto di vista tecnico, ambientale ed economico senza trasformare una singola simulazione in una conclusione generale.
+

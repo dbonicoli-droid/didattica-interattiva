@@ -1,0 +1,142 @@
+---
+title: "Modulo 3 / PLC"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+[]{#mod:3}
+
+**Secondo pentamestre · 30 ore**
+
+Il [PLC](glossario.qmd#gloss-s41) collega segnali fisici e programma: vediamo come è fatto e come si prepara una prova.
+
+## U.D. 3.1 / Il [PLC](glossario.qmd#gloss-s41): struttura e architettura {#ud:3.1}
+
+Il [PLC](glossario.qmd#gloss-s41) sostituisce molte connessioni della logica a relè con un programma. Il cablaggio collega i dispositivi; il programma stabilisce come reagire ai loro segnali.
+
+- **[CPU](glossario.qmd#gloss-s67) (Central Processing Unit)**: esegue il programma e coordina le operazioni.
+
+- **Memorie**: conservano istruzioni, [variabili](glossario.qmd#gloss-s27) e configurazione. Solo i dati configurati come persistenti o ritentivi vengono mantenuti nelle condizioni previste dal dispositivo.
+
+- **Moduli [I/O](glossario.qmd#gloss-s31) (Input/Output)**: acquisiscono gli [ingressi](glossario.qmd#gloss-s9) e comandano le [uscite](glossario.qmd#gloss-s26); possono essere integrati o espandibili.
+
+- **Alimentazione**: fornisce energia all'elettronica. Le [uscite](glossario.qmd#gloss-s26) hanno limiti elettrici e non alimentano direttamente qualsiasi carico.
+
+::: center
+![Schema didattico 9](/assets/dispense/sistemi-automatici/figura-9.png){fig-alt="Schema didattico 9 della dispensa Sistemi automatici"}
+:::
+
+#### Dai fili alle istruzioni
+
+Con la logica cablata una modifica della funzione può richiedere nuovi collegamenti. Con il [PLC](glossario.qmd#gloss-s41) molte modifiche riguardano il programma; protezioni, potenza e compatibilità dei dispositivi restano parte del progetto elettrico.
+
+## U.D. 3.2 / Ciclo di [scansione](glossario.qmd#gloss-s22), indirizzamento, tipi di dato e [variabili](glossario.qmd#gloss-s27) {#ud:3.2}
+
+La [scansione](glossario.qmd#gloss-s22) è il ciclo ripetuto di acquisizione degli [ingressi](glossario.qmd#gloss-s9), esecuzione del programma e aggiornamento delle [uscite](glossario.qmd#gloss-s26). Nel [modello](glossario.qmd#gloss-s15) didattico gli [ingressi](glossario.qmd#gloss-s9) restano quelli letti a inizio ciclo.
+
+- **Nome simbolico**: descrive il significato, per esempio `Presenza`.
+
+- **Indirizzo**: associa la [variabile](glossario.qmd#gloss-s27) a un canale o a una posizione di memoria. Dipende dalla configurazione del [PLC](glossario.qmd#gloss-s41).
+
+- **[BOOL](glossario.qmd#gloss-s29) (Boolean)**: vero/falso; [`INT`](glossario.qmd#gloss-s68) (Integer): intero; [`REAL`](glossario.qmd#gloss-s42): numero con parte frazionaria; [`TIME`](glossario.qmd#gloss-s69): durata.
+
+- **Valore iniziale**: determina da quale condizione parte il programma. Un comando memorizzato non deve implicare una ripartenza inattesa.
+
+#### Un [ingresso](glossario.qmd#gloss-s9) può cambiare fra due letture
+
+Se la [scansione](glossario.qmd#gloss-s22) dura circa 10 ms, un impulso di 2 ms può iniziare e finire fra due acquisizioni. Il programma ciclico può non vederlo: per eventi rapidi servono le funzioni di acquisizione appropriate, non semplicemente più righe di programma.
+
+## U.D. 3.3 / Interfacciamento sul campo e schemi funzionali {#ud:3.3}
+
+- Un **[sensore](glossario.qmd#gloss-new72)** rileva una grandezza; un **[attuatore](glossario.qmd#gloss-new73)** agisce sul processo, per esempio una valvola o un motore.
+
+- Un [ingresso](glossario.qmd#gloss-s9) digitale riconosce due condizioni; uno analogico rappresenta un campo di valori. Un [sensore](glossario.qmd#gloss-new72) digitale può anche trasmettere dati codificati.
+
+- Una tensione di [ingresso](glossario.qmd#gloss-s9) e una corrente di [ingresso](glossario.qmd#gloss-s9) richiedono canali e collegamenti appropriati. Lo schema deve identificare alimentazione, comune e morsetti.
+
+- Le [uscite](glossario.qmd#gloss-s26) comandano carichi compatibili oppure interfacce, come la [bobina](glossario.qmd#gloss-s47) di un contattore. Separiamo circuito di comando e circuito di potenza.
+
+[Lo schema funzionale del comando di marcia](modulo-3.qmd#topic:10) mostra come collegare il significato delle [variabili](glossario.qmd#gloss-s27) ai dispositivi.
+
+## Dalla logica ai dispositivi {#topic:10}
+
+Lo schema funzionale collega il ragionamento logico ai dispositivi: pulsanti, contattori, [contatti](glossario.qmd#gloss-s46) ausiliari e spie. La [bobina](glossario.qmd#gloss-s47) e i suoi [contatti](glossario.qmd#gloss-s46) condividono un identificativo per rendere riconoscibile il legame funzionale.
+
+::: center
+![Schema didattico 10](/assets/dispense/sistemi-automatici/figura-10.png){fig-alt="Schema didattico 10 della dispensa Sistemi automatici"}
+:::
+
+*Schema funzionale semplificato del comando: S0 è un pulsante fisico [NC](glossario.qmd#gloss-s36) (Normally Closed, normalmente chiuso), S1 [NO](glossario.qmd#gloss-s37) (Normally Open, normalmente aperto); il [contatto](glossario.qmd#gloss-s46) ausiliario K1 mantiene la [bobina](glossario.qmd#gloss-s47) K1 eccitata.*
+
+**Numerazione da leggere.** In comuni apparecchi si incontrano:
+
+- A1--A2: [bobina](glossario.qmd#gloss-s47).
+
+- 13--14: [contatto](glossario.qmd#gloss-s46) ausiliario normalmente aperto.
+
+- 21--22: [contatto](glossario.qmd#gloss-s46) ausiliario normalmente chiuso.
+
+Verifica sempre la numerazione del componente usato; da sola non indica tensione o portata.
+
+**Segnalazione.** Una spia comandata da un'[uscita](glossario.qmd#gloss-s26) può indicare una richiesta, non necessariamente il moto reale. Per confermare una condizione fisica occorre un riscontro adeguato, come un [contatto](glossario.qmd#gloss-s46) di feedback o un [sensore](glossario.qmd#gloss-new72).
+
+## Confrontare schema e programma {#topic:confronto}
+
+[CADeSIMU](glossario.qmd#gloss-s4) è usato nel percorso per rappresentare e simulare schemi elettrici; [OpenPLC](glossario.qmd#gloss-s16) per il programma a logica programmabile. Si parte dalle stesse specifiche e si confrontano i comportamenti, tenendo conto della [scansione](glossario.qmd#gloss-s22) del [PLC](glossario.qmd#gloss-s41).
+
+1.  Disegna il comando di marcia/arresto e identifica [contatti](glossario.qmd#gloss-s46) e [bobina](glossario.qmd#gloss-s47).
+
+2.  Riproduci la funzione nel [Ladder](glossario.qmd#gloss-s12) con [variabili](glossario.qmd#gloss-s27) chiaramente definite.
+
+3.  Esegui avvio, mantenimento, arresto e comandi simultanei.
+
+4.  Per l'inversione, chiama $K_A$ e $K_B$ i comandi delle due direzioni: verifica $K_AK_B=0$, cioè che non siano mai attivi insieme.
+
+**Consegna.** Una relazione affianca schema funzionale, rete [Ladder](glossario.qmd#gloss-s12) e tabella delle prove. La concordanza delle simulazioni dimostra coerenza dei modelli, non certifica un impianto fisico.
+
+## U.D. 3.4 / Panoramica dei linguaggi [IEC](glossario.qmd#gloss-s32) 61131-3 e criteri di scelta {#ud:3.4}
+
+La [IEC](glossario.qmd#gloss-s32) (International Electrotechnical Commission) ha definito un quadro comune per la programmazione dei [PLC](glossario.qmd#gloss-s41). Incontreremo queste rappresentazioni:
+
+- [Ladder](glossario.qmd#gloss-s12), o [LD](glossario.qmd#gloss-s34) ([Ladder](glossario.qmd#gloss-s12) Diagram): [contatti](glossario.qmd#gloss-s46), [bobine](glossario.qmd#gloss-s47) e blocchi; immediato per leggere condizioni di comando.
+
+- [FBD](glossario.qmd#gloss-s54) (Function Block Diagram): blocchi collegati dal flusso dei segnali.
+
+- [ST](glossario.qmd#gloss-s55) (Structured Text), testo strutturato: assegnazioni, condizioni e calcoli.
+
+- [IL](glossario.qmd#gloss-s56) (Instruction List): istruzioni che elaborano un risultato intermedio; utile anche per leggere programmi esistenti.
+
+- [SFC](glossario.qmd#gloss-s43) (Sequential Function Chart): passi, transizioni e azioni, per organizzare una sequenza.
+
+La disponibilità dei linguaggi dipende dall'ambiente e dal controllore. Scegli la rappresentazione che rende più leggibile il problema: [contatti](glossario.qmd#gloss-s46) per consensi, blocchi per catene di elaborazione, testo per calcoli, passi per sequenze.
+
+## U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e [debug](glossario.qmd#gloss-s57) {#ud:3.5}
+
+1.  Crea il progetto e scegli il controllore o la simulazione disponibile.
+
+2.  Dichiara [variabili](glossario.qmd#gloss-s27), valori iniziali, canali [I/O](glossario.qmd#gloss-s31) e periodicità di esecuzione.
+
+3.  Scrivi il programma, compila e correggi gli errori segnalati.
+
+4.  Esegui il **download**, cioè trasferisci il programma al [sistema](glossario.qmd#gloss-s23) che lo eseguirà.
+
+5.  Durante il [debug](glossario.qmd#gloss-s57) osserva [ingressi](glossario.qmd#gloss-s9), [stato](glossario.qmd#gloss-s24) e [uscite](glossario.qmd#gloss-s26); confrontali con la tabella delle prove.
+
+Una [forzatura](glossario.qmd#gloss-s58) impone temporaneamente un valore durante le prove. In simulazione permette di esplorare condizioni difficili da riprodurre. Su hardware può comandare un dispositivo reale: si usa solo nelle prove autorizzate dal docente e si rimuove al termine. [OpenPLC](glossario.qmd#gloss-s16) riguarda programma ed esecuzione; [CADeSIMU](glossario.qmd#gloss-s4) aiuta a rappresentare e simulare schemi elettrici. La configurazione del banco sarà indicata dai docenti.
+
+## U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al [PLC](glossario.qmd#gloss-s41) {#ud:3.6}
+
+#### Un comando di marcia e arresto
+
+1.  Elenca pulsante di marcia, comando di arresto, consenso e [uscita](glossario.qmd#gloss-s26) verso il contattore.
+
+2.  Disegna lo schema a relè; individua quali [contatti](glossario.qmd#gloss-s46) producono memoria.
+
+3.  Assegna nomi simbolici agli [ingressi](glossario.qmd#gloss-s9) e realizza la funzione nel [PLC](glossario.qmd#gloss-s41).
+
+4.  Prova avvio, rilascio del pulsante, arresto e perdita del consenso.
+
+5.  Documenta schema, programma e risultati. Esegui il cablaggio sul banco solo nella configurazione predisposta dal docente.
+
+La memoria del comando sarà descritta mediante lo [stato](glossario.qmd#gloss-s24) nelle [U.D. 5.1](modulo-5.qmd#ud:5.1) e [U.D. 5.7](modulo-5.qmd#ud:5.7). Il confronto riguarda lo stesso comportamento richiesto, non la copia di ogni filo in una singola istruzione.
+

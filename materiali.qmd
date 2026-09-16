@@ -1,0 +1,17 @@
+---
+title: "Dispense da leggere e stampare"
+toc: false
+---
+
+Le edizioni PDF mantengono la forma delle dispense introduttive. Le pagine web permettono di navigare tra i contenuti. Gli approfondimenti futuri saranno aggiunti progressivamente.
+
+| Corso | Versione web | PDF |
+|---|---|---|
+| TPSEE · Elettronica | [Sfoglia](corsi/tpsee-elettronici/index.qmd) | [Scarica](downloads/tpsee-elettronici.pdf) |
+| TPSEE · Elettrotecnica | [Sfoglia](corsi/tpsee-elettrotecnici/index.qmd) | [Scarica](downloads/tpsee-elettrotecnici.pdf) |
+| Sistemi automatici | [Sfoglia](corsi/sistemi-automatici/index.qmd) | [Scarica](downloads/sistemi-automatici.pdf) |
+| Domotica e automazione | [Sfoglia](corsi/domotica/index.qmd) | [Scarica](downloads/domotica.pdf) |
+
+**Edizione delle dispense: 15 settembre 2026.** I PDF sono documenti in sviluppo: eventuali campi non ancora compilati o indicazioni provvisorie non costituiscono istruzioni operative del laboratorio.
+
+Il laboratorio RC è disponibile anche come [file HTML autonomo](laboratori/rc/index.html), da salvare e aprire nel browser senza connessione.

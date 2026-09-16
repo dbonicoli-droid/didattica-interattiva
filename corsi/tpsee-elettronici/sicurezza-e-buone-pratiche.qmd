@@ -1,0 +1,32 @@
+---
+title: "Sicurezza e Buone pratiche"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+
+[]{#sec:sicurezza}
+
+- Il corso prevede molte ore di laboratorio: **sicurezza e ordine sono una priorità**
+
+- Progettare, montare e misurare richiede **attenzione alle persone, agli strumenti e alla postazione**.
+
+- Nel seguito trovi alcune **indicazioni fondamentali**, tratte dalla [**guida sulla sicurezza**](/downloads/tpsee-elettronici.pdf) fornita dal Prof. Jacopo Fanucchi. Segui sempre le indicazioni dei docenti e le procedure dell'istituto.
+
+[**Il metodo di laboratorio**]{style="color: teal"}
+
+Confronta sempre tre livelli: **previsione teorica, simulazione, misura**. Se non coincidono, il confronto aiuta a localizzare l'errore.
+
+## Ordine e metodo 5S (Per i madrelingua Giapponesi)
+
+Le 5S, da cinque parole giapponesi, diventano cinque abitudini:
+
+- **Separare**: tieni sul banco solo il necessario.
+
+- **Sistemare**: assegna un posto a strumenti e componenti; disponi cavi leggibili.
+
+- **Pulire**: a strumenti spenti, elimina residui e segnala danni o anomalie.
+
+- **Standardizzare**: usa colori, etichette e controlli condivisi.
+
+- **Mantenere**: a fine attività spegni, restituisci i materiali e lascia il banco pronto. Registra misure, correzioni e guasti.
+

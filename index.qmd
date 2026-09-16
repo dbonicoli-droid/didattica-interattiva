@@ -1,0 +1,76 @@
+---
+title: "Capire. Sperimentare. Collegare."
+subtitle: "Elettronica, elettrotecnica e automazione"
+page-layout: full
+toc: false
+sidebar: false
+---
+
+::: {.intro}
+**ITIS Galileo Galilei · Livorno · A.S. 2026–2027**
+
+Uno spazio per ritrovare le spiegazioni, consultare le dispense e mettere alla prova le idee. Scegli il tuo corso e segui i collegamenti tra moduli, esempi e laboratori.
+:::
+
+## I tuoi percorsi
+
+::: {.course-grid}
+
+::: {.course-card .course-0}
+### [TPSEE · Elettronica](corsi/tpsee-elettronici/index.qmd)
+
+**3C · Elettronici**
+
+Dalla progettazione ai circuiti logici, alle reti combinatorie e sequenziali.
+
+[Esplora il percorso →](corsi/tpsee-elettronici/index.qmd){.course-link}
+:::
+
+::: {.course-card .course-1}
+### [TPSEE · Elettrotecnica](corsi/tpsee-elettrotecnici/index.qmd)
+
+**3A · Elettrotecnici**
+
+Materiali, componenti, impianti e metodo di lavoro in laboratorio.
+
+[Esplora il percorso →](corsi/tpsee-elettrotecnici/index.qmd){.course-link}
+:::
+
+::: {.course-card .course-2}
+### [Sistemi automatici](corsi/sistemi-automatici/index.qmd)
+
+**3A · Elettrotecnici**
+
+Descrivere i sistemi, costruire modelli e comprendere gli automatismi.
+
+[Esplora il percorso →](corsi/sistemi-automatici/index.qmd){.course-link}
+:::
+
+::: {.course-card .course-3}
+### [Domotica e automazione](corsi/domotica/index.qmd)
+
+**5B · Elettrotecnici**
+
+Sensori, acquisizione dei segnali e controllo degli impianti.
+
+[Esplora il percorso →](corsi/domotica/index.qmd){.course-link}
+:::
+
+:::
+
+::: {.lab-feature}
+## Due circuiti, una domanda
+
+**Che cosa cambia se raddoppia la resistenza?** Confronta due cariche RC: formula una previsione, modifica i componenti e misura il risultato sul grafico.
+
+[Apri il laboratorio RC](laboratori/rc.qmd){.btn .btn-primary} [Scarica le dispense](materiali.qmd){.btn .btn-outline-primary}
+:::
+
+## Dalla panoramica all'approfondimento
+
+Le dispense e le pagine attuali offrono una **panoramica del programma**. Durante l'anno, i percorsi si arricchiranno di spiegazioni dei singoli moduli, derivazioni a penna ed esperimenti interattivi.
+
+::: {.callout-note}
+## Materiali in sviluppo
+I contenuti possono ancora contenere errori o imprecisioni. Le attività pratiche richiedono le indicazioni del docente e le procedure del laboratorio scolastico.
+:::

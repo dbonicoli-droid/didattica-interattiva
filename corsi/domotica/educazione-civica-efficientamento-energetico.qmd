@@ -1,0 +1,16 @@
+---
+title: "Educazione civica / Efficientamento energetico"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#sec:civica}
+
+[**2 ore**]{style="color: teal"} I controlli automatici possono ridurre il consumo evitando funzionamenti inutili. Il risultato dipende dalla funzione richiesta e dalle condizioni d'uso.
+
+#### Un elettrodomestico che si arresta quando ha finito
+
+Confronta un ciclo a durata fissa con un arresto comandato da una misura della condizione raggiunta, per esempio l'umidità del carico in un'asciugatrice. Individua [sensore](glossario.qmd#gloss-new43), decisione e [attuatore](glossario.qmd#gloss-new44); discuti consumi, risultato del trattamento ed eventuali errori della misura.
+
+Per una stima a potenza costante, l'energia $E$ è il prodotto della potenza $P$ per la durata $t$: $E=Pt$. Con $P$ in kW e $t$ in ore, $E$ è in kWh. Il risparmio va confrontato a parità di servizio ottenuto, includendo i consumi del controllo.
+

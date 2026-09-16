@@ -1,0 +1,40 @@
+---
+title: "Esercizi / Metti insieme i moduli"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#sec:sintesi}
+
+**1 · Scala e documenti.** Un corridoio lungo 6 m è disegnato in scala 1:50. Quanto misura sul foglio? Quale schema mostra i singoli conduttori?
+
+**2 · Comandi.** Una luce va comandata da quattro punti usando [deviatori](glossario.qmd#gloss-e11) e [invertitori](glossario.qmd#gloss-e23). Quanti dispositivi servono di ciascun tipo? Un [relè interruttore](glossario.qmd#gloss-e37) inizialmente spento riceve sei impulsi: qual è lo stato finale?
+
+**3 · Fotometria.** Quale grandezza si misura in lumen? E quale si misura in lux?
+
+**4 · Flusso totale.** Stanza di $12\,\mathrm{m^2}$; obiettivo didattico 300 lx; apparecchi da 2000 lm; $UF=0{,}60$; $MF=0{,}80$. Trova il numero minimo intero e l'[illuminamento](glossario.qmd#gloss-e21) medio stimato.
+
+**5 · Ragionamento tecnico.** "Ho installato una lampada intelligente, quindi l'[impianto](glossario.qmd#gloss-e47) è di livello 3". Spiega perché la conclusione non è giustificata.
+
+[Soluzioni commentate nella pagina seguente](esercizi-metti-insieme-i-moduli.qmd#sec:sintesi-soluzioni).
+
+[Altri esercizi di calcolo negli approfondimenti](approfondimenti.qmd#app:esercizi).
+
+## Soluzioni commentate {#sec:sintesi-soluzioni}
+
+[Torna alle domande](esercizi-metti-insieme-i-moduli.qmd#sec:sintesi).
+
+**1.** $600/50=12$ cm. Lo [schema multifilare](glossario.qmd#gloss-e40) rappresenta separatamente i conduttori.
+
+**2.** Due [deviatori](glossario.qmd#gloss-e11) alle estremità e due [invertitori](glossario.qmd#gloss-e23) intermedi. Il relè torna spento: sei cambiamenti ripristinano lo stato iniziale.
+
+**3.** In lumen si misura il [flusso luminoso](glossario.qmd#gloss-e19); in lux si misura l\'[illuminamento](glossario.qmd#gloss-e21).
+
+**4.** $N=\lceil3600/960\rceil=4$; $E_m=4\cdot960/12=320$ lx. Occorre poi verificare la distribuzione sul piano.
+
+**5.** Il livello dipende dall'insieme delle dotazioni e funzioni richieste, non da un singolo apparecchio.
+
+#### Autovalutazione
+
+So spiegare ogni risultato con una frase? Ho scritto le unità? Ho distinto ipotesi didattiche e verifiche di progetto? Se manca uno di questi elementi, completa la soluzione prima di considerarla conclusa.
+

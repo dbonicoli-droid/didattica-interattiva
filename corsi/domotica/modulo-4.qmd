@@ -1,0 +1,130 @@
+---
+title: "Modulo 4 / Linguaggio SFC"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#mod:4}
+
+**Secondo periodo**
+
+Passi, transizioni e azioni rendono leggibile la successione delle operazioni. Il diagramma deve includere stato iniziale e priorità.
+
+## U.D. 4.1 / Introduzione al linguaggio [SFC](glossario.qmd#gloss-d38) {#ud:4.1}
+
+Lo [SFC](glossario.qmd#gloss-d38) organizza il controllo in passi, transizioni e azioni. Il passo iniziale definisce la partenza; le condizioni delle transizioni stabiliscono quando cambiare fase. Condizioni e azioni possono essere espresse anche con reti [Ladder](glossario.qmd#gloss-d25).
+
+## U.D. 4.2 / Simbologia [SFC](glossario.qmd#gloss-d38) {#ud:4.2}
+
+Il **[Ladder](glossario.qmd#gloss-d25)** rappresenta condizioni e assegnazioni con contatti, bobine e blocchi. Lo **[SFC](glossario.qmd#gloss-d38)** organizza una sequenza in passi, transizioni e azioni. Un passo è attivo o inattivo; una transizione può scattare quando i passi precedenti necessari sono attivi e la condizione associata è vera.
+
+::: center
+![Schema didattico 4](/assets/dispense/domotica/figura-4.png){fig-alt="Schema didattico 4 della dispensa Domotica e automazione"}
+:::
+
+*[SFC](glossario.qmd#gloss-d38) concettuale a due passi; il doppio bordo identifica il passo iniziale.*
+
+Nel [Ladder](glossario.qmd#gloss-d25) un contatto diretto legge una variabile vera, uno negato una falsa. Un contatto software non identifica automaticamente il tipo fisico di un pulsante. Nel modello ciclico, ingressi e stato attuale producono il nuovo stato e le uscite. Indichiamo con $s_k$ lo stato, con $u_k$ gli ingressi e con $y_k$ le uscite al ciclo $k$. Le funzioni $f$ e $g$ descrivono rispettivamente transizioni e uscite: $$s_{k+1}=f(s_k,u_k),\qquad y_k=g(s_k,u_k).$$ Quando le uscite dipendono soltanto dallo stato si parla di modello di Moore; se dipendono anche dagli ingressi, di Mealy. In entrambi i casi vanno precisate priorità e inizializzazione.
+
+::: center
+![Schema didattico 5](/assets/dispense/domotica/figura-5.png){fig-alt="Schema didattico 5 della dispensa Domotica e automazione"}
+:::
+
+*[Ladder](glossario.qmd#gloss-d25) di un'azione non memorizzata: uscita vera se il consenso e il passo S1 sono attivi.*
+
+#### Un passo attivo non è una riga eseguita una volta
+
+Il controllore continua a eseguire ciclicamente il programma. Le azioni possono restare attive per molti cicli; un contatore non deve incrementarsi a ogni ciclo se l'evento è un solo pezzo transitato.
+
+**Prova tu.** In S1 l'uscita deve restare attiva finché arriva Fine. Serve una nuova pressione di Start a ogni ciclo?
+
+*Risposta: no. Il passo attivo conserva la condizione di lavoro fino alla transizione prevista.*
+
+## U.D. 4.3 / Applicazioni [SFC](glossario.qmd#gloss-d38) {#ud:4.3}
+
+Progettiamo un riempimento didattico: S0 attesa, S1 riempimento, S2 completato. Start avvia se il livello alto H non è già presente; H conclude il riempimento. Ack riporta da S2 a S0. Un consenso P disattivato porta sempre a S0.
+
+   **Stato**  **Condizione**                   **Successivo**  **Azione**
+  ----------- ------------------------------- ---------------- -----------------------------------
+   Qualsiasi  $P=0$                                  S0        Valvola chiusa; priorità massima.
+      S0      $P=1$, Start e non H                   S1        Inizia il riempimento.
+      S1      $P=1$, H                               S2        Chiudi valvola.
+      S2      $P=1$, Ack                             S0        Pronto a un nuovo ciclo.
+   Qualsiasi  Nessuna condizione precedente      Invariato     Mantieni lo stato.
+
+::: center
+![Schema didattico 6](/assets/dispense/domotica/figura-6.png){fig-alt="Schema didattico 6 della dispensa Domotica e automazione"}
+:::
+
+*Transizioni ordinarie con $P=1$. La transizione prioritaria verso S0 è descritta in tabella.*
+
+**Uscita.** $Valve=P\land(s=S1)\land\overline H$: l'intervento del livello alto interrompe il comando anche prima del successivo stato logico, nel modello di valutazione adottato.
+
+#### Traccia di collaudo
+
+Parti da S0 con H=0. Dai Start: S1, valvola aperta. Rilascia Start: resta S1. Porta H a 1: valvola chiusa e S2. Dai Ack: S0. Ripeti con H già alto all'inizio: Start non avvia.
+
+**Dal grafo al programma.** Ogni arco diventa una condizione di transizione. Si copia lo stato attuale in NextState, si applicano le priorità e si aggiorna State una sola volta. Il grafo non deve attraversare più stati nello stesso ciclo per effetto involontario dell'ordine delle reti.
+
+**Da completare in un progetto reale.** Guasto del [sensore](glossario.qmd#gloss-new43), tempo massimo di riempimento, sovrappieno e guasto dell'[attuatore](glossario.qmd#gloss-new44) richiedono gestione specifica. L'esempio introduce la sequenza ordinaria.
+
+## Dal riempimento al ciclo completo {#sec:ciclo-completo}
+
+Estendiamo la sequenza a un ciclo di lavorazione: attesa, riempimento, miscelazione, scarico. Sono presenti [sensore](glossario.qmd#gloss-new43) di livello alto H e segnale E che vale 1 a serbatoio vuoto.
+
+::: center
+![Schema didattico 7](/assets/dispense/domotica/figura-7.png){fig-alt="Schema didattico 7 della dispensa Domotica e automazione"}
+:::
+
+*Sequenza ordinaria. Per l'avvio si richiedono consenso P e condizione iniziale E; Stop riporta a S0.*
+
+**Azioni.** Valvola di ingresso in S1, agitatore in S2, valvola di scarico in S3. Si definisce un [TON](glossario.qmd#gloss-d41) da 5 s con [IN](glossario.qmd#gloss-d23) vero soltanto in S2. Ogni uscita è inoltre condizionata da P.
+
+**Priorità.** Prima si controllano arresto e anomalie; poi si valuta una sola transizione ordinaria in base allo stato all'inizio del ciclo. Le uscite si calcolano da uno stato coerente. Uno stato non valido porta al comportamento di recupero definito, qui S0 con uscite disattivate e segnalazione.
+
+#### Traduzione ordinata
+
+1\. Acquisisci ingressi e conserva OldState.
+
+2\. Esegui il timer con $IN=(OldState=S2)$.
+
+3\. Calcola NextState applicando prima le priorità.
+
+4\. Assegna State = NextState una sola volta.
+
+5\. Calcola le uscite in funzione di State e dei consensi.
+
+**Prove mirate.** Stop durante ogni fase; H già vero all'avvio; mancato arrivo di H; E bloccato a 0 durante lo scarico; riavvio. I casi di [sensore](glossario.qmd#gloss-new43) bloccato richiedono [timeout](glossario.qmd#gloss-d40) di diagnosi e specifiche aggiuntive: senza di essi il modello può restare nel passo.
+
+#### Stesso comportamento, due rappresentazioni
+
+In [SFC](glossario.qmd#gloss-d38) sono visibili passi e transizioni. In [Ladder](glossario.qmd#gloss-d25) gli stessi stati possono essere codificati da un intero con comparatori o da memorie con esclusione garantita. La verifica deve confrontare le tracce, non la somiglianza grafica.
+
+## U.D. 4.4 / Software SoMachine Basic {#ud:4.4}
+
+SoMachine Basic permette di configurare e programmare i controllori supportati. Nel percorso sequenziale si incontrano rappresentazioni Grafcet: passi e transizioni descrivono la successione delle operazioni.
+
+1.  Crea il progetto e seleziona il controllore disponibile.
+
+2.  Associa ingressi, uscite e memorie ai nomi scelti nello schema.
+
+3.  Definisci passo iniziale, transizioni e azioni.
+
+4.  Compila e prova il ciclo, osservando i passi attivi e le uscite.
+
+Il progetto del banco e la versione installata saranno forniti dal docente.
+
+## U.D. 4.5 / Software CODESYS {#ud:4.5}
+
+CODESYS è un ambiente di sviluppo per sistemi di automazione. Il progetto comprende il dispositivo scelto, i programmi e le task che ne stabiliscono l'esecuzione.
+
+- Crea un programma [SFC](glossario.qmd#gloss-d38) con passo iniziale, transizioni e azioni.
+
+- Dichiara i dati necessari; collega il programma alla task prevista.
+
+- Prova prima la sequenza con ingressi simulati, se il dispositivo e l'ambiente lo consentono.
+
+- Per trasferire il programma occorre il target compatibile e la sua configurazione.
+
+La prova utile è la stessa usata per lo schema: a parità di eventi, il processo deve attraversare gli stati previsti. Non basta che il programma compili.
+

@@ -1,0 +1,120 @@
+---
+title: "Modulo 4 / Circuiti combinatori"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+[]{#mod:4}
+
+**Secondo pentamestre · 40 ore**
+
+Le stesse condizioni logiche possono essere espresse con [contatti](glossario.qmd#gloss-s46), blocchi o istruzioni.
+
+## U.D. 4.1 / Caratteristiche dei circuiti combinatori {#ud:4.1}
+
+Un [comando combinatorio](glossario.qmd#gloss-s48) dipende dagli [ingressi](glossario.qmd#gloss-s9) attuali. Ripresentando gli stessi valori si ottiene lo stesso risultato, senza dover conoscere le operazioni precedenti. Indichiamo con $A$ e $B$ due richieste, con $C$ il consenso e con $Y$ il comando. Useremo: $$Y=(A+B)C.$$ Qui $+$ significa [OR](glossario.qmd#gloss-s52) e il prodotto significa [AND](glossario.qmd#gloss-s52): basta una richiesta, ma serve il consenso.
+
+- La [tabella di verità](glossario.qmd#gloss-s50) contiene le otto combinazioni di tre [ingressi](glossario.qmd#gloss-s9) booleani.
+
+- [Ladder](glossario.qmd#gloss-s12), [FBD](glossario.qmd#gloss-s54), [ST](glossario.qmd#gloss-s55) e [IL](glossario.qmd#gloss-s56) possono descrivere la stessa funzione.
+
+- La realizzazione fisica e l'esecuzione del [PLC](glossario.qmd#gloss-s41) introducono ritardi; il [modello](glossario.qmd#gloss-s15) logico resta senza memoria.
+
+## U.D. 4.2 / Implementazione in linguaggio [Ladder](glossario.qmd#gloss-s12) {#ud:4.2}
+
+- **[Contatto](glossario.qmd#gloss-s46) diretto**: verifica se una [variabile](glossario.qmd#gloss-s27) è vera.
+
+- **[Contatto](glossario.qmd#gloss-s46) negato**: verifica se una [variabile](glossario.qmd#gloss-s27) è falsa.
+
+- **[Bobina](glossario.qmd#gloss-s47) ordinaria**: assegna il risultato della rete alla [variabile](glossario.qmd#gloss-s27) associata.
+
+::: center
+![Schema didattico 11](/assets/dispense/sistemi-automatici/figura-11.png){fig-alt="Schema didattico 11 della dispensa Sistemi automatici"}
+:::
+
+#### [Contatto](glossario.qmd#gloss-s46) software e pulsante fisico
+
+Un pulsante di arresto cablato con [contatto](glossario.qmd#gloss-s46) normalmente chiuso può produrre $\mathtt{StopOK}=1$ quando è rilasciato e $\mathtt{StopOK}=0$ quando viene premuto. Nel [Ladder](glossario.qmd#gloss-s12) useremo allora un [contatto](glossario.qmd#gloss-s46) *diretto* di $\mathtt{StopOK}$ per consentire la marcia. Il nome della [variabile](glossario.qmd#gloss-s27) e la tabella [I/O](glossario.qmd#gloss-s31) (Input/Output, [ingressi](glossario.qmd#gloss-s9) e [uscite](glossario.qmd#gloss-s26)) eliminano l'ambiguità.
+
+Un [PLC](glossario.qmd#gloss-s41) esegue normalmente cicli ripetuti: acquisisce gli [ingressi](glossario.qmd#gloss-s9), esegue il programma e aggiorna le [uscite](glossario.qmd#gloss-s26), con servizi e comunicazioni previsti dal [sistema](glossario.qmd#gloss-s23). Nel [modello](glossario.qmd#gloss-s15) didattico assumiamo una singola [task](glossario.qmd#gloss-s25) ciclica e [ingressi](glossario.qmd#gloss-s9) acquisiti all'inizio del ciclo.
+
+::: center
+![Schema didattico 12](/assets/dispense/sistemi-automatici/figura-12.png){fig-alt="Schema didattico 12 della dispensa Sistemi automatici"}
+:::
+
+**Effetto pratico.** Un impulso più breve del periodo di acquisizione può non essere rilevato. Le memorie scritte da una rete possono influenzare reti successive nello stesso ciclo: l'ordine di esecuzione va considerato.
+
+#### Prima la tabella [I/O](glossario.qmd#gloss-s31)
+
+[BOOL](glossario.qmd#gloss-s29) (Boolean) è il tipo delle [variabili](glossario.qmd#gloss-s27) vere o false qui usate.
+
+$\mathtt{Start}$: [BOOL](glossario.qmd#gloss-s29), 1 durante la richiesta di marcia.
+
+$\mathtt{StopOK}$: [BOOL](glossario.qmd#gloss-s29), 1 quando l'arresto ordinario non è richiesto.
+
+$\mathtt{Run}$: [BOOL](glossario.qmd#gloss-s29), memoria di marcia; $\mathtt{Motor}$: [BOOL](glossario.qmd#gloss-s29), comando logico di [uscita](glossario.qmd#gloss-s26).
+
+Indirizzi fisici e comportamento all'avvio si assegnano in base al controllore e alla configurazione usati in laboratorio.
+
+## U.D. 4.3 / Implementazione mediante Function Block {#ud:4.3}
+
+Nel [FBD](glossario.qmd#gloss-s54) un collegamento porta il valore di un segnale all'[ingresso](glossario.qmd#gloss-s9) di un blocco. Per $Y=(A+B)C$ colleghiamo l'[uscita](glossario.qmd#gloss-s26) di [OR](glossario.qmd#gloss-s52) a un [ingresso](glossario.qmd#gloss-s9) di [AND](glossario.qmd#gloss-s52); $C$ entra nell'altro.
+
+::: center
+![Schema didattico 13](/assets/dispense/sistemi-automatici/figura-13.png){fig-alt="Schema didattico 13 della dispensa Sistemi automatici"}
+:::
+
+I blocchi logici combinatori non conservano lo [stato](glossario.qmd#gloss-s24). Altri blocchi, come [timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61), lo conservano: il solo aspetto rettangolare non dice se la funzione ha memoria.
+
+## U.D. 4.4 / Implementazione in Testo strutturato e Instruction List {#ud:4.4}
+
+Le [variabili](glossario.qmd#gloss-s27) $A$, $B$, $C$ e $Y$ sono booleane. In [ST](glossario.qmd#gloss-s55) la funzione si scrive:
+
+> Y := (A [OR](glossario.qmd#gloss-s52) B) [AND](glossario.qmd#gloss-s52) C;
+
+`:=` assegna il risultato a `Y`; il punto e virgola conclude l'istruzione. In [IL](glossario.qmd#gloss-s56) una sequenza equivalente è:
+
+> [LD](glossario.qmd#gloss-s34) A\
+> [OR](glossario.qmd#gloss-s52) B\
+> [AND](glossario.qmd#gloss-s52) C\
+> [ST](glossario.qmd#gloss-s55) Y
+
+[`LD`](glossario.qmd#gloss-s34) carica A nel risultato intermedio; [`OR`](glossario.qmd#gloss-s52) e [`AND`](glossario.qmd#gloss-s52) lo aggiornano; [`ST`](glossario.qmd#gloss-s55) lo memorizza in Y. In questo contesto [`ST`](glossario.qmd#gloss-s55) è l'istruzione di memorizzazione, non il nome del linguaggio Testo strutturato.
+
+#### Stessa funzione, quattro rappresentazioni
+
+Per $A=0$, $B=1$, $C=1$ tutte le versioni devono produrre $Y=1$. Per verificare l'equivalenza combinatoria prova tutte le otto righe, non soltanto questo caso.
+
+## U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale {#ud:4.5}
+
+[]{#topic:7 label="topic:7"}Un [comando combinatorio](glossario.qmd#gloss-s48) dipende dagli [ingressi](glossario.qmd#gloss-s9) del momento. Riprendiamo $Y=C(A+B)$. L'attivazione richiede $C=1$ e almeno un consenso; la disattivazione avviene se $C=0$ oppure se entrambi $A$ e $B$ sono 0. La tabella e la mappa sono quelle studiate nel modulo 2: $Y=\Sigma m(3,5,7)$ con ordine $ABC$. Il [Ladder](glossario.qmd#gloss-s12) è costituito da $A$ e $B$ in parallelo, in serie a $C$, verso la [bobina](glossario.qmd#gloss-s47) $Y$.
+
+   **Campione $k$**              
+  ------------------ -- -- -- -- --
+         $A$                     
+         $B$                     
+         $C$                     
+         $Y$                     
+
+::: center
+![Schema didattico 14](/assets/dispense/sistemi-automatici/figura-14.png){fig-alt="Schema didattico 14 della dispensa Sistemi automatici"}
+:::
+
+*Diagramma ideale a valori costanti in ogni intervallo. I ritardi fisici e di [scansione](glossario.qmd#gloss-s22) non sono rappresentati.*
+
+#### Un test che distingue [AND](glossario.qmd#gloss-s52) e [OR](glossario.qmd#gloss-s52)
+
+Se uno studente mette $A$ e $B$ in serie, il caso $A=1$, $B=0$, $C=1$ produce erroneamente 0. Questa prova mirata individua il difetto; provare soltanto 000 e 111 non lo rileverebbe.
+
+**Prova tu.** Scrivi la condizione di spegnimento senza usare una barra sull'intera espressione.
+
+*Risposta: $\overline Y=\overline C+\overline A\,\overline B$.*
+
+## U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi {#ud:4.6}
+
+#### Una funzione, quattro programmi
+
+Realizza $Y=(A+B)C$ in [Ladder](glossario.qmd#gloss-s12), [FBD](glossario.qmd#gloss-s54), [ST](glossario.qmd#gloss-s55) e [IL](glossario.qmd#gloss-s56) dove disponibile. Dichiara quattro [variabili](glossario.qmd#gloss-s27) [BOOL](glossario.qmd#gloss-s29); esegui tutte le otto combinazioni e raccogli le quattro [uscite](glossario.qmd#gloss-s26) nella stessa tabella. Un risultato diverso richiede di controllare collegamenti, parentesi e ordine delle istruzioni.
+
+Mantieni distinto il collaudo logico dalla prova sul banco: la simulazione non verifica i collegamenti elettrici reali.
+

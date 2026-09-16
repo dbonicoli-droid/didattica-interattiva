@@ -1,0 +1,36 @@
+---
+title: "Prima di iniziare / Conoscenze di base"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+
+[]{#sec:codifiche-compendio}
+
+[**Gli strumenti di base del corso**]{style="color: teal"}
+
+- **Basi di numerazione.** Convertire interi fra binario, decimale ed esadecimale. Collegare numero di [bit](glossario.qmd#gloss-g7) e intervallo rappresentabile.
+
+- **[Complemento a due](glossario.qmd#gloss-g65).** Un modo per scrivere con i [bit](glossario.qmd#gloss-g7) anche i numeri negativi, usato nei calcolatori e nei circuiti digitali. Consente di eseguire somme e sottrazioni con lo stesso circuito sommatore.
+
+- **Virgola mobile.** Convertire semplici frazioni binarie e normalizzare un numero. Distinguere segno, significando ed esponente; comprendere perché alcuni valori vengono approssimati.
+
+- **[ASCII](glossario.qmd#gloss-g3).** Associare codici e caratteri. Distinguere il valore numerico dalla sua rappresentazione come testo.
+
+- **[Unicode](glossario.qmd#gloss-g53) e [UTF-8](glossario.qmd#gloss-g54).** Distinguere caratteri, punti di codice e [byte](glossario.qmd#gloss-g9). Leggere semplici sequenze [UTF-8](glossario.qmd#gloss-g54) con l'aiuto di una tabella.
+
+#### Il vocabolario minimo
+
+**[Bit](glossario.qmd#gloss-g7)**: cifra binaria, 0 oppure 1. **[Rete](glossario.qmd#gloss-g67)**: insieme di componenti collegati.
+
+**[Rete combinatoria](glossario.qmd#gloss-g43)**: l'uscita dipende dagli ingressi correnti, dopo il ritardo di propagazione.
+
+**[Rete sequenziale](glossario.qmd#gloss-g44)**: l'uscita dipende anche dallo stato memorizzato.
+
+**[Attivo alto](glossario.qmd#gloss-g4)/[basso](glossario.qmd#gloss-g4)**: un comando [attivo alto](glossario.qmd#gloss-g4) agisce con livello 1; un comando [attivo basso](glossario.qmd#gloss-g4) agisce con livello 0. Il comando [attivo basso](glossario.qmd#gloss-g4) si riconosce da una barra sul nome o da una piccola bolla nel simbolo.
+
+#### Spiegazioni ed esercizi
+
+[Riprendi le conoscenze di base con esempi guidati](conoscenze-di-base.qmd#sec:codifiche) (p. ).
+
+[**Vai agli esercizi e alle soluzioni commentate**](conoscenze-di-base.qmd#sec:codifiche-esercizi) p. 
+

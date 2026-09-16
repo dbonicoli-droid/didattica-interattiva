@@ -1,0 +1,1 @@
+﻿{"name":"Confronto iniziale RC","supply_V":10,"circuit1":{"R_ohm":1000,"C_farad":0.0001},"circuit2":{"R_ohm":2000,"C_farad":0.0001},"axes":{"time_max_s":1,"voltage_max_V":12},"selected_time_s":0.1}

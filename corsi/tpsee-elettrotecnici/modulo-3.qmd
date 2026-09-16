@@ -1,0 +1,185 @@
+---
+title: "Modulo 3 / Principali componenti degli impianti elettrici"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#mod:3}
+
+**Primo e secondo periodo**
+
+I componenti distribuiscono l'[energia](glossario.qmd#gloss-new58), collegano gli utilizzatori e ne comandano il funzionamento. Li riconosceremo attraverso funzione, simbolo e dati principali.
+
+## U.D. 3.1 / Cavi elettrici per [energia](glossario.qmd#gloss-new58) e segnale {#ud:3.1}
+
+- Un cavo comprende conduttori, isolamento ed eventuali guaina e schermo.
+
+- **Cavi per [energia](glossario.qmd#gloss-new58)**: alimentano gli utilizzatori.
+
+- **Cavi per segnale**: trasportano informazioni; contano anche disturbi e caratteristiche di trasmissione.
+
+::: center
+![Schema didattico 7](/assets/dispense/tpsee-elettrotecnici/figura-7.png){fig-alt="Schema didattico 7 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Sezione concettuale di un cavo multipolare; i colori della figura non codificano le funzioni dei conduttori.*
+
+Per un conduttore uniforme, a temperatura fissata: $$R=\rho\frac{\ell}{S}.$$
+
+- $R$: [resistenza](glossario.qmd#gloss-new56), in ohm ($\Omega$).
+
+- $\rho$: [resistività](glossario.qmd#gloss-e38) del materiale, qui in $\Omega\,\mathrm{mm^2/m}$.
+
+- $\ell$: lunghezza del conduttore, in metri; $S$: sezione, in $\mathrm{mm^2}$.
+
+La sezione influenza [resistenza](glossario.qmd#gloss-new56) e riscaldamento. La scelta reale dipende anche da [corrente](glossario.qmd#gloss-new55), posa, temperatura, raggruppamento, isolamento, caduta di [tensione](glossario.qmd#gloss-new54) e coordinamento delle protezioni.
+
+#### Per approfondire
+
+Un cavo più lungo ha una [resistenza](glossario.qmd#gloss-new56) maggiore; aumentando la sezione, la [resistenza](glossario.qmd#gloss-new56) diminuisce. [Calcola caduta di [tensione](glossario.qmd#gloss-new54) e perdite con un esempio guidato](approfondimenti.qmd#app:cavi) (p. ).
+
+## Proteggere i percorsi e collegare gli utilizzatori {#topic:4}
+
+## U.D. 3.2 / Tubi protettivi e canali {#ud:3.2}
+
+- **Tubi protettivi** è il termine generale: possono essere **rigidi** oppure **corrugati**, riconoscibili dalla superficie ad anelli. Proteggono e contengono i cavi.
+
+- I **canali portacavi** hanno spesso sezione rettangolare e un coperchio apribile.
+
+- La scelta dipende da ambiente, sollecitazioni, percorsi e manutenzione.
+
+- Curve, giunzioni e spazio disponibile influenzano la possibilità di sfilare i cavi.
+
+::: center
+![Schema didattico 8](/assets/dispense/tpsee-elettrotecnici/figura-8.png){fig-alt="Schema didattico 8 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Tre forme di protezione e contenimento dei cavi: rappresentazioni schematiche.*
+
+Nel disegno si indicano percorsi, cassette e identificativi. Non si sceglie un tubo soltanto perché i cavi "ci entrano": occorre considerare anche posa, dissipazione e futuri interventi.
+
+## U.D. 3.3 / Prese e spine elettriche {#ud:3.3}
+
+- Prese e spine permettono collegamenti separabili.
+
+- Leggi [tensione](glossario.qmd#gloss-new54) e [corrente](glossario.qmd#gloss-new55) nominali, connessione e condizioni d'impiego.
+
+- Negli apparecchi di classe I, il [contatto](glossario.qmd#gloss-e10) di terra collega le masse al conduttore di protezione.
+
+#### Tre funzioni da distinguere
+
+**Conduttore di protezione ([PE](glossario.qmd#gloss-e35), Protective Earth):** contribuisce alla protezione in caso di guasto dell'isolamento.
+
+**[Magnetotermico](glossario.qmd#gloss-e30):** interviene per sovracorrenti, secondo le proprie caratteristiche.
+
+**[Differenziale](glossario.qmd#gloss-e14):** rileva uno squilibrio fra le correnti nei conduttori attivi. Un [differenziale](glossario.qmd#gloss-e14) puro non protegge dal [sovraccarico](glossario.qmd#gloss-new60).
+
+#### Stimare la [corrente](glossario.qmd#gloss-new55) di un [carico](glossario.qmd#gloss-e4)
+
+Per un carico resistivo: **potenza \[W\] = tensione \[V\] $\times$ corrente \[A\]**. In alternata usiamo i valori efficaci di tensione e corrente. Indicandoli con $V$ e $I$, e indicando la potenza con $P$: $$P=V I\qquad\Longrightarrow\qquad I=\frac{P}{V}.$$
+
+::: center
+![Schema didattico 9](/assets/dispense/tpsee-elettrotecnici/figura-9.png){fig-alt="Schema didattico 9 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+Per un utilizzatore resistivo monofase da 1500 W a 230 V: $$I\simeq\frac{P}{V}=\frac{1500}{230}=6{,}52\,\mathrm A.$$ La stima aiuta a leggere i dati di targa. Non dimostra da sola l'idoneità di una presa o di una prolunga: contano anche stato, installazione e [carico](glossario.qmd#gloss-e4) complessivo. Per carichi non resistivi la [potenza](glossario.qmd#gloss-new57) attiva dipende anche dal fattore di [potenza](glossario.qmd#gloss-new57).
+
+**Domanda.** Perché una presa multipla non aumenta la [potenza](glossario.qmd#gloss-new57) disponibile?
+
+*Risposta: i carichi continuano a gravare sullo stesso collegamento a monte.*
+
+## Comandare una luce da più punti {#topic:5}
+
+## U.D. 3.4 / Interruttore di comando unipolare e bipolare, [deviatore](glossario.qmd#gloss-e11), [invertitore](glossario.qmd#gloss-e23) {#ud:3.4}
+
+- **Interruttore unipolare**: apre o chiude un conduttore.
+
+- **Interruttore bipolare**: agisce su due poli con comando meccanicamente solidale.
+
+- **[Deviatore](glossario.qmd#gloss-e11)**: collega il [morsetto](glossario.qmd#gloss-e32) comune a una di due vie.
+
+- **[Invertitore](glossario.qmd#gloss-e23)**: mantiene diritti o incrocia due collegamenti, fra due [deviatori](glossario.qmd#gloss-e11).
+
+Con due [deviatori](glossario.qmd#gloss-e11) si comanda una luce da due punti. Per tre punti si aggiunge un [invertitore](glossario.qmd#gloss-e23); per quattro, due [invertitori](glossario.qmd#gloss-e23) fra i [deviatori](glossario.qmd#gloss-e11) terminali.
+
+::: center
+![Schema didattico 10](/assets/dispense/tpsee-elettrotecnici/figura-10.png){fig-alt="Schema didattico 10 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Modello didattico: entrambi i [deviatori](glossario.qmd#gloss-e11) selezionano la via 0, quindi il [circuito](glossario.qmd#gloss-e46) è chiuso.*
+
+   **A**   **B**   **Luce**  **Motivo**
+  ------- ------- ---------- ------------------------------
+     0       0      Accesa   È selezionata la stessa via.
+     0       1      Spenta   Il percorso è interrotto.
+     1       0      Spenta   Il percorso è interrotto.
+     1       1      Accesa   È selezionata la stessa via.
+
+#### Il comando dipende dallo stato complessivo
+
+La posizione di un singolo [deviatore](glossario.qmd#gloss-e11) non significa sempre "acceso" o "spento". Cambiare uno dei due comandi inverte lo stato della lampada. La tabella dipende dalla convenzione scelta per le vie.
+
+**Laboratorio.** Sul banco didattico verifica le quattro combinazioni, poi inserisci un [invertitore](glossario.qmd#gloss-e23) e controlla che anche il terzo comando cambi sempre lo stato della luce. Registra le otto combinazioni possibili.
+
+## Comandare con impulsi e relè {#topic:6}
+
+## U.D. 3.5 / Relè interruttore e relè commutatore {#ud:3.5}
+
+Il relè separa la funzione di comando dalla commutazione del [carico](glossario.qmd#gloss-e4). Una [bobina](glossario.qmd#gloss-e2) o un [circuito](glossario.qmd#gloss-e46) elettronico riceve il comando; i [contatti](glossario.qmd#gloss-e10) agiscono sul [circuito](glossario.qmd#gloss-e46) utilizzatore. Le prestazioni e l'eventuale isolamento dipendono dal dispositivo.
+
+- **[Relè interruttore](glossario.qmd#gloss-e37) a impulsi**: alterna apertura e chiusura; mantiene lo stato fra due comandi.
+
+- **Relè commutatore a impulsi**: segue una sequenza di uscite definita dal costruttore.
+
+- **Relè monostabile**: torna a riposo quando cessa l'eccitazione.
+
+::: center
+![Schema didattico 11](/assets/dispense/tpsee-elettrotecnici/figura-11.png){fig-alt="Schema didattico 11 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+::: center
+![Schema didattico 12](/assets/dispense/tpsee-elettrotecnici/figura-12.png){fig-alt="Schema didattico 12 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*[Relè interruttore](glossario.qmd#gloss-e37) ideale, inizialmente spento: ogni impulso cambia lo stato una sola volta.*
+
+#### Una sequenza di commutazione possibile
+
+Un dispositivo per due gruppi di lampade può realizzare: $$00\longrightarrow10\longrightarrow11\longrightarrow01\longrightarrow00.$$ Il primo [bit](glossario.qmd#gloss-e1) indica il gruppo A, il secondo il gruppo B; 1 significa acceso. Dopo tre impulsi, partendo da 00, è acceso soltanto B. Questa è una sequenza d'esempio: va sempre letta la tabella del relè impiegato.
+
+**Prova tu.** Un [relè interruttore](glossario.qmd#gloss-e37) parte acceso e riceve cinque impulsi.
+
+*Risposta: finisce spento. Un numero dispari di impulsi inverte lo stato iniziale; un numero pari lo ripristina.*
+
+## Funzioni e dotazioni dell'abitazione {#topic:7}
+
+## U.D. 3.6 / Luci scale, elettroserrature, suonerie e citofoni {#ud:3.6}
+
+Questi servizi associano comandi, alimentazione e utilizzatori diversi. Il **temporizzatore luci scale** mantiene accese le lampade per un intervallo dopo il comando. Il comportamento di un secondo impulso durante il conteggio dipende dal modello e dalla configurazione.
+
+- **Elettroserratura**: trasforma il comando elettrico in uno sblocco meccanico.
+
+- **Suoneria**: produce una segnalazione acustica.
+
+- **Citofono**: permette chiamata e comunicazione audio. Nei sistemi a bus più funzioni possono condividere un canale dati.
+
+::: center
+![Schema didattico 13](/assets/dispense/tpsee-elettrotecnici/figura-13.png){fig-alt="Schema didattico 13 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Architettura funzionale semplificata; connessioni e tensioni dipendono dal sistema.*
+
+#### Ragionare sul tempo
+
+Un temporizzatore è impostato a 90 s. Il comando arriva a $t=0$ e di nuovo a $t=40$ s. Se il dispositivo riparte da zero a ogni comando, la luce si spegne a $t=130$ s. Se ignora il secondo comando, si spegne a $t=90$ s.
+
+## U.D. 3.7 / Livelli prestazionali degli [impianti](glossario.qmd#gloss-e47) elettrici {#ud:3.7}
+
+Per gli [impianti](glossario.qmd#gloss-e47) residenziali il capitolo 37 della [CEI](glossario.qmd#gloss-e6) 64-8 distingue tre livelli di dotazione e fruibilità: **1, base**; **2, standard**; **3, domotico**. Aumentano servizi e possibilità di gestione secondo i requisiti previsti.
+
+#### Prestazione e sicurezza sono dimensioni diverse
+
+Tutti i livelli richiedono sicurezza. Un [impianto](glossario.qmd#gloss-e47) di livello base non è autorizzato a essere meno sicuro. Aggiungere un singolo dispositivo intelligente non basta a dichiarare raggiunto un livello superiore: occorre verificare l'insieme delle dotazioni richieste.
+
+**Attività.** Confronta due abitazioni immaginarie: una con comandi locali e una con gestione coordinata di luci e carichi. Elenca le funzioni, senza attribuire un livello finché non hai verificato tutti i requisiti applicabili.
+

@@ -1,0 +1,23 @@
+---
+title: "La mappa del percorso"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+[]{#nav:mappa}
+
+   **Modulo**  **Argomento**                           **Periodo**   **Ore**
+  ------------ -------------------------------------- ------------- ---------
+       1       Fondamenti di teoria dei sistemi             1          15
+       2       Elettronica digitale                         1          30
+       3       [PLC](glossario.qmd#gloss-s41)               2          30
+       4       Circuiti combinatori                         2          40
+       5       Circuiti sequenziali                         2          24
+       6       Tempi, eventi e grandezze analogiche         2          24
+
+::: center
+![Schema didattico 1](/assets/dispense/sistemi-automatici/figura-1.png){fig-alt="Schema didattico 1 della dispensa Sistemi automatici"}
+:::
+
+[]{#nav:indice label="nav:indice"}
+

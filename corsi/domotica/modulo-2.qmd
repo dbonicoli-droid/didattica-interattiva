@@ -1,0 +1,64 @@
+---
+title: "Modulo 2 / Automazione industriale e PLC"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#mod:2}
+
+**Secondo periodo**
+
+Il [PLC](glossario.qmd#gloss-d29) acquisisce segnali e comanda il processo secondo un programma. [Sensori](glossario.qmd#gloss-new43), [attuatori](glossario.qmd#gloss-new44) e interfacce danno significato fisico alle variabili.
+
+## U.D. 2.1 / Introduzione all'automazione industriale {#ud:2.1}
+
+Un automatismo esegue un compito secondo regole definite. Il processo è ciò su cui si agisce; il controllore riceve informazioni e produce comandi.
+
+- **Osservare**: acquisire presenza, posizione, temperatura o altre grandezze.
+
+- **Decidere**: verificare consensi, stato e condizioni di transizione.
+
+- **Agire**: comandare [attuatori](glossario.qmd#gloss-new44) e segnalazioni.
+
+Un comando a tempo può lavorare ad anello aperto. Quando una misura del risultato torna al controllore e influenza il comando si ha [retroazione](glossario.qmd#gloss-new46).
+
+## U.D. 2.2 / Comando, segnalazione, [sensori](glossario.qmd#gloss-new43), trasduttori e [attuatori](glossario.qmd#gloss-new44) {#ud:2.2}
+
+Pulsanti e selettori esprimono richieste; spie e segnalatori restituiscono informazioni all'operatore. Un [sensore](glossario.qmd#gloss-new43) rileva una grandezza e un trasduttore la converte in un segnale utilizzabile; un [attuatore](glossario.qmd#gloss-new44) agisce sul processo.
+
+- Un finecorsa rileva una posizione; un [encoder](glossario.qmd#gloss-d18) può produrre impulsi o codici di posizione.
+
+- Una termoresistenza cambia resistenza con la temperatura; la catena di acquisizione deve trasformarla in una misura.
+
+- Un motore o una valvola eseguono un'azione attraverso la relativa interfaccia di comando.
+
+[[Sensori](glossario.qmd#gloss-new43), parametri caratteristici e conversione dei segnali sono sviluppati negli approfondimenti](approfondimenti.qmd#app:sensori), con esempi e schede dei componenti.
+
+## U.D. 2.3 / Hardware del [PLC](glossario.qmd#gloss-d29) {#ud:2.3}
+
+Il [PLC](glossario.qmd#gloss-d29) (Programmable Logic Controller) acquisisce segnali, esegue il programma e aggiorna le uscite.
+
+- [CPU](glossario.qmd#gloss-d5) (Central Processing Unit): elabora le istruzioni.
+
+- Memorie: contengono programma, variabili e configurazione.
+
+- [I/O](glossario.qmd#gloss-d22) (Input/Output): collegano [sensori](glossario.qmd#gloss-new43) e [attuatori](glossario.qmd#gloss-new44); possono essere digitali o analogici.
+
+- Alimentazione e interfacce: devono essere compatibili con i dispositivi collegati.
+
+Nel modello ciclico si leggono gli ingressi, si esegue il programma e si aggiornano le uscite. L'indirizzo associa un nome simbolico a un canale; il valore iniziale e la ritentività stabiliscono cosa accade al riavvio.
+
+## U.D. 2.4 / Linguaggi di programmazione dei [PLC](glossario.qmd#gloss-d29) {#ud:2.4}
+
+- [LD](glossario.qmd#gloss-d25) ([Ladder](glossario.qmd#gloss-d25) Diagram): contatti, bobine e blocchi.
+
+- [FBD](glossario.qmd#gloss-d6) (Function Block Diagram): collegamenti fra blocchi funzionali.
+
+- [ST](glossario.qmd#gloss-d6) (Structured Text): testo strutturato, adatto anche a calcoli e condizioni.
+
+- [IL](glossario.qmd#gloss-d6) (Instruction List): sequenze di istruzioni che elaborano un risultato intermedio.
+
+- [SFC](glossario.qmd#gloss-d38) (Sequential Function Chart): passi, transizioni e azioni per descrivere sequenze.
+
+La funzione richiesta viene prima della rappresentazione. Uno stesso automatismo può essere descritto con linguaggi diversi, purché stato iniziale, priorità e risultati delle prove coincidano. I linguaggi disponibili dipendono da software e controllore.
+

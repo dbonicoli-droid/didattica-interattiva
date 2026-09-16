@@ -1,0 +1,69 @@
+---
+title: "Approfondimenti"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#sec:approfondimenti}
+
+## Luce, distanza e inclinazione {#app:luce-distanza}
+
+Per una sorgente puntiforme, considerando il solo contributo diretto: $$E=\frac{I_v\cos\theta}{r^2}.$$ $r$ è la distanza fra sorgente e punto; $\theta$ è l'angolo fra la direzione verso la sorgente e la normale al piano. La formula non include riflessioni e richiede una sorgente sufficientemente piccola rispetto alla distanza.
+
+#### La distanza cambia molto il risultato
+
+Sotto una sorgente con $I_v=400$ cd nella direzione del punto, a $r=2$ m e $\theta=0^\circ$: $$E=400/2^2=100\,\mathrm{lx}.$$ A 4 m, nella stessa direzione, si ottengono $400/4^2=25$ lx. Raddoppiare la distanza riduce a un quarto il contributo diretto.
+
+[Torna alla U.D. 5.2](modulo-5.qmd#ud:5.2).
+
+## Cavi: caduta di [tensione](glossario.qmd#gloss-new54) e perdite {#app:cavi}
+
+La [corrente](glossario.qmd#gloss-new55) incontra la [resistenza](glossario.qmd#gloss-new56) di entrambi i conduttori del percorso di andata e ritorno. La caduta di [tensione](glossario.qmd#gloss-new54) è $\Delta V=RI$; la [potenza](glossario.qmd#gloss-new57) dissipata è $P=RI^2$, con $R$ [resistenza](glossario.qmd#gloss-new56) complessiva e $I$ [corrente](glossario.qmd#gloss-new55).
+
+#### Andata e ritorno contano entrambi
+
+La resistenza della linea è $R_{\mathrm{linea}}=\rho\ell/S$: resistività $\rho$ \[$\Omega\,\mathrm{mm^2/m}$\], lunghezza totale $\ell$ \[m\], sezione $S$ \[$\mathrm{mm^2}$\]. Poi:
+
+- **Caduta di tensione \[V\] = resistenza della linea \[$\Omega$\] $\times$ corrente \[A\]**: $\Delta V=R_{\mathrm{linea}} I$.
+
+- **Potenza persa \[W\] = resistenza della linea \[$\Omega$\] $\times$ corrente al quadrato \[$\mathrm{A^2}$\]**: $P_{\mathrm{persa}}=R_{\mathrm{linea}}I^2$.
+
+::: center
+![Schema didattico 19](/assets/dispense/tpsee-elettrotecnici/figura-19.png){fig-alt="Schema didattico 19 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+Un [carico](glossario.qmd#gloss-e4) in continua a 24 V assorbe 2 A ed è distante 10 m dalla sorgente. Due conduttori di rame da $1{,}5\,\mathrm{mm^2}$, con $\rho=0{,}0175\,\Omega\,\mathrm{mm^2/m}$, formano un percorso di 20 m. $$R_{\mathrm{linea}}=0{,}0175\frac{20}{1{,}5}=0{,}233\,\Omega$$ $$\Delta V=RI=0{,}467\,\mathrm V,\qquad P_{\mathrm{persa}}=RI^2=0{,}933\,\mathrm W.$$ La [tensione](glossario.qmd#gloss-new54) al [carico](glossario.qmd#gloss-e4) è circa $23{,}53$ V. È un calcolo resistivo semplificato, non il dimensionamento completo del cavo.
+
+**Prova tu.** Raddoppiando la sezione, a parità di altre condizioni, cosa accade?
+
+*Risposta: [resistenza](glossario.qmd#gloss-new56), caduta e perdite si dimezzano, se la [corrente](glossario.qmd#gloss-new55) resta uguale.* [Torna alla U.D. 3.1](modulo-3.qmd#ud:3.1).
+
+## [Resistenza](glossario.qmd#gloss-new56) e temperatura {#app:temperatura}
+
+Nel modello seguente $R(T)$ è la [resistenza](glossario.qmd#gloss-new56) alla temperatura $T$; $R_{20}$ è il valore a 20 gradi Celsius e $\alpha_{20}$ descrive la variazione relativa per grado. Nei metalli la [resistenza](glossario.qmd#gloss-new56) tende ad aumentare con la temperatura. In un intervallo limitato si può usare: $$R(T)=R_{20}\,[1+\alpha_{20}(T-20\,^{\circ}\mathrm C)].$$ Per il rame assumiamo $\alpha_{20}=0{,}00393\,^{\circ}\mathrm C^{-1}$. Un conduttore da $1\,\Omega$ a 20 $^\circ$C raggiunge circa $1{,}197\,\Omega$ a 70 $^\circ$C.
+
+::: center
+![Schema didattico 20](/assets/dispense/tpsee-elettrotecnici/figura-20.png){fig-alt="Schema didattico 20 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Modello lineare indicativo per il conduttore dell'esempio.*
+
+[Torna alla U.D. 4.3](modulo-4.qmd#ud:4.3).
+
+## Esercizi di calcolo {#app:esercizi}
+
+**1 · Cavo in continua.** Un [carico](glossario.qmd#gloss-e4) assorbe 3 A e dista 8 m dalla sorgente. I due conduttori di rame hanno sezione $2{,}5\,\mathrm{mm^2}$. Usa $\rho=0{,}0175\,\Omega\,\mathrm{mm^2/m}$. Calcola [resistenza](glossario.qmd#gloss-new56) della linea, caduta e perdita di [potenza](glossario.qmd#gloss-new57).
+
+**2 · Temperatura.** Un conduttore di rame ha $R_{20}=0{,}50\,\Omega$. Calcola $R$ a 60 $^\circ$C usando $\alpha=0{,}00393\,^{\circ}\mathrm C^{-1}$.
+
+**3 · Fotometria.** Una sorgente puntiforme presenta 600 cd nella direzione perpendicolare al piano. Calcola il contributo diretto a 3 m. Quale grandezza si misura in lumen?
+
+[Soluzioni di seguito](approfondimenti.qmd#app:soluzioni).
+
+## Soluzioni degli esercizi di calcolo {#app:soluzioni}
+
+**1.** Lunghezza complessiva $\ell=16$ m: $$R=0{,}0175\frac{16}{2{,}5}=0{,}112\,\Omega;\quad\Delta V=0{,}336\,\mathrm V;\quad P=1{,}008\,\mathrm W.$$
+
+**2.** $R=0{,}50[1+0{,}00393(60-20)]=0{,}5786\,\Omega$.
+
+**3.** $E=600/3^2=66{,}7$ lx. In lumen si misura il [flusso luminoso](glossario.qmd#gloss-e19). [Torna agli esercizi](approfondimenti.qmd#app:esercizi).

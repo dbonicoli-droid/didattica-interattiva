@@ -1,0 +1,21 @@
+---
+title: "TPSEE · Elettronici"
+---
+
+Panoramica del programma e materiali di riferimento per il corso. Questa versione ipertestuale riprende i contenuti della dispensa: unità didattiche, esempi, esercizi e approfondimenti. I moduli saranno ampliati durante l’anno.
+
+[Scarica la dispensa PDF](/downloads/tpsee-elettronici.pdf){.btn .btn-primary}
+
+## Percorso di lettura
+
+- [La mappa del percorso](percorso.qmd)
+- [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
+- [Sicurezza e Buone pratiche](sicurezza-e-buone-pratiche.qmd)
+- [Modulo 1 / Il progetto di sistemi elettrici ed elettronici](modulo-1.qmd)
+- [Modulo 2 / Elementi di logica](modulo-2.qmd)
+- [Modulo 3 / Elettronica digitale in logica cablata](modulo-3.qmd)
+- [Modulo 4 / Reti sequenziali](modulo-4.qmd)
+- [Conoscenze di base](conoscenze-di-base.qmd)
+- [Metti insieme il percorso](metti-insieme-il-percorso.qmd)
+- [Approfondimenti](approfondimenti.qmd)
+- [Glossario](glossario.qmd)

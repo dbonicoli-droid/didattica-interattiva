@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - guida.qmd
+    - materiali.qmd
+    - corsi/**/*.qmd
+    - laboratori/*.qmd
+  resources:
+    - assets/**
+    - downloads/**
+    - laboratori/rc/index.html
+website:
+  title: "Didattica interattiva"
+  site-url: https://dbonicoli-droid.github.io/didattica-interattiva/
+  repo-url: https://github.com/dbonicoli-droid/didattica-interattiva
+  description: "Materiali di Daniele Bonicoli per elettronica, elettrotecnica e automazione."
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: Percorsi
+      - href: laboratori/rc.qmd
+        text: Laboratorio RC
+      - href: materiali.qmd
+        text: Dispense PDF
+      - href: guida.qmd
+        text: Come studiare
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "TPSEE · Elettronica"
+        href: corsi/tpsee-elettronici/index.qmd
+        contents: corsi/tpsee-elettronici/*.qmd
+      - section: "TPSEE · Elettrotecnica"
+        href: corsi/tpsee-elettrotecnici/index.qmd
+        contents: corsi/tpsee-elettrotecnici/*.qmd
+      - section: "Sistemi automatici"
+        href: corsi/sistemi-automatici/index.qmd
+        contents: corsi/sistemi-automatici/*.qmd
+      - section: "Domotica e automazione"
+        href: corsi/domotica/index.qmd
+        contents: corsi/domotica/*.qmd
+  page-footer:
+    left: "Daniele Bonicoli · Materiali didattici personali · A.S. 2026–2027"
+    right: "Versione in sviluppo"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    lang: it
+    toc: true
+    toc-title: In questa pagina
+    code-copy: true
+    link-external-newwindow: true
+    html-math-method: mathjax
+    smooth-scroll: true
+lang: it
+execute:
+  enabled: false

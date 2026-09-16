@@ -1,0 +1,116 @@
+---
+title: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+
+[]{#mod:1}
+
+**20 ore · Primo periodo**
+
+Un **sistema elettrico o elettronico** è un insieme di componenti collegati per svolgere una funzione, come accendere una spia o controllare un motore. **Progettare** significa partire da questa funzione e scegliere componenti e collegamenti, verificandoli prima con una simulazione e poi con un montaggio reale.
+
+## U.D. 1.1 / [Multisim](glossario.qmd#gloss-g37) {#ud:1.1}
+
+[Multisim](glossario.qmd#gloss-g37) permette di disegnare e simulare circuiti elettronici. Si scelgono i componenti, si impostano i valori e si collegano alimentazioni e strumenti virtuali. Il multimetro misura [tensione](glossario.qmd#gloss-new68) o [corrente](glossario.qmd#gloss-new69); l'oscilloscopio mostra l'andamento temporale di un segnale.
+
+La simulazione verifica un modello del circuito: un risultato corretto dipende anche dai modelli scelti e dai parametri impostati. Occorre distinguere porte ideali e [integrati](glossario.qmd#gloss-new77) reali, con alimentazione e ritardi.
+
+#### Simula un partitore
+
+Per un partitore senza carico: **tensione di uscita \[V\] = tensione di ingresso \[V\] $\times$ resistenza inferiore / somma delle resistenze**. $V_{\mathrm{in}}$ è la tensione di alimentazione, $V_{\mathrm{out}}$ quella di uscita; $R_1$ è il resistore superiore e $R_2$ quello inferiore.
+
+Collega due resistori da $1\,\mathrm{k\Omega}$ in serie fra $5\,\mathrm{V}$ e massa. Misura la [tensione](glossario.qmd#gloss-new68) sul resistore inferiore:
+
+::: center
+![Schema didattico 2](/assets/dispense/tpsee-elettronici/figura-2.png){fig-alt="Schema didattico 2 della dispensa TPSEE · Elettronici"}
+:::
+
+$$V_{\mathrm{out}}=V_{\mathrm{in}}\frac{R_2}{R_1+R_2}=5\frac{1}{1+1}=2{,}5\,\mathrm{V}.$$ Per il caso con carico, il circuito diventa:
+
+::: center
+![Schema didattico 3](/assets/dispense/tpsee-elettronici/figura-3.png){fig-alt="Schema didattico 3 della dispensa TPSEE · Elettronici"}
+:::
+
+La resistenza equivalente di due resistori in parallelo è $R_{\mathrm{eq}}=R_2R_L/(R_2+R_L)$, con tutte le resistenze in ohm. In questo circuito, nella formula del partitore si sostituisce $R_2$ con $R_{\mathrm{eq}}$.
+
+Se colleghi un [carico](glossario.qmd#gloss-g57) da $1\,\mathrm{k\Omega}$ in parallelo a $R_2$, la [resistenza](glossario.qmd#gloss-new70) inferiore equivalente diventa $500\,\Omega$ e l'uscita scende a circa $1{,}67\,\mathrm{V}$. La misura modifica il sistema se lo strumento o il [carico](glossario.qmd#gloss-g57) assorbe [corrente](glossario.qmd#gloss-new69) apprezzabile.
+
+## Dalla simulazione al progetto {#topic:3}
+
+## U.D. 1.2 / [Ultiboard](glossario.qmd#gloss-g52) {#ud:1.2}
+
+[Ultiboard](glossario.qmd#gloss-g52) serve a progettare il circuito stampato, o **[PCB](glossario.qmd#gloss-g41)**. Ogni componente dello schema deve essere associato a un **[footprint](glossario.qmd#gloss-g19)**, cioè alla sua impronta fisica con piazzole e dimensioni. Si definiscono il bordo della scheda, il posizionamento e le piste di rame.
+
+La **[netlist](glossario.qmd#gloss-g64)** elenca le connessioni da realizzare. Il [DRC](glossario.qmd#gloss-g15) (Design Rule Check), controllo delle regole di progetto, aiuta a individuare, per esempio, distanze insufficienti e piste non collegate. Un [DRC](glossario.qmd#gloss-g15) superato non dimostra da solo che il circuito sia elettricamente corretto.
+
+## U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico {#ud:1.3}
+
+Si parte da un bisogno e lo si traduce in requisiti verificabili: ingressi, uscite, alimentazione, prestazioni e vincoli. Si sceglie una soluzione, si dimensionano i componenti e si prepara il collaudo. Se una prova fallisce si torna al progetto, correggendolo.
+
+::: center
+![Schema didattico 4](/assets/dispense/tpsee-elettronici/figura-4.png){fig-alt="Schema didattico 4 della dispensa TPSEE · Elettronici"}
+:::
+
+*Flusso di progetto. Al collaudo positivo seguono realizzazione definitiva e documentazione.*
+
+**Prova tu.** Per una spia che si accende premendo un pulsante, definisci almeno tre specifiche: alimentazione, condizione di accensione e [corrente](glossario.qmd#gloss-new69) del [LED](glossario.qmd#gloss-g34).
+
+## Dal disegno al banco di lavoro {#topic:4}
+
+## U.D. 1.4 / La simbologia [IEC](glossario.qmd#gloss-g25) nel disegno elettronico {#ud:1.4}
+
+I simboli permettono di leggere uno schema senza conoscere il montaggio fisico. Il riferimento per i simboli grafici negli schemi è la raccolta **[IEC](glossario.qmd#gloss-g25) 60617**. Si studiano resistori, condensatori, diodi, transistor, alimentazioni e porte logiche, insieme a riferimenti dei componenti e nomi dei segnali.
+
+Gli schemi a blocchi mostrano la funzione: per collegare un componente serve la [piedinatura](glossario.qmd#gloss-g58) del datasheet. Il simbolo descrive una funzione; il [footprint](glossario.qmd#gloss-g19) descrive una forma fisica. Due resistori di dimensioni diverse possono avere lo stesso simbolo. Un punto pieno all'incrocio indica un nodo comune: il semplice incrocio senza punto non implica una connessione.
+
+::: center
+:::
+
+*Dall'alto: componenti passivi e generatori; porte logiche; semiconduttori; comandi, collegamenti e riferimenti.*
+
+L'**induttore** è il componente; la sua proprietà elettrica si chiama **induttanza**. [NPN](glossario.qmd#gloss-g63) e [PNP](glossario.qmd#gloss-g63) indicano la sequenza dei materiali semiconduttori di tipo N e P: la freccia è sul terminale di emettitore. Massa e terra di protezione hanno funzioni diverse e non coincidono necessariamente.
+
+#### Due modi di disegnare le stesse porte
+
+La griglia usa i simboli rettangolari [IEC](glossario.qmd#gloss-g25). Nei simboli sagomati qui sotto la funzione è la stessa. La bolla sull'uscita indica sempre la negazione.
+
+::: center
+:::
+
+## Montare il circuito sulla [breadboard](glossario.qmd#gloss-g8) {#topic:5}
+
+## U.D. 1.5 / La realizzazione del circuito elettronico {#ud:1.5}
+
+La **[breadboard](glossario.qmd#gloss-g8)** consente un montaggio temporaneo senza saldature; una scheda millefori o un [PCB](glossario.qmd#gloss-g41) permettono un montaggio più stabile. Prima di inserire un [integrato](glossario.qmd#gloss-new77) si riconoscono orientamento, pin di alimentazione e collegamenti interni della [breadboard](glossario.qmd#gloss-g8), comprese eventuali interruzioni delle barre laterali.
+
+::: center
+![Schema didattico 7](/assets/dispense/tpsee-elettronici/figura-7.png){fig-alt="Schema didattico 7 della dispensa TPSEE · Elettronici"}
+:::
+
+*Illustrazione di una [breadboard](glossario.qmd#gloss-g8) a 30 file, vista dall'alto. I tratti colorati evidenziano due gruppi separati di cinque contatti.*
+
+1.  A circuito spento, confronta montaggio e schema; controlla polarità e continuità.
+
+2.  Imposta l'alimentatore alla [tensione](glossario.qmd#gloss-new68) prevista e con un limite di [corrente](glossario.qmd#gloss-new69) adeguato al progetto.
+
+3.  Collega la massa comune e verifica l'alimentazione direttamente sui pin degli [integrati](glossario.qmd#gloss-new77).
+
+4.  Applica ingressi noti e misura le uscite; cambia una condizione alla volta.
+
+5.  Registra valori attesi, valori misurati, anomalie e correzioni.
+
+#### Buone abitudini di laboratorio
+
+- Esegui le attività introduttive a **bassa [tensione](glossario.qmd#gloss-new68)**, con l'alimentazione prevista dal docente.
+
+- **Togli alimentazione** prima di modificare il cablaggio.
+
+- **Non lasciare ingressi logici scollegati.**
+
+#### Mini laboratorio / una misura che racconta il progetto
+
+Realizza il partitore dell'[U.D. 1.1](modulo-1.qmd#ud:1.1) e compila una tabella con [tensione](glossario.qmd#gloss-new68) prevista, simulata e misurata, prima senza [carico](glossario.qmd#gloss-g57) e poi con il [carico](glossario.qmd#gloss-g57). Se l'uscita è zero, controlla alimentazione, nodo di misura e continuità prima di sostituire componenti.
+
+**Da consegnare:** schema con valori, fotografia o disegno del montaggio, tabella delle misure e una breve spiegazione degli scostamenti.
+

@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="it">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Due circuiti RC — laboratorio</title>
+<style>
+:root{color-scheme:light;--navy:#142c44;--teal:#087e82;--orange:#bd501a}*{box-sizing:border-box}body{margin:0;background:#f6f4ef;color:var(--navy);font:16px/1.5 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:22px}h1{font-size:clamp(1.5rem,4vw,2.3rem);line-height:1.15;margin:5px 0 12px}.eyebrow{font-size:.75rem;letter-spacing:.14em;font-weight:700;text-transform:uppercase;color:var(--teal)}p{margin:8px 0}.formula{font-size:1.05rem}.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 12px}button{font:inherit;cursor:pointer;border:1px solid #b8c5ce;border-radius:7px;padding:10px 16px;background:white;color:var(--navy);min-height:44px}button.primary{background:var(--navy);color:white}button:disabled{opacity:.5;cursor:default}:focus-visible{outline:3px solid #d28017;outline-offset:3px}.card{background:white;border:1px solid #dbe1e4;border-radius:12px;padding:14px}.legend{display:flex;gap:24px;flex-wrap:wrap;font-weight:650}.one{color:var(--teal)}.two{color:var(--orange)}svg{display:block;width:100%;height:auto;touch-action:pan-y;cursor:crosshair}svg text{font-family:system-ui,sans-serif;font-size:16px;fill:var(--navy)}.readings{display:flex;flex-wrap:wrap;gap:10px 26px;border-top:1px solid #e0e5e8;padding-top:10px;min-height:46px;font-variant-numeric:tabular-nums}.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:14px 0}.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}fieldset{min-width:0;border:1px solid #dbe1e4;border-radius:10px;background:white;padding:12px}legend{font-weight:650}label{display:block;font-weight:600}output{font-weight:400}input[type=range]{display:block;width:100%;min-height:44px;accent-color:var(--teal);margin:0}.two input{accent-color:var(--orange)}.hint{font-size:.9rem;color:#4b5d6b}.measure{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px}.measure input{font:inherit;border:1px solid #aabac5;border-radius:5px;padding:8px;width:120px;min-height:44px}#status{min-height:26px}details{margin-top:14px}summary{cursor:pointer;min-height:44px}a{color:var(--teal)}@media(max-width:620px){main{padding:12px}.controls{grid-template-columns:1fr}.card{padding:9px}.legend{gap:12px;font-size:.9rem}svg text{font-size:20px}.readings{gap:6px 16px}}
+</style></head>
+<body><main>
+<div class="eyebrow">Laboratorio · Sistemi del primo ordine</div>
+<h1>Due circuiti, la stessa tensione finale</h1>
+<p class="formula">v<sub>C</sub>(t) = 10 · (1 − e<sup>−t/τ</sup>) &nbsp; · &nbsp; τ = R C &nbsp; · &nbsp; Alimentazione: <strong>10 V</strong></p>
+<p class="hint">Condensatori inizialmente scarichi. Cambiare R o C avvia un nuovo esperimento ideale; gli assi restano invariati.</p>
+<div class="toolbar"><button class="primary" id="start">Anima la carica</button><button id="pause" disabled>Pausa</button><button id="reset">Ripristina</button><span id="clock" class="hint">Curve complete · animazione in 6 s reali</span></div>
+<div class="card">
+<div class="legend"><span class="one">━ Circuito 1 · tratto continuo</span><span class="two">┄ Circuito 2 · tratteggiato</span></div>
+<svg id="plot" viewBox="0 0 900 410" role="img" aria-labelledby="plot-title plot-desc"><title id="plot-title">Confronto della carica di due condensatori</title><desc id="plot-desc">Seleziona un tempo con clic o tocco dentro gli assi. Per una misura da tastiera usa il campo sottostante.</desc><defs><clipPath id="bounds"><rect x="72" y="22" width="800" height="320"/></clipPath></defs><g id="axes"></g><g clip-path="url(#bounds)"><path id="curve1" fill="none" stroke="#087e82" stroke-width="4"/><path id="curve2" fill="none" stroke="#bd501a" stroke-width="4" stroke-dasharray="10 7"/><g id="markers"></g></g></svg>
+<div class="readings" id="readings" aria-live="polite">Tocca il grafico o inserisci un tempo per leggere entrambe le tensioni.</div>
+<form class="measure" id="measure-form"><label for="measure-time">Misura a t (s)</label><input id="measure-time" type="number" min="0" step="any" value="0.1" required><button type="submit">Misura</button></form>
+</div>
+<div class="controls">
+<fieldset class="one"><legend>Circuito 1 · τ₁ = <span id="tau1"></span></legend><div class="pair">
+<label for="r1">R₁ <output id="r1-value"></output><input id="r1" type="range" min="0.1" max="10" step="0.1" value="1"></label>
+<label for="c1">C₁ <output id="c1-value"></output><input id="c1" type="range" min="10" max="1000" step="10" value="100"></label>
+</div></fieldset>
+<fieldset class="two"><legend>Circuito 2 · τ₂ = <span id="tau2"></span></legend><div class="pair">
+<label for="r2">R₂ <output id="r2-value"></output><input id="r2" type="range" min="0.1" max="10" step="0.1" value="2"></label>
+<label for="c2">C₂ <output id="c2-value"></output><input id="c2" type="range" min="10" max="1000" step="10" value="100"></label>
+</div></fieldset>
+<fieldset><legend>Asse del tempo, comune</legend><label for="xmax">Estensione <output id="xmax-value"></output><input id="xmax" type="range" min="0" max="1000" step="1" value="434"></label><p class="hint">Scala del controllo logaritmica: 0,05–50 s. L'asse del grafico resta lineare.</p></fieldset>
+<fieldset><legend>Asse della tensione, comune</legend><label for="ymax">Limite superiore <output id="ymax-value"></output><input id="ymax" type="range" min="1" max="15" step="0.5" value="12"></label><p class="hint">Cambiare il limite non modifica l'alimentazione di 10 V.</p></fieldset>
+</div>
+<p id="status" class="hint" role="status"></p>
+<details><summary>Come interpretare il grafico</summary><p>A t = τ si raggiungono circa 6,321 V; a t = 5τ circa 9,933 V. Una costante di tempo maggiore significa una carica più lenta. Due coppie con lo stesso prodotto RC producono la stessa curva.</p><p>Durante l'animazione puoi misurare solo il tratto già disegnato. Pausa ferma il tempo; modificare un controllo mostra nuovamente le curve complete. Il modello non descrive una variazione dei componenti durante la carica.</p></details>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), fmt=(n,d=3)=>n.toLocaleString('it-IT',{maximumFractionDigits:d});
+const voltage=(t,r,c)=>10*(-Math.expm1(-t/(r*1000*c*1e-6)));
+const state={r1:1,c1:100,r2:2,c2:100,xmax:1,ymax:12,selected:null,progress:1,running:false,frame:0,last:0};
+const initial={r1:1,c1:100,r2:2,c2:100,xmax:1,ymax:12};
+const px=t=>72+800*t/state.xmax,py=v=>342-320*v/state.ymax;
+function stop(){state.running=false;cancelAnimationFrame(state.frame);$('pause').disabled=true;$('pause').textContent='Pausa';}
+function complete(){stop();state.progress=1;$('clock').textContent='Curve complete · animazione in 6 s reali';}
+function draw(){
+let a='';
+for(let i=0;i<=5;i++){const x=72+160*i,y=342-64*i;a+='<line x1="'+x+'" y1="22" x2="'+x+'" y2="342" stroke="#e1e7ea"/><text text-anchor="middle" x="'+x+'" y="370">'+fmt(state.xmax*i/5)+'</text><line x1="72" y1="'+y+'" x2="872" y2="'+y+'" stroke="#e1e7ea"/><text text-anchor="end" x="62" y="'+(y+6)+'">'+fmt(state.ymax*i/5)+'</text>';}
+a+='<path d="M72 22V342H872" stroke="#142c44" fill="none" stroke-width="2"/><text x="72" y="17">vC (V)</text><text x="872" y="402" text-anchor="end">Tempo t (s)</text>';
+$('axes').innerHTML=a;
+for(let j=1;j<=2;j++){let d='';for(let i=0;i<=800;i++){const t=state.xmax*state.progress*i/800;d+=(i?'L':'M')+px(t).toFixed(3)+' '+py(voltage(t,state['r'+j],state['c'+j])).toFixed(3);} $('curve'+j).setAttribute('d',d);$('tau'+j).textContent=fmt(.001*state['r'+j]*state['c'+j])+' s';}
+for(const id of ['r1','r2','c1','c2']){$(id+'-value').textContent=fmt(state[id])+(id[0]==='r'?' kΩ':' µF');}
+$('xmax-value').textContent=fmt(state.xmax)+' s';$('ymax-value').textContent=fmt(state.ymax)+' V';
+$('xmax').setAttribute('aria-valuetext',fmt(state.xmax)+' secondi');
+$('measure-time').max=state.xmax;
+let warnings=[];
+if(Math.abs(state.r1*state.c1-state.r2*state.c2)<1e-8)warnings.push('Le curve coincidono: stesso prodotto RC.');
+if(state.ymax<10)warnings.push('Parte delle curve supera il limite Y; le letture numeriche restano disponibili.');
+const taus=[state.r1*state.c1*.001,state.r2*state.c2*.001];
+if(Math.min(...taus)<state.xmax/100)warnings.push('Un transitorio è molto rapido rispetto alla finestra: riduci manualmente l’estensione del tempo.');
+if(Math.max(...taus)>state.xmax)warnings.push('Una carica prosegue oltre la finestra visibile: puoi aumentare l’estensione del tempo.');
+$('status').textContent=warnings.join(' ');
+drawMeasure();
+}
+function drawMeasure(){
+$('markers').innerHTML='';
+if(state.selected===null){$('readings').textContent='Tocca il grafico o inserisci un tempo per leggere entrambe le tensioni.';return;}
+const t=state.selected,v1=voltage(t,state.r1,state.c1),v2=voltage(t,state.r2,state.c2),x=px(t);
+$('markers').innerHTML='<line x1="'+x+'" x2="'+x+'" y1="22" y2="342" stroke="#142c44" stroke-dasharray="3 4"/><circle cx="'+x+'" cy="'+py(v1)+'" r="6" fill="#087e82" stroke="white" stroke-width="2"/><circle cx="'+x+'" cy="'+py(v2)+'" r="6" fill="#bd501a" stroke="white" stroke-width="2"/>';
+$('readings').innerHTML='<strong>t = '+fmt(t,4)+' s</strong><span class="one">vC₁ = '+fmt(v1)+' V'+(v1>state.ymax?' (fuori scala)':'')+'</span><span class="two">vC₂ = '+fmt(v2)+' V'+(v2>state.ymax?' (fuori scala)':'')+'</span>';
+}
+function measure(t){if(t<0||t>state.xmax*state.progress){$('readings').textContent='Scegli un tempo nel tratto già visualizzato: 0–'+fmt(state.xmax*state.progress)+' s.';return;}state.selected=t;$('measure-time').value=Number(t.toFixed(5));drawMeasure();}
+$('plot').addEventListener('click',e=>{const p=$('plot').createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform($('plot').getScreenCTM().inverse());if(q.x<72||q.x>872||q.y<22||q.y>342)return;measure((q.x-72)/800*state.xmax);});
+$('measure-form').addEventListener('submit',e=>{e.preventDefault();const t=Number($('measure-time').value);if(Number.isFinite(t))measure(t);});
+for(const id of ['r1','c1','r2','c2','xmax','ymax'])$(id).addEventListener('input',()=>{complete();state[id]=id==='xmax'?Number((.05*Math.pow(1000,Number($(id).value)/1000)).toPrecision(4)):Number($(id).value);if(state.selected>state.xmax)state.selected=null;draw();});
+function tick(now){if(!state.running)return;state.progress=Math.min(1,state.progress+(now-state.last)/6000);state.last=now;$('clock').textContent='Tempo simulato: '+fmt(state.xmax*state.progress)+' s · durata reale 6 s';draw();if(state.progress<1)state.frame=requestAnimationFrame(tick);else complete();}
+$('start').addEventListener('click',()=>{stop();state.selected=null;state.progress=0;state.running=true;state.last=performance.now();$('pause').disabled=false;draw();state.frame=requestAnimationFrame(tick);});
+$('pause').addEventListener('click',()=>{if(state.running){state.running=false;cancelAnimationFrame(state.frame);$('pause').textContent='Riprendi';}else{state.running=true;state.last=performance.now();$('pause').textContent='Pausa';state.frame=requestAnimationFrame(tick);}});
+$('reset').addEventListener('click',()=>{complete();Object.assign(state,initial);state.selected=null;for(const id of ['r1','c1','r2','c2','ymax'])$(id).value=state[id];$('xmax').value=1000*Math.log(20)/Math.log(1000);$('measure-time').value=.1;draw();});
+$('xmax').value=1000*Math.log(20)/Math.log(1000);draw();
+</script></body></html>

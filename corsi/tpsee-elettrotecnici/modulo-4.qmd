@@ -1,0 +1,99 @@
+---
+title: "Modulo 4 / Tecnologia dei materiali"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#mod:4}
+
+**Primo e secondo periodo**
+
+La tecnologia dei materiali collega le proprietà di una sostanza al suo impiego. Vedremo perché conduttori, isolanti e materiali magnetici svolgono compiti diversi.
+
+## U.D. 4.1 / Classificazione dei materiali in base alla loro funzione {#ud:4.1}
+
+- **Conduttori**: favoriscono il passaggio della [corrente](glossario.qmd#gloss-new55).
+
+- **Isolanti**: separano parti a diverso potenziale.
+
+- **Semiconduttori**: permettono di controllare la conduzione nei dispositivi elettronici.
+
+- **Materiali magnetici**: guidano il flusso magnetico in trasformatori, motori e relè.
+
+Uno stesso oggetto impiega più materiali: in un relè il rame conduce nella [bobina](glossario.qmd#gloss-e2), il rivestimento isola le spire, il nucleo ferromagnetico concentra il campo e i [contatti](glossario.qmd#gloss-e10) realizzano la commutazione.
+
+::: center
+![Schema didattico 14](/assets/dispense/tpsee-elettrotecnici/figura-14.png){fig-alt="Schema didattico 14 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+## U.D. 4.2 / Proprietà dei materiali: meccaniche, elettriche e termiche {#ud:4.2}
+
+Una scelta corretta considera più proprietà insieme: un materiale molto conduttivo può essere poco adatto a una connessione se non resiste alle sollecitazioni o alle condizioni ambientali.
+
+  **Famiglia**   **Proprietà**                                                                                           **Perché interessa**
+  -------------- ------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------
+  Meccaniche     [Resistenza](glossario.qmd#gloss-new56), elasticità, duttilità, durezza                                 Fili piegabili, [contatti](glossario.qmd#gloss-e10) durevoli, supporti resistenti.
+  Elettriche     [Resistività](glossario.qmd#gloss-e38), [rigidità dielettrica](glossario.qmd#gloss-e39), permittività   Perdite, isolamento e comportamento del campo.
+  Termiche       Conducibilità termica, dilatazione, [resistenza](glossario.qmd#gloss-new56) al calore                   Smaltimento del calore e stabilità dei collegamenti.
+
+La **[rigidità dielettrica](glossario.qmd#gloss-e39)** riguarda il campo elettrico che un isolante può sopportare prima della scarica, nelle condizioni di prova. Non coincide con la [resistenza](glossario.qmd#gloss-new56) elettrica e non rende uno spessore qualsiasi adatto a ogni [tensione](glossario.qmd#gloss-new54).
+
+#### Scelta motivata
+
+Per un cavo flessibile non basta cercare bassa [resistività](glossario.qmd#gloss-e38): servono anche flessibilità dei conduttori, isolamento adatto e [resistenza](glossario.qmd#gloss-new56) alle condizioni d'uso. La scelta nasce dalla funzione e dall'ambiente.
+
+## Scegliere i materiali conduttori {#topic:8}
+
+## U.D. 4.3 / Materiali conduttori: caratteristiche. Rame e alluminio e loro leghe {#ud:4.3}
+
+- **Rame**: buona conducibilità e duttilità.
+
+- **Alluminio**: più leggero, ma con [resistività](glossario.qmd#gloss-e38) maggiore; a pari lunghezza e [resistenza](glossario.qmd#gloss-new56) serve una sezione maggiore.
+
+- **Leghe**: modificano proprietà meccaniche, [resistenza](glossario.qmd#gloss-new56) alla corrosione e conducibilità.
+
+  **Valore indicativo a 20 $^\circ$C**                                  **Rame**   **Alluminio**
+  -------------------------------------------------------------------- ---------- ---------------
+  [Resistività](glossario.qmd#gloss-e38) ($\Omega\,\mathrm{mm^2/m}$)     0,0175       0,0282
+  Densità ($\mathrm{g/cm^3}$)                                             8,9           2,7
+
+#### Stessa [resistenza](glossario.qmd#gloss-new56), sezioni diverse
+
+Per un conduttore uniforme: **resistenza \[$\Omega$\] = resistività \[$\Omega\,\mathrm{mm^2/m}$\] $\times$ lunghezza \[m\] / sezione \[$\mathrm{mm^2}$\]**. La relazione è $R=\rho\ell/S$: $\rho$ caratterizza il materiale, $\ell$ è la lunghezza e $S$ la sezione. A parità di $R$ e $\ell$, la sezione è proporzionale alla resistività.
+
+Per uguale lunghezza e [resistenza](glossario.qmd#gloss-new56): $$\frac{S_{\mathrm{Al}}}{S_{\mathrm{Cu}}}=\frac{\rho_{\mathrm{Al}}}{\rho_{\mathrm{Cu}}}=\frac{0{,}0282}{0{,}0175}\simeq1{,}61.$$ Un conduttore di rame da $10\,\mathrm{mm^2}$ equivale quindi, solo dal punto di vista resistivo, a circa $16{,}1\,\mathrm{mm^2}$ di alluminio. Non è un'autorizzazione alla sostituzione: cambiano [morsetti](glossario.qmd#gloss-e32), posa e condizioni termiche.
+
+Nei metalli la [resistenza](glossario.qmd#gloss-new56) tende ad aumentare con la temperatura. [Il modello di calcolo e il grafico sono negli approfondimenti](approfondimenti.qmd#app:temperatura) (p. ).
+
+## Isolare e resistere al calore {#topic:9}
+
+## U.D. 4.4 / Materiali isolanti: caratteristiche. Tipi di isolanti, invecchiamento termico e classi di isolamento {#ud:4.4}
+
+- Gli isolanti limitano correnti indesiderate e separano parti a potenziale diverso.
+
+- Esempi: polimeri, gomme, ceramiche, vetro, mica e resine.
+
+- La scelta dipende da temperatura, umidità, sollecitazioni e comportamento elettrico.
+
+L'**invecchiamento termico** è il degrado progressivo dovuto al calore: può ridurre elasticità e prestazioni dielettriche. Una temperatura maggiore può accelerare l'invecchiamento; non esiste una durata universale ricavabile dalla sola temperatura.
+
+#### Due classificazioni da non confondere
+
+La **classe termica** caratterizza la [resistenza](glossario.qmd#gloss-new56) al calore del sistema isolante. La **classe di protezione dell'apparecchio** (per esempio I o II) riguarda invece le misure contro la scossa elettrica. Sono concetti diversi.
+
+   **Classe termica**   **Temperatura**  **Lettura didattica**
+  -------------------- ----------------- ---------------------------------------------------------------------------------------------------
+        130 (B)          130 $^\circ$C   Designazione termica del sistema isolante.
+        155 (F)          155 $^\circ$C   Una classe superiore sopporta condizioni termiche più elevate secondo la qualificazione prevista.
+        180 (H)          180 $^\circ$C   Il valore non è la temperatura ambiente ammessa per qualsiasi apparecchio.
+
+Queste classi si incontrano, per esempio, negli avvolgimenti delle macchine elettriche. I limiti effettivi di esercizio dipendono dal progetto, dai punti caldi e dai dati del costruttore. Non si trasferiscono automaticamente ai cavi dell'[impianto](glossario.qmd#gloss-e47).
+
+#### Leggere una targa con criterio
+
+Un motore riporta isolamento di classe F. Si può concludere che l'ambiente possa essere a 155 $^\circ$C?
+
+**Soluzione.** No. Il valore riguarda la classe termica dell'isolamento. La temperatura ambiente ammessa e il riscaldamento consentito sono dati distinti da verificare nella documentazione del motore.
+
+**Laboratorio sui materiali.** Confronta campioni identificati di rame, alluminio e isolante. Descrivi massa, flessibilità e funzione. Le prove elettriche vanno eseguite solo con strumenti e procedure indicati dal docente; una misura con il multimetro non qualifica un isolamento per la rete.
+

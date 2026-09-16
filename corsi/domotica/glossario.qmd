@@ -1,0 +1,210 @@
+---
+title: Glossario
+---
+
+[← Panoramica del corso](index.qmd)
+
+## Contattore {#gloss-d1}
+
+Dispositivo elettromeccanico che comanda un carico attraverso contatti azionati da una bobina.
+
+## Relè termico {#gloss-d2}
+
+Dispositivo che interviene in caso di sovraccarico secondo la propria caratteristica.
+
+## Interblocco {#gloss-d3}
+
+Vincolo che impedisce comandi incompatibili, per esempio due direzioni simultanee.
+
+## MAT {#gloss-d4}
+
+Motore Asincrono Trifase.
+
+## CPU {#gloss-d5}
+
+Central Processing Unit: unità che esegue il programma.
+
+## FBD / ST / IL {#gloss-d6}
+
+Function Block Diagram, Structured Text e Instruction List: linguaggi grafici o testuali per PLC.
+
+## Interrupt {#gloss-d7}
+
+Evento che richiede una gestione dedicata rispetto al normale programma ciclico.
+
+## Maschera {#gloss-d8}
+
+Parola di bit usata per selezionare le posizioni su cui eseguire operazioni logiche.
+
+## Scorrimento / rotazione {#gloss-d9}
+
+Spostamento dei bit; nella rotazione il bit espulso rientra dall'altra estremità.
+
+## Codifica one-hot {#gloss-d10}
+
+Rappresentazione a un bit per stato, con un solo bit attivo nel modello a stato unico.
+
+## ADC {#gloss-d11}
+
+Analog-to-Digital Converter: convertitore che rappresenta un segnale analogico con codici numerici.
+
+## Aliasing {#gloss-d12}
+
+Alterazione apparente delle frequenze dovuta a campionamento insufficiente rispetto al contenuto del segnale.
+
+## Automa {#gloss-d13}
+
+Modello con stati e regole di transizione che descrive l'evoluzione di un comando o processo.
+
+## BOOL / REAL {#gloss-d14}
+
+Tipi di variabili: valore logico vero/falso e valore numerico con parte frazionaria e precisione finita.
+
+## Campionamento {#gloss-d15}
+
+Selezione dei valori del segnale in determinati istanti di tempo.
+
+## CTU {#gloss-d16}
+
+Count Up: contatore crescente che incrementa sul fronte di salita dell'ingresso di conteggio.
+
+## CU / CV / PV {#gloss-d17}
+
+Count Up input, Current Value, Preset Value: ingresso di conteggio, valore attuale e valore prefissato del contatore.
+
+## Encoder {#gloss-d18}
+
+Trasduttore che associa alla posizione o al movimento impulsi o codici digitali.
+
+## Estensimetro {#gloss-d19}
+
+Sensore resistivo che rileva una deformazione meccanica tramite una variazione di resistenza.
+
+## Fronte di salita {#gloss-d20}
+
+Passaggio di un segnale logico da 0 a 1; va distinto dal mantenimento del valore 1.
+
+## GF {#gloss-d21}
+
+Gauge Factor: fattore di estensimetro che lega variazione relativa di resistenza e deformazione.
+
+## I/O {#gloss-d22}
+
+Input/Output: ingressi e uscite del sistema o del PLC.
+
+## IN / PT / ET / Q {#gloss-d23}
+
+Input, Preset Time, Elapsed Time e uscita Q: ingresso, tempo impostato, tempo trascorso e uscita del timer.
+
+## Isteresi {#gloss-d24}
+
+Comportamento con soglie diverse di attivazione e disattivazione e mantenimento dello stato nella fascia intermedia.
+
+## Ladder / LD {#gloss-d25}
+
+Ladder Diagram: linguaggio grafico di programmazione PLC a contatti, bobine e blocchi.
+
+## LSB {#gloss-d26}
+
+Least Significant Bit: bit meno significativo; nella conversione indica anche il passo nominale associato a un conteggio.
+
+## Offset {#gloss-d27}
+
+Termine costante della caratteristica di trasferimento, ossia il valore d'uscita a ingresso nullo nel modello affine.
+
+## OpenPLC {#gloss-d28}
+
+Ambiente usato nel percorso per preparare ed eseguire programmi per PLC.
+
+## PLC {#gloss-d29}
+
+Programmable Logic Controller: controllore a logica programmabile.
+
+## Ponte di Wheatstone {#gloss-d30}
+
+Rete di quattro resistenze che confronta due partitori tramite una misura differenziale.
+
+## Pt100 {#gloss-d31}
+
+Termoresistenza al platino con resistenza nominale di 100 ohm a 0 gradi Celsius.
+
+## Quantizzazione {#gloss-d32}
+
+Assegnazione di un valore o codice discreto a un intervallo di ampiezze del segnale.
+
+## Raw {#gloss-d33}
+
+Valore numerico grezzo restituito dall'acquisizione, da interpretare secondo la codifica del modulo.
+
+## Ripetibilità {#gloss-d34}
+
+Concordanza fra risultati di misure ripetute nelle stesse condizioni.
+
+## Risoluzione {#gloss-d35}
+
+Più piccola variazione distinguibile nelle condizioni dichiarate; non coincide con l'accuratezza complessiva.
+
+## Scalatura {#gloss-d36}
+
+Conversione del dato acquisito in unità fisiche mediante una relazione e un campo dichiarati.
+
+## Sensibilità {#gloss-d37}
+
+Rapporto fra variazione dell'uscita e variazione dell'ingresso, o pendenza locale della caratteristica.
+
+## SFC {#gloss-d38}
+
+Sequential Function Chart: organizzazione di un programma in passi, transizioni e azioni.
+
+## Termocoppia {#gloss-d39}
+
+Trasduttore che genera una tensione legata alle temperature delle giunzioni di materiali differenti.
+
+## Timeout {#gloss-d40}
+
+Tempo massimo di attesa, oltre il quale il controllo esegue l'azione prevista dalla specifica.
+
+## TOF / TON / TP {#gloss-d41}
+
+Timer Off-Delay, On-Delay e Pulse: ritardo allo spegnimento, ritardo all'accensione e impulso temporizzato.
+
+## Transcaratteristica {#gloss-d42}
+
+Relazione fra grandezza d'ingresso e segnale d'uscita del trasduttore in condizioni definite.
+
+## Sensore {#gloss-new43}
+
+Dispositivo che rileva una grandezza fisica e fornisce un segnale che ne rappresenta il valore o la presenza.
+
+## Attuatore {#gloss-new44}
+
+Dispositivo che trasforma un comando in un'azione fisica sul processo, per esempio un motore o una valvola.
+
+## Setpoint {#gloss-new45}
+
+Valore desiderato della grandezza controllata, usato come riferimento nel confronto con la misura.
+
+## Retroazione {#gloss-new46}
+
+Collegamento che riporta una misura dell'uscita all'ingresso del sistema per influenzarne il comportamento.
+
+## Segnale analogico {#gloss-new47}
+
+Segnale il cui valore può variare con continuità entro un intervallo.
+
+## Segnale digitale {#gloss-new48}
+
+Segnale rappresentato mediante un insieme discreto di valori; nel caso binario i valori logici sono 0 e 1.
+
+## Bit {#gloss-new49}
+
+Binary Digit: cifra binaria, 0 oppure 1.
+
+## Variabile booleana {#gloss-new50}
+
+Variabile che può assumere soltanto due valori logici: vero o falso, rappresentati con 1 e 0.
+
+## Fronte di discesa {#gloss-new51}
+
+Passaggio di un segnale logico da 1 a 0; va distinto dal mantenimento del valore 0.
+

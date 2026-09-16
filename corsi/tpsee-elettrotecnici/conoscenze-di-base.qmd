@@ -1,0 +1,131 @@
+---
+title: "Conoscenze di base"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+
+## Calcolo ed elettricità {#sec:basi-spiegazioni}
+
+[Torna alla panoramica iniziale](prima-di-iniziare-conoscenze-di-base.qmd#sec:basi). Questi richiami aiutano a leggere gli schemi e svolgere i calcoli del corso.
+
+### Proporzioni e unità di misura
+
+- Una proporzione mette in relazione quantità: se raddoppia il numero di tratti di cavo uguali, raddoppia la lunghezza totale.
+
+- Le potenze di dieci indicano moltiplicazioni o divisioni per 10: $10^3=1000$; $10^{-3}=0{,}001$.
+
+- I prefissi abbreviano le unità: kilo (k) indica mille, milli (m) un millesimo, micro ($\mu$) un milionesimo.
+
+- Prima di usare una formula, esprimi le grandezze in unità coerenti.
+
+#### Convertire senza perdere le unità
+
+$2{,}5\,\mathrm{kW}=2500\,\mathrm W$; $250\,\mathrm{mA}=0{,}250\,\mathrm A$.
+
+Per le aree si converte anche il quadrato: $1\,\mathrm{mm^2}=(10^{-3}\,\mathrm m)^2=10^{-6}\,\mathrm{m^2}$.
+
+### [Tensione](glossario.qmd#gloss-new54), [corrente](glossario.qmd#gloss-new55) e [resistenza](glossario.qmd#gloss-new56)
+
+- **[Tensione](glossario.qmd#gloss-new54) $V$**: differenza di potenziale fra due punti; si misura in volt (V).
+
+- **[Corrente](glossario.qmd#gloss-new55) $I$**: flusso di cariche elettriche; si misura in ampere (A).
+
+- **[Resistenza](glossario.qmd#gloss-new56) $R$**: opposizione al passaggio della [corrente](glossario.qmd#gloss-new55); si misura in ohm ($\Omega$).
+
+- Per un resistore ohmico vale la **legge di Ohm**: $V=RI$.
+
+- **Serie**: i componenti sono attraversati dalla stessa [corrente](glossario.qmd#gloss-new55). Le [resistenze](glossario.qmd#gloss-new56) si sommano.
+
+- **Parallelo**: i componenti sono collegati agli stessi due nodi e hanno la stessa [tensione](glossario.qmd#gloss-new54); la [corrente](glossario.qmd#gloss-new55) si divide fra i rami.
+
+#### Dalla [tensione](glossario.qmd#gloss-new54) alla [corrente](glossario.qmd#gloss-new55)
+
+La legge di Ohm lega le tre grandezze: **tensione \[V\] = resistenza \[$\Omega$\] $\times$ corrente \[A\]**. Con $V$ tensione, $R$ resistenza e $I$ corrente, $V=RI$, quindi $I=V/R$.
+
+::: center
+![Schema didattico 17](/assets/dispense/tpsee-elettrotecnici/figura-17.png){fig-alt="Schema didattico 17 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+Un resistore da $1\,\mathrm{k\Omega}=1000\,\Omega$ è sottoposto a 5 V: $$I=\frac{V}{R}=\frac{5}{1000}=0{,}005\,\mathrm A=5\,\mathrm{mA}.$$
+
+## [Energia](glossario.qmd#gloss-new58), materiali e disegno {#topic:14}
+
+### [Potenza](glossario.qmd#gloss-new57) ed [energia](glossario.qmd#gloss-new58)
+
+- La **[potenza](glossario.qmd#gloss-new57) $P$** indica quanta [energia](glossario.qmd#gloss-new58) viene trasferita ogni secondo; si misura in watt (W). In continua: $P=VI$.
+
+- L'**[energia](glossario.qmd#gloss-new58) $E$** dipende anche dal tempo: a [potenza](glossario.qmd#gloss-new57) costante, $E=Pt$.
+
+- Con $P$ in watt e $t$ in secondi, $E$ è in joule (J). Con $P$ in kilowatt e $t$ in ore, $E$ è in kilowattora (kWh).
+
+#### La durata conta
+
+A potenza costante: **energia \[Wh\] = potenza \[W\] $\times$ tempo \[h\]**, ossia $E=Pt$; $E$ è l'energia consumata e $t$ il tempo di accensione.
+
+::: center
+![Schema didattico 18](/assets/dispense/tpsee-elettrotecnici/figura-18.png){fig-alt="Schema didattico 18 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+Una lampada da 10 W accesa per 3 h consuma $10\cdot3=30\,\mathrm{Wh}=0{,}030\,\mathrm{kWh}$. La [potenza](glossario.qmd#gloss-new57) resta 10 W; è l'[energia](glossario.qmd#gloss-new58) consumata ad aumentare con il tempo.
+
+### Atomi, conduttori e isolanti
+
+- Un atomo comprende un nucleo con protoni positivi e neutroni privi di carica, e degli elettroni negativi.
+
+- Nei **conduttori**, come il rame, alcune cariche possono muoversi facilmente: per questo si usano per trasportare [corrente](glossario.qmd#gloss-new55).
+
+- Negli **isolanti**, come molti materiali plastici, le cariche si muovono con difficoltà: si usano per separare e rivestire le parti conduttrici.
+
+#### Due materiali, due funzioni
+
+In un filo isolato, il rame conduce la [corrente](glossario.qmd#gloss-new55); il rivestimento separa il conduttore dall'esterno.
+
+### Scala e lettura del disegno
+
+- La **scala 1:50** significa che una lunghezza sul foglio rappresenta una lunghezza reale 50 volte maggiore. Prima del calcolo, usa la stessa unità.
+
+- Il **formato** indica le dimensioni del foglio; il **[cartiglio](glossario.qmd#gloss-e48)** riporta titolo, autore, data e scala del disegno.
+
+- I **simboli** rappresentano i componenti; la **[legenda](glossario.qmd#gloss-e49)** ne spiega il significato e chiarisce le sigle.
+
+#### Una parete in scala
+
+In scala $1:n$: **lunghezza nel disegno = lunghezza reale / $n$**, usando la stessa unità per entrambe le lunghezze. $n$ è il denominatore della scala.
+
+Una parete di 4 m misura 400 cm nella realtà. In scala 1:50 occupa $400/50=8$ cm sul foglio.
+
+## Autoverifica {#sec:basi-verifica}
+
+1.  Converti 0,75 kW in watt e 120 mA in ampere.
+
+2.  Un resistore da $2\,\mathrm{k\Omega}$ è sottoposto a 10 V. Quale [corrente](glossario.qmd#gloss-new55) lo attraversa?
+
+3.  Un dispositivo da 20 W resta acceso per 2 h. Quanta [energia](glossario.qmd#gloss-new58) consuma, in Wh e in kWh?
+
+4.  Due lampade sono in parallelo alla stessa sorgente. Hanno la stessa [tensione](glossario.qmd#gloss-new54) o necessariamente la stessa [corrente](glossario.qmd#gloss-new55)?
+
+5.  Quali funzioni svolgono il rame e il rivestimento isolante di un cavo?
+
+6.  In scala 1:50, quanto misura sul foglio una parete di 3 m? Dove cerchi il significato di un simbolo?
+
+[Soluzioni commentate nella pagina seguente](conoscenze-di-base.qmd#sec:basi-soluzioni).
+
+## Soluzioni commentate {#sec:basi-soluzioni}
+
+[Torna alle domande](conoscenze-di-base.qmd#sec:basi-verifica).
+
+1.  $0{,}75\cdot1000=750$ W; $120/1000=0{,}120$ A.
+
+2.  $I=V/R=10/2000=0{,}005$ A, cioè 5 mA. Prima si convertono i kiloohm in ohm.
+
+3.  $E=20\cdot2=40$ Wh, cioè 0,040 kWh. Le ore determinano l'unità dell'[energia](glossario.qmd#gloss-new58) ottenuta.
+
+4.  La [tensione](glossario.qmd#gloss-new54) è la stessa perché i capi sono collegati agli stessi nodi. Le correnti possono essere diverse.
+
+5.  Il rame conduce; il rivestimento isola il conduttore dall'esterno.
+
+6.  $300/50=6$ cm. Il significato del simbolo si cerca nella [legenda](glossario.qmd#gloss-e49).
+
+[Torna alla panoramica degli strumenti di base](prima-di-iniziare-conoscenze-di-base.qmd#sec:basi).
+

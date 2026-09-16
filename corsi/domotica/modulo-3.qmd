@@ -1,0 +1,54 @@
+---
+title: "Modulo 3 / Linguaggio Ladder"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#mod:3}
+
+**Secondo periodo**
+
+Le reti [Ladder](glossario.qmd#gloss-d25) esprimono condizioni logiche e assegnazioni. La memoria permette di conservare un comando o rappresentare un passo.
+
+## U.D. 3.1 / Simbologia [Ladder](glossario.qmd#gloss-d25) {#ud:3.1}
+
+Un contatto diretto verifica che una variabile sia vera; un contatto negato verifica che sia falsa. La bobina ordinaria assegna a una variabile il risultato della rete.
+
+::: center
+![Schema didattico 3](/assets/dispense/domotica/figura-3.png){fig-alt="Schema didattico 3 della dispensa Domotica e automazione"}
+:::
+
+*L'uscita è vera se Richiesta è vera e Blocco è falso.*
+
+In serie si realizza AND, in parallelo OR. Il simbolo software non stabilisce da solo se il pulsante fisico sia normalmente aperto o normalmente chiuso: conta il significato del valore acquisito.
+
+## U.D. 3.2 / Applicazioni base in [Ladder](glossario.qmd#gloss-d25) {#ud:3.2}
+
+Riprendi l'autoritenuta della [U.D. 1.4](modulo-1.qmd#ud:1.4). Realizza un ramo con Start in parallelo alla memoria Run, in serie al consenso StopOK, e assegna il risultato alla bobina Run.
+
+#### Tabella delle prove
+
+- Start premuto e consenso presente: Run diventa vero.
+
+- Start rilasciato: Run resta vero.
+
+- Consenso assente: Run diventa falso.
+
+- Avvio e arresto insieme: prevale l'arresto.
+
+Per l'inversione usa uno stato unico FERMO/AVANTI/INDIETRO o una logica equivalente che garantisca l'esclusione dei comandi. Prova esplicitamente richieste simultanee e cambio di direzione.
+
+## U.D. 3.3 / Diagrammi di flusso e codifica a [bit](glossario.qmd#gloss-new49) multipli {#ud:3.3}
+
+Il diagramma di flusso descrive l'ordine delle operazioni e le condizioni di scelta. Per rappresentare una sequenza nel [PLC](glossario.qmd#gloss-d29) possiamo associare un [bit](glossario.qmd#gloss-new49) a ogni passo: è una codifica a [bit](glossario.qmd#gloss-new49) multipli, spesso detta *one-hot* quando un solo passo deve essere attivo.
+
+- Per ATTESA, RIEMPIMENTO e SCARICO usa tre memorie: S0, S1 e S2.
+
+- All'avvio imposta soltanto S0. La combinazione con tutti i [bit](glossario.qmd#gloss-new49) falsi non rappresenta l'attesa, se non lo prevede la specifica.
+
+- Una transizione disattiva il passo precedente e attiva quello successivo.
+
+- Calcola le transizioni dallo stato precedente, evitando che l'ordine delle reti faccia saltare più passi nello stesso ciclo.
+
+Tre [bit](glossario.qmd#gloss-new49) possono rappresentare otto combinazioni, ma nel modello a passo unico ne usiamo soltanto tre. Le combinazioni non ammesse richiedono una gestione definita.
+

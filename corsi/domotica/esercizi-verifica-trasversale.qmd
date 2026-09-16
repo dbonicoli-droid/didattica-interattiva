@@ -1,0 +1,41 @@
+---
+title: "Esercizi / Verifica trasversale"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+
+[]{#sec:esercizi}
+
+**1 · [Sensibilità](glossario.qmd#gloss-d37).** Un [sensore](glossario.qmd#gloss-new43) fornisce 0--5 V per 0--250 mm. Calcola [sensibilità](glossario.qmd#gloss-d37) e posizione a 3 V.
+
+**2 · Dinamica.** Un [sensore](glossario.qmd#gloss-new43) del primo ordine ha $\tau=0{,}5$ s. Determina tempo 10--90% e frequenza caratteristica.
+
+**3 · Ponte.** Nel ponte della scheda C, tutte le resistenze valgono $100\,\Omega$ tranne $R_2=101\,\Omega$. Con $V_{exc}=10$ V, calcola $V_o$.
+
+**4 · [Encoder](glossario.qmd#gloss-d18).** 500 periodi/giro, decodifica x4, 1000 conteggi in 0,5 s. Calcola [risoluzione](glossario.qmd#gloss-d35) angolare e velocità.
+
+**5 · [ADC](glossario.qmd#gloss-d11).** Un [ADC](glossario.qmd#gloss-d11) ideale a 10 [bit](glossario.qmd#gloss-new49) ha campo 0--5 V. Trova il passo q e la variazione equivalente per una [sensibilità](glossario.qmd#gloss-d37) di 20 mV/$^\circ$C.
+
+**6 · [Isteresi](glossario.qmd#gloss-d24).** Con soglie 26 e 28 $^\circ$C, stato iniziale spento e dati validi, applica 27, 28, 27, 26, 27. Determina Q.
+
+**7 · Sequenze.** Due rami paralleli finiscono rispettivamente a 4 e 7 s. Quando può proseguire la convergenza che richiede entrambi? Che cosa accade se il secondo ramo non termina?
+
+## Soluzioni
+
+**1.** $S=5/250=0{,}020$ V/mm; $x=3/0{,}020=150$ mm.
+
+**2.** Tempo 10--90% $\simeq1{,}10$ s; $f_c=1/(2\pi\cdot0{,}5)\simeq0{,}318$ Hz.
+
+**3.** $V_o=10(101/201-1/2)\simeq0{,}02488$ V, cioè 24,88 mV, con la polarità dichiarata.
+
+**4.** 2000 conteggi/giro; $360/2000=0{,}18^\circ$ per conteggio. $n=60\cdot1000/(2000\cdot0{,}5)=60$ giri/min.
+
+**5.** $q=5/1024=4{,}883$ mV; $\Delta T=q/S\simeq0{,}244\,^{\circ}$C. Rumore e altri errori possono peggiorare la [risoluzione](glossario.qmd#gloss-d35) effettiva.
+
+**6.** $Q=0,1,1,0,0$. Le uguaglianze alle soglie sono parte della specifica.
+
+**7.** A 7 s, più il ritardo di valutazione del controllore. Se il secondo ramo non termina, la convergenza resta in attesa salvo [timeout](glossario.qmd#gloss-d40) o altra uscita prevista.
+
+#### Prima di consegnare
+
+Controlla unità, segno del segnale, stato iniziale, uguaglianze alle soglie, comandi simultanei e riavvio. Una formula corretta può comunque essere usata con una convenzione sbagliata.

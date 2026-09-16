@@ -1,0 +1,13 @@
+/_site/
+/.quarto/
+/_freeze/
+/.build/
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+.env
+.env.*
+
+**/*.quarto_ipynb

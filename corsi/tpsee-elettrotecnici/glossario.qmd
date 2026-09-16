@@ -1,0 +1,250 @@
+---
+title: Glossario
+---
+
+[← Panoramica del corso](index.qmd)
+
+## CAD {#gloss-e3}
+
+Computer-Aided Design: disegno e progettazione assistiti dal computer.
+
+## CCT {#gloss-e5}
+
+Correlated Color Temperature: temperatura di colore correlata della luce bianca, espressa in kelvin.
+
+## CEI {#gloss-e6}
+
+Comitato Elettrotecnico Italiano: organismo italiano di normazione elettrotecnica.
+
+## CENELEC {#gloss-e8}
+
+Comité Européen de Normalisation Électrotechnique: organismo europeo di normazione elettrotecnica.
+
+## Deviatore {#gloss-e11}
+
+Dispositivo che collega un morsetto comune a una di due vie alternative.
+
+## DiCo {#gloss-e13}
+
+Dichiarazione di conformità: documento rilasciato dall'impresa installatrice nei casi previsti, con gli allegati pertinenti.
+
+## DIALux {#gloss-e12}
+
+Software per la progettazione e il calcolo illuminotecnico.
+
+## Differenziale {#gloss-e14}
+
+Dispositivo che rileva uno squilibrio fra le correnti nei conduttori attivi; il tipo puro non protegge dal sovraccarico.
+
+## DPI {#gloss-e15}
+
+Dispositivi di Protezione Individuale: attrezzature destinate alla protezione personale dai rischi pertinenti.
+
+## Flusso luminoso {#gloss-e19}
+
+Quantità fotometrica di luce emessa; si misura in lumen (lm).
+
+## IEC {#gloss-e20}
+
+International Electrotechnical Commission: organismo internazionale di normazione elettrotecnica.
+
+## Illuminamento {#gloss-e21}
+
+Flusso luminoso incidente per unità di superficie; si misura in lux (lx).
+
+## Intensità luminosa {#gloss-e22}
+
+Flusso per unità di angolo solido in una direzione; si misura in candele (cd).
+
+## Invertitore {#gloss-e23}
+
+Dispositivo che mantiene diritti o incrocia due collegamenti, usato fra due deviatori.
+
+## Layer {#gloss-e27}
+
+Livello grafico del CAD per organizzare oggetti come muri, collegamenti, simboli e quote.
+
+## LED {#gloss-e28}
+
+Light Emitting Diode: diodo che emette luce quando è percorso da corrente nelle condizioni previste.
+
+## Luminanza {#gloss-e29}
+
+Intensità luminosa per area apparente in una direzione; si misura in candele per metro quadrato.
+
+## Magnetotermico {#gloss-e30}
+
+Interruttore automatico con funzioni di protezione da sovraccarico e cortocircuito.
+
+## MF {#gloss-e31}
+
+Maintenance Factor: fattore di manutenzione che considera il decadimento dell'illuminazione previsto nel progetto.
+
+## PCTO {#gloss-e33}
+
+Percorsi per le Competenze Trasversali e per l'Orientamento: percorso di formazione scuola-lavoro, indicato anche con FSL.
+
+## PE {#gloss-e35}
+
+Protective Earth: identificazione del conduttore di protezione, che contribuisce alla protezione dai guasti di isolamento.
+
+## ProgeCAD {#gloss-e36}
+
+Software CAD impiegato nel percorso per realizzare elaborati di disegno elettrico.
+
+## Relè a impulsi {#gloss-e37}
+
+Dispositivo che cambia stato a ogni impulso e lo mantiene fra due comandi, secondo la propria sequenza.
+
+## Resistività {#gloss-e38}
+
+Proprietà del materiale che lega resistenza, lunghezza e sezione del conduttore.
+
+## Rigidità dielettrica {#gloss-e39}
+
+Campo elettrico sopportabile da un isolante prima della scarica nelle condizioni di prova.
+
+## Schema multifilare {#gloss-e40}
+
+Rappresentazione che distingue i singoli conduttori e i loro collegamenti.
+
+## Schema unifilare {#gloss-e41}
+
+Rappresentazione sintetica con una linea per circuito o insieme di conduttori, completata da indicazioni.
+
+## TPSEE {#gloss-e42}
+
+Tecnologie e Progettazione di Sistemi Elettrici ed Elettronici.
+
+## UF {#gloss-e44}
+
+Utilization Factor: fattore di utilizzazione, quota del flusso considerato che raggiunge il piano utile.
+
+## UNI {#gloss-e45}
+
+Ente Italiano di Normazione: organismo italiano di normazione per i settori di propria competenza.
+
+## CEN {#gloss-e7}
+
+Comité Européen de Normalisation: organismo europeo di normazione.
+
+## ISO {#gloss-e24}
+
+International Organization for Standardization: organismo internazionale di normazione.
+
+## EN {#gloss-e17}
+
+European Standard: sigla che identifica una norma europea.
+
+## PDF {#gloss-e34}
+
+Portable Document Format: formato usato per distribuire e stampare documenti.
+
+## ITP {#gloss-e26}
+
+Insegnante Tecnico Pratico: docente delle attività tecnico-pratiche e di laboratorio.
+
+## ETC {#gloss-e18}
+
+Sigla dell'indirizzo Elettrotecnica nella denominazione della classe.
+
+## ITIS {#gloss-e25}
+
+Istituto Tecnico Industriale Statale.
+
+## COM {#gloss-e9}
+
+Common: morsetto comune del multimetro, nel contesto delle misure qui descritte.
+
+## U.D. {#gloss-e43}
+
+Unità Didattica: parte di un modulo del programma.
+
+## Carico {#gloss-e4}
+
+Dispositivo o circuito che assorbe energia elettrica dalla sorgente a cui è collegato.
+
+## Bobina {#gloss-e2}
+
+Conduttore avvolto in spire; percorso da corrente genera un campo magnetico.
+
+## Contatto {#gloss-e10}
+
+Parte conduttrice che apre, chiude o commuta un collegamento elettrico.
+
+## Morsetto {#gloss-e32}
+
+Punto di connessione che permette di fissare e collegare un conduttore.
+
+## Driver {#gloss-e16}
+
+Circuito che fornisce a un dispositivo i segnali, la tensione e la corrente necessari al suo funzionamento. Per esempio, alimenta e comanda una sorgente LED.
+
+## Bit {#gloss-e1}
+
+Binary Digit: cifra binaria, 0 oppure 1.
+
+## Circuito {#gloss-e46}
+
+Insieme di componenti collegati per svolgere una funzione elettrica.
+
+## Impianto {#gloss-e47}
+
+Insieme organizzato di circuiti e dispositivi che distribuiscono e utilizzano energia elettrica.
+
+## Cartiglio {#gloss-e48}
+
+Riquadro del disegno che riporta titolo, autore, data, scala e altri dati identificativi.
+
+## Legenda {#gloss-e49}
+
+Elenco che spiega i simboli e le sigle usati in un disegno.
+
+## Schema funzionale {#gloss-e50}
+
+Schema che mostra come funziona un circuito e come interagiscono le sue parti.
+
+## D.M. {#gloss-e51}
+
+Decreto ministeriale: atto emanato da un ministro.
+
+## D.Lgs. {#gloss-e52}
+
+Decreto legislativo: atto avente forza di legge adottato dal Governo su delega del Parlamento.
+
+## FSL {#gloss-eFSL}
+
+Formazione Scuola-Lavoro: percorso che collega apprendimento scolastico ed esperienze formative nel mondo del lavoro, indicato anche con PCTO.
+
+## Tensione {#gloss-new54}
+
+Differenza di potenziale elettrico fra due punti; si misura in volt (V).
+
+## Corrente {#gloss-new55}
+
+Quantità di carica elettrica che attraversa una sezione del circuito nell'unità di tempo; si misura in ampere (A).
+
+## Resistenza {#gloss-new56}
+
+Grandezza che descrive quanto un componente ostacola il passaggio della corrente; si misura in ohm. Per un resistore ohmico vale V = R I.
+
+## Potenza {#gloss-new57}
+
+Energia trasferita o trasformata nell'unità di tempo; si misura in watt (W).
+
+## Energia {#gloss-new58}
+
+Quantità trasferita o trasformata durante un processo; si misura in joule (J), oppure in wattora (Wh) nei consumi elettrici.
+
+## Cortocircuito {#gloss-new59}
+
+Collegamento accidentale a bassissima impedenza fra punti a potenziale diverso, che può provocare una corrente molto elevata.
+
+## Sovraccarico {#gloss-new60}
+
+Condizione in cui un circuito o dispositivo assorbe una corrente superiore a quella prevista per il suo normale funzionamento.
+
+## Messa a terra {#gloss-new61}
+
+Collegamento delle parti previste dell'impianto al terreno attraverso conduttori e dispersori, parte delle misure di protezione.
+

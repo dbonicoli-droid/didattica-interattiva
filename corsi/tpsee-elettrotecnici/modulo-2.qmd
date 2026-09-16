@@ -1,0 +1,84 @@
+---
+title: "Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#mod:2}
+
+**Primo e secondo periodo**
+
+Un disegno elettrico comunica la funzione e i collegamenti di un [impianto](glossario.qmd#gloss-e47). In questo modulo impariamo a scegliere lo schema adatto, leggere i simboli e preparare gli elaborati.
+
+## U.D. 2.1 / Classificazione degli schemi elettrici {#ud:2.1}
+
+- **[Schema funzionale](glossario.qmd#gloss-e50)**: spiega come lavora il [circuito](glossario.qmd#gloss-e46).
+
+- **[Schema multifilare](glossario.qmd#gloss-e40)**: distingue i singoli conduttori e collegamenti.
+
+- **[Schema unifilare](glossario.qmd#gloss-e41)**: usa una linea per un [circuito](glossario.qmd#gloss-e46) o insieme di conduttori, con le indicazioni necessarie.
+
+- **Planimetria**: colloca apparecchi e percorsi negli ambienti.
+
+::: center
+![Schema didattico 4](/assets/dispense/tpsee-elettrotecnici/figura-4.png){fig-alt="Schema didattico 4 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Due viste dello stesso comando elementare. Il disegno non specifica le protezioni del banco.*
+
+## U.D. 2.2 / Segni grafici dei componenti elettrici secondo le norme [CEI](glossario.qmd#gloss-e6) {#ud:2.2}
+
+Il simbolo descrive la funzione di un oggetto, non il suo aspetto. Si studiano [contatti](glossario.qmd#gloss-e10), lampade, [bobine](glossario.qmd#gloss-e2), [morsetti](glossario.qmd#gloss-e32) e collegamenti secondo i riferimenti [CEI](glossario.qmd#gloss-e6)/[IEC](glossario.qmd#gloss-e20) per la documentazione elettrotecnica. Le figure qui sotto sono richiami didattici: in un elaborato tecnico va usata la simbologia pertinente.
+
+::: center
+![Schema didattico 5](/assets/dispense/tpsee-elettrotecnici/figura-5.png){fig-alt="Schema didattico 5 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+**Regola di lettura.** Un [contatto](glossario.qmd#gloss-e10) si rappresenta nella condizione di riferimento, tipicamente a riposo. Una linea incrociata non implica da sola una connessione: la convenzione dei nodi deve essere chiara.
+
+**Prova tu.** Quale elaborato useresti per trovare fisicamente una presa?
+
+*Risposta: la planimetria; per seguirne i collegamenti servono gli schemi.*
+
+## Dal disegno al progetto di un appartamento {#topic:3}
+
+## U.D. 2.3 / Disegno elettrico con [ProgeCAD](glossario.qmd#gloss-e36) {#ud:2.3}
+
+- Il [CAD](glossario.qmd#gloss-e3) (Computer-Aided Design) permette di disegnare, riutilizzare simboli e aggiornare gli elaborati.
+
+- Prima di disegnare, organizza unità, [layer](glossario.qmd#gloss-e27), blocchi, quote e [cartiglio](glossario.qmd#gloss-e48).
+
+1.  Imposta le unità e disegna il modello con dimensioni reali.
+
+2.  Separa muri, apparecchi, collegamenti, testi e quote in [layer](glossario.qmd#gloss-e27) distinti.
+
+3.  Inserisci simboli coerenti come blocchi; assegna sigle riconoscibili.
+
+4.  Usa agganci geometrici per evitare collegamenti solo apparentemente uniti.
+
+5.  Prepara il foglio, la scala di stampa, il [cartiglio](glossario.qmd#gloss-e48) e la [legenda](glossario.qmd#gloss-e49).
+
+6.  Esporta in [PDF](glossario.qmd#gloss-e34) e controlla linee, testi, scala e corrispondenza con il progetto.
+
+#### Scala senza equivoci
+
+In scala $1:n$: **lunghezza nel disegno = lunghezza reale / $n$**, usando la stessa unità per entrambe le lunghezze. $n$ è il denominatore della scala.
+
+Un locale misura $5\times4$ m. Se lavori in millimetri lo disegni $5000\times4000$ nel modello. Alla scala 1:50 comparirà $100\times80$ mm sul foglio. Una stampa "adatta alla pagina" può alterare la scala: controlla una quota nota.
+
+## U.D. 2.4 / Disegno di un [impianto](glossario.qmd#gloss-e47) elettrico in un appartamento {#ud:2.4}
+
+- Parti dalla pianta e dalla funzione dei locali.
+
+- Colloca luci, comandi e prese considerando arredi e accessibilità.
+
+- Identifica i [circuiti](glossario.qmd#gloss-e46); collega planimetria, schema del quadro e distinta materiali.
+
+::: center
+![Schema didattico 6](/assets/dispense/tpsee-elettrotecnici/figura-6.png){fig-alt="Schema didattico 6 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+*Estratto schematico non in scala. I tratteggi indicano associazioni comando--luce; dotazioni e percorsi sono solo illustrativi.*
+
+**Consegna.** Disegna una stanza $4\times3$ m con una luce comandata all'ingresso e due prese. Inserisci [legenda](glossario.qmd#gloss-e49), quote e [cartiglio](glossario.qmd#gloss-e48). Il numero di punti è un vincolo didattico, non una verifica dei minimi normativi.
+

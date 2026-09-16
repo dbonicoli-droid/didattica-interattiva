@@ -1,0 +1,24 @@
+---
+title: "La mappa del percorso"
+---
+
+[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+[]{#nav:mappa}
+
+   **Modulo**  **Argomento**                                                     **Periodo**   **Ore**
+  ------------ ---------------------------------------------------------------- ------------- ---------
+       1       Normativa e legislazione                                               1          10
+       2       Rappresentazione grafica                                             1, 2         ---
+       3       Componenti degli [impianti](glossario.qmd#gloss-e47) elettrici       1, 2         ---
+       4       Tecnologia dei materiali                                             1, 2         ---
+       5       Illuminotecnica                                                        2          ---
+
+Educazione civica: 5 ore.
+
+::: center
+![Schema didattico 1](/assets/dispense/tpsee-elettrotecnici/figura-1.png){fig-alt="Schema didattico 1 della dispensa TPSEE · Elettrotecnici"}
+:::
+
+[]{#nav:indice label="nav:indice"}
+

@@ -1,0 +1,23 @@
+---
+title: "Sistemi automatici"
+---
+
+Panoramica del programma e materiali di riferimento per il corso. Questa versione ipertestuale riprende i contenuti della dispensa: unità didattiche, esempi, esercizi e approfondimenti. I moduli saranno ampliati durante l’anno.
+
+[Scarica la dispensa PDF](/downloads/sistemi-automatici.pdf){.btn .btn-primary}
+
+## Percorso di lettura
+
+- [La mappa del percorso](percorso.qmd)
+- [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
+- [Modulo 1 / Fondamenti di teoria dei sistemi](modulo-1.qmd)
+- [Modulo 2 / Elettronica digitale](modulo-2.qmd)
+- [Modulo 3 / PLC](modulo-3.qmd)
+- [Modulo 4 / Circuiti combinatori](modulo-4.qmd)
+- [Modulo 5 / Circuiti sequenziali](modulo-5.qmd)
+- [Modulo 6 / Tempi, eventi e grandezze analogiche](modulo-6.qmd)
+- [Conoscenze di base](conoscenze-di-base.qmd)
+- [Esercizi / Un controllo ragionato](esercizi-un-controllo-ragionato.qmd)
+- [Educazione civica / Emergenza climatica](educazione-civica-emergenza-climatica.qmd)
+- [Approfondimenti](approfondimenti.qmd)
+- [Glossario](glossario.qmd)
