@@ -4,7 +4,7 @@ const preset=JSON.parse(fs.readFileSync(base+'/assets/rc/preset.json','utf8').re
 const num=n=>n.toFixed(3);
 let svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-labelledby="title"><title id="title">Confronto di due cariche RC a 10 V</title><rect width="900" height="430" fill="white"/><g font-family="sans-serif" font-size="17" fill="#142c44">';
 for(let i=0;i<=5;i++){let x=72+i*160,y=342-i*64;svg+='<path d="M'+x+' 22V342 M72 '+y+'H872" stroke="#e1e7ea"/><text x="'+x+'" y="370" text-anchor="middle">'+(i/5).toLocaleString('it-IT')+'</text><text x="60" y="'+(y+6)+'" text-anchor="end">'+(12*i/5).toLocaleString('it-IT')+'</text>';}
-svg+='<path d="M72 22V342H872" fill="none" stroke="#142c44"/><text x="72" y="17">vC (V)</text><text x="870" y="402" text-anchor="end">Tempo t (s)</text>';
+svg+='<path d="M72 22V342H872" fill="none" stroke="#142c44"/><text x="72" y="17">v<tspan baseline-shift="sub" font-size="70%">C</tspan> (V)</text><text x="870" y="402" text-anchor="end">Tempo t (s)</text>';
 for(const [key,color,dash] of [['circuit1','#087e82',''],['circuit2','#bd501a','10 7']]){const c=preset[key],tau=c.R_ohm*c.C_farad;let d='';for(let i=0;i<=800;i++){const t=i/800,v=10*(-Math.expm1(-t/tau));d+=(i?'L':'M')+num(72+800*t)+' '+num(342-320*v/12);}svg+='<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="4" stroke-dasharray="'+dash+'"/>';}
 svg+='<text x="110" y="422" fill="#087e82">Circuito 1: τ = 0,1 s — continuo</text><text x="480" y="422" fill="#bd501a">Circuito 2: τ = 0,2 s — tratteggiato</text></g></svg>';
 fs.writeFileSync(base+'/assets/rc/confronto.svg',svg);

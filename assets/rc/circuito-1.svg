@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="circuit-diagram" viewBox="0 0 520 330" role="img" aria-labelledby="circuit-title-1 circuit-desc-1">
 <title id="circuit-title-1">Circuito 1: carica RC</title>
-<desc id="circuit-desc-1">Generatore ideale a gradino da zero a 10 volt, resistore R₁ in serie al condensatore C₁. La tensione vC₁ è misurata sul condensatore, positiva sulla piastra collegata al resistore. Il ritorno al generatore è il riferimento a zero volt.</desc>
+<desc id="circuit-desc-1">Generatore ideale a gradino da zero a 10 volt, resistore R₁ in serie al condensatore C₁. La tensione sul condensatore C₁ è misurata sul condensatore, positiva sulla piastra collegata al resistore. Il ritorno al generatore è il riferimento a zero volt.</desc>
 <rect x="1" y="1" width="518" height="328" rx="12" fill="white" stroke="#dbe1e4"/>
 <g font-family="system-ui,sans-serif" font-size="18" fill="#142c44">
 <text x="22" y="33" fill="#087e82" font-weight="700">Circuito 1</text>
@@ -23,7 +23,7 @@
 <text x="105" y="231">0 → 10 V</text>
 <text x="340" y="156" fill="#087e82">+</text>
 <text x="340" y="191" fill="#087e82">−</text>
-<text x="340" y="224" text-anchor="end" fill="#087e82">vC₁(t)</text>
+<text x="340" y="224" text-anchor="end" fill="#087e82">v<tspan baseline-shift="sub" font-size="70%">C1</tspan>(t)</text>
 <text x="268" y="288">0 V · riferimento</text>
-<text x="22" y="313" font-size="15">A t = 0: gradino di tensione; vC₁(0) = 0 V.</text>
+<text x="22" y="313" font-size="15">A t = 0: gradino di tensione; v<tspan baseline-shift="sub" font-size="70%">C1</tspan>(0) = 0 V.</text>
 </g></svg>
