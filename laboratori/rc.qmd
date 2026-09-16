@@ -6,6 +6,23 @@ description: "Esplora costante di tempo, carica del condensatore e ruolo delle s
 La carica di un condensatore collega una formula a un fenomeno osservabile:
 **R e C determinano la rapidità della risposta; la tensione finale resta 10 V.**
 
+## Gli schemi elettrici
+
+Confrontiamo **due circuiti indipendenti**, ciascuno formato da un generatore ideale di tensione, un resistore e un condensatore in serie. A $t=0$ la tensione del generatore $u(t)$ passa da 0 a 10 V e poi resta costante; entrambi i condensatori sono inizialmente scarichi.
+
+:::: {.rc-schematics}
+
+![Circuito 1: generatore a gradino da 0 a 10 V, R₁ = 1 kΩ e C₁ = 100 µF in serie. La tensione vC₁(t) è misurata sul condensatore con il polo positivo verso R₁.](../assets/rc/circuito-1.svg){#fig-circuito-rc-1}
+
+![Circuito 2: generatore a gradino da 0 a 10 V, R₂ = 2 kΩ e C₂ = 100 µF in serie. La tensione vC₂(t) è misurata sul condensatore con il polo positivo verso R₂.](../assets/rc/circuito-2.svg){#fig-circuito-rc-2}
+
+::::
+
+- $i_1(t)$ e $i_2(t)$ sono le correnti di carica, positive nel verso delle frecce.
+- $v_{C1}(t)$ e $v_{C2}(t)$ sono le tensioni rappresentate nel grafico, **ai capi dei condensatori**.
+- Il nodo a **0 V** è il riferimento di tensione e il ritorno al generatore; il simbolo non rappresenta la terra di protezione.
+- Qui sono mostrati i valori iniziali. Nell'app i valori sugli schemi cambiano insieme agli slider.
+
 ## Il modello
 
 Consideriamo due circuiti RC ideali, condensatori inizialmente scarichi e

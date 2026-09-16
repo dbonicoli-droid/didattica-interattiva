@@ -26,7 +26,8 @@ el('start').events.click();assert.equal(run('state.running'),true);assert.equal(
 el('pause').events.click();assert.equal(run('state.running'),false);
 el('pause').events.click();assert.equal(run('state.running'),true);
 el('r1').value='4';el('r1').events.input();assert.equal(run('state.running'),false);assert.equal(run('state.progress'),1);
-el('reset').events.click();assert.equal(run('state.r1'),1);assert.equal(run('state.r2'),2);
+assert(el('schematic-r1').textContent.includes('4 kΩ'));
+el('reset').events.click();assert(el('schematic-r1').textContent.includes('1 kΩ'));assert(el('schematic-c1-value').textContent.includes('100 µF'));assert.equal(run('state.r1'),1);assert.equal(run('state.r2'),2);
 run('measure(.9)');el('xmax').value='0';el('xmax').events.input();assert.equal(run('state.selected'),null);assert.equal(run('state.xmax'),.05);
 el('reset').events.click();el('ymax').value='1';el('ymax').events.input();run('measure(.1)');assert(el('readings').innerHTML.includes('fuori scala'));
 for(let t=0;t<=10;t+=.01){const v=run('voltage('+t+',1,100)');assert(v>=0&&v<=10);}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="circuit-diagram" viewBox="0 0 520 330" role="img" aria-labelledby="circuit-title-1 circuit-desc-1">
+<title id="circuit-title-1">Circuito 1: carica RC</title>
+<desc id="circuit-desc-1">Generatore ideale a gradino da zero a 10 volt, resistore R₁ in serie al condensatore C₁. La tensione vC₁ è misurata sul condensatore, positiva sulla piastra collegata al resistore. Il ritorno al generatore è il riferimento a zero volt.</desc>
+<rect x="1" y="1" width="518" height="328" rx="12" fill="white" stroke="#dbe1e4"/>
+<g font-family="system-ui,sans-serif" font-size="18" fill="#142c44">
+<text x="22" y="33" fill="#087e82" font-weight="700">Circuito 1</text>
+<g stroke="#142c44" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 146V92H196 M274 92H385V158 M385 178V262H80V204"/>
+<circle cx="80" cy="175" r="29"/>
+<path d="M73 163H87 M80 156V170 M73 188H87"/>
+<rect x="196" y="79" width="78" height="26" stroke="#087e82"/>
+<path d="M360 158H410 M360 178H410" stroke="#087e82" stroke-width="3.5"/>
+<path d="M240 262V279 M224 279H256 M230 286H250 M237 293H243"/>
+<path d="M304 92H341" stroke="#087e82"/>
+</g>
+<path d="M342 92l-11 -6v12z" fill="#087e82"/>
+<circle cx="240" cy="262" r="3.5" fill="#142c44"/>
+<text id="schematic-r1" x="235" y="61" text-anchor="middle" fill="#087e82">R₁ = 1 kΩ</text>
+<text id="schematic-c1" x="423" y="163" fill="#087e82">C₁</text>
+<text id="schematic-c1-value" x="423" y="190" fill="#087e82">100 µF</text>
+<text x="326" y="72" text-anchor="middle" fill="#087e82">i₁(t)</text>
+<text x="22" y="128">u(t)</text>
+<text x="105" y="231">0 → 10 V</text>
+<text x="340" y="156" fill="#087e82">+</text>
+<text x="340" y="191" fill="#087e82">−</text>
+<text x="340" y="224" text-anchor="end" fill="#087e82">vC₁(t)</text>
+<text x="268" y="288">0 V · riferimento</text>
+<text x="22" y="313" font-size="15">A t = 0: gradino di tensione; vC₁(0) = 0 V.</text>
+</g></svg>

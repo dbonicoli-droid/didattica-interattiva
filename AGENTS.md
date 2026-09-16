@@ -6,3 +6,5 @@
 - Le app devono funzionare senza servizi AI. RC resta un singolo HTML offline.
 - Prima di pubblicare: quarto render, verifica link, node scripts/check_rc.cjs e controllo visivo pagine/app.
 - Non sovrascrivere modifiche ai QMD rilanciando la migrazione dalle vecchie dispense.
+
+- Quando una spiegazione, un esempio o una simulazione riguarda un circuito, includere lo schema elettrico prima della formula o insieme ad essa: componenti e valori, alimentazione, polarità delle tensioni e versi delle correnti pertinenti. Usare gli stessi simboli nei controlli, nel grafico e nel testo. Per app autonome includere lo schema anche nel file offline; prevedere una figura statica per il PDF.

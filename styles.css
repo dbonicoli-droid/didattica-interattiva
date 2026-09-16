@@ -12,3 +12,5 @@
 .process-map .map-card{padding:1rem}.process-map h3{font-size:1.05rem}
 @media(max-width:750px){.learning-map,.process-map{grid-template-columns:1fr}.map-card{padding:1.1rem}.course-background main::before{background-size:100% auto;background-repeat:repeat-y}}
 @media print{.learning-map,.process-map{display:block}.map-card{break-inside:avoid;margin-bottom:1rem}}
+
+.rc-schematics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.rc-schematics figure{margin:.5rem 0}.rc-schematics figcaption{font-size:.85rem}@media(max-width:800px){.rc-schematics{grid-template-columns:1fr}}
