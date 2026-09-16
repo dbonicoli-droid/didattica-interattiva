@@ -15,7 +15,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Verifica laboratorio RC",
+      "label": "Verifica simulazione RC",
       "type": "shell",
       "command": "node scripts/check_rc.cjs",
       "problemMatcher": []

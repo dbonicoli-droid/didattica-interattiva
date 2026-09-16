@@ -14,4 +14,3 @@ Le edizioni PDF mantengono la forma delle dispense introduttive. Le pagine web p
 
 **Edizione delle dispense: 15 settembre 2026.** I PDF sono documenti in sviluppo: eventuali campi non ancora compilati o indicazioni provvisorie non costituiscono istruzioni operative del laboratorio.
 
-Il laboratorio RC è disponibile anche come [file HTML autonomo](laboratori/rc/index.html), da salvare e aprire nel browser senza connessione.

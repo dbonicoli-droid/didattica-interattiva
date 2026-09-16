@@ -3,7 +3,7 @@
 Materiali di Daniele Bonicoli per l'ITIS Galileo Galilei di Livorno, A.S. 2026–2027. Sito didattico personale, non sito istituzionale della scuola.
 
 ## Lavorare in VS Code
-Aprire questa cartella. Sono richiesti Quarto e Git; Node.js serve al controllo e all'esportazione della figura del laboratorio RC.
+Aprire questa cartella. Sono richiesti Quarto e Git; Node.js serve al controllo e all'esportazione della figura della simulazione RC.
 
 - Anteprima: `quarto preview`
 - Generazione: `quarto render`
