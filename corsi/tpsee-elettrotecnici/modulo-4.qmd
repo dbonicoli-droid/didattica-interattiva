@@ -32,15 +32,15 @@ Una scelta corretta considera più proprietà insieme: un materiale molto condut
 
   **Famiglia**   **Proprietà**                                                                                           **Perché interessa**
   -------------- ------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------
-  Meccaniche     [Resistenza](glossario.qmd#gloss-new56), elasticità, duttilità, durezza                                 Fili piegabili, [contatti](glossario.qmd#gloss-e10) durevoli, supporti resistenti.
+  Meccaniche     [Resistenza]{.no-component-link}, elasticità, duttilità, durezza                                 Fili piegabili, [contatti](glossario.qmd#gloss-e10) durevoli, supporti resistenti.
   Elettriche     [Resistività](glossario.qmd#gloss-e38), [rigidità dielettrica](glossario.qmd#gloss-e39), permittività   Perdite, isolamento e comportamento del campo.
-  Termiche       Conducibilità termica, dilatazione, [resistenza](glossario.qmd#gloss-new56) al calore                   Smaltimento del calore e stabilità dei collegamenti.
+  Termiche       Conducibilità termica, dilatazione, [resistenza]{.no-component-link} al calore                   Smaltimento del calore e stabilità dei collegamenti.
 
 La **[rigidità dielettrica](glossario.qmd#gloss-e39)** riguarda il campo elettrico che un isolante può sopportare prima della scarica, nelle condizioni di prova. Non coincide con la [resistenza](glossario.qmd#gloss-new56) elettrica e non rende uno spessore qualsiasi adatto a ogni [tensione](glossario.qmd#gloss-new54).
 
 #### Scelta motivata
 
-Per un cavo flessibile non basta cercare bassa [resistività](glossario.qmd#gloss-e38): servono anche flessibilità dei conduttori, isolamento adatto e [resistenza](glossario.qmd#gloss-new56) alle condizioni d'uso. La scelta nasce dalla funzione e dall'ambiente.
+Per un cavo flessibile non basta cercare bassa [resistività](glossario.qmd#gloss-e38): servono anche flessibilità dei conduttori, isolamento adatto e [resistenza]{.no-component-link} alle condizioni d'uso. La scelta nasce dalla funzione e dall'ambiente.
 
 ## Scegliere i materiali conduttori {#topic:8}
 
@@ -50,7 +50,7 @@ Per un cavo flessibile non basta cercare bassa [resistività](glossario.qmd#glos
 
 - **Alluminio**: più leggero, ma con [resistività](glossario.qmd#gloss-e38) maggiore; a pari lunghezza e [resistenza](glossario.qmd#gloss-new56) serve una sezione maggiore.
 
-- **Leghe**: modificano proprietà meccaniche, [resistenza](glossario.qmd#gloss-new56) alla corrosione e conducibilità.
+- **Leghe**: modificano proprietà meccaniche, [resistenza]{.no-component-link} alla corrosione e conducibilità.
 
   **Valore indicativo a 20 $^\circ$C**                                  **Rame**   **Alluminio**
   -------------------------------------------------------------------- ---------- ---------------
@@ -79,7 +79,7 @@ L'**invecchiamento termico** è il degrado progressivo dovuto al calore: può ri
 
 #### Due classificazioni da non confondere
 
-La **classe termica** caratterizza la [resistenza](glossario.qmd#gloss-new56) al calore del sistema isolante. La **classe di protezione dell'apparecchio** (per esempio I o II) riguarda invece le misure contro la scossa elettrica. Sono concetti diversi.
+La **classe termica** caratterizza la [resistenza]{.no-component-link} al calore del sistema isolante. La **classe di protezione dell'apparecchio** (per esempio I o II) riguarda invece le misure contro la scossa elettrica. Sono concetti diversi.
 
    **Classe termica**   **Temperatura**  **Lettura didattica**
   -------------------- ----------------- ---------------------------------------------------------------------------------------------------

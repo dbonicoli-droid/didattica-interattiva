@@ -1,0 +1,132 @@
+---
+title: "Resistore / Resistenza"
+description: "Dalla legge di Ohm al comportamento nel tempo, ai fasori e alle trasformate."
+toc-depth: 2
+---
+
+[← Componenti](index.qmd) · [Condensatore →](condensatore.qmd)
+
+**Idea guida:** nel resistore ideale la corrente dipende dalla tensione dello stesso istante. Il componente dissipa energia e non ha uno stato elettrico da ricordare.
+
+## Livello 1 / Riconoscere il componente {#livello-1}
+
+Il **resistore** è il componente; la **resistenza** $R$ è la grandezza che ne descrive il comportamento, misurata in ohm ($\Omega$). Nel linguaggio comune si usa spesso “resistenza” anche per indicare il componente.
+
+![Generatore ideale di tensione e resistore. La corrente entra nel terminale positivo del resistore.](../../assets/componenti/resistore.svg)
+
+Useremo questo circuito in tutti gli esempi: il generatore impone $u(t)$ e, essendo collegato direttamente al resistore, $v_R(t)=u(t)$. Il valore di riferimento è $R=1\,\mathrm{k\Omega}$.
+
+## Livello 2 / Regime continuo e singolo istante {#livello-2}
+
+### La legge di Ohm
+
+Per il modello lineare a resistenza costante:
+
+$$v_R=Ri_R,\qquad i_R=\frac{v_R}{R}.$$
+
+Con una tensione continua di $5\,\mathrm V$:
+
+$$i_R=\frac{5\,\mathrm V}{1000\,\Omega}=0{,}005\,\mathrm A=5\,\mathrm{mA}.$$
+
+Raddoppiando la tensione a parità di $R$, raddoppia la corrente. Questo legame vale anche in un singolo istante di un segnale variabile: conoscere $v_R(t_0)$ basta per calcolare $i_R(t_0)$.
+
+### Potenza ed energia
+
+$$p_R(t)=v_R(t)i_R(t)=Ri_R^2(t)=\frac{v_R^2(t)}{R}\geq0.$$
+
+Nell'esempio $P=25\,\mathrm{mW}$. Se questa potenza rimane costante per $10\,\mathrm s$, l'energia assorbita è $E=P\Delta t=0{,}25\,\mathrm J$. Il modello converte l'energia elettrica in calore: non la conserva per restituirla al circuito.
+
+**Domanda:** a resistenza costante, raddoppiare la tensione raddoppia anche la potenza?
+
+## Livello 3 / Segnali variabili e derivate {#livello-3}
+
+### Una relazione istantanea
+
+$$i_R(t)=\frac{u(t)}{R}.$$
+
+Se il generatore passa idealmente da $0$ a $5\,\mathrm V$, la corrente passa da $0$ a $5\,\mathrm{mA}$ senza un transitorio proprio del resistore. Eventuali ritardi del circuito reale dipendono da altri effetti, come capacità e induttanze parassite.
+
+Se la tensione cresce linearmente da $0$ a $5\,\mathrm V$ in $2\,\mathrm{ms}$, la corrente cresce linearmente da $0$ a $5\,\mathrm{mA}$ nello stesso intervallo.
+
+### Che cosa dice la derivata?
+
+Per $R$ costante, negli intervalli in cui i segnali sono derivabili:
+
+$$\frac{di_R}{dt}=\frac{1}{R}\frac{dv_R}{dt}.$$
+
+La derivata esprime la pendenza. Nell'esempio:
+
+$$\frac{dv_R}{dt}=2500\,\mathrm{V/s},\qquad \frac{di_R}{dt}=2{,}5\,\mathrm{A/s}.$$
+
+Questa equazione si ottiene derivando la legge di Ohm: **non introduce memoria**. Il resistore non richiede una condizione iniziale indipendente e non ha una propria costante di tempo.
+
+Per una potenza variabile, l'energia assorbita fra due istanti è:
+
+$$E=\int_{t_a}^{t_b}p_R(t)\,dt.$$
+
+## Livello 4 / Regime sinusoidale e fasori {#livello-4}
+
+Poniamo $u(t)=V_m\cos(\omega t+\varphi)$. Allora:
+
+$$i_R(t)=\frac{V_m}{R}\cos(\omega t+\varphi).$$
+
+Tensione e corrente sono **in fase**: raggiungono massimi e zeri negli stessi istanti. Il fasore raccoglie ampiezza e fase; qui usiamo ampiezze di picco:
+
+$$\underline V_R=R\underline I_R,\qquad Z_R=R.$$
+
+Con $V_m=5\,\mathrm V$ e $R=1\,\mathrm{k\Omega}$, $I_m=5\,\mathrm{mA}$. I valori efficaci sono quelli di picco divisi per $\sqrt2$. La potenza media è:
+
+$$P=\frac{V_{\mathrm{eff}}^2}{R}=\frac{V_m^2}{2R}=12{,}5\,\mathrm{mW}.$$
+
+Non confondere questa sinusoide di picco $5\,\mathrm V$ con la tensione continua di $5\,\mathrm V$ del livello 2.
+
+## Livello 5 / Fourier: più frequenze insieme {#livello-5}
+
+Nel medesimo circuito scegliamo:
+
+$$u(t)=2\,\mathrm V+(1\,\mathrm V)\cos(\omega_0t)+(0{,}5\,\mathrm V)\cos(3\omega_0t).$$
+
+La corrente è la somma delle risposte ai tre termini:
+
+$$i_R(t)=2\,\mathrm{mA}+(1\,\mathrm{mA})\cos(\omega_0t)+(0{,}5\,\mathrm{mA})\cos(3\omega_0t).$$
+
+Ogni armonica viene scalata dello stesso fattore $1/R$, senza sfasamento. Il resistore ideale isolato **non seleziona le frequenze**; può contribuire a un filtro quando è collegato a condensatori o induttori.
+
+Adottiamo la convenzione:
+
+$$\widehat X(\omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}\,dt.$$
+
+Per segnali trasformabili, la linearità dà:
+
+$$\widehat V_R(\omega)=R\widehat I_R(\omega).$$
+
+Per segnali periodici persistenti come quello dell'esempio si usa direttamente la **serie di Fourier**; la trasformata con righe spettrali richiede le distribuzioni. Non serve introdurle per calcolare le singole armoniche.
+
+## Livello 6 / Laplace e confronto con i componenti con memoria {#livello-6}
+
+Con la trasformata unilaterale, definita da $0^-$ in avanti:
+
+$$V_R(s)=RI_R(s),\qquad Z_R(s)=R.$$
+
+Non compare un termine di energia iniziale. Per un gradino di ampiezza $U_0$ applicato a $t=0$, $U(s)=U_0/s$ e:
+
+$$I_R(s)=\frac{U_0}{Rs}\quad\Longrightarrow\quad i_R(t)=\frac{U_0}{R}\quad(t>0).$$
+
+La trasformata descrive lo stesso salto già trovato con Ohm. Nei circuiti [RC](condensatore.qmd#livello-6) e [RL](induttore.qmd#livello-6), invece, il resistore determina insieme a $C$ o $L$ la velocità con cui si esaurisce il transitorio.
+
+## Verifica e limiti del modello
+
+1. Quanto vale la corrente con $R=1\,\mathrm{k\Omega}$ e $v_R=3\,\mathrm V$?
+2. Se la tensione continua raddoppia, di quanto varia la potenza?
+3. Un resistore ideale alimentato da una sinusoide introduce sfasamento?
+
+::: {.callout-tip collapse="true"}
+## Soluzioni
+1. $3\,\mathrm{mA}$.
+2. Diventa quattro volte maggiore.
+3. No: tensione e corrente sono in fase.
+:::
+
+Un resistore reale ha tolleranza, limiti di potenza, dipendenza dalla temperatura e comportamenti parassiti. Il modello $R$ costante è valido entro un intervallo di condizioni operative.
+
+[Sperimenta nel circuito RC](../../laboratori/rc.qmd) · [Riferimenti e convenzioni](index.qmd#convenzioni-comuni)

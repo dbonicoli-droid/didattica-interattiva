@@ -19,3 +19,9 @@ La risorsa comprende schemi elettrici, spiegazione del modello, un'app interatti
 [Apri il circuito RC →](rc.qmd){.btn .btn-primary}
 
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
+
+## Componenti: risorse comuni ai percorsi
+
+Prima o durante un esperimento puoi consultare le pagine di [resistore](../risorse/componenti/resistore.qmd), [condensatore](../risorse/componenti/condensatore.qmd), [induttore](../risorse/componenti/induttore.qmd), [diodo](../risorse/componenti/diodo.qmd) e [transistor](../risorse/componenti/transistor.qmd).
+
+[Esplora i componenti e i livelli di approfondimento →](../risorse/componenti/index.qmd)

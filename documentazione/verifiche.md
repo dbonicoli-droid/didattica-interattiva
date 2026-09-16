@@ -18,3 +18,6 @@ La verifica non costituisce revisione scientifica indipendente di tutte le dispe
 - Vignetta caricata correttamente, opacità verificata 0,1; controllo visivo delle mappe.
 - Tooltip verificati su tutti e quattro i corsi; hover, focus, Escape, passaggio al riquadro e navigazione con clic/tocco verificati.
 - Controlli RC ancora superati.
+
+## Componenti condivisi
+Cinque schede: resistore, condensatore, induttore, diodo e transistor. Sei livelli per R/C/L; introduzioni per i semiconduttori. Schemi SVG rigenerabili, link automatici con tooltip e cinque eccezioni non elettriche. Dopo il render eseguire node scripts/check_components.cjs (anche nel workflow). Controllati in browser: formule, cinque schede e indice, immagini, collegamenti dai prerequisiti/moduli, tooltip e larghezza mobile. I PDF delle vecchie dispense non vengono modificati.

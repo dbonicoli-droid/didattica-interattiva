@@ -7,6 +7,7 @@ project:
     - materiali.qmd
     - corsi/**/*.qmd
     - laboratori/*.qmd
+    - risorse/**/*.qmd
   resources:
     - assets/**
     - downloads/**
@@ -49,6 +50,14 @@ website:
         contents:
           - href: laboratori/rc.qmd
             text: Circuito RC
+      - section: "Componenti"
+        href: risorse/componenti/index.qmd
+        contents:
+          - risorse/componenti/resistore.qmd
+          - risorse/componenti/condensatore.qmd
+          - risorse/componenti/induttore.qmd
+          - risorse/componenti/diodo.qmd
+          - risorse/componenti/transistor.qmd
   page-footer:
     left: "Daniele Bonicoli · Materiali didattici personali · A.S. 2026–2027"
     right: "Versione in sviluppo"
@@ -69,3 +78,4 @@ execute:
 
 filters:
   - scripts/glossary-filter.lua
+  - scripts/component-links.lua

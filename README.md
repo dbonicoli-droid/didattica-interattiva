@@ -28,3 +28,9 @@ I PDF iniziali sono le edizioni precedenti. Il flusso di esportazione dei nuovi 
 
 ## Aggiungere un modulo
 Creare un file `.qmd` nella cartella del corso, aggiornare l'indice del corso, controllare l'anteprima e i rimandi. Il menu laterale include le pagine del corso. Evitare di rigenerare automaticamente la migrazione dai vecchi TeX dopo avere modificato i nuovi sorgenti.
+
+## Risorse comuni: componenti
+
+Le pagine in `risorse/componenti/` sono condivise dai percorsi. Il filtro `scripts/component-links.lua` collega automaticamente i nomi dei componenti nel testo HTML, anche al plurale; conserva i suggerimenti del glossario. Esclude formule, codice, immagini, titoli, collegamenti espliciti e rimandi alla stessa pagina. Per usi non elettrici scrivere `[resistenza]{.no-component-link}`. I riferimenti PDF non vengono trasformati dal filtro.
+
+Gli schemi si rigenerano con `node scripts/build_component_figures.cjs`.
