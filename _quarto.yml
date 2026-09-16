@@ -21,8 +21,8 @@ website:
     left:
       - href: index.qmd
         text: Percorsi
-      - href: laboratori/rc.qmd
-        text: Laboratorio RC
+      - href: laboratori/index.qmd
+        text: Laboratorio
       - href: materiali.qmd
         text: Dispense PDF
       - href: guida.qmd
@@ -44,6 +44,11 @@ website:
       - section: "Domotica e automazione"
         href: corsi/domotica/index.qmd
         contents: corsi/domotica/*.qmd
+      - section: "Laboratorio"
+        href: laboratori/index.qmd
+        contents:
+          - href: laboratori/rc.qmd
+            text: Circuito RC
   page-footer:
     left: "Daniele Bonicoli · Materiali didattici personali · A.S. 2026–2027"
     right: "Versione in sviluppo"

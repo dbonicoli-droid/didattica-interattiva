@@ -1,0 +1,21 @@
+---
+title: "Laboratorio"
+description: "Esperimenti interattivi e attività guidate per collegare modelli, circuiti e misure."
+toc: false
+---
+
+Il laboratorio raccoglie **simulazioni, esperimenti interattivi e attività guidate** per mettere alla prova ciò che studi nei percorsi di elettronica, elettrotecnica e automazione.
+
+Ogni risorsa presenta il sistema da esplorare, il modello che lo descrive e alcune domande per guidare il lavoro. Parti da una previsione, modifica i parametri, osserva i risultati e prova a spiegarli usando le formule e le unità di misura.
+
+## Risorse disponibili
+
+### [Circuito RC — Due circuiti a confronto](rc.qmd)
+
+Esplora la **carica del condensatore** e il significato della **costante di tempo**. Confronta due circuiti, modifica resistenza e capacità e misura la tensione sul grafico.
+
+La risorsa comprende schemi elettrici, spiegazione del modello, un'app interattiva utilizzabile anche offline e attività guidate.
+
+[Apri il circuito RC →](rc.qmd){.btn .btn-primary}
+
+L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.

@@ -64,7 +64,7 @@ Sensori, acquisizione dei segnali e controllo degli impianti.
 
 **Che cosa cambia se raddoppia la resistenza?** Confronta due cariche RC: formula una previsione, modifica i componenti e misura il risultato sul grafico.
 
-[Apri il laboratorio RC](laboratori/rc.qmd){.btn .btn-primary} [Scarica le dispense](materiali.qmd){.btn .btn-outline-primary}
+[Esplora il laboratorio](laboratori/index.qmd){.btn .btn-primary} [Scarica le dispense](materiali.qmd){.btn .btn-outline-primary}
 :::
 
 ## Dalla panoramica all'approfondimento

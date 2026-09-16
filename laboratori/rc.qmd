@@ -3,6 +3,8 @@ title: "Due circuiti RC a confronto"
 description: "Esplora costante di tempo, carica del condensatore e ruolo delle scale."
 ---
 
+[← Indice del laboratorio](index.qmd)
+
 La carica di un condensatore collega una formula a un fenomeno osservabile:
 **R e C determinano la rapidità della risposta; la tensione finale resta 10 V.**
 
