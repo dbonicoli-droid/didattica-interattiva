@@ -29,18 +29,18 @@ Una richiesta viene verificata insieme ai consensi; il programma aggiorna lo sta
 
 :::: {.process-map aria-label="Dal segnale al comando"}
 
-::: {.map-card}
-### 1 / Richieste e sensori
+::: {.map-card .map-card-linked}
+### [1 / Richieste e sensori](modulo-2.qmd#ud:2.2){.map-destination}
 Richieste e [sensori](glossario.qmd#gloss-new43).
 :::
 
-::: {.map-card}
-### 2 / PLC
+::: {.map-card .map-card-linked}
+### [2 / PLC](modulo-2.qmd#ud:2.3){.map-destination}
 [PLC](glossario.qmd#gloss-d29): logica e stato.
 :::
 
-::: {.map-card}
-### 3 / Interfacce e attuatori
+::: {.map-card .map-card-linked}
+### [3 / Interfacce e attuatori](modulo-2.qmd#ud:2.2){.map-destination}
 Interfacce e [attuatori](glossario.qmd#gloss-new44).
 :::
 

@@ -14,3 +14,6 @@
 @media print{.learning-map,.process-map{display:block}.map-card{break-inside:avoid;margin-bottom:1rem}}
 
 .rc-schematics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.rc-schematics figure{margin:.5rem 0}.rc-schematics figcaption{font-size:.85rem}@media(max-width:800px){.rc-schematics{grid-template-columns:1fr}}
+
+/* Blocchi navigabili: il titolo estende il link, il glossario resta indipendente. */
+.map-card-linked{position:relative}.map-card-linked .map-destination{color:inherit;text-decoration:none}.map-card-linked .map-destination::after{content:"";position:absolute;inset:0;z-index:1;border-radius:10px}.map-card-linked a:not(.map-destination){position:relative;z-index:2}.map-card-linked:hover{border-color:var(--teal);box-shadow:0 4px 16px #16324f18}.map-card-linked .map-destination:focus-visible::after{outline:3px solid #bb6400;outline-offset:3px}
