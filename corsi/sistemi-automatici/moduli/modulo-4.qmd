@@ -8,6 +8,8 @@ subtitle: "Modulo di approfondimento"
 ::: {.callout-note icon=false}
 ## 🚧 Contenuti in preparazione
 
+![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+
 La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
 
 Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
@@ -26,24 +28,36 @@ Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti]
 
 ## U.D. 4.1 / Caratteristiche dei circuiti combinatori {#ud:4.1}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 4.2 / Implementazione in linguaggio Ladder {#ud:4.2}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 4.3 / Implementazione mediante Function Block {#ud:4.3}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 4.4 / Implementazione in Testo strutturato e Instruction List {#ud:4.4}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale {#ud:4.5}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi {#ud:4.6}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.

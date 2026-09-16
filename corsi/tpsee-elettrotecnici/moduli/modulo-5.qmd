@@ -8,6 +8,8 @@ subtitle: "Modulo di approfondimento"
 ::: {.callout-note icon=false}
 ## 🚧 Contenuti in preparazione
 
+![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+
 La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
 
 Puoi già consultare la [panoramica del modulo](../modulo-5.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
@@ -23,12 +25,18 @@ Puoi già consultare la [panoramica del modulo](../modulo-5.qmd), i [componenti]
 
 ## U.D. 5.1 / Introduzione, grandezze fotometriche e colorimetria {#ud:5.1}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 5.2 / Tipi di illuminazione, apparecchi illuminanti, solido e curva fotometrica {#ud:5.2}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 5.3 / Principali tipi di sorgenti luminose. Dimensionamento illuminotecnico {#ud:5.3}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.

@@ -8,6 +8,8 @@ subtitle: "Modulo di approfondimento"
 ::: {.callout-note icon=false}
 ## 🚧 Contenuti in preparazione
 
+![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+
 La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
 
 Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
@@ -26,24 +28,36 @@ Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti]
 
 ## U.D. 3.1 / Il PLC: struttura e architettura {#ud:3.1}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.2 / Ciclo di scansione, indirizzamento, tipi di dato e variabili {#ud:3.2}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.3 / Interfacciamento sul campo e schemi funzionali {#ud:3.3}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta {#ud:3.4}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug {#ud:3.5}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC {#ud:3.6}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.

@@ -31,6 +31,8 @@ Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
 
 ### Moduli di approfondimento {#moduli-di-approfondimento}
 
+![](/assets/cartello-lavori-in-corso.webp){width=100 fig-alt="Cartello triangolare di lavori in corso"}
+
 Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
 
 - [Modulo 1 / Il progetto di sistemi elettrici ed elettronici](moduli/modulo-1.qmd)

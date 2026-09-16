@@ -8,6 +8,8 @@ subtitle: "Modulo di approfondimento"
 ::: {.callout-note icon=false}
 ## 🚧 Contenuti in preparazione
 
+![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+
 La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
 
 Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
@@ -25,20 +27,30 @@ Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti]
 
 ## U.D. 4.1 / Introduzione al linguaggio SFC {#ud:4.1}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 4.2 / Simbologia SFC {#ud:4.2}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 4.3 / Applicazioni SFC {#ud:4.3}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 4.4 / Software SoMachine Basic {#ud:4.4}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 4.5 / Software CODESYS {#ud:4.5}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.

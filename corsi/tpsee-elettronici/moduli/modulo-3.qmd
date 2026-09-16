@@ -8,6 +8,8 @@ subtitle: "Modulo di approfondimento"
 ::: {.callout-note icon=false}
 ## 🚧 Contenuti in preparazione
 
+![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+
 La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
 
 Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
@@ -36,64 +38,96 @@ Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti]
 
 ## U.D. 3.1 / Porte Logiche, tabella di Verità delle porte NOT, AND, OR, NAND, NOR, XOR {#ud:3.1}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.2 / GRAY - binario e binario - GRAY {#ud:3.2}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.3 / Universalità delle porte NAND e NOR {#ud:3.3}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.4 / Mappe di Karnaugh come metodo di semplificazione delle espressioni logiche booleane, quindi delle reti combinatorie {#ud:3.4}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.5 / Circuiti Combinatori {#ud:3.5}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.6 / Semisommatori e sommatori {#ud:3.6}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.7 / Comparatori {#ud:3.7}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.8 / Decoder binari {#ud:3.8}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.9 / Decoder BCD - 7 segmenti {#ud:3.9}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.10 / Principio di funzionamento di un display a 7 segmenti e diodi LED {#ud:3.10}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale {#ud:3.11}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.12 / MUX a 4, 8, 16 ingressi {#ud:3.12}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.13 / Implementazioni di funzioni logiche tramite MUX {#ud:3.13}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.14 / MUX: 74LS150, 74LS151 {#ud:3.14}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
 
 ## U.D. 3.15 / DECODER: 74LS154, 74LS138 {#ud:3.15}
 
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
 Contenuti in preparazione.
 
 ## U.D. 3.16 / COMPARATORE 74LS85 {#ud:3.16}
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 Contenuti in preparazione.
