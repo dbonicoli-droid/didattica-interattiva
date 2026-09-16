@@ -1,6 +1,7 @@
 ---
 body-classes: course-background
 title: "La mappa del percorso"
+subtitle: "Panoramica del Programma"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
@@ -25,7 +26,7 @@ title: "La mappa del percorso"
 - [Ingressi](glossario.qmd#gloss-s9), [uscite](glossario.qmd#gloss-s26) e modelli.
 - Algoritmi e [Flowgorithm](glossario.qmd#gloss-s6).
 
-[Vai al modulo 1 →](modulo-1.qmd)
+[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
 :::
 
@@ -36,7 +37,7 @@ title: "La mappa del percorso"
 - Porte e [tabelle di verità](glossario.qmd#gloss-s50).
 - Semplificare le funzioni.
 
-[Vai al modulo 2 →](modulo-2.qmd)
+[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
 
 :::
 
@@ -47,7 +48,7 @@ title: "La mappa del percorso"
 - Architettura, [I/O](glossario.qmd#gloss-s31) e [scansione](glossario.qmd#gloss-s22).
 - Configurare e collaudare.
 
-[Vai al modulo 3 →](modulo-3.qmd)
+[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
 :::
 
@@ -58,7 +59,7 @@ title: "La mappa del percorso"
 - [Ladder](glossario.qmd#gloss-s12), blocchi e testo.
 - Confrontare le simulazioni.
 
-[Vai al modulo 4 →](modulo-4.qmd)
+[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
 :::
 
@@ -69,7 +70,7 @@ title: "La mappa del percorso"
 - [Stati](glossario.qmd#gloss-s24), transizioni e [uscite](glossario.qmd#gloss-s26).
 - Memoria e interblocchi.
 
-[Vai al modulo 5 →](modulo-5.qmd)
+[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
 
 :::
 
@@ -80,7 +81,7 @@ title: "La mappa del percorso"
 - [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61).
 - [Segnali analogici](glossario.qmd#gloss-new75) e [scalatura](glossario.qmd#gloss-s65).
 
-[Vai al modulo 6 →](modulo-6.qmd)
+[Leggi la sintesi del modulo 6 →](modulo-6.qmd)
 
 :::
 
@@ -88,3 +89,9 @@ title: "La mappa del percorso"
 
 []{#nav:indice label="nav:indice"}
 
+
+## Prosegui nel percorso
+
+- [Fondamenti e componenti](index.qmd#fondamenti)
+- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
+- [Laboratorio](/laboratori/index.qmd)

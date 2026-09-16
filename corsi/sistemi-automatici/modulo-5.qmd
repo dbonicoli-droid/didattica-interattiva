@@ -1,8 +1,24 @@
 ---
 title: "Modulo 5 / Circuiti sequenziali"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 5.1 / Circuiti sequenziali e automi](#ud:5.1)
+- [U.D. 5.2 / Diagramma degli stati e delle uscite](#ud:5.2)
+- [U.D. 5.3 / Tabella degli stati e delle uscite](#ud:5.3)
+- [U.D. 5.4 / Applicare diagrammi e tabelle agli automatismi](#ud:5.4)
+- [U.D. 5.5 / Implementazione sequenziale in Ladder](#ud:5.5)
+- [U.D. 5.6 / Implementazione sequenziale in Testo strutturato e Instruction List](#ud:5.6)
+- [U.D. 5.7 / Schemi sequenziali: mantenimento, interblocco e inversione](#ud:5.7)
+- [U.D. 5.8 / Implementazione e simulazione degli automatismi](#ud:5.8)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/sistemi-automatici.pdf)
 
 []{#mod:5}
 
@@ -166,3 +182,5 @@ Se Start rimane premuto e si rilascia Stop, l'[autoritenuta](glossario.qmd#gloss
 
 Riporta: versione del software, periodo della [task](glossario.qmd#gloss-s25), [stato](glossario.qmd#gloss-s24) iniziale, tabella [I/O](glossario.qmd#gloss-s31), rete [Ladder](glossario.qmd#gloss-s12), sequenza di prove ed esiti. Se una memoria è ritentiva, annotalo: il comportamento al riavvio potrebbe cambiare.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-5.qmd)

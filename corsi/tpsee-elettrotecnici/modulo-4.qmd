@@ -1,8 +1,20 @@
 ---
 title: "Modulo 4 / Tecnologia dei materiali"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Classificazione dei materiali in base alla loro funzione](#ud:4.1)
+- [U.D. 4.2 / Proprietà dei materiali: meccaniche, elettriche e termiche](#ud:4.2)
+- [U.D. 4.3 / Materiali conduttori: caratteristiche. Rame e alluminio e loro leghe](#ud:4.3)
+- [U.D. 4.4 / Materiali isolanti: caratteristiche. Tipi di isolanti, invecchiamento termico e classi di isolamento](#ud:4.4)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
 
 []{#mod:4}
 
@@ -97,3 +109,5 @@ Un motore riporta isolamento di classe F. Si può concludere che l'ambiente poss
 
 **Laboratorio sui materiali.** Confronta campioni identificati di rame, alluminio e isolante. Descrivi massa, flessibilità e funzione. Le prove elettriche vanno eseguite solo con strumenti e procedure indicati dal docente; una misura con il multimetro non qualifica un isolamento per la rete.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-4.qmd)

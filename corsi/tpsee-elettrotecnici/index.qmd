@@ -3,20 +3,50 @@ body-classes: course-background
 title: "TPSEE · Elettrotecnici"
 ---
 
-Panoramica del programma e materiali di riferimento per il corso. Questa versione ipertestuale riprende i contenuti della dispensa: unità didattiche, esempi, esercizi e approfondimenti. I moduli saranno ampliati durante l’anno.
+Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti raccolgono le basi e i moduli di approfondimento ospiteranno la trattazione sviluppata durante le lezioni.
 
-[Scarica la dispensa PDF](/downloads/tpsee-elettrotecnici.pdf){.btn .btn-primary}
+[Scarica la dispensa PDF della panoramica](/downloads/tpsee-elettrotecnici.pdf){.btn .btn-primary}
 
 ## Percorso di lettura
 
+### Panoramica del Programma {#panoramica-del-programma}
+
+Una breve presentazione degli argomenti e delle unità didattiche previste.
+
 - [La mappa del percorso](percorso.qmd)
+- [Sintesi del modulo 1 / Normativa e legislazione](modulo-1.qmd)
+- [Sintesi del modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici](modulo-2.qmd)
+- [Sintesi del modulo 3 / Principali componenti degli impianti elettrici](modulo-3.qmd)
+- [Sintesi del modulo 4 / Tecnologia dei materiali](modulo-4.qmd)
+- [Sintesi del modulo 5 / Illuminotecnica](modulo-5.qmd)
+
+### Fondamenti {#fondamenti}
+
+Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
+
 - [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
-- [Modulo 1 / Normativa e legislazione](modulo-1.qmd)
-- [Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici](modulo-2.qmd)
-- [Modulo 3 / Principali componenti degli impianti elettrici](modulo-3.qmd)
-- [Modulo 4 / Tecnologia dei materiali](modulo-4.qmd)
-- [Modulo 5 / Illuminotecnica](modulo-5.qmd)
 - [Conoscenze di base](conoscenze-di-base.qmd)
+- [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
+- [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
+
+### Moduli di approfondimento {#moduli-di-approfondimento}
+
+Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
+
+- [Modulo 1 / Normativa e legislazione](moduli/modulo-1.qmd)
+- [Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici](moduli/modulo-2.qmd)
+- [Modulo 3 / Principali componenti degli impianti elettrici](moduli/modulo-3.qmd)
+- [Modulo 4 / Tecnologia dei materiali](moduli/modulo-4.qmd)
+- [Modulo 5 / Illuminotecnica](moduli/modulo-5.qmd)
+
+### Laboratorio {#laboratorio}
+
+- [Laboratorio / simulazioni e attività disponibili](/laboratori/index.qmd)
+
+Le risorse di laboratorio possono essere utilizzate in più percorsi.
+
+### Altre risorse {#altre-risorse}
+
 - [Esercizi / Metti insieme i moduli](esercizi-metti-insieme-i-moduli.qmd)
 - [Educazione civica / Sicurezza e responsabilità](educazione-civica-sicurezza-e-responsabilita.qmd)
 - [Approfondimenti](approfondimenti.qmd)

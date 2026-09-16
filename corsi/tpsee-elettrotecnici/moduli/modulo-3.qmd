@@ -1,0 +1,54 @@
+---
+title: "Modulo 3 / Principali componenti degli impianti elettrici"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-3.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 3.1 / Cavi elettrici per energia e segnale](#ud:3.1)
+- [U.D. 3.2 / Tubi protettivi e canali](#ud:3.2)
+- [U.D. 3.3 / Prese e spine elettriche](#ud:3.3)
+- [U.D. 3.4 / Interruttore di comando unipolare e bipolare, deviatore, invertitore](#ud:3.4)
+- [U.D. 3.5 / Relè interruttore e relè commutatore](#ud:3.5)
+- [U.D. 3.6 / Luci scale, elettroserrature, suonerie e citofoni](#ud:3.6)
+- [U.D. 3.7 / Livelli prestazionali degli impianti elettrici](#ud:3.7)
+:::
+
+## U.D. 3.1 / Cavi elettrici per energia e segnale {#ud:3.1}
+
+Contenuti in preparazione.
+
+## U.D. 3.2 / Tubi protettivi e canali {#ud:3.2}
+
+Contenuti in preparazione.
+
+## U.D. 3.3 / Prese e spine elettriche {#ud:3.3}
+
+Contenuti in preparazione.
+
+## U.D. 3.4 / Interruttore di comando unipolare e bipolare, deviatore, invertitore {#ud:3.4}
+
+Contenuti in preparazione.
+
+## U.D. 3.5 / Relè interruttore e relè commutatore {#ud:3.5}
+
+Contenuti in preparazione.
+
+## U.D. 3.6 / Luci scale, elettroserrature, suonerie e citofoni {#ud:3.6}
+
+Contenuti in preparazione.
+
+## U.D. 3.7 / Livelli prestazionali degli impianti elettrici {#ud:3.7}
+
+Contenuti in preparazione.

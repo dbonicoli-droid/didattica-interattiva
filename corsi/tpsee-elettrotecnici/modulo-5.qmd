@@ -1,8 +1,19 @@
 ---
 title: "Modulo 5 / Illuminotecnica"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 5.1 / Introduzione, grandezze fotometriche e colorimetria](#ud:5.1)
+- [U.D. 5.2 / Tipi di illuminazione, apparecchi illuminanti, solido e curva fotometrica](#ud:5.2)
+- [U.D. 5.3 / Principali tipi di sorgenti luminose. Dimensionamento illuminotecnico](#ud:5.3)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
 
 []{#mod:5}
 
@@ -134,3 +145,5 @@ Un temporizzatore impostato a 60 s resta attivo per 61, 60 e 62 s in tre prove. 
 
 **Ruoli a rotazione:** responsabile dello schema, addetto alle misure autorizzate, compilatore della tabella. Tutti devono saper spiegare il funzionamento.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-5.qmd)

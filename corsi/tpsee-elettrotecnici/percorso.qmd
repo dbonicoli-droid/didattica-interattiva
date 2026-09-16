@@ -1,6 +1,7 @@
 ---
 body-classes: course-background
 title: "La mappa del percorso"
+subtitle: "Panoramica del Programma"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
@@ -26,7 +27,7 @@ Educazione civica: 5 ore.
 - Distinguere leggi e norme tecniche.
 - Riconoscere organismi normatori e documenti dell’[impianto](glossario.qmd#gloss-e47).
 
-[Vai al modulo 1 →](modulo-1.qmd)
+[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
 :::
 
@@ -37,7 +38,7 @@ Educazione civica: 5 ore.
 - Leggere schemi funzionali, unifilari, multifilari e planimetrie.
 - Usare simboli, [legenda](glossario.qmd#gloss-e49) e [ProgeCAD](glossario.qmd#gloss-e36).
 
-[Vai al modulo 2 →](modulo-2.qmd)
+[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
 
 :::
 
@@ -48,7 +49,7 @@ Educazione civica: 5 ore.
 - Riconoscere cavi, canalizzazioni, prese e dispositivi di comando.
 - Comprendere [deviatori](glossario.qmd#gloss-e11), [invertitori](glossario.qmd#gloss-e23), relè e servizi dell’abitazione.
 
-[Vai al modulo 3 →](modulo-3.qmd)
+[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
 :::
 
@@ -59,7 +60,7 @@ Educazione civica: 5 ore.
 - Collegare proprietà elettriche, meccaniche e termiche agli impieghi.
 - Confrontare conduttori, isolanti e comportamento al calore.
 
-[Vai al modulo 4 →](modulo-4.qmd)
+[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
 :::
 
@@ -70,7 +71,7 @@ Educazione civica: 5 ore.
 - Distinguere grandezze fotometriche e sorgenti luminose.
 - Stimare il numero di apparecchi e introdurre [DIALux](glossario.qmd#gloss-e12).
 
-[Vai al modulo 5 →](modulo-5.qmd)
+[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
 
 :::
 
@@ -78,3 +79,9 @@ Educazione civica: 5 ore.
 
 []{#nav:indice label="nav:indice"}
 
+
+## Prosegui nel percorso
+
+- [Fondamenti e componenti](index.qmd#fondamenti)
+- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
+- [Laboratorio](/laboratori/index.qmd)

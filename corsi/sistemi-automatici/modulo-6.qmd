@@ -1,8 +1,23 @@
 ---
 title: "Modulo 6 / Tempi, eventi e grandezze analogiche"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 6.1 / Timer e contatori dei PLC](#ud:6.1)
+- [U.D. 6.2 / Timer e contatori in Ladder](#ud:6.2)
+- [U.D. 6.3 / Timer e contatori in Testo strutturato](#ud:6.3)
+- [U.D. 6.4 / Timer e contatori in Instruction List](#ud:6.4)
+- [U.D. 6.5 / Gestione delle grandezze analogiche](#ud:6.5)
+- [U.D. 6.6 / Elaborare valori analogici in Testo strutturato e Instruction List](#ud:6.6)
+- [U.D. 6.7 / Simulare un controllo con tempi, eventi e analogico](#ud:6.7)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/sistemi-automatici.pdf)
 
 []{#mod:6}
 
@@ -116,3 +131,5 @@ Un [sensore](glossario.qmd#gloss-new72) conta i pezzi. Dopo cinque passaggi si a
 
 Confronta le realizzazioni disponibili in [OpenPLC](glossario.qmd#gloss-s16) usando le stesse tracce. [Altre prove e soluzioni sono negli approfondimenti](approfondimenti.qmd#app:nuove-prove).
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-6.qmd)

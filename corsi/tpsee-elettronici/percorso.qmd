@@ -1,6 +1,7 @@
 ---
 body-classes: course-background
 title: "La mappa del percorso"
+subtitle: "Panoramica del Programma"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
@@ -25,7 +26,7 @@ title: "La mappa del percorso"
 - Simulazione di circuiti con [Multisim](glossario.qmd#gloss-g37).
 - Circuiti stampati: [PCB](glossario.qmd#gloss-g41) (Printed Circuit Board), con [Ultiboard](glossario.qmd#gloss-g52).
 
-**20 ore** · [Vai al modulo 1 →](modulo-1.qmd)
+**20 ore** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
 :::
 
@@ -37,7 +38,7 @@ title: "La mappa del percorso"
 - Regole logiche e leggi di De Morgan.
 - Semplificazione delle funzioni logiche.
 
-**30 ore** · [Vai al modulo 2 →](modulo-2.qmd)
+**30 ore** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
 
 :::
 
@@ -50,7 +51,7 @@ title: "La mappa del percorso"
 - Circuiti per sommare e confrontare.
 - Decodifica, selezione e visualizzazione dei dati: [decoder](glossario.qmd#gloss-g13), [multiplexer](glossario.qmd#gloss-g38) e display.
 
-**70 ore** · [Vai al modulo 3 →](modulo-3.qmd)
+**70 ore** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
 :::
 
@@ -62,7 +63,7 @@ title: "La mappa del percorso"
 - Circuiti per contare gli eventi.
 - Contatori asincroni e sincroni: due modi di coordinare il conteggio.
 
-**30 ore** · [Vai al modulo 4 →](modulo-4.qmd)
+**30 ore** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
 :::
 
@@ -70,3 +71,9 @@ title: "La mappa del percorso"
 
 []{#nav:indice label="nav:indice"}
 
+
+## Prosegui nel percorso
+
+- [Fondamenti e componenti](index.qmd#fondamenti)
+- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
+- [Laboratorio](/laboratori/index.qmd)

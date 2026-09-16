@@ -1,8 +1,22 @@
 ---
 title: "Modulo 4 / Circuiti combinatori"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Caratteristiche dei circuiti combinatori](#ud:4.1)
+- [U.D. 4.2 / Implementazione in linguaggio Ladder](#ud:4.2)
+- [U.D. 4.3 / Implementazione mediante Function Block](#ud:4.3)
+- [U.D. 4.4 / Implementazione in Testo strutturato e Instruction List](#ud:4.4)
+- [U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale](#ud:4.5)
+- [U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi](#ud:4.6)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/sistemi-automatici.pdf)
 
 []{#mod:4}
 
@@ -118,3 +132,5 @@ Realizza $Y=(A+B)C$ in [Ladder](glossario.qmd#gloss-s12), [FBD](glossario.qmd#gl
 
 Mantieni distinto il collaudo logico dalla prova sul banco: la simulazione non verifica i collegamenti elettrici reali.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-4.qmd)

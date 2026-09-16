@@ -3,20 +3,49 @@ body-classes: course-background
 title: "TPSEE · Elettronici"
 ---
 
-Panoramica del programma e materiali di riferimento per il corso. Questa versione ipertestuale riprende i contenuti della dispensa: unità didattiche, esempi, esercizi e approfondimenti. I moduli saranno ampliati durante l’anno.
+Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti raccolgono le basi e i moduli di approfondimento ospiteranno la trattazione sviluppata durante le lezioni.
 
-[Scarica la dispensa PDF](/downloads/tpsee-elettronici.pdf){.btn .btn-primary}
+[Scarica la dispensa PDF della panoramica](/downloads/tpsee-elettronici.pdf){.btn .btn-primary}
 
 ## Percorso di lettura
 
+### Panoramica del Programma {#panoramica-del-programma}
+
+Una breve presentazione degli argomenti e delle unità didattiche previste.
+
 - [La mappa del percorso](percorso.qmd)
+- [Sintesi del modulo 1 / Il progetto di sistemi elettrici ed elettronici](modulo-1.qmd)
+- [Sintesi del modulo 2 / Elementi di logica](modulo-2.qmd)
+- [Sintesi del modulo 3 / Elettronica digitale in logica cablata](modulo-3.qmd)
+- [Sintesi del modulo 4 / Reti sequenziali](modulo-4.qmd)
+
+### Fondamenti {#fondamenti}
+
+Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
+
 - [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
 - [Sicurezza e Buone pratiche](sicurezza-e-buone-pratiche.qmd)
-- [Modulo 1 / Il progetto di sistemi elettrici ed elettronici](modulo-1.qmd)
-- [Modulo 2 / Elementi di logica](modulo-2.qmd)
-- [Modulo 3 / Elettronica digitale in logica cablata](modulo-3.qmd)
-- [Modulo 4 / Reti sequenziali](modulo-4.qmd)
 - [Conoscenze di base](conoscenze-di-base.qmd)
+- [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
+- [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
+
+### Moduli di approfondimento {#moduli-di-approfondimento}
+
+Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
+
+- [Modulo 1 / Il progetto di sistemi elettrici ed elettronici](moduli/modulo-1.qmd)
+- [Modulo 2 / Elementi di logica](moduli/modulo-2.qmd)
+- [Modulo 3 / Elettronica digitale in logica cablata](moduli/modulo-3.qmd)
+- [Modulo 4 / Reti sequenziali](moduli/modulo-4.qmd)
+
+### Laboratorio {#laboratorio}
+
+- [Laboratorio / simulazioni e attività disponibili](/laboratori/index.qmd)
+
+Le risorse di laboratorio possono essere utilizzate in più percorsi.
+
+### Altre risorse {#altre-risorse}
+
 - [Metti insieme il percorso](metti-insieme-il-percorso.qmd)
 - [Approfondimenti](approfondimenti.qmd)
 - [Glossario](glossario.qmd)

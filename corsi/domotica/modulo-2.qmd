@@ -1,8 +1,20 @@
 ---
 title: "Modulo 2 / Automazione industriale e PLC"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 2.1 / Introduzione all'automazione industriale](#ud:2.1)
+- [U.D. 2.2 / Comando, segnalazione, sensori, trasduttori e attuatori](#ud:2.2)
+- [U.D. 2.3 / Hardware del PLC](#ud:2.3)
+- [U.D. 2.4 / Linguaggi di programmazione dei PLC](#ud:2.4)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/domotica.pdf)
 
 []{#mod:2}
 
@@ -62,3 +74,5 @@ Nel modello ciclico si leggono gli ingressi, si esegue il programma e si aggiorn
 
 La funzione richiesta viene prima della rappresentazione. Uno stesso automatismo può essere descritto con linguaggi diversi, purché stato iniziale, priorità e risultati delle prove coincidano. I linguaggi disponibili dipendono da software e controllore.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-2.qmd)

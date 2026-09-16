@@ -1,8 +1,20 @@
 ---
 title: "Modulo 2 / Elementi di logica"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 2.1 / L'algebra di Boole](#ud:2.1)
+- [U.D. 2.2 / Principali regole dell'algebra di Boole](#ud:2.2)
+- [U.D. 2.3 / Leggi di De Morgan](#ud:2.3)
+- [U.D. 2.4 / Semplificazione di espressioni booleane](#ud:2.4)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettronici.pdf)
 
 []{#mod:2}
 
@@ -114,3 +126,5 @@ Y&=A(B+\overline B)+\overline A B &&\text{raccoglimento}\\
 
 **Controllo:** usando la distributiva nella forma inversa, $Y=A+B\overline B=A$.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-2.qmd)

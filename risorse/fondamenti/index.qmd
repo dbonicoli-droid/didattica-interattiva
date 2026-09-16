@@ -1,0 +1,21 @@
+---
+title: "Fondamenti"
+---
+
+Le basi da richiamare prima di affrontare i moduli e da consultare durante lo studio. Queste risorse sono condivise fra i percorsi.
+
+## Componenti
+
+Le schede presentano struttura, funzionamento e applicazioni. Per resistore, condensatore e induttore la trattazione procede per livelli, dalle relazioni elementari al comportamento dinamico e alle trasformate.
+
+- [Resistore](../componenti/resistore.qmd)
+- [Condensatore](../componenti/condensatore.qmd)
+- [Induttore](../componenti/induttore.qmd)
+- [Diodo](../componenti/diodo.qmd)
+- [Transistor](../componenti/transistor.qmd)
+
+[Apri l'indice dei componenti →](../componenti/index.qmd)
+
+## Metti alla prova le idee
+
+Nel [laboratorio](/laboratori/index.qmd) trovi simulazioni e attività guidate da collegare allo studio dei componenti.

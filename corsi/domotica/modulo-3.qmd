@@ -1,8 +1,19 @@
 ---
 title: "Modulo 3 / Linguaggio Ladder"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 3.1 / Simbologia Ladder](#ud:3.1)
+- [U.D. 3.2 / Applicazioni base in Ladder](#ud:3.2)
+- [U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli](#ud:3.3)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/domotica.pdf)
 
 []{#mod:3}
 
@@ -52,3 +63,5 @@ Il diagramma di flusso descrive l'ordine delle operazioni e le condizioni di sce
 
 Tre [bit](glossario.qmd#gloss-new49) possono rappresentare otto combinazioni, ma nel modello a passo unico ne usiamo soltanto tre. Le combinazioni non ammesse richiedono una gestione definita.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-3.qmd)

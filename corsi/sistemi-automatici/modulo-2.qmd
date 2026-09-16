@@ -1,8 +1,23 @@
 ---
 title: "Modulo 2 / Elettronica digitale"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 2.1 / Porte logiche e funzioni logiche](#ud:2.1)
+- [U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a contatti e con tabelle di verità](#ud:2.2)
+- [U.D. 2.3 / Metodi per determinare le tabelle di verità e ottenere funzioni logiche negate](#ud:2.3)
+- [U.D. 2.4 / Cenni alla minimizzazione di funzioni logiche con algebra di Boole e applicazione leggi di De Morgan](#ud:2.4)
+- [U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di Karnaugh](#ud:2.5)
+- [U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey](#ud:2.6)
+- [U.D. 2.7 / Esercitazioni ed esempi applicativi](#ud:2.7)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/sistemi-automatici.pdf)
 
 []{#mod:2}
 
@@ -114,3 +129,5 @@ Le combinazioni `001` e `011` differiscono soltanto nel [bit](glossario.qmd#glos
 
 *Risultati attesi, ordine $EMH$:* $V=\Sigma m(5,6,7)$ e $\overline V=\overline E+\overline M\,\overline H$. L'esempio descrive un consenso funzionale, non una funzione di sicurezza certificata.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-2.qmd)

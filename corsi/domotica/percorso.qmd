@@ -1,6 +1,7 @@
 ---
 body-classes: course-background
 title: "La mappa del percorso"
+subtitle: "Panoramica del Programma"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
@@ -50,3 +51,9 @@ Interfacce e [attuatori](glossario.qmd#gloss-new44).
 
 Prima di programmare scrivi ingressi, uscite, stato iniziale e priorità. Prepara una tabella delle prove e confronta il comportamento previsto con la simulazione; le prove fisiche si svolgono sul banco predisposto con i docenti.
 
+
+## Prosegui nel percorso
+
+- [Fondamenti e componenti](index.qmd#fondamenti)
+- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
+- [Laboratorio](/laboratori/index.qmd)

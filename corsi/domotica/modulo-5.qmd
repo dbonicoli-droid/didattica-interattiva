@@ -1,8 +1,25 @@
 ---
 title: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 5.1 / Operazioni di temporizzazione](#ud:5.1)
+- [U.D. 5.2 / Operazioni di conteggio](#ud:5.2)
+- [U.D. 5.3 / Operazioni di confronto](#ud:5.3)
+- [U.D. 5.4 / Programmazione avanzata dei PLC](#ud:5.4)
+- [U.D. 5.5 / Aree di memoria e funzioni indirizzabili](#ud:5.5)
+- [U.D. 5.6 / Operazioni di controllo del programma](#ud:5.6)
+- [U.D. 5.7 / Operazioni di interrupt](#ud:5.7)
+- [U.D. 5.8 / Operazioni di scorrimento e rotazione](#ud:5.8)
+- [U.D. 5.9 / Operazioni logiche booleane avanzate](#ud:5.9)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/domotica.pdf)
 
 []{#mod:5}
 
@@ -144,3 +161,5 @@ Per la parola `1010`, AND con `0010` dà `0010`: il [bit](glossario.qmd#gloss-ne
 
 Le operazioni su una parola non sono la stessa cosa di un'unica condizione [BOOL](glossario.qmd#gloss-d14). Specifica tipo, larghezza e significato di ogni posizione.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-5.qmd)

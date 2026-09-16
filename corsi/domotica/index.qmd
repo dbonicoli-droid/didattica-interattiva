@@ -3,19 +3,49 @@ body-classes: course-background
 title: "Domotica e automazione"
 ---
 
-Panoramica del programma e materiali di riferimento per il corso. Questa versione ipertestuale riprende i contenuti della dispensa: unità didattiche, esempi, esercizi e approfondimenti. I moduli saranno ampliati durante l’anno.
+Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti raccolgono le basi e i moduli di approfondimento ospiteranno la trattazione sviluppata durante le lezioni.
 
-[Scarica la dispensa PDF](/downloads/domotica.pdf){.btn .btn-primary}
+[Scarica la dispensa PDF della panoramica](/downloads/domotica.pdf){.btn .btn-primary}
 
 ## Percorso di lettura
 
+### Panoramica del Programma {#panoramica-del-programma}
+
+Una breve presentazione degli argomenti e delle unità didattiche previste.
+
 - [La mappa del percorso](percorso.qmd)
-- [Modulo 1 / Elettromeccanica](modulo-1.qmd)
-- [Modulo 2 / Automazione industriale e PLC](modulo-2.qmd)
-- [Modulo 3 / Linguaggio Ladder](modulo-3.qmd)
-- [Modulo 4 / Linguaggio SFC](modulo-4.qmd)
-- [Modulo 5 / Programmazione avanzata e applicazioni dei PLC](modulo-5.qmd)
+- [Sintesi del modulo 1 / Elettromeccanica](modulo-1.qmd)
+- [Sintesi del modulo 2 / Automazione industriale e PLC](modulo-2.qmd)
+- [Sintesi del modulo 3 / Linguaggio Ladder](modulo-3.qmd)
+- [Sintesi del modulo 4 / Linguaggio SFC](modulo-4.qmd)
+- [Sintesi del modulo 5 / Programmazione avanzata e applicazioni dei PLC](modulo-5.qmd)
+
+### Fondamenti {#fondamenti}
+
+Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
+
 - [Conoscenze di base](conoscenze-di-base.qmd)
+- [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
+- [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
+
+### Moduli di approfondimento {#moduli-di-approfondimento}
+
+Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
+
+- [Modulo 1 / Elettromeccanica](moduli/modulo-1.qmd)
+- [Modulo 2 / Automazione industriale e PLC](moduli/modulo-2.qmd)
+- [Modulo 3 / Linguaggio Ladder](moduli/modulo-3.qmd)
+- [Modulo 4 / Linguaggio SFC](moduli/modulo-4.qmd)
+- [Modulo 5 / Programmazione avanzata e applicazioni dei PLC](moduli/modulo-5.qmd)
+
+### Laboratorio {#laboratorio}
+
+- [Laboratorio / simulazioni e attività disponibili](/laboratori/index.qmd)
+
+Le risorse di laboratorio possono essere utilizzate in più percorsi.
+
+### Altre risorse {#altre-risorse}
+
 - [Approfondimenti](approfondimenti.qmd)
 - [Educazione civica / Efficientamento energetico](educazione-civica-efficientamento-energetico.qmd)
 - [Esercizi / Verifica trasversale](esercizi-verifica-trasversale.qmd)

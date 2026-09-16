@@ -1,8 +1,21 @@
 ---
 title: "Modulo 4 / Linguaggio SFC"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Introduzione al linguaggio SFC](#ud:4.1)
+- [U.D. 4.2 / Simbologia SFC](#ud:4.2)
+- [U.D. 4.3 / Applicazioni SFC](#ud:4.3)
+- [U.D. 4.4 / Software SoMachine Basic](#ud:4.4)
+- [U.D. 4.5 / Software CODESYS](#ud:4.5)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/domotica.pdf)
 
 []{#mod:4}
 
@@ -128,3 +141,5 @@ CODESYS è un ambiente di sviluppo per sistemi di automazione. Il progetto compr
 
 La prova utile è la stessa usata per lo schema: a parità di eventi, il processo deve attraversare gli stati previsti. Non basta che il programma compili.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-4.qmd)

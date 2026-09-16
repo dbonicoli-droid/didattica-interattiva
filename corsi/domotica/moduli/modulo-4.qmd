@@ -1,0 +1,44 @@
+---
+title: "Modulo 4 / Linguaggio SFC"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-4.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Introduzione al linguaggio SFC](#ud:4.1)
+- [U.D. 4.2 / Simbologia SFC](#ud:4.2)
+- [U.D. 4.3 / Applicazioni SFC](#ud:4.3)
+- [U.D. 4.4 / Software SoMachine Basic](#ud:4.4)
+- [U.D. 4.5 / Software CODESYS](#ud:4.5)
+:::
+
+## U.D. 4.1 / Introduzione al linguaggio SFC {#ud:4.1}
+
+Contenuti in preparazione.
+
+## U.D. 4.2 / Simbologia SFC {#ud:4.2}
+
+Contenuti in preparazione.
+
+## U.D. 4.3 / Applicazioni SFC {#ud:4.3}
+
+Contenuti in preparazione.
+
+## U.D. 4.4 / Software SoMachine Basic {#ud:4.4}
+
+Contenuti in preparazione.
+
+## U.D. 4.5 / Software CODESYS {#ud:4.5}
+
+Contenuti in preparazione.

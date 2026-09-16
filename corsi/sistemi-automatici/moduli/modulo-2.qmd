@@ -1,0 +1,54 @@
+---
+title: "Modulo 2 / Elettronica digitale"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-2.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-2.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 2.1 / Porte logiche e funzioni logiche](#ud:2.1)
+- [U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a contatti e con tabelle di verità](#ud:2.2)
+- [U.D. 2.3 / Metodi per determinare le tabelle di verità e ottenere funzioni logiche negate](#ud:2.3)
+- [U.D. 2.4 / Cenni alla minimizzazione di funzioni logiche con algebra di Boole e applicazione leggi di De Morgan](#ud:2.4)
+- [U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di Karnaugh](#ud:2.5)
+- [U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey](#ud:2.6)
+- [U.D. 2.7 / Esercitazioni ed esempi applicativi](#ud:2.7)
+:::
+
+## U.D. 2.1 / Porte logiche e funzioni logiche {#ud:2.1}
+
+Contenuti in preparazione.
+
+## U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a contatti e con tabelle di verità {#ud:2.2}
+
+Contenuti in preparazione.
+
+## U.D. 2.3 / Metodi per determinare le tabelle di verità e ottenere funzioni logiche negate {#ud:2.3}
+
+Contenuti in preparazione.
+
+## U.D. 2.4 / Cenni alla minimizzazione di funzioni logiche con algebra di Boole e applicazione leggi di De Morgan {#ud:2.4}
+
+Contenuti in preparazione.
+
+## U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di Karnaugh {#ud:2.5}
+
+Contenuti in preparazione.
+
+## U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey {#ud:2.6}
+
+Contenuti in preparazione.
+
+## U.D. 2.7 / Esercitazioni ed esempi applicativi {#ud:2.7}
+
+Contenuti in preparazione.

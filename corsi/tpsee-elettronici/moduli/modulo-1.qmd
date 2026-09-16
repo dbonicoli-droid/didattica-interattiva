@@ -1,0 +1,44 @@
+---
+title: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-1.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-1.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 1.1 / Multisim](#ud:1.1)
+- [U.D. 1.2 / Ultiboard](#ud:1.2)
+- [U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico](#ud:1.3)
+- [U.D. 1.4 / La simbologia IEC nel disegno elettronico](#ud:1.4)
+- [U.D. 1.5 / La realizzazione del circuito elettronico](#ud:1.5)
+:::
+
+## U.D. 1.1 / Multisim {#ud:1.1}
+
+Contenuti in preparazione.
+
+## U.D. 1.2 / Ultiboard {#ud:1.2}
+
+Contenuti in preparazione.
+
+## U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico {#ud:1.3}
+
+Contenuti in preparazione.
+
+## U.D. 1.4 / La simbologia IEC nel disegno elettronico {#ud:1.4}
+
+Contenuti in preparazione.
+
+## U.D. 1.5 / La realizzazione del circuito elettronico {#ud:1.5}
+
+Contenuti in preparazione.

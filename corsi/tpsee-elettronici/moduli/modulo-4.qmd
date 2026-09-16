@@ -1,0 +1,34 @@
+---
+title: "Modulo 4 / Reti sequenziali"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-4.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Latch e Flip-Flop (SR)](#ud:4.1)
+- [U.D. 4.2 / Realizzazione di contatori asincroni](#ud:4.2)
+- [U.D. 4.3 / Realizzazione di contatori sincroni](#ud:4.3)
+:::
+
+## U.D. 4.1 / Latch e Flip-Flop (SR) {#ud:4.1}
+
+Contenuti in preparazione.
+
+## U.D. 4.2 / Realizzazione di contatori asincroni {#ud:4.2}
+
+Contenuti in preparazione.
+
+## U.D. 4.3 / Realizzazione di contatori sincroni {#ud:4.3}
+
+Contenuti in preparazione.

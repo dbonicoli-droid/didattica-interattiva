@@ -3,21 +3,52 @@ body-classes: course-background
 title: "Sistemi automatici"
 ---
 
-Panoramica del programma e materiali di riferimento per il corso. Questa versione ipertestuale riprende i contenuti della dispensa: unità didattiche, esempi, esercizi e approfondimenti. I moduli saranno ampliati durante l’anno.
+Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti raccolgono le basi e i moduli di approfondimento ospiteranno la trattazione sviluppata durante le lezioni.
 
-[Scarica la dispensa PDF](/downloads/sistemi-automatici.pdf){.btn .btn-primary}
+[Scarica la dispensa PDF della panoramica](/downloads/sistemi-automatici.pdf){.btn .btn-primary}
 
 ## Percorso di lettura
 
+### Panoramica del Programma {#panoramica-del-programma}
+
+Una breve presentazione degli argomenti e delle unità didattiche previste.
+
 - [La mappa del percorso](percorso.qmd)
+- [Sintesi del modulo 1 / Fondamenti di teoria dei sistemi](modulo-1.qmd)
+- [Sintesi del modulo 2 / Elettronica digitale](modulo-2.qmd)
+- [Sintesi del modulo 3 / PLC](modulo-3.qmd)
+- [Sintesi del modulo 4 / Circuiti combinatori](modulo-4.qmd)
+- [Sintesi del modulo 5 / Circuiti sequenziali](modulo-5.qmd)
+- [Sintesi del modulo 6 / Tempi, eventi e grandezze analogiche](modulo-6.qmd)
+
+### Fondamenti {#fondamenti}
+
+Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
+
 - [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
-- [Modulo 1 / Fondamenti di teoria dei sistemi](modulo-1.qmd)
-- [Modulo 2 / Elettronica digitale](modulo-2.qmd)
-- [Modulo 3 / PLC](modulo-3.qmd)
-- [Modulo 4 / Circuiti combinatori](modulo-4.qmd)
-- [Modulo 5 / Circuiti sequenziali](modulo-5.qmd)
-- [Modulo 6 / Tempi, eventi e grandezze analogiche](modulo-6.qmd)
 - [Conoscenze di base](conoscenze-di-base.qmd)
+- [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
+- [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
+
+### Moduli di approfondimento {#moduli-di-approfondimento}
+
+Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
+
+- [Modulo 1 / Fondamenti di teoria dei sistemi](moduli/modulo-1.qmd)
+- [Modulo 2 / Elettronica digitale](moduli/modulo-2.qmd)
+- [Modulo 3 / PLC](moduli/modulo-3.qmd)
+- [Modulo 4 / Circuiti combinatori](moduli/modulo-4.qmd)
+- [Modulo 5 / Circuiti sequenziali](moduli/modulo-5.qmd)
+- [Modulo 6 / Tempi, eventi e grandezze analogiche](moduli/modulo-6.qmd)
+
+### Laboratorio {#laboratorio}
+
+- [Laboratorio / simulazioni e attività disponibili](/laboratori/index.qmd)
+
+Le risorse di laboratorio possono essere utilizzate in più percorsi.
+
+### Altre risorse {#altre-risorse}
+
 - [Esercizi / Un controllo ragionato](esercizi-un-controllo-ragionato.qmd)
 - [Educazione civica / Emergenza climatica](educazione-civica-emergenza-climatica.qmd)
 - [Approfondimenti](approfondimenti.qmd)

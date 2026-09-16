@@ -1,8 +1,19 @@
 ---
 title: "Modulo 4 / Reti sequenziali"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Latch e Flip-Flop (SR)](#ud:4.1)
+- [U.D. 4.2 / Realizzazione di contatori asincroni](#ud:4.2)
+- [U.D. 4.3 / Realizzazione di contatori sincroni](#ud:4.3)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettronici.pdf)
 
 []{#mod:4}
 
@@ -133,3 +144,5 @@ Prima del fronte lo stato è $Q_2Q_1Q_0=011$. Quindi $T_0=T_1=T_2=1$: al fronte 
 
 Il [clock](glossario.qmd#gloss-g11) comune coordina gli aggiornamenti, ma i componenti hanno comunque piccoli ritardi. [Approfondimento: tempi reali e contatore da 0 a 9](approfondimenti.qmd#app:tempi) (p. ).
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-4.qmd)

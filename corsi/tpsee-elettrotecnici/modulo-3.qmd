@@ -1,8 +1,23 @@
 ---
 title: "Modulo 3 / Principali componenti degli impianti elettrici"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 3.1 / Cavi elettrici per energia e segnale](#ud:3.1)
+- [U.D. 3.2 / Tubi protettivi e canali](#ud:3.2)
+- [U.D. 3.3 / Prese e spine elettriche](#ud:3.3)
+- [U.D. 3.4 / Interruttore di comando unipolare e bipolare, deviatore, invertitore](#ud:3.4)
+- [U.D. 3.5 / Relè interruttore e relè commutatore](#ud:3.5)
+- [U.D. 3.6 / Luci scale, elettroserrature, suonerie e citofoni](#ud:3.6)
+- [U.D. 3.7 / Livelli prestazionali degli impianti elettrici](#ud:3.7)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
 
 []{#mod:3}
 
@@ -183,3 +198,5 @@ Tutti i livelli richiedono sicurezza. Un [impianto](glossario.qmd#gloss-e47) di 
 
 **Attività.** Confronta due abitazioni immaginarie: una con comandi locali e una con gestione coordinata di luci e carichi. Elenca le funzioni, senza attribuire un livello finché non hai verificato tutti i requisiti applicabili.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-3.qmd)

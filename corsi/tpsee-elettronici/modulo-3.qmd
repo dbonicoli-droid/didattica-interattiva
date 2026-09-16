@@ -1,8 +1,32 @@
 ---
 title: "Modulo 3 / Elettronica digitale in logica cablata"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 3.1 / Porte Logiche, tabella di Verità delle porte NOT, AND, OR, NAND, NOR, XOR](#ud:3.1)
+- [U.D. 3.2 / GRAY - binario e binario - GRAY](#ud:3.2)
+- [U.D. 3.3 / Universalità delle porte NAND e NOR](#ud:3.3)
+- [U.D. 3.4 / Mappe di Karnaugh come metodo di semplificazione delle espressioni logiche booleane, quindi delle reti combinatorie](#ud:3.4)
+- [U.D. 3.5 / Circuiti Combinatori](#ud:3.5)
+- [U.D. 3.6 / Semisommatori e sommatori](#ud:3.6)
+- [U.D. 3.7 / Comparatori](#ud:3.7)
+- [U.D. 3.8 / Decoder binari](#ud:3.8)
+- [U.D. 3.9 / Decoder BCD - 7 segmenti](#ud:3.9)
+- [U.D. 3.10 / Principio di funzionamento di un display a 7 segmenti e diodi LED](#ud:3.10)
+- [U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale](#ud:3.11)
+- [U.D. 3.12 / MUX a 4, 8, 16 ingressi](#ud:3.12)
+- [U.D. 3.13 / Implementazioni di funzioni logiche tramite MUX](#ud:3.13)
+- [U.D. 3.14 / MUX: 74LS150, 74LS151](#ud:3.14)
+- [U.D. 3.15 / DECODER: 74LS154, 74LS138](#ud:3.15)
+- [U.D. 3.16 / COMPARATORE 74LS85](#ud:3.16)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettronici.pdf)
 
 []{#mod:3}
 
@@ -271,3 +295,5 @@ Il 74LS85 confronta due parole di 4 [bit](glossario.qmd#gloss-g7) e fornisce tre
 
 Per confrontare 8 [bit](glossario.qmd#gloss-g7), le uscite dello stadio meno significativo vanno ai corrispondenti ingressi di cascata di quello più significativo; il risultato finale si legge su quest'ultimo. Il confronto dei [bit](glossario.qmd#gloss-g7) superiori prevale, salvo uguaglianza.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-3.qmd)

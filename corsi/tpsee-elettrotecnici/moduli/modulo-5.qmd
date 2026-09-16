@@ -1,0 +1,34 @@
+---
+title: "Modulo 5 / Illuminotecnica"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-5.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-5.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 5.1 / Introduzione, grandezze fotometriche e colorimetria](#ud:5.1)
+- [U.D. 5.2 / Tipi di illuminazione, apparecchi illuminanti, solido e curva fotometrica](#ud:5.2)
+- [U.D. 5.3 / Principali tipi di sorgenti luminose. Dimensionamento illuminotecnico](#ud:5.3)
+:::
+
+## U.D. 5.1 / Introduzione, grandezze fotometriche e colorimetria {#ud:5.1}
+
+Contenuti in preparazione.
+
+## U.D. 5.2 / Tipi di illuminazione, apparecchi illuminanti, solido e curva fotometrica {#ud:5.2}
+
+Contenuti in preparazione.
+
+## U.D. 5.3 / Principali tipi di sorgenti luminose. Dimensionamento illuminotecnico {#ud:5.3}
+
+Contenuti in preparazione.

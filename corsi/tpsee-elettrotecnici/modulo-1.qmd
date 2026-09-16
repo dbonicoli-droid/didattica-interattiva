@@ -1,8 +1,19 @@
 ---
 title: "Modulo 1 / Normativa e legislazione"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 1.1 / Normalizzazione, unificazione e armonizzazione](#ud:1.1)
+- [U.D. 1.2 / Organismi normatori](#ud:1.2)
+- [U.D. 1.3 / Leggi principali nel settore elettrico](#ud:1.3)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
 
 []{#mod:1}
 
@@ -85,3 +96,5 @@ Una presa funziona, ma nello schema non compare e il [circuito](glossario.qmd#gl
 
 **Soluzione.** La corrispondenza fra [impianto](glossario.qmd#gloss-e47) e documentazione è incompleta: prima di intervenire servono identificazione e aggiornamento degli elaborati, a cura di chi ne ha competenza.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-1.qmd)

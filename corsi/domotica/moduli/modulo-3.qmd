@@ -1,0 +1,34 @@
+---
+title: "Modulo 3 / Linguaggio Ladder"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-3.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 3.1 / Simbologia Ladder](#ud:3.1)
+- [U.D. 3.2 / Applicazioni base in Ladder](#ud:3.2)
+- [U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli](#ud:3.3)
+:::
+
+## U.D. 3.1 / Simbologia Ladder {#ud:3.1}
+
+Contenuti in preparazione.
+
+## U.D. 3.2 / Applicazioni base in Ladder {#ud:3.2}
+
+Contenuti in preparazione.
+
+## U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli {#ud:3.3}
+
+Contenuti in preparazione.

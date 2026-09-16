@@ -1,8 +1,21 @@
 ---
 title: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 1.1 / Multisim](#ud:1.1)
+- [U.D. 1.2 / Ultiboard](#ud:1.2)
+- [U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico](#ud:1.3)
+- [U.D. 1.4 / La simbologia IEC nel disegno elettronico](#ud:1.4)
+- [U.D. 1.5 / La realizzazione del circuito elettronico](#ud:1.5)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettronici.pdf)
 
 []{#mod:1}
 
@@ -114,3 +127,5 @@ Realizza il partitore dell'[U.D. 1.1](modulo-1.qmd#ud:1.1) e compila una tabella
 
 **Da consegnare:** schema con valori, fotografia o disegno del montaggio, tabella delle misure e una breve spiegazione degli scostamenti.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-1.qmd)

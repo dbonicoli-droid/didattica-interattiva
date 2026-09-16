@@ -1,0 +1,49 @@
+---
+title: "Modulo 4 / Circuiti combinatori"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-4.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 4.1 / Caratteristiche dei circuiti combinatori](#ud:4.1)
+- [U.D. 4.2 / Implementazione in linguaggio Ladder](#ud:4.2)
+- [U.D. 4.3 / Implementazione mediante Function Block](#ud:4.3)
+- [U.D. 4.4 / Implementazione in Testo strutturato e Instruction List](#ud:4.4)
+- [U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale](#ud:4.5)
+- [U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi](#ud:4.6)
+:::
+
+## U.D. 4.1 / Caratteristiche dei circuiti combinatori {#ud:4.1}
+
+Contenuti in preparazione.
+
+## U.D. 4.2 / Implementazione in linguaggio Ladder {#ud:4.2}
+
+Contenuti in preparazione.
+
+## U.D. 4.3 / Implementazione mediante Function Block {#ud:4.3}
+
+Contenuti in preparazione.
+
+## U.D. 4.4 / Implementazione in Testo strutturato e Instruction List {#ud:4.4}
+
+Contenuti in preparazione.
+
+## U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale {#ud:4.5}
+
+Contenuti in preparazione.
+
+## U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi {#ud:4.6}
+
+Contenuti in preparazione.

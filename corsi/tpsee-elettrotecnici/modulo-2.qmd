@@ -1,8 +1,20 @@
 ---
 title: "Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 2.1 / Classificazione degli schemi elettrici](#ud:2.1)
+- [U.D. 2.2 / Segni grafici dei componenti elettrici secondo le norme CEI](#ud:2.2)
+- [U.D. 2.3 / Disegno elettrico con ProgeCAD](#ud:2.3)
+- [U.D. 2.4 / Disegno di un impianto elettrico in un appartamento](#ud:2.4)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
 
 []{#mod:2}
 
@@ -82,3 +94,5 @@ Un locale misura $5\times4$ m. Se lavori in millimetri lo disegni $5000\times400
 
 **Consegna.** Disegna una stanza $4\times3$ m con una luce comandata all'ingresso e due prese. Inserisci [legenda](glossario.qmd#gloss-e49), quote e [cartiglio](glossario.qmd#gloss-e48). Il numero di punti è un vincolo didattico, non una verifica dei minimi normativi.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-2.qmd)

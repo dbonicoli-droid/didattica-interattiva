@@ -1,0 +1,49 @@
+---
+title: "Modulo 1 / Elettromeccanica"
+subtitle: "Modulo di approfondimento"
+---
+
+[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-1.qmd)
+
+::: {.callout-note icon=false}
+## 🚧 Contenuti in preparazione
+
+La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+
+Puoi già consultare la [panoramica del modulo](../modulo-1.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+:::
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 1.1 / Il contattore](#ud:1.1)
+- [U.D. 1.2 / Il relè termico](#ud:1.2)
+- [U.D. 1.3 / Richiami sugli schemi di potenza e di comando](#ud:1.3)
+- [U.D. 1.4 / La funzione di autoritenuta](#ud:1.4)
+- [U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni](#ud:1.5)
+- [U.D. 1.6 / Inversione di marcia del MAT e interblocco](#ud:1.6)
+:::
+
+## U.D. 1.1 / Il contattore {#ud:1.1}
+
+Contenuti in preparazione.
+
+## U.D. 1.2 / Il relè termico {#ud:1.2}
+
+Contenuti in preparazione.
+
+## U.D. 1.3 / Richiami sugli schemi di potenza e di comando {#ud:1.3}
+
+Contenuti in preparazione.
+
+## U.D. 1.4 / La funzione di autoritenuta {#ud:1.4}
+
+Contenuti in preparazione.
+
+## U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni {#ud:1.5}
+
+Contenuti in preparazione.
+
+## U.D. 1.6 / Inversione di marcia del MAT e interblocco {#ud:1.6}
+
+Contenuti in preparazione.

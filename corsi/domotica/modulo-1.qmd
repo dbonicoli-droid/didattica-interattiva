@@ -1,8 +1,22 @@
 ---
 title: "Modulo 1 / Elettromeccanica"
+subtitle: "Panoramica del Programma"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
+
+::: {.unit-index}
+## Unità didattiche del modulo {.unnumbered}
+
+- [U.D. 1.1 / Il contattore](#ud:1.1)
+- [U.D. 1.2 / Il relè termico](#ud:1.2)
+- [U.D. 1.3 / Richiami sugli schemi di potenza e di comando](#ud:1.3)
+- [U.D. 1.4 / La funzione di autoritenuta](#ud:1.4)
+- [U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni](#ud:1.5)
+- [U.D. 1.6 / Inversione di marcia del MAT e interblocco](#ud:1.6)
+:::
+
+[← Panoramica del Programma](index.qmd#panoramica-del-programma) · [PDF completo](/downloads/domotica.pdf)
 
 []{#mod:1}
 
@@ -86,3 +100,5 @@ L'inversione del senso di [rotazione](glossario.qmd#gloss-d9) di un motore trifa
 
 Le connessioni di potenza e gli interblocchi elettrici/meccanici sono predisposti e verificati con i docenti. L'esclusione logica nel programma non sostituisce le protezioni del quadro. Il tempo di arresto del motore deve essere considerato prima di una nuova direzione.
 
+
+[Vai al modulo di approfondimento →](moduli/modulo-1.qmd)
