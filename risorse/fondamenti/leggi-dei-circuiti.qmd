@@ -1,0 +1,54 @@
+---
+title: "Ohm, Kirchhoff, serie e parallelo"
+---
+
+[← Fondamenti](index.qmd)
+
+## Legge di Ohm
+
+Per un resistore lineare a resistenza costante, con convenzione dell'utilizzatore:
+
+$$V=RI.$$
+
+È una relazione del componente, non una legge valida nella stessa forma per qualsiasi dispositivo. Per diodi e transistor servono modelli diversi.
+
+## Legge dei nodi
+
+Nel modello a parametri concentrati, la somma delle correnti entranti in un nodo è uguale alla somma di quelle uscenti. La carica non si accumula nel nodo ideale.
+
+![Due rami resistivi: la corrente del generatore si divide nel nodo.](/assets/fondamenti/parallelo.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/parallelo.svg)
+
+Ogni resistore vede 6 V: $I_1=6/1000=6\,\mathrm{mA}$ e $I_2=6/2000=3\,\mathrm{mA}$. La sorgente fornisce $I=9\,\mathrm{mA}$.
+
+Per due resistori: $1/R_{eq}=1/R_1+1/R_2$. Nell'esempio $R_{eq}\simeq667\,\Omega$, minore di ciascuna delle due resistenze.
+
+## Legge delle tensioni
+
+Percorrendo un anello chiuso del modello circuitale, la somma algebrica delle tensioni è zero. Occorre scegliere un verso di percorrenza e rispettare i segni.
+
+![Due resistori in serie: le cadute di tensione sommano alla tensione del generatore.](/assets/fondamenti/serie.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/serie.svg)
+
+Le resistenze in serie si sommano: $R_{eq}=3\,\mathrm{k\Omega}$. La corrente è $I=6/3000=2\,\mathrm{mA}$. Le cadute sono 2 e 4 V, quindi $6-2-4=0$.
+
+## Partitore di tensione
+
+![Partitore senza carico, con uscita ai capi di R2.](/assets/fondamenti/partitore.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/partitore.svg)
+
+$$V_{out}=U\frac{R_2}{R_1+R_2}=5\frac{3}{2+3}=3\,\mathrm V.$$
+
+Se colleghi un carico, cambia la resistenza del ramo inferiore: vedi il [partitore caricato](/corsi/tpsee-elettronici/modulo-1.qmd#ud:1.1). Non usare la formula senza verificare il circuito.
+
+## Aperto e cortocircuito
+
+Un interruttore ideale aperto impone corrente nulla nel proprio ramo, ma può avere tensione ai capi. Un collegamento ideale in cortocircuito impone tensione nulla fra i suoi capi; la corrente dipende dal resto del circuito. Un generatore ideale di tensione non nulla cortocircuitato produce un modello incompatibile: nei circuiti reali intervengono impedenze interne e protezioni.
+
+**Verifica.** Nel circuito in serie, porta $R_2$ a $5\,\mathrm{k\Omega}$. **Risposta:** $I=1\,\mathrm{mA}$; cadute 1 e 5 V.
+
+Approfondimento: [legge delle tensioni, All About Circuits](https://www.allaboutcircuits.com/textbook/direct-current/chpt-6/kirchhoffs-voltage-law-kvl/).
+

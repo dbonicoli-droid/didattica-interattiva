@@ -1,0 +1,40 @@
+---
+title: "Leggere uno schema elettrico"
+---
+
+[← Fondamenti](index.qmd)
+
+## Dal simbolo al collegamento
+
+Uno schema elettrico descrive connessioni e funzioni; non riproduce necessariamente la posizione fisica dei componenti. Resistori identici nel simbolo possono avere dimensioni e potenze diverse.
+
+![Simboli di componenti, porte, generatori e riferimenti.](/assets/dispense/tpsee-elettronici/figura-5.png)
+
+Un **nodo** comprende punti collegati da conduttori ideali. Un punto pieno indica una connessione; un incrocio senza punto non la indica. Quando un disegno è ambiguo bisogna chiarirlo, non indovinare il collegamento.
+
+Un **ramo** collega due nodi e contiene uno o più elementi. Un percorso chiuso permette di applicare la legge delle tensioni; una maglia elementare non contiene altri percorsi chiusi al proprio interno.
+
+## Serie e parallelo sono proprietà delle connessioni
+
+Due componenti sono in serie se condividono una connessione senza diramazioni e sono attraversati dalla stessa corrente. Sono in parallelo se sono collegati agli stessi due nodi e hanno la stessa tensione.
+
+La posizione “uno accanto all'altro” sul foglio non basta per riconoscerli: segui i fili. Vedi gli [schemi con i calcoli](leggi-dei-circuiti.qmd).
+
+## Polarità e versi
+
+![Riferimenti di tensione e corrente su un resistore.](/assets/componenti/resistore.svg)
+
+La freccia sceglie il verso positivo della corrente. I segni + e − definiscono la tensione. Nella **convenzione dell'utilizzatore**, la corrente entra nel morsetto positivo e $p=vi$ rappresenta la potenza assorbita.
+
+## Massa e terra
+
+La **massa o riferimento 0 V** è il punto scelto per esprimere le tensioni del circuito. La **terra di protezione (PE)** ha una funzione di protezione. Possono essere collegate in alcuni sistemi, ma non sono sinonimi e non vanno unite arbitrariamente.
+
+## Potenza, comando e rappresentazione logica
+
+Lo schema di potenza descrive il percorso che alimenta il carico; quello di comando le condizioni che attivano i dispositivi. La sigla K1 collega una bobina ai suoi contatti anche quando sono disegnati lontani.
+
+Una rete Ladder descrive invece operazioni su variabili. Un contatto software non identifica da solo il tipo di pulsante fisico: il significato dell'ingresso deve essere dichiarato.
+
+**Metodo:** individua alimentazione e ritorno; riconosci i nodi; segui un percorso; assegna versi e polarità; controlla lo stato di interruttori e contatti.
+

@@ -1,0 +1,38 @@
+---
+title: "Potenza ed energia"
+---
+
+[← Fondamenti](index.qmd)
+
+## Quanto e quanto rapidamente
+
+L'energia si misura in joule (J). La potenza indica la rapidità del trasferimento di energia: $1\,\mathrm W=1\,\mathrm{J/s}$.
+
+Nel caso di tensione e corrente costanti, con la convenzione dell'utilizzatore:
+
+$$P=VI,\qquad E=P\Delta t.$$
+
+![Generatore e resistore: circuito di riferimento per il calcolo della potenza.](/assets/componenti/resistore.svg)
+
+Con 5 V su $1\,\mathrm{k\Omega}$, la corrente vale 5 mA e la potenza assorbita è 25 mW. In 10 s il resistore riceve $0{,}25\,\mathrm J$, convertiti in calore.
+
+## Watt e wattora
+
+Un dispositivo da 10 W, acceso per 3 h a potenza costante, riceve 30 Wh. Poiché un'ora contiene 3600 s, $1\,\mathrm{Wh}=3600\,\mathrm J$. W misura potenza, Wh energia.
+
+## Dissipare oppure accumulare
+
+Il resistore ideale dissipa energia. Condensatore e induttore ideali possono accumularla e restituirla:
+
+$$W_C=\frac12 CV^2,\qquad W_L=\frac12 LI^2.$$
+
+Non serve l'integrale per utilizzare queste relazioni. La loro derivazione verrà affrontata successivamente. Con $C=100\,\mathrm{\mu F}$ e $V=5\,\mathrm V$, $W_C=1{,}25\,\mathrm{mJ}$.
+
+## Se la potenza cambia
+
+Dividi il tempo in intervalli. Per ciascuno, moltiplica potenza media e durata; somma poi le energie. Con 2 W per 3 s e 4 W per 2 s, il totale è $2\cdot3+4\cdot2=14\,\mathrm J$.
+
+Questa somma prepara all'integrale, studiato negli anni successivi. Sul grafico potenza–tempo l'energia corrisponde all'area con segno sotto la curva.
+
+**Verifica.** Raddoppiare la tensione su un resistore invariato raddoppia la potenza? **Risposta:** no, la quadruplica: $P=V^2/R$.
+

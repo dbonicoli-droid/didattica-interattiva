@@ -8,6 +8,13 @@ toc-depth: 2
 
 **Idea guida:** il condensatore immagazzina energia nel campo elettrico. La corrente trasferisce carica e fa variare la tensione; una tensione non nulla può restare presente anche senza corrente.
 
+::: {.callout-note}
+## Come leggere questa pagina in terza
+Studia prima osservazioni, calcoli elementari e variazioni su intervalli. Le sezioni con derivate, integrali, fasori e trasformate sono anticipazioni: saranno approfondite negli anni successivi e non sono prerequisiti per capire il comportamento di base.
+
+[Richiami: pendenza, accumulo e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
+:::
+
 ## Livello 1 / Riconoscere il componente {#livello-1}
 
 La **capacità** $C$ si misura in farad ($\mathrm F$). Useremo $C=100\,\mathrm{\mu F}=10^{-4}\,\mathrm F$. Il circuito di riferimento comprende anche $R=1\,\mathrm{k\Omega}$, che limita la corrente di carica.
@@ -42,7 +49,47 @@ $$i(t_0)=\frac{u(t_0)-v_C(t_0)}{R}.$$
 
 Se $u=10\,\mathrm V$ e $v_C=4\,\mathrm V$, la corrente vale $6\,\mathrm{mA}$. **La sola tensione sul condensatore non determina la corrente:** in questo calcolo usiamo anche il generatore e il resistore.
 
-## Livello 3 / Dalle variazioni alla derivata {#livello-3}
+
+## Livello 3 / Variazioni e transitorio senza derivate {#intervalli}
+
+### Quanta tensione si aggiunge in un intervallo?
+
+Con capacità costante, $\Delta Q=C\Delta V_C$. La corrente media nell'intervallo è $I_{media}=\Delta Q/\Delta t$; quindi:
+
+$$\Delta V_C=\frac{I_{media}\Delta t}{C}.$$
+
+Questa relazione è esatta se usiamo la corrente media dell'intervallo. Se la corrente è costante, essa coincide con quella media. Usare invece il valore iniziale di una corrente variabile è un'approssimazione, migliore per intervalli più piccoli.
+
+Con $C=100\,\mathrm{\mu F}$, corrente costante di $1\,\mathrm{mA}$ per $0{,}1\,\mathrm s$ significa un aumento di 1 V. È una relazione del condensatore: nel circuito RC iniziale la corrente non rimane costante durante la carica. Se si imponesse quella corrente con un generatore di corrente, la tensione salirebbe linearmente.
+
+Nel circuito RC già disegnato, all'istante con $u=10\,\mathrm V$ e $v_C=4\,\mathrm V$, $i=6\,\mathrm{mA}$. Trattandola come costante per il successivo millisecondo stimiamo $\Delta v_C\simeq0{,}06\,\mathrm V$. La corrente reale diminuisce mentre la tensione sale: è un piccolo passo di simulazione numerica, non la soluzione esatta.
+
+### Perché la carica rallenta? {#transitorio-senza-derivate}
+
+1. A condensatore scarico, la differenza $u-v_C$ è massima e così anche la corrente.
+2. La corrente trasferisce carica: $v_C$ aumenta.
+3. La differenza $u-v_C$ diminuisce e la corrente si riduce.
+4. La tensione continua a crescere, ma sempre più lentamente.
+
+La tensione finale tende a quella del generatore. La costante di tempo è $\tau=RC$: con 1 kΩ e 100 µF vale 0,1 s. Dopo una costante di tempo si è compiuto circa il 63,2% della variazione totale; dopo cinque circa il 99,3%.
+
+La formula può essere usata come risultato fornito, senza ricavarla:
+
+$$v_C(t)=U_0+(V_0-U_0)e^{-t/\tau}.$$
+
+$V_0$ è la tensione iniziale, $U_0$ quella finale. Non occorre sapere risolvere equazioni differenziali per leggere questi due valori o confrontare due costanti di tempo.
+
+[Confronta le curve nel laboratorio RC](/laboratori/rc.qmd).
+
+### Accumulare contributi
+
+In intervalli successivi si trasferiscono quantità di carica che si sommano. Nel grafico corrente–tempo ogni prodotto corrente media × durata corrisponde a un'area. Questa idea prepara all'integrale, che formalizzeremo in seguito.
+
+**Verifica.** Se la stessa corrente media agisce per lo stesso tempo su una capacità doppia, l'aumento di tensione è dimezzato.
+
+## Livello 4 / Formalizzare: Dalle variazioni alla derivata {#livello-3}
+
+**Anticipazione per gli anni successivi.** La derivata descrive la pendenza in un istante; l’integrale somma contributi nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
 
 ### Prima un intervallo, poi un istante
 
@@ -80,7 +127,9 @@ $$\tau=0{,}1\,\mathrm s,\quad v_C(\tau)\simeq6{,}321\,\mathrm V,\quad i(\tau)\si
 
 [Verifica il risultato nell'app RC](../../laboratori/rc.qmd).
 
-## Livello 4 / Regime sinusoidale e fasori {#livello-4}
+## Livello 5A / Regime sinusoidale e fasori {#livello-4}
+
+**Per gli anni successivi.** Un fasore raccoglie ampiezza e fase di una sinusoide; l’impedenza collega tensione e corrente alla stessa frequenza. Per ora osserva soprattutto se sono in fase o sfasate.
 
 Se la tensione **sul condensatore** è $v_C(t)=V_m\cos(\omega t)$, derivando:
 
@@ -98,7 +147,9 @@ $$\frac{\underline V_C}{\underline U}=\frac{Z_C}{R+Z_C}=\frac{1}{1+j\omega RC}.$
 
 Il circuito è un **passa-basso** con uscita sul condensatore. Alla frequenza $f_c=1/(2\pi RC)\simeq1{,}592\,\mathrm{Hz}$ il rapporto delle ampiezze è $1/\sqrt2$ e la fase dell'uscita è $-45^\circ$.
 
-## Livello 5 / Fourier: dalle armoniche al filtro {#livello-5}
+## Livello 5B / Fourier: dalle armoniche al filtro {#livello-5}
+
+**Per gli anni successivi.** Fourier permette di vedere un segnale come somma di componenti a frequenze diverse. Ogni componente può essere modificata dal circuito in modo differente; le formule seguenti anticipano lo studio completo.
 
 Scriviamo una tensione periodica del generatore come somma di armoniche:
 
@@ -116,7 +167,9 @@ $$\widehat I_C(\omega)=j\omega C\widehat V_C(\omega),\qquad \widehat V_C(\omega)
 
 La serie periodica e la trasformata non sono la stessa operazione: vedi le [convenzioni comuni](index.qmd#fourier-e-laplace-una-distinzione-utile). La formula della serie sopra descrive il regime; un'eventuale differenza dalle condizioni iniziali produce anche il transitorio.
 
-## Livello 6 / Laplace e condizioni iniziali {#livello-6}
+## Livello 5C / Laplace e condizioni iniziali {#livello-6}
+
+**Per gli anni successivi.** Laplace trasforma il problema nel tempo in relazioni algebriche e, nella forma usata qui, mantiene le condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
 
 Con la trasformata unilaterale da $0^-$ e $V_0=v_C(0^-)$:
 

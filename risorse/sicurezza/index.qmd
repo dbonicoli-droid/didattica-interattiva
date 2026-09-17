@@ -1,0 +1,26 @@
+---
+title: "Guida completa / Sicurezza e metodo 5S"
+---
+
+La guida del Prof. **Jacopo Fanucchi** riguarda il **laboratorio di elettronica**. Qui è disponibile il documento integrale di **8 pagine**, già allegato alla dispensa di TPSEE elettronici.
+
+[Apri o scarica la guida completa di Fanucchi (PDF)](/downloads/guida-sicurezza-fanucchi-elettronica.pdf){.btn .btn-primary}
+
+## Quale guida usare nel proprio percorso
+
+| Percorso | Stato del materiale |
+|---|---|
+| TPSEE · Elettronici | Guida di elettronica fornita da Jacopo Fanucchi |
+| TPSEE · Elettrotecnici | Guida di elettronica usata provvisoriamente; da sostituire con la guida del corso, da concordare con l'ITP Maurizio Signorini |
+| Sistemi automatici | Guida di elettronica usata provvisoriamente; da sostituire con quella predisposta dai docenti del corso |
+| Domotica e automazione | Guida di elettronica usata provvisoriamente; da sostituire con quella predisposta dai docenti del corso |
+
+Le sintesi nelle pagine dei corsi restano richiami introduttivi. Per le attività pratiche valgono le indicazioni dei docenti, le procedure dell'istituto e la guida specifica del laboratorio; il documento provvisorio non estende automaticamente le procedure di elettronica agli altri laboratori.
+
+## Contenuti del documento
+
+- Funzione e organizzazione del laboratorio.
+- Comportamento e gestione del rischio.
+- Uso del banco e degli strumenti.
+- Ordine, pulizia e metodo 5S.
+- Checklist e autoverifica.

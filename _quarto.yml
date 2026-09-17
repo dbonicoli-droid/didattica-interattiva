@@ -52,6 +52,10 @@ website:
                 text: "Sintesi del modulo 4 / Reti sequenziali"
           - section: "Fondamenti"
             contents:
+              - href: corsi/tpsee-elettronici/guida-sicurezza.qmd
+                text: "Guida completa di sicurezza"
+              - href: risorse/fondamenti/index.qmd
+                text: Fondamenti condivisi
               - href: corsi/tpsee-elettronici/prima-di-iniziare-conoscenze-di-base.qmd
                 text: "Prima di iniziare / Conoscenze di base"
               - href: corsi/tpsee-elettronici/sicurezza-e-buone-pratiche.qmd
@@ -101,6 +105,10 @@ website:
                 text: "Sintesi del modulo 5 / Illuminotecnica"
           - section: "Fondamenti"
             contents:
+              - href: corsi/tpsee-elettrotecnici/guida-sicurezza.qmd
+                text: "Guida completa di sicurezza / provvisoria"
+              - href: risorse/fondamenti/index.qmd
+                text: Fondamenti condivisi
               - href: corsi/tpsee-elettrotecnici/prima-di-iniziare-conoscenze-di-base.qmd
                 text: "Prima di iniziare / Conoscenze di base"
               - href: corsi/tpsee-elettrotecnici/conoscenze-di-base.qmd
@@ -154,6 +162,10 @@ website:
                 text: "Sintesi del modulo 6 / Tempi, eventi e grandezze analogiche"
           - section: "Fondamenti"
             contents:
+              - href: corsi/sistemi-automatici/guida-sicurezza.qmd
+                text: "Guida completa di sicurezza / provvisoria"
+              - href: risorse/fondamenti/index.qmd
+                text: Fondamenti condivisi
               - href: corsi/sistemi-automatici/prima-di-iniziare-conoscenze-di-base.qmd
                 text: "Prima di iniziare / Conoscenze di base"
               - href: corsi/sistemi-automatici/conoscenze-di-base.qmd
@@ -207,6 +219,10 @@ website:
                 text: "Sintesi del modulo 5 / Programmazione avanzata e applicazioni dei PLC"
           - section: "Fondamenti"
             contents:
+              - href: corsi/domotica/guida-sicurezza.qmd
+                text: "Guida completa di sicurezza / provvisoria"
+              - href: risorse/fondamenti/index.qmd
+                text: Fondamenti condivisi
               - href: corsi/domotica/conoscenze-di-base.qmd
                 text: "Conoscenze di base"
               - href: risorse/componenti/index.qmd
@@ -240,6 +256,28 @@ website:
         contents:
           - href: laboratori/rc.qmd
             text: Circuito RC
+      - section: "Fondamenti condivisi"
+        href: risorse/fondamenti/index.qmd
+        contents:
+          - href: risorse/fondamenti/grandezze-e-calcolo.qmd
+            text: "Grandezze, unità e calcolo"
+          - href: risorse/fondamenti/carica-corrente-tensione.qmd
+            text: "Carica, corrente e tensione"
+          - href: risorse/fondamenti/corrente-nei-materiali.qmd
+            text: "Corrente nei materiali"
+          - href: risorse/fondamenti/leggere-gli-schemi.qmd
+            text: "Leggere uno schema elettrico"
+          - href: risorse/fondamenti/leggi-dei-circuiti.qmd
+            text: "Ohm, Kirchhoff, serie e parallelo"
+          - href: risorse/fondamenti/potenza-energia.qmd
+            text: "Potenza ed energia"
+          - href: risorse/fondamenti/misurare-e-verificare.qmd
+            text: "Misurare e verificare"
+          - href: risorse/fondamenti/segnali-e-dinamica.qmd
+            text: "Segnali e dinamica"
+          - href: risorse/fondamenti/matematica-per-approfondire.qmd
+            text: "Matematica per approfondire: una prima lettura"
+          - risorse/sicurezza/index.qmd
       - section: "Componenti"
         href: risorse/componenti/index.qmd
         contents:

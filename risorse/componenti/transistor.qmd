@@ -45,6 +45,15 @@ I valori nello schema sono didattici. Un progetto reale richiede la verifica del
 
 Nel MOSFET ad arricchimento a canale N, un'adeguata tensione positiva $V_{GS}$ crea un canale conduttivo fra source e drain. Un gate isolato assorbe una corrente continua molto piccola, ma **deve essere caricato e scaricato durante la commutazione**: il circuito di pilotaggio deve fornire tali correnti.
 
+
+![MOSFET a canale N: carico sul drain, source a 0 V e comando sul gate.](/assets/fondamenti/mosfet.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/mosfet.svg)
+
+RG limita e smorza le correnti impulsive di pilotaggio; RGS mantiene il gate riferito al source in assenza del comando. I valori dipendono dal dispositivo, dal pilotaggio e dalla velocità richiesta.
+
+La corrente continua del gate è piccola, ma durante le commutazioni si devono caricare e scaricare le capacità interne. Nel disegno sono semplificati il simbolo e il collegamento del body; il diodo interno non sostituisce automaticamente una protezione esterna del carico.
+
 La tensione di soglia $V_{GS(th)}$ indica l'inizio della conduzione nelle condizioni di prova, non la tensione necessaria per pilotare qualunque carico con bassa resistenza. Si controlla la resistenza di conduzione $R_{DS(on)}$ alla tensione di gate effettivamente disponibile.
 
 La parola **saturazione** ha significati diversi: nel BJT è tipicamente lo stato acceso usato come interruttore; nel MOSFET l'interruttore ben acceso lavora normalmente nella regione ohmica, mentre la regione di saturazione è usata anche per amplificare.
@@ -66,3 +75,8 @@ Tipo e piedinatura, tensioni e correnti ammissibili, potenza, condizioni termich
 **Verifica:** da dove proviene l'energia che un transistor amplificatore consegna al carico? Dall'alimentazione; il segnale di ingresso ne controlla il trasferimento.
 
 [Toshiba — Introduzione a semiconduttori, BJT e MOSFET](https://toshiba.semicon-storage.com/us/semiconductor/knowledge/e-learning/discrete.html)
+
+::: {.callout-note}
+## Approfondimenti negli anni successivi
+Caratteristiche complete, polarizzazione degli amplificatori, modelli per piccoli segnali e dimensionamento del pilotaggio saranno sviluppati in seguito. Per ora riconosci terminali, percorso della corrente di carico e ruolo del comando.
+:::

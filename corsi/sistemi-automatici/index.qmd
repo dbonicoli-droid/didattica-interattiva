@@ -23,11 +23,15 @@ Una breve presentazione degli argomenti e delle unità didattiche previste.
 
 ### Fondamenti {#fondamenti}
 
+- [Guida completa di laboratorio e sicurezza / provvisoria, da sostituire](guida-sicurezza.qmd)
+
 Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
 
 - [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
 - [Conoscenze di base](conoscenze-di-base.qmd)
 - [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
+> **Guida provvisoria:** per ora è disponibile il documento di Fanucchi per elettronica; sarà sostituito con la guida specifica del corso.
+
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
 ### Moduli di approfondimento {#moduli-di-approfondimento}

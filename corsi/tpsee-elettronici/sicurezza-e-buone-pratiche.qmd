@@ -10,7 +10,7 @@ title: "Sicurezza e Buone pratiche"
 
 - Progettare, montare e misurare richiede **attenzione alle persone, agli strumenti e alla postazione**.
 
-- Nel seguito trovi alcune **indicazioni fondamentali**, tratte dalla [**guida sulla sicurezza**](/downloads/tpsee-elettronici.pdf) fornita dal Prof. Jacopo Fanucchi. Segui sempre le indicazioni dei docenti e le procedure dell'istituto.
+- Nel seguito trovi alcune **indicazioni fondamentali**, tratte dalla [**guida completa sulla sicurezza**](guida-sicurezza.qmd) fornita dal Prof. Jacopo Fanucchi. Segui sempre le indicazioni dei docenti e le procedure dell'istituto.
 
 [**Il metodo di laboratorio**]{style="color: teal"}
 

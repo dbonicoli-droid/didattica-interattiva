@@ -10,7 +10,7 @@ title: "Esercizi / Verifica trasversale"
 
 **2 · Dinamica.** Un [sensore](glossario.qmd#gloss-new43) del primo ordine ha $\tau=0{,}5$ s. Determina tempo 10--90% e frequenza caratteristica.
 
-**3 · Ponte.** Nel ponte della scheda C, tutte le resistenze valgono $100\,\Omega$ tranne $R_2=101\,\Omega$. Con $V_{exc}=10$ V, calcola $V_o$.
+**3 · Ponte.** Nel [ponte della scheda C](approfondimenti.qmd#ponte-wheatstone), tutte le resistenze valgono $100\,\Omega$ tranne $R_2=101\,\Omega$. Con $V_{exc}=10$ V, calcola $V_o$.
 
 **4 · [Encoder](glossario.qmd#gloss-d18).** 500 periodi/giro, decodifica x4, 1000 conteggi in 0,5 s. Calcola [risoluzione](glossario.qmd#gloss-d35) angolare e velocità.
 

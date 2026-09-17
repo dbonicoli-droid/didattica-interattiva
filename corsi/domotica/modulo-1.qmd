@@ -64,9 +64,23 @@ Il dispositivo di protezione rileva il problema; un suo contatto può interrompe
 
 *Relazione funzionale: il collegamento tratteggiato rappresenta l'azionamento, non un filo elettrico.*
 
+
+![Avviamento diretto: contatti di potenza e relè termico. Schema didattico.](/assets/fondamenti/avviamento-potenza.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/avviamento-potenza.svg)
+
+Le tre linee entrano in morsetti distinti del motore; il simbolo del motore rappresenta gli avvolgimenti interni. Il contatto ausiliario NC del termico è nel circuito di comando seguente.
+
 ## U.D. 1.4 / La funzione di autoritenuta {#ud:1.4}
 
 L'**autoritenuta** mantiene il comando dopo il rilascio del pulsante di avvio. Nella logica a relè un contatto ausiliario del [contattore](glossario.qmd#gloss-d1) è posto in parallelo al pulsante di marcia. Indichiamo con Start la richiesta di avvio, con StopOK il consenso all'esecuzione e con Run la memoria del comando: $$\mathtt{Run}_{nuovo}=\mathtt{StopOK}\land(\mathtt{Start}\lor\mathtt{Run}_{precedente}).$$ $\land$ significa AND e $\lor$ significa OR. Se StopOK diventa falso il comando si azzera, anche con Start premuto.
+
+
+![Start NO in parallelo a K1 NO; Stop e F1 NC interrompono la bobina.](/assets/fondamenti/autoritenuta.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/autoritenuta.svg)
+
+StopOK riassume i consensi fisici: Stop e F1 chiusi e il contatto Consenso chiuso. K1 è il contattore fisico; Run è la memoria logica che ne rappresenta il comando.
 
 #### Prova della memoria
 
@@ -82,6 +96,11 @@ Il **motore asincrono trifase ([MAT](glossario.qmd#gloss-d4))** trasforma energi
 
 - Una spia collegata al comando indica una richiesta; un riscontro ausiliario indica lo stato del [contattore](glossario.qmd#gloss-d1); un [sensore](glossario.qmd#gloss-new43) di moto fornisce un'informazione fisica diversa.
 
+
+![Due segnalazioni distinte: richiesta di comando e riscontro del contattore.](/assets/fondamenti/spie.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/spie.svg)
+
 #### Associare le spie al significato
 
 Per ciascuna segnalazione scrivi ciò che dimostra: «comando attivo», «[contattore](glossario.qmd#gloss-d1) inserito», «protezione intervenuta». Non chiamare automaticamente «motore in movimento» una spia che osserva soltanto il comando.
@@ -95,6 +114,17 @@ L'inversione del senso di [rotazione](glossario.qmd#gloss-d9) di un motore trifa
 - L'**[interblocco](glossario.qmd#gloss-d3)** impedisce l'attivazione contemporanea delle due direzioni.
 
 - La logica deve definire richieste simultanee, arresto e passaggio fra le direzioni.
+
+
+![Due configurazioni di potenza alternative per lo stesso motore.](/assets/fondamenti/inversione-potenza.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/inversione-potenza.svg)
+
+![Interblocco elettrico mediante contatti NC del contattore opposto.](/assets/fondamenti/inversione-comando.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/inversione-comando.svg)
+
+Gli schemi illustrano le funzioni. Il progetto del banco comprende interblocco meccanico, protezioni, collegamento PE e gestione del tempo di arresto. Lo schema a contatti non determina da solo una priorità fra richieste simultanee; la logica del corso deve definirla esplicitamente.
 
 #### Prima si simula, poi si prova sul banco
 

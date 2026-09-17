@@ -103,3 +103,7 @@ La tabella di verità elenca tutte le combinazioni: è utile per preparare le pr
 
 [Torna alla panoramica iniziale](percorso.qmd#sec:basi-panoramica).
 
+
+## Guida completa di laboratorio
+
+[Consulta la guida di Fanucchi per elettronica, provvisoria e da sostituire per questo corso](guida-sicurezza.qmd). Segui le indicazioni dei docenti e le procedure del laboratorio.

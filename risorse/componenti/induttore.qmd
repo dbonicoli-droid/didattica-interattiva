@@ -8,6 +8,13 @@ toc-depth: 2
 
 **Idea guida:** l'induttore immagazzina energia nel campo magnetico. Una tensione ai suoi capi fa variare la corrente; una corrente non nulla può esistere anche con tensione nulla.
 
+::: {.callout-note}
+## Come leggere questa pagina in terza
+Studia prima osservazioni, calcoli elementari e variazioni su intervalli. Le sezioni con derivate, integrali, fasori e trasformate sono anticipazioni: saranno approfondite negli anni successivi e non sono prerequisiti per capire il comportamento di base.
+
+[Richiami: pendenza, accumulo e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
+:::
+
 ## Livello 1 / Riconoscere il componente {#livello-1}
 
 L'**induttanza** $L$ si misura in henry ($\mathrm H$). Useremo $L=100\,\mathrm{mH}=0{,}1\,\mathrm H$, in serie a un resistore $R=100\,\Omega$.
@@ -44,7 +51,45 @@ $$v_L(t_0)=u(t_0)-Ri(t_0).$$
 
 Con $u=10\,\mathrm V$ e $i=40\,\mathrm{mA}$, $v_L=6\,\mathrm V$. La sola corrente nell'induttore non determina la tensione: qui usiamo anche generatore e resistore.
 
-## Livello 3 / Dalle variazioni alla derivata {#livello-3}
+
+## Livello 3 / Variazioni e transitorio senza derivate {#intervalli}
+
+### Quanta corrente si aggiunge in un intervallo?
+
+Per un'induttanza costante, con le polarità indicate nello schema:
+
+$$\Delta I=\frac{V_{L,media}\Delta t}{L}.$$
+
+La tensione media è quella ai capi del solo induttore, non automaticamente quella del generatore. Con tensione costante si usa direttamente quel valore; con tensione variabile, sostituire la media con il valore iniziale dà un'approssimazione.
+
+Se ai capi di $L=100\,\mathrm{mH}$ rimane 1 V per 1 ms, la corrente aumenta di 10 mA. Nel circuito RL la tensione sull'induttore cambia durante il transitorio: il dato “1 V costante” descrive un intervallo con quella condizione, non l'intera accensione del circuito iniziale.
+
+Nel circuito RL con generatore a 10 V, quando $i=40\,\mathrm{mA}$ la tensione su L è 6 V. Per i successivi $10\,\mathrm{\mu s}$, trattandola come costante, stimiamo $\Delta i\simeq0{,}6\,\mathrm{mA}$. La tensione reale su L diminuisce mentre la corrente cresce.
+
+### Perché la corrente non cresce sempre allo stesso ritmo? {#transitorio-senza-derivate}
+
+1. All'inizio, con corrente nulla, la caduta su R è nulla.
+2. La tensione sull'induttore fa aumentare la corrente.
+3. Aumenta quindi la caduta $Ri$ sul resistore.
+4. Rimane meno tensione su L e la corrente cresce più lentamente.
+
+La corrente finale tende a $U_0/R$. La costante di tempo è $\tau=L/R$: con 100 mH e 100 Ω vale 1 ms. Dopo una costante di tempo si è compiuto circa il 63,2% della variazione verso il valore finale.
+
+La relazione completa può essere fornita senza richiederne la derivazione:
+
+$$i(t)=\frac{U_0}{R}+\left(I_0-\frac{U_0}{R}\right)e^{-t/\tau}.$$
+
+$I_0$ è la corrente iniziale. Allo spegnimento l'energia già presente richiede un percorso di scarica: osserva il [diodo di ricircolo](diodo.qmd#ricircolo).
+
+### Accumulare le variazioni
+
+Somma le variazioni $\Delta I$ dei vari intervalli al valore iniziale. Il prodotto tensione media × durata è un'area nel grafico tensione–tempo. Il calcolo integrale formalizzerà questa somma negli anni successivi.
+
+**Verifica.** A parità di tensione media e durata, raddoppiare L dimezza l'aumento di corrente. L'induttore si oppone alle variazioni di corrente, non alla corrente costante in sé.
+
+## Livello 4 / Formalizzare: Dalle variazioni alla derivata {#livello-3}
+
+**Anticipazione per gli anni successivi.** La derivata descrive la pendenza in un istante; l’integrale somma contributi nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
 
 ### La velocità di variazione della corrente
 
@@ -82,7 +127,9 @@ $$\tau=1\,\mathrm{ms},\quad i(\tau)\simeq63{,}21\,\mathrm{mA},\quad v_L(\tau)\si
 
 All'inizio la corrente è zero e tutta la tensione del generatore è ai capi di L. Durante la crescita della corrente aumenta la caduta su R; alla fine $v_L$ tende a zero.
 
-## Livello 4 / Regime sinusoidale e fasori {#livello-4}
+## Livello 5A / Regime sinusoidale e fasori {#livello-4}
+
+**Per gli anni successivi.** Un fasore raccoglie ampiezza e fase di una sinusoide; l’impedenza collega tensione e corrente alla stessa frequenza. Per ora osserva soprattutto se sono in fase o sfasate.
 
 Se $i_L(t)=I_m\cos(\omega t)$, allora:
 
@@ -100,7 +147,9 @@ $$\underline I=\frac{\underline U}{R+j\omega L}.$$
 
 Con tensione del generatore di picco $10\,\mathrm V$ a $50\,\mathrm{Hz}$, la corrente di picco è circa $95{,}40\,\mathrm{mA}$ e ritarda di circa $17{,}44^\circ$. Il ritardo non è $90^\circ$, perché stiamo confrontando la corrente con la tensione dell'intero circuito, non con la sola $v_L$.
 
-## Livello 5 / Fourier: ogni armonica vede un'impedenza diversa {#livello-5}
+## Livello 5B / Fourier: ogni armonica vede un'impedenza diversa {#livello-5}
+
+**Per gli anni successivi.** Fourier permette di vedere un segnale come somma di componenti a frequenze diverse. Ogni componente può essere modificata dal circuito in modo differente; le formule seguenti anticipano lo studio completo.
 
 Per un generatore periodico:
 
@@ -114,6 +163,11 @@ A parità di ampiezza di tensione, le armoniche più alte producono meno corrent
 
 $$\frac{\underline V_R}{\underline U}=\frac{R}{R+j\omega L},\qquad \frac{\underline V_L}{\underline U}=\frac{j\omega L}{R+j\omega L}.$$
 
+
+![Stesso circuito RL, tensione di uscita scelta su R oppure su L.](/assets/fondamenti/rl-uscite.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/rl-uscite.svg)
+
 L'uscita su R è passa-basso; l'uscita su L è passa-alto. Entrambe hanno frequenza di taglio $f_c=R/(2\pi L)\simeq159{,}15\,\mathrm{Hz}$ per i valori dello schema.
 
 Per segnali trasformabili, con le opportune condizioni sulla derivata:
@@ -122,7 +176,9 @@ $$\widehat V_L(\omega)=j\omega L\widehat I_L(\omega).$$
 
 Per i segnali periodici abbiamo usato la serie di Fourier. Le [convenzioni comuni](index.qmd#fourier-e-laplace-una-distinzione-utile) chiariscono il rapporto con la trasformata e con il transitorio.
 
-## Livello 6 / Laplace e condizioni iniziali {#livello-6}
+## Livello 5C / Laplace e condizioni iniziali {#livello-6}
+
+**Per gli anni successivi.** Laplace trasforma il problema nel tempo in relazioni algebriche e, nella forma usata qui, mantiene le condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
 
 Con la trasformata unilaterale da $0^-$ e $I_0=i_L(0^-)$:
 
@@ -160,3 +216,5 @@ Il polo è $s=-R/L<0$. A condizioni iniziali nulle, la funzione $I(s)/U(s)=1/(R+
 Le bobine reali hanno resistenza, perdite, capacità parassite e possibili fenomeni di saturazione. L'induttanza costante è un'approssimazione valida entro un intervallo di funzionamento. L'interruzione rapida della corrente può produrre tensioni elevate: il modello serve anche a capire perché nei circuiti reali si prevedono percorsi di ricircolo e protezioni.
 
 [Confronta con il condensatore](condensatore.qmd) · [Riferimenti](index.qmd#per-approfondire)
+
+[Osserva il circuito della bobina con diodo di ricircolo](diodo.qmd#ricircolo): mostra il percorso della corrente quando il comando si apre.

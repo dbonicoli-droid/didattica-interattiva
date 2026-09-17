@@ -14,3 +14,7 @@ Le edizioni PDF mantengono la forma delle dispense introduttive. Le pagine web p
 
 **Edizione delle dispense: 15 settembre 2026.** I PDF sono documenti in sviluppo: eventuali campi non ancora compilati o indicazioni provvisorie non costituiscono istruzioni operative del laboratorio.
 
+
+## Guida completa di laboratorio e sicurezza
+
+[Guida di Fanucchi per elettronica (PDF, 8 pagine)](downloads/guida-sicurezza-fanucchi-elettronica.pdf). Per TPSEE elettrotecnici, Sistemi automatici e Domotica è un materiale provvisorio da sostituire: [leggi le indicazioni per i percorsi](risorse/sicurezza/index.qmd).

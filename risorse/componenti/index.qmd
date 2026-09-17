@@ -20,18 +20,17 @@ Queste pagine sono **risorse comuni ai percorsi**: puoi tornare sullo stesso com
 | [Diodo](diodo.qmd) | Perché il verso di collegamento conta? | Struttura PN, polarizzazione e applicazioni. |
 | [Transistor](transistor.qmd) | Come può un segnale controllare una corrente? | BJT e MOSFET, amplificazione e commutazione. |
 
-Le pagine di diodi e transistor offrono per ora una trattazione introduttiva. I sei livelli seguenti si applicano a resistore, condensatore e induttore.
+Le pagine di diodi e transistor offrono una trattazione introduttiva con esempi applicativi. Per resistore, condensatore e induttore il percorso procede così.
 
-## Una progressione in sei livelli
+## Una progressione adatta alla terza
 
-1. **Osservare e riconoscere.** Simbolo, grandezze, unità e schema di riferimento.
-2. **Regime continuo e singolo istante.** Calcoli elementari e differenza fra un valore e una variazione.
-3. **Evoluzione nel tempo.** Rapporti incrementali, derivate, integrali ed equazioni del circuito.
-4. **Regime sinusoidale.** Ampiezza, fase, fasori e impedenza.
-5. **Fourier.** Scomporre un segnale in componenti di frequenza e studiarle separatamente.
-6. **Laplace.** Risolvere i transitori tenendo conto dell'energia presente all'inizio.
+1. **Osservare e riconoscere:** circuito, simbolo, grandezze e comportamento.
+2. **Calcolare:** relazioni elementari, valori in un istante e unità.
+3. **Comprendere le variazioni e il transitorio:** intervalli di tempo, pendenza media, accumulo e simulazione, senza derivate.
+4. **Formalizzare:** prime spiegazioni di derivate, integrali ed equazioni differenziali; approfondimento negli anni successivi.
+5. **Approfondire:** fasori (5A), Fourier (5B) e Laplace (5C), con una spiegazione introduttiva del loro significato.
 
-I livelli 1–2 richiedono algebra e unità di misura; il livello 3 introduce derivate e integrali; i livelli 4–6 richiedono anche numeri complessi. Il punto di arrivo dipende dal modulo che stai seguendo, non dall'obbligo di leggere tutto subito.
+In terza il nucleo è nei livelli 1–3. Le formule avanzate restano disponibili nella stessa pagina, chiaramente indicate come anticipazioni: non occorre padroneggiarle per capire il componente. [Richiami matematici di base](../fondamenti/matematica-per-approfondire.qmd).
 
 ## Convenzioni comuni
 

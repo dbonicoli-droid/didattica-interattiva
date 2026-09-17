@@ -1,0 +1,46 @@
+---
+title: "Grandezze, unità e calcolo"
+---
+
+[← Fondamenti](index.qmd)
+
+## Prima il significato, poi il numero
+
+Una misura comprende un numero e un'unità: $I=5\,\mathrm{mA}$. Il simbolo $I$ identifica la corrente, mA l'unità usata. Una formula collega grandezze; i numeri devono essere espressi in unità coerenti.
+
+| Prefisso | Simbolo | Fattore | Esempio |
+|---|---|---|---|
+| kilo | k | $10^3$ | $2\,\mathrm{k\Omega}=2000\,\Omega$ |
+| milli | m | $10^{-3}$ | $5\,\mathrm{mA}=0{,}005\,\mathrm A$ |
+| micro | $\mu$ | $10^{-6}$ | $100\,\mathrm{\mu F}=0{,}0001\,\mathrm F$ |
+| nano | n | $10^{-9}$ | $100\,\mathrm{nF}=10^{-7}\,\mathrm F$ |
+
+Maiuscole e minuscole contano: m indica milli, M mega. Un'area richiede di convertire anche il quadrato: $1\,\mathrm{mm^2}=10^{-6}\,\mathrm{m^2}$.
+
+## Ricavare una grandezza
+
+Da $V=RI$, dividendo entrambi i membri per $R\ne0$, otteniamo $I=V/R$. Se invece conosciamo $I\ne0$, ricaviamo $R=V/I$.
+
+Nel [circuito del resistore](../componenti/resistore.qmd#livello-1), con $V=5\,\mathrm V$ e $R=1\,\mathrm{k\Omega}$:
+
+$$I=\frac{5}{1000}\,\mathrm A=0{,}005\,\mathrm A=5\,\mathrm{mA}.$$
+
+Controllo dimensionale: $\mathrm V/\Omega=\mathrm A$. Se il risultato avesse unità di energia, il calcolo non risponderebbe alla domanda.
+
+## Proporzioni e grafici
+
+A resistenza costante, raddoppiare $V$ raddoppia $I$. A tensione costante, raddoppiare $R$ dimezza $I$. Prima di dire che due grandezze sono proporzionali bisogna specificare che cosa resta costante.
+
+Leggi sempre titolo, assi, unità e scala di un grafico. Il punto $(2\,\mathrm s,4\,\mathrm V)$ dice che a due secondi la tensione vale quattro volt. La pendenza fra due punti è una variazione verticale divisa per quella orizzontale: da 1 a 3 V in 2 s corrisponde a $1\,\mathrm{V/s}$.
+
+## Verifica
+
+1. Converti $0{,}47\,\mathrm{\mu F}$ in nF.
+2. Nel circuito del resistore, con $V=12\,\mathrm V$ e $R=3\,\mathrm{k\Omega}$, calcola $I$.
+3. Una tensione passa da 2 a 5 V in 3 s: quanto vale la pendenza media?
+
+::: {.callout-tip collapse=true}
+## Soluzioni
+1. $470\,\mathrm{nF}$. 2. $4\,\mathrm{mA}$. 3. $1\,\mathrm{V/s}$.
+:::
+

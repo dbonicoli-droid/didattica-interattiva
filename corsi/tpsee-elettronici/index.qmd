@@ -21,6 +21,8 @@ Una breve presentazione degli argomenti e delle unità didattiche previste.
 
 ### Fondamenti {#fondamenti}
 
+- [Guida completa di laboratorio e sicurezza](guida-sicurezza.qmd)
+
 Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
 
 - [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)

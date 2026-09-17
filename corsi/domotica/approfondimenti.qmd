@@ -112,7 +112,7 @@ Con $V_{exc}=5$ V e $R=10\,\mathrm{k\Omega}$: al buio $R_L=90\,\mathrm{k\Omega}$
 
 Una tensione non diventa automaticamente una misura in lux. Servono una caratteristica di conversione e una calibrazione adeguata; la risposta spettrale del [sensore](glossario.qmd#gloss-new43) può differire da quella dell'occhio.
 
-## Scheda C: [estensimetro](glossario.qmd#gloss-d19) e [ponte di Wheatstone](glossario.qmd#gloss-d30)
+## Scheda C: [estensimetro](glossario.qmd#gloss-d19) e [ponte di Wheatstone](glossario.qmd#gloss-d30) {#ponte-wheatstone}
 
 Un **[estensimetro](glossario.qmd#gloss-d19) a filo** varia la resistenza quando si deforma. Indicando con $\varepsilon=\Delta L/L$ la deformazione relativa: $$\frac{\Delta R}{R}=GF\,\varepsilon,$$ dove $GF$ è il fattore di [estensimetro](glossario.qmd#gloss-d19). La deformazione è adimensionale; $1000\,\mu\varepsilon=0{,}001$. Il **[ponte di Wheatstone](glossario.qmd#gloss-d30)** confronta due partitori e rende misurabili piccole variazioni di resistenza. Nel disegno definiamo $V_o=V_L-V_R$:
 

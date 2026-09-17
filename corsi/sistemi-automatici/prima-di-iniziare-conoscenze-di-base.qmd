@@ -38,3 +38,7 @@ title: "Prima di iniziare / Conoscenze di base"
 
 [Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-esercizi) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
 
+
+## Guida completa di laboratorio
+
+[Consulta la guida di Fanucchi per elettronica, provvisoria e da sostituire per questo corso](guida-sicurezza.qmd). Segui le indicazioni dei docenti e le procedure del laboratorio.

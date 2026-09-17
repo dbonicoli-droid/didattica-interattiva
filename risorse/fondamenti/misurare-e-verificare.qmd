@@ -1,0 +1,51 @@
+---
+title: "Misurare e verificare"
+---
+
+[← Fondamenti](index.qmd)
+
+## Prima di collegare uno strumento
+
+Identifica grandezza, ordine di grandezza atteso, morsetti, funzione e portata. Le attività reali seguono la [guida del laboratorio](../sicurezza/index.qmd) e le indicazioni del docente. Qui analizziamo un esempio alimentato a 5 V.
+
+![Amperometro in serie e voltmetro in parallelo al resistore.](/assets/fondamenti/misure.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/misure.svg)
+
+## Tensione: fra due punti
+
+Il voltmetro si collega in parallelo all'elemento. Idealmente non assorbe corrente; quello reale ha una resistenza d'ingresso finita e può modificare la misura, soprattutto su circuiti ad alta resistenza.
+
+## Corrente: attraverso una sezione
+
+L'amperometro si inserisce in serie al ramo. Idealmente non introduce caduta di tensione; quello reale la introduce. Collegarlo come un voltmetro ai capi dell'alimentazione può creare una corrente elevata: non sono collegamenti intercambiabili.
+
+Si prepara o modifica il collegamento con il circuito disalimentato, secondo le procedure del banco. La misura di resistenza richiede inoltre che il componente non sia alimentato e che le eventuali energie accumulate siano gestite secondo le istruzioni del docente.
+
+## Oscilloscopio: leggere il tempo
+
+L'oscilloscopio visualizza tensione in funzione del tempo. Prima di interpretare la curva, leggi scala verticale, base dei tempi, fattore della sonda e punto di riferimento.
+
+Nel comune oscilloscopio da banco il riferimento della sonda può essere collegato alla terra di protezione: non è un morsetto da mettere su un nodo arbitrario. Verifica lo strumento e la procedura con il docente prima del collegamento.
+
+## Previsione, simulazione, misura
+
+| Passo | Cosa registrare |
+|---|---|
+| Previsione | Formula, ipotesi, valori e unità |
+| Simulazione | Circuito, parametri dei modelli e risultato |
+| Misura | Strumento, configurazione, valore e condizioni |
+| Confronto | Differenza e possibili spiegazioni |
+
+Per il resistore dello schema: previsione $I=5\,\mathrm{mA}$. Una lettura diversa non implica subito un guasto: considera tolleranza del resistore, tensione effettiva, strumenti e collegamenti.
+
+L'errore relativo rispetto a un riferimento non nullo è $(x_{mis}-x_{rif})/x_{rif}$. Misurare 4,9 mA rispetto a 5 mA dà −2%. Questa differenza non è, da sola, una valutazione completa dell'incertezza.
+
+**Verifica.** Dove si collega il voltmetro per misurare la tensione su R? **Risposta:** ai due capi di R; la corrente nel ramo si misura con lo strumento in serie.
+
+
+## Riferimenti sugli strumenti
+
+- [Fluke: uso del multimetro e scelta della funzione](https://www.fluke.com/en/learn/blog/maintenance-monitoring/how-to-use-a-multimeter-guide).
+- [Fluke: misura di resistenza a circuito disalimentato](https://www.fluke.com/en-us/learn/blog/digital-multimeters/how-to-measure-resistance).
+- [Tektronix: riferimento di massa delle sonde](https://www.tek.com/en/support/faqs/what-maximum-floating-voltage-single-ended-probe).

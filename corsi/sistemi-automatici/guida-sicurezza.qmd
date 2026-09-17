@@ -1,0 +1,15 @@
+---
+title: "Guida completa di laboratorio e sicurezza"
+---
+
+[← Percorso di lettura](index.qmd#fondamenti)
+
+::: {.callout-warning}
+## Guida provvisoria di elettronica — da sostituire
+
+In attesa della guida specifica di questo corso, rendiamo disponibile quella di **Jacopo Fanucchi per il laboratorio di elettronica**. È un **segnaposto da sostituire** e riadattare con i docenti del corso. Segui sempre le procedure del tuo laboratorio e le indicazioni dei docenti.
+:::
+
+[Apri la guida completa di Fanucchi (PDF, 8 pagine)](/downloads/guida-sicurezza-fanucchi-elettronica.pdf){.btn .btn-primary}
+
+[Informazioni sulla guida e sul suo utilizzo nei percorsi](/risorse/sicurezza/index.qmd)

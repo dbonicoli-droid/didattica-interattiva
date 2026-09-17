@@ -2,20 +2,22 @@
 title: "Fondamenti"
 ---
 
-Le basi da richiamare prima di affrontare i moduli e da consultare durante lo studio. Queste risorse sono condivise fra i percorsi.
+Le basi comuni ai percorsi, da studiare prima dei moduli e da richiamare quando servono. In terza si parte da osservazioni, calcoli elementari e grafici; gli strumenti avanzati sono anticipazioni per gli anni successivi.
 
-## Componenti
+## Percorso consigliato
 
-Le schede presentano struttura, funzionamento e applicazioni. Per resistore, condensatore e induttore la trattazione procede per livelli, dalle relazioni elementari al comportamento dinamico e alle trasformate.
+1. [Grandezze, unità e calcolo](grandezze-e-calcolo.qmd)
+2. [Carica, corrente e tensione](carica-corrente-tensione.qmd)
+3. [Corrente nei materiali](corrente-nei-materiali.qmd)
+4. [Leggere uno schema elettrico](leggere-gli-schemi.qmd)
+5. [Ohm, Kirchhoff, serie e parallelo](leggi-dei-circuiti.qmd)
+6. [Potenza ed energia](potenza-energia.qmd)
+7. [Componenti: resistore, condensatore, induttore, diodo e transistor](../componenti/index.qmd)
+8. [Misurare e verificare](misurare-e-verificare.qmd)
 
-- [Resistore](../componenti/resistore.qmd)
-- [Condensatore](../componenti/condensatore.qmd)
-- [Induttore](../componenti/induttore.qmd)
-- [Diodo](../componenti/diodo.qmd)
-- [Transistor](../componenti/transistor.qmd)
+## Strumenti da richiamare durante lo studio
 
-[Apri l'indice dei componenti →](../componenti/index.qmd)
-
-## Metti alla prova le idee
-
-Nel [laboratorio](/laboratori/index.qmd) trovi simulazioni e attività guidate da collegare allo studio dei componenti.
+- [Segnali e dinamica](segnali-e-dinamica.qmd)
+- [Matematica per approfondire](matematica-per-approfondire.qmd): pendenza, accumulo, fasori e trasformate.
+- [Guida completa di laboratorio e sicurezza](../sicurezza/index.qmd)
+- [Laboratorio: simulazioni e attività](/laboratori/index.qmd)

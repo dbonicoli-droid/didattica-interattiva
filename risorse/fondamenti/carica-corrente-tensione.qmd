@@ -1,0 +1,38 @@
+---
+title: "Carica, corrente e tensione"
+---
+
+[← Fondamenti](index.qmd)
+
+## Tre grandezze diverse
+
+La **carica elettrica** $Q$ si misura in coulomb (C). Elettroni e protoni portano cariche di segno opposto. Nei conduttori metallici i portatori mobili sono elettroni.
+
+La **corrente media** misura quanta carica attraversa una sezione durante un intervallo:
+
+$$I_{\mathrm{media}}=\frac{\Delta Q}{\Delta t}.$$
+
+Un ampere corrisponde a un coulomb al secondo. Il verso convenzionale è quello del moto di cariche positive; nei metalli il moto medio degli elettroni è opposto.
+
+La **tensione** è una differenza di potenziale fra due punti. Non è una quantità che “scorre” nel filo. Un volt equivale a un joule per coulomb: esprime energia per unità di carica nel trasferimento fra quei punti.
+
+## Un circuito chiuso
+
+![Generatore da 5 V e resistore da 1 kΩ, con verso della corrente e polarità.](/assets/componenti/resistore.svg)
+
+Il generatore mantiene una differenza di potenziale; il resistore converte energia elettrica in calore. La corrente attraversa l'intero percorso chiuso: la carica non viene consumata dal resistore.
+
+Con $I=5\,\mathrm{mA}$ costante per 2 s, la carica trasferita è $\Delta Q=I\Delta t=10\,\mathrm{mC}$. Non significa che questa carica rimanga accumulata nel resistore.
+
+## Riferimento e segno
+
+Scegliamo un punto come 0 V. Se $V_A=5\,\mathrm V$ e $V_B=2\,\mathrm V$, allora $V_{AB}=V_A-V_B=3\,\mathrm V$. Invertendo i puntali otteniamo $V_{BA}=-3\,\mathrm V$.
+
+Un risultato negativo non è automaticamente un errore: indica che il verso o la polarità reali sono opposti a quelli scelti come riferimento.
+
+## Verso condensatori e induttori
+
+Il [condensatore](../componenti/condensatore.qmd) lega carica e tensione; l'[induttore](../componenti/induttore.qmd) lega la variazione della corrente alla tensione. Per iniziare bastano intervalli di tempo e grafici: non servono ancora derivate.
+
+**Verifica.** Con $I=2\,\mathrm{mA}$ costante per 3 s, quanta carica attraversa una sezione? **Risposta:** $6\,\mathrm{mC}$.
+

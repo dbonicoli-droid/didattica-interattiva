@@ -48,6 +48,11 @@ La spia segue soltanto l'ingresso selezionato; il display mostra 0, 1, 2 o 3 sec
 
 **Metodo di studio.** Per ogni risposta annota non soltanto il risultato, ma anche la regola utilizzata. Se trovi un errore, classificalo: notazione, tabella, semplificazione, collegamento o temporizzazione.
 
+
+![Schema dell'esercizio 1: R1 = 2 kΩ, R2 = 3 kΩ e generatore da 5 V.](/assets/fondamenti/partitore.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/partitore.svg)
+
 ## Soluzioni dell'autoverifica {#sec:risposte}
 
 1.  $V_{\mathrm{out}}=5\cdot3/(2+3)=3\,\mathrm{V}$. La formula presuppone l'assenza di un [carico](glossario.qmd#gloss-g57) significativo.

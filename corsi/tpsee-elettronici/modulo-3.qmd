@@ -67,6 +67,15 @@ Nel codice [Gray](glossario.qmd#gloss-g22) riflesso due parole consecutive diffe
 
 Per quattro [bit](glossario.qmd#gloss-g7), la conversione binario $b_3b_2b_1b_0$ in [Gray](glossario.qmd#gloss-g22) $g_3g_2g_1g_0$ è: $$g_3=b_3,\qquad g_2=b_3\oplus b_2,\quad g_1=b_2\oplus b_1,\quad g_0=b_1\oplus b_0.$$ Il percorso inverso usa il [bit](glossario.qmd#gloss-g7) binario appena ricostruito: $$b_3=g_3,\qquad b_2=b_3\oplus g_2,\quad b_1=b_2\oplus g_1,\quad b_0=b_1\oplus g_0.$$
 
+
+![Conversione binario–Gray con porte XOR.](/assets/fondamenti/binario-gray.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/binario-gray.svg)
+
+![Conversione Gray–binario usando il bit binario precedente.](/assets/fondamenti/gray-binario.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/gray-binario.svg)
+
 #### Conversione in entrambe le direzioni
 
 Da $1011_2$ otteniamo [Gray](glossario.qmd#gloss-g22) $1110$: copiamo 1, poi calcoliamo $1\oplus0=1$, $0\oplus1=1$, $1\oplus1=0$.
@@ -168,6 +177,11 @@ C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B).$$
 ## U.D. 3.7 / Comparatori {#ud:3.7}
 
 Un [comparatore](glossario.qmd#gloss-g12) digitale determina se $A>B$, $A=B$ oppure $A<B$. Per un solo [bit](glossario.qmd#gloss-g7), $G$ indica maggiore, $E$ uguale e $L$ minore. Le tre uscite sono: $$G=A\overline B,\qquad E=\overline{A\oplus B},\qquad L=\overline A B.$$ A ingressi stabili, una sola delle tre condizioni è vera. Con più [bit](glossario.qmd#gloss-g7) si parte dalla posizione più significativa: la prima coppia diversa decide quale numero è maggiore.
+
+
+![Comparatore a un bit: tre reti logiche distinte.](/assets/fondamenti/comparatore.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/comparatore.svg)
 
 #### Confrontare due parole
 
@@ -272,6 +286,11 @@ Un **[circuito integrato](glossario.qmd#gloss-new77)**, spesso chiamato semplice
 
 Quando un [integrato](glossario.qmd#gloss-new77) cambia stato, può richiedere brevi impulsi di [corrente](glossario.qmd#gloss-new69). Un condensatore tra alimentazione e massa, vicino ai pin di alimentazione, offre una piccola riserva locale di energia e aiuta a ridurre i disturbi sulla [tensione](glossario.qmd#gloss-new68). Si chiama **condensatore di disaccoppiamento**: $100\,\mathrm{nF}$ è un valore tipico; valore e collegamento vanno verificati nella scheda tecnica del componente (datasheet).
 
+
+![Collegamento del condensatore fra i pin di alimentazione dell’integrato.](/assets/fondamenti/disaccoppiamento.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/disaccoppiamento.svg)
+
 ## U.D. 3.14 / [MUX](glossario.qmd#gloss-g38): 74LS150, 74LS151 {#ud:3.14}
 
 Consideriamo un [MUX](glossario.qmd#gloss-g38) a 16 ingressi (74LS150) e uno a 8 ingressi (74LS151). Il 151 dispone di uscita diretta e complementata; il 150 ha uscita invertita. Con [strobe](glossario.qmd#gloss-g60) [attivo basso](glossario.qmd#gloss-g4) a 0 il dato è selezionato; con [strobe](glossario.qmd#gloss-g60) a 1, nel 151 l'uscita diretta è 0 e la complementata è 1, mentre nel 150 l'uscita è 1. **Esempio.** Con $CBA=101$ nel 151 viene selezionato $D_5$. Se $D_5=1$ e lo [strobe](glossario.qmd#gloss-g60) è 0, l'uscita diretta è 1 e quella complementata è 0. Le lettere $A,B,C$ del datasheet corrispondono qui ai selettori dal meno al più significativo.
@@ -293,7 +312,18 @@ Il 74LS154 è un [decoder](glossario.qmd#gloss-g13) $4\to16$ con due abilitazion
 
 Il 74LS85 confronta due parole di 4 [bit](glossario.qmd#gloss-g7) e fornisce tre uscite: maggiore, uguale, minore. Possiede ingressi di espansione per il collegamento in cascata. Usato da solo, imposta gli ingressi di cascata: $I_{A=B}=1$ e $I_{A>B}=I_{A<B}=0$.
 
+![74LS85 singolo: ingressi di espansione definiti e tre uscite di confronto.](/assets/fondamenti/singolo-85.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/singolo-85.svg)
+
 Per confrontare 8 [bit](glossario.qmd#gloss-g7), le uscite dello stadio meno significativo vanno ai corrispondenti ingressi di cascata di quello più significativo; il risultato finale si legge su quest'ultimo. Il confronto dei [bit](glossario.qmd#gloss-g7) superiori prevale, salvo uguaglianza.
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-3.qmd)
+
+
+![74LS85 singolo e cascata di due stadi: i bit meno significativi informano lo stadio superiore.](/assets/fondamenti/cascata-85.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/cascata-85.svg)
+
+[Riferimento del costruttore: Texas Instruments, SN74LS85](https://www.ti.com/product/SN74LS85).

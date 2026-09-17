@@ -52,6 +52,33 @@ Questo è un esempio di calcolo, non una proprietà universale del diodo. Invert
 
 Un LED richiede una corrente controllata e ha una caduta diretta che dipende anche dal tipo e dal colore. Un raddrizzatore e un LED non sono sostituibili solo perché entrambi sono diodi.
 
+
+### Raddrizzare una semionda
+
+![Diodo in serie al carico: raddrizzatore a una semionda senza condensatore di filtro.](/assets/fondamenti/raddrizzatore.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/raddrizzatore.svg)
+
+Con diodo ideale, la semionda positiva appare sul carico e quella negativa viene bloccata. L'uscita è pulsante: non è una tensione continua costante. Con un modello a caduta diretta, la tensione sul carico è inferiore a quella della sorgente durante la conduzione.
+
+### Diodo di ricircolo {#ricircolo}
+
+![Bobina in continua con diodo in parallelo: catodo verso il positivo.](/assets/fondamenti/ricircolo.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/ricircolo.svg)
+
+Quando il comando è chiuso, il diodo è polarizzato inversamente. Aprendo il comando, la corrente della bobina mantiene inizialmente lo stesso verso e trova un percorso attraverso il diodo, dal suo anodo al catodo. L'energia si dissipa nelle resistenze del circuito e nel diodo; il rilascio della bobina può risultare più lento. Questo schema riguarda una bobina alimentata in continua.
+
+### Un riferimento Zener
+
+![Zener polarizzato inversamente, con resistore serie e carico in parallelo.](/assets/fondamenti/zener.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/zener.svg)
+
+Nel corretto intervallo di corrente, lo Zener mantiene una tensione approssimativamente vicina a $V_Z$. Il resistore serie limita la corrente totale, che si divide fra carico e Zener. Se il carico assorbe troppo, lo Zener può uscire dalla zona prevista e la tensione non è più mantenuta. Per dimensionarlo si verificano correnti e potenze ai limiti dell'alimentazione e del carico.
+
+Questi sono primi esempi applicativi; caratteristiche complete e dimensionamento verranno approfonditi negli anni successivi.
+
 ## 5 / Che cosa guardare nel datasheet
 
 Corrente ammissibile, tensione inversa massima, caduta diretta alle condizioni specificate, potenza e comportamento termico. Nelle commutazioni diventano importanti anche velocità, cariche e capacità interne.

@@ -37,6 +37,11 @@ In serie si realizza AND, in parallelo OR. Il simbolo software non stabilisce da
 
 Riprendi l'autoritenuta della [U.D. 1.4](modulo-1.qmd#ud:1.4). Realizza un ramo con Start in parallelo alla memoria Run, in serie al consenso StopOK, e assegna il risultato alla bobina Run.
 
+
+![Autoritenuta software con arresto prioritario.](/assets/fondamenti/ladder-autoritenuta.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/ladder-autoritenuta.svg)
+
 #### Tabella delle prove
 
 - Start premuto e consenso presente: Run diventa vero.

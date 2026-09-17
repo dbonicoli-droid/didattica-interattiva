@@ -136,6 +136,11 @@ La posizione di un singolo [deviatore](glossario.qmd#gloss-e11) non significa se
 
 **Laboratorio.** Sul banco didattico verifica le quattro combinazioni, poi inserisci un [invertitore](glossario.qmd#gloss-e23) e controlla che anche il terzo comando cambi sempre lo stato della luce. Registra le otto combinazioni possibili.
 
+
+![Comando da tre punti: invertitore fra i due deviatori.](/assets/fondamenti/invertitore.svg)
+
+[Apri lo schema a dimensione intera](/assets/fondamenti/invertitore.svg)
+
 ## Comandare con impulsi e relè {#topic:6}
 
 ## U.D. 3.5 / Relè interruttore e relè commutatore {#ud:3.5}

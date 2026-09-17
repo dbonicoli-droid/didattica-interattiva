@@ -1,0 +1,11 @@
+---
+title: "Guida completa di laboratorio e sicurezza"
+---
+
+[← Percorso di lettura](index.qmd#fondamenti)
+
+La guida completa del Prof. **Jacopo Fanucchi** per il laboratorio di **elettronica**, comprensiva del metodo 5S.
+
+[Apri la guida completa di Fanucchi (PDF, 8 pagine)](/downloads/guida-sicurezza-fanucchi-elettronica.pdf){.btn .btn-primary}
+
+[Informazioni sulla guida e sul suo utilizzo nei percorsi](/risorse/sicurezza/index.qmd)

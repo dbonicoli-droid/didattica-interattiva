@@ -1,0 +1,43 @@
+---
+title: "Corrente nei materiali"
+---
+
+[← Fondamenti](index.qmd)
+
+## Conduttori, isolanti e semiconduttori
+
+Nei **conduttori** sono disponibili portatori mobili. Nei metalli alcuni elettroni possono muoversi attraverso il materiale; gli urti con il reticolo e altri processi limitano il moto medio ordinato.
+
+Negli **isolanti** la conduzione è molto ridotta nelle condizioni ordinarie. “Isolante” non significa resistenza infinita a qualsiasi tensione o temperatura.
+
+Nei **semiconduttori**, come il silicio, la conduzione dipende da temperatura, luce e concentrazione delle impurità introdotte intenzionalmente, detta *drogaggio*.
+
+## Resistenza e geometria
+
+Per un conduttore uniforme, a temperatura fissata:
+
+$$R=\rho\frac{\ell}{S}.$$
+
+$\rho$ è la resistività del materiale, $\ell$ la lunghezza e $S$ la sezione. Raddoppiare la lunghezza raddoppia R; raddoppiare la sezione la dimezza. Resistività e resistenza sono grandezze diverse.
+
+Esempio: con $\rho=0{,}0175\,\Omega\,\mathrm{mm^2/m}$, $\ell=10\,\mathrm m$ e $S=1\,\mathrm{mm^2}$, risulta $R=0{,}175\,\Omega$. Il valore di resistività è indicativo per il rame vicino alla temperatura ambiente.
+
+Nel [calcolo della caduta sui cavi](/corsi/tpsee-elettrotecnici/approfondimenti.qmd#app:cavi) si considera il percorso completo di andata e ritorno.
+
+## Temperatura
+
+In molti metalli la resistenza cresce con la temperatura. Su un intervallo limitato si può usare un'approssimazione lineare. Non estendere automaticamente questa regola a tutti i materiali: alcuni termistori diminuiscono la propria resistenza quando si scaldano.
+
+## Elettroni e lacune
+
+Una **lacuna** descrive l'assenza di un elettrone in uno stato che potrebbe essere occupato e si comporta come un portatore positivo. Il drogaggio di tipo N favorisce elettroni, quello di tipo P lacune. Le regioni rimangono nel complesso quasi neutre: P e N non significano due blocchi con carica totale opposta.
+
+Queste idee preparano alla [giunzione del diodo](../componenti/diodo.qmd) e alla [struttura dei transistor](../componenti/transistor.qmd).
+
+::: {.callout-note}
+## Negli anni successivi
+Bande di energia, mobilità, diffusione e modelli quantitativi dei semiconduttori saranno approfonditi in seguito. Qui basta riconoscere che materiale, geometria e condizioni operative influenzano la conduzione.
+:::
+
+**Verifica.** Stesso materiale e temperatura: un filo è lungo il doppio e ha sezione doppia. **Risposta:** la resistenza rimane uguale.
+

@@ -78,6 +78,7 @@ I simboli permettono di leggere uno schema senza conoscere il montaggio fisico. 
 Gli schemi a blocchi mostrano la funzione: per collegare un componente serve la [piedinatura](glossario.qmd#gloss-g58) del datasheet. Il simbolo descrive una funzione; il [footprint](glossario.qmd#gloss-g19) descrive una forma fisica. Due resistori di dimensioni diverse possono avere lo stesso simbolo. Un punto pieno all'incrocio indica un nodo comune: il semplice incrocio senza punto non implica una connessione.
 
 ::: center
+![Simboli di componenti e riferimenti elettrici](/assets/dispense/tpsee-elettronici/figura-5.png)
 :::
 
 *Dall'alto: componenti passivi e generatori; porte logiche; semiconduttori; comandi, collegamenti e riferimenti.*
@@ -89,6 +90,7 @@ L'**induttore** è il componente; la sua proprietà elettrica si chiama **indutt
 La griglia usa i simboli rettangolari [IEC](glossario.qmd#gloss-g25). Nei simboli sagomati qui sotto la funzione è la stessa. La bolla sull'uscita indica sempre la negazione.
 
 ::: center
+![Porte logiche con simboli sagomati](/assets/dispense/tpsee-elettronici/figura-6.png)
 :::
 
 ## Montare il circuito sulla [breadboard](glossario.qmd#gloss-g8) {#topic:5}

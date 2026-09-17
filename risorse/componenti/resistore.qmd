@@ -8,6 +8,13 @@ toc-depth: 2
 
 **Idea guida:** nel resistore ideale la corrente dipende dalla tensione dello stesso istante. Il componente dissipa energia e non ha uno stato elettrico da ricordare.
 
+::: {.callout-note}
+## Come leggere questa pagina in terza
+Studia prima osservazioni, calcoli elementari e variazioni su intervalli. Le sezioni con derivate, integrali, fasori e trasformate sono anticipazioni: saranno approfondite negli anni successivi e non sono prerequisiti per capire il comportamento di base.
+
+[Richiami: pendenza, accumulo e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
+:::
+
 ## Livello 1 / Riconoscere il componente {#livello-1}
 
 Il **resistore** è il componente; la **resistenza** $R$ è la grandezza che ne descrive il comportamento, misurata in ohm ($\Omega$). Nel linguaggio comune si usa spesso “resistenza” anche per indicare il componente.
@@ -38,7 +45,24 @@ Nell'esempio $P=25\,\mathrm{mW}$. Se questa potenza rimane costante per $10\,\ma
 
 **Domanda:** a resistenza costante, raddoppiare la tensione raddoppia anche la potenza?
 
-## Livello 3 / Segnali variabili e derivate {#livello-3}
+
+## Livello 3 / Variazioni senza derivate {#intervalli}
+
+Con $R$ costante, la legge di Ohm vale in ogni istante. Se la tensione passa da 1 a 3 V su 1 kΩ, la corrente passa da 1 a 3 mA. Il rapporto fra le variazioni è:
+
+$$\Delta I=\frac{\Delta V}{R}.$$
+
+Se il cambiamento avviene linearmente in 2 ms, la pendenza della tensione è $2\,\mathrm V/2\,\mathrm{ms}=1\,\mathrm{V/ms}$, quella della corrente $1\,\mathrm{mA/ms}$. Non serve ancora una derivata per confrontare due punti.
+
+### Un transitorio proprio? {#transitorio-senza-derivate}
+
+Nel modello con solo generatore ideale e resistore la corrente segue direttamente la tensione: il resistore non deve caricarsi né accumula uno stato elettrico. Se il generatore varia gradualmente, varia gradualmente anche la corrente. Eventuali ritardi reali richiedono altri elementi del modello.
+
+Per calcolare energia con potenza diversa in più intervalli, somma i prodotti potenza media × durata. Questa idea di accumulo prepara all'integrale.
+
+## Livello 4 / Formalizzare: Segnali variabili e derivate {#livello-3}
+
+**Anticipazione per gli anni successivi.** La derivata descrive la pendenza in un istante; l’integrale somma contributi nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
 
 ### Una relazione istantanea
 
@@ -64,7 +88,9 @@ Per una potenza variabile, l'energia assorbita fra due istanti è:
 
 $$E=\int_{t_a}^{t_b}p_R(t)\,dt.$$
 
-## Livello 4 / Regime sinusoidale e fasori {#livello-4}
+## Livello 5A / Regime sinusoidale e fasori {#livello-4}
+
+**Per gli anni successivi.** Un fasore raccoglie ampiezza e fase di una sinusoide; l’impedenza collega tensione e corrente alla stessa frequenza. Per ora osserva soprattutto se sono in fase o sfasate.
 
 Poniamo $u(t)=V_m\cos(\omega t+\varphi)$. Allora:
 
@@ -80,7 +106,9 @@ $$P=\frac{V_{\mathrm{eff}}^2}{R}=\frac{V_m^2}{2R}=12{,}5\,\mathrm{mW}.$$
 
 Non confondere questa sinusoide di picco $5\,\mathrm V$ con la tensione continua di $5\,\mathrm V$ del livello 2.
 
-## Livello 5 / Fourier: più frequenze insieme {#livello-5}
+## Livello 5B / Fourier: più frequenze insieme {#livello-5}
+
+**Per gli anni successivi.** Fourier permette di vedere un segnale come somma di componenti a frequenze diverse. Ogni componente può essere modificata dal circuito in modo differente; le formule seguenti anticipano lo studio completo.
 
 Nel medesimo circuito scegliamo:
 
@@ -102,7 +130,9 @@ $$\widehat V_R(\omega)=R\widehat I_R(\omega).$$
 
 Per segnali periodici persistenti come quello dell'esempio si usa direttamente la **serie di Fourier**; la trasformata con righe spettrali richiede le distribuzioni. Non serve introdurle per calcolare le singole armoniche.
 
-## Livello 6 / Laplace e confronto con i componenti con memoria {#livello-6}
+## Livello 5C / Laplace e confronto con i componenti con memoria {#livello-6}
+
+**Per gli anni successivi.** Laplace trasforma il problema nel tempo in relazioni algebriche e, nella forma usata qui, mantiene le condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
 
 Con la trasformata unilaterale, definita da $0^-$ in avanti:
 

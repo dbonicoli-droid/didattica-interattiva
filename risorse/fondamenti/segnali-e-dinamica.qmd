@@ -1,0 +1,36 @@
+---
+title: "Segnali e dinamica"
+---
+
+[← Fondamenti](index.qmd)
+
+## Un valore può cambiare nel tempo
+
+Una tensione continua costante mantiene lo stesso valore. Un gradino ideale cambia valore istantaneamente; serve a descrivere un comando acceso/spento. Una rampa cresce con pendenza costante. La sinusoide ripete una variazione regolare.
+
+| Forma | Cosa osservare |
+|---|---|
+| Costante | Valore e polarità |
+| Gradino | Valore prima e dopo il comando |
+| Rampa | Aumento per unità di tempo |
+| Sinusoide | Ampiezza, periodo, frequenza e fase |
+
+Per un segnale periodico $f=1/T$. Un periodo di 20 ms corrisponde a 50 Hz. Due sinusoidi della stessa frequenza possono raggiungere il massimo in istanti diversi: questa differenza si descrive con la fase.
+
+## Transitorio e regime
+
+Il transitorio è l'evoluzione che segue una variazione delle condizioni. Il regime è il comportamento che rimane quando il transitorio si è esaurito, nei sistemi in cui ciò avviene. Il regime può essere costante oppure periodico.
+
+Nel [circuito RC](../componenti/condensatore.qmd#transitorio-senza-derivate), un gradino del generatore produce una tensione del condensatore che cambia gradualmente. La costante di tempo $\tau=RC$ dà una misura della rapidità: aumentare R o C rende più lenta la carica.
+
+## Leggere una curva prima della formula
+
+Identifica valore iniziale, finale e verso della variazione. Confronta la pendenza all'inizio e alla fine. Una curva crescente può diventare progressivamente meno ripida: crescente non significa a velocità costante.
+
+[Esplora due cariche RC e confronta le costanti di tempo](/laboratori/rc.qmd).
+
+::: {.callout-note}
+## Anticipazione per gli anni successivi
+Per una sinusoide si distinguono valore di picco e valore efficace: per la sinusoide pura, $V_{eff}=V_m/\sqrt2$. Fasori e risposta in frequenza permetteranno di calcolare ampiezze e sfasamenti senza ricostruire ogni istante. Per ora è sufficiente riconoscere cosa rappresentano questi risultati.
+:::
+
