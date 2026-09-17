@@ -333,7 +333,12 @@ mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: h
 .course-background main::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   border-radius: var(--raggio);
-  background: url("/assets/vignetta-circuiti-colori.png") center top / 100% auto no-repeat;
+  /* L'indirizzo dell'immagine arriva da scripts/navigation.html, che lo
+     costruisce sulla radice effettiva del sito. Scriverlo qui non funziona:
+     con una barra iniziale punterebbe alla radice del dominio (il sito sta
+     sotto /didattica-interattiva/), e un percorso relativo verrebbe risolto
+     da Quarto rispetto alla cartella del progetto. */
+  background: var(--vignetta-img, none) center top / 100% auto no-repeat;
   opacity: var(--vignetta);
 }
 

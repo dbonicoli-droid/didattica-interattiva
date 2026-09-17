@@ -37,6 +37,11 @@
 
     const href = p => new URL(p, root).href;
 
+    // La vignetta di sfondo: l'indirizzo si costruisce qui perché solo a questo
+    // punto si conosce la radice effettiva del sito.
+    document.documentElement.style.setProperty(
+      '--vignetta-img', `url("${href('assets/vignetta-circuiti-colori.png')}")`);
+
     // Voce attiva nella barra in alto
     const sezione = daPercorso || home ? 'Percorsi'
       : relative.startsWith('laboratori/') ? 'Laboratorio'
