@@ -6,10 +6,9 @@ toc-depth: 2
 
 Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni alle attività di laboratorio.
 
-## Moduli del percorso {#moduli}
+## Programma del corso {#moduli}
 
 []{#panoramica-del-programma}
-[]{#moduli-di-approfondimento}
 []{#nav:mappa}
 []{#nav:indice}
 
@@ -72,9 +71,7 @@ Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi*
 
 ::::
 
-<details>
-<summary>Ore e periodi indicativi</summary>
-
+### Ore e periodi indicativi {#ore-e-periodi}
 | **Modulo** | **Titolo** | **Ore** | **Periodo** |
 |---|---|---|---|
 | 1 | Il progetto di sistemi elettrici ed elettronici | 20 | 1 |
@@ -83,7 +80,52 @@ Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi*
 | 4 | [Reti sequenziali](glossario.qmd#gloss-g44) | 30 | 2 |
 |  | **Totale** | **150** |  |
 
-</details>
+## Indice dei contenuti {#indice-contenuti}
+
+[]{#moduli-di-approfondimento}
+
+Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anche quando i contenuti sono ancora in preparazione.
+
+### [Modulo 1 / Il progetto di sistemi elettrici ed elettronici](moduli/modulo-1.qmd)
+
+- [U.D. 1.1 / Multisim](moduli/modulo-1.qmd#ud:1.1)
+- [U.D. 1.2 / Ultiboard](moduli/modulo-1.qmd#ud:1.2)
+- [U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico](moduli/modulo-1.qmd#ud:1.3)
+- [U.D. 1.4 / La simbologia IEC nel disegno elettronico](moduli/modulo-1.qmd#ud:1.4)
+- [U.D. 1.5 / La realizzazione del circuito elettronico](moduli/modulo-1.qmd#ud:1.5)
+
+### [Modulo 2 / Elementi di logica](moduli/modulo-2.qmd)
+
+- [U.D. 2.1 / L'algebra di Boole](moduli/modulo-2.qmd#ud:2.1)
+- [U.D. 2.2 / Principali regole dell'algebra di Boole](moduli/modulo-2.qmd#ud:2.2)
+- [U.D. 2.3 / Leggi di De Morgan](moduli/modulo-2.qmd#ud:2.3)
+- [U.D. 2.4 / Semplificazione di espressioni booleane](moduli/modulo-2.qmd#ud:2.4)
+
+### [Modulo 3 / Elettronica digitale in logica cablata](moduli/modulo-3.qmd)
+
+- [U.D. 3.1 / Porte Logiche, tabella di Verità delle porte NOT, AND, OR, NAND, NOR, XOR](moduli/modulo-3.qmd#ud:3.1)
+- [U.D. 3.2 / GRAY - binario e binario - GRAY](moduli/modulo-3.qmd#ud:3.2)
+- [U.D. 3.3 / Universalità delle porte NAND e NOR](moduli/modulo-3.qmd#ud:3.3)
+- [U.D. 3.4 / Mappe di Karnaugh come metodo di semplificazione delle espressioni logiche booleane, quindi delle reti combinatorie](moduli/modulo-3.qmd#ud:3.4)
+- [U.D. 3.5 / Circuiti Combinatori](moduli/modulo-3.qmd#ud:3.5)
+- [U.D. 3.6 / Semisommatori e sommatori](moduli/modulo-3.qmd#ud:3.6)
+- [U.D. 3.7 / Comparatori](moduli/modulo-3.qmd#ud:3.7)
+- [U.D. 3.8 / Decoder binari](moduli/modulo-3.qmd#ud:3.8)
+- [U.D. 3.9 / Decoder BCD - 7 segmenti](moduli/modulo-3.qmd#ud:3.9)
+- [U.D. 3.10 / Principio di funzionamento di un display a 7 segmenti e diodi LED](moduli/modulo-3.qmd#ud:3.10)
+- [U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale](moduli/modulo-3.qmd#ud:3.11)
+- [U.D. 3.12 / MUX a 4, 8, 16 ingressi](moduli/modulo-3.qmd#ud:3.12)
+- [U.D. 3.13 / Implementazioni di funzioni logiche tramite MUX](moduli/modulo-3.qmd#ud:3.13)
+- [U.D. 3.14 / MUX: 74LS150, 74LS151](moduli/modulo-3.qmd#ud:3.14)
+- [U.D. 3.15 / DECODER: 74LS154, 74LS138](moduli/modulo-3.qmd#ud:3.15)
+- [U.D. 3.16 / COMPARATORE 74LS85](moduli/modulo-3.qmd#ud:3.16)
+
+### [Modulo 4 / Reti sequenziali](moduli/modulo-4.qmd)
+
+- [U.D. 4.1 / Latch e Flip-Flop (SR)](moduli/modulo-4.qmd#ud:4.1)
+- [U.D. 4.2 / Realizzazione di contatori asincroni](moduli/modulo-4.qmd#ud:4.2)
+- [U.D. 4.3 / Realizzazione di contatori sincroni](moduli/modulo-4.qmd#ud:4.3)
+
 
 ## Sicurezza in laboratorio {#sicurezza}
 

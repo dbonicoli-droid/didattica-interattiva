@@ -60,7 +60,7 @@ website:
                 text: "Sicurezza e Buone pratiche"
               - href: corsi/tpsee-elettronici/conoscenze-di-base.qmd
                 text: "Numeri e codifiche"
-          - section: "Moduli del percorso"
+          - section: "Programma del corso"
             contents:
               - href: corsi/tpsee-elettronici/moduli/modulo-1.qmd
                 text: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
@@ -89,7 +89,7 @@ website:
             contents:
               - href: corsi/tpsee-elettrotecnici/conoscenze-di-base.qmd
                 text: "Calcolo e lettura degli schemi"
-          - section: "Moduli del percorso"
+          - section: "Programma del corso"
             contents:
               - href: corsi/tpsee-elettrotecnici/moduli/modulo-1.qmd
                 text: "Modulo 1 / Normativa e legislazione"
@@ -122,7 +122,7 @@ website:
             contents:
               - href: corsi/sistemi-automatici/conoscenze-di-base.qmd
                 text: "Numeri, dati e variabili"
-          - section: "Moduli del percorso"
+          - section: "Programma del corso"
             contents:
               - href: corsi/sistemi-automatici/moduli/modulo-1.qmd
                 text: "Modulo 1 / Fondamenti di teoria dei sistemi"
@@ -157,7 +157,7 @@ website:
             contents:
               - href: corsi/domotica/conoscenze-di-base.qmd
                 text: "Richieste, sensori e segnali"
-          - section: "Moduli del percorso"
+          - section: "Programma del corso"
             contents:
               - href: corsi/domotica/moduli/modulo-1.qmd
                 text: "Modulo 1 / Elettromeccanica"

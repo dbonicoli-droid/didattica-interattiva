@@ -6,10 +6,9 @@ toc-depth: 2
 
 Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni alle attività di laboratorio.
 
-## Moduli del percorso {#moduli}
+## Programma del corso {#moduli}
 
 []{#panoramica-del-programma}
-[]{#moduli-di-approfondimento}
 []{#nav:mappa}
 []{#nav:indice}
 
@@ -73,9 +72,7 @@ Tempi, misure e applicazioni di controllo.
 
 ::::
 
-<details>
-<summary>Ore e periodi indicativi</summary>
-
+### Ore e periodi indicativi {#ore-e-periodi}
 | **N.** | **Modulo** | **Ore** | **Periodo** |
 |---|---|---|---|
 | 1 | Elettromeccanica | --- | 1 |
@@ -86,7 +83,54 @@ Tempi, misure e applicazioni di controllo.
 
 Educazione civica: efficientamento energetico, 2 ore.
 
-</details>
+## Indice dei contenuti {#indice-contenuti}
+
+[]{#moduli-di-approfondimento}
+
+Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anche quando i contenuti sono ancora in preparazione.
+
+### [Modulo 1 / Elettromeccanica](moduli/modulo-1.qmd)
+
+- [U.D. 1.1 / Il contattore](moduli/modulo-1.qmd#ud:1.1)
+- [U.D. 1.2 / Il relè termico](moduli/modulo-1.qmd#ud:1.2)
+- [U.D. 1.3 / Richiami sugli schemi di potenza e di comando](moduli/modulo-1.qmd#ud:1.3)
+- [U.D. 1.4 / La funzione di autoritenuta](moduli/modulo-1.qmd#ud:1.4)
+- [U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni](moduli/modulo-1.qmd#ud:1.5)
+- [U.D. 1.6 / Inversione di marcia del MAT e interblocco](moduli/modulo-1.qmd#ud:1.6)
+
+### [Modulo 2 / Automazione industriale e PLC](moduli/modulo-2.qmd)
+
+- [U.D. 2.1 / Introduzione all'automazione industriale](moduli/modulo-2.qmd#ud:2.1)
+- [U.D. 2.2 / Comando, segnalazione, sensori, trasduttori e attuatori](moduli/modulo-2.qmd#ud:2.2)
+- [U.D. 2.3 / Hardware del PLC](moduli/modulo-2.qmd#ud:2.3)
+- [U.D. 2.4 / Linguaggi di programmazione dei PLC](moduli/modulo-2.qmd#ud:2.4)
+
+### [Modulo 3 / Linguaggio Ladder](moduli/modulo-3.qmd)
+
+- [U.D. 3.1 / Simbologia Ladder](moduli/modulo-3.qmd#ud:3.1)
+- [U.D. 3.2 / Applicazioni base in Ladder](moduli/modulo-3.qmd#ud:3.2)
+- [U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli](moduli/modulo-3.qmd#ud:3.3)
+
+### [Modulo 4 / Linguaggio SFC](moduli/modulo-4.qmd)
+
+- [U.D. 4.1 / Introduzione al linguaggio SFC](moduli/modulo-4.qmd#ud:4.1)
+- [U.D. 4.2 / Simbologia SFC](moduli/modulo-4.qmd#ud:4.2)
+- [U.D. 4.3 / Applicazioni SFC](moduli/modulo-4.qmd#ud:4.3)
+- [U.D. 4.4 / Software SoMachine Basic](moduli/modulo-4.qmd#ud:4.4)
+- [U.D. 4.5 / Software CODESYS](moduli/modulo-4.qmd#ud:4.5)
+
+### [Modulo 5 / Programmazione avanzata e applicazioni dei PLC](moduli/modulo-5.qmd)
+
+- [U.D. 5.1 / Operazioni di temporizzazione](moduli/modulo-5.qmd#ud:5.1)
+- [U.D. 5.2 / Operazioni di conteggio](moduli/modulo-5.qmd#ud:5.2)
+- [U.D. 5.3 / Operazioni di confronto](moduli/modulo-5.qmd#ud:5.3)
+- [U.D. 5.4 / Programmazione avanzata dei PLC](moduli/modulo-5.qmd#ud:5.4)
+- [U.D. 5.5 / Aree di memoria e funzioni indirizzabili](moduli/modulo-5.qmd#ud:5.5)
+- [U.D. 5.6 / Operazioni di controllo del programma](moduli/modulo-5.qmd#ud:5.6)
+- [U.D. 5.7 / Operazioni di interrupt](moduli/modulo-5.qmd#ud:5.7)
+- [U.D. 5.8 / Operazioni di scorrimento e rotazione](moduli/modulo-5.qmd#ud:5.8)
+- [U.D. 5.9 / Operazioni logiche booleane avanzate](moduli/modulo-5.qmd#ud:5.9)
+
 
 ## Sicurezza in laboratorio {#sicurezza}
 

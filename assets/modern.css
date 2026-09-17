@@ -24,3 +24,6 @@ body{background:#f5f7fc;color:#25384d;font-size:1.02rem;line-height:1.75}
 @media(prefers-reduced-motion:reduce){.course-card{transition:none;transform:none!important}}
 @media print{body,main.content{background:#fff;box-shadow:none;border:0}main.content{padding:0}.course-context,.navigation-heading{display:none}.resource-grid{display:block}.resource-card{break-inside:avoid}}
 .course-background main::before{opacity:.04}
+
+/* Keep the course timetable readable on narrow screens. */
+#ore-e-periodi { overflow-x: auto; }

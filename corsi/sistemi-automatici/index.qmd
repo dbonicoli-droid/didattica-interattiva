@@ -6,10 +6,9 @@ toc-depth: 2
 
 Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni alle attività di laboratorio.
 
-## Moduli del percorso {#moduli}
+## Programma del corso {#moduli}
 
 []{#panoramica-del-programma}
-[]{#moduli-di-approfondimento}
 []{#nav:mappa}
 []{#nav:indice}
 
@@ -89,9 +88,7 @@ Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi*
 
 ::::
 
-<details>
-<summary>Ore e periodi indicativi</summary>
-
+### Ore e periodi indicativi {#ore-e-periodi}
 | **Modulo** | **Argomento** | **Periodo** | **Ore** |
 |---|---|---|---|
 | 1 | Fondamenti di teoria dei sistemi | 1 | 15 |
@@ -101,7 +98,71 @@ Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi*
 | 5 | Circuiti sequenziali | 2 | 24 |
 | 6 | Tempi, eventi e grandezze analogiche | 2 | 24 |
 
-</details>
+## Indice dei contenuti {#indice-contenuti}
+
+[]{#moduli-di-approfondimento}
+
+Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anche quando i contenuti sono ancora in preparazione.
+
+### [Modulo 1 / Fondamenti di teoria dei sistemi](moduli/modulo-1.qmd)
+
+- [U.D. 1.1 / Concetto di sistema](moduli/modulo-1.qmd#ud:1.1)
+- [U.D. 1.2 / Ingressi, parametri, disturbi e uscite dei sistemi](moduli/modulo-1.qmd#ud:1.2)
+- [U.D. 1.3 / Classificazione dei sistemi](moduli/modulo-1.qmd#ud:1.3)
+- [U.D. 1.4 / Esercitazioni e applicazione a casi reali](moduli/modulo-1.qmd#ud:1.4)
+- [U.D. 1.5 / Classificazione dei modelli dei sistemi](moduli/modulo-1.qmd#ud:1.5)
+- [U.D. 1.6 / Algoritmi e diagrammi di flusso](moduli/modulo-1.qmd#ud:1.6)
+- [U.D. 1.7 / Applicazioni e simulazioni con software Flowgorithm](moduli/modulo-1.qmd#ud:1.7)
+
+### [Modulo 2 / Elettronica digitale](moduli/modulo-2.qmd)
+
+- [U.D. 2.1 / Porte logiche e funzioni logiche](moduli/modulo-2.qmd#ud:2.1)
+- [U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a contatti e con tabelle di verità](moduli/modulo-2.qmd#ud:2.2)
+- [U.D. 2.3 / Metodi per determinare le tabelle di verità e ottenere funzioni logiche negate](moduli/modulo-2.qmd#ud:2.3)
+- [U.D. 2.4 / Cenni alla minimizzazione di funzioni logiche con algebra di Boole e applicazione leggi di De Morgan](moduli/modulo-2.qmd#ud:2.4)
+- [U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di Karnaugh](moduli/modulo-2.qmd#ud:2.5)
+- [U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey](moduli/modulo-2.qmd#ud:2.6)
+- [U.D. 2.7 / Esercitazioni ed esempi applicativi](moduli/modulo-2.qmd#ud:2.7)
+
+### [Modulo 3 / PLC](moduli/modulo-3.qmd)
+
+- [U.D. 3.1 / Il PLC: struttura e architettura](moduli/modulo-3.qmd#ud:3.1)
+- [U.D. 3.2 / Ciclo di scansione, indirizzamento, tipi di dato e variabili](moduli/modulo-3.qmd#ud:3.2)
+- [U.D. 3.3 / Interfacciamento sul campo e schemi funzionali](moduli/modulo-3.qmd#ud:3.3)
+- [U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta](moduli/modulo-3.qmd#ud:3.4)
+- [U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug](moduli/modulo-3.qmd#ud:3.5)
+- [U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC](moduli/modulo-3.qmd#ud:3.6)
+
+### [Modulo 4 / Circuiti combinatori](moduli/modulo-4.qmd)
+
+- [U.D. 4.1 / Caratteristiche dei circuiti combinatori](moduli/modulo-4.qmd#ud:4.1)
+- [U.D. 4.2 / Implementazione in linguaggio Ladder](moduli/modulo-4.qmd#ud:4.2)
+- [U.D. 4.3 / Implementazione mediante Function Block](moduli/modulo-4.qmd#ud:4.3)
+- [U.D. 4.4 / Implementazione in Testo strutturato e Instruction List](moduli/modulo-4.qmd#ud:4.4)
+- [U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale](moduli/modulo-4.qmd#ud:4.5)
+- [U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi](moduli/modulo-4.qmd#ud:4.6)
+
+### [Modulo 5 / Circuiti sequenziali](moduli/modulo-5.qmd)
+
+- [U.D. 5.1 / Circuiti sequenziali e automi](moduli/modulo-5.qmd#ud:5.1)
+- [U.D. 5.2 / Diagramma degli stati e delle uscite](moduli/modulo-5.qmd#ud:5.2)
+- [U.D. 5.3 / Tabella degli stati e delle uscite](moduli/modulo-5.qmd#ud:5.3)
+- [U.D. 5.4 / Applicare diagrammi e tabelle agli automatismi](moduli/modulo-5.qmd#ud:5.4)
+- [U.D. 5.5 / Implementazione sequenziale in Ladder](moduli/modulo-5.qmd#ud:5.5)
+- [U.D. 5.6 / Implementazione sequenziale in Testo strutturato e Instruction List](moduli/modulo-5.qmd#ud:5.6)
+- [U.D. 5.7 / Schemi sequenziali: mantenimento, interblocco e inversione](moduli/modulo-5.qmd#ud:5.7)
+- [U.D. 5.8 / Implementazione e simulazione degli automatismi](moduli/modulo-5.qmd#ud:5.8)
+
+### [Modulo 6 / Tempi, eventi e grandezze analogiche](moduli/modulo-6.qmd)
+
+- [U.D. 6.1 / Timer e contatori dei PLC](moduli/modulo-6.qmd#ud:6.1)
+- [U.D. 6.2 / Timer e contatori in Ladder](moduli/modulo-6.qmd#ud:6.2)
+- [U.D. 6.3 / Timer e contatori in Testo strutturato](moduli/modulo-6.qmd#ud:6.3)
+- [U.D. 6.4 / Timer e contatori in Instruction List](moduli/modulo-6.qmd#ud:6.4)
+- [U.D. 6.5 / Gestione delle grandezze analogiche](moduli/modulo-6.qmd#ud:6.5)
+- [U.D. 6.6 / Elaborare valori analogici in Testo strutturato e Instruction List](moduli/modulo-6.qmd#ud:6.6)
+- [U.D. 6.7 / Simulare un controllo con tempi, eventi e analogico](moduli/modulo-6.qmd#ud:6.7)
+
 
 ## Sicurezza in laboratorio {#sicurezza}
 
