@@ -1,4 +1,5 @@
 ---
+sidebar: domotica
 body-classes: course-background
 title: "Domotica e automazione"
 toc-depth: 2
@@ -9,24 +10,35 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 ## Programma del corso {#moduli}
 
 []{#panoramica-del-programma}
+[]{#moduli-di-approfondimento}
+[]{#ore-e-periodi}
 []{#nav:mappa}
 []{#nav:indice}
 
-Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi** ne presenta brevemente gli argomenti.
+Dal comando alla sequenza: si parte dai circuiti elettromeccanici, si passa al PLC e ai suoi linguaggi e si arriva alle applicazioni di controllo.
 
-🚧 Le pagine dei moduli sono in preparazione e si arricchiranno con le lezioni. Le sintesi sono già consultabili.
+| **Modulo** | **Argomento** | **Periodo** | **Ore** |
+|---|---|---|---|
+| 1 | Elettromeccanica | 1 | — |
+| 2 | Automazione industriale e PLC | 2 | — |
+| 3 | Linguaggio Ladder | 2 | — |
+| 4 | Linguaggio SFC | 2 | — |
+| 5 | Programmazione avanzata e applicazioni dei PLC | 2 | — |
+|  | **Totale** |  | **—** |
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+**Educazione civica:** efficientamento energetico, 2 ore.
 
-:::: {.learning-map aria-label="Moduli del percorso"}
+:::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}
 
 ### [01 / Elettromeccanica](moduli/modulo-1.qmd)
 
-Comandi, contattori e circuiti elettromeccanici.
+- Contattore e relè termico: comando e protezione del motore.
+- Schemi di potenza e di comando, funzione di autoritenuta.
+- Avviamento del motore asincrono trifase, segnalazioni e interblocco.
 
-[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
+**Primo periodo · ore da definire** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
 :::
 
@@ -34,9 +46,11 @@ Comandi, contattori e circuiti elettromeccanici.
 
 ### [02 / Automazione industriale e PLC](moduli/modulo-2.qmd)
 
-Sensori, attuatori, architettura e funzionamento del PLC.
+- Sensori, trasduttori e attuatori nell'automazione industriale.
+- Hardware del [PLC](/risorse/glossario/index.qmd#gloss-plc): [CPU](/risorse/glossario/index.qmd#gloss-automa), moduli di ingresso e uscita.
+- Panoramica dei linguaggi di programmazione normalizzati.
 
-[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
+**Secondo periodo · ore da definire** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
 
 :::
 
@@ -44,9 +58,11 @@ Sensori, attuatori, architettura e funzionamento del PLC.
 
 ### [03 / Linguaggio Ladder](moduli/modulo-3.qmd)
 
-Condizioni logiche, memorie e sequenze in Ladder.
+- Simbologia [Ladder](/risorse/glossario/index.qmd#gloss-ladder): contatti, bobine e memorie.
+- Applicazioni di base: consensi, autoritenuta e sequenze.
+- Diagrammi di flusso e codifica a bit multipli.
 
-[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
+**Secondo periodo · ore da definire** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
 :::
 
@@ -54,9 +70,11 @@ Condizioni logiche, memorie e sequenze in Ladder.
 
 ### [04 / Linguaggio SFC](moduli/modulo-4.qmd)
 
-Stati, transizioni e organizzazione delle sequenze.
+- Il linguaggio [SFC](/risorse/glossario/index.qmd#gloss-sfc): passi, transizioni e azioni.
+- Simbologia e organizzazione delle sequenze.
+- Applicazioni con SoMachine Basic e CODESYS.
 
-[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
+**Secondo periodo · ore da definire** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
 :::
 
@@ -64,24 +82,15 @@ Stati, transizioni e organizzazione delle sequenze.
 
 ### [05 / Programmazione avanzata e applicazioni dei PLC](moduli/modulo-5.qmd)
 
-Tempi, misure e applicazioni di controllo.
+- Temporizzazioni, conteggi e confronti.
+- Aree di memoria, funzioni indirizzabili e controllo del programma.
+- Interrupt, scorrimento, rotazione e operazioni booleane avanzate.
 
-[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
+**Secondo periodo · ore da definire** · [Leggi la sintesi del modulo 5 →](modulo-5.qmd)
 
 :::
 
 ::::
-
-### Ore e periodi indicativi {#ore-e-periodi}
-| **N.** | **Modulo** | **Ore** | **Periodo** |
-|---|---|---|---|
-| 1 | Elettromeccanica | --- | 1 |
-| 2 | Automazione industriale e [PLC](glossario.qmd#gloss-d29) | --- | 2 |
-| 3 | Linguaggio [Ladder](glossario.qmd#gloss-d25) | --- | 2 |
-| 4 | Linguaggio [SFC](glossario.qmd#gloss-d38) | --- | 2 |
-| 5 | Programmazione avanzata e applicazioni dei [PLC](glossario.qmd#gloss-d29) | --- | 2 |
-
-Educazione civica: efficientamento energetico, 2 ore.
 
 ## Indice dei contenuti {#indice-contenuti}
 
@@ -135,9 +144,7 @@ Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anch
 ## Sicurezza in laboratorio {#sicurezza}
 
 ::: {.resource-card}
-🚧 **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
 
 [Apri la guida completa di laboratorio e sicurezza →](guida-sicurezza.qmd)
 :::
@@ -151,7 +158,7 @@ Richiami e strumenti che puoi consultare quando un argomento richiede una base d
 
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
-- [Vocabolario minimo](glossario.qmd#vocabolario-minimo)
+- [Vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-domotica)
 
 ## Laboratorio {#laboratorio}
 
@@ -161,11 +168,10 @@ Le risorse di laboratorio possono essere utilizzate in più percorsi.
 
 ## Altre risorse {#altre-risorse}
 
-- [Schede di approfondimento](approfondimenti.qmd)
-- [Educazione civica / Efficientamento energetico](educazione-civica-efficientamento-energetico.qmd)
 - [Esercizi / Verifica trasversale](esercizi-verifica-trasversale.qmd)
-- [Glossario e vocabolario minimo](glossario.qmd)
-
+- [Educazione civica / Efficientamento energetico](educazione-civica-efficientamento-energetico.qmd)
+- [Schede di approfondimento](approfondimenti.qmd)
+- [Glossario e vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-domotica)
 
 ## Dispense PDF {#dispense}
 

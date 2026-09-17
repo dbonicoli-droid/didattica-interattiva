@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Laboratorio"
 description: "Esperimenti interattivi e attività guidate per collegare modelli, circuiti e misure."
 toc: false

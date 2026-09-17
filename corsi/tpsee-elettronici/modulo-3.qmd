@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Modulo 3 / Elettronica digitale in logica cablata"
 subtitle: "Panoramica del Programma"
 ---
@@ -30,16 +31,16 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:3}
 
-**70 ore · Secondo periodo**
+**Secondo periodo · 70 ore**
 
-L'**elettronica digitale** usa segnali interpretati come 0 e 1. Nella **logica cablata**, la funzione dipende dai collegamenti fra i componenti. Una **[rete combinatoria](glossario.qmd#gloss-g43)** produce le uscite in base agli ingressi presenti, dopo il tempo necessario al circuito per rispondere: non conserva memoria degli ingressi precedenti.
+L'**elettronica digitale** usa segnali interpretati come 0 e 1. Nella **logica cablata**, la funzione dipende dai collegamenti fra i componenti. Una **[rete combinatoria](/risorse/glossario/index.qmd#gloss-rete-combinatoria)** produce le uscite in base agli ingressi presenti, dopo il tempo necessario al circuito per rispondere: non conserva memoria degli ingressi precedenti.
 
-## U.D. 3.1 / Porte Logiche, [tabella di Verità](glossario.qmd#gloss-g48) delle porte [NOT](glossario.qmd#gloss-g2), [AND](glossario.qmd#gloss-g2), [OR](glossario.qmd#gloss-g2), [NAND](glossario.qmd#gloss-g40), [NOR](glossario.qmd#gloss-g40), [XOR](glossario.qmd#gloss-g56) {#ud:3.1}
+## U.D. 3.1 / Porte Logiche, [tabella di Verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita) delle porte [NOT](/risorse/glossario/index.qmd#gloss-not), [AND](/risorse/glossario/index.qmd#gloss-and), [OR](/risorse/glossario/index.qmd#gloss-or), [NAND](/risorse/glossario/index.qmd#gloss-nand), [NOR](/risorse/glossario/index.qmd#gloss-nor), [XOR](/risorse/glossario/index.qmd#gloss-xor) {#ud:3.1}
 
-Una porta realizza un'operazione booleana. [NAND](glossario.qmd#gloss-g40) e [NOR](glossario.qmd#gloss-g40) negano rispettivamente [AND](glossario.qmd#gloss-g2) e [OR](glossario.qmd#gloss-g2). La [XOR](glossario.qmd#gloss-g56) a due ingressi vale 1 quando gli ingressi sono diversi; si scrive $Y=A\oplus B$.
+Una porta realizza un'operazione booleana. [NAND](/risorse/glossario/index.qmd#gloss-nand) e [NOR](/risorse/glossario/index.qmd#gloss-nor) negano rispettivamente [AND](/risorse/glossario/index.qmd#gloss-and) e [OR](/risorse/glossario/index.qmd#gloss-or). La [XOR](/risorse/glossario/index.qmd#gloss-xor) a due ingressi vale 1 quando gli ingressi sono diversi; si scrive $Y=A\oplus B$.
 
 ::: center
-[**Simboli rettangolari [IEC](glossario.qmd#gloss-g25)**]{style="color: teal"}
+[**Simboli rettangolari [IEC](/risorse/glossario/index.qmd#gloss-iec)**]{style="color: teal"}
 
 ![Schema didattico 11](/assets/dispense/tpsee-elettronici/figura-11.png){fig-alt="Schema didattico 11 della dispensa TPSEE · Elettronici"}
 
@@ -48,10 +49,10 @@ Una porta realizza un'operazione booleana. [NAND](glossario.qmd#gloss-g40) e [NO
 ![Schema didattico 12](/assets/dispense/tpsee-elettronici/figura-12.png){fig-alt="Schema didattico 12 della dispensa TPSEE · Elettronici"}
 :::
 
-*[AND](glossario.qmd#gloss-g2): tutti gli ingressi a 1; [OR](glossario.qmd#gloss-g2): almeno uno a 1; [XOR](glossario.qmd#gloss-g56) a due ingressi: esattamente uno a 1. La bolla sull'uscita nega il risultato: [NAND](glossario.qmd#gloss-g40), [NOR](glossario.qmd#gloss-g40) e [NOT](glossario.qmd#gloss-g2).*
+*[AND](/risorse/glossario/index.qmd#gloss-and): tutti gli ingressi a 1; [OR](/risorse/glossario/index.qmd#gloss-or): almeno uno a 1; [XOR](/risorse/glossario/index.qmd#gloss-xor) a due ingressi: esattamente uno a 1. La bolla sull'uscita nega il risultato: [NAND](/risorse/glossario/index.qmd#gloss-nand), [NOR](/risorse/glossario/index.qmd#gloss-nor) e [NOT](/risorse/glossario/index.qmd#gloss-not).*
 
 ::: center
-   $A$   $B$   [NOT](glossario.qmd#gloss-g2) $A$   [AND](glossario.qmd#gloss-g2)   [OR](glossario.qmd#gloss-g2)   [NAND](glossario.qmd#gloss-g40)   [NOR](glossario.qmd#gloss-g40)   [XOR](glossario.qmd#gloss-g56)
+   $A$   $B$   [NOT](/risorse/glossario/index.qmd#gloss-not) $A$   [AND](/risorse/glossario/index.qmd#gloss-and)   [OR](/risorse/glossario/index.qmd#gloss-or)   [NAND](/risorse/glossario/index.qmd#gloss-nand)   [NOR](/risorse/glossario/index.qmd#gloss-nor)   [XOR](/risorse/glossario/index.qmd#gloss-xor)
   ----- ----- ----------------------------------- ------------------------------- ------------------------------ --------------------------------- -------------------------------- --------------------------------
     0     0                    1                                 0                              0                                1                                1                                0
     0     1                    1                                 0                              1                                1                                0                                1
@@ -59,13 +60,13 @@ Una porta realizza un'operazione booleana. [NAND](glossario.qmd#gloss-g40) e [NO
     1     1                    0                                 1                              1                                0                                0                                0
 :::
 
-## Cambiare codice: binario e [Gray](glossario.qmd#gloss-g22) {#topic:7}
+## Cambiare codice: binario e [Gray](/risorse/glossario/index.qmd#gloss-gray) {#topic:7}
 
-## U.D. 3.2 / [GRAY](glossario.qmd#gloss-g22) - binario e binario - [GRAY](glossario.qmd#gloss-g22) {#ud:3.2}
+## U.D. 3.2 / [GRAY](/risorse/glossario/index.qmd#gloss-gray) - binario e binario - [GRAY](/risorse/glossario/index.qmd#gloss-gray) {#ud:3.2}
 
-Nel codice [Gray](glossario.qmd#gloss-g22) riflesso due parole consecutive differiscono per un solo [bit](glossario.qmd#gloss-g7). È utile negli encoder di posizione: riduce l'ambiguità fra posizioni adiacenti durante una transizione, senza eliminare ogni possibile errore di lettura.
+Nel codice [Gray](/risorse/glossario/index.qmd#gloss-gray) riflesso due parole consecutive differiscono per un solo [bit](/risorse/glossario/index.qmd#gloss-bit). È utile negli encoder di posizione: riduce l'ambiguità fra posizioni adiacenti durante una transizione, senza eliminare ogni possibile errore di lettura.
 
-Per quattro [bit](glossario.qmd#gloss-g7), la conversione binario $b_3b_2b_1b_0$ in [Gray](glossario.qmd#gloss-g22) $g_3g_2g_1g_0$ è: $$g_3=b_3,\qquad g_2=b_3\oplus b_2,\quad g_1=b_2\oplus b_1,\quad g_0=b_1\oplus b_0.$$ Il percorso inverso usa il [bit](glossario.qmd#gloss-g7) binario appena ricostruito: $$b_3=g_3,\qquad b_2=b_3\oplus g_2,\quad b_1=b_2\oplus g_1,\quad b_0=b_1\oplus g_0.$$
+Per quattro [bit](/risorse/glossario/index.qmd#gloss-bit), la conversione binario $b_3b_2b_1b_0$ in [Gray](/risorse/glossario/index.qmd#gloss-gray) $g_3g_2g_1g_0$ è: $$g_3=b_3,\qquad g_2=b_3\oplus b_2,\quad g_1=b_2\oplus b_1,\quad g_0=b_1\oplus b_0.$$ Il percorso inverso usa il [bit](/risorse/glossario/index.qmd#gloss-bit) binario appena ricostruito: $$b_3=g_3,\qquad b_2=b_3\oplus g_2,\quad b_1=b_2\oplus g_1,\quad b_0=b_1\oplus g_0.$$
 
 
 ![Conversione binario–Gray con porte XOR.](/assets/fondamenti/binario-gray.svg)
@@ -76,39 +77,39 @@ Per quattro [bit](glossario.qmd#gloss-g7), la conversione binario $b_3b_2b_1b_0$
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/gray-binario.svg)
 
-#### Conversione in entrambe le direzioni
+### Conversione in entrambe le direzioni
 
-Da $1011_2$ otteniamo [Gray](glossario.qmd#gloss-g22) $1110$: copiamo 1, poi calcoliamo $1\oplus0=1$, $0\oplus1=1$, $1\oplus1=0$.
+Da $1011_2$ otteniamo [Gray](/risorse/glossario/index.qmd#gloss-gray) $1110$: copiamo 1, poi calcoliamo $1\oplus0=1$, $0\oplus1=1$, $1\oplus1=0$.
 
 Per tornare indietro: copiamo 1, poi $1\oplus1=0$, $0\oplus1=1$, $1\oplus0=1$. Ritroviamo $1011_2$.
 
-**Prova tu.** Scrivi [Gray](glossario.qmd#gloss-g22) per i binari $000,001,010,011$: ottieni $000,001,011,010$. È lo stesso ordine che useremo nelle mappe di [Karnaugh](glossario.qmd#gloss-g32).
+**Prova tu.** Scrivi [Gray](/risorse/glossario/index.qmd#gloss-gray) per i binari $000,001,010,011$: ottieni $000,001,011,010$. È lo stesso ordine che useremo nelle mappe di [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).
 
 ## Una funzione, molte realizzazioni {#topic:8}
 
-## U.D. 3.3 / Universalità delle porte [NAND](glossario.qmd#gloss-g40) e [NOR](glossario.qmd#gloss-g40) {#ud:3.3}
+## U.D. 3.3 / Universalità delle porte [NAND](/risorse/glossario/index.qmd#gloss-nand) e [NOR](/risorse/glossario/index.qmd#gloss-nor) {#ud:3.3}
 
-Una porta è **universale** se, usandone più copie, si possono costruire [NOT](glossario.qmd#gloss-g2), [AND](glossario.qmd#gloss-g2) e [OR](glossario.qmd#gloss-g2), e quindi qualsiasi funzione booleana.
+Una porta è **universale** se, usandone più copie, si possono costruire [NOT](/risorse/glossario/index.qmd#gloss-not), [AND](/risorse/glossario/index.qmd#gloss-and) e [OR](/risorse/glossario/index.qmd#gloss-or), e quindi qualsiasi funzione booleana.
 
-#### Una [NOT](glossario.qmd#gloss-g2) costruita con una [NAND](glossario.qmd#gloss-g40)
+### Una [NOT](/risorse/glossario/index.qmd#gloss-not) costruita con una [NAND](/risorse/glossario/index.qmd#gloss-nand)
 
 ::: center
 ![Schema didattico 13](/assets/dispense/tpsee-elettronici/figura-13.png){fig-alt="Schema didattico 13 della dispensa TPSEE · Elettronici"}
 :::
 
-Collega lo stesso segnale $A$ a entrambi gli ingressi della [NAND](glossario.qmd#gloss-g40):
+Collega lo stesso segnale $A$ a entrambi gli ingressi della [NAND](/risorse/glossario/index.qmd#gloss-nand):
 
-- Se $A=0$, la [NAND](glossario.qmd#gloss-g40) riceve 0 e 0: l'uscita è 1.
+- Se $A=0$, la [NAND](/risorse/glossario/index.qmd#gloss-nand) riceve 0 e 0: l'uscita è 1.
 
-- Se $A=1$, la [NAND](glossario.qmd#gloss-g40) riceve 1 e 1: l'uscita è 0.
+- Se $A=1$, la [NAND](/risorse/glossario/index.qmd#gloss-nand) riceve 1 e 1: l'uscita è 0.
 
-L'uscita è quindi il contrario di $A$: abbiamo ottenuto una [NOT](glossario.qmd#gloss-g2). Anche una [NOR](glossario.qmd#gloss-g40) con i due ingressi uniti funziona da [NOT](glossario.qmd#gloss-g2).
+L'uscita è quindi il contrario di $A$: abbiamo ottenuto una [NOT](/risorse/glossario/index.qmd#gloss-not). Anche una [NOR](/risorse/glossario/index.qmd#gloss-nor) con i due ingressi uniti funziona da [NOT](/risorse/glossario/index.qmd#gloss-not).
 
-Per ottenere una [AND](glossario.qmd#gloss-g2), si può far seguire una [NOT](glossario.qmd#gloss-g2) a una [NAND](glossario.qmd#gloss-g40): la seconda negazione annulla la prima. Analogamente, una [NOR](glossario.qmd#gloss-g40) seguita da una [NOT](glossario.qmd#gloss-g2) realizza una [OR](glossario.qmd#gloss-g2). [Schemi descritti con formule e altre combinazioni](approfondimenti.qmd#app:logica) (p. ).
+Per ottenere una [AND](/risorse/glossario/index.qmd#gloss-and), si può far seguire una [NOT](/risorse/glossario/index.qmd#gloss-not) a una [NAND](/risorse/glossario/index.qmd#gloss-nand): la seconda negazione annulla la prima. Analogamente, una [NOR](/risorse/glossario/index.qmd#gloss-nor) seguita da una [NOT](/risorse/glossario/index.qmd#gloss-not) realizza una [OR](/risorse/glossario/index.qmd#gloss-or). [Schemi descritti con formule e altre combinazioni](approfondimenti.qmd#app:logica).
 
-## U.D. 3.4 / Mappe di [Karnaugh](glossario.qmd#gloss-g32) come metodo di semplificazione delle espressioni logiche booleane, quindi delle [reti combinatorie](glossario.qmd#gloss-g43) {#ud:3.4}
+## U.D. 3.4 / Mappe di [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh) come metodo di semplificazione delle espressioni logiche booleane, quindi delle [reti combinatorie](/risorse/glossario/index.qmd#gloss-rete-combinatoria) {#ud:3.4}
 
-La mappa dispone le combinazioni in ordine [Gray](glossario.qmd#gloss-g22), così celle adiacenti differiscono per una sola variabile. Per ottenere una somma di prodotti si raggruppano gli 1 in rettangoli di $1,2,4,8,\ldots$ celle. In ogni gruppo si conservano solo le variabili costanti.
+La mappa dispone le combinazioni in ordine [Gray](/risorse/glossario/index.qmd#gloss-gray), così celle adiacenti differiscono per una sola variabile. Per ottenere una somma di prodotti si raggruppano gli 1 in rettangoli di $1,2,4,8,\ldots$ celle. In ogni gruppo si conservano solo le variabili costanti.
 
 - Copri tutti gli 1 con gruppi il più possibile grandi; puoi sovrapporre i gruppi.
 
@@ -116,9 +117,9 @@ La mappa dispone le combinazioni in ordine [Gray](glossario.qmd#gloss-g22), cos�
 
 - Non includere celle a 0. Eventuali condizioni indifferenti si usano solo se giustificate dal problema.
 
-#### Una variabile oppure il suo contrario
+### Una variabile oppure il suo contrario
 
-Consideriamo $Y=A+\overline A$: qui $+$ significa [OR](glossario.qmd#gloss-g2) e la barra indica [NOT](glossario.qmd#gloss-g2).
+Consideriamo $Y=A+\overline A$: qui $+$ significa [OR](/risorse/glossario/index.qmd#gloss-or) e la barra indica [NOT](/risorse/glossario/index.qmd#gloss-not).
 
 - Se $A=0$, allora $\overline A=1$: $0+1=1$.
 
@@ -136,26 +137,26 @@ Nella mappa a una variabile raggruppiamo entrambe le celle. $A$ cambia da 0 a 1 
 
 ## U.D. 3.5 / Circuiti Combinatori {#ud:3.5}
 
-Una [rete combinatoria](glossario.qmd#gloss-g43) non memorizza uno stato: a ingressi stabilizzati corrisponde l'uscita prevista dalla funzione. Il metodo di progetto è: definire ingressi e uscite, costruire la tabella, ricavare e semplificare la funzione, disegnare il circuito, verificarlo.
+Una [rete combinatoria](/risorse/glossario/index.qmd#gloss-rete-combinatoria) non memorizza uno stato: a ingressi stabilizzati corrisponde l'uscita prevista dalla funzione. Il metodo di progetto è: definire ingressi e uscite, costruire la tabella, ricavare e semplificare la funzione, disegnare il circuito, verificarlo.
 
-#### Votazione a maggioranza
+### Votazione a maggioranza
 
 ::: center
 ![Schema didattico 15](/assets/dispense/tpsee-elettronici/figura-15.png){fig-alt="Schema didattico 15 della dispensa TPSEE · Elettronici"}
 :::
 
-Tre ingressi $A,B,C$ rappresentano tre voti. L'uscita vale 1 se almeno due voti sono 1: le combinazioni sono $011,101,110,111$. $$Y=AB+AC+BC.$$ Si usano tre [AND](glossario.qmd#gloss-g2) e una [OR](glossario.qmd#gloss-g2) a tre ingressi (oppure una [rete](glossario.qmd#gloss-g67) equivalente). Prova tutte le otto combinazioni: $100$ dà 0, mentre $110$ dà 1.
+Tre ingressi $A,B,C$ rappresentano tre voti. L'uscita vale 1 se almeno due voti sono 1: le combinazioni sono $011,101,110,111$. $$Y=AB+AC+BC.$$ Si usano tre [AND](/risorse/glossario/index.qmd#gloss-and) e una [OR](/risorse/glossario/index.qmd#gloss-or) a tre ingressi (oppure una [rete](/risorse/glossario/index.qmd#gloss-rete) equivalente). Prova tutte le otto combinazioni: $100$ dà 0, mentre $110$ dà 1.
 
 ## U.D. 3.6 / Semisommatori e sommatori {#ud:3.6}
 
-Indichiamo con $A$ e $B$ i [bit](glossario.qmd#gloss-g7) da sommare, $S$ il [bit](glossario.qmd#gloss-g7) di somma e $C$ il riporto. Il **semisommatore** ([half adder](glossario.qmd#gloss-g23), [HA](glossario.qmd#gloss-g23)) somma due [bit](glossario.qmd#gloss-g7): $S=A\oplus B$ e $C=AB$. Per $A=B=1$ otteniamo $C S=10_2$. Il **sommatore completo** ([full adder](glossario.qmd#gloss-g20), [FA](glossario.qmd#gloss-g20)) riceve anche il riporto entrante $C_{\mathrm{in}}$; $C_{\mathrm{out}}$ è il riporto uscente: $$S=A\oplus B\oplus C_{\mathrm{in}},\qquad
+Indichiamo con $A$ e $B$ i [bit](/risorse/glossario/index.qmd#gloss-bit) da sommare, $S$ il [bit](/risorse/glossario/index.qmd#gloss-bit) di somma e $C$ il riporto. Il **semisommatore** ([half adder](/risorse/glossario/index.qmd#gloss-half-adder-ha), [HA](/risorse/glossario/index.qmd#gloss-half-adder-ha)) somma due [bit](/risorse/glossario/index.qmd#gloss-bit): $S=A\oplus B$ e $C=AB$. Per $A=B=1$ otteniamo $C S=10_2$. Il **sommatore completo** ([full adder](/risorse/glossario/index.qmd#gloss-full-adder-fa), [FA](/risorse/glossario/index.qmd#gloss-full-adder-fa)) riceve anche il riporto entrante $C_{\mathrm{in}}$; $C_{\mathrm{out}}$ è il riporto uscente: $$S=A\oplus B\oplus C_{\mathrm{in}},\qquad
 C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B).$$
 
 ::: center
 ![Schema didattico 16](/assets/dispense/tpsee-elettronici/figura-16.png){fig-alt="Schema didattico 16 della dispensa TPSEE · Elettronici"}
 :::
 
-*Un [full adder](glossario.qmd#gloss-g20) si costruisce con due [half adder](glossario.qmd#gloss-g23) e una [OR](glossario.qmd#gloss-g2): $C_2=P C_{\mathrm{in}}$.*
+*Un [full adder](/risorse/glossario/index.qmd#gloss-full-adder-fa) si costruisce con due [half adder](/risorse/glossario/index.qmd#gloss-half-adder-ha) e una [OR](/risorse/glossario/index.qmd#gloss-or): $C_2=P C_{\mathrm{in}}$.*
 
 ::: center
    $A$   $B$   $C_{\mathrm{in}}$   $S$   $C_{\mathrm{out}}$
@@ -176,48 +177,48 @@ C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B).$$
 
 ## U.D. 3.7 / Comparatori {#ud:3.7}
 
-Un [comparatore](glossario.qmd#gloss-g12) digitale determina se $A>B$, $A=B$ oppure $A<B$. Per un solo [bit](glossario.qmd#gloss-g7), $G$ indica maggiore, $E$ uguale e $L$ minore. Le tre uscite sono: $$G=A\overline B,\qquad E=\overline{A\oplus B},\qquad L=\overline A B.$$ A ingressi stabili, una sola delle tre condizioni è vera. Con più [bit](glossario.qmd#gloss-g7) si parte dalla posizione più significativa: la prima coppia diversa decide quale numero è maggiore.
+Un [comparatore](/risorse/glossario/index.qmd#gloss-comparatore) digitale determina se $A>B$, $A=B$ oppure $A<B$. Per un solo [bit](/risorse/glossario/index.qmd#gloss-bit), $G$ indica maggiore, $E$ uguale e $L$ minore. Le tre uscite sono: $$G=A\overline B,\qquad E=\overline{A\oplus B},\qquad L=\overline A B.$$ A ingressi stabili, una sola delle tre condizioni è vera. Con più [bit](/risorse/glossario/index.qmd#gloss-bit) si parte dalla posizione più significativa: la prima coppia diversa decide quale numero è maggiore.
 
 
 ![Comparatore a un bit: tre reti logiche distinte.](/assets/fondamenti/comparatore.svg)
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/comparatore.svg)
 
-#### Confrontare due parole
+### Confrontare due parole
 
-$A=1010_2$ e $B=1001_2$: i [bit](glossario.qmd#gloss-g7) di peso 8 sono uguali, quelli di peso 4 sono uguali, ma al peso 2 troviamo $1>0$. Quindi $A>B$, indipendentemente dall'ultimo [bit](glossario.qmd#gloss-g7). In decimale, $10>9$.
+$A=1010_2$ e $B=1001_2$: i [bit](/risorse/glossario/index.qmd#gloss-bit) di peso 8 sono uguali, quelli di peso 4 sono uguali, ma al peso 2 troviamo $1>0$. Quindi $A>B$, indipendentemente dall'ultimo [bit](/risorse/glossario/index.qmd#gloss-bit). In decimale, $10>9$.
 
-[Approfondimento: tradurre il confronto a due [bit](glossario.qmd#gloss-g7) in una formula](approfondimenti.qmd#app:logica) (p. ).
+[Approfondimento: tradurre il confronto a due [bit](/risorse/glossario/index.qmd#gloss-bit) in una formula](approfondimenti.qmd#app:logica).
 
-## U.D. 3.8 / [Decoder](glossario.qmd#gloss-g13) binari {#ud:3.8}
+## U.D. 3.8 / [Decoder](/risorse/glossario/index.qmd#gloss-decoder) binari {#ud:3.8}
 
-Un [decoder](glossario.qmd#gloss-g13) completo con $n$ ingressi di indirizzo seleziona una fra $2^n$ uscite, se abilitato. Consideriamo un [decoder](glossario.qmd#gloss-g13) ideale $2\to4$ con uscite attive alte e abilitazione $E$: $$Y_0=E\overline A\,\overline B,\quad Y_1=E\overline A B,\quad
-Y_2=EA\overline B,\quad Y_3=EAB.$$ Qui $A$ è il [bit](glossario.qmd#gloss-g7) più significativo e $B$ quello meno significativo.
+Un [decoder](/risorse/glossario/index.qmd#gloss-decoder) completo con $n$ ingressi di indirizzo seleziona una fra $2^n$ uscite, se abilitato. Consideriamo un [decoder](/risorse/glossario/index.qmd#gloss-decoder) ideale $2\to4$ con uscite attive alte e abilitazione $E$: $$Y_0=E\overline A\,\overline B,\quad Y_1=E\overline A B,\quad
+Y_2=EA\overline B,\quad Y_3=EAB.$$ Qui $A$ è il [bit](/risorse/glossario/index.qmd#gloss-bit) più significativo e $B$ quello meno significativo.
 
 ::: center
 ![Schema didattico 17](/assets/dispense/tpsee-elettronici/figura-17.png){fig-alt="Schema didattico 17 della dispensa TPSEE · Elettronici"}
 :::
 
-#### Selezionare non significa sempre portare a 1
+### Selezionare non significa sempre portare a 1
 
-In un [decoder](glossario.qmd#gloss-g13) con uscite attive basse, l'uscita selezionata va a 0 e le altre restano a 1. È il caso dei 74LS138 e 74LS154 dell'[U.D. 3.15](modulo-3.qmd#ud:3.15). Occorre sempre leggere la polarità delle uscite e le condizioni di abilitazione.
+In un [decoder](/risorse/glossario/index.qmd#gloss-decoder) con uscite attive basse, l'uscita selezionata va a 0 e le altre restano a 1. È il caso dei 74LS138 e 74LS154 dell'[U.D. 3.15](modulo-3.qmd#ud:3.15). Occorre sempre leggere la polarità delle uscite e le condizioni di abilitazione.
 
-**Prova tu.** Nel [decoder](glossario.qmd#gloss-g13) ideale sopra, $E=0$ forza tutte le uscite a 0; con $E=1$ e $AB=11$, si attiva soltanto $Y_3$.
+**Prova tu.** Nel [decoder](/risorse/glossario/index.qmd#gloss-decoder) ideale sopra, $E=0$ forza tutte le uscite a 0; con $E=1$ e $AB=11$, si attiva soltanto $Y_3$.
 
-## Dai quattro [bit](glossario.qmd#gloss-g7) alla cifra luminosa {#topic:11}
+## Dai quattro [bit](/risorse/glossario/index.qmd#gloss-bit) alla cifra luminosa {#topic:11}
 
-## U.D. 3.9 / [Decoder](glossario.qmd#gloss-g13) [BCD](glossario.qmd#gloss-g5) - 7 segmenti {#ud:3.9}
+## U.D. 3.9 / [Decoder](/risorse/glossario/index.qmd#gloss-decoder) [BCD](/risorse/glossario/index.qmd#gloss-bcd) - 7 segmenti {#ud:3.9}
 
-Il codice [BCD](glossario.qmd#gloss-g5) (Binary Coded Decimal) rappresenta ogni cifra decimale con quattro [bit](glossario.qmd#gloss-g7): da $0000$ a $1001$. Per esempio $25_{10}$ in [BCD](glossario.qmd#gloss-g5) è $0010\ 0101$, mentre in binario puro è $11001_2$. Un [decoder](glossario.qmd#gloss-g13) BCD--7 segmenti genera i sette comandi per rappresentare una cifra.
+Il codice [BCD](/risorse/glossario/index.qmd#gloss-bcd) (Binary Coded Decimal) rappresenta ogni cifra decimale con quattro [bit](/risorse/glossario/index.qmd#gloss-bit): da $0000$ a $1001$. Per esempio $25_{10}$ in [BCD](/risorse/glossario/index.qmd#gloss-bcd) è $0010\ 0101$, mentre in binario puro è $11001_2$. Un [decoder](/risorse/glossario/index.qmd#gloss-decoder) BCD--7 segmenti genera i sette comandi per rappresentare una cifra.
 
 ::: center
 ![Schema didattico 18](/assets/dispense/tpsee-elettronici/figura-18.png){fig-alt="Schema didattico 18 della dispensa TPSEE · Elettronici"}
 :::
 
-*Schema funzionale: i resistori e gli eventuali [driver](glossario.qmd#gloss-g59) non sono mostrati.*
+*Schema funzionale: i resistori e gli eventuali [driver](/risorse/glossario/index.qmd#gloss-pilotaggio-driver) non sono mostrati.*
 
 ::: center
-   **Cifra**   **[BCD](glossario.qmd#gloss-g5)**  **Segmenti accesi**
+   **Cifra**   **[BCD](/risorse/glossario/index.qmd#gloss-bcd)**  **Segmenti accesi**
   ----------- ----------------------------------- ---------------------
        0                     0000                 $a,b,c,d,e,f$
        1                     0001                 $b,c$
@@ -231,11 +232,11 @@ Il codice [BCD](glossario.qmd#gloss-g5) (Binary Coded Decimal) rappresenta ogni 
        9                     1001                 $a,b,c,d,f,g$
 :::
 
-## U.D. 3.10 / Principio di funzionamento di un [display a 7 segmenti](glossario.qmd#gloss-g14) e diodi [LED](glossario.qmd#gloss-g34) {#ud:3.10}
+## U.D. 3.10 / Principio di funzionamento di un [display a 7 segmenti](/risorse/glossario/index.qmd#gloss-display-a-7-segmenti) e diodi [LED](/risorse/glossario/index.qmd#gloss-led) {#ud:3.10}
 
-Il [LED](glossario.qmd#gloss-g34) emette luce quando è attraversato da [corrente](glossario.qmd#gloss-new69) diretta. Nel display a **catodo comune** i catodi sono collegati insieme; in quello ad **anodo comune** sono comuni gli anodi. Servono un [pilotaggio](glossario.qmd#gloss-g59) compatibile e, normalmente, **un resistore per ogni segmento**: un solo resistore sul comune farebbe dipendere la [corrente](glossario.qmd#gloss-new69) dal numero di segmenti accesi.
+Il [LED](/risorse/glossario/index.qmd#gloss-led) emette luce quando è attraversato da [corrente](/risorse/glossario/index.qmd#gloss-corrente) diretta. Nel display a **catodo comune** i catodi sono collegati insieme; in quello ad **anodo comune** sono comuni gli anodi. Servono un [pilotaggio](/risorse/glossario/index.qmd#gloss-pilotaggio-driver) compatibile e, normalmente, **un resistore per ogni segmento**: un solo resistore sul comune farebbe dipendere la [corrente](/risorse/glossario/index.qmd#gloss-corrente) dal numero di segmenti accesi.
 
-#### Dimensionare un resistore per un segmento
+### Dimensionare un resistore per un segmento
 
 La tensione sul resistore è quella di alimentazione meno la caduta sul LED. Per la legge di Ohm: **resistenza \[$\Omega$\] = tensione sul resistore \[V\] / corrente \[A\]**. $$R=\frac{V_{\mathrm{alim}}-V_F}{I},$$ dove $V_{\mathrm{alim}}$ è l'alimentazione, $V_F$ la caduta diretta del LED e $I$ la corrente desiderata.
 
@@ -243,80 +244,80 @@ La tensione sul resistore è quella di alimentazione meno la caduta sul LED. Per
 ![Schema didattico 19](/assets/dispense/tpsee-elettronici/figura-19.png){fig-alt="Schema didattico 19 della dispensa TPSEE · Elettronici"}
 :::
 
-Con [pilotaggio](glossario.qmd#gloss-g59) ideale da $5\,\mathrm{V}$, [LED](glossario.qmd#gloss-g34) con [tensione](glossario.qmd#gloss-new68) diretta $V_F=2\,\mathrm{V}$ e [corrente](glossario.qmd#gloss-new69) desiderata $5\,\mathrm{mA}$: $$R=\frac{5-2}{0{,}005}=600\,\Omega.$$ Si può scegliere $620\,\Omega$, ottenendo circa $4{,}8\,\mathrm{mA}$. Con un [driver](glossario.qmd#gloss-g59) reale si considera anche la sua caduta di [tensione](glossario.qmd#gloss-new68) e si verifica la [corrente](glossario.qmd#gloss-new69) disponibile.
+Con [pilotaggio](/risorse/glossario/index.qmd#gloss-pilotaggio-driver) ideale da $5\,\mathrm{V}$, [LED](/risorse/glossario/index.qmd#gloss-led) con [tensione](/risorse/glossario/index.qmd#gloss-tensione) diretta $V_F=2\,\mathrm{V}$ e [corrente](/risorse/glossario/index.qmd#gloss-corrente) desiderata $5\,\mathrm{mA}$: $$R=\frac{5-2}{0{,}005}=600\,\Omega.$$ Si può scegliere $620\,\Omega$, ottenendo circa $4{,}8\,\mathrm{mA}$. Con un [driver](/risorse/glossario/index.qmd#gloss-pilotaggio-driver) reale si considera anche la sua caduta di [tensione](/risorse/glossario/index.qmd#gloss-tensione) e si verifica la [corrente](/risorse/glossario/index.qmd#gloss-corrente) disponibile.
 
-I codici da 1010 a 1111 non sono cifre [BCD](glossario.qmd#gloss-g5) valide: la visualizzazione dipende dal [decoder](glossario.qmd#gloss-g13). Non assumere che il display si spenga automaticamente.
+I codici da 1010 a 1111 non sono cifre [BCD](/risorse/glossario/index.qmd#gloss-bcd) valide: la visualizzazione dipende dal [decoder](/risorse/glossario/index.qmd#gloss-decoder). Non assumere che il display si spenga automaticamente.
 
-## Il [multiplexer](glossario.qmd#gloss-g38): scegliere un segnale {#topic:12}
+## Il [multiplexer](/risorse/glossario/index.qmd#gloss-mux): scegliere un segnale {#topic:12}
 
 ## U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale {#ud:3.11}
 
-Un [multiplexer](glossario.qmd#gloss-g38), o [MUX](glossario.qmd#gloss-g38), collega logicamente uno fra più ingressi dati all'uscita. Le linee di selezione indicano quale ingresso scegliere. Per un [MUX](glossario.qmd#gloss-g38) $2\to1$ ideale: $$Y=\overline S D_0+S D_1.$$ Con $S=0$ passa $D_0$; con $S=1$ passa $D_1$. Una realizzazione usa una [NOT](glossario.qmd#gloss-g2), due [AND](glossario.qmd#gloss-g2) e una [OR](glossario.qmd#gloss-g2).
+Un [multiplexer](/risorse/glossario/index.qmd#gloss-mux), o [MUX](/risorse/glossario/index.qmd#gloss-mux), collega logicamente uno fra più ingressi dati all'uscita. Le linee di selezione indicano quale ingresso scegliere. Per un [MUX](/risorse/glossario/index.qmd#gloss-mux) $2\to1$ ideale: $$Y=\overline S D_0+S D_1.$$ Con $S=0$ passa $D_0$; con $S=1$ passa $D_1$. Una realizzazione usa una [NOT](/risorse/glossario/index.qmd#gloss-not), due [AND](/risorse/glossario/index.qmd#gloss-and) e una [OR](/risorse/glossario/index.qmd#gloss-or).
 
-## U.D. 3.12 / [MUX](glossario.qmd#gloss-g38) a 4, 8, 16 ingressi {#ud:3.12}
+## U.D. 3.12 / [MUX](/risorse/glossario/index.qmd#gloss-mux) a 4, 8, 16 ingressi {#ud:3.12}
 
-Con $k$ selettori si indirizzano $2^k$ ingressi: 2 selettori per 4 ingressi, 3 per 8 e 4 per 16. Usiamo $S_0$ come selettore meno significativo: in $S_1S_0$, $S_1$ pesa 2 e $S_0$ pesa 1. Per un [MUX](glossario.qmd#gloss-g38) $4\to1$: $$Y=\overline{S_1}\,\overline{S_0}D_0+\overline{S_1}S_0D_1+
+Con $k$ selettori si indirizzano $2^k$ ingressi: 2 selettori per 4 ingressi, 3 per 8 e 4 per 16. Usiamo $S_0$ come selettore meno significativo: in $S_1S_0$, $S_1$ pesa 2 e $S_0$ pesa 1. Per un [MUX](/risorse/glossario/index.qmd#gloss-mux) $4\to1$: $$Y=\overline{S_1}\,\overline{S_0}D_0+\overline{S_1}S_0D_1+
 S_1\overline{S_0}D_2+S_1S_0D_3.$$
 
 ::: center
 ![Schema didattico 20](/assets/dispense/tpsee-elettronici/figura-20.png){fig-alt="Schema didattico 20 della dispensa TPSEE · Elettronici"}
 :::
 
-## U.D. 3.13 / Implementazioni di funzioni logiche tramite [MUX](glossario.qmd#gloss-g38) {#ud:3.13}
+## U.D. 3.13 / Implementazioni di funzioni logiche tramite [MUX](/risorse/glossario/index.qmd#gloss-mux) {#ud:3.13}
 
-Per realizzare una funzione di $n$ variabili con un [MUX](glossario.qmd#gloss-g38) $2^n\to1$, collega le variabili ai selettori e gli ingressi dati a 0 o 1 secondo la [tabella di verità](glossario.qmd#gloss-g48). [Un esempio con meno selettori](approfondimenti.qmd#app:logica) è disponibile nell’approfondimento collegato.
+Per realizzare una funzione di $n$ variabili con un [MUX](/risorse/glossario/index.qmd#gloss-mux) $2^n\to1$, collega le variabili ai selettori e gli ingressi dati a 0 o 1 secondo la [tabella di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita). [Un esempio con meno selettori](approfondimenti.qmd#app:logica) è disponibile nell’approfondimento collegato.
 
-#### Realizzare una [XOR](glossario.qmd#gloss-g56) con un [MUX](glossario.qmd#gloss-g38) a quattro ingressi
+### Realizzare una [XOR](/risorse/glossario/index.qmd#gloss-xor) con un [MUX](/risorse/glossario/index.qmd#gloss-mux) a quattro ingressi
 
 ::: center
 ![Schema didattico 21](/assets/dispense/tpsee-elettronici/figura-21.png){fig-alt="Schema didattico 21 della dispensa TPSEE · Elettronici"}
 :::
 
-Per $Y=A\oplus B$, imposta $S_1=A$, $S_0=B$ e: $$D_0=0,\qquad D_1=1,\qquad D_2=1,\qquad D_3=0.$$ Con $AB=10$ viene selezionato $D_2=1$; con $AB=11$ viene selezionato $D_3=0$. La tabella del [MUX](glossario.qmd#gloss-g38) coincide con quella della [XOR](glossario.qmd#gloss-g56).
+Per $Y=A\oplus B$, imposta $S_1=A$, $S_0=B$ e: $$D_0=0,\qquad D_1=1,\qquad D_2=1,\qquad D_3=0.$$ Con $AB=10$ viene selezionato $D_2=1$; con $AB=11$ viene selezionato $D_3=0$. La tabella del [MUX](/risorse/glossario/index.qmd#gloss-mux) coincide con quella della [XOR](/risorse/glossario/index.qmd#gloss-xor).
 
-**Prova tu.** Realizza una [AND](glossario.qmd#gloss-g2) con lo stesso [MUX](glossario.qmd#gloss-g38).
+**Prova tu.** Realizza una [AND](/risorse/glossario/index.qmd#gloss-and) con lo stesso [MUX](/risorse/glossario/index.qmd#gloss-mux).
 
-**Soluzione:** $D_0=D_1=D_2=0$, $D_3=1$. Gli esempi assumono un'uscita non invertente e il [MUX](glossario.qmd#gloss-g38) abilitato.
+**Soluzione:** $D_0=D_1=D_2=0$, $D_3=1$. Gli esempi assumono un'uscita non invertente e il [MUX](/risorse/glossario/index.qmd#gloss-mux) abilitato.
 
-## Dallo schema ideale all'[integrato](glossario.qmd#gloss-new77) {#topic:13}
+## Dallo schema ideale all'[integrato](/risorse/glossario/index.qmd#gloss-integrato) {#topic:13}
 
-Un **[circuito integrato](glossario.qmd#gloss-new77)**, spesso chiamato semplicemente **[integrato](glossario.qmd#gloss-new77)**, contiene molti componenti elettronici miniaturizzati, soprattutto transistor, realizzati e collegati su un piccolo pezzo di materiale semiconduttore, di solito silicio. Un contenitore lo protegge; i terminali, detti **pin**, permettono di collegarlo al circuito esterno. Può contenere, per esempio, porte logiche, un [multiplexer](glossario.qmd#gloss-g38) o un contatore.
+Un **[circuito integrato](/risorse/glossario/index.qmd#gloss-integrato)**, spesso chiamato semplicemente **[integrato](/risorse/glossario/index.qmd#gloss-integrato)**, contiene molti componenti elettronici miniaturizzati, soprattutto transistor, realizzati e collegati su un piccolo pezzo di materiale semiconduttore, di solito silicio. Un contenitore lo protegge; i terminali, detti **pin**, permettono di collegarlo al circuito esterno. Può contenere, per esempio, porte logiche, un [multiplexer](/risorse/glossario/index.qmd#gloss-mux) o un contatore.
 
-#### Alimentazione / il condensatore di disaccoppiamento
+### Alimentazione / il condensatore di disaccoppiamento
 
-Quando un [integrato](glossario.qmd#gloss-new77) cambia stato, può richiedere brevi impulsi di [corrente](glossario.qmd#gloss-new69). Un condensatore tra alimentazione e massa, vicino ai pin di alimentazione, offre una piccola riserva locale di energia e aiuta a ridurre i disturbi sulla [tensione](glossario.qmd#gloss-new68). Si chiama **condensatore di disaccoppiamento**: $100\,\mathrm{nF}$ è un valore tipico; valore e collegamento vanno verificati nella scheda tecnica del componente (datasheet).
+Quando un [integrato](/risorse/glossario/index.qmd#gloss-integrato) cambia stato, può richiedere brevi impulsi di [corrente](/risorse/glossario/index.qmd#gloss-corrente). Un condensatore tra alimentazione e massa, vicino ai pin di alimentazione, offre una piccola riserva locale di energia e aiuta a ridurre i disturbi sulla [tensione](/risorse/glossario/index.qmd#gloss-tensione). Si chiama **condensatore di disaccoppiamento**: $100\,\mathrm{nF}$ è un valore tipico; valore e collegamento vanno verificati nella scheda tecnica del componente (datasheet).
 
 
 ![Collegamento del condensatore fra i pin di alimentazione dell’integrato.](/assets/fondamenti/disaccoppiamento.svg)
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/disaccoppiamento.svg)
 
-## U.D. 3.14 / [MUX](glossario.qmd#gloss-g38): 74LS150, 74LS151 {#ud:3.14}
+## U.D. 3.14 / [MUX](/risorse/glossario/index.qmd#gloss-mux): 74LS150, 74LS151 {#ud:3.14}
 
-Consideriamo un [MUX](glossario.qmd#gloss-g38) a 16 ingressi (74LS150) e uno a 8 ingressi (74LS151). Il 151 dispone di uscita diretta e complementata; il 150 ha uscita invertita. Con [strobe](glossario.qmd#gloss-g60) [attivo basso](glossario.qmd#gloss-g4) a 0 il dato è selezionato; con [strobe](glossario.qmd#gloss-g60) a 1, nel 151 l'uscita diretta è 0 e la complementata è 1, mentre nel 150 l'uscita è 1. **Esempio.** Con $CBA=101$ nel 151 viene selezionato $D_5$. Se $D_5=1$ e lo [strobe](glossario.qmd#gloss-g60) è 0, l'uscita diretta è 1 e quella complementata è 0. Le lettere $A,B,C$ del datasheet corrispondono qui ai selettori dal meno al più significativo.
+Consideriamo un [MUX](/risorse/glossario/index.qmd#gloss-mux) a 16 ingressi (74LS150) e uno a 8 ingressi (74LS151). Il 151 dispone di uscita diretta e complementata; il 150 ha uscita invertita. Con [strobe](/risorse/glossario/index.qmd#gloss-strobe) [attivo basso](/risorse/glossario/index.qmd#gloss-attivo-alto-basso) a 0 il dato è selezionato; con [strobe](/risorse/glossario/index.qmd#gloss-strobe) a 1, nel 151 l'uscita diretta è 0 e la complementata è 1, mentre nel 150 l'uscita è 1. **Esempio.** Con $CBA=101$ nel 151 viene selezionato $D_5$. Se $D_5=1$ e lo [strobe](/risorse/glossario/index.qmd#gloss-strobe) è 0, l'uscita diretta è 1 e quella complementata è 0. Le lettere $A,B,C$ del datasheet corrispondono qui ai selettori dal meno al più significativo.
 
-## [Decoder](glossario.qmd#gloss-g13) e comparatori reali {#topic:14}
+## [Decoder](/risorse/glossario/index.qmd#gloss-decoder) e comparatori reali {#topic:14}
 
-## U.D. 3.15 / [DECODER](glossario.qmd#gloss-g13): 74LS154, 74LS138 {#ud:3.15}
+## U.D. 3.15 / [DECODER](/risorse/glossario/index.qmd#gloss-decoder): 74LS154, 74LS138 {#ud:3.15}
 
-Il 74LS154 è un [decoder](glossario.qmd#gloss-g13) $4\to16$ con due abilitazioni attive basse; il 74LS138 è $3\to8$ con un'abilitazione attiva alta e due attive basse. Entrambi selezionano un'uscita portandola a 0.
+Il 74LS154 è un [decoder](/risorse/glossario/index.qmd#gloss-decoder) $4\to16$ con due abilitazioni attive basse; il 74LS138 è $3\to8$ con un'abilitazione attiva alta e due attive basse. Entrambi selezionano un'uscita portandola a 0.
 
-  **[Integrato](glossario.qmd#gloss-new77)**   **Condizione di abilitazione**                          **Quando è disabilitato**
+  **[Integrato](/risorse/glossario/index.qmd#gloss-integrato)**   **Condizione di abilitazione**                          **Quando è disabilitato**
   -------------------------------------------- ------------------------------------------------------- ---------------------------
-  74LS154                                      Entrambi gli [enable](glossario.qmd#gloss-g16) bassi    Tutte le uscite alte
+  74LS154                                      Entrambi gli [enable](/risorse/glossario/index.qmd#gloss-enable) bassi    Tutte le uscite alte
   74LS138                                      $G_1=1$, $\overline{G_{2A}}=0$, $\overline{G_{2B}}=0$   Tutte le uscite alte
 
-**Esempio.** Nel 138 abilitato, con $CBA=011$, $Y_3=0$ e tutte le altre uscite valgono 1. Nei nomi degli [enable](glossario.qmd#gloss-g16), la barra indica la polarità attiva, non una [tensione](glossario.qmd#gloss-new68) negativa.
+**Esempio.** Nel 138 abilitato, con $CBA=011$, $Y_3=0$ e tutte le altre uscite valgono 1. Nei nomi degli [enable](/risorse/glossario/index.qmd#gloss-enable), la barra indica la polarità attiva, non una [tensione](/risorse/glossario/index.qmd#gloss-tensione) negativa.
 
-## U.D. 3.16 / [COMPARATORE](glossario.qmd#gloss-g12) 74LS85 {#ud:3.16}
+## U.D. 3.16 / [COMPARATORE](/risorse/glossario/index.qmd#gloss-comparatore) 74LS85 {#ud:3.16}
 
-Il 74LS85 confronta due parole di 4 [bit](glossario.qmd#gloss-g7) e fornisce tre uscite: maggiore, uguale, minore. Possiede ingressi di espansione per il collegamento in cascata. Usato da solo, imposta gli ingressi di cascata: $I_{A=B}=1$ e $I_{A>B}=I_{A<B}=0$.
+Il 74LS85 confronta due parole di 4 [bit](/risorse/glossario/index.qmd#gloss-bit) e fornisce tre uscite: maggiore, uguale, minore. Possiede ingressi di espansione per il collegamento in cascata. Usato da solo, imposta gli ingressi di cascata: $I_{A=B}=1$ e $I_{A>B}=I_{A<B}=0$.
 
 ![74LS85 singolo: ingressi di espansione definiti e tre uscite di confronto.](/assets/fondamenti/singolo-85.svg)
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/singolo-85.svg)
 
-Per confrontare 8 [bit](glossario.qmd#gloss-g7), le uscite dello stadio meno significativo vanno ai corrispondenti ingressi di cascata di quello più significativo; il risultato finale si legge su quest'ultimo. Il confronto dei [bit](glossario.qmd#gloss-g7) superiori prevale, salvo uguaglianza.
+Per confrontare 8 [bit](/risorse/glossario/index.qmd#gloss-bit), le uscite dello stadio meno significativo vanno ai corrispondenti ingressi di cascata di quello più significativo; il risultato finale si legge su quest'ultimo. Il confronto dei [bit](/risorse/glossario/index.qmd#gloss-bit) superiori prevale, salvo uguaglianza.
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-3.qmd)

@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Fondamenti del corso"
 search: false
 toc: false

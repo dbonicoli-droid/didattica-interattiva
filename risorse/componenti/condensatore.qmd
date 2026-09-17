@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Condensatore"
 description: "Da carica e tensione alla dinamica RC, alla risposta in frequenza e alla trasformata di Laplace."
 toc-depth: 2

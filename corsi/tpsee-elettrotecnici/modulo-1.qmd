@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettrotecnici
 title: "Modulo 1 / Normativa e legislazione"
 subtitle: "Panoramica del Programma"
 ---
@@ -19,7 +20,7 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 **Primo periodo · 10 ore**
 
-Un [impianto](glossario.qmd#gloss-e47) deve funzionare, essere documentato e rispettare requisiti di sicurezza. Le norme tecniche danno un linguaggio comune e criteri per progettare, costruire e verificare.
+Un [impianto](/risorse/glossario/index.qmd#gloss-impianto) deve funzionare, essere documentato e rispettare requisiti di sicurezza. Le norme tecniche danno un linguaggio comune e criteri per progettare, costruire e verificare.
 
 ## U.D. 1.1 / Normalizzazione, unificazione e armonizzazione {#ud:1.1}
 
@@ -31,7 +32,7 @@ Un [impianto](glossario.qmd#gloss-e47) deve funzionare, essere documentato e ris
 
 Un connettore con forma, dimensioni e prestazioni definite può essere identificato correttamente e impiegato con componenti compatibili. La compatibilità meccanica, però, non garantisce da sola quella elettrica.
 
-#### Tre domande utili
+### Tre domande utili
 
 - Normalizzare: quali regole condividiamo?
 
@@ -41,13 +42,13 @@ Un connettore con forma, dimensioni e prestazioni definite può essere identific
 
 ## U.D. 1.2 / Organismi normatori {#ud:1.2}
 
-- **[IEC](glossario.qmd#gloss-e20)** (International Electrotechnical Commission): livello internazionale.
+- **[IEC](/risorse/glossario/index.qmd#gloss-iec)** (International Electrotechnical Commission): livello internazionale.
 
-- **[CENELEC](glossario.qmd#gloss-e8)** (Comité Européen de Normalisation Électrotechnique): livello europeo.
+- **[CENELEC](/risorse/glossario/index.qmd#gloss-cenelec)** (Comité Européen de Normalisation Électrotechnique): livello europeo.
 
-- **[CEI](glossario.qmd#gloss-e6)** (Comitato Elettrotecnico Italiano): normazione elettrotecnica italiana.
+- **[CEI](/risorse/glossario/index.qmd#gloss-cei)** (Comitato Elettrotecnico Italiano): normazione elettrotecnica italiana.
 
-- **[UNI](glossario.qmd#gloss-e45)** (Ente Italiano di Normazione): altri settori della normazione italiana.
+- **[UNI](/risorse/glossario/index.qmd#gloss-uni)** (Ente Italiano di Normazione): altri settori della normazione italiana.
 
 - Gli organismi normatori elaborano norme tecniche; le autorità competenti emanano le leggi.
 
@@ -55,13 +56,13 @@ Un connettore con forma, dimensioni e prestazioni definite può essere identific
 ![Schema didattico 2](/assets/dispense/tpsee-elettrotecnici/figura-2.png){fig-alt="Schema didattico 2 della dispensa TPSEE · Elettrotecnici"}
 :::
 
-*Relazioni semplificate: una sigla [CEI](glossario.qmd#gloss-e6) [EN](glossario.qmd#gloss-e17) [IEC](glossario.qmd#gloss-e20) può richiamare più livelli di normazione.*
+*Relazioni semplificate: una sigla [CEI](/risorse/glossario/index.qmd#gloss-cei) [EN](/risorse/glossario/index.qmd#gloss-en) [IEC](/risorse/glossario/index.qmd#gloss-iec) può richiamare più livelli di normazione.*
 
-#### Leggere un riferimento
+### Leggere un riferimento
 
-In un progetto compare "[CEI](glossario.qmd#gloss-e6) 64-8". Non è il nome di un componente: è un riferimento normativo per gli [impianti](glossario.qmd#gloss-e47) elettrici utilizzatori di bassa [tensione](glossario.qmd#gloss-new54). Per usarlo occorre individuare l'edizione applicabile, la parte e il requisito pertinente.
+In un progetto compare "[CEI](/risorse/glossario/index.qmd#gloss-cei) 64-8". Non è il nome di un componente: è un riferimento normativo per gli [impianti](/risorse/glossario/index.qmd#gloss-impianto) elettrici utilizzatori di bassa [tensione](/risorse/glossario/index.qmd#gloss-tensione). Per usarlo occorre individuare l'edizione applicabile, la parte e il requisito pertinente.
 
-**Prova tu.** Perché una [legenda](glossario.qmd#gloss-e49) è utile anche se i simboli sono convenzionali?
+**Prova tu.** Perché una [legenda](/risorse/glossario/index.qmd#gloss-legenda) è utile anche se i simboli sono convenzionali?
 
 *Risposta: chiarisce sigle, varianti e convenzioni adottate nel documento.*
 
@@ -75,26 +76,26 @@ In un progetto compare "[CEI](glossario.qmd#gloss-e6) 64-8". Non è il nome di u
 
   **Riferimento**                                                   **Idea da ricordare**
   ----------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Legge 186/1968                                                    Materiali e [impianti](glossario.qmd#gloss-e47) elettrici ed elettronici devono essere realizzati a regola d'arte; la legge riconosce il ruolo delle norme [CEI](glossario.qmd#gloss-e6).
-  [D.M.](glossario.qmd#gloss-e51) (decreto ministeriale) 37/2008    Disciplina gli [impianti](glossario.qmd#gloss-e47) negli edifici: imprese abilitate, progettazione e dichiarazione di conformità, secondo il campo e le condizioni previsti.
-  [D.Lgs.](glossario.qmd#gloss-e52) (decreto legislativo) 81/2008   Quadro della salute e sicurezza sul lavoro: valutazione dei rischi, prevenzione, formazione e responsabilità.
-  Norma [CEI](glossario.qmd#gloss-e6) 64-8                          Riferimento tecnico per progettazione, scelta dei componenti e verifica degli [impianti](glossario.qmd#gloss-e47) utilizzatori di bassa [tensione](glossario.qmd#gloss-new54).
+  Legge 186/1968                                                    Materiali e [impianti](/risorse/glossario/index.qmd#gloss-impianto) elettrici ed elettronici devono essere realizzati a regola d'arte; la legge riconosce il ruolo delle norme [CEI](/risorse/glossario/index.qmd#gloss-cei).
+  [D.M.](/risorse/glossario/index.qmd#gloss-d-m) (decreto ministeriale) 37/2008    Disciplina gli [impianti](/risorse/glossario/index.qmd#gloss-impianto) negli edifici: imprese abilitate, progettazione e dichiarazione di conformità, secondo il campo e le condizioni previsti.
+  [D.Lgs.](/risorse/glossario/index.qmd#gloss-d-lgs) (decreto legislativo) 81/2008   Quadro della salute e sicurezza sul lavoro: valutazione dei rischi, prevenzione, formazione e responsabilità.
+  Norma [CEI](/risorse/glossario/index.qmd#gloss-cei) 64-8                          Riferimento tecnico per progettazione, scelta dei componenti e verifica degli [impianti](/risorse/glossario/index.qmd#gloss-impianto) utilizzatori di bassa [tensione](/risorse/glossario/index.qmd#gloss-tensione).
 
-La documentazione segue l'[impianto](glossario.qmd#gloss-e47): descrive cosa è stato previsto e realizzato e permette di comprenderlo durante manutenzione e verifiche. La dichiarazione di conformità è rilasciata dall'impresa installatrice nei casi previsti, con gli allegati pertinenti.
+La documentazione segue l'[impianto](/risorse/glossario/index.qmd#gloss-impianto): descrive cosa è stato previsto e realizzato e permette di comprenderlo durante manutenzione e verifiche. La dichiarazione di conformità è rilasciata dall'impresa installatrice nei casi previsti, con gli allegati pertinenti.
 
 ::: center
 ![Schema didattico 3](/assets/dispense/tpsee-elettrotecnici/figura-3.png){fig-alt="Schema didattico 3 della dispensa TPSEE · Elettrotecnici"}
 :::
 
-#### Funzionare non basta
+### Funzionare non basta
 
-Una lampada può accendersi anche in un [impianto](glossario.qmd#gloss-e47) con connessioni difettose o protezioni inadeguate. La prova funzionale conferma il comportamento; le verifiche di sicurezza controllano altri requisiti, con strumenti e procedure appropriati.
+Una lampada può accendersi anche in un [impianto](/risorse/glossario/index.qmd#gloss-impianto) con connessioni difettose o protezioni inadeguate. La prova funzionale conferma il comportamento; le verifiche di sicurezza controllano altri requisiti, con strumenti e procedure appropriati.
 
 #### Esercizio di documentazione
 
-Una presa funziona, ma nello schema non compare e il [circuito](glossario.qmd#gloss-e46) che la alimenta non è identificato. Qual è il problema?
+Una presa funziona, ma nello schema non compare e il [circuito](/risorse/glossario/index.qmd#gloss-circuito) che la alimenta non è identificato. Qual è il problema?
 
-**Soluzione.** La corrispondenza fra [impianto](glossario.qmd#gloss-e47) e documentazione è incompleta: prima di intervenire servono identificazione e aggiornamento degli elaborati, a cura di chi ne ha competenza.
+**Soluzione.** La corrispondenza fra [impianto](/risorse/glossario/index.qmd#gloss-impianto) e documentazione è incompleta: prima di intervenire servono identificazione e aggiornamento degli elaborati, a cura di chi ne ha competenza.
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-1.qmd)

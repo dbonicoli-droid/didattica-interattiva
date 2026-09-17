@@ -1,0 +1,78 @@
+/*-- scss:defaults --*/
+// Tema scuro: è quello predefinito del sito.
+$body-bg: #11161d;
+$body-color: #dde5ef;
+$link-color: #5fd3e0;
+$code-bg: #1b2430;
+$code-color: #e8b9a0;
+$table-border-color: #2a3644;
+$card-bg: #181f29;
+$input-bg: #1b2430;
+$input-color: #dde5ef;
+$input-border-color: #33404f;
+$dropdown-bg: #181f29;
+$dropdown-link-color: #dde5ef;
+$dropdown-link-hover-bg: #222c39;
+$border-color: #2a3644;
+
+/*-- scss:rules --*/
+:root {
+  color-scheme: dark;
+
+  --sfondo: #11161d;
+  --superficie: #181f29;
+  --evidenza: #1e2733;
+  --bordo: #2a3644;
+  --bordo-forte: #3a4858;
+  --riga-alt: #1c242f;
+
+  --testo: #dde5ef;
+  --titolo: #f0f5fb;
+  --testo-tenue: #9aabbf;
+  --su-accento: #0c1118;
+
+  --tinta-accento: #7fb2c6;
+  --c-elettronici: var(--c-elettronici-d);
+  --c-elettrotecnici: var(--c-elettrotecnici-d);
+  --c-sistemi-automatici: var(--c-sistemi-automatici-d);
+  --c-domotica: var(--c-domotica-d);
+
+  --link: #6fd6e2;
+  --link-hover: #9ae7ef;
+  --fuoco: #ffc46b;
+  --punteggiato: #7b8da3;
+
+  --navbar-bg: #0c1118;
+  --navbar-testo: #eaf1f8;
+  --navbar-evidenza: #ffffff1f;
+  --campo-bg: #1b2430;
+  --campo-testo: #dde5ef;
+  --campo-segnaposto: #8fa1b6;
+
+  --etichetta-bg: #223040;
+  --etichetta-testo: #b7cade;
+
+  --stato-bozza: #9aabbf;
+  --stato-sviluppo: #ffc46b;
+  --stato-revisione: #ff9d8a;
+  --stato-completo: #7fd99a;
+
+  --ombra: 0 6px 24px rgb(0 0 0 / 34%);
+  --ombra-alta: 0 12px 30px rgb(0 0 0 / 46%);
+  --vignetta: .05;
+}
+
+/* La vignetta è un disegno a tratto scuro: nel tema scuro va invertita. */
+.course-background main::before { filter: invert(1) hue-rotate(180deg); }
+
+/* Gli schemi SVG e le figure delle dispense hanno fondo bianco:
+   un fondo chiaro esplicito evita che "galleggino" sul buio. */
+main.content :is(img, svg):not(.wip-icon):not([src$=".webp"]) {
+  background: #fbfcfe;
+  border-radius: .35rem;
+}
+
+.callout { border-color: var(--bordo) !important; }
+.callout-note { background: #16222e; }
+.callout-warning { background: #2a2214; }
+.callout-tip { background: #142519; }

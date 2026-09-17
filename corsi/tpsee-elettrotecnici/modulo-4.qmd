@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettrotecnici
 title: "Modulo 4 / Tecnologia dei materiali"
 subtitle: "Panoramica del Programma"
 ---
@@ -18,13 +19,13 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:4}
 
-**Primo e secondo periodo**
+**Primo e secondo periodo · ore da definire**
 
 La tecnologia dei materiali collega le proprietà di una sostanza al suo impiego. Vedremo perché conduttori, isolanti e materiali magnetici svolgono compiti diversi.
 
 ## U.D. 4.1 / Classificazione dei materiali in base alla loro funzione {#ud:4.1}
 
-- **Conduttori**: favoriscono il passaggio della [corrente](glossario.qmd#gloss-new55).
+- **Conduttori**: favoriscono il passaggio della [corrente](/risorse/glossario/index.qmd#gloss-corrente).
 
 - **Isolanti**: separano parti a diverso potenziale.
 
@@ -32,7 +33,7 @@ La tecnologia dei materiali collega le proprietà di una sostanza al suo impiego
 
 - **Materiali magnetici**: guidano il flusso magnetico in trasformatori, motori e relè.
 
-Uno stesso oggetto impiega più materiali: in un relè il rame conduce nella [bobina](glossario.qmd#gloss-e2), il rivestimento isola le spire, il nucleo ferromagnetico concentra il campo e i [contatti](glossario.qmd#gloss-e10) realizzano la commutazione.
+Uno stesso oggetto impiega più materiali: in un relè il rame conduce nella [bobina](/risorse/glossario/index.qmd#gloss-bobina), il rivestimento isola le spire, il nucleo ferromagnetico concentra il campo e i [contatti](/risorse/glossario/index.qmd#gloss-contatto) realizzano la commutazione.
 
 ::: center
 ![Schema didattico 14](/assets/dispense/tpsee-elettrotecnici/figura-14.png){fig-alt="Schema didattico 14 della dispensa TPSEE · Elettrotecnici"}
@@ -44,15 +45,15 @@ Una scelta corretta considera più proprietà insieme: un materiale molto condut
 
   **Famiglia**   **Proprietà**                                                                                           **Perché interessa**
   -------------- ------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------
-  Meccaniche     [Resistenza]{.no-component-link}, elasticità, duttilità, durezza                                 Fili piegabili, [contatti](glossario.qmd#gloss-e10) durevoli, supporti resistenti.
-  Elettriche     [Resistività](glossario.qmd#gloss-e38), [rigidità dielettrica](glossario.qmd#gloss-e39), permittività   Perdite, isolamento e comportamento del campo.
+  Meccaniche     [Resistenza]{.no-component-link}, elasticità, duttilità, durezza                                 Fili piegabili, [contatti](/risorse/glossario/index.qmd#gloss-contatto) durevoli, supporti resistenti.
+  Elettriche     [Resistività](/risorse/glossario/index.qmd#gloss-resistivita), [rigidità dielettrica](/risorse/glossario/index.qmd#gloss-rigidita-dielettrica), permittività   Perdite, isolamento e comportamento del campo.
   Termiche       Conducibilità termica, dilatazione, [resistenza]{.no-component-link} al calore                   Smaltimento del calore e stabilità dei collegamenti.
 
-La **[rigidità dielettrica](glossario.qmd#gloss-e39)** riguarda il campo elettrico che un isolante può sopportare prima della scarica, nelle condizioni di prova. Non coincide con la [resistenza](glossario.qmd#gloss-new56) elettrica e non rende uno spessore qualsiasi adatto a ogni [tensione](glossario.qmd#gloss-new54).
+La **[rigidità dielettrica](/risorse/glossario/index.qmd#gloss-rigidita-dielettrica)** riguarda il campo elettrico che un isolante può sopportare prima della scarica, nelle condizioni di prova. Non coincide con la [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) elettrica e non rende uno spessore qualsiasi adatto a ogni [tensione](/risorse/glossario/index.qmd#gloss-tensione).
 
-#### Scelta motivata
+### Scelta motivata
 
-Per un cavo flessibile non basta cercare bassa [resistività](glossario.qmd#gloss-e38): servono anche flessibilità dei conduttori, isolamento adatto e [resistenza]{.no-component-link} alle condizioni d'uso. La scelta nasce dalla funzione e dall'ambiente.
+Per un cavo flessibile non basta cercare bassa [resistività](/risorse/glossario/index.qmd#gloss-resistivita): servono anche flessibilità dei conduttori, isolamento adatto e [resistenza]{.no-component-link} alle condizioni d'uso. La scelta nasce dalla funzione e dall'ambiente.
 
 ## Scegliere i materiali conduttori {#topic:8}
 
@@ -60,22 +61,22 @@ Per un cavo flessibile non basta cercare bassa [resistività](glossario.qmd#glos
 
 - **Rame**: buona conducibilità e duttilità.
 
-- **Alluminio**: più leggero, ma con [resistività](glossario.qmd#gloss-e38) maggiore; a pari lunghezza e [resistenza](glossario.qmd#gloss-new56) serve una sezione maggiore.
+- **Alluminio**: più leggero, ma con [resistività](/risorse/glossario/index.qmd#gloss-resistivita) maggiore; a pari lunghezza e [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) serve una sezione maggiore.
 
 - **Leghe**: modificano proprietà meccaniche, [resistenza]{.no-component-link} alla corrosione e conducibilità.
 
   **Valore indicativo a 20 $^\circ$C**                                  **Rame**   **Alluminio**
   -------------------------------------------------------------------- ---------- ---------------
-  [Resistività](glossario.qmd#gloss-e38) ($\Omega\,\mathrm{mm^2/m}$)     0,0175       0,0282
+  [Resistività](/risorse/glossario/index.qmd#gloss-resistivita) ($\Omega\,\mathrm{mm^2/m}$)     0,0175       0,0282
   Densità ($\mathrm{g/cm^3}$)                                             8,9           2,7
 
-#### Stessa [resistenza](glossario.qmd#gloss-new56), sezioni diverse
+### Stessa [resistenza](/risorse/glossario/index.qmd#gloss-resistenza), sezioni diverse
 
 Per un conduttore uniforme: **resistenza \[$\Omega$\] = resistività \[$\Omega\,\mathrm{mm^2/m}$\] $\times$ lunghezza \[m\] / sezione \[$\mathrm{mm^2}$\]**. La relazione è $R=\rho\ell/S$: $\rho$ caratterizza il materiale, $\ell$ è la lunghezza e $S$ la sezione. A parità di $R$ e $\ell$, la sezione è proporzionale alla resistività.
 
-Per uguale lunghezza e [resistenza](glossario.qmd#gloss-new56): $$\frac{S_{\mathrm{Al}}}{S_{\mathrm{Cu}}}=\frac{\rho_{\mathrm{Al}}}{\rho_{\mathrm{Cu}}}=\frac{0{,}0282}{0{,}0175}\simeq1{,}61.$$ Un conduttore di rame da $10\,\mathrm{mm^2}$ equivale quindi, solo dal punto di vista resistivo, a circa $16{,}1\,\mathrm{mm^2}$ di alluminio. Non è un'autorizzazione alla sostituzione: cambiano [morsetti](glossario.qmd#gloss-e32), posa e condizioni termiche.
+Per uguale lunghezza e [resistenza](/risorse/glossario/index.qmd#gloss-resistenza): $$\frac{S_{\mathrm{Al}}}{S_{\mathrm{Cu}}}=\frac{\rho_{\mathrm{Al}}}{\rho_{\mathrm{Cu}}}=\frac{0{,}0282}{0{,}0175}\simeq1{,}61.$$ Un conduttore di rame da $10\,\mathrm{mm^2}$ equivale quindi, solo dal punto di vista resistivo, a circa $16{,}1\,\mathrm{mm^2}$ di alluminio. Non è un'autorizzazione alla sostituzione: cambiano [morsetti](/risorse/glossario/index.qmd#gloss-morsetto), posa e condizioni termiche.
 
-Nei metalli la [resistenza](glossario.qmd#gloss-new56) tende ad aumentare con la temperatura. [Il modello di calcolo e il grafico sono negli approfondimenti](approfondimenti.qmd#app:temperatura) (p. ).
+Nei metalli la [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) tende ad aumentare con la temperatura. [Il modello di calcolo e il grafico sono negli approfondimenti](approfondimenti.qmd#app:temperatura).
 
 ## Isolare e resistere al calore {#topic:9}
 
@@ -89,7 +90,7 @@ Nei metalli la [resistenza](glossario.qmd#gloss-new56) tende ad aumentare con la
 
 L'**invecchiamento termico** è il degrado progressivo dovuto al calore: può ridurre elasticità e prestazioni dielettriche. Una temperatura maggiore può accelerare l'invecchiamento; non esiste una durata universale ricavabile dalla sola temperatura.
 
-#### Due classificazioni da non confondere
+### Due classificazioni da non confondere
 
 La **classe termica** caratterizza la [resistenza]{.no-component-link} al calore del sistema isolante. La **classe di protezione dell'apparecchio** (per esempio I o II) riguarda invece le misure contro la scossa elettrica. Sono concetti diversi.
 
@@ -99,7 +100,7 @@ La **classe termica** caratterizza la [resistenza]{.no-component-link} al calore
         155 (F)          155 $^\circ$C   Una classe superiore sopporta condizioni termiche più elevate secondo la qualificazione prevista.
         180 (H)          180 $^\circ$C   Il valore non è la temperatura ambiente ammessa per qualsiasi apparecchio.
 
-Queste classi si incontrano, per esempio, negli avvolgimenti delle macchine elettriche. I limiti effettivi di esercizio dipendono dal progetto, dai punti caldi e dai dati del costruttore. Non si trasferiscono automaticamente ai cavi dell'[impianto](glossario.qmd#gloss-e47).
+Queste classi si incontrano, per esempio, negli avvolgimenti delle macchine elettriche. I limiti effettivi di esercizio dipendono dal progetto, dai punti caldi e dai dati del costruttore. Non si trasferiscono automaticamente ai cavi dell'[impianto](/risorse/glossario/index.qmd#gloss-impianto).
 
 #### Leggere una targa con criterio
 

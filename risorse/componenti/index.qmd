@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Componenti / Dal circuito alle trasformate"
 description: "Resistore, condensatore, induttore, diodo e transistor: un percorso progressivo condiviso fra i corsi."
 toc: false

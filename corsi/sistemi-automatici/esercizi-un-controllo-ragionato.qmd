@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Esercizi / Un controllo ragionato"
 ---
 
@@ -6,39 +7,39 @@ title: "Esercizi / Un controllo ragionato"
 
 []{#sec:sintesi}
 
-**1 · [Sistema](glossario.qmd#gloss-s23).** Un termostato legge la temperatura e accende il riscaldamento. Indica [ingresso](glossario.qmd#gloss-s9) manipolato, [uscita](glossario.qmd#gloss-s26), [disturbo](glossario.qmd#gloss-s5) e natura statica o dinamica della stanza.
+**1 · [Sistema](/risorse/glossario/index.qmd#gloss-sistema).** Un termostato legge la temperatura e accende il riscaldamento. Indica [ingresso](/risorse/glossario/index.qmd#gloss-ingresso) manipolato, [uscita](/risorse/glossario/index.qmd#gloss-uscita), [disturbo](/risorse/glossario/index.qmd#gloss-disturbo) e natura statica o dinamica della stanza.
 
-**2 · [Modello](glossario.qmd#gloss-s15).** Se in un serbatoio entra più acqua di quanta ne esca, come cambia il livello? Quali grandezze servono per calcolarne la variazione?
+**2 · [Modello](/risorse/glossario/index.qmd#gloss-modello).** Se in un serbatoio entra più acqua di quanta ne esca, come cambia il livello? Quali grandezze servono per calcolarne la variazione?
 
-**3 · [Algoritmo](glossario.qmd#gloss-s1).** Nel ciclo della media si dimentica $i=i+1$. Che cosa succede? Quale controllo lo rende visibile?
+**3 · [Algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo).** Nel ciclo della media si dimentica $i=i+1$. Che cosa succede? Quale controllo lo rende visibile?
 
 **4 · Logica.** Semplifica $F=\overline AB+AB$. Scrivi anche $\overline F$.
 
-**5 · [Karnaugh](glossario.qmd#gloss-s11).** Con ordine $ABC$, minimizza $G=\Sigma m(0,1,4,5)$ .
+**5 · [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).** Con ordine $ABC$, minimizza $G=\Sigma m(0,1,4,5)$ .
 
-**6 · Memoria.** Parti da $Q=0$ e applica $(P,S)=(1,1),(1,0),(0,1),(1,0)$. Calcola gli [stati](glossario.qmd#gloss-s24) successivi per $Q^+=P(S+Q)$, dove $Q^+$ è lo [stato](glossario.qmd#gloss-s24) dopo il passo di calcolo.
+**6 · Memoria.** Parti da $Q=0$ e applica $(P,S)=(1,1),(1,0),(0,1),(1,0)$. Calcola gli [stati](/risorse/glossario/index.qmd#gloss-stato) successivi per $Q^+=P(S+Q)$, dove $Q^+$ è lo [stato](/risorse/glossario/index.qmd#gloss-stato) dopo il passo di calcolo.
 
-**7 · Inversione.** Nel [modello](glossario.qmd#gloss-s15) a tre [stati](glossario.qmd#gloss-s24) sei fermo e ricevi $A=B=1$ con $P=1$. Che cosa avviene? Durante la marcia avanti, $B=1$ basta a invertire? [Soluzioni nella pagina seguente](esercizi-un-controllo-ragionato.qmd#sec:soluzioni).
+**7 · Inversione.** Nel [modello](/risorse/glossario/index.qmd#gloss-modello) a tre [stati](/risorse/glossario/index.qmd#gloss-stato) sei fermo e ricevi $A=B=1$ con $P=1$. Che cosa avviene? Durante la marcia avanti, $B=1$ basta a invertire? [Soluzioni nella pagina seguente](esercizi-un-controllo-ragionato.qmd#sec:soluzioni).
 
 ## Soluzioni commentate {#sec:soluzioni}
 
-**1.** [Ingresso](glossario.qmd#gloss-s9) manipolato: potenza termica; [uscita](glossario.qmd#gloss-s26): temperatura; [disturbo](glossario.qmd#gloss-s5): temperatura esterna o finestra aperta. La stanza è dinamica perché accumula energia.
+**1.** [Ingresso](/risorse/glossario/index.qmd#gloss-ingresso) manipolato: potenza termica; [uscita](/risorse/glossario/index.qmd#gloss-uscita): temperatura; [disturbo](/risorse/glossario/index.qmd#gloss-disturbo): temperatura esterna o finestra aperta. La stanza è dinamica perché accumula energia.
 
-**2.** Il livello sale. Servono le portate in entrata e in [uscita](glossario.qmd#gloss-s26), la durata e la sezione del serbatoio.
+**2.** Il livello sale. Servono le portate in entrata e in [uscita](/risorse/glossario/index.qmd#gloss-uscita), la durata e la sezione del serbatoio.
 
 [Prova il calcolo negli approfondimenti](approfondimenti.qmd#app:esercizi).
 
-**3.** Con $i=0$ la condizione $i<3$ resta vera e il ciclo non termina normalmente. La traccia delle [variabili](glossario.qmd#gloss-s27) mostra il [contatore](glossario.qmd#gloss-s61) bloccato.
+**3.** Con $i=0$ la condizione $i<3$ resta vera e il ciclo non termina normalmente. La traccia delle [variabili](/risorse/glossario/index.qmd#gloss-variabile) mostra il [contatore](/risorse/glossario/index.qmd#gloss-contatore) bloccato.
 
 **4.** $F=B(\overline A+A)=B$; $\overline F=\overline B$.
 
 **5.** Gli indici hanno sempre $B=0$, quindi $G=\overline B$.
 
-**6.** Gli [stati](glossario.qmd#gloss-s24) sono 1, 1, 0, 0. Il terzo passo mostra la priorità dell'arresto.
+**6.** Gli [stati](/risorse/glossario/index.qmd#gloss-stato) sono 1, 1, 0, 0. Il terzo passo mostra la priorità dell'arresto.
 
 **7.** Il comando rimane fermo per la richiesta simultanea. Durante la marcia avanti la richiesta opposta è ignorata: serve passare dall'arresto, secondo le regole dichiarate.
 
-#### Una buona verifica
+### Una buona verifica
 
-Non controllare soltanto che l'[uscita](glossario.qmd#gloss-s26) si accenda. Controlla quando si spegne, se conserva memoria, come reagisce a due richieste e cosa accade allo [stato](glossario.qmd#gloss-s24) iniziale.
+Non controllare soltanto che l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) si accenda. Controlla quando si spegne, se conserva memoria, come reagisce a due richieste e cosa accade allo [stato](/risorse/glossario/index.qmd#gloss-stato) iniziale.
 

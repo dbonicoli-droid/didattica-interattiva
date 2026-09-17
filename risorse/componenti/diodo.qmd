@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Diodo"
 description: "Struttura, conduzione diretta e inversa, principali applicazioni."
 toc-depth: 2

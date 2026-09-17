@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Modulo 2 / Elementi di logica"
 subtitle: "Panoramica del Programma"
 ---
@@ -18,29 +19,29 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:2}
 
-**30 ore · Primo periodo**
+**Primo periodo · 30 ore**
 
 ::: minipage
 La **logica** permette di descrivere condizioni e decisioni usando due valori: vero e falso, rappresentati con 1 e 0. Per esempio, una spia si accende se un pulsante è premuto **e** il sistema è abilitato. In questo modulo impariamo a scrivere, combinare e semplificare queste condizioni.
 
-## U.D. 2.1 / L'[algebra di Boole](glossario.qmd#gloss-g1) {#ud:2.1}
+## U.D. 2.1 / L'[algebra di Boole](/risorse/glossario/index.qmd#gloss-algebra-di-boole) {#ud:2.1}
 
-Una [variabile booleana](glossario.qmd#gloss-new76) assume due valori: $0$ e $1$. Può rappresentare falso/vero, pulsante rilasciato/premuto, sensore inattivo/attivo. In elettronica questi valori sono associati a **intervalli di [tensione](glossario.qmd#gloss-new68)**: un 1 logico non è necessariamente una [tensione](glossario.qmd#gloss-new68) esattamente uguale all'alimentazione.
+Una [variabile booleana](/risorse/glossario/index.qmd#gloss-variabile-booleana) assume due valori: $0$ e $1$. Può rappresentare falso/vero, pulsante rilasciato/premuto, sensore inattivo/attivo. In elettronica questi valori sono associati a **intervalli di [tensione](/risorse/glossario/index.qmd#gloss-tensione)**: un 1 logico non è necessariamente una [tensione](/risorse/glossario/index.qmd#gloss-tensione) esattamente uguale all'alimentazione.
 :::
 
 ::: minipage
 ![Schema didattico 8](/assets/dispense/tpsee-elettronici/figura-8.png){fig-alt="Schema didattico 8 della dispensa TPSEE · Elettronici"}
 
-Livelli logici associati a tensioni reali --- esempio [TTL](glossario.qmd#gloss-g62) standard
+Livelli logici associati a tensioni reali --- esempio [TTL](/risorse/glossario/index.qmd#gloss-ttl) standard
 :::
 
   **Operazione**                  **Notazione**     **Quando vale 1**
   ------------------------------- ----------------- ----------------------------------------
-  [NOT](glossario.qmd#gloss-g2)   $Y=\overline A$   Quando $A=0$
-  [AND](glossario.qmd#gloss-g2)   $Y=A B$           Quando entrambi gli ingressi valgono 1
-  [OR](glossario.qmd#gloss-g2)    $Y=A+B$           Quando almeno un ingresso vale 1
+  [NOT](/risorse/glossario/index.qmd#gloss-not)   $Y=\overline A$   Quando $A=0$
+  [AND](/risorse/glossario/index.qmd#gloss-and)   $Y=A B$           Quando entrambi gli ingressi valgono 1
+  [OR](/risorse/glossario/index.qmd#gloss-or)    $Y=A+B$           Quando almeno un ingresso vale 1
 
-#### Un consenso a due condizioni
+### Un consenso a due condizioni
 
 Schema logico del consenso; $V$ indica il comando della ventola, non una tensione:
 
@@ -50,14 +51,14 @@ Schema logico del consenso; $V$ indica il comando della ventola, non una tension
 
 Una ventola deve funzionare se il sistema è abilitato ($E=1$) e la temperatura è alta ($T=1$). La funzione è $V=ET$. Con $E=0$, l'uscita rimane 0 qualunque sia $T$. È un modello didattico di consenso, non un progetto completo di controllo termico.
 
-Nelle formule booleane $+$ indica [OR](glossario.qmd#gloss-g2), il prodotto [AND](glossario.qmd#gloss-g2) e la barra [NOT](glossario.qmd#gloss-g2). Nelle somme numeriche binarie $+$ indica invece l'addizione ordinaria.
+Nelle formule booleane $+$ indica [OR](/risorse/glossario/index.qmd#gloss-or), il prodotto [AND](/risorse/glossario/index.qmd#gloss-and) e la barra [NOT](/risorse/glossario/index.qmd#gloss-not). Nelle somme numeriche binarie $+$ indica invece l'addizione ordinaria.
 
-## U.D. 2.2 / Principali regole dell'[algebra di Boole](glossario.qmd#gloss-g1) {#ud:2.2}
+## U.D. 2.2 / Principali regole dell'[algebra di Boole](/risorse/glossario/index.qmd#gloss-algebra-di-boole) {#ud:2.2}
 
-Le identità permettono di cambiare la forma di una funzione senza modificarne la [tabella di verità](glossario.qmd#gloss-g48). A differenza dell'aritmetica, in algebra booleana $1+1=1$.
+Le identità permettono di cambiare la forma di una funzione senza modificarne la [tabella di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita). A differenza dell'aritmetica, in algebra booleana $1+1=1$.
 
 ::: center
-  **Proprietà**   **[OR](glossario.qmd#gloss-g2)**   **[AND](glossario.qmd#gloss-g2)**
+  **Proprietà**   **[OR](/risorse/glossario/index.qmd#gloss-or)**   **[AND](/risorse/glossario/index.qmd#gloss-and)**
   --------------- ---------------------------------- -----------------------------------
   Identità        $A+0=A$                            $A\cdot1=A$
   Dominazione     $A+1=1$                            $A\cdot0=0$
@@ -70,7 +71,7 @@ Le identità permettono di cambiare la forma di una funzione senza modificarne l
 
 Valgono inoltre la doppia negazione $\overline{\overline A}=A$ e le due forme distributive: $$A(B+C)=AB+AC,\qquad A+BC=(A+B)(A+C).$$
 
-#### Leggere l'assorbimento
+### Leggere l'assorbimento
 
 In $A+AB$, se $A=1$ l'uscita è già 1; se $A=0$ anche $AB=0$. Il termine $AB$ non cambia il risultato. Per questo $A+AB=A$.
 
@@ -82,10 +83,10 @@ In $A+AB$, se $A=1$ l'uscita è già 1; se $A=0$ anche $AB=0$. Il termine $AB$ n
 
 Negare un prodotto equivale a sommare le negazioni; negare una somma equivale a moltiplicare le negazioni:
 
-#### Le due identità da ricordare
+### Le due identità da ricordare
 
 $$\boxed{\overline{AB}=\overline A+\overline B}\qquad
-\boxed{\overline{A+B}=\overline A\,\overline B}$$ Quando porti una negazione all'interno delle parentesi, scambia [AND](glossario.qmd#gloss-g2) e [OR](glossario.qmd#gloss-g2) e nega ogni termine. La barra agisce su tutto ciò che copre.
+\boxed{\overline{A+B}=\overline A\,\overline B}$$ Quando porti una negazione all'interno delle parentesi, scambia [AND](/risorse/glossario/index.qmd#gloss-and) e [OR](/risorse/glossario/index.qmd#gloss-or) e nega ogni termine. La barra agisce su tutto ciò che copre.
 
 ::: center
    $A$   $B$   $\overline{AB}$   $\overline A+\overline B$   $\overline{A+B}$   $\overline A\,\overline B$
@@ -101,13 +102,13 @@ Le colonne uguali verificano le equivalenze. Per esempio, "non sono entrambi att
 #### Una negazione su più livelli
 
 $$Y=\overline{A+BC}=\overline A\,\overline{BC}
-=\overline A(\overline B+\overline C).$$ Prima si nega l'[OR](glossario.qmd#gloss-g2) esterno; poi si applica De Morgan al prodotto $BC$. Scrivere $\overline A+\overline B\,\overline C$ darebbe una funzione diversa.
+=\overline A(\overline B+\overline C).$$ Prima si nega l'[OR](/risorse/glossario/index.qmd#gloss-or) esterno; poi si applica De Morgan al prodotto $BC$. Scrivere $\overline A+\overline B\,\overline C$ darebbe una funzione diversa.
 
 ## U.D. 2.4 / Semplificazione di espressioni booleane {#ud:2.4}
 
-Semplificare significa trovare una forma equivalente che richieda meno risorse, per esempio meno porte o meno ingressi di porta. La riduzione può diminuire costi e ritardi, ma le prestazioni reali dipendono anche dalla tecnologia e dal [carico](glossario.qmd#gloss-g57).
+Semplificare significa trovare una forma equivalente che richieda meno risorse, per esempio meno porte o meno ingressi di porta. La riduzione può diminuire costi e ritardi, ma le prestazioni reali dipendono anche dalla tecnologia e dal [carico](/risorse/glossario/index.qmd#gloss-carico).
 
-#### Dalla funzione al circuito minimo
+### Dalla funzione al circuito minimo
 
 $A$ e $B$ sono ingressi logici; $Y$ è l'uscita. $+$ indica OR, il prodotto AND e la barra NOT. Il circuito finale della semplificazione è:
 
@@ -120,7 +121,7 @@ Y&=A(B+\overline B)+\overline A B &&\text{raccoglimento}\\
  &=A+\overline A B &&\text{complemento}\\
  &=(A+\overline A)(A+B) &&\text{distributiva}\\
  &=A+B. &&\text{complemento e identità}
-\end{aligned}$$ Basta una [OR](glossario.qmd#gloss-g2) a due ingressi. Verifica: per $AB=00,01,10,11$ entrambe le espressioni danno $0,1,1,1$.
+\end{aligned}$$ Basta una [OR](/risorse/glossario/index.qmd#gloss-or) a due ingressi. Verifica: per $AB=00,01,10,11$ entrambe le espressioni danno $0,1,1,1$.
 
 **Prova tu.** Semplifica $Y=(A+B)(A+\overline B)$.
 

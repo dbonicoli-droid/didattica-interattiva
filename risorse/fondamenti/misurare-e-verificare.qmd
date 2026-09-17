@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Misurare e verificare"
 ---
 

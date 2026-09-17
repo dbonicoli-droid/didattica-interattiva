@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Dispense da leggere e stampare"
 toc: false
 ---
@@ -7,8 +8,8 @@ Le edizioni PDF mantengono la forma delle dispense introduttive. Le pagine web p
 
 | Corso | Versione web | PDF |
 |---|---|---|
-| TPSEE · Elettronica | [Sfoglia](corsi/tpsee-elettronici/index.qmd) | [Scarica](downloads/tpsee-elettronici.pdf) |
-| TPSEE · Elettrotecnica | [Sfoglia](corsi/tpsee-elettrotecnici/index.qmd) | [Scarica](downloads/tpsee-elettrotecnici.pdf) |
+| TPSEE · Elettronici | [Sfoglia](corsi/tpsee-elettronici/index.qmd) | [Scarica](downloads/tpsee-elettronici.pdf) |
+| TPSEE · Elettrotecnici | [Sfoglia](corsi/tpsee-elettrotecnici/index.qmd) | [Scarica](downloads/tpsee-elettrotecnici.pdf) |
 | Sistemi automatici | [Sfoglia](corsi/sistemi-automatici/index.qmd) | [Scarica](downloads/sistemi-automatici.pdf) |
 | Domotica e automazione | [Sfoglia](corsi/domotica/index.qmd) | [Scarica](downloads/domotica.pdf) |
 

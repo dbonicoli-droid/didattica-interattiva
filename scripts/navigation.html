@@ -1,80 +1,157 @@
 <script>
 (() => {
-  const courses = {
-    'tpsee-elettronici': ['TPSEE · Elettronica', '#087f8c'],
-    'tpsee-elettrotecnici': ['TPSEE · Elettrotecnica', '#325ac6'],
-    'sistemi-automatici': ['Sistemi automatici', '#a55113'],
-    'domotica': ['Domotica e automazione', '#7950ba']
+  // Le barre laterali sono native (una per percorso, definite in _quarto.yml):
+  // qui restano solo i miglioramenti che il solo YAML non può dare.
+  const CORSI = {
+    'tpsee-elettronici': 'TPSEE · Elettronici',
+    'tpsee-elettrotecnici': 'TPSEE · Elettrotecnici',
+    'sistemi-automatici': 'Sistemi automatici',
+    'domotica': 'Domotica e automazione'
   };
+
   const init = () => {
     const root = new URL(document.querySelector('meta[name="quarto:offset"]')?.content || './', location.href);
     const relative = location.pathname.slice(root.pathname.length);
     const params = new URLSearchParams(location.search);
-    const fromPath = relative.match(/^corsi\/([^/]+)\//)?.[1];
-    const requested = params.get('percorso');
-    let saved;
-    try { saved = sessionStorage.getItem('percorso-attivo'); } catch (_) {}
+    const daPercorso = relative.match(/^corsi\/([^/]+)\//)?.[1];
+    const richiesto = params.get('percorso');
+    let salvato;
+    try { salvato = sessionStorage.getItem('percorso-attivo'); } catch (_) {}
+
     const home = relative === '' || relative === 'index.html';
-    const course = home ? null : courses[fromPath] ? fromPath : courses[requested] ? requested : courses[saved] ? saved : null;
-    try { if (course) sessionStorage.setItem('percorso-attivo', course); else if (home) sessionStorage.removeItem('percorso-attivo'); } catch (_) {}
-    document.body.dataset.course = course || 'common';
-    if (course) document.documentElement.style.setProperty('--course-accent', courses[course][1]);
+    const corso = home ? null
+      : CORSI[daPercorso] ? daPercorso
+      : CORSI[richiesto] ? richiesto
+      : CORSI[salvato] ? salvato : null;
+
+    try {
+      if (corso) sessionStorage.setItem('percorso-attivo', corso);
+      else if (home) sessionStorage.removeItem('percorso-attivo');
+    } catch (_) {}
+
+    document.body.dataset.course = corso || 'comune';
+    // Il colore vive nei fogli di stile: qui si sceglie solo quale usare.
+    if (corso) {
+      document.documentElement.style.setProperty('--accento', `var(--c-${corso})`);
+    }
+
     const href = p => new URL(p, root).href;
-    const topSection = fromPath || home ? 'Percorsi' : relative.startsWith('laboratori/') ? 'Laboratorio' : relative.startsWith('risorse/mappe/') ? 'Mappe concettuali' : relative === 'materiali.html' ? 'Dispense PDF' : 'Risorse';
+
+    // Voce attiva nella barra in alto
+    const sezione = daPercorso || home ? 'Percorsi'
+      : relative.startsWith('laboratori/') ? 'Laboratorio'
+      : relative.startsWith('risorse/mappe/') ? 'Mappe concettuali'
+      : relative === 'materiali.html' ? 'Dispense PDF' : 'Risorse';
     document.querySelectorAll('.navbar-nav > li > .nav-link').forEach(a => {
-      const active = a.textContent.trim() === topSection;
-      a.classList.toggle('active', active);
-      if (active) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+      const attiva = a.textContent.trim() === sezione;
+      a.classList.toggle('active', attiva);
+      if (attiva) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
+
+    // Intestazione della barra laterale: da dove vieni, come cambiare percorso
     const sidebar = document.querySelector('#quarto-sidebar');
-    sidebar?.querySelectorAll('.sidebar-menu-container > ul > li').forEach(item => {
-      const a = item.querySelector(':scope > .sidebar-item-container > a[href]');
-      const c = a?.getAttribute('href')?.match(/corsi\/([^/]+)\//)?.[1];
-      if (c) {
-        item.hidden = c !== course;
-        if (c === course) {
-          item.classList.add('active-course');
-          item.querySelector(':scope > ul')?.classList.add('show');
-          item.querySelector(':scope > .sidebar-item-container [aria-expanded]')?.setAttribute('aria-expanded', 'true');
-        }
-      }
-    });
-    sidebar?.querySelectorAll('a.active').forEach(a => {
-      if (new URL(a.href).pathname !== location.pathname) a.classList.remove('active');
-    });
     if (sidebar) {
-      const heading = document.createElement('div');
-      heading.className = 'navigation-heading';
-      const label = document.createElement('span'); label.textContent = course ? 'IL TUO PERCORSO' : 'ESPLORA LE RISORSE';
-      const change = document.createElement('a'); change.href = href('index.html'); change.textContent = course ? 'Cambia percorso ↗' : 'Scegli un percorso ↗';
-      heading.append(label, change); sidebar.prepend(heading);
+      const testa = document.createElement('div');
+      testa.className = 'navigation-heading';
+      const etichetta = document.createElement('span');
+      etichetta.textContent = corso ? 'IL TUO PERCORSO' : 'RISORSE CONDIVISE';
+      const cambia = document.createElement('a');
+      cambia.href = href('index.html');
+      cambia.textContent = corso ? 'Cambia percorso ↗' : 'Scegli un percorso ↗';
+      testa.append(etichetta, cambia);
+      sidebar.prepend(testa);
+
+      // Lettura facilitata: carattere ad alta leggibilità e righe più spaziate.
+      // La scelta resta su questo dispositivo e non esce dal browser.
+      const comando = document.createElement('button');
+      comando.type = 'button';
+      comando.id = 'lettura-facilitata-comando';
+      const spia = document.createElement('span');
+      spia.className = 'spia';
+      spia.setAttribute('aria-hidden', 'true');
+      const testo = document.createElement('span');
+      testo.textContent = 'Lettura facilitata';
+      comando.append(spia, testo);
+
+      const applica = attiva => {
+        document.documentElement.classList.toggle('lettura-facilitata', attiva);
+        comando.setAttribute('aria-pressed', String(attiva));
+      };
+      let scelta = false;
+      try { scelta = localStorage.getItem('lettura-facilitata') === 'si'; } catch (_) {}
+      applica(scelta);
+      comando.addEventListener('click', () => {
+        scelta = !scelta;
+        applica(scelta);
+        try { localStorage.setItem('lettura-facilitata', scelta ? 'si' : 'no'); } catch (_) {}
+      });
+      sidebar.prepend(comando);
     }
-    if (!fromPath && !home) {
+
+    // Su una risorsa condivisa: rientro esplicito al percorso di provenienza
+    if (!daPercorso && !home) {
       document.querySelectorAll('.quarto-page-breadcrumbs').forEach(el => el.hidden = true);
-      document.querySelectorAll('#quarto-secondary-nav .quarto-secondary-nav-title').forEach(el => el.textContent = 'Risorse condivise');
       const main = document.querySelector('main');
-      const banner = document.createElement('nav'); banner.className = 'course-context'; banner.setAttribute('aria-label','Percorso di provenienza');
-      const link = document.createElement('a'); link.href = href(course ? `corsi/${course}/index.html` : 'index.html');
-      link.textContent = course ? `← Torna a ${courses[course][0]}` : '← Scegli un percorso';
-      const tag = document.createElement('span'); tag.textContent = 'Risorsa condivisa';
-      banner.append(link, tag); main?.prepend(banner);
+      const barra = document.createElement('nav');
+      barra.className = 'course-context';
+      barra.setAttribute('aria-label', 'Percorso di provenienza');
+      const link = document.createElement('a');
+      link.href = href(corso ? `corsi/${corso}/index.html` : 'index.html');
+      link.textContent = corso ? `← Torna a ${CORSI[corso]}` : '← Scegli un percorso';
+      const tag = document.createElement('span');
+      tag.textContent = 'Risorsa condivisa';
+      barra.append(link, tag);
+      main?.prepend(barra);
     }
+
+    // I link interni non aprono una nuova scheda
     document.querySelectorAll('a[href]').forEach(a => {
       const u = new URL(a.href, location.href);
-      if (u.origin === location.origin && u.pathname.startsWith(root.pathname) && !/\.(pdf|svg|png|webp)$/.test(u.pathname)) a.removeAttribute('target');
+      if (u.origin === location.origin && u.pathname.startsWith(root.pathname)
+          && !/\.(pdf|svg|png|webp)$/.test(u.pathname)) a.removeAttribute('target');
     });
-    if (course) {
+
+    // Entrando in una risorsa condivisa il percorso viaggia nell'indirizzo
+    if (corso) {
       document.querySelectorAll('a[href]').forEach(a => {
-        const original = a.getAttribute('href');
-        if (!original || original.startsWith('#')) return;
+        const originale = a.getAttribute('href');
+        if (!originale || originale.startsWith('#')) return;
         const url = new URL(a.href, location.href);
         const rel = url.pathname.slice(root.pathname.length);
-        if (url.origin === location.origin && url.pathname.startsWith(root.pathname) && /^(risorse\/|laboratori\/|materiali\.html|guida\.html)/.test(rel) && !/\.(pdf|svg|png|webp)$/.test(rel)) {
-          url.searchParams.set('percorso', course); a.href = url.href;
+        if (url.origin === location.origin && url.pathname.startsWith(root.pathname)
+            && /^(risorse\/|laboratori\/|materiali\.html|guida\.html)/.test(rel)
+            && !/\.(pdf|svg|png|webp)$/.test(rel)) {
+          url.searchParams.set('percorso', corso);
+          a.href = url.href;
         }
       });
+      // "Indice del tuo percorso" punta al corso in cui ci si trova
+      document.querySelectorAll('a.percorso-attivo').forEach(a => {
+        a.href = href(`corsi/${corso}/index.html`);
+      });
     }
+
+    // Barra di avanzamento della lettura
+    const avanzamento = document.createElement('div');
+    avanzamento.id = 'avanzamento-lettura';
+    avanzamento.setAttribute('aria-hidden', 'true');
+    document.body.prepend(avanzamento);
+
+    const navbar = document.querySelector('.navbar');
+    let pendente = false;
+    const aggiorna = () => {
+      pendente = false;
+      const h = document.documentElement.scrollHeight - innerHeight;
+      avanzamento.style.width = (h > 0 ? Math.min(100, (scrollY / h) * 100) : 0) + '%';
+      navbar?.classList.toggle('compatta', scrollY > 120);
+    };
+    addEventListener('scroll', () => {
+      if (!pendente) { pendente = true; requestAnimationFrame(aggiorna); }
+    }, { passive: true });
+    aggiorna();
   };
-  if (document.readyState === 'complete') init(); else window.addEventListener('load', init, {once:true});
+
+  if (document.readyState === 'complete') init();
+  else addEventListener('load', init, { once: true });
 })();
 </script>

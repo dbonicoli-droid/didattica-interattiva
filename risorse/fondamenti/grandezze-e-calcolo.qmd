@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Grandezze, unità di misura e calcolo"
 ---
 
@@ -32,6 +33,21 @@ Controllo dimensionale: $\mathrm V/\Omega=\mathrm A$. Se il risultato avesse uni
 A resistenza costante, raddoppiare $V$ raddoppia $I$. A tensione costante, raddoppiare $R$ dimezza $I$. Prima di dire che due grandezze sono proporzionali bisogna specificare che cosa resta costante.
 
 Leggi sempre titolo, assi, unità di misura e scala di un grafico. Il punto $(2\,\mathrm s,4\,\mathrm V)$ dice che a due secondi la tensione vale quattro volt. La pendenza fra due punti è una variazione verticale divisa per quella orizzontale: da 1 a 3 V in 2 s corrisponde a $1\,\mathrm{V/s}$.
+
+## Simboli usati nel sito
+
+Per leggere le formule con gli stessi occhi in tutte le pagine:
+
+| Simbolo | Significato |
+|---|---|
+| $V$, $I$, $R$, $P$, $E$ | tensione, corrente, resistenza, potenza, energia |
+| $V_{in}$, $V_{out}$ | tensione di ingresso e di uscita di un blocco |
+| $v(t)$, $i(t)$ | valore istantaneo, che cambia nel tempo |
+| $u(t)$, $U_0$ | segnale di ingresso e sua ampiezza, nei transitori |
+| $V_0$, $I_0$ | valore iniziale a $t=0$ |
+| $\tau$ | costante di tempo |
+
+La lettera minuscola indica un valore istantaneo, la maiuscola un valore costante o un'ampiezza. Gli schemi elettrici usano gli stessi simboli del testo.
 
 ## Verifica
 

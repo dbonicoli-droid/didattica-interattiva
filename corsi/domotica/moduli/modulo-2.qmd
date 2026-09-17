@@ -1,18 +1,19 @@
 ---
+stato: in-sviluppo
 title: "Modulo 2 / Automazione industriale e PLC"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-2.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd)
 
 ::: {.callout-note icon=false}
-## 🚧 Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
 
-![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
 
-La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+[Vai alla sintesi del modulo 2 →](../modulo-2.qmd){.btn .btn-primary}
 
-Puoi già consultare la [panoramica del modulo](../modulo-2.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
 :::
 
 ::: {.unit-index}
@@ -24,26 +25,18 @@ Puoi già consultare la [panoramica del modulo](../modulo-2.qmd), i [componenti]
 - [U.D. 2.4 / Linguaggi di programmazione dei PLC](#ud:2.4)
 :::
 
-## U.D. 2.1 / Introduzione all'automazione industriale {#ud:2.1}
+## U.D. 2.1 / Introduzione all'automazione industriale ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.1}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-2.qmd#ud:2.1){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 2.2 / Comando, segnalazione, sensori, trasduttori e attuatori ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.2}
 
-## U.D. 2.2 / Comando, segnalazione, sensori, trasduttori e attuatori {#ud:2.2}
+[Vedi nella sintesi →](../modulo-2.qmd#ud:2.2){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 2.3 / Hardware del PLC ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.3}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-2.qmd#ud:2.3){.wip-link}
 
-## U.D. 2.3 / Hardware del PLC {#ud:2.3}
+## U.D. 2.4 / Linguaggi di programmazione dei PLC ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.4}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 2.4 / Linguaggi di programmazione dei PLC {#ud:2.4}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-2.qmd#ud:2.4){.wip-link}

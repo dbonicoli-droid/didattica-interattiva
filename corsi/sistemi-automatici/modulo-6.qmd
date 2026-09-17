@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Modulo 6 / Tempi, eventi e grandezze analogiche"
 subtitle: "Panoramica del Programma"
 ---
@@ -21,33 +22,33 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:6}
 
-**Secondo pentamestre · 24 ore**
+**Secondo periodo · 24 ore**
 
-Un controllo può attendere, contare e interpretare una misura. [Timer](glossario.qmd#gloss-s60), [contatori](glossario.qmd#gloss-s61) e [segnali analogici](glossario.qmd#gloss-new75) completano gli automatismi.
+Un controllo può attendere, contare e interpretare una misura. [Timer](/risorse/glossario/index.qmd#gloss-timer), [contatori](/risorse/glossario/index.qmd#gloss-contatore) e [segnali analogici](/risorse/glossario/index.qmd#gloss-segnale-analogico) completano gli automatismi.
 
-## U.D. 6.1 / [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61) dei [PLC](glossario.qmd#gloss-s41) {#ud:6.1}
+## U.D. 6.1 / [Timer](/risorse/glossario/index.qmd#gloss-timer) e [contatori](/risorse/glossario/index.qmd#gloss-contatore) dei [PLC](/risorse/glossario/index.qmd#gloss-plc) {#ud:6.1}
 
-Un [timer](glossario.qmd#gloss-s60) misura una durata; un [contatore](glossario.qmd#gloss-s61) conta eventi.
+Un [timer](/risorse/glossario/index.qmd#gloss-timer) misura una durata; un [contatore](/risorse/glossario/index.qmd#gloss-contatore) conta eventi.
 
-- [TON](glossario.qmd#gloss-s62) (On-Delay [Timer](glossario.qmd#gloss-s60)): attiva l'[uscita](glossario.qmd#gloss-s26) dopo che l'[ingresso](glossario.qmd#gloss-s9) è rimasto vero per il tempo impostato; se l'[ingresso](glossario.qmd#gloss-s9) torna falso si azzera.
+- [TON](/risorse/glossario/index.qmd#gloss-ton) (On-Delay [Timer](/risorse/glossario/index.qmd#gloss-timer)): attiva l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) dopo che l'[ingresso](/risorse/glossario/index.qmd#gloss-ingresso) è rimasto vero per il tempo impostato; se l'[ingresso](/risorse/glossario/index.qmd#gloss-ingresso) torna falso si azzera.
 
-- [TOF](glossario.qmd#gloss-s70) (Off-Delay [Timer](glossario.qmd#gloss-s60)): ritarda lo spegnimento; [TP](glossario.qmd#gloss-s71) (Pulse [Timer](glossario.qmd#gloss-s60)): genera un impulso temporizzato.
+- [TOF](/risorse/glossario/index.qmd#gloss-tof) (Off-Delay [Timer](/risorse/glossario/index.qmd#gloss-timer)): ritarda lo spegnimento; [TP](/risorse/glossario/index.qmd#gloss-tp) (Pulse [Timer](/risorse/glossario/index.qmd#gloss-timer)): genera un impulso temporizzato.
 
-- [CTU](glossario.qmd#gloss-s63) (Count Up): incrementa il conteggio sui [fronti di salita](glossario.qmd#gloss-new77), cioè sui passaggi da falso a vero, e prevede un reset.
+- [CTU](/risorse/glossario/index.qmd#gloss-ctu) (Count Up): incrementa il conteggio sui [fronti di salita](/risorse/glossario/index.qmd#gloss-fronte-di-salita), cioè sui passaggi da falso a vero, e prevede un reset.
 
-Per un [timer](glossario.qmd#gloss-s60) useremo IN (Input), PT (Preset [Time](glossario.qmd#gloss-s69)), ET (Elapsed [Time](glossario.qmd#gloss-s69)) e Q: [ingresso](glossario.qmd#gloss-s9), durata impostata, tempo trascorso e [uscita](glossario.qmd#gloss-s26). Per [CTU](glossario.qmd#gloss-s63): CU (Count Up input), R (Reset), PV (Preset Value), CV (Current Value) e Q.
+Per un [timer](/risorse/glossario/index.qmd#gloss-timer) useremo IN (Input), PT (Preset [Time](/risorse/glossario/index.qmd#gloss-time)), ET (Elapsed [Time](/risorse/glossario/index.qmd#gloss-time)) e Q: [ingresso](/risorse/glossario/index.qmd#gloss-ingresso), durata impostata, tempo trascorso e [uscita](/risorse/glossario/index.qmd#gloss-uscita). Per [CTU](/risorse/glossario/index.qmd#gloss-ctu): CU (Count Up input), R (Reset), PV (Preset Value), CV (Current Value) e Q.
 
-#### Un evento non è una [scansione](glossario.qmd#gloss-s22)
+### Un evento non è una [scansione](/risorse/glossario/index.qmd#gloss-scansione)
 
-Un [sensore](glossario.qmd#gloss-new72) che rimane alto per dieci scansioni produce un solo [fronte di salita](glossario.qmd#gloss-new77). Aumentare un numero a ogni [scansione](glossario.qmd#gloss-s22) mentre è alto conterebbe invece dieci volte.
+Un [sensore](/risorse/glossario/index.qmd#gloss-sensore) che rimane alto per dieci scansioni produce un solo [fronte di salita](/risorse/glossario/index.qmd#gloss-fronte-di-salita). Aumentare un numero a ogni [scansione](/risorse/glossario/index.qmd#gloss-scansione) mentre è alto conterebbe invece dieci volte.
 
-## U.D. 6.2 / [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61) in [Ladder](glossario.qmd#gloss-s12) {#ud:6.2}
+## U.D. 6.2 / [Timer](/risorse/glossario/index.qmd#gloss-timer) e [contatori](/risorse/glossario/index.qmd#gloss-contatore) in [Ladder](/risorse/glossario/index.qmd#gloss-ladder) {#ud:6.2}
 
-- Inserisci un'istanza [TON](glossario.qmd#gloss-s62): un blocco con una propria memoria, per esempio `Attesa`.
+- Inserisci un'istanza [TON](/risorse/glossario/index.qmd#gloss-ton): un blocco con una propria memoria, per esempio `Attesa`.
 
 - Collega `Presenza` a IN e imposta PT a 3 secondi. Usa `Attesa.Q` per la lampada.
 
-- Per contare oggetti, collega il [sensore](glossario.qmd#gloss-new72) a CU di un [CTU](glossario.qmd#gloss-s63), il reset a R e imposta PV a 5.
+- Per contare oggetti, collega il [sensore](/risorse/glossario/index.qmd#gloss-sensore) a CU di un [CTU](/risorse/glossario/index.qmd#gloss-ctu), il reset a R e imposta PV a 5.
 
 - Osserva ET e CV durante la simulazione: mostrano rispettivamente tempo e conteggio.
 
@@ -55,81 +56,81 @@ Un [sensore](glossario.qmd#gloss-new72) che rimane alto per dieci scansioni prod
 ![Schema didattico 19](/assets/dispense/sistemi-automatici/figura-19.png){fig-alt="Schema didattico 19 della dispensa Sistemi automatici"}
 :::
 
-Il disegno mostra la funzione del blocco; l'editor rappresenta i pin secondo il proprio formato. Richiama il [timer](glossario.qmd#gloss-s60) a ogni ciclo, anche quando IN è falso, così può aggiornarsi e azzerarsi.
+Il disegno mostra la funzione del blocco; l'editor rappresenta i pin secondo il proprio formato. Richiama il [timer](/risorse/glossario/index.qmd#gloss-timer) a ogni ciclo, anche quando IN è falso, così può aggiornarsi e azzerarsi.
 
-## U.D. 6.3 / [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61) in Testo strutturato {#ud:6.3}
+## U.D. 6.3 / [Timer](/risorse/glossario/index.qmd#gloss-timer) e [contatori](/risorse/glossario/index.qmd#gloss-contatore) in Testo strutturato {#ud:6.3}
 
-Si dichiarano `Attesa` di tipo [TON](glossario.qmd#gloss-s62) e `Pezzi` di tipo [CTU](glossario.qmd#gloss-s63). `Presenza`, [`Sensore`](glossario.qmd#gloss-new72), `Reset`, `Lampada` e `LottoPronto` sono [BOOL](glossario.qmd#gloss-s29).
+Si dichiarano `Attesa` di tipo [TON](/risorse/glossario/index.qmd#gloss-ton) e `Pezzi` di tipo [CTU](/risorse/glossario/index.qmd#gloss-ctu). `Presenza`, [`Sensore`](/risorse/glossario/index.qmd#gloss-sensore), `Reset`, `Lampada` e `LottoPronto` sono [BOOL](/risorse/glossario/index.qmd#gloss-bool).
 
 > Attesa(IN := Presenza, PT := T#3s);\
 > Lampada := Attesa.Q;\
-> Pezzi(CU := [Sensore](glossario.qmd#gloss-new72), R := Reset, PV := 5);\
+> Pezzi(CU := [Sensore](/risorse/glossario/index.qmd#gloss-sensore), R := Reset, PV := 5);\
 > LottoPronto := Pezzi.Q;
 
-`T#3s` è una durata di tre secondi. Il punto accede a un dato dell'istanza: `Attesa.Q` è l'[uscita](glossario.qmd#gloss-s26) di quel [timer](glossario.qmd#gloss-s60), non di tutti i [timer](glossario.qmd#gloss-s60) del programma. Usa un'istanza distinta per ogni temporizzazione o conteggio indipendente.
+`T#3s` è una durata di tre secondi. Il punto accede a un dato dell'istanza: `Attesa.Q` è l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) di quel [timer](/risorse/glossario/index.qmd#gloss-timer), non di tutti i [timer](/risorse/glossario/index.qmd#gloss-timer) del programma. Usa un'istanza distinta per ogni temporizzazione o conteggio indipendente.
 
-## U.D. 6.4 / [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61) in Instruction List {#ud:6.4}
+## U.D. 6.4 / [Timer](/risorse/glossario/index.qmd#gloss-timer) e [contatori](/risorse/glossario/index.qmd#gloss-contatore) in Instruction List {#ud:6.4}
 
-In [IL](glossario.qmd#gloss-s56) si assegnano i parametri del blocco, lo si richiama e si legge il risultato. Schema introduttivo per l'istanza [TON](glossario.qmd#gloss-s62) `Attesa`:
+In [IL](/risorse/glossario/index.qmd#gloss-il) si assegnano i parametri del blocco, lo si richiama e si legge il risultato. Schema introduttivo per l'istanza [TON](/risorse/glossario/index.qmd#gloss-ton) `Attesa`:
 
-> [LD](glossario.qmd#gloss-s34) Presenza\
-> [ST](glossario.qmd#gloss-s55) Attesa.IN\
-> [LD](glossario.qmd#gloss-s34) T#3s\
-> [ST](glossario.qmd#gloss-s55) Attesa.PT\
+> [LD](/risorse/glossario/index.qmd#gloss-ld) Presenza\
+> [ST](/risorse/glossario/index.qmd#gloss-st) Attesa.IN\
+> [LD](/risorse/glossario/index.qmd#gloss-ld) T#3s\
+> [ST](/risorse/glossario/index.qmd#gloss-st) Attesa.PT\
 > CAL Attesa\
-> [LD](glossario.qmd#gloss-s34) Attesa.Q\
-> [ST](glossario.qmd#gloss-s55) Lampada
+> [LD](/risorse/glossario/index.qmd#gloss-ld) Attesa.Q\
+> [ST](/risorse/glossario/index.qmd#gloss-st) Lampada
 
-`CAL` richiama il blocco. Per il [CTU](glossario.qmd#gloss-s63) si impostano CU, R e PV prima del richiamo e si leggono CV e Q dopo. La sintassi di chiamata va adattata all'editor adottato: il flusso dei dati e l'istanza con memoria restano gli stessi.
+`CAL` richiama il blocco. Per il [CTU](/risorse/glossario/index.qmd#gloss-ctu) si impostano CU, R e PV prima del richiamo e si leggono CV e Q dopo. La sintassi di chiamata va adattata all'editor adottato: il flusso dei dati e l'istanza con memoria restano gli stessi.
 
 ## U.D. 6.5 / Gestione delle grandezze analogiche {#ud:6.5}
 
-Un canale analogico restituisce un numero grezzo, detto [Raw](glossario.qmd#gloss-s64). Per usarlo occorre conoscere il campo elettrico e la corrispondenza con la grandezza fisica.
+Un canale analogico restituisce un numero grezzo, detto [Raw](/risorse/glossario/index.qmd#gloss-raw). Per usarlo occorre conoscere il campo elettrico e la corrispondenza con la grandezza fisica.
 
-- Un segnale 0--10 V non è automaticamente una temperatura: serve la caratteristica del [sensore](glossario.qmd#gloss-new72).
+- Un segnale 0--10 V non è automaticamente una temperatura: serve la caratteristica del [sensore](/risorse/glossario/index.qmd#gloss-sensore).
 
-- La [scalatura](glossario.qmd#gloss-s65) converte il codice in unità fisiche, per esempio gradi Celsius.
+- La [scalatura](/risorse/glossario/index.qmd#gloss-scalatura) converte il codice in unità fisiche, per esempio gradi Celsius.
 
 - Verifica campo valido, risoluzione e comportamento del controllo in caso di dato non valido.
 
-#### Metà scala
+### Metà scala
 
 Per estremi iniziali entrambi nulli: **valore fisico = codice letto / codice massimo $\times$ valore fisico massimo**. Il rapporto fra codici è adimensionale.
 
-Supponiamo che i codici da 0 a 10000 rappresentino da 0 a 100 gradi Celsius. Il codice 2500 corrisponde a 25 gradi. Questi estremi sono dati dell'esempio, non valori universali di un [PLC](glossario.qmd#gloss-s41).
+Supponiamo che i codici da 0 a 10000 rappresentino da 0 a 100 gradi Celsius. Il codice 2500 corrisponde a 25 gradi. Questi estremi sono dati dell'esempio, non valori universali di un [PLC](/risorse/glossario/index.qmd#gloss-plc).
 
-[Formula di [scalatura](glossario.qmd#gloss-s65) ed esempio commentato negli approfondimenti](approfondimenti.qmd#app:analogico).
+[Formula di [scalatura](/risorse/glossario/index.qmd#gloss-scalatura) ed esempio commentato negli approfondimenti](approfondimenti.qmd#app:analogico).
 
 ## U.D. 6.6 / Elaborare valori analogici in Testo strutturato e Instruction List {#ud:6.6}
 
-Per l'esempio precedente, [`Raw`](glossario.qmd#gloss-s64) è [INT](glossario.qmd#gloss-s68); `Temperatura` è [REAL](glossario.qmd#gloss-s42); `Allarme` è [BOOL](glossario.qmd#gloss-s29). Dopo aver verificato la validità del dato:
+Per l'esempio precedente, [`Raw`](/risorse/glossario/index.qmd#gloss-raw) è [INT](/risorse/glossario/index.qmd#gloss-int); `Temperatura` è [REAL](/risorse/glossario/index.qmd#gloss-real); `Allarme` è [BOOL](/risorse/glossario/index.qmd#gloss-bool). Dopo aver verificato la validità del dato:
 
-> Temperatura := [INT](glossario.qmd#gloss-s68)\_TO\_[REAL](glossario.qmd#gloss-s42)([Raw](glossario.qmd#gloss-s64)) \* 0.01;\
+> Temperatura := [INT](/risorse/glossario/index.qmd#gloss-int)\_TO\_[REAL](/risorse/glossario/index.qmd#gloss-real)([Raw](/risorse/glossario/index.qmd#gloss-raw)) \* 0.01;\
 > Allarme := Temperatura \> 30.0;
 
-La conversione esplicita evita di trattare una misura frazionaria come intero. Un [ingresso](glossario.qmd#gloss-s9) con altro formato richiede la conversione corrispondente. In [IL](glossario.qmd#gloss-s56), una volta ottenuto un valore reale `Misura`, il confronto si esprime con:
+La conversione esplicita evita di trattare una misura frazionaria come intero. Un [ingresso](/risorse/glossario/index.qmd#gloss-ingresso) con altro formato richiede la conversione corrispondente. In [IL](/risorse/glossario/index.qmd#gloss-il), una volta ottenuto un valore reale `Misura`, il confronto si esprime con:
 
-> [LD](glossario.qmd#gloss-s34) Misura\
+> [LD](/risorse/glossario/index.qmd#gloss-ld) Misura\
 > GT 30.0\
-> [ST](glossario.qmd#gloss-s55) Allarme
+> [ST](/risorse/glossario/index.qmd#gloss-st) Allarme
 
-`GT` (Greater Than) verifica se il valore è maggiore della soglia. A 30 esatti il risultato è falso. L'[isteresi](glossario.qmd#gloss-s66) usa soglie distinte di accensione e spegnimento per evitare commutazioni continue vicino alla soglia.
+`GT` (Greater Than) verifica se il valore è maggiore della soglia. A 30 esatti il risultato è falso. L'[isteresi](/risorse/glossario/index.qmd#gloss-isteresi) usa soglie distinte di accensione e spegnimento per evitare commutazioni continue vicino alla soglia.
 
 ## U.D. 6.7 / Simulare un controllo con tempi, eventi e analogico {#ud:6.7}
 
-#### Un banco di selezione virtuale
+### Un banco di selezione virtuale
 
-Un [sensore](glossario.qmd#gloss-new72) conta i pezzi. Dopo cinque passaggi si accende la spia LottoPronto. Una seconda spia segnala una temperatura sopra 30 gradi solo se la condizione dura almeno tre secondi. Il reset azzera il conteggio.
+Un [sensore](/risorse/glossario/index.qmd#gloss-sensore) conta i pezzi. Dopo cinque passaggi si accende la spia LottoPronto. Una seconda spia segnala una temperatura sopra 30 gradi solo se la condizione dura almeno tre secondi. Il reset azzera il conteggio.
 
-- Associa un [CTU](glossario.qmd#gloss-s63) al [sensore](glossario.qmd#gloss-new72) e un [TON](glossario.qmd#gloss-s62) alla condizione di temperatura.
+- Associa un [CTU](/risorse/glossario/index.qmd#gloss-ctu) al [sensore](/risorse/glossario/index.qmd#gloss-sensore) e un [TON](/risorse/glossario/index.qmd#gloss-ton) alla condizione di temperatura.
 
-- Prova quattro e cinque passaggi, un [sensore](glossario.qmd#gloss-new72) mantenuto alto e il reset.
+- Prova quattro e cinque passaggi, un [sensore](/risorse/glossario/index.qmd#gloss-sensore) mantenuto alto e il reset.
 
 - Prova un superamento breve della soglia e uno prolungato.
 
 - Verifica separatamente dato analogico non valido e riavvio.
 
-Confronta le realizzazioni disponibili in [OpenPLC](glossario.qmd#gloss-s16) usando le stesse tracce. [Altre prove e soluzioni sono negli approfondimenti](approfondimenti.qmd#app:nuove-prove).
+Confronta le realizzazioni disponibili in [OpenPLC](/risorse/glossario/index.qmd#gloss-openplc) usando le stesse tracce. [Altre prove e soluzioni sono negli approfondimenti](approfondimenti.qmd#app:nuove-prove).
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-6.qmd)

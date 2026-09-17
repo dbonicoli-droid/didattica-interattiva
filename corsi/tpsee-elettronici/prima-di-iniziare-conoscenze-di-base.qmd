@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Fondamenti del corso"
 search: false
 toc: false

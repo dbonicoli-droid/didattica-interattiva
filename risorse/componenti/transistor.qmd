@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Transistor / Transistori"
 description: "Struttura generale di BJT e MOSFET, controllo della corrente e applicazioni."
 toc-depth: 2

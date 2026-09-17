@@ -1,5 +1,6 @@
 ---
-title: "Sicurezza e Buone pratiche"
+sidebar: tpsee-elettronici
+title: "Sicurezza e buone pratiche"
 ---
 
 [← Indice del percorso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)

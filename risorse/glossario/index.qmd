@@ -1,0 +1,1366 @@
+---
+sidebar: risorse
+title: "Glossario"
+subtitle: "Un'unica raccolta di termini per tutti i percorsi"
+toc: true
+toc-depth: 2
+---
+
+Ogni voce vale per tutto il sito. L'etichetta sotto il termine indica in quali percorsi compare; quando una definizione ha un risvolto specifico di un indirizzo, il testo lo dice esplicitamente, così resta leggibile da chiunque.
+
+Cerca un termine con **Ctrl+F**, oppure parti dal vocabolario minimo del tuo percorso.
+
+## Vocabolario minimo {#vocabolario-minimo}
+
+Le parole da avere sempre a disposizione, scelte percorso per percorso.
+
+### TPSEE · Elettronici {#vocabolario-tpsee-elettronici}
+
+[Attivo alto/basso](#gloss-attivo-alto-basso){.no-external} · [Bit](#gloss-bit){.no-external} · [Condensatore](#gloss-condensatore){.no-external} · [Corrente](#gloss-corrente){.no-external} · [Energia](#gloss-energia){.no-external} · [Induttore e induttanza](#gloss-induttore-e-induttanza){.no-external} · [Potenza](#gloss-potenza){.no-external} · [Resistenza](#gloss-resistenza){.no-external} · [Rete](#gloss-rete){.no-external} · [Rete combinatoria](#gloss-rete-combinatoria){.no-external} · [Rete sequenziale](#gloss-rete-sequenziale){.no-external} · [Tensione](#gloss-tensione){.no-external}
+
+### TPSEE · Elettrotecnici {#vocabolario-tpsee-elettrotecnici}
+
+[Carico](#gloss-carico){.no-external} · [Cartiglio](#gloss-cartiglio){.no-external} · [Circuito](#gloss-circuito){.no-external} · [Condensatore](#gloss-condensatore){.no-external} · [Contatto](#gloss-contatto){.no-external} · [Corrente](#gloss-corrente){.no-external} · [Energia](#gloss-energia){.no-external} · [Impianto](#gloss-impianto){.no-external} · [Induttore e induttanza](#gloss-induttore-e-induttanza){.no-external} · [Legenda](#gloss-legenda){.no-external} · [Morsetto](#gloss-morsetto){.no-external} · [Potenza](#gloss-potenza){.no-external} · [Resistenza](#gloss-resistenza){.no-external} · [Tensione](#gloss-tensione){.no-external}
+
+### Sistemi automatici {#vocabolario-sistemi-automatici}
+
+[Algoritmo](#gloss-algoritmo){.no-external} · [Automa](#gloss-automa){.no-external} · [Bit](#gloss-bit){.no-external} · [Condensatore](#gloss-condensatore){.no-external} · [Corrente](#gloss-corrente){.no-external} · [Energia](#gloss-energia){.no-external} · [Induttore e induttanza](#gloss-induttore-e-induttanza){.no-external} · [Ingresso](#gloss-ingresso){.no-external} · [Modello](#gloss-modello){.no-external} · [PLC](#gloss-plc){.no-external} · [Potenza](#gloss-potenza){.no-external} · [Resistenza](#gloss-resistenza){.no-external} · [Sistema](#gloss-sistema){.no-external} · [Stato](#gloss-stato){.no-external} · [Tensione](#gloss-tensione){.no-external} · [Uscita](#gloss-uscita){.no-external} · [Variabile booleana](#gloss-variabile-booleana){.no-external}
+
+### Domotica e automazione {#vocabolario-domotica}
+
+[Attuatore](#gloss-attuatore){.no-external} · [Bit](#gloss-bit){.no-external} · [Condensatore](#gloss-condensatore){.no-external} · [Corrente](#gloss-corrente){.no-external} · [Energia](#gloss-energia){.no-external} · [Induttore e induttanza](#gloss-induttore-e-induttanza){.no-external} · [PLC](#gloss-plc){.no-external} · [Potenza](#gloss-potenza){.no-external} · [Resistenza](#gloss-resistenza){.no-external} · [Sensore](#gloss-sensore){.no-external} · [Tensione](#gloss-tensione){.no-external} · [Variabile booleana](#gloss-variabile-booleana){.no-external}
+
+
+## A {#lettera-a .gloss-letter}
+
+### ADC {#gloss-adc}
+
+[Domotica e automazione]{.gloss-scope}
+
+Analog-to-Digital Converter: convertitore che rappresenta un segnale analogico con codici numerici.
+
+### Algebra di Boole {#gloss-algebra-di-boole}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Sistema di regole per variabili che assumono i valori logici 0 e 1.
+
+### Algoritmo {#gloss-algoritmo}
+
+[Sistemi automatici]{.gloss-scope}
+
+Sequenza di passi non ambigui per risolvere un problema.
+
+### Aliasing {#gloss-aliasing}
+
+[Domotica e automazione]{.gloss-scope}
+
+Alterazione apparente delle frequenze dovuta a campionamento insufficiente rispetto al contenuto del segnale.
+
+### AND {#gloss-and}
+
+[Sistemi automatici]{.gloss-scope}
+
+Congiunzione logica: il risultato è 1 se tutti gli ingressi sono 1.
+
+### ASCII {#gloss-ascii}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(American Standard Code for Information Interchange): codifica di caratteri su sette bit.
+
+### Asincrono {#gloss-asincrono}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Sistema in cui i cambiamenti non sono coordinati da un unico clock comune: possono dipendere dagli ingressi o propagarsi fra gli stadi.
+
+### Attivo alto/basso {#gloss-attivo-alto-basso}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Un comando attivo alto agisce con livello logico 1; un comando attivo basso agisce con livello logico 0. La barra sul nome o una bolla nel simbolo indica il comando attivo basso.
+
+### Attuatore {#gloss-attuatore}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Dispositivo che trasforma un comando in un'azione fisica sul processo, per esempio un motore o una valvola.
+
+### Automa {#gloss-automa}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Modello con stati e regole di transizione che descrive l'evoluzione di un comando o processo.
+
+### Autoritenuta {#gloss-autoritenuta}
+
+[Sistemi automatici]{.gloss-scope}
+
+Mantiene il comando dopo il rilascio del pulsante, tramite memoria o contatto ausiliario.
+
+## B {#lettera-b .gloss-letter}
+
+### BCD {#gloss-bcd}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Binary Coded Decimal: codifica di ciascuna cifra decimale con quattro bit.
+
+### binary32 {#gloss-binary32}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Formato binario in virgola mobile su 32 bit: segno, esponente e frazione.
+
+### Bit {#gloss-bit}
+
+[tutti i percorsi]{.gloss-scope}
+
+Binary Digit: cifra binaria, 0 oppure 1.
+
+### Bobina {#gloss-bobina}
+
+[TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+Conduttore avvolto in spire: quando è percorso da corrente genera un campo magnetico. È il principio con cui funzionano relè, contattori ed elettromagneti.
+
+::: {.gloss-nota}
+[Se programmi in Ladder]{.gloss-per}
+Nei programmi Ladder la bobina **non è un componente fisico**: è il simbolo che chiude una riga di programma e rappresenta ciò che la riga comanda. Prende valore vero quando i contatti alla sua sinistra lasciano passare, falso quando non lo fanno. Il nome viene dal relè: là la bobina era davvero l'elemento comandato.
+:::
+
+### BOOL {#gloss-bool}
+
+[Sistemi automatici]{.gloss-scope}
+
+Boolean: tipo di variabile che rappresenta vero o falso.
+
+### Breadboard {#gloss-breadboard}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Basetta riutilizzabile per montare circuiti senza saldature. Contatti metallici interni collegano gruppi di fori; la fessura centrale separa i due gruppi di ciascuna fila.
+
+### Byte {#gloss-byte}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Gruppo di otto bit.
+
+## C {#lettera-c .gloss-letter}
+
+### CAD {#gloss-cad}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Computer-Aided Design: disegno e progettazione assistiti dal computer.
+
+### CADeSIMU {#gloss-cadesimu}
+
+[Sistemi automatici]{.gloss-scope}
+
+Software per disegnare e simulare schemi elettrici.
+
+### Campionamento {#gloss-campionamento}
+
+[Domotica e automazione]{.gloss-scope}
+
+Selezione dei valori del segnale in determinati istanti di tempo.
+
+### Carico {#gloss-carico}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dispositivo o circuito che assorbe energia elettrica dalla sorgente a cui è collegato. Collegato all'uscita di un circuito, può modificarne la tensione.
+
+### Carry {#gloss-carry}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Riporto prodotto da una somma binaria e passato alla posizione successiva.
+
+### Cartiglio {#gloss-cartiglio}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Riquadro del disegno che riporta titolo, autore, data, scala e altri dati identificativi.
+
+### CCT {#gloss-cct}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Correlated Color Temperature: temperatura di colore correlata della luce bianca, espressa in kelvin.
+
+### CEI {#gloss-cei}
+
+[TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+Comitato Elettrotecnico Italiano: organismo italiano di normazione elettrotecnica.
+
+### CEN {#gloss-cen}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Comité Européen de Normalisation: organismo europeo di normazione.
+
+### CENELEC {#gloss-cenelec}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Comité Européen de Normalisation Électrotechnique: organismo europeo di normazione elettrotecnica.
+
+### Circuito {#gloss-circuito}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Insieme di componenti collegati per svolgere una funzione elettrica.
+
+### Clock / CLK {#gloss-clock-clk}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+CLK (Clock): segnale temporale usato per coordinare gli aggiornamenti di un circuito sequenziale.
+
+### Codifica one-hot {#gloss-codifica-one-hot}
+
+[Domotica e automazione]{.gloss-scope}
+
+Rappresentazione a un bit per stato, con un solo bit attivo nel modello a stato unico.
+
+### COM {#gloss-com}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Common: morsetto comune del multimetro, nel contesto delle misure qui descritte.
+
+### Comando combinatorio {#gloss-comando-combinatorio}
+
+[Sistemi automatici]{.gloss-scope}
+
+Comando il cui risultato dipende dagli ingressi attuali, senza memoria degli stati precedenti.
+
+### Comando sequenziale {#gloss-comando-sequenziale}
+
+[Sistemi automatici]{.gloss-scope}
+
+Comando il cui risultato dipende anche dallo stato memorizzato.
+
+### Comparatore {#gloss-comparatore}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Circuito che confronta due valori e segnala uguaglianza o relazione di ordine.
+
+### Complemento a due {#gloss-complemento-a-due}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Codifica degli interi con segno su un numero fissato di bit. Per ottenere l'opposto, se rappresentabile, si invertono tutti i bit e si aggiunge 1.
+
+### Condensatore {#gloss-condensatore}
+
+[tutti i percorsi]{.gloss-scope}
+
+Componente che immagazzina energia nel campo elettrico. Nel modello ideale a capacità costante, la carica su un’armatura è proporzionale alla tensione fra le armature. La capacità si misura in farad (F).
+
+### Contatore {#gloss-contatore}
+
+[Sistemi automatici]{.gloss-scope}
+
+Blocco con memoria che conta eventi secondo una regola definita.
+
+### Contatto {#gloss-contatto}
+
+[TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+Parte conduttrice che apre, chiude o commuta un collegamento elettrico. Un contatto normalmente aperto lascia passare la corrente solo mentre è azionato; uno normalmente chiuso fa il contrario.
+
+::: {.gloss-nota}
+[Se programmi in Ladder]{.gloss-per}
+Nei programmi Ladder il contatto **non è un componente fisico**: è una condizione da verificare. Lascia passare quando la variabile a cui è associato vale vero, oppure quando vale falso se il contatto è disegnato come normalmente chiuso.
+:::
+
+### Contattore {#gloss-contattore}
+
+[Domotica e automazione]{.gloss-scope}
+
+Dispositivo elettromeccanico che comanda un carico attraverso contatti azionati da una bobina.
+
+### Corrente {#gloss-corrente}
+
+[tutti i percorsi]{.gloss-scope}
+
+Quantità di carica elettrica che attraversa una sezione del circuito nell'unità di tempo. Si misura in ampere (A).
+
+### Cortocircuito {#gloss-cortocircuito}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Collegamento accidentale a bassissima impedenza fra punti a potenziale diverso, che può provocare una corrente molto elevata.
+
+### CPU {#gloss-cpu}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Central Processing Unit: unità che esegue le istruzioni del programma e coordina il funzionamento del controllore.
+
+### CTU {#gloss-ctu}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Count Up: contatore crescente che incrementa sul fronte di salita dell'ingresso di conteggio e prevede un reset.
+
+### CU / CV / PV {#gloss-cu-cv-pv}
+
+[Domotica e automazione]{.gloss-scope}
+
+Count Up input, Current Value, Preset Value: ingresso di conteggio, valore attuale e valore prefissato del contatore.
+
+## D {#lettera-d .gloss-letter}
+
+### D.Lgs. {#gloss-d-lgs}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Decreto legislativo: atto avente forza di legge adottato dal Governo su delega del Parlamento.
+
+### D.M. {#gloss-d-m}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Decreto ministeriale: atto emanato da un ministro.
+
+### Debug {#gloss-debug}
+
+[Sistemi automatici]{.gloss-scope}
+
+Ricerca e correzione degli errori osservando esecuzione e valori del programma.
+
+### Decoder {#gloss-decoder}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Decodificatore: attiva le uscite associate al codice applicato agli ingressi.
+
+### Deviatore {#gloss-deviatore}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dispositivo che collega un morsetto comune a una di due vie alternative.
+
+### DIALux {#gloss-dialux}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Software per la progettazione e il calcolo illuminotecnico.
+
+### DiCo {#gloss-dico}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dichiarazione di conformità: documento rilasciato dall'impresa installatrice nei casi previsti, con gli allegati pertinenti.
+
+### Differenziale {#gloss-differenziale}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dispositivo che rileva uno squilibrio fra le correnti nei conduttori attivi; il tipo puro non protegge dal sovraccarico.
+
+### Display a 7 segmenti {#gloss-display-a-7-segmenti}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Indicatore formato da sette elementi luminosi, combinati per visualizzare cifre.
+
+### Disturbo {#gloss-disturbo}
+
+[Sistemi automatici]{.gloss-scope}
+
+Azione esterna non comandata che modifica il comportamento del sistema.
+
+### DPI {#gloss-dpi}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dispositivi di Protezione Individuale: attrezzature destinate alla protezione personale dai rischi pertinenti.
+
+### DRC {#gloss-drc}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Design Rule Check): controllo delle regole di progetto del circuito stampato.
+
+### Driver {#gloss-driver}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Circuito che fornisce a un dispositivo i segnali, la tensione e la corrente necessari al suo funzionamento. Per esempio, alimenta e comanda una sorgente LED.
+
+## E {#lettera-e .gloss-letter}
+
+### EN {#gloss-en}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+European Standard: sigla che identifica una norma europea.
+
+### Enable {#gloss-enable}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Ingresso di abilitazione che consente una funzione quando è nello stato attivo.
+
+### ENC {#gloss-enc}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Sigla dell'indirizzo Elettronica usata nella denominazione della classe.
+
+### Encoder {#gloss-encoder}
+
+[Domotica e automazione]{.gloss-scope}
+
+Trasduttore che associa alla posizione o al movimento impulsi o codici digitali.
+
+### Energia {#gloss-energia}
+
+[tutti i percorsi]{.gloss-scope}
+
+Grandezza che permette di quantificare i trasferimenti e le trasformazioni, per esempio fra forma elettrica, termica e meccanica. Si misura in joule (J), oppure in wattora (Wh) nei consumi elettrici. A potenza costante, l’energia trasferita è il prodotto della potenza per la durata.
+
+### Estensimetro {#gloss-estensimetro}
+
+[Domotica e automazione]{.gloss-scope}
+
+Sensore resistivo che rileva una deformazione meccanica tramite una variazione di resistenza.
+
+### ETC {#gloss-etc}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Sigla dell'indirizzo Elettrotecnica nella denominazione della classe.
+
+## F {#lettera-f .gloss-letter}
+
+### FBD {#gloss-fbd}
+
+[Sistemi automatici]{.gloss-scope}
+
+Function Block Diagram: linguaggio grafico che collega blocchi attraverso i segnali.
+
+### Flip-flop / FF {#gloss-flip-flop-ff}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+FF (Flip-Flop): elemento di memoria che aggiorna lo stato in corrispondenza di un fronte del clock, nel modello studiato.
+
+### Flowgorithm {#gloss-flowgorithm}
+
+[Sistemi automatici]{.gloss-scope}
+
+Ambiente per costruire ed eseguire algoritmi rappresentati con diagrammi di flusso.
+
+### Flusso luminoso {#gloss-flusso-luminoso}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Quantità fotometrica di luce emessa; si misura in lumen (lm).
+
+### Footprint {#gloss-footprint}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Impronta del componente sul circuito stampato: piazzole e geometria di montaggio.
+
+### Forzatura {#gloss-forzatura}
+
+[Sistemi automatici]{.gloss-scope}
+
+Imposizione temporanea di un valore durante una prova del programma.
+
+### Fronte di discesa {#gloss-fronte-di-discesa}
+
+[TPSEE · Elettronici · Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Passaggio di un segnale logico da 1 a 0; va distinto dal mantenimento del valore 0.
+
+### Fronte di salita {#gloss-fronte-di-salita}
+
+[TPSEE · Elettronici · Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Passaggio di un segnale logico da 0 a 1; va distinto dal mantenimento del valore 1.
+
+### FSL {#gloss-fsl}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Formazione Scuola-Lavoro: percorso che collega apprendimento scolastico ed esperienze formative nel mondo del lavoro, indicato anche con PCTO.
+
+### Full adder / FA {#gloss-full-adder-fa}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+FA (Full Adder), sommatore completo: somma due bit e un riporto entrante, producendo somma e riporto uscente.
+
+## G {#lettera-g .gloss-letter}
+
+### GF {#gloss-gf}
+
+[Domotica e automazione]{.gloss-scope}
+
+Gauge Factor: fattore di estensimetro che lega variazione relativa di resistenza e deformazione.
+
+### GND {#gloss-gnd}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Ground): massa, nodo di riferimento delle tensioni del circuito; non indica necessariamente la terra di protezione.
+
+### Gray {#gloss-gray}
+
+[TPSEE · Elettronici · Sistemi automatici]{.gloss-scope}
+
+Codice binario in cui due valori consecutivi sono rappresentati da sequenze che differiscono per un solo bit.
+
+## H {#lettera-h .gloss-letter}
+
+### Half adder / HA {#gloss-half-adder-ha}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+HA (Half Adder), semisommatore: somma due bit, senza ingresso di riporto.
+
+### Hex {#gloss-hex}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Hexadecimal): esadecimale, rappresentazione dei numeri in base sedici.
+
+## I {#lettera-i .gloss-letter}
+
+### I/O {#gloss-i-o}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Input/Output: ingressi e uscite del sistema o del controllore.
+
+### IEC {#gloss-iec}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+International Electrotechnical Commission: organismo internazionale di normazione elettrotecnica.
+
+### IEEE {#gloss-ieee}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Institute of Electrical and Electronics Engineers): organizzazione che pubblica standard tecnici per elettronica e informatica.
+
+### IETF {#gloss-ietf}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Internet Engineering Task Force): organizzazione che sviluppa standard tecnici per Internet.
+
+### IL {#gloss-il}
+
+[Sistemi automatici]{.gloss-scope}
+
+Instruction List: linguaggio a istruzioni che elaborano un risultato intermedio.
+
+### Illuminamento {#gloss-illuminamento}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Flusso luminoso incidente per unità di superficie; si misura in lux (lx).
+
+### Impianto {#gloss-impianto}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Insieme organizzato di circuiti e dispositivi che distribuiscono e utilizzano energia elettrica.
+
+### Implicante primo {#gloss-implicante-primo}
+
+[Sistemi automatici]{.gloss-scope}
+
+Termine che copre soltanto combinazioni ammesse a 1 e non può essere ampliato eliminando altri letterali.
+
+### IN / PT / ET / Q {#gloss-in-pt-et-q}
+
+[Domotica e automazione]{.gloss-scope}
+
+Input, Preset Time, Elapsed Time e uscita Q: ingresso, tempo impostato, tempo trascorso e uscita del timer.
+
+### Induttore e induttanza {#gloss-induttore-e-induttanza}
+
+[tutti i percorsi]{.gloss-scope}
+
+L’induttore è il componente che immagazzina energia nel campo magnetico. L’induttanza L ne caratterizza il comportamento e si misura in henry (H). Nel modello ideale a L costante, la tensione ai suoi capi dipende dalla rapidità di variazione della corrente.
+
+### Ingresso {#gloss-ingresso}
+
+[Sistemi automatici]{.gloss-scope}
+
+Grandezza che agisce sul sistema; se manipolabile, permette di comandarlo.
+
+### INT {#gloss-int}
+
+[Sistemi automatici]{.gloss-scope}
+
+Integer: tipo di dato per numeri interi, con intervallo rappresentabile limitato.
+
+### Integrato {#gloss-integrato}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Componente che contiene molti elementi elettronici realizzati e collegati su un piccolo chip di materiale semiconduttore.
+
+### Intensità luminosa {#gloss-intensita-luminosa}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Flusso per unità di angolo solido in una direzione; si misura in candele (cd).
+
+### Interblocco {#gloss-interblocco}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Vincolo che impedisce l'attivazione simultanea di comandi incompatibili, per esempio due direzioni di marcia.
+
+### Interrupt {#gloss-interrupt}
+
+[Domotica e automazione]{.gloss-scope}
+
+Evento che richiede una gestione dedicata rispetto al normale programma ciclico.
+
+### Invertitore {#gloss-invertitore}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dispositivo che mantiene diritti o incrocia due collegamenti, usato fra due deviatori.
+
+### ISO {#gloss-iso}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici]{.gloss-scope}
+
+International Organization for Standardization: organismo internazionale di normazione.
+
+### Isteresi {#gloss-isteresi}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Comportamento con soglie diverse di attivazione e disattivazione e mantenimento dello stato nella fascia intermedia.
+
+### ITIS {#gloss-itis}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+Istituto Tecnico Industriale Statale.
+
+### ITP {#gloss-itp}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+Insegnante Tecnico Pratico: docente delle attività tecnico-pratiche e di laboratorio.
+
+## J {#lettera-j .gloss-letter}
+
+### JK {#gloss-jk}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Sigla degli ingressi di un tipo di flip-flop; con J e K entrambi a 1, lo stato commuta al fronte attivo.
+
+## K {#lettera-k .gloss-letter}
+
+### Karnaugh {#gloss-karnaugh}
+
+[TPSEE · Elettronici · Sistemi automatici]{.gloss-scope}
+
+Mappa per semplificare funzioni booleane raggruppando celle adiacenti, disposte in ordine Gray.
+
+## L {#lettera-l .gloss-letter}
+
+### Ladder {#gloss-ladder}
+
+[Sistemi automatici]{.gloss-scope}
+
+Ladder Diagram: linguaggio grafico per PLC che rappresenta il programma come una scala di righe, ciascuna con i contatti che pongono le condizioni a sinistra e la bobina che porta il risultato a destra.
+
+### Latch {#gloss-latch}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Elemento di memoria sensibile a un livello di abilitazione o alle condizioni degli ingressi.
+
+### Layer {#gloss-layer}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Livello grafico del CAD per organizzare oggetti come muri, collegamenti, simboli e quote.
+
+### LD {#gloss-ld}
+
+[Sistemi automatici]{.gloss-scope}
+
+Ladder Diagram: sigla del linguaggio Ladder. Vedi la voce [Ladder](#gloss-ladder).
+
+### LED {#gloss-led}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici]{.gloss-scope}
+
+Light Emitting Diode: diodo che emette luce quando è percorso da corrente nelle condizioni previste.
+
+### Legenda {#gloss-legenda}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Elenco che spiega i simboli e le sigle usati in un disegno.
+
+### LF {#gloss-lf}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Line Feed): carattere di controllo per l'avanzamento di riga; codice ASCII 10.
+
+### Livello logico {#gloss-livello-logico}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Valore logico 0 o 1 associato a un intervallo di tensioni riconosciuto dal circuito; le soglie dipendono dalla famiglia del componente.
+
+### LSB {#gloss-lsb}
+
+[Domotica e automazione]{.gloss-scope}
+
+Least Significant Bit: il bit meno significativo di una parola binaria, quello che pesa di meno. Nelle conversioni indica anche il passo minimo, cioè la più piccola variazione che il numero può rappresentare.
+
+### Luminanza {#gloss-luminanza}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Intensità luminosa per area apparente in una direzione; si misura in candele per metro quadrato.
+
+## M {#lettera-m .gloss-letter}
+
+### Magnetotermico {#gloss-magnetotermico}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Interruttore automatico con funzioni di protezione da sovraccarico e cortocircuito.
+
+### Maschera {#gloss-maschera}
+
+[Domotica e automazione]{.gloss-scope}
+
+Parola di bit usata per selezionare le posizioni su cui eseguire operazioni logiche.
+
+### MAT {#gloss-mat}
+
+[Domotica e automazione]{.gloss-scope}
+
+Motore Asincrono Trifase.
+
+### Maxtermine {#gloss-maxtermine}
+
+[Sistemi automatici]{.gloss-scope}
+
+Somma booleana in cui ogni variabile compare una sola volta, diretta o negata; vale 0 per una sola combinazione degli ingressi.
+
+### Messa a terra {#gloss-messa-a-terra}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Collegamento delle parti previste dell'impianto al terreno attraverso conduttori e dispersori, parte delle misure di protezione.
+
+### MF {#gloss-mf}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Maintenance Factor: fattore di manutenzione che considera il decadimento dell'illuminazione previsto nel progetto.
+
+### Mintermine {#gloss-mintermine}
+
+[Sistemi automatici]{.gloss-scope}
+
+Prodotto booleano in cui ogni variabile compare una sola volta, diretta o negata; vale 1 per una sola combinazione degli ingressi.
+
+### Modello {#gloss-modello}
+
+[Sistemi automatici]{.gloss-scope}
+
+Rappresentazione semplificata di un sistema, costruita per rispondere a una domanda.
+
+### Modulo di un contatore {#gloss-modulo-di-un-contatore}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Numero di stati distinti del ciclo di conteggio prima che la sequenza si ripeta. Un contatore modulo 8 percorre otto stati, da 0 a 7, poi torna a 0.
+
+### Morsetto {#gloss-morsetto}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Punto di connessione che permette di fissare e collegare un conduttore.
+
+### Multisim {#gloss-multisim}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Ambiente per disegnare e simulare circuiti elettrici ed elettronici.
+
+### MUX {#gloss-mux}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Multiplexer: seleziona uno fra più ingressi e lo trasferisce all'uscita, secondo i selettori.
+
+### MSB {#gloss-msb}
+
+[TPSEE · Elettronici · Domotica e automazione]{.gloss-scope}
+
+Most Significant Bit: il bit più significativo di una parola binaria, quello che pesa di più. È l'opposto del [LSB](#gloss-lsb).
+
+## N {#lettera-n .gloss-letter}
+
+### NaN {#gloss-nan}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Not a Number): valore speciale dei formati in virgola mobile, per risultati numerici non definiti.
+
+### NAND {#gloss-nand}
+
+[Sistemi automatici]{.gloss-scope}
+
+NOT AND: negazione del risultato di AND, cioè vale 0 solo quando tutti gli ingressi sono 1. La porta NAND è universale: combinandone più copie si ottiene qualsiasi altra funzione logica.
+
+### NC {#gloss-nc}
+
+[Sistemi automatici]{.gloss-scope}
+
+Normally Closed: contatto normalmente chiuso nella condizione di riferimento.
+
+### Netlist {#gloss-netlist}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Elenco delle connessioni elettriche fra i terminali dei componenti di un circuito.
+
+### NO {#gloss-no}
+
+[Sistemi automatici]{.gloss-scope}
+
+Normally Open: contatto normalmente aperto nella condizione di riferimento.
+
+### NOR {#gloss-nor}
+
+[Sistemi automatici]{.gloss-scope}
+
+NOT OR: negazione del risultato di OR, cioè vale 1 solo quando tutti gli ingressi sono 0. Come la NAND, la porta NOR è universale.
+
+### NOT {#gloss-not}
+
+[Sistemi automatici]{.gloss-scope}
+
+Negazione logica: scambia 0 e 1.
+
+### NPN / PNP {#gloss-npn-pnp}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Sequenze dei materiali semiconduttori di tipo N e P che formano i transistor bipolari; identificano i due tipi di transistor.
+
+## O {#lettera-o .gloss-letter}
+
+### Offset {#gloss-offset}
+
+[Domotica e automazione]{.gloss-scope}
+
+Termine costante della caratteristica di trasferimento, ossia il valore d'uscita a ingresso nullo nel modello affine.
+
+### OpenPLC {#gloss-openplc}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Ambiente di programmazione ed esecuzione per controllori a logica programmabile, usato nel percorso.
+
+### OR {#gloss-or}
+
+[Sistemi automatici]{.gloss-scope}
+
+Disgiunzione inclusiva: il risultato è 1 se almeno un ingresso è 1.
+
+### Overflow {#gloss-overflow}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Il risultato matematico non rientra nell'intervallo rappresentabile nel formato scelto.
+
+## P {#lettera-p .gloss-letter}
+
+### Parametro {#gloss-parametro}
+
+[Sistemi automatici]{.gloss-scope}
+
+Grandezza che descrive una proprietà del modello, distinta dagli ingressi e dallo stato.
+
+### PCB {#gloss-pcb}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Printed Circuit Board: circuito stampato che sostiene e collega i componenti.
+
+### PCTO {#gloss-pcto}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Percorsi per le Competenze Trasversali e per l'Orientamento: percorso di formazione scuola-lavoro, indicato anche con FSL.
+
+### PDF {#gloss-pdf}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici]{.gloss-scope}
+
+Portable Document Format: formato usato per distribuire e stampare documenti.
+
+### PE {#gloss-pe}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Protective Earth: identificazione del conduttore di protezione, che contribuisce alla protezione dai guasti di isolamento.
+
+### Piedinatura {#gloss-piedinatura}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Disposizione e numerazione dei piedini (pin) di un componente, con la funzione di ciascuno.
+
+### Pilotaggio / driver {#gloss-pilotaggio-driver}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Il pilotaggio fornisce a un dispositivo i segnali, la tensione e la corrente necessari al suo funzionamento. Il driver è il circuito che svolge questo compito.
+
+### PLC {#gloss-plc}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Programmable Logic Controller: controllore a logica programmabile che acquisisce ingressi ed elabora comandi.
+
+### Ponte di Wheatstone {#gloss-ponte-di-wheatstone}
+
+[Domotica e automazione]{.gloss-scope}
+
+Rete di quattro resistenze che confronta due partitori tramite una misura differenziale.
+
+### Potenza {#gloss-potenza}
+
+[tutti i percorsi]{.gloss-scope}
+
+Energia trasferita o trasformata per unità di tempo. Si misura in watt (W). La potenza elettrica istantanea assorbita, nella convenzione dell’utilizzatore, è p(t)=v(t)i(t).
+
+### ProgeCAD {#gloss-progecad}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Software CAD impiegato nel percorso per realizzare elaborati di disegno elettrico.
+
+### Pt100 {#gloss-pt100}
+
+[Domotica e automazione]{.gloss-scope}
+
+Termoresistenza al platino con resistenza nominale di 100 ohm a 0 gradi Celsius.
+
+## Q {#lettera-q .gloss-letter}
+
+### Quantizzazione {#gloss-quantizzazione}
+
+[Domotica e automazione]{.gloss-scope}
+
+Assegnazione di un valore o codice discreto a un intervallo di ampiezze del segnale.
+
+### Quine--McCluskey {#gloss-quine-mccluskey}
+
+[Sistemi automatici]{.gloss-scope}
+
+Metodo tabellare che semplifica funzioni booleane combinando e coprendo mintermini.
+
+## R {#lettera-r .gloss-letter}
+
+### Raw {#gloss-raw}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Valore numerico grezzo restituito dall'acquisizione, da interpretare secondo la codifica del modulo.
+
+### REAL {#gloss-real}
+
+[Sistemi automatici]{.gloss-scope}
+
+Tipo numerico per valori con parte frazionaria, rappresentati con precisione finita.
+
+### Relè a impulsi {#gloss-rele-a-impulsi}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Dispositivo che cambia stato a ogni impulso e lo mantiene fra due comandi, secondo la propria sequenza.
+
+### Relè termico {#gloss-rele-termico}
+
+[Domotica e automazione]{.gloss-scope}
+
+Dispositivo che interviene in caso di sovraccarico secondo la propria caratteristica.
+
+### Resistenza {#gloss-resistenza}
+
+[tutti i percorsi]{.gloss-scope}
+
+Grandezza che descrive quanto un componente ostacola il passaggio della corrente: nel resistore ohmico è il rapporto fra tensione e corrente, dove vale V = R I. Si misura in ohm (Ω). Il resistore è il componente, la resistenza è una sua proprietà.
+
+### Resistività {#gloss-resistivita}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Proprietà del materiale che lega resistenza, lunghezza e sezione del conduttore.
+
+### Rete {#gloss-rete}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Insieme di componenti collegati che realizzano una funzione elettrica o elettronica.
+
+### Rete combinatoria {#gloss-rete-combinatoria}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Circuito la cui uscita dipende dagli ingressi correnti, trascorso il ritardo di propagazione.
+
+### Rete sequenziale {#gloss-rete-sequenziale}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Circuito con memoria: il comportamento dipende anche dallo stato precedente.
+
+### Retroazione {#gloss-retroazione}
+
+[TPSEE · Elettronici · Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Collegamento che riporta una misura dell'uscita all'ingresso del sistema per influenzarne il comportamento.
+
+### RFC {#gloss-rfc}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Request for Comments): serie di documenti tecnici su Internet; alcuni definiscono standard, come RFC 3629 per la codifica del testo.
+
+### Riferimento {#gloss-riferimento}
+
+[Sistemi automatici]{.gloss-scope}
+
+Valore desiderato dell'uscita di un controllo.
+
+### Rigidità dielettrica {#gloss-rigidita-dielettrica}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Campo elettrico sopportabile da un isolante prima della scarica nelle condizioni di prova.
+
+### Ripetibilità {#gloss-ripetibilita}
+
+[Domotica e automazione]{.gloss-scope}
+
+Concordanza fra risultati di misure ripetute nelle stesse condizioni.
+
+### Risoluzione {#gloss-risoluzione}
+
+[Domotica e automazione]{.gloss-scope}
+
+Più piccola variazione distinguibile nelle condizioni dichiarate; non coincide con l'accuratezza complessiva.
+
+### Runtime {#gloss-runtime}
+
+[Sistemi automatici]{.gloss-scope}
+
+Ambiente che esegue il programma; si distingue dall'editor usato per prepararlo.
+
+## S {#lettera-s .gloss-letter}
+
+### Scalatura {#gloss-scalatura}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Conversione del dato acquisito in unità fisiche mediante una relazione e un campo dichiarati.
+
+### Scansione {#gloss-scansione}
+
+[Sistemi automatici]{.gloss-scope}
+
+Ciclo di lettura degli ingressi, esecuzione del programma e aggiornamento delle uscite.
+
+### Schema funzionale {#gloss-schema-funzionale}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Schema che mostra come funziona un circuito e come interagiscono le sue parti.
+
+### Schema multifilare {#gloss-schema-multifilare}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Rappresentazione che distingue i singoli conduttori e i loro collegamenti.
+
+### Schema unifilare {#gloss-schema-unifilare}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Rappresentazione sintetica con una linea per circuito o insieme di conduttori, completata da indicazioni.
+
+### Scorrimento / rotazione {#gloss-scorrimento-rotazione}
+
+[Domotica e automazione]{.gloss-scope}
+
+Spostamento dei bit; nella rotazione il bit espulso rientra dall'altra estremità.
+
+### Segnale analogico {#gloss-segnale-analogico}
+
+[TPSEE · Elettronici · Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Segnale il cui valore può variare con continuità entro un intervallo.
+
+### Segnale digitale {#gloss-segnale-digitale}
+
+[TPSEE · Elettronici · Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Segnale rappresentato mediante un insieme discreto di valori; nel caso binario i valori logici sono 0 e 1.
+
+### Sensibilità {#gloss-sensibilita}
+
+[Domotica e automazione]{.gloss-scope}
+
+Rapporto fra variazione dell'uscita e variazione dell'ingresso, o pendenza locale della caratteristica.
+
+### Sensore {#gloss-sensore}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Dispositivo che rileva una grandezza fisica e fornisce un segnale che ne rappresenta il valore o la presenza.
+
+### Setpoint {#gloss-setpoint}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Valore desiderato della grandezza controllata, usato come riferimento nel confronto con la misura.
+
+### SFC {#gloss-sfc}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Sequential Function Chart: organizzazione di un programma in passi, transizioni e azioni.
+
+### Sincrono {#gloss-sincrono}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Sistema in cui gli aggiornamenti dello stato sono coordinati da un segnale di clock comune.
+
+### Sistema {#gloss-sistema}
+
+[Sistemi automatici]{.gloss-scope}
+
+Insieme di elementi collegati che interagiscono.
+
+### Sovraccarico {#gloss-sovraccarico}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Condizione in cui un circuito o dispositivo assorbe una corrente superiore a quella prevista per il suo normale funzionamento.
+
+### SR {#gloss-sr}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Set--Reset: ingressi o funzione di impostazione e azzeramento di una memoria.
+
+### ST {#gloss-st}
+
+[Sistemi automatici]{.gloss-scope}
+
+Structured Text: linguaggio testuale per assegnazioni, condizioni e calcoli nei PLC.
+
+### Stato {#gloss-stato}
+
+[Sistemi automatici]{.gloss-scope}
+
+Informazione memorizzata che serve, insieme agli ingressi, a prevedere l'evoluzione del sistema.
+
+### Strobe {#gloss-strobe}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Ingresso di abilitazione: consente o blocca il funzionamento del componente. Nei multiplexer qui studiati è attivo basso: 0 abilita la selezione, 1 la disabilita.
+
+## T {#lettera-t .gloss-letter}
+
+### T {#gloss-t}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Toggle): ingresso di un flip-flop che, se attivo, fa commutare lo stato al fronte di clock.
+
+### Tabella di verità {#gloss-tabella-di-verita}
+
+[TPSEE · Elettronici · Sistemi automatici]{.gloss-scope}
+
+Elenco di tutte le combinazioni degli ingressi e dei corrispondenti valori delle uscite.
+
+### Task {#gloss-task}
+
+[Sistemi automatici]{.gloss-scope}
+
+Unità di esecuzione del controllore, attivata periodicamente o da un evento.
+
+### Tensione {#gloss-tensione}
+
+[tutti i percorsi]{.gloss-scope}
+
+Differenza di potenziale elettrico fra due punti. Si misura in volt (V).
+
+### Termocoppia {#gloss-termocoppia}
+
+[Domotica e automazione]{.gloss-scope}
+
+Trasduttore che genera una tensione legata alle temperature delle giunzioni di materiali differenti.
+
+### TI {#gloss-ti}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Texas Instruments): produttore di componenti elettronici.
+
+### TIME {#gloss-time}
+
+[Sistemi automatici]{.gloss-scope}
+
+Tipo di dato che rappresenta una durata.
+
+### Timeout {#gloss-timeout}
+
+[Domotica e automazione]{.gloss-scope}
+
+Tempo massimo di attesa, oltre il quale il controllo esegue l'azione prevista dalla specifica.
+
+### Timer {#gloss-timer}
+
+[Sistemi automatici]{.gloss-scope}
+
+Blocco con memoria che misura una durata e aggiorna le proprie uscite.
+
+### TOF {#gloss-tof}
+
+[Sistemi automatici]{.gloss-scope}
+
+Off-Delay Timer: temporizzatore che ritarda la disattivazione dell'uscita.
+
+### TON {#gloss-ton}
+
+[Sistemi automatici]{.gloss-scope}
+
+On-Delay Timer: temporizzatore che ritarda l'attivazione finché l'ingresso resta vero per il tempo impostato.
+
+### TP {#gloss-tp}
+
+[Sistemi automatici]{.gloss-scope}
+
+Pulse Timer: blocco che genera un impulso di durata impostata secondo le regole del temporizzatore.
+
+### TPSEE {#gloss-tpsee}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici]{.gloss-scope}
+
+Tecnologie e Progettazione di Sistemi Elettrici ed Elettronici.
+
+### Transcaratteristica {#gloss-transcaratteristica}
+
+[Domotica e automazione]{.gloss-scope}
+
+Relazione fra grandezza d'ingresso e segnale d'uscita del trasduttore in condizioni definite.
+
+### TTL {#gloss-ttl}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Transistor-Transistor Logic: famiglia di circuiti logici realizzati con transistor bipolari.
+
+## U {#lettera-u .gloss-letter}
+
+### U.D. {#gloss-u-d}
+
+[TPSEE · Elettronici · TPSEE · Elettrotecnici · Sistemi automatici]{.gloss-scope}
+
+Unità Didattica: parte di un modulo del programma.
+
+### UF {#gloss-uf}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Utilization Factor: fattore di utilizzazione, quota del flusso considerato che raggiunge il piano utile.
+
+### Ultiboard {#gloss-ultiboard}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Ambiente per la disposizione dei componenti e il disegno delle piste di un PCB.
+
+### UNI {#gloss-uni}
+
+[TPSEE · Elettrotecnici]{.gloss-scope}
+
+Ente Italiano di Normazione: organismo italiano di normazione per i settori di propria competenza.
+
+### Unicode {#gloss-unicode}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+Standard di codifica dei caratteri mediante punti di codice.
+
+### Uscita {#gloss-uscita}
+
+[Sistemi automatici]{.gloss-scope}
+
+Grandezza osservata per descrivere il risultato del comportamento di un sistema.
+
+### UTF-8 {#gloss-utf-8}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+(Unicode Transformation Format, 8 bit): codifica dei punti di codice dei caratteri Unicode con sequenze da uno a quattro byte.
+
+## V {#lettera-v .gloss-letter}
+
+### Variabile {#gloss-variabile}
+
+[Sistemi automatici]{.gloss-scope}
+
+Nome associato a un valore che può cambiare durante il funzionamento o il calcolo.
+
+### Variabile booleana {#gloss-variabile-booleana}
+
+[TPSEE · Elettronici · Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Variabile che può assumere soltanto due valori logici: vero o falso, rappresentati con 1 e 0.
+
+### VCC {#gloss-vcc}
+
+[TPSEE · Elettronici]{.gloss-scope}
+
+V indica la tensione, CC richiama i collettori dei transistor bipolari. Sigla del terminale di alimentazione positiva degli integrati qui studiati; il valore va letto nel datasheet.
+
+## X {#lettera-x .gloss-letter}
+
+### XOR {#gloss-xor}
+
+[TPSEE · Elettronici · Sistemi automatici]{.gloss-scope}
+
+Exclusive OR: con due ingressi vale 1 quando i valori sono diversi.

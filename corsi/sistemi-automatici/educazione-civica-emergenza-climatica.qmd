@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Educazione civica / Emergenza climatica"
 ---
 
@@ -10,7 +11,7 @@ title: "Educazione civica / Emergenza climatica"
 
 L'automazione può contribuire a evitare funzionamenti inutili, ma per valutarne l'effetto occorrono misure, un confronto omogeneo e ipotesi dichiarate. Un consumo elettrico minore non si traduce in una quantità universale di emissioni evitate: servono dati sul contesto energetico.
 
-#### Un calcolo trasparente
+## Un calcolo trasparente
 
 A potenza costante: **energia \[kWh\] = potenza \[kW\] $\times$ tempo \[h\]**, $W=Pt$. Qui $W$ è il simbolo dell'energia, $P$ la potenza e $t$ la durata; l'unità watt si scrive invece W senza corsivo.
 

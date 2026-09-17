@@ -11,3 +11,5 @@
 .env.*
 
 **/*.quarto_ipynb
+
+/.luarc.json

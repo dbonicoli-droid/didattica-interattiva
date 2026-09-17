@@ -1,18 +1,19 @@
 ---
+stato: in-sviluppo
 title: "Modulo 1 / Elettromeccanica"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-1.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd)
 
 ::: {.callout-note icon=false}
-## 🚧 Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
 
-![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
 
-La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+[Vai alla sintesi del modulo 1 →](../modulo-1.qmd){.btn .btn-primary}
 
-Puoi già consultare la [panoramica del modulo](../modulo-1.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
 :::
 
 ::: {.unit-index}
@@ -26,38 +27,26 @@ Puoi già consultare la [panoramica del modulo](../modulo-1.qmd), i [componenti]
 - [U.D. 1.6 / Inversione di marcia del MAT e interblocco](#ud:1.6)
 :::
 
-## U.D. 1.1 / Il contattore {#ud:1.1}
+## U.D. 1.1 / Il contattore ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.1}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-1.qmd#ud:1.1){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 1.2 / Il relè termico ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.2}
 
-## U.D. 1.2 / Il relè termico {#ud:1.2}
+[Vedi nella sintesi →](../modulo-1.qmd#ud:1.2){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 1.3 / Richiami sugli schemi di potenza e di comando ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.3}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-1.qmd#ud:1.3){.wip-link}
 
-## U.D. 1.3 / Richiami sugli schemi di potenza e di comando {#ud:1.3}
+## U.D. 1.4 / La funzione di autoritenuta ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.4}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-1.qmd#ud:1.4){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.5}
 
-## U.D. 1.4 / La funzione di autoritenuta {#ud:1.4}
+[Vedi nella sintesi →](../modulo-1.qmd#ud:1.5){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 1.6 / Inversione di marcia del MAT e interblocco ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.6}
 
-Contenuti in preparazione.
-
-## U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni {#ud:1.5}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 1.6 / Inversione di marcia del MAT e interblocco {#ud:1.6}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-1.qmd#ud:1.6){.wip-link}

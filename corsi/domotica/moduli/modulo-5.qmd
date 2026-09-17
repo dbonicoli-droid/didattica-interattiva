@@ -1,18 +1,19 @@
 ---
+stato: in-sviluppo
 title: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-5.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-5.qmd)
 
 ::: {.callout-note icon=false}
-## 🚧 Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
 
-![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
 
-La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+[Vai alla sintesi del modulo 5 →](../modulo-5.qmd){.btn .btn-primary}
 
-Puoi già consultare la [panoramica del modulo](../modulo-5.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
 :::
 
 ::: {.unit-index}
@@ -29,56 +30,38 @@ Puoi già consultare la [panoramica del modulo](../modulo-5.qmd), i [componenti]
 - [U.D. 5.9 / Operazioni logiche booleane avanzate](#ud:5.9)
 :::
 
-## U.D. 5.1 / Operazioni di temporizzazione {#ud:5.1}
+## U.D. 5.1 / Operazioni di temporizzazione ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.1}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.1){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 5.2 / Operazioni di conteggio ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.2}
 
-## U.D. 5.2 / Operazioni di conteggio {#ud:5.2}
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.2){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 5.3 / Operazioni di confronto ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.3}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.3){.wip-link}
 
-## U.D. 5.3 / Operazioni di confronto {#ud:5.3}
+## U.D. 5.4 / Programmazione avanzata dei PLC ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.4}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.4){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 5.5 / Aree di memoria e funzioni indirizzabili ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.5}
 
-## U.D. 5.4 / Programmazione avanzata dei PLC {#ud:5.4}
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.5){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 5.6 / Operazioni di controllo del programma ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.6}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.6){.wip-link}
 
-## U.D. 5.5 / Aree di memoria e funzioni indirizzabili {#ud:5.5}
+## U.D. 5.7 / Operazioni di interrupt ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.7}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.7){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 5.8 / Operazioni di scorrimento e rotazione ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.8}
 
-## U.D. 5.6 / Operazioni di controllo del programma {#ud:5.6}
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.8){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 5.9 / Operazioni logiche booleane avanzate ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:5.9}
 
-Contenuti in preparazione.
-
-## U.D. 5.7 / Operazioni di interrupt {#ud:5.7}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 5.8 / Operazioni di scorrimento e rotazione {#ud:5.8}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 5.9 / Operazioni logiche booleane avanzate {#ud:5.9}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-5.qmd#ud:5.9){.wip-link}

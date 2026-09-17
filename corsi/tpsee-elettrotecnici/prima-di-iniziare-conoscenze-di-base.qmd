@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettrotecnici
 title: "Fondamenti del corso"
 search: false
 toc: false

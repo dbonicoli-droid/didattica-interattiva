@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Schede di approfondimento"
 ---
 
@@ -8,24 +9,24 @@ title: "Schede di approfondimento"
 
 Queste pagine sviluppano i dettagli dei singoli argomenti. Puoi leggerle dopo gli esempi introduttivi.
 
-- [[Binary32](glossario.qmd#gloss-g6): campi, lettura, precisione e casi speciali](approfondimenti.qmd#app:binary32) (p. ).
+- [[Binary32](/risorse/glossario/index.qmd#gloss-binary32): campi, lettura, precisione e casi speciali](approfondimenti.qmd#app:binary32).
 
-- [Logica: notazioni e realizzazioni equivalenti](approfondimenti.qmd#app:logica) (p. ).
+- [Logica: notazioni e realizzazioni equivalenti](approfondimenti.qmd#app:logica).
 
-- [Contatori: tempi e sequenze particolari](approfondimenti.qmd#app:tempi) (p. ).
+- [Contatori: tempi e sequenze particolari](approfondimenti.qmd#app:tempi).
 
-## [Binary32](glossario.qmd#gloss-g6): rappresentare i numeri in virgola mobile {#app:binary32}
+## [Binary32](/risorse/glossario/index.qmd#gloss-binary32): rappresentare i numeri in virgola mobile {#app:binary32}
 
-### Dal numero ai tre gruppi di [bit](glossario.qmd#gloss-g7)
+### Dal numero ai tre gruppi di [bit](/risorse/glossario/index.qmd#gloss-bit)
 
-Riprendiamo $5{,}75=1{,}0111_2\cdot2^2$. Il **significando** è tutto il numero $1{,}0111_2$; il **campo frazione** contiene soltanto i [bit](glossario.qmd#gloss-g7) dopo la virgola. In [binary32](glossario.qmd#gloss-g6) i tre campi occupano:
+Riprendiamo $5{,}75=1{,}0111_2\cdot2^2$. Il **significando** è tutto il numero $1{,}0111_2$; il **campo frazione** contiene soltanto i [bit](/risorse/glossario/index.qmd#gloss-bit) dopo la virgola. In [binary32](/risorse/glossario/index.qmd#gloss-binary32) i tre campi occupano:
 
 ::: center
   Campo           Dimensione                         Che cosa memorizza
   --------------- ---------------------------------- -------------------------------------------
-  Segno $s$       1 [bit](glossario.qmd#gloss-g7)    0 per positivo, 1 per negativo
-  Esponente $E$   8 [bit](glossario.qmd#gloss-g7)    L'esponente effettivo aumentato di 127
-  Frazione $f$    23 [bit](glossario.qmd#gloss-g7)   Le cifre dopo la virgola del significando
+  Segno $s$       1 [bit](/risorse/glossario/index.qmd#gloss-bit)    0 per positivo, 1 per negativo
+  Esponente $E$   8 [bit](/risorse/glossario/index.qmd#gloss-bit)    L'esponente effettivo aumentato di 127
+  Frazione $f$    23 [bit](/risorse/glossario/index.qmd#gloss-bit)   Le cifre dopo la virgola del significando
 :::
 
 **Perché aggiungere 127?** L'esponente effettivo può essere negativo. Aggiungendo uno scostamento fisso, detto *bias*, lo si conserva come valore non negativo: per esempio $-2$ diventa 125, 0 diventa 127 e $+2$ diventa 129. Per leggerlo si sottrae 127. In forma normale, la cifra prima della virgola è sempre 1: non viene memorizzata perché si può ricostruire durante la lettura.
@@ -36,9 +37,9 @@ Riprendiamo $5{,}75=1{,}0111_2\cdot2^2$. Il **significando** è tutto il numero 
 
 2.  L'esponente è 2: si memorizza $E=2+127=129=10000001_2$.
 
-3.  Dopo la virgola ci sono 0111. Per arrivare a 23 [bit](glossario.qmd#gloss-g7) aggiungiamo 19 zeri a destra.
+3.  Dopo la virgola ci sono 0111. Per arrivare a 23 [bit](/risorse/glossario/index.qmd#gloss-bit) aggiungiamo 19 zeri a destra.
 
-$$\underbrace{0}_{\text{segno}}\quad\underbrace{10000001}_{\text{esponente}}\quad\underbrace{01110000000000000000000}_{\text{frazione}}$$ In esadecimale la parola è `40B80000`. Raggruppiamo i [bit](glossario.qmd#gloss-g7) in campi per capirli: gli spazi non vengono memorizzati.
+$$\underbrace{0}_{\text{segno}}\quad\underbrace{10000001}_{\text{esponente}}\quad\underbrace{01110000000000000000000}_{\text{frazione}}$$ In esadecimale la parola è `40B80000`. Raggruppiamo i [bit](/risorse/glossario/index.qmd#gloss-bit) in campi per capirli: gli spazi non vengono memorizzati.
 
 **Esercizio con soluzione.** Per $10{,}25=1{,}01001_2\cdot2^3$, il segno è 0; $E=3+127=130=10000010_2$; la frazione è 01001 seguita da 18 zeri.
 
@@ -48,13 +49,13 @@ $$\underbrace{0}_{\text{segno}}\quad\underbrace{10000001}_{\text{esponente}}\qua
 
 ### Prima i passaggi, poi la formula
 
-Per leggere un numero normale in [binary32](glossario.qmd#gloss-g6):
+Per leggere un numero normale in [binary32](/risorse/glossario/index.qmd#gloss-binary32):
 
 1.  Leggi il segno: $s=0$ significa positivo, $s=1$ negativo.
 
-2.  Trasforma gli otto [bit](glossario.qmd#gloss-g7) di $E$ in decimale e sottrai 127.
+2.  Trasforma gli otto [bit](/risorse/glossario/index.qmd#gloss-bit) di $E$ in decimale e sottrai 127.
 
-3.  Rimetti $1,$ davanti ai 23 [bit](glossario.qmd#gloss-g7) della frazione.
+3.  Rimetti $1,$ davanti ai 23 [bit](/risorse/glossario/index.qmd#gloss-bit) della frazione.
 
 4.  Moltiplica il numero così ottenuto per la potenza di 2 e applica il segno.
 
@@ -66,19 +67,19 @@ Indichiamo con $x$ il valore del numero rappresentato. La formula riassume quest
 
 - $(-1)^s$ vale $+1$ se $s=0$, e $-1$ se $s=1$: applica il segno.
 
-- $(1{,}f)_2$ significa **anteporre 1 e la virgola ai [bit](glossario.qmd#gloss-g7) di $f$**, formando un numero in base due. Se $f$ inizia con 010, si legge $1{,}010\ldots_2$. Le parentesi raggruppano il numero: non indicano una coppia di valori né un prodotto fra 1 e $f$.
+- $(1{,}f)_2$ significa **anteporre 1 e la virgola ai [bit](/risorse/glossario/index.qmd#gloss-bit) di $f$**, formando un numero in base due. Se $f$ inizia con 010, si legge $1{,}010\ldots_2$. Le parentesi raggruppano il numero: non indicano una coppia di valori né un prodotto fra 1 e $f$.
 
 - $2^{E-127}$ usa l'esponente effettivo, recuperato togliendo lo scostamento.
 
 ### Precisione e casi speciali
 
-La regola precedente vale per $1\leq E\leq254$. Nei numeri normali i 23 [bit](glossario.qmd#gloss-g7) di frazione, insieme all'1 implicito, danno 24 cifre binarie significative. Se non bastano, il valore viene arrotondato. La distanza fra numeri rappresentabili cresce al crescere della loro grandezza.
+La regola precedente vale per $1\leq E\leq254$. Nei numeri normali i 23 [bit](/risorse/glossario/index.qmd#gloss-bit) di frazione, insieme all'1 implicito, danno 24 cifre binarie significative. Se non bastano, il valore viene arrotondato. La distanza fra numeri rappresentabili cresce al crescere della loro grandezza.
 
 ::: center
   Esponente memorizzato   Interpretazione
   ----------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $E=0$                   Zeri e numeri molto piccoli, detti subnormali: l'1 implicito è sostituito da 0 e l'esponente effettivo è $-126$.
-  $E=255$                 Frazione tutta a zero: infinito, con il segno indicato. Frazione non nulla: [NaN](glossario.qmd#gloss-g39), *[Not](glossario.qmd#gloss-g2) a Number*, usato per risultati non definiti.
+  $E=255$                 Frazione tutta a zero: infinito, con il segno indicato. Frazione non nulla: [NaN](/risorse/glossario/index.qmd#gloss-nan), *[Not](/risorse/glossario/index.qmd#gloss-not) a Number*, usato per risultati non definiti.
 :::
 
 Per questi casi non si usa la formula dei numeri normali.
@@ -89,21 +90,21 @@ Per questi casi non si usa la formula dei numeri normali.
 
 ### Leggere le porte annidate
 
-Scriviamo $N(A,B)$ per "uscita di una [NAND](glossario.qmd#gloss-g40) con ingressi $A,B$" e $R(A,B)$ per una [NOR](glossario.qmd#gloss-g40). Si parte dalle parentesi più interne: $N(N(A,B),N(A,B))$ significa calcolare prima una [NAND](glossario.qmd#gloss-g40) di $A,B$, poi collegare la sua uscita a entrambi gli ingressi di una seconda [NAND](glossario.qmd#gloss-g40). La seconda porta nega il risultato della prima: otteniamo [AND](glossario.qmd#gloss-g2).
+Scriviamo $N(A,B)$ per "uscita di una [NAND](/risorse/glossario/index.qmd#gloss-nand) con ingressi $A,B$" e $R(A,B)$ per una [NOR](/risorse/glossario/index.qmd#gloss-nor). Si parte dalle parentesi più interne: $N(N(A,B),N(A,B))$ significa calcolare prima una [NAND](/risorse/glossario/index.qmd#gloss-nand) di $A,B$, poi collegare la sua uscita a entrambi gli ingressi di una seconda [NAND](/risorse/glossario/index.qmd#gloss-nand). La seconda porta nega il risultato della prima: otteniamo [AND](/risorse/glossario/index.qmd#gloss-and).
 
 ::: center
-  Funzione                            Solo [NAND](glossario.qmd#gloss-g40)   Solo [NOR](glossario.qmd#gloss-g40)
+  Funzione                            Solo [NAND](/risorse/glossario/index.qmd#gloss-nand)   Solo [NOR](/risorse/glossario/index.qmd#gloss-nor)
   ----------------------------------- -------------------------------------- -------------------------------------
-  [NOT](glossario.qmd#gloss-g2) $A$   $N(A,A)$                               $R(A,A)$
+  [NOT](/risorse/glossario/index.qmd#gloss-not) $A$   $N(A,A)$                               $R(A,A)$
   $AB$                                $N(N(A,B),N(A,B))$                     $R(R(A,A),R(B,B))$
   $A+B$                               $N(N(A,A),N(B,B))$                     $R(R(A,B),R(A,B))$
 :::
 
-### Numerare le celle di [Karnaugh](glossario.qmd#gloss-g32)
+### Numerare le celle di [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh)
 
-Con tre ingressi, il numero binario $ABC$ identifica una combinazione. Il suo valore decimale è $m=4A+2B+C$: per esempio 101 corrisponde a 5. La scrittura $Y=\Sigma m(1,3,5,6,7)$ elenca le combinazioni per cui $Y=1$: 001, 011, 101, 110 e 111. Qui $\Sigma$ indica una [OR](glossario.qmd#gloss-g2) fra i termini associati a quelle combinazioni, non una somma numerica dei loro indici.
+Con tre ingressi, il numero binario $ABC$ identifica una combinazione. Il suo valore decimale è $m=4A+2B+C$: per esempio 101 corrisponde a 5. La scrittura $Y=\Sigma m(1,3,5,6,7)$ elenca le combinazioni per cui $Y=1$: 001, 011, 101, 110 e 111. Qui $\Sigma$ indica una [OR](/risorse/glossario/index.qmd#gloss-or) fra i termini associati a quelle combinazioni, non una somma numerica dei loro indici.
 
-**Una mappa a tre variabili.** Per $Y=1$ nelle righe $000,010,100,110$, le colonne sono ordinate in [Gray](glossario.qmd#gloss-g22):
+**Una mappa a tre variabili.** Per $Y=1$ nelle righe $000,010,100,110$, le colonne sono ordinate in [Gray](/risorse/glossario/index.qmd#gloss-gray):
 
 ::: center
    $A\backslash BC$   00   01   11   10
@@ -114,42 +115,42 @@ Con tre ingressi, il numero binario $ABC$ identifica una combinazione. Il suo va
 
 Le colonne estreme sono adiacenti: i quattro 1 formano un gruppo attraverso il bordo. $A$ e $B$ cambiano, mentre $C$ resta 0; quindi $Y=\overline C$.
 
-### Confrontare due numeri a due [bit](glossario.qmd#gloss-g7)
+### Confrontare due numeri a due [bit](/risorse/glossario/index.qmd#gloss-bit)
 
-Per $A_1A_0>B_1B_0$ ci sono due possibilità: $A_1=1,B_1=0$, oppure i [bit](glossario.qmd#gloss-g7) superiori sono uguali e $A_0=1,B_0=0$. Definendo $E_1=\overline{A_1\oplus B_1}$, che vale 1 quando i [bit](glossario.qmd#gloss-g7) superiori sono uguali: $$G=A_1\overline{B_1}+E_1A_0\overline{B_0}.$$ $G=1$ segnala $A>B$. Il secondo termine interviene soltanto quando $E_1=1$. Per esempio, con $A=11$ e $B=10$, decide il [bit](glossario.qmd#gloss-g7) inferiore: $G=1$.
+Per $A_1A_0>B_1B_0$ ci sono due possibilità: $A_1=1,B_1=0$, oppure i [bit](/risorse/glossario/index.qmd#gloss-bit) superiori sono uguali e $A_0=1,B_0=0$. Definendo $E_1=\overline{A_1\oplus B_1}$, che vale 1 quando i [bit](/risorse/glossario/index.qmd#gloss-bit) superiori sono uguali: $$G=A_1\overline{B_1}+E_1A_0\overline{B_0}.$$ $G=1$ segnala $A>B$. Il secondo termine interviene soltanto quando $E_1=1$. Per esempio, con $A=11$ e $B=10$, decide il [bit](/risorse/glossario/index.qmd#gloss-bit) inferiore: $G=1$.
 
-### Una [XOR](glossario.qmd#gloss-g56) con un [MUX](glossario.qmd#gloss-g38) a soli due ingressi
+### Una [XOR](/risorse/glossario/index.qmd#gloss-xor) con un [MUX](/risorse/glossario/index.qmd#gloss-mux) a soli due ingressi
 
-Per ottenere $A\oplus B$, scegli $S=A$, $D_0=B$ e $D_1=\overline B$. Se $A=0$ passa $B$; se $A=1$ passa il contrario di $B$. Così una variabile seleziona l'ingresso e l'altra alimenta i dati. Servono un [MUX](glossario.qmd#gloss-g38) non invertente abilitato e una [NOT](glossario.qmd#gloss-g2) per generare $\overline B$.
+Per ottenere $A\oplus B$, scegli $S=A$, $D_0=B$ e $D_1=\overline B$. Se $A=0$ passa $B$; se $A=1$ passa il contrario di $B$. Così una variabile seleziona l'ingresso e l'altra alimenta i dati. Servono un [MUX](/risorse/glossario/index.qmd#gloss-mux) non invertente abilitato e una [NOT](/risorse/glossario/index.qmd#gloss-not) per generare $\overline B$.
 
-[Torna alle porte universali](modulo-3.qmd#ud:3.3)·[[Karnaugh](glossario.qmd#gloss-g32)](modulo-3.qmd#ud:3.4)·[Comparatori](modulo-3.qmd#ud:3.7)·[[MUX](glossario.qmd#gloss-g38)](modulo-3.qmd#ud:3.13).
+[Torna alle porte universali](modulo-3.qmd#ud:3.3)·[[Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh)](modulo-3.qmd#ud:3.4)·[Comparatori](modulo-3.qmd#ud:3.7)·[[MUX](/risorse/glossario/index.qmd#gloss-mux)](modulo-3.qmd#ud:3.13).
 
 ## Tempi e contatori {#app:tempi}
 
 ### Gli ingressi non devono cambiare sul fronte
 
-Un [flip-flop](glossario.qmd#gloss-g18) reale richiede che gli ingressi restino stabili per un intervallo prima del fronte attivo, chiamato **setup**, e per un intervallo dopo, chiamato **hold**. I valori si leggono nel datasheet del componente. Se non sono rispettati, lo stato acquisito può non essere quello atteso. Anche il circuito [sincrono](glossario.qmd#gloss-new79) ha ritardi: il [clock](glossario.qmd#gloss-g11) comune coordina gli stadi, ma non rende istantanei i cambiamenti. La logica deve avere tempo di stabilizzarsi prima del fronte successivo; va rispettato anche l'intervallo di hold dopo il fronte.
+Un [flip-flop](/risorse/glossario/index.qmd#gloss-flip-flop-ff) reale richiede che gli ingressi restino stabili per un intervallo prima del fronte attivo, chiamato **setup**, e per un intervallo dopo, chiamato **hold**. I valori si leggono nel datasheet del componente. Se non sono rispettati, lo stato acquisito può non essere quello atteso. Anche il circuito [sincrono](/risorse/glossario/index.qmd#gloss-sincrono) ha ritardi: il [clock](/risorse/glossario/index.qmd#gloss-clock-clk) comune coordina gli stadi, ma non rende istantanei i cambiamenti. La logica deve avere tempo di stabilizzarsi prima del fronte successivo; va rispettato anche l'intervallo di hold dopo il fronte.
 
-### I passaggi intermedi del contatore [asincrono](glossario.qmd#gloss-new80)
+### I passaggi intermedi del contatore [asincrono](/risorse/glossario/index.qmd#gloss-asincrono)
 
-Nel contatore a tre [bit](glossario.qmd#gloss-g7) dell'[U.D. 4.2](modulo-4.qmd#ud:4.2), durante il passaggio da 3 a 4 i [bit](glossario.qmd#gloss-g7) cambiano uno dopo l'altro: $$011\ \longrightarrow\ 010\ \longrightarrow\ 000\ \longrightarrow\ 100.$$ Prima cambia $Q_0$, poi $Q_1$, poi $Q_2$. Le parole 010 e 000 sono transitorie: non sono conteggi stabili, ma un [decoder](glossario.qmd#gloss-g13) collegato alle uscite può reagire anche a queste e produrre brevi impulsi indesiderati.
+Nel contatore a tre [bit](/risorse/glossario/index.qmd#gloss-bit) dell'[U.D. 4.2](modulo-4.qmd#ud:4.2), durante il passaggio da 3 a 4 i [bit](/risorse/glossario/index.qmd#gloss-bit) cambiano uno dopo l'altro: $$011\ \longrightarrow\ 010\ \longrightarrow\ 000\ \longrightarrow\ 100.$$ Prima cambia $Q_0$, poi $Q_1$, poi $Q_2$. Le parole 010 e 000 sono transitorie: non sono conteggi stabili, ma un [decoder](/risorse/glossario/index.qmd#gloss-decoder) collegato alle uscite può reagire anche a queste e produrre brevi impulsi indesiderati.
 
 #### Stimare un ritardo
 
-Supponiamo, solo per esercizio, che ciascuno dei tre stadi impieghi $15\,\mathrm{ns}$ a propagare il cambiamento. Una transizione che attraversa tutta la catena richiede circa $3\cdot15=45\,\mathrm{ns}$. Questa stima non basta a fissare la massima frequenza sicura di un [integrato](glossario.qmd#gloss-new77): servono anche le altre condizioni del datasheet.
+Supponiamo, solo per esercizio, che ciascuno dei tre stadi impieghi $15\,\mathrm{ns}$ a propagare il cambiamento. Una transizione che attraversa tutta la catena richiede circa $3\cdot15=45\,\mathrm{ns}$. Questa stima non basta a fissare la massima frequenza sicura di un [integrato](/risorse/glossario/index.qmd#gloss-integrato): servono anche le altre condizioni del datasheet.
 
 ### Estensione: contare da 0 a 9
 
-Un contatore [modulo ](glossario.qmd#gloss-g61)10 usa quattro [bit](glossario.qmd#gloss-g7) e percorre dieci stati: da 0000 a 1001. Dopo 1001 deve tornare a 0000, invece di continuare con 1010. Si progetta quindi una logica che riconosca lo stato 9 e prepari il ritorno a zero al fronte successivo.
+Un contatore [modulo ](/risorse/glossario/index.qmd#gloss-modulo-di-un-contatore)10 usa quattro [bit](/risorse/glossario/index.qmd#gloss-bit) e percorre dieci stati: da 0000 a 1001. Dopo 1001 deve tornare a 0000, invece di continuare con 1010. Si progetta quindi una logica che riconosca lo stato 9 e prepari il ritorno a zero al fronte successivo.
 
-- Un **reset [sincrono](glossario.qmd#gloss-new79)** azzera al fronte attivo del [clock](glossario.qmd#gloss-g11).
+- Un **reset [sincrono](/risorse/glossario/index.qmd#gloss-sincrono)** azzera al fronte attivo del [clock](/risorse/glossario/index.qmd#gloss-clock-clk).
 
-- Un **reset [asincrono](glossario.qmd#gloss-new80)** azzera quando viene attivato, senza attendere il [clock](glossario.qmd#gloss-g11).
+- Un **reset [asincrono](/risorse/glossario/index.qmd#gloss-asincrono)** azzera quando viene attivato, senza attendere il [clock](/risorse/glossario/index.qmd#gloss-clock-clk).
 
 - Per gli stati non usati, da 1010 a 1111, si deve definire un ritorno a uno stato valido.
 
 I due reset non sono intercambiabili: cambiano il momento in cui avviene l'azzeramento.
 
-**Esercizio con soluzione.** Quale stato deve seguire 1001 in un contatore da 0 a 9? Deve seguire 0000; in un normale contatore binario a quattro [bit](glossario.qmd#gloss-g7) seguirebbe invece 1010, cioè 10.
+**Esercizio con soluzione.** Quale stato deve seguire 1001 in un contatore da 0 a 9? Deve seguire 0000; in un normale contatore binario a quattro [bit](/risorse/glossario/index.qmd#gloss-bit) seguirebbe invece 1010, cioè 10.
 
-[Torna ai [flip-flop](glossario.qmd#gloss-g18)](modulo-4.qmd#ud:4.1)·[Contatori asincroni](modulo-4.qmd#ud:4.2)·[Contatori sincroni](modulo-4.qmd#ud:4.3).
+[Torna ai [flip-flop](/risorse/glossario/index.qmd#gloss-flip-flop-ff)](modulo-4.qmd#ud:4.1)·[Contatori asincroni](modulo-4.qmd#ud:4.2)·[Contatori sincroni](modulo-4.qmd#ud:4.3).

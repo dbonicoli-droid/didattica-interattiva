@@ -1,4 +1,5 @@
 ---
+sidebar: domotica
 title: "Modulo 1 / Elettromeccanica"
 subtitle: "Panoramica del Programma"
 ---
@@ -20,25 +21,25 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:1}
 
-**Primo periodo**
+**Primo periodo · ore da definire**
 
 I dispositivi elettromeccanici collegano una richiesta di comando al funzionamento del carico. Distinguiamo sempre potenza, comando e protezione.
 
-## U.D. 1.1 / Il [contattore](glossario.qmd#gloss-d1) {#ud:1.1}
+## U.D. 1.1 / Il [contattore](/risorse/glossario/index.qmd#gloss-contattore) {#ud:1.1}
 
-Il **[contattore](glossario.qmd#gloss-d1)** è un dispositivo elettromeccanico che permette di comandare un carico attraverso una bobina. Il circuito di comando e quello di potenza svolgono funzioni diverse.
+Il **[contattore](/risorse/glossario/index.qmd#gloss-contattore)** è un dispositivo elettromeccanico che permette di comandare un carico attraverso una bobina. Il circuito di comando e quello di potenza svolgono funzioni diverse.
 
 - **Bobina**: quando viene alimentata, aziona il meccanismo elettromagnetico.
 
 - **Contatti principali**: inseriscono o disinseriscono il carico previsto.
 
-- **Contatti ausiliari**: servono per consenso, segnalazione, autoritenuta o [interblocco](glossario.qmd#gloss-d3).
+- **Contatti ausiliari**: servono per consenso, segnalazione, autoritenuta o [interblocco](/risorse/glossario/index.qmd#gloss-interblocco).
 
 La sigla della bobina non indica la corrente che possono portare i contatti principali: tensione di comando e caratteristiche del carico sono dati distinti.
 
-## U.D. 1.2 / Il [relè termico](glossario.qmd#gloss-d2) {#ud:1.2}
+## U.D. 1.2 / Il [relè termico](/risorse/glossario/index.qmd#gloss-rele-termico) {#ud:1.2}
 
-Il [relè termico](glossario.qmd#gloss-d2) rileva una condizione di sovraccarico persistente del motore e interviene sul comando del [contattore](glossario.qmd#gloss-d1). Nella realizzazione elettromeccanica sfrutta il riscaldamento prodotto dalla corrente.
+Il [relè termico](/risorse/glossario/index.qmd#gloss-rele-termico) rileva una condizione di sovraccarico persistente del motore e interviene sul comando del [contattore](/risorse/glossario/index.qmd#gloss-contattore). Nella realizzazione elettromeccanica sfrutta il riscaldamento prodotto dalla corrente.
 
 - Non sostituisce la protezione contro il cortocircuito.
 
@@ -46,7 +47,7 @@ Il [relè termico](glossario.qmd#gloss-d2) rileva una condizione di sovraccarico
 
 - La scelta, la regolazione e il riarmo dipendono da motore, dispositivo e progetto del banco.
 
-#### Leggere il circuito completo
+### Leggere il circuito completo
 
 Il dispositivo di protezione rileva il problema; un suo contatto può interrompere il circuito della bobina. Per capire perché il motore si ferma occorre leggere sia potenza sia comando.
 
@@ -73,7 +74,7 @@ Le tre linee entrano in morsetti distinti del motore; il simbolo del motore rapp
 
 ## U.D. 1.4 / La funzione di autoritenuta {#ud:1.4}
 
-L'**autoritenuta** mantiene il comando dopo il rilascio del pulsante di avvio. Nella logica a relè un contatto ausiliario del [contattore](glossario.qmd#gloss-d1) è posto in parallelo al pulsante di marcia. Indichiamo con Start la richiesta di avvio, con StopOK il consenso all'esecuzione e con Run la memoria del comando: $$\mathtt{Run}_{nuovo}=\mathtt{StopOK}\land(\mathtt{Start}\lor\mathtt{Run}_{precedente}).$$ $\land$ significa AND e $\lor$ significa OR. Se StopOK diventa falso il comando si azzera, anche con Start premuto.
+L'**autoritenuta** mantiene il comando dopo il rilascio del pulsante di avvio. Nella logica a relè un contatto ausiliario del [contattore](/risorse/glossario/index.qmd#gloss-contattore) è posto in parallelo al pulsante di marcia. Indichiamo con Start la richiesta di avvio, con StopOK il consenso all'esecuzione e con Run la memoria del comando: $$\mathtt{Run}_{nuovo}=\mathtt{StopOK}\land(\mathtt{Start}\lor\mathtt{Run}_{precedente}).$$ $\land$ significa AND e $\lor$ significa OR. Se StopOK diventa falso il comando si azzera, anche con Start premuto.
 
 
 ![Start NO in parallelo a K1 NO; Stop e F1 NC interrompono la bobina.](/assets/fondamenti/autoritenuta.svg)
@@ -82,36 +83,36 @@ L'**autoritenuta** mantiene il comando dopo il rilascio del pulsante di avvio. N
 
 StopOK riassume i consensi fisici: Stop e F1 chiusi e il contatto Consenso chiuso. K1 è il contattore fisico; Run è la memoria logica che ne rappresenta il comando.
 
-#### Prova della memoria
+### Prova della memoria
 
 Premi Start, poi rilascialo: Run resta vero. Togli StopOK: Run torna falso. Se Start resta premuto quando ripristini il consenso, questa funzione elementare può ripartire; richiedere una nuova pressione è una specifica aggiuntiva.
 
 ## U.D. 1.5 / Avviamento del motore asincrono trifase e segnalazioni {#ud:1.5}
 
-Il **motore asincrono trifase ([MAT](glossario.qmd#gloss-d4))** trasforma energia elettrica in movimento. Nell'avviamento diretto il [contattore](glossario.qmd#gloss-d1) collega il motore all'alimentazione prevista dal progetto.
+Il **motore asincrono trifase ([MAT](/risorse/glossario/index.qmd#gloss-mat))** trasforma energia elettrica in movimento. Nell'avviamento diretto il [contattore](/risorse/glossario/index.qmd#gloss-contattore) collega il motore all'alimentazione prevista dal progetto.
 
 - Il comando di avvio è ammesso solo con i consensi presenti.
 
 - L'arresto rimuove il comando alla bobina; il motore non si ferma necessariamente all'istante.
 
-- Una spia collegata al comando indica una richiesta; un riscontro ausiliario indica lo stato del [contattore](glossario.qmd#gloss-d1); un [sensore](glossario.qmd#gloss-new43) di moto fornisce un'informazione fisica diversa.
+- Una spia collegata al comando indica una richiesta; un riscontro ausiliario indica lo stato del [contattore](/risorse/glossario/index.qmd#gloss-contattore); un [sensore](/risorse/glossario/index.qmd#gloss-sensore) di moto fornisce un'informazione fisica diversa.
 
 
 ![Due segnalazioni distinte: richiesta di comando e riscontro del contattore.](/assets/fondamenti/spie.svg)
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/spie.svg)
 
-#### Associare le spie al significato
+### Associare le spie al significato
 
-Per ciascuna segnalazione scrivi ciò che dimostra: «comando attivo», «[contattore](glossario.qmd#gloss-d1) inserito», «protezione intervenuta». Non chiamare automaticamente «motore in movimento» una spia che osserva soltanto il comando.
+Per ciascuna segnalazione scrivi ciò che dimostra: «comando attivo», «[contattore](/risorse/glossario/index.qmd#gloss-contattore) inserito», «protezione intervenuta». Non chiamare automaticamente «motore in movimento» una spia che osserva soltanto il comando.
 
-## U.D. 1.6 / Inversione di marcia del [MAT](glossario.qmd#gloss-d4) e [interblocco](glossario.qmd#gloss-d3) {#ud:1.6}
+## U.D. 1.6 / Inversione di marcia del [MAT](/risorse/glossario/index.qmd#gloss-mat) e [interblocco](/risorse/glossario/index.qmd#gloss-interblocco) {#ud:1.6}
 
-L'inversione del senso di [rotazione](glossario.qmd#gloss-d9) di un motore trifase si ottiene cambiando la sequenza delle fasi. In un quadro di inversione due contattori realizzano le due configurazioni.
+L'inversione del senso di [rotazione](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione) di un motore trifase si ottiene cambiando la sequenza delle fasi. In un quadro di inversione due contattori realizzano le due configurazioni.
 
 - I comandi AVANTI e INDIETRO devono essere mutuamente esclusivi.
 
-- L'**[interblocco](glossario.qmd#gloss-d3)** impedisce l'attivazione contemporanea delle due direzioni.
+- L'**[interblocco](/risorse/glossario/index.qmd#gloss-interblocco)** impedisce l'attivazione contemporanea delle due direzioni.
 
 - La logica deve definire richieste simultanee, arresto e passaggio fra le direzioni.
 
@@ -126,7 +127,7 @@ L'inversione del senso di [rotazione](glossario.qmd#gloss-d9) di un motore trifa
 
 Gli schemi illustrano le funzioni. Il progetto del banco comprende interblocco meccanico, protezioni, collegamento PE e gestione del tempo di arresto. Lo schema a contatti non determina da solo una priorità fra richieste simultanee; la logica del corso deve definirla esplicitamente.
 
-#### Prima si simula, poi si prova sul banco
+### Prima si simula, poi si prova sul banco
 
 Le connessioni di potenza e gli interblocchi elettrici/meccanici sono predisposti e verificati con i docenti. L'esclusione logica nel programma non sostituisce le protezioni del quadro. Il tempo di arresto del motore deve essere considerato prima di una nuova direzione.
 

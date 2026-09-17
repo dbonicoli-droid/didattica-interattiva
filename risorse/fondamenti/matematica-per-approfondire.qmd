@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Matematica per approfondire: una prima lettura"
 ---
 

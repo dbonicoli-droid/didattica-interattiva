@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 body-classes: course-background
 title: "Sistemi automatici"
 toc-depth: 2
@@ -9,94 +10,94 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 ## Programma del corso {#moduli}
 
 []{#panoramica-del-programma}
+[]{#moduli-di-approfondimento}
+[]{#ore-e-periodi}
 []{#nav:mappa}
 []{#nav:indice}
 
-Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi** ne presenta brevemente gli argomenti.
+Dal sistema al controllo: si impara a descrivere un sistema con un modello, a trattare le variabili con la logica e a realizzare automatismi con il PLC.
 
-🚧 Le pagine dei moduli sono in preparazione e si arricchiranno con le lezioni. Le sintesi sono già consultabili.
+| **Modulo** | **Argomento** | **Periodo** | **Ore** |
+|---|---|---|---|
+| 1 | Fondamenti di teoria dei sistemi | 1 | 15 |
+| 2 | Elettronica digitale | 1 | 30 |
+| 3 | PLC | 2 | 30 |
+| 4 | Circuiti combinatori | 2 | 40 |
+| 5 | Circuiti sequenziali | 2 | 24 |
+| 6 | Tempi, eventi e grandezze analogiche | 2 | 24 |
+|  | **Totale** |  | **163** |
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+**Educazione civica:** emergenza climatica, ore da definire.
 
 :::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}
 
-### [01 / Osservare e modellare](moduli/modulo-1.qmd)
+### [01 / Fondamenti di teoria dei sistemi](moduli/modulo-1.qmd)
 
-- [Ingressi](glossario.qmd#gloss-s9), [uscite](glossario.qmd#gloss-s26) e modelli.
-- Algoritmi e [Flowgorithm](glossario.qmd#gloss-s6).
+- [Ingressi](/risorse/glossario/index.qmd#gloss-ingresso), [uscite](/risorse/glossario/index.qmd#gloss-uscita) e modelli.
+- Algoritmi e [Flowgorithm](/risorse/glossario/index.qmd#gloss-flowgorithm).
 
-[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
+**Primo periodo · 15 ore** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [02 / Ragionare con la logica](moduli/modulo-2.qmd)
+### [02 / Elettronica digitale](moduli/modulo-2.qmd)
 
-- Porte e [tabelle di verità](glossario.qmd#gloss-s50).
+- Porte e [tabelle di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita).
 - Semplificare le funzioni.
 
-[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
+**Primo periodo · 30 ore** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [03 / Conoscere il PLC](moduli/modulo-3.qmd)
+### [03 / PLC](moduli/modulo-3.qmd)
 
-- Architettura, [I/O](glossario.qmd#gloss-s31) e [scansione](glossario.qmd#gloss-s22).
+- Architettura, [I/O](/risorse/glossario/index.qmd#gloss-i-o) e [scansione](/risorse/glossario/index.qmd#gloss-scansione).
 - Configurare e collaudare.
 
-[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
+**Secondo periodo · 30 ore** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [04 / Combinare le condizioni](moduli/modulo-4.qmd)
+### [04 / Circuiti combinatori](moduli/modulo-4.qmd)
 
-- [Ladder](glossario.qmd#gloss-s12), blocchi e testo.
+- [Ladder](/risorse/glossario/index.qmd#gloss-ladder), blocchi e testo.
 - Confrontare le simulazioni.
 
-[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
+**Secondo periodo · 40 ore** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [05 / Organizzare le sequenze](moduli/modulo-5.qmd)
+### [05 / Circuiti sequenziali](moduli/modulo-5.qmd)
 
-- [Stati](glossario.qmd#gloss-s24), transizioni e [uscite](glossario.qmd#gloss-s26).
+- [Stati](/risorse/glossario/index.qmd#gloss-stato), transizioni e [uscite](/risorse/glossario/index.qmd#gloss-uscita).
 - Memoria e interblocchi.
 
-[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
+**Secondo periodo · 24 ore** · [Leggi la sintesi del modulo 5 →](modulo-5.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [06 / Gestire tempi e misure](moduli/modulo-6.qmd)
+### [06 / Tempi, eventi e grandezze analogiche](moduli/modulo-6.qmd)
 
-- [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61).
-- [Segnali analogici](glossario.qmd#gloss-new75) e [scalatura](glossario.qmd#gloss-s65).
+- [Timer](/risorse/glossario/index.qmd#gloss-timer) e [contatori](/risorse/glossario/index.qmd#gloss-contatore).
+- [Segnali analogici](/risorse/glossario/index.qmd#gloss-segnale-analogico) e [scalatura](/risorse/glossario/index.qmd#gloss-scalatura).
 
-[Leggi la sintesi del modulo 6 →](modulo-6.qmd)
+**Secondo periodo · 24 ore** · [Leggi la sintesi del modulo 6 →](modulo-6.qmd)
 
 :::
 
 ::::
-
-### Ore e periodi indicativi {#ore-e-periodi}
-| **Modulo** | **Argomento** | **Periodo** | **Ore** |
-|---|---|---|---|
-| 1 | Fondamenti di teoria dei sistemi | 1 | 15 |
-| 2 | Elettronica digitale | 1 | 30 |
-| 3 | [PLC](glossario.qmd#gloss-s41) | 2 | 30 |
-| 4 | Circuiti combinatori | 2 | 40 |
-| 5 | Circuiti sequenziali | 2 | 24 |
-| 6 | Tempi, eventi e grandezze analogiche | 2 | 24 |
 
 ## Indice dei contenuti {#indice-contenuti}
 
@@ -167,9 +168,7 @@ Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anch
 ## Sicurezza in laboratorio {#sicurezza}
 
 ::: {.resource-card}
-🚧 **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
 
 [Apri la guida completa di laboratorio e sicurezza →](guida-sicurezza.qmd)
 :::
@@ -183,7 +182,7 @@ Richiami e strumenti che puoi consultare quando un argomento richiede una base d
 
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
-- [Vocabolario minimo](glossario.qmd#vocabolario-minimo)
+- [Vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-sistemi-automatici)
 
 ## Laboratorio {#laboratorio}
 
@@ -196,8 +195,7 @@ Le risorse di laboratorio possono essere utilizzate in più percorsi.
 - [Esercizi / Un controllo ragionato](esercizi-un-controllo-ragionato.qmd)
 - [Educazione civica / Emergenza climatica](educazione-civica-emergenza-climatica.qmd)
 - [Schede di approfondimento](approfondimenti.qmd)
-- [Glossario e vocabolario minimo](glossario.qmd)
-
+- [Glossario e vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-sistemi-automatici)
 
 ## Dispense PDF {#dispense}
 

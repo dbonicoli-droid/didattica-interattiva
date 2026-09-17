@@ -18,7 +18,7 @@ Uno spazio per ritrovare le spiegazioni, consultare le dispense e mettere alla p
 ::: {.course-grid}
 
 ::: {.course-card .course-0}
-### [TPSEE · Elettronica](corsi/tpsee-elettronici/index.qmd)
+### [TPSEE · Elettronici](corsi/tpsee-elettronici/index.qmd)
 
 **3C · Elettronici**
 
@@ -28,7 +28,7 @@ Dalla progettazione ai circuiti logici, alle reti combinatorie e sequenziali.
 :::
 
 ::: {.course-card .course-1}
-### [TPSEE · Elettrotecnica](corsi/tpsee-elettrotecnici/index.qmd)
+### [TPSEE · Elettrotecnici](corsi/tpsee-elettrotecnici/index.qmd)
 
 **3A · Elettrotecnici**
 

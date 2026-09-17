@@ -1,0 +1,63 @@
+/*-- scss:defaults --*/
+// Tema chiaro: alternativa, si attiva con l'interruttore nella barra in alto.
+$body-bg: #f4f6fb;
+$body-color: #1e2c3d;
+$link-color: #0c6b76;
+$code-bg: #f1f4f9;
+$code-color: #9a4218;
+$table-border-color: #dde4ee;
+$card-bg: #ffffff;
+$input-bg: #ffffff;
+$input-color: #1e2c3d;
+$input-border-color: #ccd6e4;
+$dropdown-bg: #ffffff;
+$dropdown-link-color: #1e2c3d;
+$dropdown-link-hover-bg: #eef3f9;
+$border-color: #dde4ee;
+
+/*-- scss:rules --*/
+:root {
+  color-scheme: light;
+
+  --sfondo: #f4f6fb;
+  --superficie: #ffffff;
+  --evidenza: #eef3f9;
+  --bordo: #dde4ee;
+  --bordo-forte: #c3cfdf;
+  --riga-alt: #f7f9fc;
+
+  --testo: #1e2c3d;
+  --titolo: #142131;
+  --testo-tenue: #54657c;
+  --su-accento: #ffffff;
+
+  --tinta-accento: #0c6b76;
+  --c-elettronici: var(--c-elettronici-l);
+  --c-elettrotecnici: var(--c-elettrotecnici-l);
+  --c-sistemi-automatici: var(--c-sistemi-automatici-l);
+  --c-domotica: var(--c-domotica-l);
+
+  --link: #0c6b76;
+  --link-hover: #094f57;
+  --fuoco: #a85400;
+  --punteggiato: #8496ab;
+
+  --navbar-bg: #14202e;
+  --navbar-testo: #ffffff;
+  --navbar-evidenza: #ffffff26;
+  --campo-bg: #ffffff;
+  --campo-testo: #14202e;
+  --campo-segnaposto: #566a83;
+
+  --etichetta-bg: #e3ecf7;
+  --etichetta-testo: #2f4a68;
+
+  --stato-bozza: #54657c;
+  --stato-sviluppo: #8a5200;
+  --stato-revisione: #a8402c;
+  --stato-completo: #1d6b3f;
+
+  --ombra: 0 4px 18px rgb(22 48 79 / 6%);
+  --ombra-alta: 0 12px 28px rgb(22 48 79 / 12%);
+  --vignetta: .05;
+}

@@ -1,12 +1,15 @@
 ---
+sidebar: risorse
 title: "Mappe concettuali"
 description: "Collegamenti fra i concetti per studiare e ripassare."
 toc: false
 ---
 
-Le mappe concettuali mettono in relazione le idee. Ogni blocco porta alla spiegazione corrispondente. Per scegliere un modulo usa invece l’[indice del tuo percorso](../../index.qmd).
+Le mappe concettuali mettono in relazione le idee. Ogni blocco porta alla spiegazione corrispondente. Per scegliere un modulo usa invece l’[indice del tuo percorso](../../index.qmd){.percorso-attivo}.
 
 ## Componenti ed energia
+
+*Mappa condivisa da tutti i percorsi.*
 
 Parti dalle grandezze, confronta il comportamento dei componenti e passa al circuito. I collegamenti restano utilizzabili anche come indice testuale.
 
@@ -40,3 +43,51 @@ Il resistore limita la corrente di carica; mentre la tensione del condensatore c
 :::
 
 [Rivedi potenza ed energia](../fondamenti/potenza-energia.qmd) · [Consulta tutti i componenti](../componenti/index.qmd)
+
+## Mappe dei percorsi
+
+Ogni percorso avrà la propria mappa, con i concetti del corso collegati fra loro. Le mappe saranno pubblicate con lo svolgimento delle lezioni.
+
+::: {.resource-grid}
+
+::: {.resource-card}
+[TPSEE · ELETTRONICI]{.resource-label}
+
+### Dalla logica al circuito ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+
+Porte logiche, reti combinatorie e sequenziali, dispositivi integrati.
+
+[Vai al programma del corso →](/corsi/tpsee-elettronici/index.qmd#moduli)
+:::
+
+::: {.resource-card}
+[TPSEE · ELETTROTECNICI]{.resource-label}
+
+### Dalla norma all'impianto ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+
+Normativa, simboli, componenti, materiali e illuminotecnica.
+
+[Vai al programma del corso →](/corsi/tpsee-elettrotecnici/index.qmd#moduli)
+:::
+
+::: {.resource-card}
+[SISTEMI AUTOMATICI]{.resource-label}
+
+### Dal sistema al controllo ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+
+Modelli, variabili, logica, PLC e grandezze analogiche.
+
+[Vai al programma del corso →](/corsi/sistemi-automatici/index.qmd#moduli)
+:::
+
+::: {.resource-card}
+[DOMOTICA E AUTOMAZIONE]{.resource-label}
+
+### Dal comando alla sequenza ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+
+Elettromeccanica, PLC, Ladder, SFC e applicazioni di controllo.
+
+[Vai al programma del corso →](/corsi/domotica/index.qmd#moduli)
+:::
+
+:::

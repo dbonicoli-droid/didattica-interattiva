@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Risorse esterne"
 description: "Lezioni, esercizi e strumenti selezionati per ripassare e sperimentare."
 toc: false

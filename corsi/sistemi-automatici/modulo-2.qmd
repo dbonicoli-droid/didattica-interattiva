@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Modulo 2 / Elettronica digitale"
 subtitle: "Panoramica del Programma"
 ---
@@ -21,21 +22,21 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:2}
 
-**Primo trimestre · 30 ore**
+**Primo periodo · 30 ore**
 
 La logica digitale descrive condizioni a due valori: 0 e 1. Le porte logiche le combinano per decidere quando attivare un comando.
 
 ## U.D. 2.1 / Porte logiche e funzioni logiche {#ud:2.1}
 
-Nelle formule logiche $\overline A$ significa [NOT](glossario.qmd#gloss-s52) $A$, $AB$ significa $A$ [AND](glossario.qmd#gloss-s52) $B$ e $A+B$ significa $A$ [OR](glossario.qmd#gloss-s52) $B$. Il simbolo $+$ qui non indica una somma numerica. Una funzione booleana associa a ogni combinazione di [ingressi](glossario.qmd#gloss-s9) un valore 0 o 1.
+Nelle formule logiche $\overline A$ significa [NOT](/risorse/glossario/index.qmd#gloss-not) $A$, $AB$ significa $A$ [AND](/risorse/glossario/index.qmd#gloss-and) $B$ e $A+B$ significa $A$ [OR](/risorse/glossario/index.qmd#gloss-or) $B$. Il simbolo $+$ qui non indica una somma numerica. Una funzione booleana associa a ogni combinazione di [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) un valore 0 o 1.
 
-- [AND](glossario.qmd#gloss-s52): richiede tutti gli [ingressi](glossario.qmd#gloss-s9) veri; [OR](glossario.qmd#gloss-s52): almeno uno.
+- [AND](/risorse/glossario/index.qmd#gloss-and): richiede tutti gli [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) veri; [OR](/risorse/glossario/index.qmd#gloss-or): almeno uno.
 
-- [NOT](glossario.qmd#gloss-s52): inverte il valore.
+- [NOT](/risorse/glossario/index.qmd#gloss-not): inverte il valore.
 
-- [XOR](glossario.qmd#gloss-s45) (Exclusive [OR](glossario.qmd#gloss-s52)): con due [ingressi](glossario.qmd#gloss-s9) vale 1 quando sono diversi.
+- [XOR](/risorse/glossario/index.qmd#gloss-xor) (Exclusive [OR](/risorse/glossario/index.qmd#gloss-or)): con due [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) vale 1 quando sono diversi.
 
-- [NAND](glossario.qmd#gloss-s35) ([NOT](glossario.qmd#gloss-s52) [AND](glossario.qmd#gloss-s52)) e [NOR](glossario.qmd#gloss-s38) ([NOT](glossario.qmd#gloss-s52) [OR](glossario.qmd#gloss-s52)): negano rispettivamente [AND](glossario.qmd#gloss-s52) e [OR](glossario.qmd#gloss-s52).
+- [NAND](/risorse/glossario/index.qmd#gloss-nand) ([NOT](/risorse/glossario/index.qmd#gloss-not) [AND](/risorse/glossario/index.qmd#gloss-and)) e [NOR](/risorse/glossario/index.qmd#gloss-nor) ([NOT](/risorse/glossario/index.qmd#gloss-not) [OR](/risorse/glossario/index.qmd#gloss-or)): negano rispettivamente [AND](/risorse/glossario/index.qmd#gloss-and) e [OR](/risorse/glossario/index.qmd#gloss-or).
 
    $A$   $B$  $AB$   $A+B$   $\overline{AB}$   $\overline{A+B}$   $A\oplus B$
   ----- ----- ------ ------- ----------------- ------------------ -------------
@@ -44,11 +45,11 @@ Nelle formule logiche $\overline A$ significa [NOT](glossario.qmd#gloss-s52) $A$
     1     0                                                       
     1     1                                                       
 
-**[NOT](glossario.qmd#gloss-s52):** $\overline0=1$, $\overline1=0$. Per $n$ [ingressi](glossario.qmd#gloss-s9) la tabella completa contiene $2^n$ righe. La riga binaria 101 corrisponde all'indice decimale 5 se $A$ è il [bit](glossario.qmd#gloss-s3) più significativo.
+**[NOT](/risorse/glossario/index.qmd#gloss-not):** $\overline0=1$, $\overline1=0$. Per $n$ [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) la tabella completa contiene $2^n$ righe. La riga binaria 101 corrisponde all'indice decimale 5 se $A$ è il [bit](/risorse/glossario/index.qmd#gloss-bit) più significativo.
 
-## U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a [contatti](glossario.qmd#gloss-s46) e con [tabelle di verità](glossario.qmd#gloss-s50) {#ud:2.2}
+## U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a [contatti](/risorse/glossario/index.qmd#gloss-contatto) e con [tabelle di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita) {#ud:2.2}
 
-La stessa funzione si può esprimere con formula, porte, [contatti](glossario.qmd#gloss-s46) e tabella. Consideriamo $Y=(A+B)C$: occorre $C$ e almeno uno fra $A$ e $B$.
+La stessa funzione si può esprimere con formula, porte, [contatti](/risorse/glossario/index.qmd#gloss-contatto) e tabella. Consideriamo $Y=(A+B)C$: occorre $C$ e almeno uno fra $A$ e $B$.
 
 ::: center
 ![Schema didattico 6](/assets/dispense/sistemi-automatici/figura-6.png){fig-alt="Schema didattico 6 della dispensa Sistemi automatici"}
@@ -58,15 +59,15 @@ La stessa funzione si può esprimere con formula, porte, [contatti](glossario.qm
 ![Schema didattico 7](/assets/dispense/sistemi-automatici/figura-7.png){fig-alt="Schema didattico 7 della dispensa Sistemi automatici"}
 :::
 
-*Rami paralleli = [OR](glossario.qmd#gloss-s52); elementi in serie = [AND](glossario.qmd#gloss-s52). Schema logico a [contatti](glossario.qmd#gloss-s46).*
+*Rami paralleli = [OR](/risorse/glossario/index.qmd#gloss-or); elementi in serie = [AND](/risorse/glossario/index.qmd#gloss-and). Schema logico a [contatti](/risorse/glossario/index.qmd#gloss-contatto).*
 
 **Prova tu.** Con $A=0$, $B=1$, $C=1$ si ottiene $Y=1$; portando $C$ a 0, $Y$ diventa 0 qualunque siano $A$ e $B$.
 
 ## Dalla tabella alla funzione semplificata {#topic:4}
 
-## U.D. 2.3 / Metodi per determinare le [tabelle di verità](glossario.qmd#gloss-s50) e ottenere funzioni logiche negate {#ud:2.3}
+## U.D. 2.3 / Metodi per determinare le [tabelle di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita) e ottenere funzioni logiche negate {#ud:2.3}
 
-Per costruire una tabella, ordina gli [ingressi](glossario.qmd#gloss-s9) in binario e valuta prima le espressioni interne. La negazione dell'intera funzione si ottiene invertendo l'ultima colonna, non invertendo gli [ingressi](glossario.qmd#gloss-s9) arbitrariamente.
+Per costruire una tabella, ordina gli [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) in binario e valuta prima le espressioni interne. La negazione dell'intera funzione si ottiene invertendo l'ultima colonna, non invertendo gli [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) arbitrariamente.
 
    $A$   $B$   $C$  $A+B$   $Y=(A+B)C$   $\overline Y$
   ----- ----- ----- ------- ------------ ---------------
@@ -83,17 +84,17 @@ Per costruire una tabella, ordina gli [ingressi](glossario.qmd#gloss-s9) in bina
 
 Semplificare significa trovare una funzione equivalente, verificabile su tutte le combinazioni. Le identità più utili includono: $$A+A=A,\quad AA=A,\quad A+\overline A=1,\quad A\overline A=0,\quad A+AB=A.$$ Le leggi di De Morgan trasformano la negazione di un prodotto nella somma delle negazioni, e viceversa: $$\overline{AB}=\overline A+\overline B,\qquad\overline{A+B}=\overline A\,\overline B.$$
 
-#### Un passaggio alla volta
+### Un passaggio alla volta
 
-$$F=AB+A\overline B=A(B+\overline B)=A.$$ L'[ingresso](glossario.qmd#gloss-s9) $B$ non influenza il risultato. Per la funzione della tabella: $$\overline{(A+B)C}=\overline{A+B}+\overline C=\overline A\,\overline B+\overline C.$$ La barra esterna si elimina cambiando l'operatore e negando gli operandi.
+$$F=AB+A\overline B=A(B+\overline B)=A.$$ L'[ingresso](/risorse/glossario/index.qmd#gloss-ingresso) $B$ non influenza il risultato. Per la funzione della tabella: $$\overline{(A+B)C}=\overline{A+B}+\overline C=\overline A\,\overline B+\overline C.$$ La barra esterna si elimina cambiando l'operatore e negando gli operandi.
 
 **Controllo rapido.** Con $A=1$, $B=0$, $C=0$, $Y=0$ e $\overline Y=1$. Un singolo caso può smentire un'identità sbagliata; per confermarla con una tabella servono tutte le righe.
 
 ## Semplificare con le mappe {#topic:5}
 
-## U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di [Karnaugh](glossario.qmd#gloss-s11) {#ud:2.5}
+## U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh) {#ud:2.5}
 
-Un **[mintermine](glossario.qmd#gloss-s14)** è un prodotto che vale 1 in una sola riga; un **[maxtermine](glossario.qmd#gloss-s13)** è una somma che vale 0 in una sola riga. Con ordine $ABC$, nella riga 101 valgono $m_5=A\overline BC$ e $M_5=\overline A+B+\overline C$. Per la funzione precedente, $F=\Sigma m(3,5,7)=\Pi M(0,1,2,4,6)$. La somma dei mintermini seleziona gli 1; il prodotto dei maxtermini seleziona gli 0. La mappa dispone le combinazioni in **ordine [Gray](glossario.qmd#gloss-s7)**: celle adiacenti differiscono per un solo [bit](glossario.qmd#gloss-s3). Si raggruppano 1 in rettangoli da 1, 2, 4, 8 celle, anche con sovrapposizioni; i bordi opposti sono adiacenti.
+Un **[mintermine](/risorse/glossario/index.qmd#gloss-mintermine)** è un prodotto che vale 1 in una sola riga; un **[maxtermine](/risorse/glossario/index.qmd#gloss-maxtermine)** è una somma che vale 0 in una sola riga. Con ordine $ABC$, nella riga 101 valgono $m_5=A\overline BC$ e $M_5=\overline A+B+\overline C$. Per la funzione precedente, $F=\Sigma m(3,5,7)=\Pi M(0,1,2,4,6)$. La somma dei mintermini seleziona gli 1; il prodotto dei maxtermini seleziona gli 0. La mappa dispone le combinazioni in **ordine [Gray](/risorse/glossario/index.qmd#gloss-gray)**: celle adiacenti differiscono per un solo [bit](/risorse/glossario/index.qmd#gloss-bit). Si raggruppano 1 in rettangoli da 1, 2, 4, 8 celle, anche con sovrapposizioni; i bordi opposti sono adiacenti.
 
 ::: center
 ![Schema didattico 8](/assets/dispense/sistemi-automatici/figura-8.png){fig-alt="Schema didattico 8 della dispensa Sistemi automatici"}
@@ -101,11 +102,11 @@ Un **[mintermine](glossario.qmd#gloss-s14)** è un prodotto che vale 1 in una so
 
 $$F=BC+AC=C(A+B).$$ Nel gruppo verticale cambia $A$, che scompare. Nel gruppo orizzontale cambia $B$, che scompare. Le celle rimaste nel gruppo devono condividere i letterali del termine risultante.
 
-#### Raggruppare gli zeri
+### Raggruppare gli zeri
 
-Per ottenere un prodotto di somme si raggruppano gli 0. Se una [variabile](glossario.qmd#gloss-s27) resta 0 nel gruppo, compare diretta nella somma; se resta 1, compare negata. È la regola opposta a quella per i gruppi di 1.
+Per ottenere un prodotto di somme si raggruppano gli 0. Se una [variabile](/risorse/glossario/index.qmd#gloss-variabile) resta 0 nel gruppo, compare diretta nella somma; se resta 1, compare negata. È la regola opposta a quella per i gruppi di 1.
 
-**Prova tu.** $G=\Sigma m(0,2,4,6)$: quale [bit](glossario.qmd#gloss-s3) è sempre 0?
+**Prova tu.** $G=\Sigma m(0,2,4,6)$: quale [bit](/risorse/glossario/index.qmd#gloss-bit) è sempre 0?
 
 *Soluzione: $C=0$, quindi $G=\overline C$. I quattro 1 si raggruppano attraversando il bordo laterale della mappa.*
 
@@ -113,19 +114,19 @@ Per ottenere un prodotto di somme si raggruppano gli 0. Se una [variabile](gloss
 
 ## U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey {#ud:2.6}
 
-[Quine--McCluskey](glossario.qmd#gloss-s18) organizza la minimizzazione in modo tabellare. Si scrivono gli indici in binario, si raggruppano per numero di 1 e si combinano termini che differiscono in un solo [bit](glossario.qmd#gloss-s3). Quel [bit](glossario.qmd#gloss-s3) viene sostituito da un trattino. Le combinazioni si ripetono finché possibile.
+[Quine--McCluskey](/risorse/glossario/index.qmd#gloss-quine-mccluskey) organizza la minimizzazione in modo tabellare. Si scrivono gli indici in binario, si raggruppano per numero di 1 e si combinano termini che differiscono in un solo [bit](/risorse/glossario/index.qmd#gloss-bit). Quel [bit](/risorse/glossario/index.qmd#gloss-bit) viene sostituito da un trattino. Le combinazioni si ripetono finché possibile.
 
-#### Un [bit](glossario.qmd#gloss-s3) può diventare irrilevante
+### Un [bit](/risorse/glossario/index.qmd#gloss-bit) può diventare irrilevante
 
-Le combinazioni `001` e `011` differiscono soltanto nel [bit](glossario.qmd#gloss-s3) centrale. Se entrambe devono attivare l'[uscita](glossario.qmd#gloss-s26), si possono riassumere con `0-1`: quel [bit](glossario.qmd#gloss-s3) può valere 0 oppure 1.
+Le combinazioni `001` e `011` differiscono soltanto nel [bit](/risorse/glossario/index.qmd#gloss-bit) centrale. Se entrambe devono attivare l'[uscita](/risorse/glossario/index.qmd#gloss-uscita), si possono riassumere con `0-1`: quel [bit](/risorse/glossario/index.qmd#gloss-bit) può valere 0 oppure 1.
 
-[Segui l'esempio completo e la scelta degli implicanti negli approfondimenti](approfondimenti.qmd#app:quine) (p. ).
+[Segui l'esempio completo e la scelta degli implicanti negli approfondimenti](approfondimenti.qmd#app:quine).
 
 ## U.D. 2.7 / Esercitazioni ed esempi applicativi {#ud:2.7}
 
 **Specifiche di un consenso.** Una ventola parte se il selettore $E$ è attivo e se c'è richiesta manuale $M$ oppure temperatura alta $H$. La funzione è $V=E(M+H)$.
 
-**Consegna.** Costruisci le otto righe; realizza lo schema a [contatti](glossario.qmd#gloss-s46); ricava la forma negata; verifica la minimizzazione con [Karnaugh](glossario.qmd#gloss-s11).
+**Consegna.** Costruisci le otto righe; realizza lo schema a [contatti](/risorse/glossario/index.qmd#gloss-contatto); ricava la forma negata; verifica la minimizzazione con [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).
 
 *Risultati attesi, ordine $EMH$:* $V=\Sigma m(5,6,7)$ e $\overline V=\overline E+\overline M\,\overline H$. L'esempio descrive un consenso funzionale, non una funzione di sicurezza certificata.
 

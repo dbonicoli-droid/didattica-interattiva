@@ -33,15 +33,33 @@ Creare un file `.qmd` nella cartella del corso, aggiornare l'indice del corso, c
 
 Le pagine in `risorse/componenti/` sono condivise dai percorsi. Il filtro `scripts/component-links.lua` collega automaticamente i nomi dei componenti nel testo HTML, anche al plurale; conserva i suggerimenti del glossario. Esclude formule, codice, immagini, titoli, collegamenti espliciti e rimandi alla stessa pagina. Per usi non elettrici scrivere `[resistenza]{.no-component-link}`. I riferimenti PDF non vengono trasformati dal filtro.
 
+Collega **solo la prima occorrenza di ogni componente in ogni sezione**: il contatore riparte a ogni titolo di livello 1 o 2. Le occorrenze successive restano testo normale.
+
 Gli schemi si rigenerano con `node scripts/build_component_figures.cjs`.
+
+## Glossario unico
+
+`risorse/glossario/index.qmd` è l'unica raccolta di termini del sito. Ogni voce ha un identificatore parlante (`#gloss-variabile-booleana`) e un'etichetta che indica in quali percorsi compare. Quando una definizione ha un risvolto specifico di un indirizzo, il testo lo dice esplicitamente e resta leggibile da chiunque: non esistono definizioni diverse dello stesso termine.
+
+Il vocabolario minimo resta scelto percorso per percorso, come sezioni della stessa pagina (`#vocabolario-domotica` e simili). Le vecchie pagine `corsi/*/glossario.qmd` conservano gli indirizzi tramite rinvio.
+
+`scripts/glossary-filter.lua` legge le definizioni a tempo di render e le allega ai collegamenti come suggerimento. Vale la stessa regola dei componenti: **nessun collegamento nei titoli, e nel corpo solo la prima occorrenza per sezione**.
+
+## Stato di lavorazione
+
+Nel front matter di una pagina si può dichiarare `stato: bozza | in-sviluppo | da-revisionare | completo`. `scripts/stato-pagina.lua` mostra il badge accanto al titolo. Una pagina senza il campo non mostra nulla: l'assenza non è un'affermazione.
 
 ## Navigazione e aspetto
 
-- `assets/modern.css`: tema, colori dei percorsi e adattamento mobile.
-- `scripts/navigation.html`: selezione della barra laterale e contesto delle risorse condivise. Il percorso viene ricavato dall’URL del corso, dal parametro `percorso` o dalla sessione della scheda. La pagina iniziale permette di cambiare percorso e azzera la selezione precedente. Il sito funziona anche se la memoria di sessione è disabilitata; senza JavaScript rimane disponibile l’indice completo.
+- `assets/tema.scss`: impaginato, tipografia e componenti, scritti su variabili CSS.
+- `assets/tema-scuro.scss` e `assets/tema-chiaro.scss`: le due palette. **Il tema scuro è il predefinito**; l'interruttore nella barra in alto attiva quello chiaro. I colori dei quattro percorsi sono definiti una volta sola in `assets/tema.scss` (`--c-elettronici` e simili) e il JavaScript sceglie quale usare, senza ripeterne i valori.
+- Le barre laterali sono native: una per percorso più una per le risorse condivise, dichiarate in `_quarto.yml` con `id:`. Ogni pagina dichiara la propria con `sidebar:` nel front matter. Nessun JavaScript, nessun lampeggio, navigazione corretta anche senza script.
+- `scripts/navigation.html`: accento del percorso, rientro dalle risorse condivise, barra di avanzamento della lettura, barra in alto che si compatta allo scorrimento e interruttore **Lettura facilitata** (carattere Atkinson Hyperlegible, righe più corte e più spaziate; la scelta resta nel browser di chi legge).
 - `risorse/mappe/` e `risorse/esterne/`: mappe e collegamenti commentati.
 - `PROJECT_ROADMAP.md`: funzionalità da progettare, incluse discussioni e interazioni. Non viene pubblicato come pagina del sito.
 
 ## Organizzazione autonoma del sito
 
-Il sito non deve riprodurre la struttura delle dispense iniziali. Gli indici dei corsi raccolgono i moduli in blocchi: titolo verso il modulo completo, link separato verso la sintesi. Mappe indica solo mappe concettuali. I richiami iniziali sono integrati nei fondamenti del corso; il vocabolario minimo è parte del glossario. Le vecchie pagine `percorso` e `prima-di-iniziare` conservano gli indirizzi tramite rinvio alla nuova destinazione e sono escluse dalla ricerca.
+Il sito non deve riprodurre la struttura delle dispense iniziali. Negli indici dei corsi la sezione **Programma del corso** apre con una frase di orientamento, poi la tabella di ore e periodi, poi i blocchi dei moduli: il titolo del blocco porta al modulo completo, un collegamento separato porta alla sintesi. Finché il modulo completo è in preparazione, la sua pagina mostra il badge di stato, un pulsante **Vai alla sintesi** e, per ogni unità didattica, il rimando alla sezione corrispondente della sintesi.
+
+Lo stesso nome di modulo vale ovunque: tabella, blocchi, indice dei contenuti, barra laterale e titolo della pagina. Mappe indica solo mappe concettuali. I richiami iniziali sono integrati nei fondamenti del corso. Le vecchie pagine `percorso`, `prima-di-iniziare` e `glossario` conservano gli indirizzi tramite rinvio alla nuova destinazione e sono escluse dalla ricerca.

@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Resistore / Resistenza"
 description: "Dalla legge di Ohm al comportamento nel tempo, ai fasori e alle trasformate."
 toc-depth: 2

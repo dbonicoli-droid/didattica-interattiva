@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Numeri, dati e variabili"
 ---
 
@@ -10,23 +11,21 @@ title: "Numeri, dati e variabili"
 
 - **Numeri e unità**: leggere valori, convertire unità e usare semplici proporzioni.
 
-- **Informazione digitale**: distinguere numeri, [bit](glossario.qmd#gloss-s3) e condizioni vere o false.
+- **Informazione digitale**: distinguere numeri, [bit](/risorse/glossario/index.qmd#gloss-bit) e condizioni vere o false.
 
-- **[Variabili](glossario.qmd#gloss-s27) e tabelle**: assegnare nomi ai dati e seguire come cambiano.
+- **[Variabili](/risorse/glossario/index.qmd#gloss-variabile) e tabelle**: assegnare nomi ai dati e seguire come cambiano.
 
 - **Strumenti digitali**: salvare, eseguire e controllare un semplice programma.
 
-[Consulta il vocabolario minimo](glossario.qmd#vocabolario-minimo).
+[Consulta il vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-sistemi-automatici).
 
-## 🚧 Guida completa di laboratorio
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Guida completa di laboratorio
 
 [Consulta la guida di Fanucchi per elettronica, provvisoria e da sostituire per questo corso](guida-sicurezza.qmd). Segui le indicazioni dei docenti e le procedure del laboratorio.
 
 
 
-## Numeri, dati e [variabili](glossario.qmd#gloss-s27) {#sec:basi-dettagli}
+## Numeri, dati e [variabili](/risorse/glossario/index.qmd#gloss-variabile) {#sec:basi-dettagli}
 
 ### Unità e relazioni fra grandezze
 
@@ -36,29 +35,29 @@ title: "Numeri, dati e variabili"
 
 - Una tabella associa valori: a ogni istante può corrispondere una temperatura misurata.
 
-### [Bit](glossario.qmd#gloss-s3) e numeri binari
+### [Bit](/risorse/glossario/index.qmd#gloss-bit) e numeri binari
 
-Un [bit](glossario.qmd#gloss-s3) vale 0 oppure 1. Più [bit](glossario.qmd#gloss-s3) permettono di rappresentare più combinazioni.
+Un [bit](/risorse/glossario/index.qmd#gloss-bit) vale 0 oppure 1. Più [bit](/risorse/glossario/index.qmd#gloss-bit) permettono di rappresentare più combinazioni.
 
 #### Leggere 101 in binario
 
-I pesi, da sinistra, sono 4, 2 e 1: $1\cdot4+0\cdot2+1\cdot1=5$. Il [bit](glossario.qmd#gloss-s3) a destra è il meno significativo. Con tre [bit](glossario.qmd#gloss-s3) si scrivono otto combinazioni, da 000 a 111.
+I pesi, da sinistra, sono 4, 2 e 1: $1\cdot4+0\cdot2+1\cdot1=5$. Il [bit](/risorse/glossario/index.qmd#gloss-bit) a destra è il meno significativo. Con tre [bit](/risorse/glossario/index.qmd#gloss-bit) si scrivono otto combinazioni, da 000 a 111.
 
-### [Variabili](glossario.qmd#gloss-s27), assegnazioni e condizioni
+### [Variabili](/risorse/glossario/index.qmd#gloss-variabile), assegnazioni e condizioni
 
-- Una [variabile](glossario.qmd#gloss-s27) ha un nome e un valore: per esempio `Temperatura` contiene 22.
+- Una [variabile](/risorse/glossario/index.qmd#gloss-variabile) ha un nome e un valore: per esempio `Temperatura` contiene 22.
 
 - Un'assegnazione aggiorna il valore. `somma = somma + T` aggiunge la nuova lettura alla somma precedente: non è un'uguaglianza da risolvere.
 
 - Una condizione, come $T>30$, restituisce vero o falso.
 
-- Una [variabile](glossario.qmd#gloss-s27) booleana rappresenta una condizione. Una [variabile](glossario.qmd#gloss-s27) numerica conserva una quantità.
+- Una [variabile](/risorse/glossario/index.qmd#gloss-variabile) booleana rappresenta una condizione. Una [variabile](/risorse/glossario/index.qmd#gloss-variabile) numerica conserva una quantità.
 
 ### Lavorare con un programma
 
 1.  Salva il file con un nome riconoscibile.
 
-2.  Dichiara [variabili](glossario.qmd#gloss-s27) e valori iniziali.
+2.  Dichiara [variabili](/risorse/glossario/index.qmd#gloss-variabile) e valori iniziali.
 
 3.  Esegui un caso semplice e osserva i valori passo per passo.
 
@@ -72,7 +71,7 @@ I pesi, da sinistra, sono 4, 2 e 1: $1\cdot4+0\cdot2+1\cdot1=5$. Il [bit](glossa
 
 2.  Quale valore decimale rappresenta il numero binario 110?
 
-3.  Quante combinazioni si possono scrivere con due [bit](glossario.qmd#gloss-s3)?
+3.  Quante combinazioni si possono scrivere con due [bit](/risorse/glossario/index.qmd#gloss-bit)?
 
 4.  Se `somma` vale 12 e `T` vale 5, quale valore assume `somma` dopo l'assegnazione `somma = somma + T`?
 

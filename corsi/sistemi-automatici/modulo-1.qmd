@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Modulo 1 / Fondamenti di teoria dei sistemi"
 subtitle: "Panoramica del Programma"
 ---
@@ -21,21 +22,21 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:1}
 
-**Primo trimestre · 15 ore**
+**Primo periodo · 15 ore**
 
-Studiare un [sistema](glossario.qmd#gloss-s23) significa scegliere cosa osservare e capire come gli elementi interagiscono. Partiremo da esempi quotidiani, come una stanza riscaldata o un serbatoio.
+Studiare un [sistema](/risorse/glossario/index.qmd#gloss-sistema) significa scegliere cosa osservare e capire come gli elementi interagiscono. Partiremo da esempi quotidiani, come una stanza riscaldata o un serbatoio.
 
-## U.D. 1.1 / Concetto di [sistema](glossario.qmd#gloss-s23) {#ud:1.1}
+## U.D. 1.1 / Concetto di [sistema](/risorse/glossario/index.qmd#gloss-sistema) {#ud:1.1}
 
-Un **[sistema](glossario.qmd#gloss-s23)** è un insieme di elementi collegati che interagiscono. Per studiarlo scegliamo un confine: ciò che sta dentro appartiene al [sistema](glossario.qmd#gloss-s23), ciò che sta fuori è ambiente. La scelta dipende dalla domanda che vogliamo risolvere. In una stanza riscaldata possiamo includere aria, pareti e termosifone. Se studiamo soltanto il regolatore, invece, la stanza diventa il processo esterno sul quale agire.
+Un **[sistema](/risorse/glossario/index.qmd#gloss-sistema)** è un insieme di elementi collegati che interagiscono. Per studiarlo scegliamo un confine: ciò che sta dentro appartiene al [sistema](/risorse/glossario/index.qmd#gloss-sistema), ciò che sta fuori è ambiente. La scelta dipende dalla domanda che vogliamo risolvere. In una stanza riscaldata possiamo includere aria, pareti e termosifone. Se studiamo soltanto il regolatore, invece, la stanza diventa il processo esterno sul quale agire.
 
-## U.D. 1.2 / [Ingressi](glossario.qmd#gloss-s9), parametri, disturbi e [uscite](glossario.qmd#gloss-s26) dei sistemi {#ud:1.2}
+## U.D. 1.2 / [Ingressi](/risorse/glossario/index.qmd#gloss-ingresso), parametri, disturbi e [uscite](/risorse/glossario/index.qmd#gloss-uscita) dei sistemi {#ud:1.2}
 
-- **[Ingressi](glossario.qmd#gloss-s9)**: agiscono sul [sistema](glossario.qmd#gloss-s23); quelli manipolabili permettono di comandarlo.
+- **[Ingressi](/risorse/glossario/index.qmd#gloss-ingresso)**: agiscono sul [sistema](/risorse/glossario/index.qmd#gloss-sistema); quelli manipolabili permettono di comandarlo.
 
-- **[Uscite](glossario.qmd#gloss-s26)**: grandezze che osserviamo.
+- **[Uscite](/risorse/glossario/index.qmd#gloss-uscita)**: grandezze che osserviamo.
 
-- **Parametri**: proprietà del [modello](glossario.qmd#gloss-s15).
+- **Parametri**: proprietà del [modello](/risorse/glossario/index.qmd#gloss-modello).
 
 - **Disturbi**: azioni esterne non comandate che influenzano il risultato.
 
@@ -43,51 +44,51 @@ Un **[sistema](glossario.qmd#gloss-s23)** è un insieme di elementi collegati ch
 ![Schema didattico 2](/assets/dispense/sistemi-automatici/figura-2.png){fig-alt="Schema didattico 2 della dispensa Sistemi automatici"}
 :::
 
-*Il [disturbo](glossario.qmd#gloss-s5) entra nel [sistema](glossario.qmd#gloss-s23) anche se non è scelto dal controllore.*
+*Il [disturbo](/risorse/glossario/index.qmd#gloss-disturbo) entra nel [sistema](/risorse/glossario/index.qmd#gloss-sistema) anche se non è scelto dal controllore.*
 
-#### Classificare le grandezze
+### Classificare le grandezze
 
-Per il livello di un serbatoio: portata della pompa = [ingresso](glossario.qmd#gloss-s9) comandato; prelievo degli utenti = [disturbo](glossario.qmd#gloss-s5); livello = [uscita](glossario.qmd#gloss-s26); sezione del serbatoio = [parametro](glossario.qmd#gloss-s17). Se cambiamo lo scopo dello studio, può cambiare anche la classificazione.
+Per il livello di un serbatoio: portata della pompa = [ingresso](/risorse/glossario/index.qmd#gloss-ingresso) comandato; prelievo degli utenti = [disturbo](/risorse/glossario/index.qmd#gloss-disturbo); livello = [uscita](/risorse/glossario/index.qmd#gloss-uscita); sezione del serbatoio = [parametro](/risorse/glossario/index.qmd#gloss-parametro). Se cambiamo lo scopo dello studio, può cambiare anche la classificazione.
 
-**Distinguere [parametro](glossario.qmd#gloss-s17) e [stato](glossario.qmd#gloss-s24).** La capacità termica di una stanza può essere un [parametro](glossario.qmd#gloss-s17); la temperatura varia nel tempo ed è una [variabile](glossario.qmd#gloss-s27) di [stato](glossario.qmd#gloss-s24) nel [modello](glossario.qmd#gloss-s15) più semplice. Lo [stato](glossario.qmd#gloss-s24) riassume la memoria necessaria a prevedere l'evoluzione.
+**Distinguere [parametro](/risorse/glossario/index.qmd#gloss-parametro) e [stato](/risorse/glossario/index.qmd#gloss-stato).** La capacità termica di una stanza può essere un [parametro](/risorse/glossario/index.qmd#gloss-parametro); la temperatura varia nel tempo ed è una [variabile](/risorse/glossario/index.qmd#gloss-variabile) di [stato](/risorse/glossario/index.qmd#gloss-stato) nel [modello](/risorse/glossario/index.qmd#gloss-modello) più semplice. Lo [stato](/risorse/glossario/index.qmd#gloss-stato) riassume la memoria necessaria a prevedere l'evoluzione.
 
-**Prova tu.** Per una lampada alimentata a tensione [variabile](glossario.qmd#gloss-s27), proponi [ingresso](glossario.qmd#gloss-s9), [uscita](glossario.qmd#gloss-s26) e un [parametro](glossario.qmd#gloss-s17).
+**Prova tu.** Per una lampada alimentata a tensione [variabile](/risorse/glossario/index.qmd#gloss-variabile), proponi [ingresso](/risorse/glossario/index.qmd#gloss-ingresso), [uscita](/risorse/glossario/index.qmd#gloss-uscita) e un [parametro](/risorse/glossario/index.qmd#gloss-parametro).
 
-*Possibile risposta: tensione di alimentazione, flusso luminoso, caratteristica della lampada. Il [modello](glossario.qmd#gloss-s15) va dichiarato.*
+*Possibile risposta: tensione di alimentazione, flusso luminoso, caratteristica della lampada. Il [modello](/risorse/glossario/index.qmd#gloss-modello) va dichiarato.*
 
-## Classificare e controllare un [sistema](glossario.qmd#gloss-s23) {#topic:2}
+## Classificare e controllare un [sistema](/risorse/glossario/index.qmd#gloss-sistema) {#topic:2}
 
 ## U.D. 1.3 / Classificazione dei sistemi {#ud:1.3}
 
-Le classificazioni descrivono aspetti diversi e possono coesistere. Un [sistema](glossario.qmd#gloss-s23) può essere, per esempio, dinamico, non lineare e a tempo continuo.
+Le classificazioni descrivono aspetti diversi e possono coesistere. Un [sistema](/risorse/glossario/index.qmd#gloss-sistema) può essere, per esempio, dinamico, non lineare e a tempo continuo.
 
   **Distinzione**                                           **Idea ed esempio**
   --------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Statico / dinamico                                        Lo statico non ha memoria nel [modello](glossario.qmd#gloss-s15); il dinamico dipende anche dallo [stato](glossario.qmd#gloss-s24). Resistenza ideale / serbatoio.
-  Continuo / discreto nel tempo                             Il tempo è descritto continuamente oppure per istanti $k$. Temperatura fisica / campioni letti da un [PLC](glossario.qmd#gloss-s41) (Programmable Logic Controller).
+  Statico / dinamico                                        Lo statico non ha memoria nel [modello](/risorse/glossario/index.qmd#gloss-modello); il dinamico dipende anche dallo [stato](/risorse/glossario/index.qmd#gloss-stato). Resistenza ideale / serbatoio.
+  Continuo / discreto nel tempo                             Il tempo è descritto continuamente oppure per istanti $k$. Temperatura fisica / campioni letti da un [PLC](/risorse/glossario/index.qmd#gloss-plc) (Programmable Logic Controller).
   Lineare / non lineare                                     Nel lineare vale la sovrapposizione; saturazioni e soglie la violano. $y=2u$ / $y=u^2$.
-  Tempo-invariante / [variabile](glossario.qmd#gloss-s27)   La legge del [modello](glossario.qmd#gloss-s15) resta uguale oppure cambia nel tempo.
-  Deterministico / stocastico                               Date le condizioni, il [modello](glossario.qmd#gloss-s15) fornisce un esito determinato oppure include componenti aleatorie.
+  Tempo-invariante / [variabile](/risorse/glossario/index.qmd#gloss-variabile)   La legge del [modello](/risorse/glossario/index.qmd#gloss-modello) resta uguale oppure cambia nel tempo.
+  Deterministico / stocastico                               Date le condizioni, il [modello](/risorse/glossario/index.qmd#gloss-modello) fornisce un esito determinato oppure include componenti aleatorie.
 
-Un [sistema](glossario.qmd#gloss-s23) **ad anello aperto** non corregge il comando usando l'[uscita](glossario.qmd#gloss-s26) misurata. In **anello chiuso**, la [retroazione](glossario.qmd#gloss-s19) permette il confronto fra risultato e [riferimento](glossario.qmd#gloss-s20).
+Un [sistema](/risorse/glossario/index.qmd#gloss-sistema) **ad anello aperto** non corregge il comando usando l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) misurata. In **anello chiuso**, la [retroazione](/risorse/glossario/index.qmd#gloss-retroazione) permette il confronto fra risultato e [riferimento](/risorse/glossario/index.qmd#gloss-riferimento).
 
 ::: center
 ![Schema didattico 3](/assets/dispense/sistemi-automatici/figura-3.png){fig-alt="Schema didattico 3 della dispensa Sistemi automatici"}
 :::
 
-*[Retroazione](glossario.qmd#gloss-s19) negativa: $r$ è il [riferimento](glossario.qmd#gloss-s20), $y$ l\'[uscita](glossario.qmd#gloss-s26) misurata ed $e=r-y$ la loro differenza.*
+*[Retroazione](/risorse/glossario/index.qmd#gloss-retroazione) negativa: $r$ è il [riferimento](/risorse/glossario/index.qmd#gloss-riferimento), $y$ l\'[uscita](/risorse/glossario/index.qmd#gloss-uscita) misurata ed $e=r-y$ la loro differenza.*
 
 ## U.D. 1.4 / Esercitazioni e applicazione a casi reali {#ud:1.4}
 
-#### Irrigazione: due strategie
+### Irrigazione: due strategie
 
-Un [timer](glossario.qmd#gloss-s60) attiva l'irrigazione per dieci minuti ogni giorno: rispetto all'umidità del terreno è un controllo ad anello aperto. Se un [sensore](glossario.qmd#gloss-new72) misura l'umidità e il comando dipende dalla sua differenza rispetto al valore desiderato, compare una [retroazione](glossario.qmd#gloss-s19).
+Un [timer](/risorse/glossario/index.qmd#gloss-timer) attiva l'irrigazione per dieci minuti ogni giorno: rispetto all'umidità del terreno è un controllo ad anello aperto. Se un [sensore](/risorse/glossario/index.qmd#gloss-sensore) misura l'umidità e il comando dipende dalla sua differenza rispetto al valore desiderato, compare una [retroazione](/risorse/glossario/index.qmd#gloss-retroazione).
 
-**Attività.** Scegli ascensore, termostato o serbatoio. Disegna il confine, assegna almeno un [ingresso](glossario.qmd#gloss-s9), un'[uscita](glossario.qmd#gloss-s26), un [parametro](glossario.qmd#gloss-s17) e un [disturbo](glossario.qmd#gloss-s5); spiega se il [modello](glossario.qmd#gloss-s15) ha memoria. Non basta elencare componenti: occorre descrivere come interagiscono.
+**Attività.** Scegli ascensore, termostato o serbatoio. Disegna il confine, assegna almeno un [ingresso](/risorse/glossario/index.qmd#gloss-ingresso), un'[uscita](/risorse/glossario/index.qmd#gloss-uscita), un [parametro](/risorse/glossario/index.qmd#gloss-parametro) e un [disturbo](/risorse/glossario/index.qmd#gloss-disturbo); spiega se il [modello](/risorse/glossario/index.qmd#gloss-modello) ha memoria. Non basta elencare componenti: occorre descrivere come interagiscono.
 
-## Rappresentare un [sistema](glossario.qmd#gloss-s23) con un [modello](glossario.qmd#gloss-s15) {#topic:modelli}
+## Rappresentare un [sistema](/risorse/glossario/index.qmd#gloss-sistema) con un [modello](/risorse/glossario/index.qmd#gloss-modello) {#topic:modelli}
 
-Un [modello](glossario.qmd#gloss-s15) descrive gli aspetti del [sistema](glossario.qmd#gloss-s23) che servono al nostro scopo. Useremo rappresentazioni grafiche, relazioni fra grandezze e algoritmi.
+Un [modello](/risorse/glossario/index.qmd#gloss-modello) descrive gli aspetti del [sistema](/risorse/glossario/index.qmd#gloss-sistema) che servono al nostro scopo. Useremo rappresentazioni grafiche, relazioni fra grandezze e algoritmi.
 
 ## U.D. 1.5 / Classificazione dei modelli dei sistemi {#ud:1.5}
 
@@ -99,13 +100,13 @@ Un [modello](glossario.qmd#gloss-s15) descrive gli aspetti del [sistema](glossar
 
 - **Algoritmico**: una sequenza di istruzioni.
 
-Si sceglie il [modello](glossario.qmd#gloss-s15) in base alla domanda a cui deve rispondere.
+Si sceglie il [modello](/risorse/glossario/index.qmd#gloss-modello) in base alla domanda a cui deve rispondere.
 
-#### Un serbatoio: che cosa cambia?
+### Un serbatoio: che cosa cambia?
 
-Se entra più acqua di quanta ne esca, il livello sale; se ne esce di più, scende. Il [modello](glossario.qmd#gloss-s15) collega il livello alle portate e al tempo trascorso.
+Se entra più acqua di quanta ne esca, il livello sale; se ne esce di più, scende. Il [modello](/risorse/glossario/index.qmd#gloss-modello) collega il livello alle portate e al tempo trascorso.
 
-[Il calcolo del livello è negli approfondimenti](approfondimenti.qmd#app:serbatoio) (p. ).
+[Il calcolo del livello è negli approfondimenti](approfondimenti.qmd#app:serbatoio).
 
 ## U.D. 1.6 / Algoritmi e diagrammi di flusso {#ud:1.6}
 
@@ -121,17 +122,17 @@ Nel diagramma il rombo rappresenta una decisione; i blocchi etichettati indicano
 ![Schema didattico 4](/assets/dispense/sistemi-automatici/figura-4.png){fig-alt="Schema didattico 4 della dispensa Sistemi automatici"}
 :::
 
-*[Algoritmo](glossario.qmd#gloss-s1) di una singola valutazione; un controllo ripetuto richiede un ciclo. A $T=30$ la condizione è falsa.*
+*[Algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo) di una singola valutazione; un controllo ripetuto richiede un ciclo. A $T=30$ la condizione è falsa.*
 
-## Eseguire un [algoritmo](glossario.qmd#gloss-s1) passo per passo {#topic:3}
+## Eseguire un [algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo) passo per passo {#topic:3}
 
-## U.D. 1.7 / Applicazioni e simulazioni con software [Flowgorithm](glossario.qmd#gloss-s6) {#ud:1.7}
+## U.D. 1.7 / Applicazioni e simulazioni con software [Flowgorithm](/risorse/glossario/index.qmd#gloss-flowgorithm) {#ud:1.7}
 
-[Flowgorithm](glossario.qmd#gloss-s6) permette di eseguire algoritmi rappresentati con diagrammi di flusso. Si dichiarano [variabili](glossario.qmd#gloss-s27) e tipi, si inseriscono letture, assegnazioni e condizioni, poi si osservano i valori durante l'esecuzione.
+[Flowgorithm](/risorse/glossario/index.qmd#gloss-flowgorithm) permette di eseguire algoritmi rappresentati con diagrammi di flusso. Si dichiarano [variabili](/risorse/glossario/index.qmd#gloss-variabile) e tipi, si inseriscono letture, assegnazioni e condizioni, poi si osservano i valori durante l'esecuzione.
 
 **Un esercizio completo: media di tre letture.**
 
-1.  Dichiara il [contatore](glossario.qmd#gloss-s61) intero $i$ e le [variabili](glossario.qmd#gloss-s27) reali $T$, $somma$, $media$.
+1.  Dichiara il [contatore](/risorse/glossario/index.qmd#gloss-contatore) intero $i$ e le [variabili](/risorse/glossario/index.qmd#gloss-variabile) reali $T$, $somma$, $media$.
 
 2.  Inizializza $i=0$ e $somma=0$.
 
@@ -143,13 +144,13 @@ Nel diagramma il rombo rappresenta una decisione; i blocchi etichettati indicano
 ![Schema didattico 5](/assets/dispense/sistemi-automatici/figura-5.png){fig-alt="Schema didattico 5 della dispensa Sistemi automatici"}
 :::
 
-   **Lettura**   **$T$**   **Somma**  **[Stato](glossario.qmd#gloss-s24) dopo l'iterazione**
+   **Lettura**   **$T$**   **Somma**  **[Stato](/risorse/glossario/index.qmd#gloss-stato) dopo l'iterazione**
   ------------- --------- ----------- --------------------------------------------------------
         1          20         20      $i=1$, il ciclo continua.
         2          22         42      $i=2$, il ciclo continua.
         3          24         66      $i=3$, la prossima condizione è falsa.
 
-#### Risultato e casi da provare
+### Risultato e casi da provare
 
 **Media = somma dei valori / numero dei valori**. Per tre ingressi $a,b,c$, il risultato è $m=(a+b+c)/3$.
 
@@ -159,13 +160,13 @@ La media è $66/3=22$. Prova anche 20, 20, 20 e poi $-3$, 0, 3. I risultati atte
 
 - Non inizializzare la somma.
 
-- Dimenticare di incrementare il [contatore](glossario.qmd#gloss-s61).
+- Dimenticare di incrementare il [contatore](/risorse/glossario/index.qmd#gloss-contatore).
 
 - Usare $i\leq3$ partendo da zero: si ottengono quattro letture.
 
 La tabella di esecuzione rende visibili questi errori.
 
-**Prova tu.** Modifica il [modello](glossario.qmd#gloss-s15) per $n$ letture, con $n>0$. Se $n=0$, segnala il dato non valido prima di dividere.
+**Prova tu.** Modifica il [modello](/risorse/glossario/index.qmd#gloss-modello) per $n$ letture, con $n>0$. Se $n=0$, segnala il dato non valido prima di dividere.
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-1.qmd)

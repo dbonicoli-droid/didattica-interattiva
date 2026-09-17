@@ -22,7 +22,6 @@ website:
     type: textbox
     collapse-after: 2
   navbar:
-    background: light
     left:
       - href: index.qmd
         text: Percorsi
@@ -36,199 +35,233 @@ website:
             text: Fondamenti
           - href: risorse/componenti/index.qmd
             text: Componenti
+          - href: risorse/glossario/index.qmd
+            text: Glossario
           - href: risorse/esterne/index.qmd
             text: Risorse esterne
           - href: guida.qmd
             text: Come studiare
       - href: materiali.qmd
         text: Dispense PDF
+  # Una barra laterale per percorso, più una per le risorse condivise.
+  # Quarto sceglie da sé quella che contiene la pagina aperta: nessun JavaScript,
+  # nessun lampeggio iniziale, e la navigazione resta corretta anche senza script.
   sidebar:
-    style: docked
-    search: false
-    collapse-level: 1
-    contents:
-      - section: "TPSEE · Elettronici"
-        href: corsi/tpsee-elettronici/index.qmd
-        contents:
-          - href: corsi/tpsee-elettronici/index.qmd
-            text: Indice del percorso
-          - href: corsi/tpsee-elettronici/guida-sicurezza.qmd
-            text: "Sicurezza in laboratorio"
-          - section: "Fondamenti"
-            contents:
-              - href: corsi/tpsee-elettronici/sicurezza-e-buone-pratiche.qmd
-                text: "Sicurezza e Buone pratiche"
-              - href: corsi/tpsee-elettronici/conoscenze-di-base.qmd
-                text: "Numeri e codifiche"
-          - section: "Programma del corso"
-            contents:
-              - href: corsi/tpsee-elettronici/moduli/modulo-1.qmd
-                text: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
-              - href: corsi/tpsee-elettronici/moduli/modulo-2.qmd
-                text: "Modulo 2 / Elementi di logica"
-              - href: corsi/tpsee-elettronici/moduli/modulo-3.qmd
-                text: "Modulo 3 / Elettronica digitale in logica cablata"
-              - href: corsi/tpsee-elettronici/moduli/modulo-4.qmd
-                text: "Modulo 4 / Reti sequenziali"
-          - section: "Altre risorse"
-            contents:
-              - href: corsi/tpsee-elettronici/metti-insieme-il-percorso.qmd
-                text: "Metti insieme il percorso"
-              - href: corsi/tpsee-elettronici/approfondimenti.qmd
-                text: "Schede di approfondimento"
-              - href: corsi/tpsee-elettronici/glossario.qmd
-                text: "Glossario"
-      - section: "TPSEE · Elettrotecnici"
-        href: corsi/tpsee-elettrotecnici/index.qmd
-        contents:
-          - href: corsi/tpsee-elettrotecnici/index.qmd
-            text: Indice del percorso
-          - href: corsi/tpsee-elettrotecnici/guida-sicurezza.qmd
-            text: "Sicurezza in laboratorio / guida provvisoria"
-          - section: "Fondamenti"
-            contents:
-              - href: corsi/tpsee-elettrotecnici/conoscenze-di-base.qmd
-                text: "Calcolo e lettura degli schemi"
-          - section: "Programma del corso"
-            contents:
-              - href: corsi/tpsee-elettrotecnici/moduli/modulo-1.qmd
-                text: "Modulo 1 / Normativa e legislazione"
-              - href: corsi/tpsee-elettrotecnici/moduli/modulo-2.qmd
-                text: "Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici"
-              - href: corsi/tpsee-elettrotecnici/moduli/modulo-3.qmd
-                text: "Modulo 3 / Principali componenti degli impianti elettrici"
-              - href: corsi/tpsee-elettrotecnici/moduli/modulo-4.qmd
-                text: "Modulo 4 / Tecnologia dei materiali"
-              - href: corsi/tpsee-elettrotecnici/moduli/modulo-5.qmd
-                text: "Modulo 5 / Illuminotecnica"
-          - section: "Altre risorse"
-            contents:
-              - href: corsi/tpsee-elettrotecnici/esercizi-metti-insieme-i-moduli.qmd
-                text: "Esercizi / Metti insieme i moduli"
-              - href: corsi/tpsee-elettrotecnici/educazione-civica-sicurezza-e-responsabilita.qmd
-                text: "Educazione civica / Sicurezza e responsabilità"
-              - href: corsi/tpsee-elettrotecnici/approfondimenti.qmd
-                text: "Schede di approfondimento"
-              - href: corsi/tpsee-elettrotecnici/glossario.qmd
-                text: "Glossario"
-      - section: "Sistemi automatici"
-        href: corsi/sistemi-automatici/index.qmd
-        contents:
-          - href: corsi/sistemi-automatici/index.qmd
-            text: Indice del percorso
-          - href: corsi/sistemi-automatici/guida-sicurezza.qmd
-            text: "Sicurezza in laboratorio / guida provvisoria"
-          - section: "Fondamenti"
-            contents:
-              - href: corsi/sistemi-automatici/conoscenze-di-base.qmd
-                text: "Numeri, dati e variabili"
-          - section: "Programma del corso"
-            contents:
-              - href: corsi/sistemi-automatici/moduli/modulo-1.qmd
-                text: "Modulo 1 / Fondamenti di teoria dei sistemi"
-              - href: corsi/sistemi-automatici/moduli/modulo-2.qmd
-                text: "Modulo 2 / Elettronica digitale"
-              - href: corsi/sistemi-automatici/moduli/modulo-3.qmd
-                text: "Modulo 3 / PLC"
-              - href: corsi/sistemi-automatici/moduli/modulo-4.qmd
-                text: "Modulo 4 / Circuiti combinatori"
-              - href: corsi/sistemi-automatici/moduli/modulo-5.qmd
-                text: "Modulo 5 / Circuiti sequenziali"
-              - href: corsi/sistemi-automatici/moduli/modulo-6.qmd
-                text: "Modulo 6 / Tempi, eventi e grandezze analogiche"
-          - section: "Altre risorse"
-            contents:
-              - href: corsi/sistemi-automatici/esercizi-un-controllo-ragionato.qmd
-                text: "Esercizi / Un controllo ragionato"
-              - href: corsi/sistemi-automatici/educazione-civica-emergenza-climatica.qmd
-                text: "Educazione civica / Emergenza climatica"
-              - href: corsi/sistemi-automatici/approfondimenti.qmd
-                text: "Schede di approfondimento"
-              - href: corsi/sistemi-automatici/glossario.qmd
-                text: "Glossario"
-      - section: "Domotica e automazione"
-        href: corsi/domotica/index.qmd
-        contents:
-          - href: corsi/domotica/index.qmd
-            text: Indice del percorso
-          - href: corsi/domotica/guida-sicurezza.qmd
-            text: "Sicurezza in laboratorio / guida provvisoria"
-          - section: "Fondamenti"
-            contents:
-              - href: corsi/domotica/conoscenze-di-base.qmd
-                text: "Richieste, sensori e segnali"
-          - section: "Programma del corso"
-            contents:
-              - href: corsi/domotica/moduli/modulo-1.qmd
-                text: "Modulo 1 / Elettromeccanica"
-              - href: corsi/domotica/moduli/modulo-2.qmd
-                text: "Modulo 2 / Automazione industriale e PLC"
-              - href: corsi/domotica/moduli/modulo-3.qmd
-                text: "Modulo 3 / Linguaggio Ladder"
-              - href: corsi/domotica/moduli/modulo-4.qmd
-                text: "Modulo 4 / Linguaggio SFC"
-              - href: corsi/domotica/moduli/modulo-5.qmd
-                text: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
-          - section: "Altre risorse"
-            contents:
-              - href: corsi/domotica/approfondimenti.qmd
-                text: "Schede di approfondimento"
-              - href: corsi/domotica/educazione-civica-efficientamento-energetico.qmd
-                text: "Educazione civica / Efficientamento energetico"
-              - href: corsi/domotica/esercizi-verifica-trasversale.qmd
-                text: "Esercizi / Verifica trasversale"
-              - href: corsi/domotica/glossario.qmd
-                text: "Glossario"
-      - section: "Laboratorio"
-        href: laboratori/index.qmd
-        contents:
-          - href: laboratori/rc.qmd
-            text: Circuito RC
-      - section: "Fondamenti condivisi"
-        href: risorse/fondamenti/index.qmd
-        contents:
-          - href: risorse/fondamenti/grandezze-e-calcolo.qmd
-            text: "Grandezze, unità di misura e calcolo"
-          - href: risorse/fondamenti/carica-corrente-tensione.qmd
-            text: "Carica, corrente e tensione"
-          - href: risorse/fondamenti/corrente-nei-materiali.qmd
-            text: "Corrente nei materiali"
-          - href: risorse/fondamenti/leggere-gli-schemi.qmd
-            text: "Leggere uno schema elettrico"
-          - href: risorse/fondamenti/leggi-dei-circuiti.qmd
-            text: "Ohm, Kirchhoff, serie e parallelo"
-          - href: risorse/fondamenti/potenza-energia.qmd
-            text: "Potenza ed energia"
-          - href: risorse/fondamenti/misurare-e-verificare.qmd
-            text: "Misurare e verificare"
-          - href: risorse/fondamenti/segnali-e-dinamica.qmd
-            text: "Segnali e dinamica"
-          - href: risorse/fondamenti/matematica-per-approfondire.qmd
-            text: "Matematica per approfondire: una prima lettura"
-          - risorse/sicurezza/index.qmd
-      - section: "Componenti"
-        href: risorse/componenti/index.qmd
-        contents:
-          - risorse/componenti/resistore.qmd
-          - risorse/componenti/condensatore.qmd
-          - risorse/componenti/induttore.qmd
-          - risorse/componenti/diodo.qmd
-          - risorse/componenti/transistor.qmd
-      - href: risorse/esterne/index.qmd
-        text: Risorse esterne
+    - id: tpsee-elettronici
+      title: "TPSEE · Elettronici"
+      style: docked
+      search: false
+      collapse-level: 2
+      contents:
+        - href: corsi/tpsee-elettronici/index.qmd
+          text: Indice del percorso
+        - href: corsi/tpsee-elettronici/guida-sicurezza.qmd
+          text: "Sicurezza in laboratorio"
+        - section: "Fondamenti"
+          contents:
+            - href: corsi/tpsee-elettronici/sicurezza-e-buone-pratiche.qmd
+              text: "Sicurezza e buone pratiche"
+            - href: corsi/tpsee-elettronici/conoscenze-di-base.qmd
+              text: "Numeri e codifiche"
+        - section: "Programma del corso"
+          contents:
+            - href: corsi/tpsee-elettronici/moduli/modulo-1.qmd
+              text: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
+            - href: corsi/tpsee-elettronici/moduli/modulo-2.qmd
+              text: "Modulo 2 / Elementi di logica"
+            - href: corsi/tpsee-elettronici/moduli/modulo-3.qmd
+              text: "Modulo 3 / Elettronica digitale in logica cablata"
+            - href: corsi/tpsee-elettronici/moduli/modulo-4.qmd
+              text: "Modulo 4 / Reti sequenziali"
+        - section: "Altre risorse"
+          contents:
+            - href: corsi/tpsee-elettronici/esercizi-metti-insieme-il-percorso.qmd
+              text: "Esercizi / Metti insieme il percorso"
+            - href: corsi/tpsee-elettronici/approfondimenti.qmd
+              text: "Schede di approfondimento"
+            - href: risorse/glossario/index.qmd#vocabolario-tpsee-elettronici
+              text: "Glossario"
+
+    - id: tpsee-elettrotecnici
+      title: "TPSEE · Elettrotecnici"
+      style: docked
+      search: false
+      collapse-level: 2
+      contents:
+        - href: corsi/tpsee-elettrotecnici/index.qmd
+          text: Indice del percorso
+        - href: corsi/tpsee-elettrotecnici/guida-sicurezza.qmd
+          text: "Sicurezza in laboratorio / guida provvisoria"
+        - section: "Fondamenti"
+          contents:
+            - href: corsi/tpsee-elettrotecnici/conoscenze-di-base.qmd
+              text: "Calcolo e lettura degli schemi"
+        - section: "Programma del corso"
+          contents:
+            - href: corsi/tpsee-elettrotecnici/moduli/modulo-1.qmd
+              text: "Modulo 1 / Normativa e legislazione"
+            - href: corsi/tpsee-elettrotecnici/moduli/modulo-2.qmd
+              text: "Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici"
+            - href: corsi/tpsee-elettrotecnici/moduli/modulo-3.qmd
+              text: "Modulo 3 / Principali componenti degli impianti elettrici"
+            - href: corsi/tpsee-elettrotecnici/moduli/modulo-4.qmd
+              text: "Modulo 4 / Tecnologia dei materiali"
+            - href: corsi/tpsee-elettrotecnici/moduli/modulo-5.qmd
+              text: "Modulo 5 / Illuminotecnica"
+        - section: "Altre risorse"
+          contents:
+            - href: corsi/tpsee-elettrotecnici/esercizi-metti-insieme-i-moduli.qmd
+              text: "Esercizi / Metti insieme i moduli"
+            - href: corsi/tpsee-elettrotecnici/educazione-civica-sicurezza-e-responsabilita.qmd
+              text: "Educazione civica / Sicurezza e responsabilità"
+            - href: corsi/tpsee-elettrotecnici/approfondimenti.qmd
+              text: "Schede di approfondimento"
+            - href: risorse/glossario/index.qmd#vocabolario-tpsee-elettrotecnici
+              text: "Glossario"
+
+    - id: sistemi-automatici
+      title: "Sistemi automatici"
+      style: docked
+      search: false
+      collapse-level: 2
+      contents:
+        - href: corsi/sistemi-automatici/index.qmd
+          text: Indice del percorso
+        - href: corsi/sistemi-automatici/guida-sicurezza.qmd
+          text: "Sicurezza in laboratorio / guida provvisoria"
+        - section: "Fondamenti"
+          contents:
+            - href: corsi/sistemi-automatici/conoscenze-di-base.qmd
+              text: "Numeri, dati e variabili"
+        - section: "Programma del corso"
+          contents:
+            - href: corsi/sistemi-automatici/moduli/modulo-1.qmd
+              text: "Modulo 1 / Fondamenti di teoria dei sistemi"
+            - href: corsi/sistemi-automatici/moduli/modulo-2.qmd
+              text: "Modulo 2 / Elettronica digitale"
+            - href: corsi/sistemi-automatici/moduli/modulo-3.qmd
+              text: "Modulo 3 / PLC"
+            - href: corsi/sistemi-automatici/moduli/modulo-4.qmd
+              text: "Modulo 4 / Circuiti combinatori"
+            - href: corsi/sistemi-automatici/moduli/modulo-5.qmd
+              text: "Modulo 5 / Circuiti sequenziali"
+            - href: corsi/sistemi-automatici/moduli/modulo-6.qmd
+              text: "Modulo 6 / Tempi, eventi e grandezze analogiche"
+        - section: "Altre risorse"
+          contents:
+            - href: corsi/sistemi-automatici/esercizi-un-controllo-ragionato.qmd
+              text: "Esercizi / Un controllo ragionato"
+            - href: corsi/sistemi-automatici/educazione-civica-emergenza-climatica.qmd
+              text: "Educazione civica / Emergenza climatica"
+            - href: corsi/sistemi-automatici/approfondimenti.qmd
+              text: "Schede di approfondimento"
+            - href: risorse/glossario/index.qmd#vocabolario-sistemi-automatici
+              text: "Glossario"
+
+    - id: domotica
+      title: "Domotica e automazione"
+      style: docked
+      search: false
+      collapse-level: 2
+      contents:
+        - href: corsi/domotica/index.qmd
+          text: Indice del percorso
+        - href: corsi/domotica/guida-sicurezza.qmd
+          text: "Sicurezza in laboratorio / guida provvisoria"
+        - section: "Fondamenti"
+          contents:
+            - href: corsi/domotica/conoscenze-di-base.qmd
+              text: "Richieste, sensori e segnali"
+        - section: "Programma del corso"
+          contents:
+            - href: corsi/domotica/moduli/modulo-1.qmd
+              text: "Modulo 1 / Elettromeccanica"
+            - href: corsi/domotica/moduli/modulo-2.qmd
+              text: "Modulo 2 / Automazione industriale e PLC"
+            - href: corsi/domotica/moduli/modulo-3.qmd
+              text: "Modulo 3 / Linguaggio Ladder"
+            - href: corsi/domotica/moduli/modulo-4.qmd
+              text: "Modulo 4 / Linguaggio SFC"
+            - href: corsi/domotica/moduli/modulo-5.qmd
+              text: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
+        - section: "Altre risorse"
+          contents:
+            - href: corsi/domotica/esercizi-verifica-trasversale.qmd
+              text: "Esercizi / Verifica trasversale"
+            - href: corsi/domotica/educazione-civica-efficientamento-energetico.qmd
+              text: "Educazione civica / Efficientamento energetico"
+            - href: corsi/domotica/approfondimenti.qmd
+              text: "Schede di approfondimento"
+            - href: risorse/glossario/index.qmd#vocabolario-domotica
+              text: "Glossario"
+
+    - id: risorse
+      title: "Risorse condivise"
+      style: docked
+      search: false
+      collapse-level: 2
+      contents:
+        - section: "Laboratorio"
+          href: laboratori/index.qmd
+          contents:
+            - href: laboratori/rc.qmd
+              text: Circuito RC
+        - section: "Fondamenti condivisi"
+          href: risorse/fondamenti/index.qmd
+          contents:
+            - href: risorse/fondamenti/grandezze-e-calcolo.qmd
+              text: "Grandezze, unità di misura e calcolo"
+            - href: risorse/fondamenti/carica-corrente-tensione.qmd
+              text: "Carica, corrente e tensione"
+            - href: risorse/fondamenti/corrente-nei-materiali.qmd
+              text: "Corrente nei materiali"
+            - href: risorse/fondamenti/leggere-gli-schemi.qmd
+              text: "Leggere uno schema elettrico"
+            - href: risorse/fondamenti/leggi-dei-circuiti.qmd
+              text: "Ohm, Kirchhoff, serie e parallelo"
+            - href: risorse/fondamenti/potenza-energia.qmd
+              text: "Potenza ed energia"
+            - href: risorse/fondamenti/misurare-e-verificare.qmd
+              text: "Misurare e verificare"
+            - href: risorse/fondamenti/segnali-e-dinamica.qmd
+              text: "Segnali e dinamica"
+            - href: risorse/fondamenti/matematica-per-approfondire.qmd
+              text: "Matematica per approfondire: una prima lettura"
+            - href: risorse/sicurezza/index.qmd
+              text: "Sicurezza e metodo 5S"
+        - section: "Componenti"
+          href: risorse/componenti/index.qmd
+          contents:
+            - risorse/componenti/resistore.qmd
+            - risorse/componenti/condensatore.qmd
+            - risorse/componenti/induttore.qmd
+            - risorse/componenti/diodo.qmd
+            - risorse/componenti/transistor.qmd
+        - href: risorse/mappe/index.qmd
+          text: "Mappe concettuali"
+        - href: risorse/glossario/index.qmd
+          text: "Glossario"
+        - href: risorse/esterne/index.qmd
+          text: "Risorse esterne"
+        - href: guida.qmd
+          text: "Come studiare"
+        - href: materiali.qmd
+          text: "Dispense PDF"
   page-footer:
     left: "Daniele Bonicoli · Materiali didattici personali · A.S. 2026–2027"
     right: "Versione in sviluppo"
 format:
   html:
-    theme: cosmo
-    css:
-      - styles.css
-      - assets/modern.css
+    # Il tema scuro è il predefinito; l'interruttore in alto attiva quello chiaro.
+    theme:
+      dark: [cosmo, assets/tema.scss, assets/tema-scuro.scss]
+      light: [cosmo, assets/tema.scss, assets/tema-chiaro.scss]
+    include-in-header: scripts/font.html
     include-after-body: scripts/navigation.html
     lang: it
     toc: true
     toc-title: In questa pagina
+    toc-depth: 3
     code-copy: true
     link-external-newwindow: true
     html-math-method: mathjax
@@ -240,5 +273,6 @@ execute:
   enabled: false
 
 filters:
+  - scripts/stato-pagina.lua
   - scripts/glossary-filter.lua
   - scripts/component-links.lua

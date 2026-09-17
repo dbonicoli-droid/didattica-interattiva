@@ -1,4 +1,5 @@
 ---
+sidebar: domotica
 title: "Schede di approfondimento"
 ---
 
@@ -8,23 +9,23 @@ title: "Schede di approfondimento"
 
 Queste schede sviluppano misura, acquisizione e progetto delle sequenze. Puoi consultarle quando il problema richiede maggiori dettagli.
 
-## [Sensori](glossario.qmd#gloss-new43) e trasduttori {#app:sensori}
+## [Sensori](/risorse/glossario/index.qmd#gloss-sensore) e trasduttori {#app:sensori}
 
 Nelle schede indichiamo con $x$ la grandezza misurata e con $y$ il segnale prodotto. L'indice $k$ identifica il ciclo del controllore; gli altri simboli sono specificati nei singoli esempi.
 
-Un **[sensore](glossario.qmd#gloss-new43)** risponde a una grandezza fisica; un **trasduttore** la converte in una grandezza di altra natura, spesso elettrica. Nell'uso pratico i termini possono sovrapporsi. Una catena di misura comprende anche alimentazione, condizionamento e acquisizione. Si classificano per grandezza (temperatura, luce, posizione, forza), principio fisico, tipo di segnale e necessità di eccitazione. Una [termocoppia](glossario.qmd#gloss-d39) genera una tensione; una termoresistenza cambia resistenza e richiede un circuito di lettura. Un'uscita digitale può trasmettere un numero, non soltanto uno stato acceso/spento.
+Un **[sensore](/risorse/glossario/index.qmd#gloss-sensore)** risponde a una grandezza fisica; un **trasduttore** la converte in una grandezza di altra natura, spesso elettrica. Nell'uso pratico i termini possono sovrapporsi. Una catena di misura comprende anche alimentazione, condizionamento e acquisizione. Si classificano per grandezza (temperatura, luce, posizione, forza), principio fisico, tipo di segnale e necessità di eccitazione. Una [termocoppia](/risorse/glossario/index.qmd#gloss-termocoppia) genera una tensione; una termoresistenza cambia resistenza e richiede un circuito di lettura. Un'uscita digitale può trasmettere un numero, non soltanto uno stato acceso/spento.
 
-## Parametri statici e [sensibilità](glossario.qmd#gloss-d37) {#app:old-1.2}
+## Parametri statici e [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) {#app:old-1.2}
 
-La **[transcaratteristica](glossario.qmd#gloss-d42)** o caratteristica di trasferimento è $y=f(x)$ in condizioni stazionarie. Per una legge affine $y=ax+b$, la [sensibilità](glossario.qmd#gloss-d37) è $S=\Delta y/\Delta x=a$; $b$ è l'[offset](glossario.qmd#gloss-d27). Una legge affine con [offset](glossario.qmd#gloss-d27) non nullo non è lineare nel senso stretto della sovrapposizione.
+La **[transcaratteristica](/risorse/glossario/index.qmd#gloss-transcaratteristica)** o caratteristica di trasferimento è $y=f(x)$ in condizioni stazionarie. Per una legge affine $y=ax+b$, la [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) è $S=\Delta y/\Delta x=a$; $b$ è l'[offset](/risorse/glossario/index.qmd#gloss-offset). Una legge affine con [offset](/risorse/glossario/index.qmd#gloss-offset) non nullo non è lineare nel senso stretto della sovrapposizione.
 
 ::: center
 ![Schema didattico 12](/assets/dispense/domotica/figura-12.png){fig-alt="Schema didattico 12 della dispensa Domotica e automazione"}
 :::
 
-La **[risoluzione](glossario.qmd#gloss-d35)** è la più piccola variazione distinguibile nelle condizioni dichiarate. La **[ripetibilità](glossario.qmd#gloss-d34)** riguarda la concordanza fra misure ripetute nelle stesse condizioni. Una buona [ripetibilità](glossario.qmd#gloss-d34) non elimina un errore sistematico: letture molto vicine possono essere tutte spostate rispetto al riferimento.
+La **[risoluzione](/risorse/glossario/index.qmd#gloss-risoluzione)** è la più piccola variazione distinguibile nelle condizioni dichiarate. La **[ripetibilità](/risorse/glossario/index.qmd#gloss-ripetibilita)** riguarda la concordanza fra misure ripetute nelle stesse condizioni. Una buona [ripetibilità](/risorse/glossario/index.qmd#gloss-ripetibilita) non elimina un errore sistematico: letture molto vicine possono essere tutte spostate rispetto al riferimento.
 
-#### [Sensibilità](glossario.qmd#gloss-d37) con unità
+### [Sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) con unità
 
 **Sensibilità = variazione dell'uscita / variazione dell'ingresso**: $S=\Delta V/\Delta T$, con $\Delta V$ in volt e $\Delta T$ in gradi Celsius; $S$ si esprime in V/$^\circ$C.
 
@@ -34,7 +35,7 @@ Da 0 a 100 $^\circ$C, l'uscita passa da 1 a 9 V: $S=8/100=0{,}08$ V/$^\circ$C. U
 
 Nel modello del primo ordine, $\tau$ è la costante di tempo e $y_0$, $y_\infty$ sono il valore iniziale e quello finale dell'uscita; $t$ è il tempo trascorso dal cambiamento dell'ingresso.
 
-Un [sensore](glossario.qmd#gloss-new43) reale non risponde sempre istantaneamente. Il **tempo di transizione** va specificato con una convenzione, per esempio dal 10% al 90% della variazione finale dopo un gradino. Un modello del primo ordine, con guadagno statico unitario, ha risposta normalizzata: $$y(t)=1-e^{-t/\tau},\qquad t\geq0.$$ La costante di tempo $\tau$ indica il raggiungimento del 63,2% della variazione. Per questo modello il tempo 10--90% è circa $2{,}20\tau$.
+Un [sensore](/risorse/glossario/index.qmd#gloss-sensore) reale non risponde sempre istantaneamente. Il **tempo di transizione** va specificato con una convenzione, per esempio dal 10% al 90% della variazione finale dopo un gradino. Un modello del primo ordine, con guadagno statico unitario, ha risposta normalizzata: $$y(t)=1-e^{-t/\tau},\qquad t\geq0.$$ La costante di tempo $\tau$ indica il raggiungimento del 63,2% della variazione. Per questo modello il tempo 10--90% è circa $2{,}20\tau$.
 
 ::: center
 ![Schema didattico 13](/assets/dispense/domotica/figura-13.png){fig-alt="Schema didattico 13 della dispensa Domotica e automazione"}
@@ -42,25 +43,25 @@ Un [sensore](glossario.qmd#gloss-new43) reale non risponde sempre istantaneament
 
 *Risposta al gradino ideale: dopo $3\tau$ si raggiunge circa il 95% della variazione.*
 
-La **risposta in frequenza** descrive attenuazione e ritardo di fase per ingressi sinusoidali. Nel modello del primo ordine: $$|H(j2\pi f)|=\frac{1}{\sqrt{1+(2\pi f\tau)^2}},\qquad f_c=\frac{1}{2\pi\tau}.$$ Alla frequenza $f_c$ l'ampiezza è circa 0,707 di quella a frequenza molto bassa; non significa che sopra $f_c$ il [sensore](glossario.qmd#gloss-new43) smetta improvvisamente di funzionare.
+La **risposta in frequenza** descrive attenuazione e ritardo di fase per ingressi sinusoidali. Nel modello del primo ordine: $$|H(j2\pi f)|=\frac{1}{\sqrt{1+(2\pi f\tau)^2}},\qquad f_c=\frac{1}{2\pi\tau}.$$ Alla frequenza $f_c$ l'ampiezza è circa 0,707 di quella a frequenza molto bassa; non significa che sopra $f_c$ il [sensore](/risorse/glossario/index.qmd#gloss-sensore) smetta improvvisamente di funzionare.
 
-#### Scegliere in base alla velocità
+### Scegliere in base alla velocità
 
 Per il modello del primo ordine: $t_{10\text{--}90}\simeq2{,}2\tau$ e $f_c=1/(2\pi\tau)$. $\tau$ è la costante di tempo \[s\], $t_{10\text{--}90}$ il tempo per passare dal 10% al 90% della variazione finale \[s\] e $f_c$ la frequenza di taglio \[Hz\].
 
-Con $\tau=2$ s, il tempo 10--90% è circa 4,4 s e $f_c\simeq0{,}080$ Hz. Il [sensore](glossario.qmd#gloss-new43) può essere adeguato a una temperatura che cambia lentamente, ma non a seguire fedelmente oscillazioni rapide.
+Con $\tau=2$ s, il tempo 10--90% è circa 4,4 s e $f_c\simeq0{,}080$ Hz. Il [sensore](/risorse/glossario/index.qmd#gloss-sensore) può essere adeguato a una temperatura che cambia lentamente, ma non a seguire fedelmente oscillazioni rapide.
 
 **Prova tu.** Con $\tau=0{,}1$ s, quanto valgono tempo 10--90% e $f_c$?
 
 *Risposta: circa 0,22 s e 1,59 Hz.*
 
-## Schede dei [sensori](glossario.qmd#gloss-new43) {#app:old-1.4}
+## Schede dei [sensori](/risorse/glossario/index.qmd#gloss-sensore) {#app:old-1.4}
 
 Questa U.D. raccoglie più dispositivi. Li analizziamo in quattro schede collegate: temperatura e posizione, luce, deformazione, movimento digitale.
 
 ## Scheda A / Temperatura e posizione resistiva
 
-Una **termoresistenza** varia la resistenza con la temperatura. Per una [Pt100](glossario.qmd#gloss-d31), $R_0=100\,\Omega$ a 0 $^\circ$C; un'approssimazione introduttiva è: $T$ è la temperatura in gradi Celsius, $R(T)$ la resistenza a quella temperatura e $\alpha$ il coefficiente di variazione per grado.
+Una **termoresistenza** varia la resistenza con la temperatura. Per una [Pt100](/risorse/glossario/index.qmd#gloss-pt100), $R_0=100\,\Omega$ a 0 $^\circ$C; un'approssimazione introduttiva è: $T$ è la temperatura in gradi Celsius, $R(T)$ la resistenza a quella temperatura e $\alpha$ il coefficiente di variazione per grado.
 
 $$R(T)\simeq R_0(1+\alpha T),\qquad\alpha\simeq0{,}00385\,^{\circ}\mathrm C^{-1}.$$ La legge completa non è perfettamente affine. Corrente di misura, autoriscaldamento e resistenza dei collegamenti influenzano la lettura; le connessioni a tre o quattro fili aiutano a trattare l'effetto dei conduttori.
 
@@ -70,17 +71,17 @@ $$R(T)\simeq R_0(1+\alpha T),\qquad\alpha\simeq0{,}00385\,^{\circ}\mathrm C^{-1}
 ![Schema didattico 14](/assets/dispense/domotica/figura-14.png){fig-alt="Schema didattico 14 della dispensa Domotica e automazione"}
 :::
 
-**[Termocoppia](glossario.qmd#gloss-d39).** Due materiali differenti producono una tensione legata alle temperature delle giunzioni. La lettura richiede il riferimento della giunzione fredda e una conversione appropriata; la [sensibilità](glossario.qmd#gloss-d37) dipende dal tipo e dalla temperatura.
+**[Termocoppia](/risorse/glossario/index.qmd#gloss-termocoppia).** Due materiali differenti producono una tensione legata alle temperature delle giunzioni. La lettura richiede il riferimento della giunzione fredda e una conversione appropriata; la [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) dipende dal tipo e dalla temperatura.
 
-**Convertitore di temperatura.** Un circuito dedicato può trasformare il segnale del [sensore](glossario.qmd#gloss-new43) in tensione, corrente o dato digitale, introducendo guadagno, [offset](glossario.qmd#gloss-d27), linearizzazione e diagnostica. [Sensore](glossario.qmd#gloss-new43) e convertitore non sono intercambiabili senza controllare campo e interfaccia.
+**Convertitore di temperatura.** Un circuito dedicato può trasformare il segnale del [sensore](/risorse/glossario/index.qmd#gloss-sensore) in tensione, corrente o dato digitale, introducendo guadagno, [offset](/risorse/glossario/index.qmd#gloss-offset), linearizzazione e diagnostica. [Sensore](/risorse/glossario/index.qmd#gloss-sensore) e convertitore non sono intercambiabili senza controllare campo e interfaccia.
 
-#### Due calcoli rapidi
+### Due calcoli rapidi
 
-[Pt100](glossario.qmd#gloss-d31) a 50 $^\circ$C: $R\simeq100(1+0{,}00385\cdot50)=119{,}25\,\Omega$.
+[Pt100](/risorse/glossario/index.qmd#gloss-pt100) a 50 $^\circ$C: $R\simeq100(1+0{,}00385\cdot50)=119{,}25\,\Omega$.
 
 Potenziometro da 100 mm alimentato a 10 V, cursore a 30 mm: $V_{out}=3$ V, assumendo uscita non caricata.
 
-## Scheda B: [sensori](glossario.qmd#gloss-new43) di luce
+## Scheda B: [sensori](/risorse/glossario/index.qmd#gloss-sensore) di luce
 
 Un **fotoresistore** modifica la resistenza con l'illuminazione, generalmente diminuendola all'aumentare della luce. È spesso non lineare e relativamente lento; la relazione va ricavata dalla caratteristica del componente. Un **fotodiodo** genera una corrente legata alla luce incidente, entro il proprio campo di funzionamento. Un **fototransistor** sfrutta l'azione transistor per ottenere un segnale maggiore, con limiti dinamici e dipendenze dal circuito.
 
@@ -96,7 +97,7 @@ Un **fotoresistore** modifica la resistenza con l'illuminazione, generalmente di
 ![Schema didattico 15](/assets/dispense/domotica/figura-15.png){fig-alt="Schema didattico 15 della dispensa Domotica e automazione"}
 :::
 
-#### Controllo del verso
+### Controllo del verso
 
 Lo schema del partitore rende esplicito quale componente è verso l'alimentazione:
 
@@ -110,11 +111,11 @@ Con $V_{exc}=5$ V e $R=10\,\mathrm{k\Omega}$: al buio $R_L=90\,\mathrm{k\Omega}$
 
 #### Non basta la forma del segnale
 
-Una tensione non diventa automaticamente una misura in lux. Servono una caratteristica di conversione e una calibrazione adeguata; la risposta spettrale del [sensore](glossario.qmd#gloss-new43) può differire da quella dell'occhio.
+Una tensione non diventa automaticamente una misura in lux. Servono una caratteristica di conversione e una calibrazione adeguata; la risposta spettrale del [sensore](/risorse/glossario/index.qmd#gloss-sensore) può differire da quella dell'occhio.
 
-## Scheda C: [estensimetro](glossario.qmd#gloss-d19) e [ponte di Wheatstone](glossario.qmd#gloss-d30) {#ponte-wheatstone}
+## Scheda C: [estensimetro](/risorse/glossario/index.qmd#gloss-estensimetro) e [ponte di Wheatstone](/risorse/glossario/index.qmd#gloss-ponte-di-wheatstone) {#ponte-wheatstone}
 
-Un **[estensimetro](glossario.qmd#gloss-d19) a filo** varia la resistenza quando si deforma. Indicando con $\varepsilon=\Delta L/L$ la deformazione relativa: $$\frac{\Delta R}{R}=GF\,\varepsilon,$$ dove $GF$ è il fattore di [estensimetro](glossario.qmd#gloss-d19). La deformazione è adimensionale; $1000\,\mu\varepsilon=0{,}001$. Il **[ponte di Wheatstone](glossario.qmd#gloss-d30)** confronta due partitori e rende misurabili piccole variazioni di resistenza. Nel disegno definiamo $V_o=V_L-V_R$:
+Un **[estensimetro](/risorse/glossario/index.qmd#gloss-estensimetro) a filo** varia la resistenza quando si deforma. Indicando con $\varepsilon=\Delta L/L$ la deformazione relativa: $$\frac{\Delta R}{R}=GF\,\varepsilon,$$ dove $GF$ è il fattore di [estensimetro](/risorse/glossario/index.qmd#gloss-estensimetro). La deformazione è adimensionale; $1000\,\mu\varepsilon=0{,}001$. Il **[ponte di Wheatstone](/risorse/glossario/index.qmd#gloss-ponte-di-wheatstone)** confronta due partitori e rende misurabili piccole variazioni di resistenza. Nel disegno definiamo $V_o=V_L-V_R$:
 
 ::: center
 ![Schema didattico 17](/assets/dispense/domotica/figura-17.png){fig-alt="Schema didattico 17 della dispensa Domotica e automazione"}
@@ -122,15 +123,15 @@ Un **[estensimetro](glossario.qmd#gloss-d19) a filo** varia la resistenza quando
 
 $$V_o=V_{exc}\left(\frac{R_2}{R_1+R_2}-\frac{R_4}{R_3+R_4}\right).$$ Il ponte è bilanciato quando $R_1/R_2=R_3/R_4$. La polarità del segnale cambia se si scambiano gli ingressi della misura differenziale.
 
-#### Un segnale piccolo ma significativo
+### Un segnale piccolo ma significativo
 
 $R_1=R_3=R_4=120\,\Omega$, $R_2=120+\Delta R$, $GF=2$, $\varepsilon=0{,}001$. Si ottiene $\Delta R=0{,}24\,\Omega$. Con $V_{exc}=5$ V: $$V_o=5\left(\frac{120{,}24}{240{,}24}-\frac12\right)\simeq2{,}50\,\mathrm{mV}.$$ Il risultato spiega la necessità di amplificazione differenziale, controllo del rumore e compensazione degli effetti termici.
 
 **Prova tu.** Se la deformazione raddoppia restando piccola, il segnale è circa doppio. La relazione esatta del ponte resta quella sopra, non una proporzionalità perfetta per qualunque variazione.
 
-## Scheda D: [encoder](glossario.qmd#gloss-d18) e posizione digitale
+## Scheda D: [encoder](/risorse/glossario/index.qmd#gloss-encoder) e posizione digitale
 
-Un **[encoder](glossario.qmd#gloss-d18)** associa al movimento una sequenza di segnali o un codice. L'[encoder](glossario.qmd#gloss-d18) **incrementale** produce impulsi: contando variazioni si stima lo spostamento rispetto a un riferimento. L'[encoder](glossario.qmd#gloss-d18) **assoluto** fornisce un codice di posizione entro il proprio campo. Due canali incrementali A e B in quadratura permettono di determinare anche il verso. Con la convenzione illustrata, la sequenza $00\to10\to11\to01\to00$ descrive un verso; la sequenza inversa descrive l'altro.
+Un **[encoder](/risorse/glossario/index.qmd#gloss-encoder)** associa al movimento una sequenza di segnali o un codice. L'[encoder](/risorse/glossario/index.qmd#gloss-encoder) **incrementale** produce impulsi: contando variazioni si stima lo spostamento rispetto a un riferimento. L'[encoder](/risorse/glossario/index.qmd#gloss-encoder) **assoluto** fornisce un codice di posizione entro il proprio campo. Due canali incrementali A e B in quadratura permettono di determinare anche il verso. Con la convenzione illustrata, la sequenza $00\to10\to11\to01\to00$ descrive un verso; la sequenza inversa descrive l'altro.
 
 ::: center
 ![Schema didattico 18](/assets/dispense/domotica/figura-18.png){fig-alt="Schema didattico 18 della dispensa Domotica e automazione"}
@@ -138,33 +139,33 @@ Un **[encoder](glossario.qmd#gloss-d18)** associa al movimento una sequenza di s
 
 *Nel verso disegnato A anticipa B. La corrispondenza con il verso meccanico dipende da cablaggio e convenzione.*
 
-#### Impulsi e conteggi non sono sinonimi
+### Impulsi e conteggi non sono sinonimi
 
 **Conteggi per giro = periodi per giro $\times$ transizioni contate per periodo**. Poi **passo angolare \[gradi/conteggio\] = 360 gradi / conteggi per giro**.
 
-Un [encoder](glossario.qmd#gloss-d18) fornisce 1000 periodi per giro su ciascun canale. Con decodifica x4 si contano quattro transizioni per periodo: 4000 conteggi/giro. La [risoluzione](glossario.qmd#gloss-d35) angolare nominale è $360/4000=0{,}09^\circ$ per conteggio. Con x1 sarebbe $0{,}36^\circ$.
+Un [encoder](/risorse/glossario/index.qmd#gloss-encoder) fornisce 1000 periodi per giro su ciascun canale. Con decodifica x4 si contano quattro transizioni per periodo: 4000 conteggi/giro. La [risoluzione](/risorse/glossario/index.qmd#gloss-risoluzione) angolare nominale è $360/4000=0{,}09^\circ$ per conteggio. Con x1 sarebbe $0{,}36^\circ$.
 
 **Velocità.** Se si misurano $\Delta C$ conteggi in $\Delta t$ secondi e si hanno $C_{rev}$ conteggi/giro: $$n=\frac{60\,\Delta C}{C_{rev}\Delta t}\quad\mathrm{giri/min}.$$ Con 800 conteggi in 0,1 s e $C_{rev}=4000$, si ottengono 120 giri/min.
 
 #### Il contatore deve riuscire a vedere gli impulsi
 
-Una scansione [PLC](glossario.qmd#gloss-d29) ordinaria può perdere fronti veloci. Occorrono frequenza massima d'ingresso, contatori veloci o interfacce adatte. Un [encoder](glossario.qmd#gloss-d18) incrementale richiede inoltre gestione del riferimento e della perdita di alimentazione secondo l'applicazione.
+Una scansione [PLC](/risorse/glossario/index.qmd#gloss-plc) ordinaria può perdere fronti veloci. Occorrono frequenza massima d'ingresso, contatori veloci o interfacce adatte. Un [encoder](/risorse/glossario/index.qmd#gloss-encoder) incrementale richiede inoltre gestione del riferimento e della perdita di alimentazione secondo l'applicazione.
 
-**Attività.** Confronta potenziometro, [encoder](glossario.qmd#gloss-d18) incrementale e assoluto: quale segnale producono, quale riferimento richiedono e quali informazioni restano disponibili dopo un riavvio?
+**Attività.** Confronta potenziometro, [encoder](/risorse/glossario/index.qmd#gloss-encoder) incrementale e assoluto: quale segnale producono, quale riferimento richiedono e quali informazioni restano disponibili dopo un riavvio?
 
 ## Esercizi sui trasduttori {#app:old-1.5}
 
-Da due punti di una caratteristica assunta affine si ricavano pendenza e [offset](glossario.qmd#gloss-d27). Poi si inverte la relazione per trasformare il segnale in unità fisiche.
+Da due punti di una caratteristica assunta affine si ricavano pendenza e [offset](/risorse/glossario/index.qmd#gloss-offset). Poi si inverte la relazione per trasformare il segnale in unità fisiche.
 
-#### Da pressione a tensione e ritorno
+### Da pressione a tensione e ritorno
 
 Per una caratteristica lineare: **sensibilità \[V/bar\] = variazione di tensione \[V\] / variazione di pressione \[bar\]**. Con $p$ pressione \[bar\], $V$ uscita \[V\], $V_0$ uscita a pressione nulla e $S$ sensibilità, $V=V_0+Sp$, quindi $p=(V-V_0)/S$.
 
 Un trasduttore fornisce 1 V a 0 bar e 9 V a 10 bar. $$S=\frac{9-1}{10-0}=0{,}8\,\mathrm{V/bar},\qquad V=1+0{,}8p.$$ Con $V=5$ V, $p=(5-1)/0{,}8=5$ bar. Se la catena distingue variazioni di 10 mV, la variazione equivalente in ingresso è $0{,}010/0{,}8=0{,}0125$ bar, senza considerare altre limitazioni.
 
-**Esercizio A.** Un [sensore](glossario.qmd#gloss-new43) di posizione passa da 0,5 V a 4,5 V fra 0 e 200 mm. Determina [sensibilità](glossario.qmd#gloss-d37), legge e posizione corrispondente a 3,5 V.
+**Esercizio A.** Un [sensore](/risorse/glossario/index.qmd#gloss-sensore) di posizione passa da 0,5 V a 4,5 V fra 0 e 200 mm. Determina [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita), legge e posizione corrispondente a 3,5 V.
 
-**Esercizio B.** Il potenziometro della scheda A è letto con una [risoluzione](glossario.qmd#gloss-d35) di tensione pari a 20 mV. Con 10 V su 100 mm, qual è la [risoluzione](glossario.qmd#gloss-d35) equivalente in posizione?
+**Esercizio B.** Il potenziometro della scheda A è letto con una [risoluzione](/risorse/glossario/index.qmd#gloss-risoluzione) di tensione pari a 20 mV. Con 10 V su 100 mm, qual è la [risoluzione](/risorse/glossario/index.qmd#gloss-risoluzione) equivalente in posizione?
 
 **Esercizio C.** Cinque letture in condizioni stabili sono 25,1; 25,2; 25,1; 25,2; 25,1 $^\circ$C. Il riferimento vale 24,5 $^\circ$C. Una piccola dispersione dimostra assenza di errore sistematico?
 
@@ -172,49 +173,49 @@ Un trasduttore fornisce 1 V a 0 bar e 9 V a 10 bar. $$S=\frac{9-1}{10-0}=0{,}8\,
 
 **A.** $S=4/200=0{,}020$ V/mm. $V=0{,}5+0{,}020x$; $x=(3{,}5-0{,}5)/0{,}020=150$ mm.
 
-**B.** La [sensibilità](glossario.qmd#gloss-d37) vale 0,1 V/mm. La variazione equivalente è $0{,}020/0{,}1=0{,}2$ mm. È una stima relativa alla lettura elettrica, non una garanzia sull'intero sistema meccanico.
+**B.** La [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) vale 0,1 V/mm. La variazione equivalente è $0{,}020/0{,}1=0{,}2$ mm. È una stima relativa alla lettura elettrica, non una garanzia sull'intero sistema meccanico.
 
-**C.** No. La media è 25,14 $^\circ$C, con scostamento di 0,64 $^\circ$C dal riferimento. [Ripetibilità](glossario.qmd#gloss-d34) e accordo con il riferimento descrivono aspetti diversi.
+**C.** No. La media è 25,14 $^\circ$C, con scostamento di 0,64 $^\circ$C dal riferimento. [Ripetibilità](/risorse/glossario/index.qmd#gloss-ripetibilita) e accordo con il riferimento descrivono aspetti diversi.
 
-#### Controllo dimensionale
+### Controllo dimensionale
 
-Una [sensibilità](glossario.qmd#gloss-d37) in V/bar si inverte per ottenere bar/V. Un segnale in mV va convertito in V prima di usarlo con una [sensibilità](glossario.qmd#gloss-d37) espressa in V per unità fisica. Gli errori di fattore 1000 sono spesso errori di conversione delle unità di misura.
+Una [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) in V/bar si inverte per ottenere bar/V. Un segnale in mV va convertito in V prima di usarlo con una [sensibilità](/risorse/glossario/index.qmd#gloss-sensibilita) espressa in V per unità fisica. Gli errori di fattore 1000 sono spesso errori di conversione delle unità di misura.
 
 ## Conversione analogico-digitale {#app:old-1.6}
 
-La conversione analogico-digitale comprende [campionamento](glossario.qmd#gloss-d15), [quantizzazione](glossario.qmd#gloss-d32) e codifica. Il **[campionamento](glossario.qmd#gloss-d15)** sceglie gli istanti; la **[quantizzazione](glossario.qmd#gloss-d32)** assegna un intervallo di ampiezza; la **codifica** rappresenta il risultato con [bit](glossario.qmd#gloss-new49). Un [ADC](glossario.qmd#gloss-d11) ideale unipolare di $n$ [bit](glossario.qmd#gloss-new49) dispone di $2^n$ codici, da 0 a $2^n-1$. Per un campo di ampiezza $V_{FS}$, il passo nominale è: $$q=\frac{V_{FS}}{2^n}.$$ Nel modello didattico a intervalli usiamo $C=\lfloor V/q\rfloor$, limitato all'intervallo dei codici. Associando a ogni codice il centro dell'intervallo, l'errore di [quantizzazione](glossario.qmd#gloss-d32) ideale è al massimo $q/2$, esclusa saturazione.
+La conversione analogico-digitale comprende [campionamento](/risorse/glossario/index.qmd#gloss-campionamento), [quantizzazione](/risorse/glossario/index.qmd#gloss-quantizzazione) e codifica. Il **[campionamento](/risorse/glossario/index.qmd#gloss-campionamento)** sceglie gli istanti; la **[quantizzazione](/risorse/glossario/index.qmd#gloss-quantizzazione)** assegna un intervallo di ampiezza; la **codifica** rappresenta il risultato con [bit](/risorse/glossario/index.qmd#gloss-bit). Un [ADC](/risorse/glossario/index.qmd#gloss-adc) ideale unipolare di $n$ [bit](/risorse/glossario/index.qmd#gloss-bit) dispone di $2^n$ codici, da 0 a $2^n-1$. Per un campo di ampiezza $V_{FS}$, il passo nominale è: $$q=\frac{V_{FS}}{2^n}.$$ Nel modello didattico a intervalli usiamo $C=\lfloor V/q\rfloor$, limitato all'intervallo dei codici. Associando a ogni codice il centro dell'intervallo, l'errore di [quantizzazione](/risorse/glossario/index.qmd#gloss-quantizzazione) ideale è al massimo $q/2$, esclusa saturazione.
 
 ::: center
 ![Schema didattico 19](/assets/dispense/domotica/figura-19.png){fig-alt="Schema didattico 19 della dispensa Domotica e automazione"}
 :::
 
-*[ADC](glossario.qmd#gloss-d11) illustrativo a 3 [bit](glossario.qmd#gloss-new49): otto intervalli. Le soglie reali vanno lette nella documentazione.*
+*[ADC](/risorse/glossario/index.qmd#gloss-adc) illustrativo a 3 [bit](/risorse/glossario/index.qmd#gloss-bit): otto intervalli. Le soglie reali vanno lette nella documentazione.*
 
-#### Un [ADC](glossario.qmd#gloss-d11) a 12 [bit](glossario.qmd#gloss-new49)
+### Un [ADC](/risorse/glossario/index.qmd#gloss-adc) a 12 [bit](/risorse/glossario/index.qmd#gloss-bit)
 
 **Passo di quantizzazione \[V\] = ampiezza del campo \[V\] / numero di livelli**, ossia $q=(V_{\max}-V_{\min})/2^n$, dove $n$ è il numero di bit. Dividendo $q$ per la sensibilità $S$ \[V/bar\] si ottiene la variazione equivalente di pressione \[bar\].
 
-Campo 0--10 V: $q=10/4096=2{,}441$ mV. Per il [sensore](glossario.qmd#gloss-new43) da 0,8 V/bar dell'U.D. 1.5, la variazione equivalente è $q/S\simeq0{,}00305$ bar. A 5 V il modello assegna il codice 2048.
+Campo 0--10 V: $q=10/4096=2{,}441$ mV. Per il [sensore](/risorse/glossario/index.qmd#gloss-sensore) da 0,8 V/bar dell'U.D. 1.5, la variazione equivalente è $q/S\simeq0{,}00305$ bar. A 5 V il modello assegna il codice 2048.
 
-Per ricostruire un segnale limitato in banda occorre una frequenza di [campionamento](glossario.qmd#gloss-d15) superiore al doppio della massima frequenza presente, con margine e filtro anti-alias adeguati nella pratica. Campionare lentamente può far apparire un'oscillazione come una frequenza diversa.
+Per ricostruire un segnale limitato in banda occorre una frequenza di [campionamento](/risorse/glossario/index.qmd#gloss-campionamento) superiore al doppio della massima frequenza presente, con margine e filtro anti-alias adeguati nella pratica. Campionare lentamente può far apparire un'oscillazione come una frequenza diversa.
 
 #### Due denominatori, due significati
 
-$2^n$ compare nel passo degli intervalli ideali. $2^n-1$ può comparire nella [scalatura](glossario.qmd#gloss-d36) fra estremi numerici, per esempio codice 0 e codice 4095 associati agli estremi dichiarati dal modulo. Non scambiare la convenzione di [scalatura](glossario.qmd#gloss-d36) con la [risoluzione](glossario.qmd#gloss-d35) ideale dell'[ADC](glossario.qmd#gloss-d11).
+$2^n$ compare nel passo degli intervalli ideali. $2^n-1$ può comparire nella [scalatura](/risorse/glossario/index.qmd#gloss-scalatura) fra estremi numerici, per esempio codice 0 e codice 4095 associati agli estremi dichiarati dal modulo. Non scambiare la convenzione di [scalatura](/risorse/glossario/index.qmd#gloss-scalatura) con la [risoluzione](/risorse/glossario/index.qmd#gloss-risoluzione) ideale dell'[ADC](/risorse/glossario/index.qmd#gloss-adc).
 
-## Confronti e [isteresi](glossario.qmd#gloss-d24) {#app:confronti}
+## Confronti e [isteresi](/risorse/glossario/index.qmd#gloss-isteresi) {#app:confronti}
 
-Un confronto trasforma un valore numerico in una condizione booleana: maggiore, minore o compreso in un intervallo. Prima del confronto si controllano validità, unità e campo del segnale. Una sola soglia può far commutare rapidamente l'uscita in presenza di rumore. L'**[isteresi](glossario.qmd#gloss-d24)** usa due soglie e una memoria. Per una ventola, scegliamo accensione a 28 $^\circ$C e spegnimento a 26 $^\circ$C: $$Q_{k+1}=\begin{cases}0,&\text{se segnale non valido},\\1,&T_k\geq28,\\0,&T_k\leq26,\\Q_k,&26<T_k<28.\end{cases}$$
+Un confronto trasforma un valore numerico in una condizione booleana: maggiore, minore o compreso in un intervallo. Prima del confronto si controllano validità, unità e campo del segnale. Una sola soglia può far commutare rapidamente l'uscita in presenza di rumore. L'**[isteresi](/risorse/glossario/index.qmd#gloss-isteresi)** usa due soglie e una memoria. Per una ventola, scegliamo accensione a 28 $^\circ$C e spegnimento a 26 $^\circ$C: $$Q_{k+1}=\begin{cases}0,&\text{se segnale non valido},\\1,&T_k\geq28,\\0,&T_k\leq26,\\Q_k,&26<T_k<28.\end{cases}$$
 
 ::: center
 ![Schema didattico 20](/assets/dispense/domotica/figura-20.png){fig-alt="Schema didattico 20 della dispensa Domotica e automazione"}
 :::
 
-*[Isteresi](glossario.qmd#gloss-d24): le frecce indicano crescita e diminuzione della temperatura.*
+*[Isteresi](/risorse/glossario/index.qmd#gloss-isteresi): le frecce indicano crescita e diminuzione della temperatura.*
 
-**Implementazione.** Dichiarare $T$ come [REAL](glossario.qmd#gloss-d14) e $Valid$, $Q$, $NextQ$ come [BOOL](glossario.qmd#gloss-d14). Calcolare NextQ usando confronti e priorità della formula, poi assegnarlo una sola volta a Q. Nel [Ladder](glossario.qmd#gloss-d25) si possono usare comparatori e reti equivalenti; evitare bobine ordinarie duplicate sulla stessa variabile.
+**Implementazione.** Dichiarare $T$ come [REAL](/risorse/glossario/index.qmd#gloss-real) e $Valid$, $Q$, $NextQ$ come [BOOL](/risorse/glossario/index.qmd#gloss-bool). Calcolare NextQ usando confronti e priorità della formula, poi assegnarlo una sola volta a Q. Nel [Ladder](/risorse/glossario/index.qmd#gloss-ladder) si possono usare comparatori e reti equivalenti; evitare bobine ordinarie duplicate sulla stessa variabile.
 
-#### Sequenza da simulare
+### Sequenza da simulare
 
 Con $Q=0$ e segnale valido, applica $T=25,27,29,27,25$. Le uscite attese sono $0,0,1,1,0$. A 27 $^\circ$C la risposta dipende dalla storia: questo è un comando sequenziale.
 
@@ -222,15 +223,15 @@ Con $Q=0$ e segnale valido, applica $T=25,27,29,27,25$. Le uscite attese sono $0
 
 **Consegna.** Prova esattamente 26 e 28 $^\circ$C, un valore fuori campo e un riavvio. Riporta gli esiti attesi prima della simulazione.
 
-## [Scalatura](glossario.qmd#gloss-d36) e validità dei segnali {#app:analogico}
+## [Scalatura](/risorse/glossario/index.qmd#gloss-scalatura) e validità dei segnali {#app:analogico}
 
-Il modulo analogico fornisce un numero che deve essere convertito in unità fisiche secondo la codifica dichiarata dal costruttore. La relazione generale fra due estremi è: $$x=x_{min}+\frac{Raw-Raw_{min}}{Raw_{max}-Raw_{min}}(x_{max}-x_{min}).$$ [Raw](glossario.qmd#gloss-d33) può essere un intero con segno, una codifica scalata o un dato già convertito. Non esiste un valore massimo universale per tutti i [PLC](glossario.qmd#gloss-d29).
+Il modulo analogico fornisce un numero che deve essere convertito in unità fisiche secondo la codifica dichiarata dal costruttore. La relazione generale fra due estremi è: $$x=x_{min}+\frac{Raw-Raw_{min}}{Raw_{max}-Raw_{min}}(x_{max}-x_{min}).$$ [Raw](/risorse/glossario/index.qmd#gloss-raw) può essere un intero con segno, una codifica scalata o un dato già convertito. Non esiste un valore massimo universale per tutti i [PLC](/risorse/glossario/index.qmd#gloss-plc).
 
-#### [Scalatura](glossario.qmd#gloss-d36) dichiarata
+### [Scalatura](/risorse/glossario/index.qmd#gloss-scalatura) dichiarata
 
 Con estremi iniziali nulli: **temperatura \[$^\circ$C\] = codice letto / codice di fondo scala $\times$ temperatura di fondo scala \[$^\circ$C\]**. Il rapporto fra i codici indica la frazione del campo misurata.
 
-Un modulo didattico restituisce 0 a 0 V e 10000 a 10 V. Il trasduttore misura 0--200 $^\circ$C su 0--10 V. Con [Raw](glossario.qmd#gloss-d33)=3750: $$T=0+\frac{3750}{10000}\cdot200=75\,^{\circ}\mathrm C.$$ Usare un calcolo reale o una conversione di tipo appropriata: una divisione intera eseguita troppo presto può eliminare la parte frazionaria.
+Un modulo didattico restituisce 0 a 0 V e 10000 a 10 V. Il trasduttore misura 0--200 $^\circ$C su 0--10 V. Con [Raw](/risorse/glossario/index.qmd#gloss-raw)=3750: $$T=0+\frac{3750}{10000}\cdot200=75\,^{\circ}\mathrm C.$$ Usare un calcolo reale o una conversione di tipo appropriata: una divisione intera eseguita troppo presto può eliminare la parte frazionaria.
 
 **Segnale 4--20 mA.** Per un trasmettitore 0--10 bar: $$p=\frac{I-4\,\mathrm{mA}}{16\,\mathrm{mA}}\,10\,\mathrm{bar}.$$ A 12 mA si hanno 5 bar. Il valore 4 mA corrisponde allo zero della misura; correnti anomale possono fornire indicazioni diagnostiche, con soglie e codici specificati dall'apparato.
 
@@ -242,11 +243,11 @@ Un modulo didattico restituisce 0 a 0 V e 10000 a 10 V. Il trasduttore misura 0-
 
 #### Non mascherare i guasti
 
-Limitare ogni valore fuori campo al massimo o al minimo può nascondere un errore del [sensore](glossario.qmd#gloss-new43). Conserva un indicatore di validità distinto dalla misura e definisci come il controllo reagisce a un dato non valido.
+Limitare ogni valore fuori campo al massimo o al minimo può nascondere un errore del [sensore](/risorse/glossario/index.qmd#gloss-sensore). Conserva un indicatore di validità distinto dalla misura e definisci come il controllo reagisce a un dato non valido.
 
 ## Sequenze parallele {#app:parallelismo}
 
-Nel progetto possono evolvere più attività: illuminazione, ventilazione e segnalazione. **Parallelismo logico** significa che più sequenze sono attive nello stesso intervallo; non implica che le istruzioni siano eseguite fisicamente nello stesso istante. In [SFC](glossario.qmd#gloss-d38) una divergenza simultanea attiva più rami. La convergenza sincronizza i rami quando le condizioni previste sono soddisfatte. Una scelta alternativa, invece, seleziona un percorso e richiede condizioni esclusive o una priorità esplicita.
+Nel progetto possono evolvere più attività: illuminazione, ventilazione e segnalazione. **Parallelismo logico** significa che più sequenze sono attive nello stesso intervallo; non implica che le istruzioni siano eseguite fisicamente nello stesso istante. In [SFC](/risorse/glossario/index.qmd#gloss-sfc) una divergenza simultanea attiva più rami. La convergenza sincronizza i rami quando le condizioni previste sono soddisfatte. Una scelta alternativa, invece, seleziona un percorso e richiede condizioni esclusive o una priorità esplicita.
 
 ::: center
 ![Schema didattico 22](/assets/dispense/domotica/figura-22.png){fig-alt="Schema didattico 22 della dispensa Domotica e automazione"}
@@ -254,9 +255,9 @@ Nel progetto possono evolvere più attività: illuminazione, ventilazione e segn
 
 *Schema concettuale di rami simultanei. La prosecuzione richiede il completamento di entrambi.*
 
-**Esempio.** Il ramo A termina dopo 5 s, il ramo B dopo tre impulsi. Se i tre impulsi arrivano a 2 s, B attende che A termini; se arrivano a 8 s, A attende B. Occorre definire un [timeout](glossario.qmd#gloss-d40) se uno dei rami potrebbe non concludersi.
+**Esempio.** Il ramo A termina dopo 5 s, il ramo B dopo tre impulsi. Se i tre impulsi arrivano a 2 s, B attende che A termini; se arrivano a 8 s, A attende B. Occorre definire un [timeout](/risorse/glossario/index.qmd#gloss-timeout) se uno dei rami potrebbe non concludersi.
 
-#### Un solo punto decide l'uscita condivisa
+### Un solo punto decide l'uscita condivisa
 
 Se due rami scrivono la stessa bobina ordinaria, l'ultima assegnazione può sovrascrivere la precedente. Produci richieste separate e usa una rete di arbitraggio con priorità dichiarate per assegnare l'uscita una sola volta.
 
@@ -266,20 +267,20 @@ Se due rami scrivono la stessa bobina ordinaria, l'ultima assegnazione può sovr
 
 *Risposta: non lo decide il parallelismo; lo deve stabilire la specifica.*
 
-## Un esempio integrato con [OpenPLC](glossario.qmd#gloss-d28) {#app:old-2.7}
+## Un esempio integrato con [OpenPLC](/risorse/glossario/index.qmd#gloss-openplc) {#app:old-2.7}
 
 **Caso integrato: aula automatizzata.** Il modello gestisce luce e ventilazione con dati simulati. Ingressi: presenza P, illuminamento L, temperatura T, validità dei segnali e consenso generale E. Le soglie seguenti sono scelte didattiche.
 
   **Funzione**        **Regola**
   ------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------
   Luce                Con presenza, accende se $L\leq250$ lx e spegne se $L\geq350$ lx; nella fascia intermedia mantiene la richiesta.
-  Assenza             Il [TON](glossario.qmd#gloss-d41) misura assenza continua: dopo 60 s spegne la luce. Una nuova presenza resetta il [TON](glossario.qmd#gloss-d41).
-  Ventilazione        Accende a $T\geq28\,^{\circ}$C e spegne a $T\leq26\,^{\circ}$C, con [isteresi](glossario.qmd#gloss-d24).
+  Assenza             Il [TON](/risorse/glossario/index.qmd#gloss-ton) misura assenza continua: dopo 60 s spegne la luce. Una nuova presenza resetta il [TON](/risorse/glossario/index.qmd#gloss-ton).
+  Ventilazione        Accende a $T\geq28\,^{\circ}$C e spegne a $T\leq26\,^{\circ}$C, con [isteresi](/risorse/glossario/index.qmd#gloss-isteresi).
   Consenso / guasto   $E=0$ spegne le uscite e azzera le richieste. Un dato non valido attiva allarme e disattiva la funzione associata nel modello.
 
-**Organizzazione.** Dichiarare L e T come [REAL](glossario.qmd#gloss-d14); E, P, validità e richieste come [BOOL](glossario.qmd#gloss-d14); un'istanza [TON](glossario.qmd#gloss-d41) per l'assenza. Le memorie di luce e ventola sono indipendenti. La rete finale assegna le uscite una sola volta e applica consenso e validità. Durante l'assenza inferiore a 60 s la richiesta luce mantiene il valore precedente, senza nuove decisioni su L. Al ritorno della presenza riprende la valutazione delle soglie. Così il comportamento è definito anche nella fase intermedia.
+**Organizzazione.** Dichiarare L e T come [REAL](/risorse/glossario/index.qmd#gloss-real); E, P, validità e richieste come [BOOL](/risorse/glossario/index.qmd#gloss-bool); un'istanza [TON](/risorse/glossario/index.qmd#gloss-ton) per l'assenza. Le memorie di luce e ventola sono indipendenti. La rete finale assegna le uscite una sola volta e applica consenso e validità. Durante l'assenza inferiore a 60 s la richiesta luce mantiene il valore precedente, senza nuove decisioni su L. Al ritorno della presenza riprende la valutazione delle soglie. Così il comportamento è definito anche nella fase intermedia.
 
-#### Collaudo guidato
+### Collaudo guidato
 
 1\. Presenza, 200 lx: luce accesa.
 
@@ -293,29 +294,29 @@ Se due rami scrivono la stessa bobina ordinaria, l'ultima assegnazione può sovr
 
 6\. Togli E: entrambe le uscite devono risultare spente.
 
-**Da registrare.** Versione [OpenPLC](glossario.qmd#gloss-d28), periodo task, valori iniziali, tabella [I/O](glossario.qmd#gloss-d22), reti, traccia delle prove. L'esempio va adattato al target del laboratorio; non assume indirizzi analogici o un formato [Raw](glossario.qmd#gloss-d33) universali.
+**Da registrare.** Versione [OpenPLC](/risorse/glossario/index.qmd#gloss-openplc), periodo task, valori iniziali, tabella [I/O](/risorse/glossario/index.qmd#gloss-i-o), reti, traccia delle prove. L'esempio va adattato al target del laboratorio; non assume indirizzi analogici o un formato [Raw](/risorse/glossario/index.qmd#gloss-raw) universali.
 
 **Prova aggiuntiva.** Reintroduci presenza dopo 40 s di assenza: il conteggio si azzera. Una successiva assenza deve durare nuovamente 60 s prima dello spegnimento.
 
 ## Un progetto in stile esame {#app:old-2.8}
 
-**Quesito originale in stile esame: riempimento a pressione.** Un processo simulato riempie un recipiente fino a 6 bar. Un trasmettitore fornisce 4--20 mA su 0--10 bar. L'ingresso rende disponibile la corrente I in mA come dato reale e un [bit](glossario.qmd#gloss-new49) Valid. Sono presenti Start e StopOK. Il ciclo parte da ATTESA con nuovo fronte di Start, pressione inferiore a 6 bar e consensi validi. Passa a RIEMPIMENTO; a 6 bar chiude la valvola e va a FINE. Un guasto del segnale o il mancato raggiungimento di 6 bar entro 20 s porta ad ALLARME. Stop ha priorità e riporta ad ATTESA. Il reset di ALLARME richiede Reset e condizioni valide.
+**Quesito originale in stile esame: riempimento a pressione.** Un processo simulato riempie un recipiente fino a 6 bar. Un trasmettitore fornisce 4--20 mA su 0--10 bar. L'ingresso rende disponibile la corrente I in mA come dato reale e un [bit](/risorse/glossario/index.qmd#gloss-bit) Valid. Sono presenti Start e StopOK. Il ciclo parte da ATTESA con nuovo fronte di Start, pressione inferiore a 6 bar e consensi validi. Passa a RIEMPIMENTO; a 6 bar chiude la valvola e va a FINE. Un guasto del segnale o il mancato raggiungimento di 6 bar entro 20 s porta ad ALLARME. Stop ha priorità e riporta ad ATTESA. Il reset di ALLARME richiede Reset e condizioni valide.
 
-**Richieste.** Definire [I/O](glossario.qmd#gloss-d22), [scalatura](glossario.qmd#gloss-d36), stati, uscite e priorità; impostare timer e rilevamento del fronte; proporre una sequenza di prove.
+**Richieste.** Definire [I/O](/risorse/glossario/index.qmd#gloss-i-o), [scalatura](/risorse/glossario/index.qmd#gloss-scalatura), stati, uscite e priorità; impostare timer e rilevamento del fronte; proporre una sequenza di prove.
 
 ## Soluzione guidata
 
-**1 · [Scalatura](glossario.qmd#gloss-d36).** $p=(I-4)\cdot10/16$. La soglia 6 bar corrisponde a $I=4+16\cdot6/10=13{,}6$ mA. Si usa Valid e la diagnostica del modulo; non si deduce la validità soltanto dal risultato numerico.
+**1 · [Scalatura](/risorse/glossario/index.qmd#gloss-scalatura).** $p=(I-4)\cdot10/16$. La soglia 6 bar corrisponde a $I=4+16\cdot6/10=13{,}6$ mA. Si usa Valid e la diagnostica del modulo; non si deduce la validità soltanto dal risultato numerico.
 
-**2 · Stati.** S0 attesa, S1 riempimento, S2 fine, S3 allarme. All'avvio S0 e valvola chiusa. Un [TON](glossario.qmd#gloss-d41) con [PT](glossario.qmd#gloss-d23)=20 s ha [IN](glossario.qmd#gloss-d23) vero in S1. Il rilevatore di fronte Start va eseguito ogni ciclo con istanza persistente.
+**2 · Stati.** S0 attesa, S1 riempimento, S2 fine, S3 allarme. All'avvio S0 e valvola chiusa. Un [TON](/risorse/glossario/index.qmd#gloss-ton) con [PT](/risorse/glossario/index.qmd#gloss-in-pt-et-q)=20 s ha [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) vero in S1. Il rilevatore di fronte Start va eseguito ogni ciclo con istanza persistente.
 
-**3 · Priorità.** Stop richiesto porta a S0. Negli altri casi, segnale non valido porta a S3. In S1, se $p\geq6$ si va a S2; altrimenti, se [TON](glossario.qmd#gloss-d41).Q, a S3. In questo esempio il raggiungimento della soglia prevale sul [timeout](glossario.qmd#gloss-d40) se osservati nello stesso ciclo. S2 torna a S0 con Ack; S3 torna a S0 con Reset e segnale valido, senza avviare automaticamente.
+**3 · Priorità.** Stop richiesto porta a S0. Negli altri casi, segnale non valido porta a S3. In S1, se $p\geq6$ si va a S2; altrimenti, se [TON](/risorse/glossario/index.qmd#gloss-ton).Q, a S3. In questo esempio il raggiungimento della soglia prevale sul [timeout](/risorse/glossario/index.qmd#gloss-timeout) se osservati nello stesso ciclo. S2 torna a S0 con Ack; S3 torna a S0 con Reset e segnale valido, senza avviare automaticamente.
 
 **4 · Uscita.** $Valve=StopOK\land Valid\land(s=S1)\land(p<6)$. Un solo punto assegna Valve. La segnalazione di allarme deriva da S3 e/o dalla diagnostica secondo la specifica.
 
-**5 · Prove.** Avvio valido; Start mantenuto; pressione già alta; stop in riempimento; [sensore](glossario.qmd#gloss-new43) non valido; mancata salita di pressione; soglia raggiunta al [timeout](glossario.qmd#gloss-d40); reset senza nuovo Start. Ogni prova parte da uno stato dichiarato.
+**5 · Prove.** Avvio valido; Start mantenuto; pressione già alta; stop in riempimento; [sensore](/risorse/glossario/index.qmd#gloss-sensore) non valido; mancata salita di pressione; soglia raggiunta al [timeout](/risorse/glossario/index.qmd#gloss-timeout); reset senza nuovo Start. Ogni prova parte da uno stato dichiarato.
 
-#### Il criterio di valutazione
+### Il criterio di valutazione
 
-Una soluzione convincente collega ogni requisito a una condizione verificabile. La sola rete [Ladder](glossario.qmd#gloss-d25), senza unità, priorità e prove, non dimostra che il progetto rispetti la traccia.
+Una soluzione convincente collega ogni requisito a una condizione verificabile. La sola rete [Ladder](/risorse/glossario/index.qmd#gloss-ladder), senza unità, priorità e prove, non dimostra che il progetto rispetti la traccia.
 

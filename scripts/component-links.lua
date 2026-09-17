@@ -1,3 +1,7 @@
+-- Collega automaticamente i nomi dei componenti alle pagine condivise.
+-- Come per il glossario, solo la prima occorrenza di ogni componente in ogni
+-- sezione diventa un collegamento: il contatore riparte a ogni titolo di
+-- livello 1 o 2. I titoli non vengono mai trasformati.
 local aliases = {
  resistenza='resistore',resistenze='resistore',resistore='resistore',resistori='resistore',
  condensatore='condensatore',condensatori='condensatore',induttore='induttore',induttori='induttore',
@@ -20,6 +24,9 @@ local function excluded(el)
  for _,c in ipairs(el.classes or {}) do if c=='no-component-link' then return true end end
  return false
 end
+
+local seen = {}
+
 local function decorate(link,c)
  link.classes:insert('component-link')
  if not link.attributes['data-glossary-definition'] then
@@ -29,6 +36,7 @@ local function decorate(link,c)
  end
  return link
 end
+
 local function process(inlines)
  local result=pandoc.List()
  for _,el in ipairs(inlines) do
@@ -36,7 +44,8 @@ local function process(inlines)
    local last=1
    for first,word,after in el.text:gmatch('()(%a+)()') do
     local c=aliases[word:lower()]
-    if c and not is_self(c) then
+    if c and not is_self(c) and not seen[c] then
+     seen[c]=true
      if first>last then result:insert(pandoc.Str(el.text:sub(last,first-1))) end
      result:insert(decorate(pandoc.Link(word,target(c)),c))
      last=after
@@ -46,18 +55,41 @@ local function process(inlines)
    elseif last<=#el.text then result:insert(pandoc.Str(el.text:sub(last))) end
   elseif el.t=='Link' then
    local c=aliases[pandoc.utils.stringify(el.content):lower()]
-   if c and not is_self(c) and el.target:match('glossario%.[^#]+#') then
-    el.target=target(c);el=decorate(el,c)
+   -- un rimando al glossario per un nome di componente porta alla pagina del componente
+   if c and not is_self(c) and el.target:match('glossario[^#]*#') then
+    if seen[c] then
+     result:extend(el.content)
+    else
+     seen[c]=true
+     el.target=target(c);el=decorate(el,c)
+     result:insert(el)
+    end
+   else
+    result:insert(el)
    end
-   result:insert(el)
   elseif (el.t=='Span' or el.t=='Strong' or el.t=='Emph' or el.t=='SmallCaps' or el.t=='Strikeout' or el.t=='Quoted') and not excluded(el) then
    el.content=process(el.content);result:insert(el)
   else result:insert(el) end
  end
  return result
 end
-local function block(el)
- if quarto.doc.is_format('html') then el.content=process(el.content) end
- return el
+
+function Pandoc(doc)
+ if not quarto.doc.is_format('html') then return nil end
+ if current:match('/risorse/glossario/index%.qmd$') then return nil end
+ local blocks={}
+ for _,block in ipairs(doc.blocks) do
+  if block.t=='Header' then
+   if block.level<=2 then seen={} end
+  elseif block.t=='Para' or block.t=='Plain' then
+   block.content=process(block.content)
+  else
+   block=pandoc.walk_block(block,{
+    Para=function(b) b.content=process(b.content); return b end,
+    Plain=function(b) b.content=process(b.content); return b end
+   })
+  end
+  blocks[#blocks+1]=block
+ end
+ return pandoc.Pandoc(blocks,doc.meta)
 end
-return {{Para=block,Plain=block}}

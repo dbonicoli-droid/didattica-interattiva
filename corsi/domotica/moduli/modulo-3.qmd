@@ -1,18 +1,19 @@
 ---
+stato: in-sviluppo
 title: "Modulo 3 / Linguaggio Ladder"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-3.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd)
 
 ::: {.callout-note icon=false}
-## 🚧 Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
 
-![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
 
-La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+[Vai alla sintesi del modulo 3 →](../modulo-3.qmd){.btn .btn-primary}
 
-Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
 :::
 
 ::: {.unit-index}
@@ -23,20 +24,14 @@ Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti]
 - [U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli](#ud:3.3)
 :::
 
-## U.D. 3.1 / Simbologia Ladder {#ud:3.1}
+## U.D. 3.1 / Simbologia Ladder ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.1}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.1){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 3.2 / Applicazioni base in Ladder ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.2}
 
-## U.D. 3.2 / Applicazioni base in Ladder {#ud:3.2}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.2){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.3}
 
-Contenuti in preparazione.
-
-## U.D. 3.3 / Diagrammi di flusso e codifica a bit multipli {#ud:3.3}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.3){.wip-link}

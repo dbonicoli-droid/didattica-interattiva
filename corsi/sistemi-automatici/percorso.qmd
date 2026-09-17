@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Moduli del percorso"
 search: false
 toc: false

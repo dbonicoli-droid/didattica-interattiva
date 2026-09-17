@@ -1,18 +1,19 @@
 ---
+stato: in-sviluppo
 title: "Modulo 4 / Circuiti combinatori"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-4.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-4.qmd)
 
 ::: {.callout-note icon=false}
-## 🚧 Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
 
-![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
 
-La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+[Vai alla sintesi del modulo 4 →](../modulo-4.qmd){.btn .btn-primary}
 
-Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
 :::
 
 ::: {.unit-index}
@@ -26,38 +27,26 @@ Puoi già consultare la [panoramica del modulo](../modulo-4.qmd), i [componenti]
 - [U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi](#ud:4.6)
 :::
 
-## U.D. 4.1 / Caratteristiche dei circuiti combinatori {#ud:4.1}
+## U.D. 4.1 / Caratteristiche dei circuiti combinatori ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:4.1}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-4.qmd#ud:4.1){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 4.2 / Implementazione in linguaggio Ladder ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:4.2}
 
-## U.D. 4.2 / Implementazione in linguaggio Ladder {#ud:4.2}
+[Vedi nella sintesi →](../modulo-4.qmd#ud:4.2){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 4.3 / Implementazione mediante Function Block ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:4.3}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-4.qmd#ud:4.3){.wip-link}
 
-## U.D. 4.3 / Implementazione mediante Function Block {#ud:4.3}
+## U.D. 4.4 / Implementazione in Testo strutturato e Instruction List ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:4.4}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-4.qmd#ud:4.4){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:4.5}
 
-## U.D. 4.4 / Implementazione in Testo strutturato e Instruction List {#ud:4.4}
+[Vedi nella sintesi →](../modulo-4.qmd#ud:4.5){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:4.6}
 
-Contenuti in preparazione.
-
-## U.D. 4.5 / Schemi combinatori: condizioni, tabelle e andamento temporale {#ud:4.5}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 4.6 / Implementazione e simulazione dei comandi nei diversi linguaggi {#ud:4.6}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-4.qmd#ud:4.6){.wip-link}

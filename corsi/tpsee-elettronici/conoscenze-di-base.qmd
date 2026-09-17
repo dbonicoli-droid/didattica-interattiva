@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Numeri e codifiche"
 ---
 
@@ -10,17 +11,17 @@ title: "Numeri e codifiche"
 
 Puoi richiamare questi strumenti mentre affronti gli argomenti del corso:
 
-- **Basi di numerazione.** Convertire interi fra binario, decimale ed esadecimale. Collegare numero di [bit](glossario.qmd#gloss-g7) e intervallo rappresentabile.
+- **Basi di numerazione.** Convertire interi fra binario, decimale ed esadecimale. Collegare numero di [bit](/risorse/glossario/index.qmd#gloss-bit) e intervallo rappresentabile.
 
-- **[Complemento a due](glossario.qmd#gloss-g65).** Un modo per scrivere con i [bit](glossario.qmd#gloss-g7) anche i numeri negativi, usato nei calcolatori e nei circuiti digitali. Consente di eseguire somme e sottrazioni con lo stesso circuito sommatore.
+- **[Complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due).** Un modo per scrivere con i [bit](/risorse/glossario/index.qmd#gloss-bit) anche i numeri negativi, usato nei calcolatori e nei circuiti digitali. Consente di eseguire somme e sottrazioni con lo stesso circuito sommatore.
 
 - **Virgola mobile.** Convertire semplici frazioni binarie e normalizzare un numero. Distinguere segno, significando ed esponente; comprendere perché alcuni valori vengono approssimati.
 
-- **[ASCII](glossario.qmd#gloss-g3).** Associare codici e caratteri. Distinguere il valore numerico dalla sua rappresentazione come testo.
+- **[ASCII](/risorse/glossario/index.qmd#gloss-ascii).** Associare codici e caratteri. Distinguere il valore numerico dalla sua rappresentazione come testo.
 
-- **[Unicode](glossario.qmd#gloss-g53) e [UTF-8](glossario.qmd#gloss-g54).** Distinguere caratteri, punti di codice e [byte](glossario.qmd#gloss-g9). Leggere semplici sequenze [UTF-8](glossario.qmd#gloss-g54) con l'aiuto di una tabella.
+- **[Unicode](/risorse/glossario/index.qmd#gloss-unicode) e [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8).** Distinguere caratteri, punti di codice e [byte](/risorse/glossario/index.qmd#gloss-byte). Leggere semplici sequenze [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8) con l'aiuto di una tabella.
 
-[Consulta il vocabolario minimo](glossario.qmd#vocabolario-minimo).
+[Consulta il vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-tpsee-elettronici).
 
 
 
@@ -30,9 +31,9 @@ Puoi richiamare questi strumenti mentre affronti gli argomenti del corso:
 
 ### Numerazione posizionale e base due
 
-Una sequenza di [bit](glossario.qmd#gloss-g7) acquista significato quando ne conosciamo la **codifica**: può rappresentare un numero senza segno, un numero negativo, un carattere o comandi indipendenti. Prima di interpretarla occorre dichiarare formato e numero di [bit](glossario.qmd#gloss-g7).
+Una sequenza di [bit](/risorse/glossario/index.qmd#gloss-bit) acquista significato quando ne conosciamo la **codifica**: può rappresentare un numero senza segno, un numero negativo, un carattere o comandi indipendenti. Prima di interpretarla occorre dichiarare formato e numero di [bit](/risorse/glossario/index.qmd#gloss-bit).
 
-In un sistema posizionale di base $b$, le cifre ammesse vanno da 0 a $b-1$. Ogni posizione pesa una potenza della base. Per una parola di $n$ cifre intere: $N$ è il valore del numero; $d_i$ è la cifra nella posizione $i$; $b$ è la base e $n$ il numero di cifre. La sommatoria indica di sommare i contributi di tutte le posizioni: $$N=\sum_{i=0}^{n-1}d_i b^i.$$ L'indice $i=0$ individua la cifra più a destra. Nel caso binario questa cifra è un [bit](glossario.qmd#gloss-g7): il **[LSB](glossario.qmd#gloss-g36) (Least Significant [Bit](glossario.qmd#gloss-g7))**, il [bit](glossario.qmd#gloss-g7) meno significativo, di peso 1. Il **[MSB](glossario.qmd#gloss-g36) (Most Significant [Bit](glossario.qmd#gloss-g7))**, il [bit](glossario.qmd#gloss-g7) più significativo, è a sinistra: in $A_3A_2A_1A_0$ è $A_3$. In base dieci, $253=2\cdot10^2+5\cdot10+3$; in **base due** le cifre sono soltanto 0 e 1.
+In un sistema posizionale di base $b$, le cifre ammesse vanno da 0 a $b-1$. Ogni posizione pesa una potenza della base. Per una parola di $n$ cifre intere: $N$ è il valore del numero; $d_i$ è la cifra nella posizione $i$; $b$ è la base e $n$ il numero di cifre. La sommatoria indica di sommare i contributi di tutte le posizioni: $$N=\sum_{i=0}^{n-1}d_i b^i.$$ L'indice $i=0$ individua la cifra più a destra. Nel caso binario questa cifra è un [bit](/risorse/glossario/index.qmd#gloss-bit): il **[LSB](/risorse/glossario/index.qmd#gloss-lsb) (Least Significant [Bit](/risorse/glossario/index.qmd#gloss-bit))**, il [bit](/risorse/glossario/index.qmd#gloss-bit) meno significativo, di peso 1. Il **[MSB](/risorse/glossario/index.qmd#gloss-msb) (Most Significant [Bit](/risorse/glossario/index.qmd#gloss-bit))**, il [bit](/risorse/glossario/index.qmd#gloss-bit) più significativo, è a sinistra: in $A_3A_2A_1A_0$ è $A_3$. In base dieci, $253=2\cdot10^2+5\cdot10+3$; in **base due** le cifre sono soltanto 0 e 1.
 
 ::: center
   --------------- ----- ---- ---- ---- --- --- --- ---
@@ -44,42 +45,42 @@ In un sistema posizionale di base $b$, le cifre ammesse vanno da 0 a $b-1$. Ogni
 
 #### Dal binario al decimale
 
-Moltiplica ogni [bit](glossario.qmd#gloss-g7) per il peso della sua posizione e somma: $$\begin{aligned}
+Moltiplica ogni [bit](/risorse/glossario/index.qmd#gloss-bit) per il peso della sua posizione e somma: $$\begin{aligned}
 00101101_2&=0\cdot128+0\cdot64+1\cdot32+0\cdot16\\
 &\quad+1\cdot8+1\cdot4+0\cdot2+1\cdot1=45_{10}.
-\end{aligned}$$ Gli zeri iniziali non cambiano il valore senza segno, ma indicano che stiamo usando una parola di otto [bit](glossario.qmd#gloss-g7). Un **[byte](glossario.qmd#gloss-g9)** contiene otto [bit](glossario.qmd#gloss-g7).
+\end{aligned}$$ Gli zeri iniziali non cambiano il valore senza segno, ma indicano che stiamo usando una parola di otto [bit](/risorse/glossario/index.qmd#gloss-bit). Un **[byte](/risorse/glossario/index.qmd#gloss-byte)** contiene otto [bit](/risorse/glossario/index.qmd#gloss-bit).
 
 ### Dal decimale al binario
 
-Dividi ripetutamente l'intero non negativo per 2, annotando quoziente e resto. Fermati quando il quoziente diventa zero e leggi i resti **dal [basso](glossario.qmd#gloss-g4) verso l'alto**.
+Dividi ripetutamente l'intero non negativo per 2, annotando quoziente e resto. Fermati quando il quoziente diventa zero e leggi i resti **dal [basso](/risorse/glossario/index.qmd#gloss-attivo-alto-basso) verso l'alto**.
 
 ::: center
     Dividendo   Quoziente  Resto  Posizione
   ----------- ----------- ------- --------------------------------------------
-           45          22    1    [LSB](glossario.qmd#gloss-g36), peso $2^0$
+           45          22    1    [LSB](/risorse/glossario/index.qmd#gloss-lsb), peso $2^0$
            22          11    0    
            11           5    1    
             5           2    1    
             2           1    0    
-            1           0    1    [MSB](glossario.qmd#gloss-g36), peso $2^5$
+            1           0    1    [MSB](/risorse/glossario/index.qmd#gloss-msb), peso $2^5$
 :::
 
-Il primo resto è il [LSB](glossario.qmd#gloss-g36), l'ultimo è il [MSB](glossario.qmd#gloss-g36). Leggendo dal [MSB](glossario.qmd#gloss-g36) al [LSB](glossario.qmd#gloss-g36) si ottiene $101101_2$; per scriverlo su otto [bit](glossario.qmd#gloss-g7) si aggiungono due zeri a sinistra: $00101101_2$. Il numero zero si rappresenta con 0, o con una parola di zeri della lunghezza richiesta.
+Il primo resto è il [LSB](/risorse/glossario/index.qmd#gloss-lsb), l'ultimo è il [MSB](/risorse/glossario/index.qmd#gloss-msb). Leggendo dal [MSB](/risorse/glossario/index.qmd#gloss-msb) al [LSB](/risorse/glossario/index.qmd#gloss-lsb) si ottiene $101101_2$; per scriverlo su otto [bit](/risorse/glossario/index.qmd#gloss-bit) si aggiungono due zeri a sinistra: $00101101_2$. Il numero zero si rappresenta con 0, o con una parola di zeri della lunghezza richiesta.
 
 #### Numero di combinazioni e intervallo rappresentabile
 
-Con $n$ [bit](glossario.qmd#gloss-g7) esistono $2^n$ combinazioni. Se rappresentano interi **senza segno**, i valori vanno da 0 a $2^n-1$: con otto [bit](glossario.qmd#gloss-g7), da 0 a 255. Per rappresentare i valori da 0 a 300 servono almeno nove [bit](glossario.qmd#gloss-g7), perché $2^8<301\leq2^9$.
+Con $n$ [bit](/risorse/glossario/index.qmd#gloss-bit) esistono $2^n$ combinazioni. Se rappresentano interi **senza segno**, i valori vanno da 0 a $2^n-1$: con otto [bit](/risorse/glossario/index.qmd#gloss-bit), da 0 a 255. Per rappresentare i valori da 0 a 300 servono almeno nove [bit](/risorse/glossario/index.qmd#gloss-bit), perché $2^8<301\leq2^9$.
 
-**Prova tu.** Converti $11010_2$ in decimale e $19_{10}$ in binario su otto [bit](glossario.qmd#gloss-g7). Controllo: $26_{10}$ e $00010011_2$.
+**Prova tu.** Converti $11010_2$ in decimale e $19_{10}$ in binario su otto [bit](/risorse/glossario/index.qmd#gloss-bit). Controllo: $26_{10}$ e $00010011_2$.
 
 ## Base esadecimale {#topic:19}
 
-### Sedici cifre per scrivere i [bit](glossario.qmd#gloss-g7) in modo compatto
+### Sedici cifre per scrivere i [bit](/risorse/glossario/index.qmd#gloss-bit) in modo compatto
 
-La base sedici usa le cifre 0--9 e le lettere A--F per i valori 10--15. Ogni cifra esadecimale corrisponde esattamente a **quattro [bit](glossario.qmd#gloss-g7)**, perché $16=2^4$. Il pedice indica la base; nei programmi si incontra anche il prefisso `0x`, per esempio `0x2D`.
+La base sedici usa le cifre 0--9 e le lettere A--F per i valori 10--15. Ogni cifra esadecimale corrisponde esattamente a **quattro [bit](/risorse/glossario/index.qmd#gloss-bit)**, perché $16=2^4$. Il pedice indica la base; nei programmi si incontra anche il prefisso `0x`, per esempio `0x2D`.
 
 ::: center
-   Decimale   [Hex](glossario.qmd#gloss-g24)   Binario   Decimale   [Hex](glossario.qmd#gloss-g24)   Binario
+   Decimale   [Hex](/risorse/glossario/index.qmd#gloss-hex)   Binario   Decimale   [Hex](/risorse/glossario/index.qmd#gloss-hex)   Binario
   ---------- -------------------------------- --------- ---------- -------------------------------- ---------
       0                     0                   0000        8                     8                   1000
       1                     1                   0001        9                     9                   1001
@@ -99,13 +100,13 @@ La base sedici usa le cifre 0--9 e le lettere A--F per i valori 10--15. Ogni cif
       $0010\ 1101_2$            $45_{10}$                  $2D_{16}$
 :::
 
-Sono lo stesso numero: $2D_{16}=2\cdot16+13=45_{10}$. La D vale 13; le due cifre esadecimali rappresentano gli otto [bit](glossario.qmd#gloss-g7) di un [byte](glossario.qmd#gloss-g9). Gli spazi fra gruppi di [bit](glossario.qmd#gloss-g7) servono solo a facilitare la lettura.
+Sono lo stesso numero: $2D_{16}=2\cdot16+13=45_{10}$. La D vale 13; le due cifre esadecimali rappresentano gli otto [bit](/risorse/glossario/index.qmd#gloss-bit) di un [byte](/risorse/glossario/index.qmd#gloss-byte). Gli spazi fra gruppi di [bit](/risorse/glossario/index.qmd#gloss-bit) servono solo a facilitare la lettura.
 
 ### Conversioni senza passaggi inutili
 
-1.  **Binario verso esadecimale:** per un intero, raggruppa i [bit](glossario.qmd#gloss-g7) a quattro partendo da destra; completa a sinistra con zeri e traduci ogni gruppo.
+1.  **Binario verso esadecimale:** per un intero, raggruppa i [bit](/risorse/glossario/index.qmd#gloss-bit) a quattro partendo da destra; completa a sinistra con zeri e traduci ogni gruppo.
 
-2.  **Esadecimale verso binario:** sostituisci ogni cifra con i suoi quattro [bit](glossario.qmd#gloss-g7), conservando gli zeri interni.
+2.  **Esadecimale verso binario:** sostituisci ogni cifra con i suoi quattro [bit](/risorse/glossario/index.qmd#gloss-bit), conservando gli zeri interni.
 
 3.  **Esadecimale verso decimale:** moltiplica ogni cifra per $16^i$ e somma.
 
@@ -117,19 +118,19 @@ $173:16$ dà quoziente 10 e resto 13. Il quoziente 10 diviso per 16 dà 0 e rest
 
 #### Il formato deve essere dichiarato
 
-$10_2=2_{10}$, mentre $10_{16}=16_{10}$. La scrittura [`FF`](glossario.qmd#gloss-g18) indica $255$ solo se interpretata come intero esadecimale senza segno; gli stessi otto [bit](glossario.qmd#gloss-g7) avranno un altro significato nel [complemento a due](glossario.qmd#gloss-g65). Il numero di cifre non basta a definire la codifica.
+$10_2=2_{10}$, mentre $10_{16}=16_{10}$. La scrittura [`FF`](/risorse/glossario/index.qmd#gloss-flip-flop-ff) indica $255$ solo se interpretata come intero esadecimale senza segno; gli stessi otto [bit](/risorse/glossario/index.qmd#gloss-bit) avranno un altro significato nel [complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due). Il numero di cifre non basta a definire la codifica.
 
-**Prova tu.** Converti $1011110_2$ in [hex](glossario.qmd#gloss-g24) e $3C_{16}$ in decimale. Controllo: $5E_{16}$ e $60_{10}$. Queste conversioni aiutano a leggere registri, indirizzi e dati nei datasheet.
+**Prova tu.** Converti $1011110_2$ in [hex](/risorse/glossario/index.qmd#gloss-hex) e $3C_{16}$ in decimale. Controllo: $5E_{16}$ e $60_{10}$. Queste conversioni aiutano a leggere registri, indirizzi e dati nei datasheet.
 
-## [Complemento a due](glossario.qmd#gloss-g65) {#sec:complemento}
+## [Complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due) {#sec:complemento}
 
 ### Rappresentare gli interi con segno
 
-Il **[complemento a due](glossario.qmd#gloss-g65)** è una regola per rappresentare interi positivi e negativi con una sequenza di [bit](glossario.qmd#gloss-g7). È usato nei calcolatori e nei circuiti digitali: per sottrarre 3, per esempio, si può sommare la rappresentazione di $-3$. Prima si sceglie quanti [bit](glossario.qmd#gloss-g7) usare. Su **otto [bit](glossario.qmd#gloss-g7)** si rappresentano i valori da $-128$ a $+127$. Il primo [bit](glossario.qmd#gloss-g7) a sinistra distingue i numeri non negativi (0) dai negativi (1), ma per ottenere l'opposto si trasformano **tutti i [bit](glossario.qmd#gloss-g7)**, non soltanto il primo.
+Il **[complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due)** è una regola per rappresentare interi positivi e negativi con una sequenza di [bit](/risorse/glossario/index.qmd#gloss-bit). È usato nei calcolatori e nei circuiti digitali: per sottrarre 3, per esempio, si può sommare la rappresentazione di $-3$. Prima si sceglie quanti [bit](/risorse/glossario/index.qmd#gloss-bit) usare. Su **otto [bit](/risorse/glossario/index.qmd#gloss-bit)** si rappresentano i valori da $-128$ a $+127$. Il primo [bit](/risorse/glossario/index.qmd#gloss-bit) a sinistra distingue i numeri non negativi (0) dai negativi (1), ma per ottenere l'opposto si trasformano **tutti i [bit](/risorse/glossario/index.qmd#gloss-bit)**, non soltanto il primo.
 
-#### Scrivere e leggere meno 13 su otto [bit](glossario.qmd#gloss-g7)
+#### Scrivere e leggere meno 13 su otto [bit](/risorse/glossario/index.qmd#gloss-bit)
 
-Per passare da $+13$ a $-13$ su otto [bit](glossario.qmd#gloss-g7):
+Per passare da $+13$ a $-13$ su otto [bit](/risorse/glossario/index.qmd#gloss-bit):
 
 ::: center
 ![Schema didattico 28](/assets/dispense/tpsee-elettronici/figura-28.png){fig-alt="Schema didattico 28 della dispensa TPSEE · Elettronici"}
@@ -137,10 +138,10 @@ Per passare da $+13$ a $-13$ su otto [bit](glossario.qmd#gloss-g7):
 
 Invertire significa sostituire ogni 0 con 1 e ogni 1 con 0. Per controllare, applica di nuovo i due passaggi a `11110011`: ottieni `00001101`, cioè $+13$.
 
-Un altro controllo su otto [bit](glossario.qmd#gloss-g7): leggi la parola come numero senza segno; se il primo [bit](glossario.qmd#gloss-g7) è 1, sottrai 256. Per `11110011` ottieni $243-256=-13$. Se il primo [bit](glossario.qmd#gloss-g7) è 0, il valore resta quello letto normalmente.
+Un altro controllo su otto [bit](/risorse/glossario/index.qmd#gloss-bit): leggi la parola come numero senza segno; se il primo [bit](/risorse/glossario/index.qmd#gloss-bit) è 1, sottrai 256. Per `11110011` ottieni $243-256=-13$. Se il primo [bit](/risorse/glossario/index.qmd#gloss-bit) è 0, il valore resta quello letto normalmente.
 
 ::: center
-  Parola su otto [bit](glossario.qmd#gloss-g7)     Senza segno   [Complemento a due](glossario.qmd#gloss-g65)
+  Parola su otto [bit](/risorse/glossario/index.qmd#gloss-bit)     Senza segno   [Complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due)
   ---------------------------------------------- ------------- ----------------------------------------------
   00000000                                                   0                                              0
   01111111                                                 127                                            127
@@ -148,27 +149,27 @@ Un altro controllo su otto [bit](glossario.qmd#gloss-g7): leggi la parola come n
   11111111                                                 255                                           $-1$
 :::
 
-### Distinguere riporto e [overflow](glossario.qmd#gloss-g66)
+### Distinguere riporto e [overflow](/risorse/glossario/index.qmd#gloss-overflow)
 
-Qui sommiamo interi in **[complemento a due](glossario.qmd#gloss-g65) su otto [bit](glossario.qmd#gloss-g7)**, conservando solo gli otto [bit](glossario.qmd#gloss-g7) del risultato. Per sottrarre, sommiamo l'opposto del secondo numero.
+Qui sommiamo interi in **[complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due) su otto [bit](/risorse/glossario/index.qmd#gloss-bit)**, conservando solo gli otto [bit](/risorse/glossario/index.qmd#gloss-bit) del risultato. Per sottrarre, sommiamo l'opposto del secondo numero.
 
-- **Riporto finale**: il [bit](glossario.qmd#gloss-g7) che esce dall'ottava posizione; viene scartato.
+- **Riporto finale**: il [bit](/risorse/glossario/index.qmd#gloss-bit) che esce dall'ottava posizione; viene scartato.
 
-- **[Overflow](glossario.qmd#gloss-g66)**: la somma matematica non entra nell'intervallo $-128\ldots127$; gli otto [bit](glossario.qmd#gloss-g7) rimasti non rappresentano il risultato corretto.
+- **[Overflow](/risorse/glossario/index.qmd#gloss-overflow)**: la somma matematica non entra nell'intervallo $-128\ldots127$; gli otto [bit](/risorse/glossario/index.qmd#gloss-bit) rimasti non rappresentano il risultato corretto.
 
 #### Due casi a confronto
 
-**Riporto 1, nessun [overflow](glossario.qmd#gloss-g66):** $7+(-3)=4$ è rappresentabile. $$00000111+11111101=\underbrace{1}_{\text{riporto}}\;\underbrace{00000100}_{4}.$$ **Riporto 0, [overflow](glossario.qmd#gloss-g66):** $100+40=140$ non è rappresentabile. $$01100100+00101000=\underbrace{0}_{\text{riporto}}\;\underbrace{10001100}_{-116\text{ in complemento a due}}.$$ Il riporto, da solo, non segnala l'[overflow](glossario.qmd#gloss-g66). Se gli addendi hanno lo **stesso segno** e il risultato ha segno opposto, c'è [overflow](glossario.qmd#gloss-g66). Due addendi di **segno diverso non producono [overflow](glossario.qmd#gloss-g66)**: la loro somma è compresa fra i due addendi, quindi resta nell'intervallo.
+**Riporto 1, nessun [overflow](/risorse/glossario/index.qmd#gloss-overflow):** $7+(-3)=4$ è rappresentabile. $$00000111+11111101=\underbrace{1}_{\text{riporto}}\;\underbrace{00000100}_{4}.$$ **Riporto 0, [overflow](/risorse/glossario/index.qmd#gloss-overflow):** $100+40=140$ non è rappresentabile. $$01100100+00101000=\underbrace{0}_{\text{riporto}}\;\underbrace{10001100}_{-116\text{ in complemento a due}}.$$ Il riporto, da solo, non segnala l'[overflow](/risorse/glossario/index.qmd#gloss-overflow). Se gli addendi hanno lo **stesso segno** e il risultato ha segno opposto, c'è [overflow](/risorse/glossario/index.qmd#gloss-overflow). Due addendi di **segno diverso non producono [overflow](/risorse/glossario/index.qmd#gloss-overflow)**: la loro somma è compresa fra i due addendi, quindi resta nell'intervallo.
 
 #### Lunghezza e casi limite
 
-Per estendere una parola con segno, replica il [MSB](glossario.qmd#gloss-g36) a sinistra: $1101$ su quattro [bit](glossario.qmd#gloss-g7) e $11111101$ su otto [bit](glossario.qmd#gloss-g7) valgono entrambi $-3$. Il minimo $-128$ non ha opposto rappresentabile su otto [bit](glossario.qmd#gloss-g7); $+128$ richiede più [bit](glossario.qmd#gloss-g7). Lo zero ha una sola rappresentazione.
+Per estendere una parola con segno, replica il [MSB](/risorse/glossario/index.qmd#gloss-msb) a sinistra: $1101$ su quattro [bit](/risorse/glossario/index.qmd#gloss-bit) e $11111101$ su otto [bit](/risorse/glossario/index.qmd#gloss-bit) valgono entrambi $-3$. Il minimo $-128$ non ha opposto rappresentabile su otto [bit](/risorse/glossario/index.qmd#gloss-bit); $+128$ richiede più [bit](/risorse/glossario/index.qmd#gloss-bit). Lo zero ha una sola rappresentazione.
 
 ## Numeri in virgola mobile {#sec:virgola-mobile}
 
 ### Frazioni binarie e normalizzazione
 
-A destra della virgola i pesi sono $2^{-1},2^{-2},\ldots$, cioè $1/2,1/4,\ldots$. Per convertire una frazione decimale, moltiplicala per 2: annota la parte intera e ripeti sulla parte frazionaria. I [bit](glossario.qmd#gloss-g7) si leggono **nell'ordine ottenuto**.
+A destra della virgola i pesi sono $2^{-1},2^{-2},\ldots$, cioè $1/2,1/4,\ldots$. Per convertire una frazione decimale, moltiplicala per 2: annota la parte intera e ripeti sulla parte frazionaria. I [bit](/risorse/glossario/index.qmd#gloss-bit) si leggono **nell'ordine ottenuto**.
 
 #### Rappresentare 5,75
 
@@ -186,28 +187,28 @@ Nell'esempio $1{,}0111_2\cdot2^2$ distinguiamo tre informazioni:
 
 **Normalizzare un numero diverso da zero** significa spostare la virgola fino a lasciare una sola cifra diversa da zero alla sua sinistra, compensando con una potenza della base. In binario quella cifra è sempre 1, perché le sole cifre disponibili sono 0 e 1.
 
-#### Un esempio di formato: [binary32](glossario.qmd#gloss-g6)
+#### Un esempio di formato: [binary32](/risorse/glossario/index.qmd#gloss-binary32)
 
-Il nome indica un formato binario che usa **32 [bit](glossario.qmd#gloss-g7)**. I [bit](glossario.qmd#gloss-g7) sono suddivisi in tre gruppi: uno per il segno, uno per l'esponente e uno per le cifre dopo la virgola del significando.
+Il nome indica un formato binario che usa **32 [bit](/risorse/glossario/index.qmd#gloss-bit)**. I [bit](/risorse/glossario/index.qmd#gloss-bit) sono suddivisi in tre gruppi: uno per il segno, uno per l'esponente e uno per le cifre dopo la virgola del significando.
 
 In $1{,}0111_2$, le cifre dopo la virgola sono **0111**: questo gruppo è chiamato **frazione**. Nei numeri normalizzati gestiti con questa regola, l'1 prima della virgola è già noto e si può ricostruire senza memorizzarlo: per questo si dice **implicito**. Non è uno degli 1 del gruppo 0111.
 
 ### Perché il risultato può essere approssimato
 
-Con un numero finito di [bit](glossario.qmd#gloss-g7) non si possono conservare infinite cifre. È come scrivere $1/3$ in decimale: $0{,}333$ è un'approssimazione. Anche in binario alcuni numeri, per esempio $0{,}1_{10}$, richiedono infinite cifre e devono essere arrotondati.
+Con un numero finito di [bit](/risorse/glossario/index.qmd#gloss-bit) non si possono conservare infinite cifre. È come scrivere $1/3$ in decimale: $0{,}333$ è un'approssimazione. Anche in binario alcuni numeri, per esempio $0{,}1_{10}$, richiedono infinite cifre e devono essere arrotondati.
 
 **Prova tu.** Scrivi $6{,}5_{10}$ in binario e normalizza. Controllo: $110{,}1_2=1{,}101_2\cdot2^2$. Il significando è $1{,}101_2$ e l'esponente è 2.
 
-[**Approfondimento: come si costruiscono e si leggono i 32 [bit](glossario.qmd#gloss-g7)**](approfondimenti.qmd#app:binary32) (p. ).
+[**Approfondimento: come si costruiscono e si leggono i 32 [bit](/risorse/glossario/index.qmd#gloss-bit)**](approfondimenti.qmd#app:binary32).
 
-## [ASCII](glossario.qmd#gloss-g3) e [Unicode](glossario.qmd#gloss-g53) {#topic:21}
+## [ASCII](/risorse/glossario/index.qmd#gloss-ascii) e [Unicode](/risorse/glossario/index.qmd#gloss-unicode) {#topic:21}
 
 ### Dai numeri ai caratteri
 
-Un testo si memorizza associando codici ai caratteri. **[ASCII](glossario.qmd#gloss-g3)** (American Standard Code for Information Interchange) usa sette [bit](glossario.qmd#gloss-g7), quindi 128 codici da 0 a 127: lettere, cifre, punteggiatura e caratteri di controllo. Le lettere maiuscole e minuscole hanno codici diversi; le lettere accentate non appartengono all'[ASCII](glossario.qmd#gloss-g3) di base.
+Un testo si memorizza associando codici ai caratteri. **[ASCII](/risorse/glossario/index.qmd#gloss-ascii)** (American Standard Code for Information Interchange) usa sette [bit](/risorse/glossario/index.qmd#gloss-bit), quindi 128 codici da 0 a 127: lettere, cifre, punteggiatura e caratteri di controllo. Le lettere maiuscole e minuscole hanno codici diversi; le lettere accentate non appartengono all'[ASCII](/risorse/glossario/index.qmd#gloss-ascii) di base.
 
 ::: center
-  Carattere                                     Decimale   [Hex](glossario.qmd#gloss-g24) Binario su otto [bit](glossario.qmd#gloss-g7)
+  Carattere                                     Decimale   [Hex](/risorse/glossario/index.qmd#gloss-hex) Binario su otto [bit](/risorse/glossario/index.qmd#gloss-bit)
   ------------------------------------------- ---------- -------------------------------- -----------------------------------------------
   Spazio                                              32                               20 00100000
   `0`                                                 48                               30 00110000
@@ -215,80 +216,80 @@ Un testo si memorizza associando codici ai caratteri. **[ASCII](glossario.qmd#gl
   `A`                                                 65                               41 01000001
   `B`                                                 66                               42 01000010
   `a`                                                 97                               61 01100001
-  [LF](glossario.qmd#gloss-g35) (Line Feed)           10                               0A 00001010
+  [LF](/risorse/glossario/index.qmd#gloss-lf) (Line Feed)           10                               0A 00001010
 :::
 
-Nella tabella il codice [ASCII](glossario.qmd#gloss-g3) è contenuto in un [byte](glossario.qmd#gloss-g9) con il [bit](glossario.qmd#gloss-g7) più significativo a zero. [LF](glossario.qmd#gloss-g35) indica un avanzamento di riga; la sequenza usata per terminare una riga dipende dal formato del testo.
+Nella tabella il codice [ASCII](/risorse/glossario/index.qmd#gloss-ascii) è contenuto in un [byte](/risorse/glossario/index.qmd#gloss-byte) con il [bit](/risorse/glossario/index.qmd#gloss-bit) più significativo a zero. [LF](/risorse/glossario/index.qmd#gloss-lf) indica un avanzamento di riga; la sequenza usata per terminare una riga dipende dal formato del testo.
 
 #### Il numero 12 non è il testo "12"
 
-L'intero senza segno 12 su un [byte](glossario.qmd#gloss-g9) è `00001100`, cioè `0C` in [hex](glossario.qmd#gloss-g24). La stringa `12` contiene invece due caratteri: `31 32` in [hex](glossario.qmd#gloss-g24), cioè due [byte](glossario.qmd#gloss-g9) [ASCII](glossario.qmd#gloss-g3). Occorre una conversione per passare dal testo al numero.
+L'intero senza segno 12 su un [byte](/risorse/glossario/index.qmd#gloss-byte) è `00001100`, cioè `0C` in [hex](/risorse/glossario/index.qmd#gloss-hex). La stringa `12` contiene invece due caratteri: `31 32` in [hex](/risorse/glossario/index.qmd#gloss-hex), cioè due [byte](/risorse/glossario/index.qmd#gloss-byte) [ASCII](/risorse/glossario/index.qmd#gloss-ascii). Occorre una conversione per passare dal testo al numero.
 
-### [Unicode](glossario.qmd#gloss-g53) e la codifica [UTF-8](glossario.qmd#gloss-g54)
+### [Unicode](/risorse/glossario/index.qmd#gloss-unicode) e la codifica [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8)
 
-**[Unicode](glossario.qmd#gloss-g53)** assegna ai caratteri un numero identificativo, detto **punto di codice**, scritto con `U+` e cifre esadecimali. **[UTF-8](glossario.qmd#gloss-g54)** ([Unicode](glossario.qmd#gloss-g53) Transformation Format, 8 [bit](glossario.qmd#gloss-g7)) indica come memorizzare questi codici: un codice può occupare da uno a quattro [byte](glossario.qmd#gloss-g9); i caratteri [ASCII](glossario.qmd#gloss-g3) occupano un solo [byte](glossario.qmd#gloss-g9). Il numero che identifica un carattere e i [byte](glossario.qmd#gloss-g9) usati per memorizzarlo non sono la stessa cosa.
+**[Unicode](/risorse/glossario/index.qmd#gloss-unicode)** assegna ai caratteri un numero identificativo, detto **punto di codice**, scritto con `U+` e cifre esadecimali. **[UTF-8](/risorse/glossario/index.qmd#gloss-utf-8)** ([Unicode](/risorse/glossario/index.qmd#gloss-unicode) Transformation Format, 8 [bit](/risorse/glossario/index.qmd#gloss-bit)) indica come memorizzare questi codici: un codice può occupare da uno a quattro [byte](/risorse/glossario/index.qmd#gloss-byte); i caratteri [ASCII](/risorse/glossario/index.qmd#gloss-ascii) occupano un solo [byte](/risorse/glossario/index.qmd#gloss-byte). Il numero che identifica un carattere e i [byte](/risorse/glossario/index.qmd#gloss-byte) usati per memorizzarlo non sono la stessa cosa.
 
 ::: center
-  Carattere           Punto di codice   [Byte](glossario.qmd#gloss-g9) [UTF-8](glossario.qmd#gloss-g54) in [hex](glossario.qmd#gloss-g24)
+  Carattere           Punto di codice   [Byte](/risorse/glossario/index.qmd#gloss-byte) [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8) in [hex](/risorse/glossario/index.qmd#gloss-hex)
   ------------------- ----------------- ---------------------------------------------------------------------------------------------------
   `A`                 `U+0041`          `41`
   è                   `U+00E8`          `C3 A8`
   Simbolo dell'euro   `U+20AC`          `E2 82 AC`
 :::
 
-#### Contare i [byte](glossario.qmd#gloss-g9) di un testo
+#### Contare i [byte](/risorse/glossario/index.qmd#gloss-byte) di un testo
 
-La stringa `caffè`, con è rappresentata da `U+00E8`, occupa sei [byte](glossario.qmd#gloss-g9) in [UTF-8](glossario.qmd#gloss-g54): `63 61 66 66 C3 A8`. Non contiamo terminatori o altri dati del file. Le prime quattro lettere occupano un [byte](glossario.qmd#gloss-g9) ciascuna, è ne occupa due.
+La stringa `caffè`, con è rappresentata da `U+00E8`, occupa sei [byte](/risorse/glossario/index.qmd#gloss-byte) in [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8): `63 61 66 66 C3 A8`. Non contiamo terminatori o altri dati del file. Le prime quattro lettere occupano un [byte](/risorse/glossario/index.qmd#gloss-byte) ciascuna, è ne occupa due.
 
 #### La codifica accompagna i dati
 
-Per leggere un testo bisogna conoscere la codifica usata per scriverlo. Interpretare [byte](glossario.qmd#gloss-g9) [UTF-8](glossario.qmd#gloss-g54) con una codifica diversa può produrre simboli errati. Un carattere visibile può essere composto da più punti di codice: numero di caratteri, punti di codice e [byte](glossario.qmd#gloss-g9) non sono sempre uguali.
+Per leggere un testo bisogna conoscere la codifica usata per scriverlo. Interpretare [byte](/risorse/glossario/index.qmd#gloss-byte) [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8) con una codifica diversa può produrre simboli errati. Un carattere visibile può essere composto da più punti di codice: numero di caratteri, punti di codice e [byte](/risorse/glossario/index.qmd#gloss-byte) non sono sempre uguali.
 
-**Prova tu.** Decodifica i [byte](glossario.qmd#gloss-g9) [ASCII](glossario.qmd#gloss-g3) `41 31 30`. Controllo: il testo `A10`, non il numero esadecimale `A10`.
+**Prova tu.** Decodifica i [byte](/risorse/glossario/index.qmd#gloss-byte) [ASCII](/risorse/glossario/index.qmd#gloss-ascii) `41 31 30`. Controllo: il testo `A10`, non il numero esadecimale `A10`.
 
 ## Autoverifica {#sec:codifiche-esercizi}
 
 ### Che cosa devi saper fare
 
-Al termine del percorso devi saper convertire interi fra basi 2, 10 e 16; interpretare una parola dichiarando lunghezza e segno; rappresentare semplici interi negativi e riconoscere l'[overflow](glossario.qmd#gloss-g66); normalizzare semplici numeri binari e distinguere segno, significando ed esponente; distinguere numeri, caratteri, punti di codice e [byte](glossario.qmd#gloss-g9).
+Al termine del percorso devi saper convertire interi fra basi 2, 10 e 16; interpretare una parola dichiarando lunghezza e segno; rappresentare semplici interi negativi e riconoscere l'[overflow](/risorse/glossario/index.qmd#gloss-overflow); normalizzare semplici numeri binari e distinguere segno, significando ed esponente; distinguere numeri, caratteri, punti di codice e [byte](/risorse/glossario/index.qmd#gloss-byte).
 
-**Metodo.** Per ogni esercizio scrivi codifica, passaggi e controllo inverso. Nelle domande sul [complemento a due](glossario.qmd#gloss-g65) usa esattamente il numero di [bit](glossario.qmd#gloss-g7) richiesto. Svolgi prima le prove su carta; usa la calcolatrice solo per verificare.
+**Metodo.** Per ogni esercizio scrivi codifica, passaggi e controllo inverso. Nelle domande sul [complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due) usa esattamente il numero di [bit](/risorse/glossario/index.qmd#gloss-bit) richiesto. Svolgi prima le prove su carta; usa la calcolatrice solo per verificare.
 
-1.  **Basi.** Converti $110101_2$ in decimale ed esadecimale. Converti poi $94_{10}$ in binario su otto [bit](glossario.qmd#gloss-g7) e in esadecimale.
+1.  **Basi.** Converti $110101_2$ in decimale ed esadecimale. Converti poi $94_{10}$ in binario su otto [bit](/risorse/glossario/index.qmd#gloss-bit) e in esadecimale.
 
-2.  **Lettura [hex](glossario.qmd#gloss-g24).** Converti $B7_{16}$ in binario e decimale, assumendo un intero senza segno. Quanti [byte](glossario.qmd#gloss-g9) sono rappresentati da quattro cifre esadecimali?
+2.  **Lettura [hex](/risorse/glossario/index.qmd#gloss-hex).** Converti $B7_{16}$ in binario e decimale, assumendo un intero senza segno. Quanti [byte](/risorse/glossario/index.qmd#gloss-byte) sono rappresentati da quattro cifre esadecimali?
 
-3.  **Numero di [bit](glossario.qmd#gloss-g7).** Quanti [bit](glossario.qmd#gloss-g7) servono per rappresentare gli interi da 0 a 500 inclusi? Indica il massimo valore senza segno rappresentabile con quel numero di [bit](glossario.qmd#gloss-g7).
+3.  **Numero di [bit](/risorse/glossario/index.qmd#gloss-bit).** Quanti [bit](/risorse/glossario/index.qmd#gloss-bit) servono per rappresentare gli interi da 0 a 500 inclusi? Indica il massimo valore senza segno rappresentabile con quel numero di [bit](/risorse/glossario/index.qmd#gloss-bit).
 
-4.  **[Complemento a due](glossario.qmd#gloss-g65).** Scrivi $-18$ su otto [bit](glossario.qmd#gloss-g7). Interpreta $11100110$ sia senza segno sia in [complemento a due](glossario.qmd#gloss-g65).
+4.  **[Complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due).** Scrivi $-18$ su otto [bit](/risorse/glossario/index.qmd#gloss-bit). Interpreta $11100110$ sia senza segno sia in [complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due).
 
-5.  **Somma con segno.** Su otto [bit](glossario.qmd#gloss-g7), calcola $12+(-5)$ e $100+40$. Riporta parola risultante, valore interpretato con segno ed eventuale [overflow](glossario.qmd#gloss-g66).
+5.  **Somma con segno.** Su otto [bit](/risorse/glossario/index.qmd#gloss-bit), calcola $12+(-5)$ e $100+40$. Riporta parola risultante, valore interpretato con segno ed eventuale [overflow](/risorse/glossario/index.qmd#gloss-overflow).
 
-6.  **Estensione.** La parola $1011$ è un numero in [complemento a due](glossario.qmd#gloss-g65) su quattro [bit](glossario.qmd#gloss-g7). Quanto vale? Estendila a otto [bit](glossario.qmd#gloss-g7) senza cambiarne il valore. Che cosa otterresti aggiungendo invece quattro zeri?
+6.  **Estensione.** La parola $1011$ è un numero in [complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due) su quattro [bit](/risorse/glossario/index.qmd#gloss-bit). Quanto vale? Estendila a otto [bit](/risorse/glossario/index.qmd#gloss-bit) senza cambiarne il valore. Che cosa otterresti aggiungendo invece quattro zeri?
 
-7.  **Virgola mobile.** Converti $10{,}25_{10}$ in binario e normalizza. Indica il segno, il significando e l'esponente, senza costruire i 32 [bit](glossario.qmd#gloss-g7).
+7.  **Virgola mobile.** Converti $10{,}25_{10}$ in binario e normalizza. Indica il segno, il significando e l'esponente, senza costruire i 32 [bit](/risorse/glossario/index.qmd#gloss-bit).
 
 8.  **Leggere la forma normalizzata.** Il numero $-1{,}01_2\cdot2^1$ ha segno negativo. Sposta la virgola e ricostruisci il valore decimale.
 
-9.  **[ASCII](glossario.qmd#gloss-g3).** Decodifica i [byte](glossario.qmd#gloss-g9) esadecimali `41 42 30 31`. Confronta la rappresentazione dell'intero 65 su un [byte](glossario.qmd#gloss-g9) con quella del testo `65`.
+9.  **[ASCII](/risorse/glossario/index.qmd#gloss-ascii).** Decodifica i [byte](/risorse/glossario/index.qmd#gloss-byte) esadecimali `41 42 30 31`. Confronta la rappresentazione dell'intero 65 su un [byte](/risorse/glossario/index.qmd#gloss-byte) con quella del testo `65`.
 
-10. **[UTF-8](glossario.qmd#gloss-g54).** Usando le tabelle precedenti, scrivi i [byte](glossario.qmd#gloss-g9) del testo `Aè` e contali. Il punto di codice `U+00E8` coincide con la sequenza di [byte](glossario.qmd#gloss-g9) [UTF-8](glossario.qmd#gloss-g54)? Motiva la risposta.
+10. **[UTF-8](/risorse/glossario/index.qmd#gloss-utf-8).** Usando le tabelle precedenti, scrivi i [byte](/risorse/glossario/index.qmd#gloss-byte) del testo `Aè` e contali. Il punto di codice `U+00E8` coincide con la sequenza di [byte](/risorse/glossario/index.qmd#gloss-byte) [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8)? Motiva la risposta.
 
 #### Un errore da evitare
 
-Una sequenza come `11111111` non significa sempre 255. Per assegnarle un valore servono le regole del formato: senza segno, [complemento a due](glossario.qmd#gloss-g65) o un'altra interpretazione. Questa abitudine sarà utile anche nei circuiti e nei protocolli di comunicazione.
+Una sequenza come `11111111` non significa sempre 255. Per assegnarle un valore servono le regole del formato: senza segno, [complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due) o un'altra interpretazione. Questa abitudine sarà utile anche nei circuiti e nei protocolli di comunicazione.
 
 ## Soluzioni commentate {#sec:codifiche-soluzioni}
 
 1.  $110101_2=32+16+4+1=53_{10}$. Raggruppando: $0011\ 0101_2=35_{16}$. Inoltre $94=64+16+8+4+2$, quindi $01011110_2=5E_{16}$.
 
-2.  $B7_{16}=1011\ 0111_2=11\cdot16+7=183_{10}$. Quattro cifre [hex](glossario.qmd#gloss-g24) rappresentano 16 [bit](glossario.qmd#gloss-g7), cioè due [byte](glossario.qmd#gloss-g9).
+2.  $B7_{16}=1011\ 0111_2=11\cdot16+7=183_{10}$. Quattro cifre [hex](/risorse/glossario/index.qmd#gloss-hex) rappresentano 16 [bit](/risorse/glossario/index.qmd#gloss-bit), cioè due [byte](/risorse/glossario/index.qmd#gloss-byte).
 
-3.  I valori richiesti sono 501. Poiché $256<501\leq512$, servono nove [bit](glossario.qmd#gloss-g7); il massimo senza segno è $2^9-1=511$.
+3.  I valori richiesti sono 501. Poiché $256<501\leq512$, servono nove [bit](/risorse/glossario/index.qmd#gloss-bit); il massimo senza segno è $2^9-1=511$.
 
-4.  $18=00010010$: invertendo e aggiungendo 1 si ottiene $11101110$, cioè $-18$. La parola $11100110$ vale $230$ senza segno e $230-256=-26$ in [complemento a due](glossario.qmd#gloss-g65).
+4.  $18=00010010$: invertendo e aggiungendo 1 si ottiene $11101110$, cioè $-18$. La parola $11100110$ vale $230$ senza segno e $230-256=-26$ in [complemento a due](/risorse/glossario/index.qmd#gloss-complemento-a-due).
 
-5.  $-5$ su otto [bit](glossario.qmd#gloss-g7) è $11111011$. La somma con $00001100$ produce $1\,00000111$: conservando otto [bit](glossario.qmd#gloss-g7) si ottiene 7, senza [overflow](glossario.qmd#gloss-g66) con segno. Invece $100+40$ produce $10001100$, interpretato come $140-256=-116$. C'è [overflow](glossario.qmd#gloss-g66): 140 supera il massimo 127. In questo caso il risultato a otto [bit](glossario.qmd#gloss-g7) non rappresenta la somma matematica con segno.
+5.  $-5$ su otto [bit](/risorse/glossario/index.qmd#gloss-bit) è $11111011$. La somma con $00001100$ produce $1\,00000111$: conservando otto [bit](/risorse/glossario/index.qmd#gloss-bit) si ottiene 7, senza [overflow](/risorse/glossario/index.qmd#gloss-overflow) con segno. Invece $100+40$ produce $10001100$, interpretato come $140-256=-116$. C'è [overflow](/risorse/glossario/index.qmd#gloss-overflow): 140 supera il massimo 127. In questo caso il risultato a otto [bit](/risorse/glossario/index.qmd#gloss-bit) non rappresenta la somma matematica con segno.
 
 6.  $1011$ vale $-8+2+1=-5$. L'estensione corretta è $11111011$. Aggiungendo zeri si otterrebbe $00001011=11$: il valore cambierebbe.
 
@@ -296,13 +297,13 @@ Una sequenza come `11111111` non significa sempre 255. Per assegnarle un valore 
 
 8.  Moltiplicare per $2^1$ sposta la virgola di un posto a destra: $-1{,}01_2\cdot2^1=-10{,}1_2$. Il valore è $-(2+1/2)=-2{,}5$.
 
-9.  Il testo è `AB01`. L'intero senza segno 65 su un [byte](glossario.qmd#gloss-g9) è `41` in [hex](glossario.qmd#gloss-g24), ossia `01000001`. Il testo `65` usa invece due [byte](glossario.qmd#gloss-g9) [ASCII](glossario.qmd#gloss-g3): `36 35`. Il [byte](glossario.qmd#gloss-g9) `41`, se interpretato come [ASCII](glossario.qmd#gloss-g3), rappresenta `A`.
+9.  Il testo è `AB01`. L'intero senza segno 65 su un [byte](/risorse/glossario/index.qmd#gloss-byte) è `41` in [hex](/risorse/glossario/index.qmd#gloss-hex), ossia `01000001`. Il testo `65` usa invece due [byte](/risorse/glossario/index.qmd#gloss-byte) [ASCII](/risorse/glossario/index.qmd#gloss-ascii): `36 35`. Il [byte](/risorse/glossario/index.qmd#gloss-byte) `41`, se interpretato come [ASCII](/risorse/glossario/index.qmd#gloss-ascii), rappresenta `A`.
 
-10. `Aè` usa `41 C3 A8`: tre [byte](glossario.qmd#gloss-g9), con è rappresentata dal singolo punto di codice `U+00E8`. Quest'ultimo identifica il carattere; `C3 A8` è la sua codifica [UTF-8](glossario.qmd#gloss-g54). Non si ottiene la codifica copiando semplicemente le cifre del punto di codice.
+10. `Aè` usa `41 C3 A8`: tre [byte](/risorse/glossario/index.qmd#gloss-byte), con è rappresentata dal singolo punto di codice `U+00E8`. Quest'ultimo identifica il carattere; `C3 A8` è la sua codifica [UTF-8](/risorse/glossario/index.qmd#gloss-utf-8). Non si ottiene la codifica copiando semplicemente le cifre del punto di codice.
 
-#### Collegamenti con i moduli
+### Collegamenti con i moduli
 
-Il binario compare nelle tabelle del modulo 3 e nei contatori del modulo 4; i riporti sono usati nei sommatori. L'esadecimale permette di scrivere in modo compatto le parole di [bit](glossario.qmd#gloss-g7). [Gray](glossario.qmd#gloss-g22) e [BCD](glossario.qmd#gloss-g5) sono presentati come codifiche diverse dal binario puro. Nei contatori del modulo 4 ritrovi il legame fra numero di [bit](glossario.qmd#gloss-g7) e numero di stati.
+Il binario compare nelle tabelle del modulo 3 e nei contatori del modulo 4; i riporti sono usati nei sommatori. L'esadecimale permette di scrivere in modo compatto le parole di [bit](/risorse/glossario/index.qmd#gloss-bit). [Gray](/risorse/glossario/index.qmd#gloss-gray) e [BCD](/risorse/glossario/index.qmd#gloss-bcd) sono presentati come codifiche diverse dal binario puro. Nei contatori del modulo 4 ritrovi il legame fra numero di [bit](/risorse/glossario/index.qmd#gloss-bit) e numero di stati.
 
-**Recupero mirato.** Errori 1--3: riprendi basi e pesi; errori 4--6: segno, lunghezza e [overflow](glossario.qmd#gloss-g66); errori 7--8: frazioni binarie e normalizzazione; errori 9--10: distinzione fra numero, carattere e codifica del testo.
+**Recupero mirato.** Errori 1--3: riprendi basi e pesi; errori 4--6: segno, lunghezza e [overflow](/risorse/glossario/index.qmd#gloss-overflow); errori 7--8: frazioni binarie e normalizzazione; errori 9--10: distinzione fra numero, carattere e codifica del testo.
 

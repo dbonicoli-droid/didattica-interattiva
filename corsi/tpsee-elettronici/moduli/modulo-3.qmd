@@ -1,18 +1,19 @@
 ---
+stato: in-sviluppo
 title: "Modulo 3 / Elettronica digitale in logica cablata"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Percorso di lettura](../index.qmd#moduli-di-approfondimento) · [Leggi la sintesi del programma](../modulo-3.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd)
 
 ::: {.callout-note icon=false}
-## 🚧 Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
 
-![](/assets/cartello-lavori-in-corso.webp){width=200 fig-alt="Cartello triangolare di lavori in corso"}
+Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
 
-La trattazione approfondita di questo modulo deve ancora essere elaborata. Spiegazioni, derivazioni, esempi ed esercizi saranno disponibili in futuro, con lo sviluppo delle lezioni.
+[Vai alla sintesi del modulo 3 →](../modulo-3.qmd){.btn .btn-primary}
 
-Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
+Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
 :::
 
 ::: {.unit-index}
@@ -36,98 +37,66 @@ Puoi già consultare la [panoramica del modulo](../modulo-3.qmd), i [componenti]
 - [U.D. 3.16 / COMPARATORE 74LS85](#ud:3.16)
 :::
 
-## U.D. 3.1 / Porte Logiche, tabella di Verità delle porte NOT, AND, OR, NAND, NOR, XOR {#ud:3.1}
+## U.D. 3.1 / Porte Logiche, tabella di Verità delle porte NOT, AND, OR, NAND, NOR, XOR ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.1}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.1){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 3.2 / GRAY - binario e binario - GRAY ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.2}
 
-## U.D. 3.2 / GRAY - binario e binario - GRAY {#ud:3.2}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.2){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 3.3 / Universalità delle porte NAND e NOR ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.3}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.3){.wip-link}
 
-## U.D. 3.3 / Universalità delle porte NAND e NOR {#ud:3.3}
+## U.D. 3.4 / Mappe di Karnaugh come metodo di semplificazione delle espressioni logiche booleane, quindi delle reti combinatorie ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.4}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.4){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 3.5 / Circuiti Combinatori ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.5}
 
-## U.D. 3.4 / Mappe di Karnaugh come metodo di semplificazione delle espressioni logiche booleane, quindi delle reti combinatorie {#ud:3.4}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.5){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 3.6 / Semisommatori e sommatori ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.6}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.6){.wip-link}
 
-## U.D. 3.5 / Circuiti Combinatori {#ud:3.5}
+## U.D. 3.7 / Comparatori ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.7}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.7){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 3.8 / Decoder binari ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.8}
 
-## U.D. 3.6 / Semisommatori e sommatori {#ud:3.6}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.8){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 3.9 / Decoder BCD - 7 segmenti ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.9}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.9){.wip-link}
 
-## U.D. 3.7 / Comparatori {#ud:3.7}
+## U.D. 3.10 / Principio di funzionamento di un display a 7 segmenti e diodi LED ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.10}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.10){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.11}
 
-## U.D. 3.8 / Decoder binari {#ud:3.8}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.11){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 3.12 / MUX a 4, 8, 16 ingressi ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.12}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.12){.wip-link}
 
-## U.D. 3.9 / Decoder BCD - 7 segmenti {#ud:3.9}
+## U.D. 3.13 / Implementazioni di funzioni logiche tramite MUX ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.13}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.13){.wip-link}
 
-Contenuti in preparazione.
+## U.D. 3.14 / MUX: 74LS150, 74LS151 ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.14}
 
-## U.D. 3.10 / Principio di funzionamento di un display a 7 segmenti e diodi LED {#ud:3.10}
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.14){.wip-link}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+## U.D. 3.15 / DECODER: 74LS154, 74LS138 ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.15}
 
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.15){.wip-link}
 
-## U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale {#ud:3.11}
+## U.D. 3.16 / COMPARATORE 74LS85 ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.16}
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 3.12 / MUX a 4, 8, 16 ingressi {#ud:3.12}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 3.13 / Implementazioni di funzioni logiche tramite MUX {#ud:3.13}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 3.14 / MUX: 74LS150, 74LS151 {#ud:3.14}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 3.15 / DECODER: 74LS154, 74LS138 {#ud:3.15}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
-
-## U.D. 3.16 / COMPARATORE 74LS85 {#ud:3.16}
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-Contenuti in preparazione.
+[Vedi nella sintesi →](../modulo-3.qmd#ud:3.16){.wip-link}

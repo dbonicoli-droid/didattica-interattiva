@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Ohm, Kirchhoff, serie e parallelo"
 ---
 
@@ -40,7 +41,7 @@ Le resistenze in serie si sommano: $R_{eq}=3\,\mathrm{k\Omega}$. La corrente è 
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/partitore.svg)
 
-$$V_{out}=U\frac{R_2}{R_1+R_2}=5\frac{3}{2+3}=3\,\mathrm V.$$
+$$V_{out}=V_{in}\frac{R_2}{R_1+R_2}=5\frac{3}{2+3}=3\,\mathrm V.$$
 
 Se colleghi un carico, cambia la resistenza del ramo inferiore: vedi il [partitore caricato](/corsi/tpsee-elettronici/modulo-1.qmd#ud:1.1). Non usare la formula senza verificare il circuito.
 

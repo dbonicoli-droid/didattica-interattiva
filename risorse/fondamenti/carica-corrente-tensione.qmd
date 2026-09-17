@@ -1,4 +1,5 @@
 ---
+sidebar: risorse
 title: "Carica, corrente e tensione"
 ---
 

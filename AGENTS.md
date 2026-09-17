@@ -14,3 +14,12 @@
 - Prima di considerare conclusa una modifica trasversale, verificare TPSEE Elettronici, TPSEE Elettrotecnici, Sistemi automatici e Domotica, anche nel passaggio alle risorse condivise.
 - Conservare le differenze didattiche pertinenti: argomenti, prerequisiti, numero di moduli, livello e stato provvisorio delle guide. Coerenza del metodo non significa copiare gli stessi contenuti in tutti i corsi.
 - Distinguere nel resoconto ciò che è applicato a tutti i corsi, ciò che è condiviso, le eccezioni motivate e le funzionalità ancora da realizzare.
+
+## Regole stabilite nella revisione di struttura e aspetto
+- Glossario unico in `risorse/glossario/index.qmd`: un termine, una definizione. Le specificità di un indirizzo si scrivono dentro la stessa voce, in chiaro ("Nel linguaggio Ladder…"), non in una definizione parallela.
+- Rimandi al glossario e ai componenti: mai nei titoli, e nel corpo solo alla prima occorrenza per sezione. Se ne occupano i filtri Lua; non aggirarli a mano.
+- Denominazione unica dei moduli: lo stesso nome in tabella, blocchi, indice dei contenuti, barra laterale e titolo della pagina.
+- Il materiale mancante si segnala dove manca, una volta sola: `![](/assets/lavori-in-corso.svg){.wip-icon}` accanto al titolo interessato. Niente avvisi generici ripetuti in cima alle pagine, niente cartelli a piena larghezza.
+- Colori, spaziature e caratteri stanno solo in `assets/tema*.scss`, come variabili CSS. Nessun valore di colore ripetuto in JavaScript o nei QMD.
+- Ogni pagina dichiara la propria barra laterale con `sidebar:` nel front matter. La navigazione deve restare corretta senza JavaScript.
+- Nelle pagine pubbliche non compaiono nomi di colleghi legati a impegni non ancora presi: quelle note stanno in `PROJECT_ROADMAP.md`.

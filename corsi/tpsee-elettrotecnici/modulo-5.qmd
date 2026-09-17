@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettrotecnici
 title: "Modulo 5 / Illuminotecnica"
 subtitle: "Panoramica del Programma"
 ---
@@ -17,9 +18,9 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:5}
 
-**Secondo periodo**
+**Secondo periodo · ore da definire**
 
-L'illuminotecnica studia come ottenere luce utile, comfort visivo ed efficienza. Impareremo a descrivere la luce, leggere i dati delle sorgenti e stimare un [impianto](glossario.qmd#gloss-e47) di illuminazione.
+L'illuminotecnica studia come ottenere luce utile, comfort visivo ed efficienza. Impareremo a descrivere la luce, leggere i dati delle sorgenti e stimare un [impianto](/risorse/glossario/index.qmd#gloss-impianto) di illuminazione.
 
 ## U.D. 5.1 / Introduzione, grandezze fotometriche e colorimetria {#ud:5.1}
 
@@ -27,10 +28,10 @@ Le grandezze fotometriche descrivono la luce tenendo conto della sensibilità de
 
   **Grandezza**                                          **Unità**  **Domanda a cui risponde**
   ----------------------------------------------------- ----------- --------------------------------------------------------------------
-  [Flusso luminoso](glossario.qmd#gloss-e19) $\Phi$         lm      Quanta luce viene emessa?
-  [Intensità luminosa](glossario.qmd#gloss-e22) $I_v$       cd      Quanta luce va in una certa direzione, per unità di angolo solido?
-  [Illuminamento](glossario.qmd#gloss-e21) $E$              lx      Quanto flusso arriva per unità di superficie?
-  [Luminanza](glossario.qmd#gloss-e29) $L_v$             cd/m$^2$   Qual è l'intensità per area apparente nella direzione osservata?
+  [Flusso luminoso](/risorse/glossario/index.qmd#gloss-flusso-luminoso) $\Phi$         lm      Quanta luce viene emessa?
+  [Intensità luminosa](/risorse/glossario/index.qmd#gloss-intensita-luminosa) $I_v$       cd      Quanta luce va in una certa direzione, per unità di angolo solido?
+  [Illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento) $E$              lx      Quanto flusso arriva per unità di superficie?
+  [Luminanza](/risorse/glossario/index.qmd#gloss-luminanza) $L_v$             cd/m$^2$   Qual è l'intensità per area apparente nella direzione osservata?
 
 $$E_{\mathrm{medio}}=\frac{\Phi_{\mathrm{incidente}}}{A},\qquad1\,\mathrm{lx}=1\,\mathrm{lm/m^2}.$$
 
@@ -38,17 +39,17 @@ $$E_{\mathrm{medio}}=\frac{\Phi_{\mathrm{incidente}}}{A},\qquad1\,\mathrm{lx}=1\
 ![Schema didattico 15](/assets/dispense/tpsee-elettrotecnici/figura-15.png){fig-alt="Schema didattico 15 della dispensa TPSEE · Elettrotecnici"}
 :::
 
-La **temperatura di colore correlata** ([CCT](glossario.qmd#gloss-e5), Correlated Color Temperature, in kelvin) descrive l'aspetto cromatico della luce bianca: valori più bassi appaiono più caldi, valori più alti più freddi. L'**indice di resa cromatica** $R_a$ esprime la fedeltà di resa dei colori rispetto a un riferimento. [CCT](glossario.qmd#gloss-e5), resa cromatica e flusso sono proprietà distinte.
+La **temperatura di colore correlata** ([CCT](/risorse/glossario/index.qmd#gloss-cct), Correlated Color Temperature, in kelvin) descrive l'aspetto cromatico della luce bianca: valori più bassi appaiono più caldi, valori più alti più freddi. L'**indice di resa cromatica** $R_a$ esprime la fedeltà di resa dei colori rispetto a un riferimento. [CCT](/risorse/glossario/index.qmd#gloss-cct), resa cromatica e flusso sono proprietà distinte.
 
-#### Lumen e lux
+### Lumen e lux
 
 **Illuminamento medio \[lx\] = flusso luminoso ricevuto \[lm\] / area \[$\mathrm{m^2}$\]**: $E_m=\Phi/A$, con $\Phi$ flusso che raggiunge la superficie e $A$ sua area.
 
-Se 2400 lm arrivano complessivamente su un tavolo di $6\,\mathrm{m^2}$, l'[illuminamento](glossario.qmd#gloss-e21) medio è $2400/6=400$ lx. Non significa che ogni punto abbia esattamente 400 lx: la distribuzione può essere disuniforme.
+Se 2400 lm arrivano complessivamente su un tavolo di $6\,\mathrm{m^2}$, l'[illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento) medio è $2400/6=400$ lx. Non significa che ogni punto abbia esattamente 400 lx: la distribuzione può essere disuniforme.
 
 **Prova tu.** Due lampade da 3000 K hanno necessariamente uguale luminosità?
 
-*Risposta: no. La [CCT](glossario.qmd#gloss-e5) descrive l'aspetto cromatico, non il [flusso luminoso](glossario.qmd#gloss-e19).*
+*Risposta: no. La [CCT](/risorse/glossario/index.qmd#gloss-cct) descrive l'aspetto cromatico, non il [flusso luminoso](/risorse/glossario/index.qmd#gloss-flusso-luminoso).*
 
 ## Distribuire la luce nell'ambiente {#topic:10}
 
@@ -70,9 +71,9 @@ L'apparecchio sostiene e alimenta la sorgente e ne modifica la distribuzione con
 
 *La distanza dall'origine indica l'intensità nella direzione considerata. Non è la sagoma del fascio nello spazio.*
 
-[Approfondimento: come distanza e inclinazione cambiano l'[illuminamento](glossario.qmd#gloss-e21)](approfondimenti.qmd#app:luce-distanza) (p. ).
+[Approfondimento: come distanza e inclinazione cambiano l'[illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento)](approfondimenti.qmd#app:luce-distanza).
 
-**Da osservare.** Un elevato [illuminamento](glossario.qmd#gloss-e21) medio non assicura comfort: contano anche uniformità, ombre, abbagliamento e riflessi sul compito visivo.
+**Da osservare.** Un elevato [illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento) medio non assicura comfort: contano anche uniformità, ombre, abbagliamento e riflessi sul compito visivo.
 
 ## Scegliere le sorgenti e dimensionare l'illuminazione {#topic:11}
 
@@ -82,13 +83,13 @@ L'apparecchio sostiene e alimenta la sorgente e ne modifica la distribuzione con
 
 - **Fluorescenti**: una scarica e un rivestimento producono luce visibile.
 
-- **[LED](glossario.qmd#gloss-e28)** (Light Emitting Diode): diodi emettitori di luce. [Driver](glossario.qmd#gloss-e16), ottica e gestione termica fanno parte del sistema.
+- **[LED](/risorse/glossario/index.qmd#gloss-led)** (Light Emitting Diode): diodi emettitori di luce. [Driver](/risorse/glossario/index.qmd#gloss-driver), ottica e gestione termica fanno parte del sistema.
 
-Si confrontano flusso, [potenza](glossario.qmd#gloss-new57) assorbita, distribuzione, resa cromatica e manutenzione. L'**efficacia luminosa** è $\eta_v=\Phi/P$, in lm/W, con $\Phi$ [flusso luminoso](glossario.qmd#gloss-e19) e $P$ [potenza](glossario.qmd#gloss-new57) elettrica assorbita: non va confusa con un rendimento percentuale.
+Si confrontano flusso, [potenza](/risorse/glossario/index.qmd#gloss-potenza) assorbita, distribuzione, resa cromatica e manutenzione. L'**efficacia luminosa** è $\eta_v=\Phi/P$, in lm/W, con $\Phi$ [flusso luminoso](/risorse/glossario/index.qmd#gloss-flusso-luminoso) e $P$ [potenza](/risorse/glossario/index.qmd#gloss-potenza) elettrica assorbita: non va confusa con un rendimento percentuale.
 
-#### Il metodo del flusso totale
+### Il metodo del flusso totale
 
-Per una stima dell'[illuminamento](glossario.qmd#gloss-e21) medio mantenuto: $$N=\left\lceil\frac{E_m A}{\Phi_{\mathrm{app}}\,UF\,MF}\right\rceil.$$ $N$: numero di apparecchi; $E_m$: [illuminamento](glossario.qmd#gloss-e21) obiettivo; $A$: area.
+Per una stima dell'[illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento) medio mantenuto: $$N=\left\lceil\frac{E_m A}{\Phi_{\mathrm{app}}\,UF\,MF}\right\rceil.$$ $N$: numero di apparecchi; $E_m$: [illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento) obiettivo; $A$: area.
 
 $\Phi_{\mathrm{app}}$: flusso emesso da ciascun apparecchio; $UF$ (Utilization Factor): fattore di utilizzazione, quota che raggiunge il piano; $MF$ (Maintenance Factor): fattore di manutenzione, che considera il decadimento previsto. Si arrotonda per eccesso.
 
@@ -99,7 +100,7 @@ Locale $5\times4$ m, $A=20\,\mathrm{m^2}$. Scegliamo per l'esercizio $E_m=300$ l
 
 **Attenzione ai dati.** Se si parte dal flusso delle lampade invece che da quello degli apparecchi, occorre trattare coerentemente le perdite dell'apparecchio. Non conteggiarle due volte.
 
-## Dal calcolo a [DIALux](glossario.qmd#gloss-e12) {#dal-calcolo-a-dialux .unnumbered}
+## Dal calcolo a [DIALux](/risorse/glossario/index.qmd#gloss-dialux) {#dal-calcolo-a-dialux .unnumbered}
 
 1.  Definisci geometria del locale, superfici e piano di calcolo.
 
@@ -117,19 +118,19 @@ Le attività seguenti collegano gli argomenti del corso al laboratorio. La reali
 
   **Attività**                                **Che cosa osservare e documentare**
   ------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------
-  Luce da un punto con presa                  Differenza fra presa sempre alimentata e comandata; [schema funzionale](glossario.qmd#gloss-e50) e [multifilare](glossario.qmd#gloss-e40).
-  Luce da due punti                           Due [deviatori](glossario.qmd#gloss-e11); verifica delle quattro combinazioni, presa fissa e comandata nel modello didattico.
-  Luce da tre e quattro punti                 Uno o due [invertitori](glossario.qmd#gloss-e23) fra i [deviatori](glossario.qmd#gloss-e11); ogni comando cambia lo stato.
-  [Impianti](glossario.qmd#gloss-e47) misti   Più funzioni nello stesso pannello; sigle, [morsetti](glossario.qmd#gloss-e32) e corrispondenza con gli schemi.
+  Luce da un punto con presa                  Differenza fra presa sempre alimentata e comandata; [schema funzionale](/risorse/glossario/index.qmd#gloss-schema-funzionale) e [multifilare](/risorse/glossario/index.qmd#gloss-schema-multifilare).
+  Luce da due punti                           Due [deviatori](/risorse/glossario/index.qmd#gloss-deviatore); verifica delle quattro combinazioni, presa fissa e comandata nel modello didattico.
+  Luce da tre e quattro punti                 Uno o due [invertitori](/risorse/glossario/index.qmd#gloss-invertitore) fra i [deviatori](/risorse/glossario/index.qmd#gloss-deviatore); ogni comando cambia lo stato.
+  [Impianti](/risorse/glossario/index.qmd#gloss-impianto) misti   Più funzioni nello stesso pannello; sigle, [morsetti](/risorse/glossario/index.qmd#gloss-morsetto) e corrispondenza con gli schemi.
   Relè, luci scale, elettroserratura          Memoria, temporizzazione e azionamento; tabella degli stati e dei tempi.
   Suonerie e citofoni                         Catena di chiamata, segnalazione, comunicazione e apertura.
-  Lampade fluorescenti                        Identificazione dei blocchi del [circuito](glossario.qmd#gloss-e46) dal materiale didattico e ruolo dei dispositivi di alimentazione.
+  Lampade fluorescenti                        Identificazione dei blocchi del [circuito](/risorse/glossario/index.qmd#gloss-circuito) dal materiale didattico e ruolo dei dispositivi di alimentazione.
 
 ## Una scheda di collaudo semplice
 
 1.  **Previsione:** indica cosa deve accadere per ogni comando.
 
-2.  **Controllo preliminare:** confronta collegamenti, [morsetti](glossario.qmd#gloss-e32) e componenti con lo schema, a banco non alimentato secondo la procedura assegnata.
+2.  **Controllo preliminare:** confronta collegamenti, [morsetti](/risorse/glossario/index.qmd#gloss-morsetto) e componenti con lo schema, a banco non alimentato secondo la procedura assegnata.
 
 3.  **Prova autorizzata:** registra stato iniziale, comando ed esito osservato.
 
@@ -137,7 +138,7 @@ Le attività seguenti collegano gli argomenti del corso al laboratorio. La reali
 
 5.  **Relazione:** allega schema aggiornato, tabella delle prove e conclusioni.
 
-#### Misura e interpretazione
+### Misura e interpretazione
 
 La **media dei tempi** si ottiene sommando i tempi misurati e dividendo per il numero di misure; il risultato conserva l'unità dei tempi.
 

@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettrotecnici
 body-classes: course-background
 title: "TPSEE · Elettrotecnici"
 toc-depth: 2
@@ -9,84 +10,82 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 ## Programma del corso {#moduli}
 
 []{#panoramica-del-programma}
+[]{#moduli-di-approfondimento}
+[]{#ore-e-periodi}
 []{#nav:mappa}
 []{#nav:indice}
 
-Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi** ne presenta brevemente gli argomenti.
+Dalla norma all'impianto: si parte dalle regole e dai simboli del disegno elettrico, si passa alla scelta di componenti e materiali e si arriva al progetto illuminotecnico.
 
-🚧 Le pagine dei moduli sono in preparazione e si arricchiranno con le lezioni. Le sintesi sono già consultabili.
+| **Modulo** | **Argomento** | **Periodo** | **Ore** |
+|---|---|---|---|
+| 1 | Normativa e legislazione | 1 | 10 |
+| 2 | Rappresentazione grafica dei componenti elettrici ed elettronici | 1, 2 | — |
+| 3 | Principali componenti degli impianti elettrici | 1, 2 | — |
+| 4 | Tecnologia dei materiali | 1, 2 | — |
+| 5 | Illuminotecnica | 2 | — |
+|  | **Totale** |  | **—** |
 
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+**Educazione civica:** sicurezza e responsabilità, 5 ore.
 
 :::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}
 
-### [01 / Norme e documenti](moduli/modulo-1.qmd)
+### [01 / Normativa e legislazione](moduli/modulo-1.qmd)
 
 - Distinguere leggi e norme tecniche.
-- Riconoscere organismi normatori e documenti dell’[impianto](glossario.qmd#gloss-e47).
+- Riconoscere organismi normatori e documenti dell’[impianto](/risorse/glossario/index.qmd#gloss-impianto).
 
-[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
+**Primo periodo · 10 ore** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [02 / Disegnare un impianto](moduli/modulo-2.qmd)
+### [02 / Rappresentazione grafica dei componenti elettrici ed elettronici](moduli/modulo-2.qmd)
 
 - Leggere schemi funzionali, unifilari, multifilari e planimetrie.
-- Usare simboli, [legenda](glossario.qmd#gloss-e49) e [ProgeCAD](glossario.qmd#gloss-e36).
+- Usare simboli, [legenda](/risorse/glossario/index.qmd#gloss-legenda) e [ProgeCAD](/risorse/glossario/index.qmd#gloss-progecad).
 
-[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
+**Primo e secondo periodo · ore da definire** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [03 / Scegliere i componenti](moduli/modulo-3.qmd)
+### [03 / Principali componenti degli impianti elettrici](moduli/modulo-3.qmd)
 
 - Riconoscere cavi, canalizzazioni, prese e dispositivi di comando.
-- Comprendere [deviatori](glossario.qmd#gloss-e11), [invertitori](glossario.qmd#gloss-e23), relè e servizi dell’abitazione.
+- Comprendere [deviatori](/risorse/glossario/index.qmd#gloss-deviatore), [invertitori](/risorse/glossario/index.qmd#gloss-invertitore), relè e servizi dell’abitazione.
 
-[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
+**Primo e secondo periodo · ore da definire** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [04 / Conoscere i materiali](moduli/modulo-4.qmd)
+### [04 / Tecnologia dei materiali](moduli/modulo-4.qmd)
 
 - Collegare proprietà elettriche, meccaniche e termiche agli impieghi.
 - Confrontare conduttori, isolanti e comportamento al calore.
 
-[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
+**Primo e secondo periodo · ore da definire** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
 :::
 
 ::: {.map-card}
 
-### [05 / Progettare l’illuminazione](moduli/modulo-5.qmd)
+### [05 / Illuminotecnica](moduli/modulo-5.qmd)
 
 - Distinguere grandezze fotometriche e sorgenti luminose.
-- Stimare il numero di apparecchi e introdurre [DIALux](glossario.qmd#gloss-e12).
+- Stimare il numero di apparecchi e introdurre [DIALux](/risorse/glossario/index.qmd#gloss-dialux).
 
-[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
+**Secondo periodo · ore da definire** · [Leggi la sintesi del modulo 5 →](modulo-5.qmd)
 
 :::
 
 ::::
-
-### Ore e periodi indicativi {#ore-e-periodi}
-| **Modulo** | **Argomento** | **Periodo** | **Ore** |
-|---|---|---|---|
-| 1 | Normativa e legislazione | 1 | 10 |
-| 2 | Rappresentazione grafica | 1, 2 | --- |
-| 3 | Componenti degli [impianti](glossario.qmd#gloss-e47) elettrici | 1, 2 | --- |
-| 4 | Tecnologia dei materiali | 1, 2 | --- |
-| 5 | Illuminotecnica | 2 | --- |
-
-Educazione civica: 5 ore.
 
 ## Indice dei contenuti {#indice-contenuti}
 
@@ -134,9 +133,7 @@ Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anch
 ## Sicurezza in laboratorio {#sicurezza}
 
 ::: {.resource-card}
-🚧 **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
 
 [Apri la guida completa di laboratorio e sicurezza →](guida-sicurezza.qmd)
 :::
@@ -150,7 +147,7 @@ Richiami e strumenti che puoi consultare quando un argomento richiede una base d
 
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
-- [Vocabolario minimo](glossario.qmd#vocabolario-minimo)
+- [Vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-tpsee-elettrotecnici)
 
 ## Laboratorio {#laboratorio}
 
@@ -163,8 +160,7 @@ Le risorse di laboratorio possono essere utilizzate in più percorsi.
 - [Esercizi / Metti insieme i moduli](esercizi-metti-insieme-i-moduli.qmd)
 - [Educazione civica / Sicurezza e responsabilità](educazione-civica-sicurezza-e-responsabilita.qmd)
 - [Schede di approfondimento](approfondimenti.qmd)
-- [Glossario e vocabolario minimo](glossario.qmd)
-
+- [Glossario e vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-tpsee-elettrotecnici)
 
 ## Dispense PDF {#dispense}
 

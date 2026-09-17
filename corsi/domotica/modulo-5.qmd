@@ -1,4 +1,5 @@
 ---
+sidebar: domotica
 title: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
 subtitle: "Panoramica del Programma"
 ---
@@ -23,49 +24,49 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:5}
 
-**Secondo periodo**
+**Secondo periodo · ore da definire**
 
 Tempi, conteggi, confronti e gestione dei dati permettono di costruire automatismi più completi. Ogni nuova funzione richiede prove mirate.
 
 ## U.D. 5.1 / Operazioni di temporizzazione {#ud:5.1}
 
-Un **[TON](glossario.qmd#gloss-d41)** ritarda l'attivazione: con [IN](glossario.qmd#gloss-d23) vero accumula tempo [ET](glossario.qmd#gloss-d23) e porta Q a vero quando [ET](glossario.qmd#gloss-d23) raggiunge [PT](glossario.qmd#gloss-d23). Se [IN](glossario.qmd#gloss-d23) torna falso, nel [TON](glossario.qmd#gloss-d41) non ritentivo [ET](glossario.qmd#gloss-d23) e Q si azzerano. Un **[TOF](glossario.qmd#gloss-d41)** ritarda lo spegnimento; un **[TP](glossario.qmd#gloss-d41)** genera un impulso temporizzato secondo le regole del blocco utilizzato.
+Un **[TON](/risorse/glossario/index.qmd#gloss-ton)** ritarda l'attivazione: con [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) vero accumula tempo [ET](/risorse/glossario/index.qmd#gloss-in-pt-et-q) e porta Q a vero quando [ET](/risorse/glossario/index.qmd#gloss-in-pt-et-q) raggiunge [PT](/risorse/glossario/index.qmd#gloss-in-pt-et-q). Se [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) torna falso, nel [TON](/risorse/glossario/index.qmd#gloss-ton) non ritentivo [ET](/risorse/glossario/index.qmd#gloss-in-pt-et-q) e Q si azzerano. Un **[TOF](/risorse/glossario/index.qmd#gloss-tof)** ritarda lo spegnimento; un **[TP](/risorse/glossario/index.qmd#gloss-tp)** genera un impulso temporizzato secondo le regole del blocco utilizzato.
 
 ::: center
 ![Schema didattico 8](/assets/dispense/domotica/figura-8.png){fig-alt="Schema didattico 8 della dispensa Domotica e automazione"}
 :::
 
-*[TON](glossario.qmd#gloss-d41) ideale: Q si attiva dopo [PT](glossario.qmd#gloss-d23) e si disattiva quando [IN](glossario.qmd#gloss-d23) torna falso.*
+*[TON](/risorse/glossario/index.qmd#gloss-ton) ideale: Q si attiva dopo [PT](/risorse/glossario/index.qmd#gloss-in-pt-et-q) e si disattiva quando [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) torna falso.*
 
-Un **[CTU](glossario.qmd#gloss-d16)** incrementa [CV](glossario.qmd#gloss-d17) al [fronte di salita](glossario.qmd#gloss-d20) di [CU](glossario.qmd#gloss-d17); con reset R attivo azzera il conteggio. Q segnala che [CV](glossario.qmd#gloss-d17) ha raggiunto o superato [PV](glossario.qmd#gloss-d17), nei limiti del tipo e del blocco. Un ingresso alto per dieci scansioni produce un incremento, non dieci.
+Un **[CTU](/risorse/glossario/index.qmd#gloss-ctu)** incrementa [CV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) al [fronte di salita](/risorse/glossario/index.qmd#gloss-fronte-di-salita) di [CU](/risorse/glossario/index.qmd#gloss-cu-cv-pv); con reset R attivo azzera il conteggio. Q segnala che [CV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) ha raggiunto o superato [PV](/risorse/glossario/index.qmd#gloss-cu-cv-pv), nei limiti del tipo e del blocco. Un ingresso alto per dieci scansioni produce un incremento, non dieci.
 
-#### Timer: chiamata ciclica e memoria
+### Timer: chiamata ciclica e memoria
 
-Per un [TON](glossario.qmd#gloss-d41) da 3 s, un [IN](glossario.qmd#gloss-d23) alto per 2 s seguito da [IN](glossario.qmd#gloss-d23)=0 non attiva Q. Una successiva attivazione riparte da zero. Nel programma il blocco va eseguito a ogni ciclo con lo stesso nome d'istanza, alimentando [IN](glossario.qmd#gloss-d23) dalla condizione del passo.
+Per un [TON](/risorse/glossario/index.qmd#gloss-ton) da 3 s, un [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) alto per 2 s seguito da [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q)=0 non attiva Q. Una successiva attivazione riparte da zero. Nel programma il blocco va eseguito a ogni ciclo con lo stesso nome d'istanza, alimentando [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) dalla condizione del passo.
 
-**[SFC](glossario.qmd#gloss-d38).** Un timer può avere $IN=(s=S1)$; la sua uscita Q abilita la transizione da S1 a S2. Uscendo da S1, [IN](glossario.qmd#gloss-d23) torna falso e il [TON](glossario.qmd#gloss-d41) si resetta. Ogni temporizzazione indipendente richiede la propria istanza.
+**[SFC](/risorse/glossario/index.qmd#gloss-sfc).** Un timer può avere $IN=(s=S1)$; la sua uscita Q abilita la transizione da S1 a S2. Uscendo da S1, [IN](/risorse/glossario/index.qmd#gloss-in-pt-et-q) torna falso e il [TON](/risorse/glossario/index.qmd#gloss-ton) si resetta. Ogni temporizzazione indipendente richiede la propria istanza.
 
-**Esercizio.** [CU](glossario.qmd#gloss-d17) assume i valori $0,1,1,0,1,0,1$ senza reset, partendo da [CV](glossario.qmd#gloss-d17)=0.
+**Esercizio.** [CU](/risorse/glossario/index.qmd#gloss-cu-cv-pv) assume i valori $0,1,1,0,1,0,1$ senza reset, partendo da [CV](/risorse/glossario/index.qmd#gloss-cu-cv-pv)=0.
 
-*Soluzione:* [CV](glossario.qmd#gloss-d17) vale $0,1,1,1,2,2,3$. Con [PV](glossario.qmd#gloss-d17)=3, Q diventa vero all'ultimo passo.
+*Soluzione:* [CV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) vale $0,1,1,1,2,2,3$. Con [PV](/risorse/glossario/index.qmd#gloss-cu-cv-pv)=3, Q diventa vero all'ultimo passo.
 
 #### Tempo e numero di scansioni
 
-[PT](glossario.qmd#gloss-d23) si esprime in tempo, non in quantità di cicli. L'osservazione delle transizioni è comunque influenzata dal periodo della task e dai ritardi di acquisizione. Impulsi veloci richiedono ingressi e contatori adeguati.
+[PT](/risorse/glossario/index.qmd#gloss-in-pt-et-q) si esprime in tempo, non in quantità di cicli. L'osservazione delle transizioni è comunque influenzata dal periodo della task e dai ritardi di acquisizione. Impulsi veloci richiedono ingressi e contatori adeguati.
 
 ## U.D. 5.2 / Operazioni di conteggio {#ud:5.2}
 
-Il [CTU](glossario.qmd#gloss-d16) (Count Up) conta i [fronti di salita](glossario.qmd#gloss-d20). [CU](glossario.qmd#gloss-d17) è l'ingresso di conteggio, R il reset, [PV](glossario.qmd#gloss-d17) il valore prefissato, [CV](glossario.qmd#gloss-d17) il valore corrente e Q la segnalazione di soglia raggiunta.
+Il [CTU](/risorse/glossario/index.qmd#gloss-ctu) (Count Up) conta i [fronti di salita](/risorse/glossario/index.qmd#gloss-fronte-di-salita). [CU](/risorse/glossario/index.qmd#gloss-cu-cv-pv) è l'ingresso di conteggio, R il reset, [PV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) il valore prefissato, [CV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) il valore corrente e Q la segnalazione di soglia raggiunta.
 
-- Un [sensore](glossario.qmd#gloss-new43) mantenuto alto corrisponde a un solo fronte, non a un pezzo per ogni scansione.
+- Un [sensore](/risorse/glossario/index.qmd#gloss-sensore) mantenuto alto corrisponde a un solo fronte, non a un pezzo per ogni scansione.
 
 - Il reset riporta il conteggio alla condizione prevista dal blocco.
 
 - Impulsi più rapidi dell'acquisizione richiedono ingressi o contatori adatti.
 
-#### Cinque pezzi per lotto
+### Cinque pezzi per lotto
 
-Imposta [PV](glossario.qmd#gloss-d17) a 5 e collega il [sensore](glossario.qmd#gloss-new43) a [CU](glossario.qmd#gloss-d17). Registra [CV](glossario.qmd#gloss-d17) dopo ogni pezzo; osserva Q al quinto. Prova poi [sensore](glossario.qmd#gloss-new43) bloccato alto, reset e ripartenza del lotto.
+Imposta [PV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) a 5 e collega il [sensore](/risorse/glossario/index.qmd#gloss-sensore) a [CU](/risorse/glossario/index.qmd#gloss-cu-cv-pv). Registra [CV](/risorse/glossario/index.qmd#gloss-cu-cv-pv) dopo ogni pezzo; osserva Q al quinto. Prova poi [sensore](/risorse/glossario/index.qmd#gloss-sensore) bloccato alto, reset e ripartenza del lotto.
 
 ## U.D. 5.3 / Operazioni di confronto {#ud:5.3}
 
@@ -75,11 +76,11 @@ Un confronto trasforma una relazione fra numeri in un risultato booleano: maggio
 
 - Distingui soglia raggiunta e soglia superata.
 
-- Se la misura oscilla vicino alla soglia, una funzione con [isteresi](glossario.qmd#gloss-d24) usa livelli diversi per accensione e spegnimento.
+- Se la misura oscilla vicino alla soglia, una funzione con [isteresi](/risorse/glossario/index.qmd#gloss-isteresi) usa livelli diversi per accensione e spegnimento.
 
-[Esempio commentato: comando di ventilazione con [isteresi](glossario.qmd#gloss-d24)](approfondimenti.qmd#app:confronti).
+[Esempio commentato: comando di ventilazione con [isteresi](/risorse/glossario/index.qmd#gloss-isteresi)](approfondimenti.qmd#app:confronti).
 
-## U.D. 5.4 / Programmazione avanzata dei [PLC](glossario.qmd#gloss-d29) {#ud:5.4}
+## U.D. 5.4 / Programmazione avanzata dei [PLC](/risorse/glossario/index.qmd#gloss-plc) {#ud:5.4}
 
 Un programma cresce meglio se è diviso in funzioni leggibili: acquisizione, controlli di validità, sequenza e assegnazione delle uscite.
 
@@ -95,11 +96,11 @@ Un programma cresce meglio se è diviso in funzioni leggibili: acquisizione, con
 
 ## U.D. 5.5 / Aree di memoria e funzioni indirizzabili {#ud:5.5}
 
-- **Ingressi**: dati acquisiti dai dispositivi; **uscite**: valori destinati agli [attuatori](glossario.qmd#gloss-new44).
+- **Ingressi**: dati acquisiti dai dispositivi; **uscite**: valori destinati agli [attuatori](/risorse/glossario/index.qmd#gloss-attuatore).
 
 - **Memorie interne**: stati, risultati intermedi, conteggi e parametri.
 
-- **Tipi**: [BOOL](glossario.qmd#gloss-d14) per condizioni logiche, INT (Integer) per interi, [REAL](glossario.qmd#gloss-d14) per misure frazionarie, TIME per durate.
+- **Tipi**: [BOOL](/risorse/glossario/index.qmd#gloss-bool) per condizioni logiche, INT (Integer) per interi, [REAL](/risorse/glossario/index.qmd#gloss-real) per misure frazionarie, TIME per durate.
 
 - **Indirizzo e nome**: il nome spiega il significato; l'indirizzo individua la posizione o il canale.
 
@@ -111,17 +112,17 @@ Le istruzioni di controllo decidono quali operazioni eseguire: scelta condiziona
 
 - Una condizione IF esegue una parte di programma solo quando la condizione è vera.
 
-- Una selezione CASE associa azioni a valori distinti, per esempio agli stati di un [automa](glossario.qmd#gloss-d13).
+- Una selezione CASE associa azioni a valori distinti, per esempio agli stati di un [automa](/risorse/glossario/index.qmd#gloss-automa).
 
 - Un ciclo di istruzioni deve terminare in un tempo compatibile con la task.
 
-#### Non aspettare il [sensore](glossario.qmd#gloss-new43) in un ciclo infinito
+### Non aspettare il [sensore](/risorse/glossario/index.qmd#gloss-sensore) in un ciclo infinito
 
-Un ciclo che attende un ingresso può impedire il completamento della scansione. Rappresenta l'attesa con uno stato: il programma termina il ciclo corrente e ricontrolla il [sensore](glossario.qmd#gloss-new43) alla scansione successiva.
+Un ciclo che attende un ingresso può impedire il completamento della scansione. Rappresenta l'attesa con uno stato: il programma termina il ciclo corrente e ricontrolla il [sensore](/risorse/glossario/index.qmd#gloss-sensore) alla scansione successiva.
 
-## U.D. 5.7 / Operazioni di [interrupt](glossario.qmd#gloss-d7) {#ud:5.7}
+## U.D. 5.7 / Operazioni di [interrupt](/risorse/glossario/index.qmd#gloss-interrupt) {#ud:5.7}
 
-Un **[interrupt](glossario.qmd#gloss-d7)**, o interruzione, segnala un evento che può richiedere una gestione dedicata rispetto alla normale esecuzione ciclica.
+Un **[interrupt](/risorse/glossario/index.qmd#gloss-interrupt)**, o interruzione, segnala un evento che può richiedere una gestione dedicata rispetto alla normale esecuzione ciclica.
 
 - Associa l'evento a un compito breve e definito, secondo le funzioni del controllore.
 
@@ -129,37 +130,37 @@ Un **[interrupt](glossario.qmd#gloss-d7)**, o interruzione, segnala un evento ch
 
 - Evita scritture concorrenti non coordinate sulle stesse variabili.
 
-Esempio: registrare l'arrivo di un impulso e aggiornare un dato che il programma ciclico leggerà. Un fronte riconosciuto nel programma ordinario non equivale automaticamente a un [interrupt](glossario.qmd#gloss-d7) hardware.
+Esempio: registrare l'arrivo di un impulso e aggiornare un dato che il programma ciclico leggerà. Un fronte riconosciuto nel programma ordinario non equivale automaticamente a un [interrupt](/risorse/glossario/index.qmd#gloss-interrupt) hardware.
 
-## U.D. 5.8 / Operazioni di [scorrimento](glossario.qmd#gloss-d9) e [rotazione](glossario.qmd#gloss-d9) {#ud:5.8}
+## U.D. 5.8 / Operazioni di [scorrimento](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione) e [rotazione](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione) {#ud:5.8}
 
-Una parola è un insieme ordinato di [bit](glossario.qmd#gloss-new49). Lo **[scorrimento](glossario.qmd#gloss-d9)** sposta i [bit](glossario.qmd#gloss-new49); nell'esempio logico i posti liberati diventano zero e il [bit](glossario.qmd#gloss-new49) espulso si perde. La **[rotazione](glossario.qmd#gloss-d9)** riporta il [bit](glossario.qmd#gloss-new49) espulso all'altra estremità.
+Una parola è un insieme ordinato di [bit](/risorse/glossario/index.qmd#gloss-bit). Lo **[scorrimento](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione)** sposta i [bit](/risorse/glossario/index.qmd#gloss-bit); nell'esempio logico i posti liberati diventano zero e il [bit](/risorse/glossario/index.qmd#gloss-bit) espulso si perde. La **[rotazione](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione)** riporta il [bit](/risorse/glossario/index.qmd#gloss-bit) espulso all'altra estremità.
 
-#### Quattro [bit](glossario.qmd#gloss-new49), un posto verso sinistra
+### Quattro [bit](/risorse/glossario/index.qmd#gloss-bit), un posto verso sinistra
 
 Parola iniziale: `1001`.
 
-[Scorrimento](glossario.qmd#gloss-d9) logico a sinistra: `0010`.
+[Scorrimento](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione) logico a sinistra: `0010`.
 
-[Rotazione](glossario.qmd#gloss-d9) a sinistra: `0011`.
+[Rotazione](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione) a sinistra: `0011`.
 
-La larghezza della parola è parte dell'operazione. Un registro a [scorrimento](glossario.qmd#gloss-d9) può rappresentare l'avanzamento di pezzi lungo posizioni successive; l'avanzamento deve corrispondere a un evento del processo, non a ogni scansione.
+La larghezza della parola è parte dell'operazione. Un registro a [scorrimento](/risorse/glossario/index.qmd#gloss-scorrimento-rotazione) può rappresentare l'avanzamento di pezzi lungo posizioni successive; l'avanzamento deve corrispondere a un evento del processo, non a ogni scansione.
 
 ## U.D. 5.9 / Operazioni logiche booleane avanzate {#ud:5.9}
 
-Con parole di [bit](glossario.qmd#gloss-new49), AND, OR e XOR agiscono su ogni posizione. Una **[maschera](glossario.qmd#gloss-d8)** seleziona i [bit](glossario.qmd#gloss-new49) interessati.
+Con parole di [bit](/risorse/glossario/index.qmd#gloss-bit), AND, OR e XOR agiscono su ogni posizione. Una **[maschera](/risorse/glossario/index.qmd#gloss-maschera)** seleziona i [bit](/risorse/glossario/index.qmd#gloss-bit) interessati.
 
-- AND con una [maschera](glossario.qmd#gloss-d8) conserva soltanto le posizioni in cui la [maschera](glossario.qmd#gloss-d8) vale 1.
+- AND con una [maschera](/risorse/glossario/index.qmd#gloss-maschera) conserva soltanto le posizioni in cui la [maschera](/risorse/glossario/index.qmd#gloss-maschera) vale 1.
 
-- OR può impostare a 1 [bit](glossario.qmd#gloss-new49) selezionati.
+- OR può impostare a 1 [bit](/risorse/glossario/index.qmd#gloss-bit) selezionati.
 
-- XOR (Exclusive OR) inverte i [bit](glossario.qmd#gloss-new49) nelle posizioni selezionate.
+- XOR (Exclusive OR) inverte i [bit](/risorse/glossario/index.qmd#gloss-bit) nelle posizioni selezionate.
 
-#### Leggere un insieme di segnalazioni
+### Leggere un insieme di segnalazioni
 
-Per la parola `1010`, AND con `0010` dà `0010`: il [bit](glossario.qmd#gloss-new49) selezionato è attivo. XOR con `0010` dà invece `1000`: quel [bit](glossario.qmd#gloss-new49) viene invertito.
+Per la parola `1010`, AND con `0010` dà `0010`: il [bit](/risorse/glossario/index.qmd#gloss-bit) selezionato è attivo. XOR con `0010` dà invece `1000`: quel [bit](/risorse/glossario/index.qmd#gloss-bit) viene invertito.
 
-Le operazioni su una parola non sono la stessa cosa di un'unica condizione [BOOL](glossario.qmd#gloss-d14). Specifica tipo, larghezza e significato di ogni posizione.
+Le operazioni su una parola non sono la stessa cosa di un'unica condizione [BOOL](/risorse/glossario/index.qmd#gloss-bool). Specifica tipo, larghezza e significato di ogni posizione.
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-5.qmd)

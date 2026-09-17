@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Guida completa di laboratorio e sicurezza"
 ---
 

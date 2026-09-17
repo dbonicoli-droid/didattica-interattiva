@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettrotecnici
 title: "Modulo 3 / Principali componenti degli impianti elettrici"
 subtitle: "Panoramica del Programma"
 ---
@@ -21,15 +22,15 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:3}
 
-**Primo e secondo periodo**
+**Primo e secondo periodo · ore da definire**
 
-I componenti distribuiscono l'[energia](glossario.qmd#gloss-new58), collegano gli utilizzatori e ne comandano il funzionamento. Li riconosceremo attraverso funzione, simbolo e dati principali.
+I componenti distribuiscono l'[energia](/risorse/glossario/index.qmd#gloss-energia), collegano gli utilizzatori e ne comandano il funzionamento. Li riconosceremo attraverso funzione, simbolo e dati principali.
 
-## U.D. 3.1 / Cavi elettrici per [energia](glossario.qmd#gloss-new58) e segnale {#ud:3.1}
+## U.D. 3.1 / Cavi elettrici per [energia](/risorse/glossario/index.qmd#gloss-energia) e segnale {#ud:3.1}
 
 - Un cavo comprende conduttori, isolamento ed eventuali guaina e schermo.
 
-- **Cavi per [energia](glossario.qmd#gloss-new58)**: alimentano gli utilizzatori.
+- **Cavi per [energia](/risorse/glossario/index.qmd#gloss-energia)**: alimentano gli utilizzatori.
 
 - **Cavi per segnale**: trasportano informazioni; contano anche disturbi e caratteristiche di trasmissione.
 
@@ -41,17 +42,17 @@ I componenti distribuiscono l'[energia](glossario.qmd#gloss-new58), collegano gl
 
 Per un conduttore uniforme, a temperatura fissata: $$R=\rho\frac{\ell}{S}.$$
 
-- $R$: [resistenza](glossario.qmd#gloss-new56), in ohm ($\Omega$).
+- $R$: [resistenza](/risorse/glossario/index.qmd#gloss-resistenza), in ohm ($\Omega$).
 
-- $\rho$: [resistività](glossario.qmd#gloss-e38) del materiale, qui in $\Omega\,\mathrm{mm^2/m}$.
+- $\rho$: [resistività](/risorse/glossario/index.qmd#gloss-resistivita) del materiale, qui in $\Omega\,\mathrm{mm^2/m}$.
 
 - $\ell$: lunghezza del conduttore, in metri; $S$: sezione, in $\mathrm{mm^2}$.
 
-La sezione influenza [resistenza](glossario.qmd#gloss-new56) e riscaldamento. La scelta reale dipende anche da [corrente](glossario.qmd#gloss-new55), posa, temperatura, raggruppamento, isolamento, caduta di [tensione](glossario.qmd#gloss-new54) e coordinamento delle protezioni.
+La sezione influenza [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) e riscaldamento. La scelta reale dipende anche da [corrente](/risorse/glossario/index.qmd#gloss-corrente), posa, temperatura, raggruppamento, isolamento, caduta di [tensione](/risorse/glossario/index.qmd#gloss-tensione) e coordinamento delle protezioni.
 
-#### Per approfondire
+### Per approfondire
 
-Un cavo più lungo ha una [resistenza](glossario.qmd#gloss-new56) maggiore; aumentando la sezione, la [resistenza](glossario.qmd#gloss-new56) diminuisce. [Calcola caduta di [tensione](glossario.qmd#gloss-new54) e perdite con un esempio guidato](approfondimenti.qmd#app:cavi) (p. ).
+Un cavo più lungo ha una [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) maggiore; aumentando la sezione, la [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) diminuisce. [Calcola caduta di [tensione](/risorse/glossario/index.qmd#gloss-tensione) e perdite con un esempio guidato](approfondimenti.qmd#app:cavi).
 
 ## Proteggere i percorsi e collegare gli utilizzatori {#topic:4}
 
@@ -77,19 +78,19 @@ Nel disegno si indicano percorsi, cassette e identificativi. Non si sceglie un t
 
 - Prese e spine permettono collegamenti separabili.
 
-- Leggi [tensione](glossario.qmd#gloss-new54) e [corrente](glossario.qmd#gloss-new55) nominali, connessione e condizioni d'impiego.
+- Leggi [tensione](/risorse/glossario/index.qmd#gloss-tensione) e [corrente](/risorse/glossario/index.qmd#gloss-corrente) nominali, connessione e condizioni d'impiego.
 
-- Negli apparecchi di classe I, il [contatto](glossario.qmd#gloss-e10) di terra collega le masse al conduttore di protezione.
+- Negli apparecchi di classe I, il [contatto](/risorse/glossario/index.qmd#gloss-contatto) di terra collega le masse al conduttore di protezione.
 
-#### Tre funzioni da distinguere
+### Tre funzioni da distinguere
 
-**Conduttore di protezione ([PE](glossario.qmd#gloss-e35), Protective Earth):** contribuisce alla protezione in caso di guasto dell'isolamento.
+**Conduttore di protezione ([PE](/risorse/glossario/index.qmd#gloss-pe), Protective Earth):** contribuisce alla protezione in caso di guasto dell'isolamento.
 
-**[Magnetotermico](glossario.qmd#gloss-e30):** interviene per sovracorrenti, secondo le proprie caratteristiche.
+**[Magnetotermico](/risorse/glossario/index.qmd#gloss-magnetotermico):** interviene per sovracorrenti, secondo le proprie caratteristiche.
 
-**[Differenziale](glossario.qmd#gloss-e14):** rileva uno squilibrio fra le correnti nei conduttori attivi. Un [differenziale](glossario.qmd#gloss-e14) puro non protegge dal [sovraccarico](glossario.qmd#gloss-new60).
+**[Differenziale](/risorse/glossario/index.qmd#gloss-differenziale):** rileva uno squilibrio fra le correnti nei conduttori attivi. Un [differenziale](/risorse/glossario/index.qmd#gloss-differenziale) puro non protegge dal [sovraccarico](/risorse/glossario/index.qmd#gloss-sovraccarico).
 
-#### Stimare la [corrente](glossario.qmd#gloss-new55) di un [carico](glossario.qmd#gloss-e4)
+#### Stimare la [corrente](/risorse/glossario/index.qmd#gloss-corrente) di un [carico](/risorse/glossario/index.qmd#gloss-carico)
 
 Per un carico resistivo: **potenza \[W\] = tensione \[V\] $\times$ corrente \[A\]**. In alternata usiamo i valori efficaci di tensione e corrente. Indicandoli con $V$ e $I$, e indicando la potenza con $P$: $$P=V I\qquad\Longrightarrow\qquad I=\frac{P}{V}.$$
 
@@ -97,31 +98,31 @@ Per un carico resistivo: **potenza \[W\] = tensione \[V\] $\times$ corrente \[A\
 ![Schema didattico 9](/assets/dispense/tpsee-elettrotecnici/figura-9.png){fig-alt="Schema didattico 9 della dispensa TPSEE · Elettrotecnici"}
 :::
 
-Per un utilizzatore resistivo monofase da 1500 W a 230 V: $$I\simeq\frac{P}{V}=\frac{1500}{230}=6{,}52\,\mathrm A.$$ La stima aiuta a leggere i dati di targa. Non dimostra da sola l'idoneità di una presa o di una prolunga: contano anche stato, installazione e [carico](glossario.qmd#gloss-e4) complessivo. Per carichi non resistivi la [potenza](glossario.qmd#gloss-new57) attiva dipende anche dal fattore di [potenza](glossario.qmd#gloss-new57).
+Per un utilizzatore resistivo monofase da 1500 W a 230 V: $$I\simeq\frac{P}{V}=\frac{1500}{230}=6{,}52\,\mathrm A.$$ La stima aiuta a leggere i dati di targa. Non dimostra da sola l'idoneità di una presa o di una prolunga: contano anche stato, installazione e [carico](/risorse/glossario/index.qmd#gloss-carico) complessivo. Per carichi non resistivi la [potenza](/risorse/glossario/index.qmd#gloss-potenza) attiva dipende anche dal fattore di [potenza](/risorse/glossario/index.qmd#gloss-potenza).
 
-**Domanda.** Perché una presa multipla non aumenta la [potenza](glossario.qmd#gloss-new57) disponibile?
+**Domanda.** Perché una presa multipla non aumenta la [potenza](/risorse/glossario/index.qmd#gloss-potenza) disponibile?
 
 *Risposta: i carichi continuano a gravare sullo stesso collegamento a monte.*
 
 ## Comandare una luce da più punti {#topic:5}
 
-## U.D. 3.4 / Interruttore di comando unipolare e bipolare, [deviatore](glossario.qmd#gloss-e11), [invertitore](glossario.qmd#gloss-e23) {#ud:3.4}
+## U.D. 3.4 / Interruttore di comando unipolare e bipolare, [deviatore](/risorse/glossario/index.qmd#gloss-deviatore), [invertitore](/risorse/glossario/index.qmd#gloss-invertitore) {#ud:3.4}
 
 - **Interruttore unipolare**: apre o chiude un conduttore.
 
 - **Interruttore bipolare**: agisce su due poli con comando meccanicamente solidale.
 
-- **[Deviatore](glossario.qmd#gloss-e11)**: collega il [morsetto](glossario.qmd#gloss-e32) comune a una di due vie.
+- **[Deviatore](/risorse/glossario/index.qmd#gloss-deviatore)**: collega il [morsetto](/risorse/glossario/index.qmd#gloss-morsetto) comune a una di due vie.
 
-- **[Invertitore](glossario.qmd#gloss-e23)**: mantiene diritti o incrocia due collegamenti, fra due [deviatori](glossario.qmd#gloss-e11).
+- **[Invertitore](/risorse/glossario/index.qmd#gloss-invertitore)**: mantiene diritti o incrocia due collegamenti, fra due [deviatori](/risorse/glossario/index.qmd#gloss-deviatore).
 
-Con due [deviatori](glossario.qmd#gloss-e11) si comanda una luce da due punti. Per tre punti si aggiunge un [invertitore](glossario.qmd#gloss-e23); per quattro, due [invertitori](glossario.qmd#gloss-e23) fra i [deviatori](glossario.qmd#gloss-e11) terminali.
+Con due [deviatori](/risorse/glossario/index.qmd#gloss-deviatore) si comanda una luce da due punti. Per tre punti si aggiunge un [invertitore](/risorse/glossario/index.qmd#gloss-invertitore); per quattro, due [invertitori](/risorse/glossario/index.qmd#gloss-invertitore) fra i [deviatori](/risorse/glossario/index.qmd#gloss-deviatore) terminali.
 
 ::: center
 ![Schema didattico 10](/assets/dispense/tpsee-elettrotecnici/figura-10.png){fig-alt="Schema didattico 10 della dispensa TPSEE · Elettrotecnici"}
 :::
 
-*Modello didattico: entrambi i [deviatori](glossario.qmd#gloss-e11) selezionano la via 0, quindi il [circuito](glossario.qmd#gloss-e46) è chiuso.*
+*Modello didattico: entrambi i [deviatori](/risorse/glossario/index.qmd#gloss-deviatore) selezionano la via 0, quindi il [circuito](/risorse/glossario/index.qmd#gloss-circuito) è chiuso.*
 
    **A**   **B**   **Luce**  **Motivo**
   ------- ------- ---------- ------------------------------
@@ -130,11 +131,11 @@ Con due [deviatori](glossario.qmd#gloss-e11) si comanda una luce da due punti. P
      1       0      Spenta   Il percorso è interrotto.
      1       1      Accesa   È selezionata la stessa via.
 
-#### Il comando dipende dallo stato complessivo
+### Il comando dipende dallo stato complessivo
 
-La posizione di un singolo [deviatore](glossario.qmd#gloss-e11) non significa sempre "acceso" o "spento". Cambiare uno dei due comandi inverte lo stato della lampada. La tabella dipende dalla convenzione scelta per le vie.
+La posizione di un singolo [deviatore](/risorse/glossario/index.qmd#gloss-deviatore) non significa sempre "acceso" o "spento". Cambiare uno dei due comandi inverte lo stato della lampada. La tabella dipende dalla convenzione scelta per le vie.
 
-**Laboratorio.** Sul banco didattico verifica le quattro combinazioni, poi inserisci un [invertitore](glossario.qmd#gloss-e23) e controlla che anche il terzo comando cambi sempre lo stato della luce. Registra le otto combinazioni possibili.
+**Laboratorio.** Sul banco didattico verifica le quattro combinazioni, poi inserisci un [invertitore](/risorse/glossario/index.qmd#gloss-invertitore) e controlla che anche il terzo comando cambi sempre lo stato della luce. Registra le otto combinazioni possibili.
 
 
 ![Comando da tre punti: invertitore fra i due deviatori.](/assets/fondamenti/invertitore.svg)
@@ -145,9 +146,9 @@ La posizione di un singolo [deviatore](glossario.qmd#gloss-e11) non significa se
 
 ## U.D. 3.5 / Relè interruttore e relè commutatore {#ud:3.5}
 
-Il relè separa la funzione di comando dalla commutazione del [carico](glossario.qmd#gloss-e4). Una [bobina](glossario.qmd#gloss-e2) o un [circuito](glossario.qmd#gloss-e46) elettronico riceve il comando; i [contatti](glossario.qmd#gloss-e10) agiscono sul [circuito](glossario.qmd#gloss-e46) utilizzatore. Le prestazioni e l'eventuale isolamento dipendono dal dispositivo.
+Il relè separa la funzione di comando dalla commutazione del [carico](/risorse/glossario/index.qmd#gloss-carico). Una [bobina](/risorse/glossario/index.qmd#gloss-bobina) o un [circuito](/risorse/glossario/index.qmd#gloss-circuito) elettronico riceve il comando; i [contatti](/risorse/glossario/index.qmd#gloss-contatto) agiscono sul [circuito](/risorse/glossario/index.qmd#gloss-circuito) utilizzatore. Le prestazioni e l'eventuale isolamento dipendono dal dispositivo.
 
-- **[Relè interruttore](glossario.qmd#gloss-e37) a impulsi**: alterna apertura e chiusura; mantiene lo stato fra due comandi.
+- **[Relè interruttore](/risorse/glossario/index.qmd#gloss-rele-a-impulsi) a impulsi**: alterna apertura e chiusura; mantiene lo stato fra due comandi.
 
 - **Relè commutatore a impulsi**: segue una sequenza di uscite definita dal costruttore.
 
@@ -161,13 +162,13 @@ Il relè separa la funzione di comando dalla commutazione del [carico](glossario
 ![Schema didattico 12](/assets/dispense/tpsee-elettrotecnici/figura-12.png){fig-alt="Schema didattico 12 della dispensa TPSEE · Elettrotecnici"}
 :::
 
-*[Relè interruttore](glossario.qmd#gloss-e37) ideale, inizialmente spento: ogni impulso cambia lo stato una sola volta.*
+*[Relè interruttore](/risorse/glossario/index.qmd#gloss-rele-a-impulsi) ideale, inizialmente spento: ogni impulso cambia lo stato una sola volta.*
 
-#### Una sequenza di commutazione possibile
+### Una sequenza di commutazione possibile
 
-Un dispositivo per due gruppi di lampade può realizzare: $$00\longrightarrow10\longrightarrow11\longrightarrow01\longrightarrow00.$$ Il primo [bit](glossario.qmd#gloss-e1) indica il gruppo A, il secondo il gruppo B; 1 significa acceso. Dopo tre impulsi, partendo da 00, è acceso soltanto B. Questa è una sequenza d'esempio: va sempre letta la tabella del relè impiegato.
+Un dispositivo per due gruppi di lampade può realizzare: $$00\longrightarrow10\longrightarrow11\longrightarrow01\longrightarrow00.$$ Il primo [bit](/risorse/glossario/index.qmd#gloss-bit) indica il gruppo A, il secondo il gruppo B; 1 significa acceso. Dopo tre impulsi, partendo da 00, è acceso soltanto B. Questa è una sequenza d'esempio: va sempre letta la tabella del relè impiegato.
 
-**Prova tu.** Un [relè interruttore](glossario.qmd#gloss-e37) parte acceso e riceve cinque impulsi.
+**Prova tu.** Un [relè interruttore](/risorse/glossario/index.qmd#gloss-rele-a-impulsi) parte acceso e riceve cinque impulsi.
 
 *Risposta: finisce spento. Un numero dispari di impulsi inverte lo stato iniziale; un numero pari lo ripristina.*
 
@@ -189,17 +190,17 @@ Questi servizi associano comandi, alimentazione e utilizzatori diversi. Il **tem
 
 *Architettura funzionale semplificata; connessioni e tensioni dipendono dal sistema.*
 
-#### Ragionare sul tempo
+### Ragionare sul tempo
 
 Un temporizzatore è impostato a 90 s. Il comando arriva a $t=0$ e di nuovo a $t=40$ s. Se il dispositivo riparte da zero a ogni comando, la luce si spegne a $t=130$ s. Se ignora il secondo comando, si spegne a $t=90$ s.
 
-## U.D. 3.7 / Livelli prestazionali degli [impianti](glossario.qmd#gloss-e47) elettrici {#ud:3.7}
+## U.D. 3.7 / Livelli prestazionali degli [impianti](/risorse/glossario/index.qmd#gloss-impianto) elettrici {#ud:3.7}
 
-Per gli [impianti](glossario.qmd#gloss-e47) residenziali il capitolo 37 della [CEI](glossario.qmd#gloss-e6) 64-8 distingue tre livelli di dotazione e fruibilità: **1, base**; **2, standard**; **3, domotico**. Aumentano servizi e possibilità di gestione secondo i requisiti previsti.
+Per gli [impianti](/risorse/glossario/index.qmd#gloss-impianto) residenziali il capitolo 37 della [CEI](/risorse/glossario/index.qmd#gloss-cei) 64-8 distingue tre livelli di dotazione e fruibilità: **1, base**; **2, standard**; **3, domotico**. Aumentano servizi e possibilità di gestione secondo i requisiti previsti.
 
-#### Prestazione e sicurezza sono dimensioni diverse
+### Prestazione e sicurezza sono dimensioni diverse
 
-Tutti i livelli richiedono sicurezza. Un [impianto](glossario.qmd#gloss-e47) di livello base non è autorizzato a essere meno sicuro. Aggiungere un singolo dispositivo intelligente non basta a dichiarare raggiunto un livello superiore: occorre verificare l'insieme delle dotazioni richieste.
+Tutti i livelli richiedono sicurezza. Un [impianto](/risorse/glossario/index.qmd#gloss-impianto) di livello base non è autorizzato a essere meno sicuro. Aggiungere un singolo dispositivo intelligente non basta a dichiarare raggiunto un livello superiore: occorre verificare l'insieme delle dotazioni richieste.
 
 **Attività.** Confronta due abitazioni immaginarie: una con comandi locali e una con gestione coordinata di luci e carichi. Elenca le funzioni, senza attribuire un livello finché non hai verificato tutti i requisiti applicabili.
 

@@ -1,4 +1,5 @@
 ---
+sidebar: tpsee-elettronici
 title: "Moduli del percorso"
 search: false
 toc: false

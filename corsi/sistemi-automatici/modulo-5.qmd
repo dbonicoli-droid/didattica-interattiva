@@ -1,4 +1,5 @@
 ---
+sidebar: sistemi-automatici
 title: "Modulo 5 / Circuiti sequenziali"
 subtitle: "Panoramica del Programma"
 ---
@@ -22,39 +23,39 @@ Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 []{#mod:5}
 
-**Secondo pentamestre · 24 ore**
+**Secondo periodo · 24 ore**
 
-La memoria permette di reagire alla storia del processo. [Stati](glossario.qmd#gloss-s24) e transizioni rendono esplicite le regole.
+La memoria permette di reagire alla storia del processo. [Stati](/risorse/glossario/index.qmd#gloss-stato) e transizioni rendono esplicite le regole.
 
 ## U.D. 5.1 / Circuiti sequenziali e automi {#ud:5.1}
 
-Un [comando sequenziale](glossario.qmd#gloss-s49) dipende dagli [ingressi](glossario.qmd#gloss-s9) e dallo [stato](glossario.qmd#gloss-s24) memorizzato. Un [automa](glossario.qmd#gloss-s59) descrive questa memoria con [stati](glossario.qmd#gloss-s24) e regole per passare dall'uno all'altro.
+Un [comando sequenziale](/risorse/glossario/index.qmd#gloss-comando-sequenziale) dipende dagli [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) e dallo [stato](/risorse/glossario/index.qmd#gloss-stato) memorizzato. Un [automa](/risorse/glossario/index.qmd#gloss-automa) descrive questa memoria con [stati](/risorse/glossario/index.qmd#gloss-stato) e regole per passare dall'uno all'altro.
 
-- **[Stato](glossario.qmd#gloss-s24) iniziale**: per esempio FERMO.
+- **[Stato](/risorse/glossario/index.qmd#gloss-stato) iniziale**: per esempio FERMO.
 
 - **Transizione**: da FERMO a MARCIA quando arriva una richiesta valida.
 
-- **[Uscita](glossario.qmd#gloss-s26)**: per esempio comando motore attivo soltanto in MARCIA.
+- **[Uscita](/risorse/glossario/index.qmd#gloss-uscita)**: per esempio comando motore attivo soltanto in MARCIA.
 
 - **Priorità**: l'arresto prevale sulla marcia se arrivano insieme.
 
-Una [tabella di verità](glossario.qmd#gloss-s50) dei soli [ingressi](glossario.qmd#gloss-s9) non basta: con il pulsante rilasciato il motore può essere fermo oppure in marcia, secondo ciò che è avvenuto prima.
+Una [tabella di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita) dei soli [ingressi](/risorse/glossario/index.qmd#gloss-ingresso) non basta: con il pulsante rilasciato il motore può essere fermo oppure in marcia, secondo ciò che è avvenuto prima.
 
-## U.D. 5.2 / Diagramma degli [stati](glossario.qmd#gloss-s24) e delle [uscite](glossario.qmd#gloss-s26) {#ud:5.2}
+## U.D. 5.2 / Diagramma degli [stati](/risorse/glossario/index.qmd#gloss-stato) e delle [uscite](/risorse/glossario/index.qmd#gloss-uscita) {#ud:5.2}
 
-Definiamo $S$ come richiesta di avvio e $R$ come richiesta di arresto, entrambe attive a 1. Definiamo $M$ come comando motore. Lo [stato](glossario.qmd#gloss-s24) iniziale è FERMO e l'arresto ha priorità.
+Definiamo $S$ come richiesta di avvio e $R$ come richiesta di arresto, entrambe attive a 1. Definiamo $M$ come comando motore. Lo [stato](/risorse/glossario/index.qmd#gloss-stato) iniziale è FERMO e l'arresto ha priorità.
 
 ::: center
 ![Schema didattico 15](/assets/dispense/sistemi-automatici/figura-15.png){fig-alt="Schema didattico 15 della dispensa Sistemi automatici"}
 :::
 
-Se nessuna condizione di transizione è vera, lo [stato](glossario.qmd#gloss-s24) resta invariato. Le etichette nei blocchi indicano anche l'[uscita](glossario.qmd#gloss-s26) associata allo [stato](glossario.qmd#gloss-s24).
+Se nessuna condizione di transizione è vera, lo [stato](/risorse/glossario/index.qmd#gloss-stato) resta invariato. Le etichette nei blocchi indicano anche l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) associata allo [stato](/risorse/glossario/index.qmd#gloss-stato).
 
-## U.D. 5.3 / Tabella degli [stati](glossario.qmd#gloss-s24) e delle [uscite](glossario.qmd#gloss-s26) {#ud:5.3}
+## U.D. 5.3 / Tabella degli [stati](/risorse/glossario/index.qmd#gloss-stato) e delle [uscite](/risorse/glossario/index.qmd#gloss-uscita) {#ud:5.3}
 
-La tabella esprime le stesse regole del diagramma. $S$, $R$ e $M$ hanno il significato introdotto nella [U.D. 5.2](modulo-5.qmd#ud:5.2); l'[uscita](glossario.qmd#gloss-s26) qui riportata è quella associata allo [stato](glossario.qmd#gloss-s24) successivo.
+La tabella esprime le stesse regole del diagramma. $S$, $R$ e $M$ hanno il significato introdotto nella [U.D. 5.2](modulo-5.qmd#ud:5.2); l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) qui riportata è quella associata allo [stato](/risorse/glossario/index.qmd#gloss-stato) successivo.
 
-  [Stato](glossario.qmd#gloss-s24) attuale     $S$    $R$  [Stato](glossario.qmd#gloss-s24) successivo    $M$
+  [Stato](/risorse/glossario/index.qmd#gloss-stato) attuale     $S$    $R$  [Stato](/risorse/glossario/index.qmd#gloss-stato) successivo    $M$
   ------------------------------------------ ------- ----- --------------------------------------------- -----
   FERMO                                         0      0   FERMO                                           0
   FERMO                                         1      0   MARCIA                                          1
@@ -65,15 +66,15 @@ Ogni combinazione deve avere un esito definito. La scrittura «0 o 1» abbrevia 
 
 ## U.D. 5.4 / Applicare diagrammi e tabelle agli automatismi {#ud:5.4}
 
-#### Prima le regole, poi il programma
+### Prima le regole, poi il programma
 
-Per un nastro trasportatore, prepara una traccia: avvio, rilascio dell'avvio, arresto, avvio e arresto simultanei. Annota lo [stato](glossario.qmd#gloss-s24) dopo ogni evento. Ripeti la prova a partire da FERMO e da MARCIA.
+Per un nastro trasportatore, prepara una traccia: avvio, rilascio dell'avvio, arresto, avvio e arresto simultanei. Annota lo [stato](/risorse/glossario/index.qmd#gloss-stato) dopo ogni evento. Ripeti la prova a partire da FERMO e da MARCIA.
 
-Per distinguere due direzioni di moto servono, per esempio, FERMO, AVANTI e INDIETRO. Uno [stato](glossario.qmd#gloss-s24) unico impedisce di rappresentare contemporaneamente entrambe le direzioni. La [U.D. 5.7](modulo-5.qmd#ud:5.7) sviluppa questo caso con schema e prove.
+Per distinguere due direzioni di moto servono, per esempio, FERMO, AVANTI e INDIETRO. Uno [stato](/risorse/glossario/index.qmd#gloss-stato) unico impedisce di rappresentare contemporaneamente entrambe le direzioni. La [U.D. 5.7](modulo-5.qmd#ud:5.7) sviluppa questo caso con schema e prove.
 
-## U.D. 5.5 / Implementazione sequenziale in [Ladder](glossario.qmd#gloss-s12) {#ud:5.5}
+## U.D. 5.5 / Implementazione sequenziale in [Ladder](/risorse/glossario/index.qmd#gloss-ladder) {#ud:5.5}
 
-[]{#topic:8 label="topic:8"}Un [comando sequenziale](glossario.qmd#gloss-s49) possiede memoria. Nel circuito di marcia e arresto, il pulsante Start si rilascia ma il comando rimane attivo grazie all'**[autoritenuta](glossario.qmd#gloss-s2)**. Con $P=\mathtt{StopOK}$, $S=\mathtt{Start}$ e $Q$ memoria: $Q_k$ è lo [stato](glossario.qmd#gloss-s24) attuale e $Q_{k+1}$ quello dopo il passo di calcolo; $P_k$ e $S_k$ sono i valori dei comandi nello stesso passo. $$Q_{k+1}=P_k(S_k+Q_k).$$ Se $P=0$, il risultato è sempre 0: l'arresto ha priorità sulla marcia.
+[]{#topic:8 label="topic:8"}Un [comando sequenziale](/risorse/glossario/index.qmd#gloss-comando-sequenziale) possiede memoria. Nel circuito di marcia e arresto, il pulsante Start si rilascia ma il comando rimane attivo grazie all'**[autoritenuta](/risorse/glossario/index.qmd#gloss-autoritenuta)**. Con $P=\mathtt{StopOK}$, $S=\mathtt{Start}$ e $Q$ memoria: $Q_k$ è lo [stato](/risorse/glossario/index.qmd#gloss-stato) attuale e $Q_{k+1}$ quello dopo il passo di calcolo; $P_k$ e $S_k$ sono i valori dei comandi nello stesso passo. $$Q_{k+1}=P_k(S_k+Q_k).$$ Se $P=0$, il risultato è sempre 0: l'arresto ha priorità sulla marcia.
 
 ::: center
 ![Schema didattico 16](/assets/dispense/sistemi-automatici/figura-16.png){fig-alt="Schema didattico 16 della dispensa Sistemi automatici"}
@@ -83,66 +84,66 @@ Per distinguere due direzioni di moto servono, per esempio, FERMO, AVANTI e INDI
   ----- ------- ------- --------------------------------------------
     0    0 o 1   0 o 1  0: arresto prioritario (quattro righe).
     1      0       0    0: resta fermo.
-    1      0       1    1: [autoritenuta](glossario.qmd#gloss-s2).
+    1      0       1    1: [autoritenuta](/risorse/glossario/index.qmd#gloss-autoritenuta).
     1      1       0    1: avvio.
     1      1       1    1: resta in marcia.
 
-Con ordine $PSQ$, la mappa degli [stati](glossario.qmd#gloss-s24) futuri contiene 1 agli indici 5, 6, 7; la minimizzazione restituisce $PS+PQ$. Nella mappa entra anche lo [stato](glossario.qmd#gloss-s24) attuale: una tabella dei soli pulsanti non descrive la memoria.
+Con ordine $PSQ$, la mappa degli [stati](/risorse/glossario/index.qmd#gloss-stato) futuri contiene 1 agli indici 5, 6, 7; la minimizzazione restituisce $PS+PQ$. Nella mappa entra anche lo [stato](/risorse/glossario/index.qmd#gloss-stato) attuale: una tabella dei soli pulsanti non descrive la memoria.
 
-#### Sequenza prevista
+### Sequenza prevista
 
 Partenza: $Q=0$, $P=1$. Un impulso $S=1$ porta $Q$ a 1. Rilasciando Start, $S=0$ e $Q$ resta 1. Premendo Stop, $P=0$ e $Q$ torna 0. Rilasciando Stop con $S=0$, non riparte.
 
-**[Interblocco](glossario.qmd#gloss-s10).** Due comandi incompatibili devono escludersi. La logica deve definire anche richieste simultanee e cambio di direzione, oltre al caso ordinario. La [U.D. 5.7](modulo-5.qmd#ud:5.7) sviluppa un esempio con [stato](glossario.qmd#gloss-s24) unico.
+**[Interblocco](/risorse/glossario/index.qmd#gloss-interblocco).** Due comandi incompatibili devono escludersi. La logica deve definire anche richieste simultanee e cambio di direzione, oltre al caso ordinario. La [U.D. 5.7](modulo-5.qmd#ud:5.7) sviluppa un esempio con [stato](/risorse/glossario/index.qmd#gloss-stato) unico.
 
 ## U.D. 5.6 / Implementazione sequenziale in Testo strutturato e Instruction List {#ud:5.6}
 
-La memoria `Marcia`, di tipo [BOOL](glossario.qmd#gloss-s29) e inizialmente falsa, conserva il comando. `Start` richiede l'avvio, `Stop` richiede l'arresto: entrambi sono veri quando la richiesta è presente.
+La memoria `Marcia`, di tipo [BOOL](/risorse/glossario/index.qmd#gloss-bool) e inizialmente falsa, conserva il comando. `Start` richiede l'avvio, `Stop` richiede l'arresto: entrambi sono veri quando la richiesta è presente.
 
-> Marcia := (Start [OR](glossario.qmd#gloss-s52) Marcia) [AND](glossario.qmd#gloss-s52) [NOT](glossario.qmd#gloss-s52) Stop;
+> Marcia := (Start [OR](/risorse/glossario/index.qmd#gloss-or) Marcia) [AND](/risorse/glossario/index.qmd#gloss-and) [NOT](/risorse/glossario/index.qmd#gloss-not) Stop;
 
-Il valore di `Marcia` a destra è quello prima dell'assegnazione. In [IL](glossario.qmd#gloss-s56):
+Il valore di `Marcia` a destra è quello prima dell'assegnazione. In [IL](/risorse/glossario/index.qmd#gloss-il):
 
-> [LD](glossario.qmd#gloss-s34) Start\
-> [OR](glossario.qmd#gloss-s52) Marcia\
+> [LD](/risorse/glossario/index.qmd#gloss-ld) Start\
+> [OR](/risorse/glossario/index.qmd#gloss-or) Marcia\
 > ANDN Stop\
-> [ST](glossario.qmd#gloss-s55) Marcia
+> [ST](/risorse/glossario/index.qmd#gloss-st) Marcia
 
-`ANDN` combina il risultato con la negazione dell'operando. Se Stop è vero, Marcia diventa falsa anche con Start vero. Questa è una memoria con priorità all'arresto, non un circuito di sicurezza. Per automi con più [stati](glossario.qmd#gloss-s24) conviene una [variabile](glossario.qmd#gloss-s27) di [stato](glossario.qmd#gloss-s24) e una tabella delle transizioni, mantenendo separate la scelta dello [stato](glossario.qmd#gloss-s24) successivo e l'assegnazione delle [uscite](glossario.qmd#gloss-s26).
+`ANDN` combina il risultato con la negazione dell'operando. Se Stop è vero, Marcia diventa falsa anche con Start vero. Questa è una memoria con priorità all'arresto, non un circuito di sicurezza. Per automi con più [stati](/risorse/glossario/index.qmd#gloss-stato) conviene una [variabile](/risorse/glossario/index.qmd#gloss-variabile) di [stato](/risorse/glossario/index.qmd#gloss-stato) e una tabella delle transizioni, mantenendo separate la scelta dello [stato](/risorse/glossario/index.qmd#gloss-stato) successivo e l'assegnazione delle [uscite](/risorse/glossario/index.qmd#gloss-uscita).
 
-## U.D. 5.7 / Schemi sequenziali: mantenimento, [interblocco](glossario.qmd#gloss-s10) e inversione {#ud:5.7}
+## U.D. 5.7 / Schemi sequenziali: mantenimento, [interblocco](/risorse/glossario/index.qmd#gloss-interblocco) e inversione {#ud:5.7}
 
-Marcia e arresto riprendono l'[autoritenuta](glossario.qmd#gloss-s2) della [U.D. 5.5](modulo-5.qmd#ud:5.5). Per l'inversione scegliamo un [modello](glossario.qmd#gloss-s15) con tre [stati](glossario.qmd#gloss-s24) mutuamente esclusivi: 0 fermo, 1 avanti, 2 indietro. Il cambio di direzione passa sempre dallo [stato](glossario.qmd#gloss-s24) fermo.
+Marcia e arresto riprendono l'[autoritenuta](/risorse/glossario/index.qmd#gloss-autoritenuta) della [U.D. 5.5](modulo-5.qmd#ud:5.5). Per l'inversione scegliamo un [modello](/risorse/glossario/index.qmd#gloss-modello) con tre [stati](/risorse/glossario/index.qmd#gloss-stato) mutuamente esclusivi: 0 fermo, 1 avanti, 2 indietro. Il cambio di direzione passa sempre dallo [stato](/risorse/glossario/index.qmd#gloss-stato) fermo.
 
 ::: center
 ![Schema didattico 17](/assets/dispense/sistemi-automatici/figura-17.png){fig-alt="Schema didattico 17 della dispensa Sistemi automatici"}
 :::
 
-*$A$ e $B$: richieste di direzione; $P=\mathtt{StopOK}$. In assenza di transizione si mantiene lo [stato](glossario.qmd#gloss-s24).*
+*$A$ e $B$: richieste di direzione; $P=\mathtt{StopOK}$. In assenza di transizione si mantiene lo [stato](/risorse/glossario/index.qmd#gloss-stato).*
 
-#### Priorità esplicite
+### Priorità esplicite
 
-Se $P=0$, si va a fermo. Se si è fermi e $P=1$, si accetta solo una richiesta esclusiva; $A=B=1$ lascia fermo il comando. Durante la marcia si ignora la richiesta opposta finché non interviene l'arresto. Dopo Stop, l'avvio richiede le condizioni della prima riga di scelta; questo [modello](glossario.qmd#gloss-s15) non comprende un riarmo su fronte.
+Se $P=0$, si va a fermo. Se si è fermi e $P=1$, si accetta solo una richiesta esclusiva; $A=B=1$ lascia fermo il comando. Durante la marcia si ignora la richiesta opposta finché non interviene l'arresto. Dopo Stop, l'avvio richiede le condizioni della prima riga di scelta; questo [modello](/risorse/glossario/index.qmd#gloss-modello) non comprende un riarmo su fronte.
 
-Le [uscite](glossario.qmd#gloss-s26) sono $K_A=P\land(\mathtt{State}=1)$ e $K_B=P\land(\mathtt{State}=2)$. Nel [Ladder](glossario.qmd#gloss-s12) si possono usare confronti dello [stato](glossario.qmd#gloss-s24) e reti di transizione. Si calcola prima lo [stato](glossario.qmd#gloss-s24) successivo e lo si assegna una sola volta a fine ciclo.
+Le [uscite](/risorse/glossario/index.qmd#gloss-uscita) sono $K_A=P\land(\mathtt{State}=1)$ e $K_B=P\land(\mathtt{State}=2)$. Nel [Ladder](/risorse/glossario/index.qmd#gloss-ladder) si possono usare confronti dello [stato](/risorse/glossario/index.qmd#gloss-stato) e reti di transizione. Si calcola prima lo [stato](/risorse/glossario/index.qmd#gloss-stato) successivo e lo si assegna una sola volta a fine ciclo.
 
 ::: center
 ![Schema didattico 18](/assets/dispense/sistemi-automatici/figura-18.png){fig-alt="Schema didattico 18 della dispensa Sistemi automatici"}
 :::
 
-*Reti [Ladder](glossario.qmd#gloss-s12) delle [uscite](glossario.qmd#gloss-s26): confronti sullo [stato](glossario.qmd#gloss-s24), consenso e [bobine](glossario.qmd#gloss-s47) distinte.*
+*Reti [Ladder](/risorse/glossario/index.qmd#gloss-ladder) delle [uscite](/risorse/glossario/index.qmd#gloss-uscita): confronti sullo [stato](/risorse/glossario/index.qmd#gloss-stato), consenso e [bobine](/risorse/glossario/index.qmd#gloss-bobina) distinte.*
 
 #### Interblocchi e protezioni
 
-Poiché State non può valere contemporaneamente 1 e 2, $K_AK_B=0$. In una macchina reale servono anche interblocchi e protezioni appropriati, indipendenti dall'esercizio logico. Il tempo necessario all'arresto del motore non è incluso in questo [modello](glossario.qmd#gloss-s15).
+Poiché State non può valere contemporaneamente 1 e 2, $K_AK_B=0$. In una macchina reale servono anche interblocchi e protezioni appropriati, indipendenti dall'esercizio logico. Il tempo necessario all'arresto del motore non è incluso in questo [modello](/risorse/glossario/index.qmd#gloss-modello).
 
 ## U.D. 5.8 / Implementazione e simulazione degli automatismi {#ud:5.8}
 
-[]{#topic:9 label="topic:9"}Realizza lo stesso comando con [Ladder](glossario.qmd#gloss-s12), [ST](glossario.qmd#gloss-s55) e, nell'ambiente che lo supporta, [IL](glossario.qmd#gloss-s56). Usa gli stessi nomi, [stato](glossario.qmd#gloss-s24) iniziale e priorità.
+[]{#topic:9 label="topic:9"}Realizza lo stesso comando con [Ladder](/risorse/glossario/index.qmd#gloss-ladder), [ST](/risorse/glossario/index.qmd#gloss-st) e, nell'ambiente che lo supporta, [IL](/risorse/glossario/index.qmd#gloss-il). Usa gli stessi nomi, [stato](/risorse/glossario/index.qmd#gloss-stato) iniziale e priorità.
 
 - Prova sequenze di eventi, non soltanto combinazioni istantanee.
 
-- Registra [ingresso](glossario.qmd#gloss-s9), [stato](glossario.qmd#gloss-s24) prima/dopo il ciclo e [uscita](glossario.qmd#gloss-s26).
+- Registra [ingresso](/risorse/glossario/index.qmd#gloss-ingresso), [stato](/risorse/glossario/index.qmd#gloss-stato) prima/dopo il ciclo e [uscita](/risorse/glossario/index.qmd#gloss-uscita).
 
 - Confronta avvio, arresto, richieste simultanee e riavvio del programma.
 
@@ -150,17 +151,17 @@ Poiché State non può valere contemporaneamente 1 e 2, $K_AK_B=0$. In una macch
 
 ## Verificare memoria e riavvio {#topic:riavvio}
 
-[OpenPLC](glossario.qmd#gloss-s16) distingue l'ambiente in cui si prepara il programma dall'ambiente che lo esegue. Nel laboratorio si utilizza la versione disponibile, dichiarando [variabili](glossario.qmd#gloss-s27), configurazione della [task](glossario.qmd#gloss-s25) e associazione degli [I/O](glossario.qmd#gloss-s31) secondo il controllore e la configurazione scelti.
+[OpenPLC](/risorse/glossario/index.qmd#gloss-openplc) distingue l'ambiente in cui si prepara il programma dall'ambiente che lo esegue. Nel laboratorio si utilizza la versione disponibile, dichiarando [variabili](/risorse/glossario/index.qmd#gloss-variabile), configurazione della [task](/risorse/glossario/index.qmd#gloss-task) e associazione degli [I/O](/risorse/glossario/index.qmd#gloss-i-o) secondo il controllore e la configurazione scelti.
 
-1.  Crea il programma [Ladder](glossario.qmd#gloss-s12) e dichiara $\mathtt{Start}$, $\mathtt{StopOK}$ e $\mathtt{Run}$ come [BOOL](glossario.qmd#gloss-s29).
+1.  Crea il programma [Ladder](/risorse/glossario/index.qmd#gloss-ladder) e dichiara $\mathtt{Start}$, $\mathtt{StopOK}$ e $\mathtt{Run}$ come [BOOL](/risorse/glossario/index.qmd#gloss-bool).
 
-2.  Imposta uno [stato](glossario.qmd#gloss-s24) iniziale noto: $\mathtt{Run}=0$ per il [modello](glossario.qmd#gloss-s15) didattico.
+2.  Imposta uno [stato](/risorse/glossario/index.qmd#gloss-stato) iniziale noto: $\mathtt{Run}=0$ per il [modello](/risorse/glossario/index.qmd#gloss-modello) didattico.
 
-3.  Inserisci la rete di [autoritenuta](glossario.qmd#gloss-s2) e assegna l'[uscita](glossario.qmd#gloss-s26) logica alla memoria.
+3.  Inserisci la rete di [autoritenuta](/risorse/glossario/index.qmd#gloss-autoritenuta) e assegna l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) logica alla memoria.
 
-4.  Controlla compilazione, [task](glossario.qmd#gloss-s25) associata ed eventuali indirizzi [I/O](glossario.qmd#gloss-s31).
+4.  Controlla compilazione, [task](/risorse/glossario/index.qmd#gloss-task) associata ed eventuali indirizzi [I/O](/risorse/glossario/index.qmd#gloss-i-o).
 
-5.  Esegui in simulazione, osservando [ingressi](glossario.qmd#gloss-s9), memoria e [uscita](glossario.qmd#gloss-s26).
+5.  Esegui in simulazione, osservando [ingressi](/risorse/glossario/index.qmd#gloss-ingresso), memoria e [uscita](/risorse/glossario/index.qmd#gloss-uscita).
 
 6.  Confronta le tracce con i risultati attesi prima di collegare hardware.
 
@@ -170,17 +171,17 @@ Poiché State non può valere contemporaneamente 1 e 2, $K_AK_B=0$. In una macch
   Start rilasciato                                 Run resta 1.
   Arresto richiesto                                Run diventa 0.
   Start e arresto insieme                          Run resta o diventa 0.
-  Riavvio del [modello](glossario.qmd#gloss-s15)   Run è 0 secondo l'inizializzazione dichiarata.
+  Riavvio del [modello](/risorse/glossario/index.qmd#gloss-modello)   Run è 0 secondo l'inizializzazione dichiarata.
 
-#### Attenzione al riavvio
+### Attenzione al riavvio
 
-Se Start rimane premuto e si rilascia Stop, l'[autoritenuta](glossario.qmd#gloss-s2) elementare può riavviare il comando. Per richiedere un nuovo impulso serve una specifica aggiuntiva e una gestione del fronte o del riarmo. Non attribuire alla rete funzioni che non possiede.
+Se Start rimane premuto e si rilascia Stop, l'[autoritenuta](/risorse/glossario/index.qmd#gloss-autoritenuta) elementare può riavviare il comando. Per richiedere un nuovo impulso serve una specifica aggiuntiva e una gestione del fronte o del riarmo. Non attribuire alla rete funzioni che non possiede.
 
-**Traccia equivalente per ragionare.** All'inizio del passo salva lo [stato](glossario.qmd#gloss-s24) precedente; calcola $\mathtt{NextRun}=\mathtt{StopOK}\land(\mathtt{Start}\lor \mathtt{OldRun})$; poi aggiorna Run. Questa separazione chiarisce il [modello](glossario.qmd#gloss-s15) di [stato](glossario.qmd#gloss-s24) e aiuta a evitare dipendenze involontarie fra reti.
+**Traccia equivalente per ragionare.** All'inizio del passo salva lo [stato](/risorse/glossario/index.qmd#gloss-stato) precedente; calcola $\mathtt{NextRun}=\mathtt{StopOK}\land(\mathtt{Start}\lor \mathtt{OldRun})$; poi aggiorna Run. Questa separazione chiarisce il [modello](/risorse/glossario/index.qmd#gloss-modello) di [stato](/risorse/glossario/index.qmd#gloss-stato) e aiuta a evitare dipendenze involontarie fra reti.
 
 #### Relazione di simulazione
 
-Riporta: versione del software, periodo della [task](glossario.qmd#gloss-s25), [stato](glossario.qmd#gloss-s24) iniziale, tabella [I/O](glossario.qmd#gloss-s31), rete [Ladder](glossario.qmd#gloss-s12), sequenza di prove ed esiti. Se una memoria è ritentiva, annotalo: il comportamento al riavvio potrebbe cambiare.
+Riporta: versione del software, periodo della [task](/risorse/glossario/index.qmd#gloss-task), [stato](/risorse/glossario/index.qmd#gloss-stato) iniziale, tabella [I/O](/risorse/glossario/index.qmd#gloss-i-o), rete [Ladder](/risorse/glossario/index.qmd#gloss-ladder), sequenza di prove ed esiti. Se una memoria è ritentiva, annotalo: il comportamento al riavvio potrebbe cambiare.
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-5.qmd)
