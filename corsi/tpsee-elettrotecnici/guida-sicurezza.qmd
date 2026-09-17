@@ -10,6 +10,8 @@ title: "Guida completa di laboratorio e sicurezza"
 In attesa della guida specifica di questo corso, rendiamo disponibile quella di **Jacopo Fanucchi per il laboratorio di elettronica**. È un **segnaposto da sostituire** e riadattare con l'ITP Maurizio Signorini. Segui sempre le procedure del tuo laboratorio e le indicazioni dei docenti.
 :::
 
-[Apri la guida completa di Fanucchi (PDF, 8 pagine)](/downloads/guida-sicurezza-fanucchi-elettronica.pdf){.btn .btn-primary}
+[Scarica anche la versione PDF (8 pagine)](/downloads/guida-sicurezza-fanucchi-elettronica.pdf){.btn .btn-primary}
 
 [Informazioni sulla guida e sul suo utilizzo nei percorsi](/risorse/sicurezza/index.qmd)
+
+{{< include ../../risorse/sicurezza/_guida-integrale.qmd >}}

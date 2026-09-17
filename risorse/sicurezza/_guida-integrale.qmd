@@ -1,0 +1,359 @@
+## Leggi la guida completa {#guida-integrale}
+
+Il testo seguente riproduce integralmente i contenuti delle otto pagine della guida. Titoli, elenchi e tabelle sono adattati alla lettura sul sito; in fondo a ogni sezione puoi visualizzare la pagina originale.
+
+- [1. Il laboratorio elettronico](#guida-pagina-1){.no-external}
+- [2. Il laboratorio come ambiente di apprendimento](#guida-pagina-2){.no-external}
+- [3. Riconoscere il rischio prima di agire](#guida-pagina-3){.no-external}
+- [4. Prima, durante e dopo l’esercitazione](#guida-pagina-4){.no-external}
+- [5. Uso sicuro di alimentatore e multimetro](#guida-pagina-5){.no-external}
+- [6. Ordine e pulizia come competenza tecnica](#guida-pagina-6){.no-external}
+- [7. Applicazione al banco elettronico](#guida-pagina-7){.no-external}
+- [8. Checklist operativa e autovalutazione](#guida-pagina-8){.no-external}
+
+### 1. Il laboratorio elettronico {#guida-pagina-1}
+
+Aspetti generali · sicurezza · ordine e pulizia · metodo 5S
+
+#### Che cosa imparerai
+
+- Comprendere perché il laboratorio è un ambiente di progettazione, prova e verifica.
+
+- Preparare e utilizzare il banco in modo ordinato e sicuro.
+
+- Riconoscere comportamenti scorretti e reagire correttamente alle anomalie.
+
+- Applicare le cinque S all'organizzazione di strumenti, componenti e postazione.
+
+- Documentare il lavoro e lasciare il banco pronto per il gruppo successivo.
+
+#### Principio guida
+
+La sicurezza non è una regola aggiunta alla fine dell'esercitazione: è parte del progetto. Un circuito è ben realizzato solo se è corretto, verificabile, ordinato e utilizzato senza rischi.
+
+| Sezione | Contenuto |
+|---|---|
+| 1 | Funzione e organizzazione del laboratorio |
+| 2 | Regole di comportamento e gestione del rischio |
+| 3 | Uso sicuro del banco e degli strumenti |
+| 4 | Metodo 5S per ordine e pulizia |
+| 5 | Checklist e autoverifica |
+
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 1 di 8</summary>
+
+![Pagina originale 1 della guida: Il laboratorio elettronico. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-1.png)
+
+</details>
+
+### 2. Il laboratorio come ambiente di apprendimento {#guida-pagina-2}
+
+#### Dalla teoria alla verifica
+
+Il laboratorio permette di osservare gli effetti reali delle leggi studiate. Lo studente parte da una richiesta, formula una previsione, costruisce o simula il circuito, misura le grandezze e confronta i risultati. Questa sequenza trasforma una formula in una competenza. L'obiettivo non è soltanto ottenere un circuito funzionante. Occorre saper spiegare perché funziona, quali dati lo dimostrano e quali limiti ha la prova. Anche un risultato inatteso è utile se viene analizzato con metodo.
+
+#### I tre livelli
+
+Previsione teorica, simulazione e misura devono essere confrontate. Se non coincidono, si controllano ipotesi, modelli, collegamenti e strumenti.
+
+#### Ruoli nel gruppo
+
+Lavorare in coppia o in piccolo gruppo non significa dividere casualmente i compiti. I ruoli rendono il controllo più efficace e possono essere scambiati durante l'attività.
+
+- Responsabile del montaggio: realizza i collegamenti seguendo lo schema.
+
+- Responsabile del controllo: confronta schema e montaggio prima dell'alimentazione.
+
+- Responsabile delle misure: imposta e collega correttamente gli strumenti.
+
+- Responsabile della documentazione: registra dati, anomalie e correzioni.
+
+#### Il banco di lavoro
+
+Sul banco devono trovarsi soltanto i materiali necessari. Schema, componenti e strumenti devono essere visibili e raggiungibili senza incrociare inutilmente cavi o ostacolare i compagni. Alimentatore e strumenti si dispongono in modo stabile; borse, bevande e oggetti personali restano fuori dall'area operativa.
+
+#### Prima regola di ordine
+
+Se per raggiungere un componente devi spostare cavi, quaderni o utensili, il banco non è ancora pronto per lavorare.
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 2 di 8</summary>
+
+![Pagina originale 2 della guida: Il laboratorio come ambiente di apprendimento. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-2.png)
+
+</details>
+
+### 3. Riconoscere il rischio prima di agire {#guida-pagina-3}
+
+#### Pericolo, rischio e prevenzione
+
+Un pericolo è una sorgente capace di causare un danno; il rischio dipende dalla probabilità che il danno avvenga e dalla sua gravità. Un conduttore scoperto è un pericolo. Lasciarlo vicino a un'alimentazione attiva aumenta il rischio. Prevenire significa eliminare o ridurre il problema prima che produca conseguenze. Nel laboratorio elettronico molte situazioni si controllano con semplici abitudini: lavorare a circuito spento, limitare la corrente, controllare i cavi e mantenere libera la postazione.
+
+#### Domanda da porsi
+
+Che cosa potrebbe accadere se questo collegamento fosse errato? Quale controllo posso fare prima di alimentare?
+
+#### Comportamenti fondamentali
+
+Le indicazioni del docente e le procedure dell'istituto hanno sempre la precedenza. Lo studente utilizza soltanto apparecchiature autorizzate e non modifica protezioni, limiti o configurazioni senza permesso.
+
+- Non lavorare con mani bagnate e non introdurre liquidi nell'area di prova.
+
+- Non utilizzare cavi, spine, puntali o strumenti visibilmente danneggiati.
+
+- Non toccare parti conduttrici durante una prova alimentata.
+
+- Disalimentare prima di spostare componenti o cambiare il cablaggio.
+
+- Non lasciare apparecchiature accese senza sorveglianza.
+
+- Segnalare immediatamente fumo, odore anomalo, scintille, rumori o surriscaldamenti.
+
+- Conoscere vie di esodo, arresti di emergenza e istruzioni previste dalla scuola.
+
+#### Se qualcosa non va
+
+Non improvvisare una riparazione e non afferrare un componente per verificare se è caldo. Interrompi l'alimentazione se puoi farlo in sicurezza, avvisa il docente e attendi indicazioni.
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 3 di 8</summary>
+
+![Pagina originale 3 della guida: Riconoscere il rischio prima di agire. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-3.png)
+
+</details>
+
+### 4. Prima, durante e dopo l’esercitazione {#guida-pagina-4}
+
+#### Prima della prova
+
+La preparazione evita che un errore venga scoperto soltanto dopo l'accensione.
+
+- Leggere consegna e schema; identificare alimentazione, massa, ingressi e uscite.
+
+- Controllare integrità e valore dei componenti.
+
+- Impostare tensione e limite di corrente con uscita disabilitata.
+
+- Verificare polarità, piedinature e assenza di cortocircuiti.
+
+- Far eseguire il controllo incrociato a un compagno o al docente.
+
+#### Durante la prova
+
+Si modifica una sola condizione alla volta, così ogni effetto può essere collegato a una causa.
+
+- Tenere lo schema visibile e il banco libero.
+
+- Osservare subito corrente assorbita e segnali anomali.
+
+- Collegare gli strumenti nella configurazione corretta.
+
+- Non spostare collegamenti con il circuito alimentato.
+
+- Annotare valori attesi e misurati senza affidarsi alla memoria.
+
+#### Dopo la prova
+
+La conclusione dell'attività comprende messa in sicurezza, documentazione e ripristino della postazione.
+
+- Disabilitare l'uscita e spegnere le apparecchiature.
+
+- Attendere e gestire eventuali componenti caldi secondo le istruzioni.
+
+- Smontare senza danneggiare terminali e cavetti.
+
+- Restituire ogni materiale nel contenitore corretto.
+
+- Pulire il banco e segnalare guasti o mancanze.
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 4 di 8</summary>
+
+![Pagina originale 4 della guida: Prima, durante e dopo l’esercitazione. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-4.png)
+
+</details>
+
+### 5. Uso sicuro di alimentatore e multimetro {#guida-pagina-5}
+
+#### Alimentatore da banco
+
+L'alimentatore fornisce energia al circuito. Prima del collegamento si imposta la tensione prevista e un limite di corrente adeguato all'esercitazione. Il limite non sostituisce il progetto, ma aiuta a contenere gli effetti di un errore. L'uscita resta disabilitata mentre si modifica il circuito. Dopo l'attivazione si osserva immediatamente la corrente: un valore molto superiore alla previsione può indicare cortocircuito, componente invertito o cablaggio errato.
+
+#### Sequenza corretta
+
+Imposta → collega → controlla → abilita → osserva → misura → disabilita.
+
+#### Multimetro
+
+Prima di ogni misura si dichiarano grandezza, ordine di grandezza atteso, collegamento e boccole. Il puntale nero si collega normalmente a COM; il rosso va nella boccola prevista dalla funzione scelta.
+
+- Tensione: misura tra due punti, quindi collegamento in parallelo.
+
+- Corrente: apertura del ramo e collegamento in serie.
+
+- Resistenza e continuità: circuito disalimentato; isolare il componente quando altri percorsi alterano la lettura.
+
+- Dopo una misura di corrente, riportare il puntale rosso nella boccola abituale per tensione e resistenza.
+
+#### Errore critico
+
+Non collegare il multimetro impostato come amperometro direttamente ai capi dell'alimentazione: si crea un percorso a resistenza molto bassa.
+
+#### Breadboard e componenti
+
+Le connessioni interne della breadboard devono essere conosciute o verificate con la continuità. Alcune barre laterali sono interrotte a metà. Fili sfrangiati, terminali forzati e ponti troppo lunghi aumentano il rischio di contatti indesiderati.
+
+- Usare colori coerenti per positivo e massa.
+
+- Non lasciare ingressi logici scollegati quando il circuito lo richiede.
+
+- Rispettare polarità di LED, diodi, condensatori elettrolitici e alimentazioni degli integrati.
+
+- Usare resistori di limitazione e verificare potenze e correnti ammesse.
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 5 di 8</summary>
+
+![Pagina originale 5 della guida: Uso sicuro di alimentatore e multimetro. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-5.png)
+
+</details>
+
+### 6. Ordine e pulizia come competenza tecnica {#guida-pagina-6}
+
+Le 5S sono un metodo di organizzazione del posto di lavoro. I termini derivano da cinque parole giapponesi. Nel laboratorio scolastico diventano azioni concrete, osservabili e ripetibili.
+
+#### 1 / Seiri - Separare
+
+Distinguere ciò che serve da ciò che non serve. Sul banco restano soltanto schema, componenti e strumenti necessari alla prova. Residui di filo, imballaggi, componenti guasti o materiali di un'altra esercitazione vengono rimossi e destinati correttamente.
+
+**Perché è utile**
+
+Riduce confusione, scambi di componenti e ostacoli.
+
+#### 2 / Seiton - Sistemare
+
+Assegnare a ogni oggetto un posto riconoscibile. Cavetti ordinati per tipo, componenti in contenitori etichettati, strumenti disposti con comandi e display visibili. I collegamenti devono seguire percorsi leggibili.
+
+**Perché è utile**
+
+Riduce i tempi di ricerca e rende più facile individuare un errore.
+
+#### 3 / Seiso - Pulire
+
+Pulire significa anche ispezionare. Durante il riordino si cercano residui metallici, fili scoperti, morsetti allentati, puntali danneggiati e segni di surriscaldamento. Le apparecchiature devono essere disalimentate e si usano solo procedure autorizzate.
+
+**Perché è utile**
+
+Previene contatti indesiderati e fa emergere anomalie.
+
+#### 4 / Seiketsu - Standardizzare
+
+Stabilire regole comuni: disposizione di base del banco, colori coerenti, etichette, quantità previste, fotografia del banco corretto e checklist di fine attività.
+
+**Perché è utile**
+
+Permette a gruppi diversi di lavorare con lo stesso metodo.
+
+#### 5 / Shitsuke - Mantenere
+
+Trasformare le regole in abitudini. Ogni gruppo applica lo standard senza attendere un richiamo, controlla il risultato e segnala ciò che impedisce di mantenerlo.
+
+**Perché è utile**
+
+Rende ordine e sicurezza continui nel tempo.
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 6 di 8</summary>
+
+![Pagina originale 6 della guida: Ordine e pulizia come competenza tecnica. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-6.png)
+
+</details>
+
+### 7. Applicazione al banco elettronico {#guida-pagina-7}
+
+| Momento | Azione 5S | Controllo visibile |
+|---|---|---|
+| Inizio | Separare e sistemare | Solo materiali necessari; strumenti nel posto stabilito |
+| Montaggio | Sistemare e standardizzare | Cavi leggibili; colori coerenti; schema visibile |
+| Misura | Mantenere | Boccole e selettore controllati; dati registrati |
+| Anomalia | Pulire e ispezionare | Alimentazione tolta; causa cercata con ordine |
+| Fine | Tutte le 5S | Banco pulito; materiali restituiti; guasti segnalati |
+
+
+#### Esempio di trasformazione
+
+Prima delle 5S: sul banco sono presenti resistori mescolati, cavetti annodati, un multimetro senza puntali ordinati e residui metallici vicino alla breadboard. Il circuito è difficile da leggere e un errore può passare inosservato. Dopo le 5S: restano soltanto i componenti della BoM; i resistori sono identificati; positivo e massa hanno colori coerenti; i cavetti seguono percorsi brevi; il multimetro ha la configurazione verificata; i residui sono stati eliminati. Il circuito non è automaticamente corretto, ma è molto più controllabile.
+
+#### L'ordine non è estetica
+
+Un banco ordinato rende visibili collegamenti, componenti mancanti e situazioni pericolose. Per questo l'ordine contribuisce direttamente alla qualità tecnica.
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 7 di 8</summary>
+
+![Pagina originale 7 della guida: Applicazione al banco elettronico. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-7.png)
+
+</details>
+
+### 8. Checklist operativa e autovalutazione {#guida-pagina-8}
+
+#### Checklist prima dell'alimentazione
+
+1. □ Consegna e schema compresi.
+
+2. □ Valori e polarità dei componenti verificati.
+
+3. □ Alimentazione e massa identificate.
+
+4. □ Tensione e limite di corrente impostati.
+
+5. □ Assenza di cortocircuito evidente controllata.
+
+6. □ Strumenti integri e configurati correttamente.
+
+7. □ Banco libero da liquidi e oggetti estranei.
+
+8. □ Controllo incrociato eseguito.
+
+#### Checklist di fine attività
+
+1. □ Circuito disalimentato e strumenti spenti.
+
+2. □ Componenti e cavetti restituiti nei posti corretti.
+
+3. □ Residui eliminati nei contenitori previsti.
+
+4. □ Banco pulito e libero.
+
+5. □ Guasti, anomalie e materiali mancanti segnalati.
+
+6. □ Misure e correzioni riportate nella relazione.
+
+#### Consegna possibile
+
+Ogni gruppo allega alla relazione una fotografia del banco pronto, una fotografia del montaggio, la checklist compilata e una breve spiegazione di quale S ha migliorato maggiormente il lavoro.
+
+#### Domande di autoverifica
+
+1. Perché la sicurezza deve essere considerata parte del progetto?
+
+2. Qual è la differenza tra pericolo e rischio?
+
+3. Che cosa controlli prima di attivare un alimentatore?
+
+4. Perché corrente e tensione richiedono collegamenti diversi del multimetro?
+
+5. Descrivi le cinque S con un esempio per ciascuna.
+
+6. Come reagisci a odore anomalo o surriscaldamento?
+
+7. Perché la pulizia è anche un'attività di ispezione?
+
+<details class="guide-original">
+<summary>Visualizza la pagina originale 8 di 8</summary>
+
+![Pagina originale 8 della guida: Checklist operativa e autovalutazione. Il testo completo è riportato sopra.](/assets/sicurezza-fanucchi/pagina-8.png)
+
+</details>
+
