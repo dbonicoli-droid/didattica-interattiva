@@ -67,9 +67,9 @@ Sensori, acquisizione dei segnali e controllo degli impianti.
 [Esplora il laboratorio](laboratori/index.qmd){.btn .btn-primary} [Scarica le dispense](materiali.qmd){.btn .btn-outline-primary}
 :::
 
-## Dalla panoramica all'approfondimento
+## Un sito che cresce con le lezioni
 
-Le dispense e le pagine attuali offrono una **panoramica del programma**. Durante l'anno, i percorsi si arricchiranno di spiegazioni dei singoli moduli, derivazioni a penna ed esperimenti interattivi.
+Il sito collega **moduli, fondamenti, mappe concettuali e laboratori**. Durante l’anno si arricchirà di spiegazioni, derivazioni a penna ed esperimenti interattivi. Le dispense PDF restano disponibili come raccolte da consultare e stampare.
 
 ::: {.callout-note}
 ## Materiali in sviluppo

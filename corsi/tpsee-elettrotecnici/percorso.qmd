@@ -1,87 +1,14 @@
 ---
-body-classes: course-background
-title: "La mappa del percorso"
-subtitle: "Panoramica del Programma"
+title: "Moduli del percorso"
+search: false
+toc: false
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
-
 []{#nav:mappa}
+[]{#nav:indice}
 
-   **Modulo**  **Argomento**                                                     **Periodo**   **Ore**
-  ------------ ---------------------------------------------------------------- ------------- ---------
-       1       Normativa e legislazione                                               1          10
-       2       Rappresentazione grafica                                             1, 2         ---
-       3       Componenti degli [impianti](glossario.qmd#gloss-e47) elettrici       1, 2         ---
-       4       Tecnologia dei materiali                                             1, 2         ---
-       5       Illuminotecnica                                                        2          ---
+Questa sezione è stata integrata nell’organizzazione del corso. [Apri la pagina aggiornata →](index.qmd#moduli)
 
-Educazione civica: 5 ore.
-
-:::: {.learning-map aria-label="Moduli in ordine di studio"}
-
-::: {.map-card}
-
-### 01 / Norme e documenti
-
-- Distinguere leggi e norme tecniche.
-- Riconoscere organismi normatori e documenti dell’[impianto](glossario.qmd#gloss-e47).
-
-[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
-
-:::
-
-::: {.map-card}
-
-### 02 / Disegnare un [impianto](glossario.qmd#gloss-e47)
-
-- Leggere schemi funzionali, unifilari, multifilari e planimetrie.
-- Usare simboli, [legenda](glossario.qmd#gloss-e49) e [ProgeCAD](glossario.qmd#gloss-e36).
-
-[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
-
-:::
-
-::: {.map-card}
-
-### 03 / Scegliere i componenti
-
-- Riconoscere cavi, canalizzazioni, prese e dispositivi di comando.
-- Comprendere [deviatori](glossario.qmd#gloss-e11), [invertitori](glossario.qmd#gloss-e23), relè e servizi dell’abitazione.
-
-[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
-
-:::
-
-::: {.map-card}
-
-### 04 / Conoscere i materiali
-
-- Collegare proprietà elettriche, meccaniche e termiche agli impieghi.
-- Confrontare conduttori, isolanti e comportamento al calore.
-
-[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
-
-:::
-
-::: {.map-card}
-
-### 05 / Progettare l’illuminazione
-
-- Distinguere grandezze fotometriche e sorgenti luminose.
-- Stimare il numero di apparecchi e introdurre [DIALux](glossario.qmd#gloss-e12).
-
-[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
-
-:::
-
-::::
-
-[]{#nav:indice label="nav:indice"}
-
-
-## Prosegui nel percorso
-
-- [Fondamenti e componenti](index.qmd#fondamenti)
-- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
-- [Laboratorio](/laboratori/index.qmd)
+```{=html}
+<script>location.replace(new URL("index.html#moduli", location.href).href);</script>
+```

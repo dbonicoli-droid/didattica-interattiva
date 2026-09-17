@@ -1,46 +1,13 @@
 ---
-title: "Prerequisiti in breve"
+title: "Fondamenti del corso"
+search: false
+toc: false
 ---
-
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
 
 []{#sec:basi}
 
-- **Numeri e unità**: leggere valori, convertire unità e usare semplici proporzioni.
+Questa sezione è stata integrata nell’organizzazione del corso. [Apri la pagina aggiornata →](conoscenze-di-base.qmd#richiami-iniziali)
 
-- **Informazione digitale**: distinguere numeri, [bit](glossario.qmd#gloss-s3) e condizioni vere o false.
-
-- **[Variabili](glossario.qmd#gloss-s27) e tabelle**: assegnare nomi ai dati e seguire come cambiano.
-
-- **Strumenti digitali**: salvare, eseguire e controllare un semplice programma.
-
-#### Il vocabolario minimo
-
-**[Sistema](glossario.qmd#gloss-s23)**: elementi collegati che interagiscono.
-
-**[Modello](glossario.qmd#gloss-s15)**: descrizione semplificata del [sistema](glossario.qmd#gloss-s23).
-
-**[Ingresso](glossario.qmd#gloss-s9) e [uscita](glossario.qmd#gloss-s26)**: ciò che agisce sul [sistema](glossario.qmd#gloss-s23) e ciò che osserviamo.
-
-**[Stato](glossario.qmd#gloss-s24)**: la memoria necessaria a descrivere cosa accadrà.
-
-**[Algoritmo](glossario.qmd#gloss-s1)**: passi precisi per risolvere un problema.
-
-**[Bit](glossario.qmd#gloss-s3)**: cifra binaria, 0 oppure 1.
-
-**[Variabile booleana](glossario.qmd#gloss-s51)**: rappresenta una condizione vera o falsa.
-
-[Automa](glossario.qmd#gloss-s59): descrive [stati](glossario.qmd#gloss-s24) e transizioni. [PLC](glossario.qmd#gloss-s41): esegue il programma di controllo.
-
-#### Spiegazioni ed esercizi
-
-[Riprendi gli strumenti di base con esempi](conoscenze-di-base.qmd#sec:basi-dettagli) (p. ).
-
-[Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-esercizi) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
-
-
-## 🚧 Guida completa di laboratorio
-
-![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
-
-[Consulta la guida di Fanucchi per elettronica, provvisoria e da sostituire per questo corso](guida-sicurezza.qmd). Segui le indicazioni dei docenti e le procedure del laboratorio.
+```{=html}
+<script>location.replace(new URL("conoscenze-di-base.html#richiami-iniziali", location.href).href);</script>
+```

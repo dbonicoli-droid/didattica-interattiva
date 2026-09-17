@@ -1,58 +1,14 @@
 ---
-title: "Prerequisiti in breve"
+title: "Fondamenti del corso"
+search: false
+toc: false
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
-
 []{#sec:basi}
+[]{#un-metodo-di-lavoro}
 
-- **Calcolo**: proporzioni, potenze di dieci e conversioni delle unità di misura.
+Questa sezione è stata integrata nell’organizzazione del corso. [Apri la pagina aggiornata →](conoscenze-di-base.qmd#richiami-iniziali)
 
-- **Elettricità**: [tensione](glossario.qmd#gloss-new54), [corrente](glossario.qmd#gloss-new55), [resistenza](glossario.qmd#gloss-new56); collegamenti in serie e parallelo.
-
-- **Materiali**: struttura atomica e distinzione fra conduttori e isolanti.
-
-- **Disegno**: scala, formato del foglio, [cartiglio](glossario.qmd#gloss-e48), simboli e [legenda](glossario.qmd#gloss-e49).
-
-#### Il vocabolario minimo
-
-**Concetti fondamentali**
-
-**[Circuito](glossario.qmd#gloss-e46)**: componenti collegati per svolgere una funzione elettrica.
-
-**[Impianto](glossario.qmd#gloss-e47)**: [circuiti](glossario.qmd#gloss-e46) e dispositivi organizzati per distribuire e usare [energia](glossario.qmd#gloss-new58) elettrica.
-
-**[Carico](glossario.qmd#gloss-e4)**: dispositivo o [circuito](glossario.qmd#gloss-e46) che assorbe [energia](glossario.qmd#gloss-new58) elettrica dalla sorgente.
-
-**Termini utili per leggere gli schemi**
-
-**[Morsetto](glossario.qmd#gloss-e32)**: punto in cui si fissa e collega un conduttore.
-
-**[Contatto](glossario.qmd#gloss-e10)**: parte conduttrice che apre, chiude o commuta un collegamento.
-
-**[Legenda](glossario.qmd#gloss-e49)**: spiega simboli e sigle del disegno.
-
-**[Cartiglio](glossario.qmd#gloss-e48)**: riporta i dati che identificano il disegno.
-
-#### Spiegazioni ed esercizi
-
-[Riprendi gli strumenti di base con spiegazioni ed esempi guidati](conoscenze-di-base.qmd#sec:basi-spiegazioni) (p. ).
-
-[Vai all'autoverifica e alle soluzioni commentate](conoscenze-di-base.qmd#sec:basi-verifica) (p. ).
-
-## Un metodo di lavoro {#un-metodo-di-lavoro .unnumbered}
-
-1.  Leggi la funzione richiesta e individua gli utilizzatori.
-
-2.  Disegna lo schema e prevedi il risultato.
-
-3.  Confronta la previsione con la simulazione e la prova autorizzata.
-
-4.  Documenta scopo, materiali, schema, dati e correzioni.
-
-#### Il laboratorio è parte del progetto
-
-- Gli schemi sono didattici: non sono progetti esecutivi completi per [impianti](glossario.qmd#gloss-e47) a 230 V.
-
-- Le prove proposte si svolgono su banchi didattici protetti, a bassissima [tensione](glossario.qmd#gloss-new54) e sotto la guida del docente.
-
+```{=html}
+<script>location.replace(new URL("conoscenze-di-base.html#richiami-iniziali", location.href).href);</script>
+```

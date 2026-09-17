@@ -2,7 +2,7 @@
 title: "Schede di approfondimento"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
 
 []{#sec:approfondimenti}
 

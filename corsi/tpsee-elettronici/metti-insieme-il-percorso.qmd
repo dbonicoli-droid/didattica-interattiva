@@ -2,7 +2,7 @@
 title: "Metti insieme il percorso"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
 
 []{#sec:sintesi}
 

@@ -20,3 +20,8 @@
 - [ ] Catalogo filtrabile per percorso, classe e tipo di risorsa; sinonimi nella ricerca.
 
 Le parti comuni mantengono un’unica sorgente. Forum e dati degli studenti non fanno parte della prima revisione.
+
+## Organizzazione dei contenuti
+- Struttura del sito autonoma dalle dispense; PDF come raccolte editoriali successive.
+- Moduli del percorso integrati negli indici; Mappe riservato ai collegamenti concettuali.
+- Sicurezza con accesso dedicato; richiami iniziali nei fondamenti; vocabolario minimo nei glossari.

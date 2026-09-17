@@ -2,12 +2,43 @@
 title: "Calcolo e lettura degli schemi"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)
+
+## Richiami iniziali {#richiami-iniziali}
+
+[]{#sec:basi}
+
+- **Calcolo**: proporzioni, potenze di dieci e conversioni delle unità di misura.
+
+- **Elettricità**: [tensione](glossario.qmd#gloss-new54), [corrente](glossario.qmd#gloss-new55), [resistenza](glossario.qmd#gloss-new56); collegamenti in serie e parallelo.
+
+- **Materiali**: struttura atomica e distinzione fra conduttori e isolanti.
+
+- **Disegno**: scala, formato del foglio, [cartiglio](glossario.qmd#gloss-e48), simboli e [legenda](glossario.qmd#gloss-e49).
+
+[Consulta il vocabolario minimo](glossario.qmd#vocabolario-minimo).
+
+## Un metodo di lavoro {#un-metodo-di-lavoro .unnumbered}
+
+1.  Leggi la funzione richiesta e individua gli utilizzatori.
+
+2.  Disegna lo schema e prevedi il risultato.
+
+3.  Confronta la previsione con la simulazione e la prova autorizzata.
+
+4.  Documenta scopo, materiali, schema, dati e correzioni.
+
+#### Il laboratorio è parte del progetto
+
+- Gli schemi sono didattici: non sono progetti esecutivi completi per [impianti](glossario.qmd#gloss-e47) a 230 V.
+
+- Le prove proposte si svolgono su banchi didattici protetti, a bassissima [tensione](glossario.qmd#gloss-new54) e sotto la guida del docente.
+
 
 
 ## Calcolo ed elettricità {#sec:basi-spiegazioni}
 
-[Torna alla panoramica iniziale](prima-di-iniziare-conoscenze-di-base.qmd#sec:basi). Questi richiami aiutano a leggere gli schemi e svolgere i calcoli del corso.
+Questi richiami aiutano a leggere gli schemi e svolgere i calcoli del corso.
 
 ### Proporzioni e unità di misura
 
@@ -127,5 +158,5 @@ Una parete di 4 m misura 400 cm nella realtà. In scala 1:50 occupa $400/50=8$ c
 
 6.  $300/50=6$ cm. Il significato del simbolo si cerca nella [legenda](glossario.qmd#gloss-e49).
 
-[Torna alla panoramica degli strumenti di base](prima-di-iniziare-conoscenze-di-base.qmd#sec:basi).
+[Torna alla panoramica degli strumenti di base](conoscenze-di-base.qmd#richiami-iniziali).
 

@@ -1,6 +1,6 @@
 # Regole del progetto
 - Scrivere in italiano; preservare correttezza matematica, unità e leggibilità in aula.
-- Le sorgenti dei contenuti sono i file Quarto. PDF e HTML sono presentazioni dello stesso materiale.
+- Le sorgenti dei contenuti sono i file Quarto. La struttura del sito è autonoma dalle dispense iniziali: privilegiare navigazione e apprendimento. Le raccolte PDF possono selezionare e ordinare i contenuti del sito senza imporne l’architettura.
 - Non pubblicare materiale da libri, dati studenti, credenziali o report di sessione privati.
 - Pubblicare solo su richiesta; workflow GitHub manuale.
 - Le app devono funzionare senza servizi AI. RC resta un singolo HTML offline.

@@ -1,79 +1,14 @@
 ---
-body-classes: course-background
-title: "La mappa del percorso"
-subtitle: "Panoramica del Programma"
+title: "Moduli del percorso"
+search: false
+toc: false
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
-
 []{#nav:mappa}
+[]{#nav:indice}
 
-  **Modulo**   **Titolo**                                          **Ore**   **Periodo**
-  ------------ ------------------------------------------------- --------- -------------
-  1            Il progetto di sistemi elettrici ed elettronici          20             1
-  2            Elementi di logica                                       30             1
-  3            Elettronica digitale in logica cablata                   70             2
-  4            [Reti sequenziali](glossario.qmd#gloss-g44)              30             2
-               **Totale**                                          **150** 
+Questa sezione è stata integrata nell’organizzazione del corso. [Apri la pagina aggiornata →](index.qmd#moduli)
 
-:::: {.learning-map aria-label="Moduli in ordine di studio"}
-
-::: {.map-card}
-
-### 01 / Progetto di sistemi
-
-- Schemi elettrici e simboli standard.
-- Simulazione di circuiti con [Multisim](glossario.qmd#gloss-g37).
-- Circuiti stampati: [PCB](glossario.qmd#gloss-g41) (Printed Circuit Board), con [Ultiboard](glossario.qmd#gloss-g52).
-
-**20 ore** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
-
-:::
-
-::: {.map-card}
-
-### 02 / Elementi di logica
-
-- [Algebra di Boole](glossario.qmd#gloss-g1): operazioni su 0 e 1.
-- Regole logiche e leggi di De Morgan.
-- Semplificazione delle funzioni logiche.
-
-**30 ore** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
-
-:::
-
-::: {.map-card}
-
-### 03 / Logica digitale cablata
-
-- Porte logiche e loro combinazioni.
-- Semplificazione: mappe di [Karnaugh](glossario.qmd#gloss-g32).
-- Circuiti per sommare e confrontare.
-- Decodifica, selezione e visualizzazione dei dati: [decoder](glossario.qmd#gloss-g13), [multiplexer](glossario.qmd#gloss-g38) e display.
-
-**70 ore** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
-
-:::
-
-::: {.map-card}
-
-### 04 / [Reti sequenziali](glossario.qmd#gloss-g44)
-
-- [Latch](glossario.qmd#gloss-g33) e [flip-flop](glossario.qmd#gloss-g18): memorie di un [bit](glossario.qmd#gloss-g7) (Binary Digit, cifra binaria).
-- Circuiti per contare gli eventi.
-- Contatori asincroni e sincroni: due modi di coordinare il conteggio.
-
-**30 ore** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
-
-:::
-
-::::
-
-[]{#nav:indice label="nav:indice"}
-
-
-## Prosegui nel percorso
-
-- [Fondamenti e componenti](index.qmd#fondamenti)
-- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
-- [Laboratorio](/laboratori/index.qmd)
+```{=html}
+<script>location.replace(new URL("index.html#moduli", location.href).href);</script>
+```

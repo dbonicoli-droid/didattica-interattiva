@@ -1,59 +1,14 @@
 ---
-body-classes: course-background
-title: "La mappa del percorso"
-subtitle: "Panoramica del Programma"
+title: "Moduli del percorso"
+search: false
+toc: false
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
-
 []{#nav:mappa}
+[]{#sec:basi-panoramica}
 
-   **N.**  **Modulo**                                                                   **Ore**   **Periodo**
-  -------- --------------------------------------------------------------------------- --------- -------------
-     1     Elettromeccanica                                                               ---          1
-     2     Automazione industriale e [PLC](glossario.qmd#gloss-d29)                       ---          2
-     3     Linguaggio [Ladder](glossario.qmd#gloss-d25)                                   ---          2
-     4     Linguaggio [SFC](glossario.qmd#gloss-d38)                                      ---          2
-     5     Programmazione avanzata e applicazioni dei [PLC](glossario.qmd#gloss-d29)      ---          2
+Questa sezione è stata integrata nell’organizzazione del corso. [Apri la pagina aggiornata →](index.qmd#moduli)
 
-Educazione civica: efficientamento energetico, 2 ore.
-
-## Prima di iniziare / Conoscenze di base {#sec:basi-panoramica}
-
-Legge di Ohm, collegamenti elettrici, logica booleana e lettura di semplici schemi.
-
-[Riprendi le conoscenze di base con schemi ed esempi](conoscenze-di-base.qmd#sec:basi-dettagli). [Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
-
-#### Il filo conduttore
-
-Una richiesta viene verificata insieme ai consensi; il programma aggiorna lo stato; le uscite comandano gli [attuatori](glossario.qmd#gloss-new44). Le misure permettono di osservare ciò che avviene nel processo.
-
-:::: {.process-map aria-label="Dal segnale al comando"}
-
-::: {.map-card .map-card-linked}
-### [1 / Richieste e sensori](modulo-2.qmd#ud:2.2){.map-destination}
-Richieste e [sensori](glossario.qmd#gloss-new43).
-:::
-
-::: {.map-card .map-card-linked}
-### [2 / PLC](modulo-2.qmd#ud:2.3){.map-destination}
-[PLC](glossario.qmd#gloss-d29): logica e stato.
-:::
-
-::: {.map-card .map-card-linked}
-### [3 / Interfacce e attuatori](modulo-2.qmd#ud:2.2){.map-destination}
-Interfacce e [attuatori](glossario.qmd#gloss-new44).
-:::
-
-::::
-
-## Come usare gli esempi
-
-Prima di programmare scrivi ingressi, uscite, stato iniziale e priorità. Prepara una tabella delle prove e confronta il comportamento previsto con la simulazione; le prove fisiche si svolgono sul banco predisposto con i docenti.
-
-
-## Prosegui nel percorso
-
-- [Fondamenti e componenti](index.qmd#fondamenti)
-- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
-- [Laboratorio](/laboratori/index.qmd)
+```{=html}
+<script>location.replace(new URL("index.html#moduli", location.href).href);</script>
+```

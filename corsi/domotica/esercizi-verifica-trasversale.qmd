@@ -2,7 +2,7 @@
 title: "Esercizi / Verifica trasversale"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
 
 []{#sec:esercizi}
 

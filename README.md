@@ -41,3 +41,7 @@ Gli schemi si rigenerano con `node scripts/build_component_figures.cjs`.
 - `scripts/navigation.html`: selezione della barra laterale e contesto delle risorse condivise. Il percorso viene ricavato dall’URL del corso, dal parametro `percorso` o dalla sessione della scheda. La pagina iniziale permette di cambiare percorso e azzera la selezione precedente. Il sito funziona anche se la memoria di sessione è disabilitata; senza JavaScript rimane disponibile l’indice completo.
 - `risorse/mappe/` e `risorse/esterne/`: mappe e collegamenti commentati.
 - `PROJECT_ROADMAP.md`: funzionalità da progettare, incluse discussioni e interazioni. Non viene pubblicato come pagina del sito.
+
+## Organizzazione autonoma del sito
+
+Il sito non deve riprodurre la struttura delle dispense iniziali. Gli indici dei corsi raccolgono i moduli in blocchi: titolo verso il modulo completo, link separato verso la sintesi. Mappe indica solo mappe concettuali. I richiami iniziali sono integrati nei fondamenti del corso; il vocabolario minimo è parte del glossario. Le vecchie pagine `percorso` e `prima-di-iniziare` conservano gli indirizzi tramite rinvio alla nuova destinazione e sono escluse dalla ricerca.

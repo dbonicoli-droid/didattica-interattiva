@@ -2,7 +2,28 @@
 title: "Numeri, dati e variabili"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+## Richiami iniziali {#richiami-iniziali}
+
+[]{#sec:basi}
+
+- **Numeri e unità**: leggere valori, convertire unità e usare semplici proporzioni.
+
+- **Informazione digitale**: distinguere numeri, [bit](glossario.qmd#gloss-s3) e condizioni vere o false.
+
+- **[Variabili](glossario.qmd#gloss-s27) e tabelle**: assegnare nomi ai dati e seguire come cambiano.
+
+- **Strumenti digitali**: salvare, eseguire e controllare un semplice programma.
+
+[Consulta il vocabolario minimo](glossario.qmd#vocabolario-minimo).
+
+## 🚧 Guida completa di laboratorio
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
+[Consulta la guida di Fanucchi per elettronica, provvisoria e da sostituire per questo corso](guida-sicurezza.qmd). Segui le indicazioni dei docenti e le procedure del laboratorio.
+
 
 
 ## Numeri, dati e [variabili](glossario.qmd#gloss-s27) {#sec:basi-dettagli}
@@ -43,7 +64,7 @@ I pesi, da sinistra, sono 4, 2 e 1: $1\cdot4+0\cdot2+1\cdot1=5$. Il [bit](glossa
 
 4.  Conserva una tabella delle prove e una breve spiegazione del risultato.
 
-[Torna alla panoramica](prima-di-iniziare-conoscenze-di-base.qmd#sec:basi).
+[Torna alla panoramica](conoscenze-di-base.qmd#richiami-iniziali).
 
 ## Autoverifica {#sec:basi-esercizi}
 

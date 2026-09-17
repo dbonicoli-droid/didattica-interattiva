@@ -1,59 +1,133 @@
 ---
 body-classes: course-background
 title: "TPSEE · Elettrotecnici"
+toc-depth: 2
 ---
 
-Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti raccolgono le basi e i moduli di approfondimento ospiteranno la trattazione sviluppata durante le lezioni.
+Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni alle attività di laboratorio.
 
-[Scarica la dispensa PDF della panoramica](/downloads/tpsee-elettrotecnici.pdf){.btn .btn-primary}
+## Moduli del percorso {#moduli}
 
-## Indice del percorso
+[]{#panoramica-del-programma}
+[]{#moduli-di-approfondimento}
+[]{#nav:mappa}
+[]{#nav:indice}
 
-### Panoramica del Programma {#panoramica-del-programma}
+Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi** ne presenta brevemente gli argomenti.
 
-Una breve presentazione degli argomenti e delle unità didattiche previste.
+🚧 Le pagine dei moduli sono in preparazione e si arricchiranno con le lezioni. Le sintesi sono già consultabili.
 
-- [La mappa del percorso](percorso.qmd)
-- [Sintesi del modulo 1 / Normativa e legislazione](modulo-1.qmd)
-- [Sintesi del modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici](modulo-2.qmd)
-- [Sintesi del modulo 3 / Principali componenti degli impianti elettrici](modulo-3.qmd)
-- [Sintesi del modulo 4 / Tecnologia dei materiali](modulo-4.qmd)
-- [Sintesi del modulo 5 / Illuminotecnica](modulo-5.qmd)
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
-### Fondamenti {#fondamenti}
+:::: {.learning-map aria-label="Moduli in ordine di studio"}
 
-- [Guida completa di laboratorio e sicurezza / provvisoria, da sostituire](guida-sicurezza.qmd)
+::: {.map-card}
 
-Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
+### [01 / Norme e documenti](moduli/modulo-1.qmd)
 
-- [Prerequisiti in breve](prima-di-iniziare-conoscenze-di-base.qmd)
+- Distinguere leggi e norme tecniche.
+- Riconoscere organismi normatori e documenti dell’[impianto](glossario.qmd#gloss-e47).
+
+[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
+
+:::
+
+::: {.map-card}
+
+### [02 / Disegnare un impianto](moduli/modulo-2.qmd)
+
+- Leggere schemi funzionali, unifilari, multifilari e planimetrie.
+- Usare simboli, [legenda](glossario.qmd#gloss-e49) e [ProgeCAD](glossario.qmd#gloss-e36).
+
+[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
+
+:::
+
+::: {.map-card}
+
+### [03 / Scegliere i componenti](moduli/modulo-3.qmd)
+
+- Riconoscere cavi, canalizzazioni, prese e dispositivi di comando.
+- Comprendere [deviatori](glossario.qmd#gloss-e11), [invertitori](glossario.qmd#gloss-e23), relè e servizi dell’abitazione.
+
+[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
+
+:::
+
+::: {.map-card}
+
+### [04 / Conoscere i materiali](moduli/modulo-4.qmd)
+
+- Collegare proprietà elettriche, meccaniche e termiche agli impieghi.
+- Confrontare conduttori, isolanti e comportamento al calore.
+
+[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
+
+:::
+
+::: {.map-card}
+
+### [05 / Progettare l’illuminazione](moduli/modulo-5.qmd)
+
+- Distinguere grandezze fotometriche e sorgenti luminose.
+- Stimare il numero di apparecchi e introdurre [DIALux](glossario.qmd#gloss-e12).
+
+[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
+
+:::
+
+::::
+
+<details>
+<summary>Ore e periodi indicativi</summary>
+
+| **Modulo** | **Argomento** | **Periodo** | **Ore** |
+|---|---|---|---|
+| 1 | Normativa e legislazione | 1 | 10 |
+| 2 | Rappresentazione grafica | 1, 2 | --- |
+| 3 | Componenti degli [impianti](glossario.qmd#gloss-e47) elettrici | 1, 2 | --- |
+| 4 | Tecnologia dei materiali | 1, 2 | --- |
+| 5 | Illuminotecnica | 2 | --- |
+
+Educazione civica: 5 ore.
+
+</details>
+
+## Sicurezza in laboratorio {#sicurezza}
+
+::: {.resource-card}
+🚧 **Guida provvisoria:** è disponibile la guida di Jacopo Fanucchi per elettronica, in attesa di quella specifica del corso.
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
+
+[Apri la guida completa di laboratorio e sicurezza →](guida-sicurezza.qmd)
+:::
+
+## Fondamenti {#fondamenti}
+
+Richiami e strumenti che puoi consultare quando un argomento richiede una base da riprendere.
+
 - [Calcolo e lettura degli schemi](conoscenze-di-base.qmd)
 - [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
-> **Guida provvisoria:** per ora è disponibile il documento di Fanucchi per elettronica; sarà sostituito con la guida specifica del corso.
 
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
-### Moduli di approfondimento {#moduli-di-approfondimento}
+- [Vocabolario minimo](glossario.qmd#vocabolario-minimo)
 
-![](/assets/cartello-lavori-in-corso.webp){width=100 fig-alt="Cartello triangolare di lavori in corso"}
-
-Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
-
-- [Modulo 1 / Normativa e legislazione](moduli/modulo-1.qmd)
-- [Modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici](moduli/modulo-2.qmd)
-- [Modulo 3 / Principali componenti degli impianti elettrici](moduli/modulo-3.qmd)
-- [Modulo 4 / Tecnologia dei materiali](moduli/modulo-4.qmd)
-- [Modulo 5 / Illuminotecnica](moduli/modulo-5.qmd)
-
-### Laboratorio {#laboratorio}
+## Laboratorio {#laboratorio}
 
 - [Laboratorio / simulazioni e attività disponibili](/laboratori/index.qmd)
 
 Le risorse di laboratorio possono essere utilizzate in più percorsi.
 
-### Altre risorse {#altre-risorse}
+## Altre risorse {#altre-risorse}
 
 - [Esercizi / Metti insieme i moduli](esercizi-metti-insieme-i-moduli.qmd)
 - [Educazione civica / Sicurezza e responsabilità](educazione-civica-sicurezza-e-responsabilita.qmd)
 - [Schede di approfondimento](approfondimenti.qmd)
-- [Glossario](glossario.qmd)
+- [Glossario e vocabolario minimo](glossario.qmd)
+
+
+## Dispense PDF {#dispense}
+
+[Scarica la dispensa della panoramica](/downloads/tpsee-elettrotecnici.pdf). Questa edizione documenta la panoramica iniziale; il sito segue una propria organizzazione e viene ampliato nel tempo.

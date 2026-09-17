@@ -2,11 +2,46 @@
 title: "Richieste, sensori e segnali"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
 
 []{#sec:basi-dettagli}
 
-Questi richiami riprendono i prerequisiti del corso. [Torna alla panoramica iniziale](percorso.qmd#sec:basi-panoramica).
+## Richiami iniziali {#richiami-iniziali}
+
+[]{#sec:basi-panoramica}
+
+Legge di Ohm, collegamenti elettrici, logica booleana e lettura di semplici schemi.
+
+[Riprendi le conoscenze di base con schemi ed esempi](conoscenze-di-base.qmd#sec:basi-dettagli). [Vai all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica) e alle [soluzioni commentate](conoscenze-di-base.qmd#sec:basi-soluzioni).
+
+#### Il filo conduttore
+
+Una richiesta viene verificata insieme ai consensi; il programma aggiorna lo stato; le uscite comandano gli [attuatori](glossario.qmd#gloss-new44). Le misure permettono di osservare ciò che avviene nel processo.
+
+:::: {.process-map aria-label="Dal segnale al comando"}
+
+::: {.map-card .map-card-linked}
+### [1 / Richieste e sensori](modulo-2.qmd#ud:2.2){.map-destination}
+Richieste e [sensori](glossario.qmd#gloss-new43).
+:::
+
+::: {.map-card .map-card-linked}
+### [2 / PLC](modulo-2.qmd#ud:2.3){.map-destination}
+[PLC](glossario.qmd#gloss-d29): logica e stato.
+:::
+
+::: {.map-card .map-card-linked}
+### [3 / Interfacce e attuatori](modulo-2.qmd#ud:2.2){.map-destination}
+Interfacce e [attuatori](glossario.qmd#gloss-new44).
+:::
+
+::::
+
+## Come usare gli esempi
+
+Prima di programmare scrivi ingressi, uscite, stato iniziale e priorità. Prepara una tabella delle prove e confronta il comportamento previsto con la simulazione; le prove fisiche si svolgono sul banco predisposto con i docenti.
+
+[Consulta il vocabolario minimo](glossario.qmd#vocabolario-minimo).
 
 ## Grandezze elettriche e legge di Ohm
 
@@ -101,7 +136,7 @@ La tabella di verità elenca tutte le combinazioni: è utile per preparare le pr
 
 [Torna all'autoverifica](conoscenze-di-base.qmd#sec:basi-verifica).
 
-[Torna alla panoramica iniziale](percorso.qmd#sec:basi-panoramica).
+[Torna alla panoramica iniziale](conoscenze-di-base.qmd#richiami-iniziali).
 
 
 ## 🚧 Guida completa di laboratorio

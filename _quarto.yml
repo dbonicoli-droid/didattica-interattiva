@@ -29,7 +29,7 @@ website:
       - href: laboratori/index.qmd
         text: Laboratorio
       - href: risorse/mappe/index.qmd
-        text: Mappe
+        text: Mappe concettuali
       - text: Risorse
         menu:
           - href: risorse/fondamenti/index.qmd
@@ -52,29 +52,15 @@ website:
         contents:
           - href: corsi/tpsee-elettronici/index.qmd
             text: Indice del percorso
-          - section: "Panoramica del Programma"
-            contents:
-              - href: corsi/tpsee-elettronici/percorso.qmd
-                text: "La mappa del percorso"
-              - href: corsi/tpsee-elettronici/modulo-1.qmd
-                text: "Sintesi del modulo 1 / Il progetto di sistemi elettrici ed elettronici"
-              - href: corsi/tpsee-elettronici/modulo-2.qmd
-                text: "Sintesi del modulo 2 / Elementi di logica"
-              - href: corsi/tpsee-elettronici/modulo-3.qmd
-                text: "Sintesi del modulo 3 / Elettronica digitale in logica cablata"
-              - href: corsi/tpsee-elettronici/modulo-4.qmd
-                text: "Sintesi del modulo 4 / Reti sequenziali"
+          - href: corsi/tpsee-elettronici/guida-sicurezza.qmd
+            text: "Sicurezza in laboratorio"
           - section: "Fondamenti"
             contents:
-              - href: corsi/tpsee-elettronici/guida-sicurezza.qmd
-                text: "Guida completa di sicurezza"
-              - href: corsi/tpsee-elettronici/prima-di-iniziare-conoscenze-di-base.qmd
-                text: "Prerequisiti in breve"
               - href: corsi/tpsee-elettronici/sicurezza-e-buone-pratiche.qmd
                 text: "Sicurezza e Buone pratiche"
               - href: corsi/tpsee-elettronici/conoscenze-di-base.qmd
                 text: "Numeri e codifiche"
-          - section: "Moduli di approfondimento"
+          - section: "Moduli del percorso"
             contents:
               - href: corsi/tpsee-elettronici/moduli/modulo-1.qmd
                 text: "Modulo 1 / Il progetto di sistemi elettrici ed elettronici"
@@ -97,29 +83,13 @@ website:
         contents:
           - href: corsi/tpsee-elettrotecnici/index.qmd
             text: Indice del percorso
-          - section: "Panoramica del Programma"
-            contents:
-              - href: corsi/tpsee-elettrotecnici/percorso.qmd
-                text: "La mappa del percorso"
-              - href: corsi/tpsee-elettrotecnici/modulo-1.qmd
-                text: "Sintesi del modulo 1 / Normativa e legislazione"
-              - href: corsi/tpsee-elettrotecnici/modulo-2.qmd
-                text: "Sintesi del modulo 2 / Rappresentazione grafica dei componenti elettrici ed elettronici"
-              - href: corsi/tpsee-elettrotecnici/modulo-3.qmd
-                text: "Sintesi del modulo 3 / Principali componenti degli impianti elettrici"
-              - href: corsi/tpsee-elettrotecnici/modulo-4.qmd
-                text: "Sintesi del modulo 4 / Tecnologia dei materiali"
-              - href: corsi/tpsee-elettrotecnici/modulo-5.qmd
-                text: "Sintesi del modulo 5 / Illuminotecnica"
+          - href: corsi/tpsee-elettrotecnici/guida-sicurezza.qmd
+            text: "Sicurezza in laboratorio / guida provvisoria"
           - section: "Fondamenti"
             contents:
-              - href: corsi/tpsee-elettrotecnici/guida-sicurezza.qmd
-                text: "Guida completa di sicurezza / provvisoria"
-              - href: corsi/tpsee-elettrotecnici/prima-di-iniziare-conoscenze-di-base.qmd
-                text: "Prerequisiti in breve"
               - href: corsi/tpsee-elettrotecnici/conoscenze-di-base.qmd
                 text: "Calcolo e lettura degli schemi"
-          - section: "Moduli di approfondimento"
+          - section: "Moduli del percorso"
             contents:
               - href: corsi/tpsee-elettrotecnici/moduli/modulo-1.qmd
                 text: "Modulo 1 / Normativa e legislazione"
@@ -146,31 +116,13 @@ website:
         contents:
           - href: corsi/sistemi-automatici/index.qmd
             text: Indice del percorso
-          - section: "Panoramica del Programma"
-            contents:
-              - href: corsi/sistemi-automatici/percorso.qmd
-                text: "La mappa del percorso"
-              - href: corsi/sistemi-automatici/modulo-1.qmd
-                text: "Sintesi del modulo 1 / Fondamenti di teoria dei sistemi"
-              - href: corsi/sistemi-automatici/modulo-2.qmd
-                text: "Sintesi del modulo 2 / Elettronica digitale"
-              - href: corsi/sistemi-automatici/modulo-3.qmd
-                text: "Sintesi del modulo 3 / PLC"
-              - href: corsi/sistemi-automatici/modulo-4.qmd
-                text: "Sintesi del modulo 4 / Circuiti combinatori"
-              - href: corsi/sistemi-automatici/modulo-5.qmd
-                text: "Sintesi del modulo 5 / Circuiti sequenziali"
-              - href: corsi/sistemi-automatici/modulo-6.qmd
-                text: "Sintesi del modulo 6 / Tempi, eventi e grandezze analogiche"
+          - href: corsi/sistemi-automatici/guida-sicurezza.qmd
+            text: "Sicurezza in laboratorio / guida provvisoria"
           - section: "Fondamenti"
             contents:
-              - href: corsi/sistemi-automatici/guida-sicurezza.qmd
-                text: "Guida completa di sicurezza / provvisoria"
-              - href: corsi/sistemi-automatici/prima-di-iniziare-conoscenze-di-base.qmd
-                text: "Prerequisiti in breve"
               - href: corsi/sistemi-automatici/conoscenze-di-base.qmd
                 text: "Numeri, dati e variabili"
-          - section: "Moduli di approfondimento"
+          - section: "Moduli del percorso"
             contents:
               - href: corsi/sistemi-automatici/moduli/modulo-1.qmd
                 text: "Modulo 1 / Fondamenti di teoria dei sistemi"
@@ -199,27 +151,13 @@ website:
         contents:
           - href: corsi/domotica/index.qmd
             text: Indice del percorso
-          - section: "Panoramica del Programma"
-            contents:
-              - href: corsi/domotica/percorso.qmd
-                text: "La mappa del percorso"
-              - href: corsi/domotica/modulo-1.qmd
-                text: "Sintesi del modulo 1 / Elettromeccanica"
-              - href: corsi/domotica/modulo-2.qmd
-                text: "Sintesi del modulo 2 / Automazione industriale e PLC"
-              - href: corsi/domotica/modulo-3.qmd
-                text: "Sintesi del modulo 3 / Linguaggio Ladder"
-              - href: corsi/domotica/modulo-4.qmd
-                text: "Sintesi del modulo 4 / Linguaggio SFC"
-              - href: corsi/domotica/modulo-5.qmd
-                text: "Sintesi del modulo 5 / Programmazione avanzata e applicazioni dei PLC"
+          - href: corsi/domotica/guida-sicurezza.qmd
+            text: "Sicurezza in laboratorio / guida provvisoria"
           - section: "Fondamenti"
             contents:
-              - href: corsi/domotica/guida-sicurezza.qmd
-                text: "Guida completa di sicurezza / provvisoria"
               - href: corsi/domotica/conoscenze-di-base.qmd
                 text: "Richieste, sensori e segnali"
-          - section: "Moduli di approfondimento"
+          - section: "Moduli del percorso"
             contents:
               - href: corsi/domotica/moduli/modulo-1.qmd
                 text: "Modulo 1 / Elettromeccanica"

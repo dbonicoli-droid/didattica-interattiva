@@ -1,55 +1,122 @@
 ---
 body-classes: course-background
 title: "TPSEE · Elettronici"
+toc-depth: 2
 ---
 
-Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti raccolgono le basi e i moduli di approfondimento ospiteranno la trattazione sviluppata durante le lezioni.
+Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni alle attività di laboratorio.
 
-[Scarica la dispensa PDF della panoramica](/downloads/tpsee-elettronici.pdf){.btn .btn-primary}
+## Moduli del percorso {#moduli}
 
-## Indice del percorso
+[]{#panoramica-del-programma}
+[]{#moduli-di-approfondimento}
+[]{#nav:mappa}
+[]{#nav:indice}
 
-### Panoramica del Programma {#panoramica-del-programma}
+Il **titolo di ogni blocco** apre il modulo completo; il collegamento **Sintesi** ne presenta brevemente gli argomenti.
 
-Una breve presentazione degli argomenti e delle unità didattiche previste.
+🚧 Le pagine dei moduli sono in preparazione e si arricchiranno con le lezioni. Le sintesi sono già consultabili.
 
-- [La mappa del percorso](percorso.qmd)
-- [Sintesi del modulo 1 / Il progetto di sistemi elettrici ed elettronici](modulo-1.qmd)
-- [Sintesi del modulo 2 / Elementi di logica](modulo-2.qmd)
-- [Sintesi del modulo 3 / Elettronica digitale in logica cablata](modulo-3.qmd)
-- [Sintesi del modulo 4 / Reti sequenziali](modulo-4.qmd)
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
-### Fondamenti {#fondamenti}
+:::: {.learning-map aria-label="Moduli in ordine di studio"}
 
-- [Guida completa di laboratorio e sicurezza](guida-sicurezza.qmd)
+::: {.map-card}
 
-Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
+### [01 / Progetto di sistemi](moduli/modulo-1.qmd)
 
-- [Prerequisiti in breve](prima-di-iniziare-conoscenze-di-base.qmd)
+- Schemi elettrici e simboli standard.
+- Simulazione di circuiti con [Multisim](glossario.qmd#gloss-g37).
+- Circuiti stampati: [PCB](glossario.qmd#gloss-g41) (Printed Circuit Board), con [Ultiboard](glossario.qmd#gloss-g52).
+
+**20 ore** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
+
+:::
+
+::: {.map-card}
+
+### [02 / Elementi di logica](moduli/modulo-2.qmd)
+
+- [Algebra di Boole](glossario.qmd#gloss-g1): operazioni su 0 e 1.
+- Regole logiche e leggi di De Morgan.
+- Semplificazione delle funzioni logiche.
+
+**30 ore** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
+
+:::
+
+::: {.map-card}
+
+### [03 / Logica digitale cablata](moduli/modulo-3.qmd)
+
+- Porte logiche e loro combinazioni.
+- Semplificazione: mappe di [Karnaugh](glossario.qmd#gloss-g32).
+- Circuiti per sommare e confrontare.
+- Decodifica, selezione e visualizzazione dei dati: [decoder](glossario.qmd#gloss-g13), [multiplexer](glossario.qmd#gloss-g38) e display.
+
+**70 ore** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
+
+:::
+
+::: {.map-card}
+
+### [04 / Reti sequenziali](moduli/modulo-4.qmd)
+
+- [Latch](glossario.qmd#gloss-g33) e [flip-flop](glossario.qmd#gloss-g18): memorie di un [bit](glossario.qmd#gloss-g7) (Binary Digit, cifra binaria).
+- Circuiti per contare gli eventi.
+- Contatori asincroni e sincroni: due modi di coordinare il conteggio.
+
+**30 ore** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
+
+:::
+
+::::
+
+<details>
+<summary>Ore e periodi indicativi</summary>
+
+| **Modulo** | **Titolo** | **Ore** | **Periodo** |
+|---|---|---|---|
+| 1 | Il progetto di sistemi elettrici ed elettronici | 20 | 1 |
+| 2 | Elementi di logica | 30 | 1 |
+| 3 | Elettronica digitale in logica cablata | 70 | 2 |
+| 4 | [Reti sequenziali](glossario.qmd#gloss-g44) | 30 | 2 |
+|  | **Totale** | **150** |  |
+
+</details>
+
+## Sicurezza in laboratorio {#sicurezza}
+
+::: {.resource-card}
+La guida di Jacopo Fanucchi raccoglie indicazioni per il laboratorio di elettronica.
+
+[Apri la guida completa di laboratorio e sicurezza →](guida-sicurezza.qmd)
+:::
+
+## Fondamenti {#fondamenti}
+
+Richiami e strumenti che puoi consultare quando un argomento richiede una base da riprendere.
+
 - [Sicurezza e Buone pratiche](sicurezza-e-buone-pratiche.qmd)
 - [Numeri e codifiche](conoscenze-di-base.qmd)
 - [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
-### Moduli di approfondimento {#moduli-di-approfondimento}
+- [Vocabolario minimo](glossario.qmd#vocabolario-minimo)
 
-![](/assets/cartello-lavori-in-corso.webp){width=100 fig-alt="Cartello triangolare di lavori in corso"}
-
-Spiegazioni, derivazioni, esempi ed esercizi delle lezioni. **Contenuti in preparazione**: le pagine saranno completate progressivamente.
-
-- [Modulo 1 / Il progetto di sistemi elettrici ed elettronici](moduli/modulo-1.qmd)
-- [Modulo 2 / Elementi di logica](moduli/modulo-2.qmd)
-- [Modulo 3 / Elettronica digitale in logica cablata](moduli/modulo-3.qmd)
-- [Modulo 4 / Reti sequenziali](moduli/modulo-4.qmd)
-
-### Laboratorio {#laboratorio}
+## Laboratorio {#laboratorio}
 
 - [Laboratorio / simulazioni e attività disponibili](/laboratori/index.qmd)
 
 Le risorse di laboratorio possono essere utilizzate in più percorsi.
 
-### Altre risorse {#altre-risorse}
+## Altre risorse {#altre-risorse}
 
 - [Metti insieme il percorso](metti-insieme-il-percorso.qmd)
 - [Schede di approfondimento](approfondimenti.qmd)
-- [Glossario](glossario.qmd)
+- [Glossario e vocabolario minimo](glossario.qmd)
+
+
+## Dispense PDF {#dispense}
+
+[Scarica la dispensa della panoramica](/downloads/tpsee-elettronici.pdf). Questa edizione documenta la panoramica iniziale; il sito segue una propria organizzazione e viene ampliato nel tempo.

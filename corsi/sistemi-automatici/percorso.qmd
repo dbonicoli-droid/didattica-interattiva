@@ -1,97 +1,14 @@
 ---
-body-classes: course-background
-title: "La mappa del percorso"
-subtitle: "Panoramica del Programma"
+title: "Moduli del percorso"
+search: false
+toc: false
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
-
 []{#nav:mappa}
+[]{#nav:indice}
 
-   **Modulo**  **Argomento**                           **Periodo**   **Ore**
-  ------------ -------------------------------------- ------------- ---------
-       1       Fondamenti di teoria dei sistemi             1          15
-       2       Elettronica digitale                         1          30
-       3       [PLC](glossario.qmd#gloss-s41)               2          30
-       4       Circuiti combinatori                         2          40
-       5       Circuiti sequenziali                         2          24
-       6       Tempi, eventi e grandezze analogiche         2          24
+Questa sezione è stata integrata nell’organizzazione del corso. [Apri la pagina aggiornata →](index.qmd#moduli)
 
-:::: {.learning-map aria-label="Moduli in ordine di studio"}
-
-::: {.map-card}
-
-### 01 / Osservare e modellare
-
-- [Ingressi](glossario.qmd#gloss-s9), [uscite](glossario.qmd#gloss-s26) e modelli.
-- Algoritmi e [Flowgorithm](glossario.qmd#gloss-s6).
-
-[Leggi la sintesi del modulo 1 →](modulo-1.qmd)
-
-:::
-
-::: {.map-card}
-
-### 02 / Ragionare con la logica
-
-- Porte e [tabelle di verità](glossario.qmd#gloss-s50).
-- Semplificare le funzioni.
-
-[Leggi la sintesi del modulo 2 →](modulo-2.qmd)
-
-:::
-
-::: {.map-card}
-
-### 03 / Conoscere il [PLC](glossario.qmd#gloss-s41)
-
-- Architettura, [I/O](glossario.qmd#gloss-s31) e [scansione](glossario.qmd#gloss-s22).
-- Configurare e collaudare.
-
-[Leggi la sintesi del modulo 3 →](modulo-3.qmd)
-
-:::
-
-::: {.map-card}
-
-### 04 / Combinare le condizioni
-
-- [Ladder](glossario.qmd#gloss-s12), blocchi e testo.
-- Confrontare le simulazioni.
-
-[Leggi la sintesi del modulo 4 →](modulo-4.qmd)
-
-:::
-
-::: {.map-card}
-
-### 05 / Organizzare le sequenze
-
-- [Stati](glossario.qmd#gloss-s24), transizioni e [uscite](glossario.qmd#gloss-s26).
-- Memoria e interblocchi.
-
-[Leggi la sintesi del modulo 5 →](modulo-5.qmd)
-
-:::
-
-::: {.map-card}
-
-### 06 / Gestire tempi e misure
-
-- [Timer](glossario.qmd#gloss-s60) e [contatori](glossario.qmd#gloss-s61).
-- [Segnali analogici](glossario.qmd#gloss-new75) e [scalatura](glossario.qmd#gloss-s65).
-
-[Leggi la sintesi del modulo 6 →](modulo-6.qmd)
-
-:::
-
-::::
-
-[]{#nav:indice label="nav:indice"}
-
-
-## Prosegui nel percorso
-
-- [Fondamenti e componenti](index.qmd#fondamenti)
-- [Moduli di approfondimento](index.qmd#moduli-di-approfondimento)
-- [Laboratorio](/laboratori/index.qmd)
+```{=html}
+<script>location.replace(new URL("index.html#moduli", location.href).href);</script>
+```

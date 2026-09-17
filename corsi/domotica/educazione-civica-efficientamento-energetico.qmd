@@ -2,7 +2,7 @@
 title: "Educazione civica / Efficientamento energetico"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/domotica.pdf)
 
 []{#sec:civica}
 

@@ -2,7 +2,28 @@
 title: "Numeri e codifiche"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+
+## Richiami iniziali {#richiami-iniziali}
+
+[]{#sec:codifiche-compendio}
+
+Puoi richiamare questi strumenti mentre affronti gli argomenti del corso:
+
+- **Basi di numerazione.** Convertire interi fra binario, decimale ed esadecimale. Collegare numero di [bit](glossario.qmd#gloss-g7) e intervallo rappresentabile.
+
+- **[Complemento a due](glossario.qmd#gloss-g65).** Un modo per scrivere con i [bit](glossario.qmd#gloss-g7) anche i numeri negativi, usato nei calcolatori e nei circuiti digitali. Consente di eseguire somme e sottrazioni con lo stesso circuito sommatore.
+
+- **Virgola mobile.** Convertire semplici frazioni binarie e normalizzare un numero. Distinguere segno, significando ed esponente; comprendere perché alcuni valori vengono approssimati.
+
+- **[ASCII](glossario.qmd#gloss-g3).** Associare codici e caratteri. Distinguere il valore numerico dalla sua rappresentazione come testo.
+
+- **[Unicode](glossario.qmd#gloss-g53) e [UTF-8](glossario.qmd#gloss-g54).** Distinguere caratteri, punti di codice e [byte](glossario.qmd#gloss-g9). Leggere semplici sequenze [UTF-8](glossario.qmd#gloss-g54) con l'aiuto di una tabella.
+
+[Consulta il vocabolario minimo](glossario.qmd#vocabolario-minimo).
+
+
+
 
 
 ## Rappresentare l'informazione {#sec:codifiche}

@@ -1,31 +1,10 @@
 ---
-title: "Mappe per orientarsi e ripassare"
-description: "Indici grafici dei percorsi e collegamenti fra i concetti."
+title: "Mappe concettuali"
+description: "Collegamenti fra i concetti per studiare e ripassare."
 toc: false
 ---
 
-Le **mappe del percorso** mostrano l’organizzazione del programma. Le **mappe concettuali** aiutano a collegare le idee: ogni blocco porta alla spiegazione corrispondente.
-
-## Mappe dei percorsi
-
-::: {.resource-grid}
-::: {.resource-card}
-### [TPSEE · Elettronica](../../corsi/tpsee-elettronici/percorso.qmd)
-Dal progetto alla logica combinatoria e sequenziale.
-:::
-::: {.resource-card}
-### [TPSEE · Elettrotecnica](../../corsi/tpsee-elettrotecnici/percorso.qmd)
-Normativa, rappresentazione, componenti, materiali e illuminazione.
-:::
-::: {.resource-card}
-### [Sistemi automatici](../../corsi/sistemi-automatici/percorso.qmd)
-Modelli, logica digitale e controllo con PLC.
-:::
-::: {.resource-card}
-### [Domotica e automazione](../../corsi/domotica/percorso.qmd)
-Dagli automatismi ai linguaggi di programmazione.
-:::
-:::
+Le mappe concettuali mettono in relazione le idee. Ogni blocco porta alla spiegazione corrispondente. Per scegliere un modulo usa invece l’[indice del tuo percorso](../../index.qmd).
 
 ## Componenti ed energia
 

@@ -20,7 +20,7 @@
     document.body.dataset.course = course || 'common';
     if (course) document.documentElement.style.setProperty('--course-accent', courses[course][1]);
     const href = p => new URL(p, root).href;
-    const topSection = fromPath || home ? 'Percorsi' : relative.startsWith('laboratori/') ? 'Laboratorio' : relative.startsWith('risorse/mappe/') ? 'Mappe' : relative === 'materiali.html' ? 'Dispense PDF' : 'Risorse';
+    const topSection = fromPath || home ? 'Percorsi' : relative.startsWith('laboratori/') ? 'Laboratorio' : relative.startsWith('risorse/mappe/') ? 'Mappe concettuali' : relative === 'materiali.html' ? 'Dispense PDF' : 'Risorse';
     document.querySelectorAll('.navbar-nav > li > .nav-link').forEach(a => {
       const active = a.textContent.trim() === topSection;
       a.classList.toggle('active', active);

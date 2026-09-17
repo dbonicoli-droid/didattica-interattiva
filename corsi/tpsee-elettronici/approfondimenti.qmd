@@ -2,7 +2,7 @@
 title: "Schede di approfondimento"
 ---
 
-[← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)
 
 []{#sec:approfondimenti}
 
