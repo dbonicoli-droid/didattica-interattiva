@@ -8,3 +8,9 @@
 - Non sovrascrivere modifiche ai QMD rilanciando la migrazione dalle vecchie dispense.
 
 - Quando una spiegazione, un esempio o una simulazione riguarda un circuito, includere lo schema elettrico prima della formula o insieme ad essa: componenti e valori, alimentazione, polarità delle tensioni e versi delle correnti pertinenti. Usare gli stessi simboli nei controlli, nel grafico e nel testo. Per app autonome includere lo schema anche nel file offline; prevedere una figura statica per il PDF.
+
+## Metodo comune a tutti i percorsi
+- Le decisioni su struttura, navigazione, terminologia e interazioni valgono per tutti i percorsi, salvo eccezioni esplicite dell'utente. Gli esempi riferiti a Elettronica illustrano il metodo generale e non ne limitano l'ambito.
+- Prima di considerare conclusa una modifica trasversale, verificare TPSEE Elettronici, TPSEE Elettrotecnici, Sistemi automatici e Domotica, anche nel passaggio alle risorse condivise.
+- Conservare le differenze didattiche pertinenti: argomenti, prerequisiti, numero di moduli, livello e stato provvisorio delle guide. Coerenza del metodo non significa copiare gli stessi contenuti in tutti i corsi.
+- Distinguere nel resoconto ciò che è applicato a tutti i corsi, ciò che è condiviso, le eccezioni motivate e le funzionalità ancora da realizzare.
