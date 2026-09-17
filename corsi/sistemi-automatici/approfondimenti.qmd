@@ -1,5 +1,5 @@
 ---
-title: "Approfondimenti"
+title: "Schede di approfondimento"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)

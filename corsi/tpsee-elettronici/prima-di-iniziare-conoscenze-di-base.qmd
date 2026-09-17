@@ -1,5 +1,5 @@
 ---
-title: "Prima di iniziare / Conoscenze di base"
+title: "Prerequisiti in breve"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettronici.pdf)

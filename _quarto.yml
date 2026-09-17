@@ -17,6 +17,10 @@ website:
   site-url: https://dbonicoli-droid.github.io/didattica-interattiva/
   repo-url: https://github.com/dbonicoli-droid/didattica-interattiva
   description: "Materiali di Daniele Bonicoli per elettronica, elettrotecnica e automazione."
+  search:
+    location: navbar
+    type: textbox
+    collapse-after: 2
   navbar:
     background: light
     left:
@@ -24,20 +28,30 @@ website:
         text: Percorsi
       - href: laboratori/index.qmd
         text: Laboratorio
+      - href: risorse/mappe/index.qmd
+        text: Mappe
+      - text: Risorse
+        menu:
+          - href: risorse/fondamenti/index.qmd
+            text: Fondamenti
+          - href: risorse/componenti/index.qmd
+            text: Componenti
+          - href: risorse/esterne/index.qmd
+            text: Risorse esterne
+          - href: guida.qmd
+            text: Come studiare
       - href: materiali.qmd
         text: Dispense PDF
-      - href: guida.qmd
-        text: Come studiare
   sidebar:
     style: docked
-    search: true
+    search: false
     collapse-level: 1
     contents:
       - section: "TPSEE · Elettronici"
         href: corsi/tpsee-elettronici/index.qmd
         contents:
           - href: corsi/tpsee-elettronici/index.qmd
-            text: Percorso di lettura
+            text: Indice del percorso
           - section: "Panoramica del Programma"
             contents:
               - href: corsi/tpsee-elettronici/percorso.qmd
@@ -54,16 +68,12 @@ website:
             contents:
               - href: corsi/tpsee-elettronici/guida-sicurezza.qmd
                 text: "Guida completa di sicurezza"
-              - href: risorse/fondamenti/index.qmd
-                text: Fondamenti condivisi
               - href: corsi/tpsee-elettronici/prima-di-iniziare-conoscenze-di-base.qmd
-                text: "Prima di iniziare / Conoscenze di base"
+                text: "Prerequisiti in breve"
               - href: corsi/tpsee-elettronici/sicurezza-e-buone-pratiche.qmd
                 text: "Sicurezza e Buone pratiche"
               - href: corsi/tpsee-elettronici/conoscenze-di-base.qmd
-                text: "Conoscenze di base"
-              - href: risorse/componenti/index.qmd
-                text: Componenti
+                text: "Numeri e codifiche"
           - section: "Moduli di approfondimento"
             contents:
               - href: corsi/tpsee-elettronici/moduli/modulo-1.qmd
@@ -74,21 +84,19 @@ website:
                 text: "Modulo 3 / Elettronica digitale in logica cablata"
               - href: corsi/tpsee-elettronici/moduli/modulo-4.qmd
                 text: "Modulo 4 / Reti sequenziali"
-          - href: laboratori/index.qmd
-            text: Laboratorio
           - section: "Altre risorse"
             contents:
               - href: corsi/tpsee-elettronici/metti-insieme-il-percorso.qmd
                 text: "Metti insieme il percorso"
               - href: corsi/tpsee-elettronici/approfondimenti.qmd
-                text: "Approfondimenti"
+                text: "Schede di approfondimento"
               - href: corsi/tpsee-elettronici/glossario.qmd
                 text: "Glossario"
       - section: "TPSEE · Elettrotecnici"
         href: corsi/tpsee-elettrotecnici/index.qmd
         contents:
           - href: corsi/tpsee-elettrotecnici/index.qmd
-            text: Percorso di lettura
+            text: Indice del percorso
           - section: "Panoramica del Programma"
             contents:
               - href: corsi/tpsee-elettrotecnici/percorso.qmd
@@ -107,14 +115,10 @@ website:
             contents:
               - href: corsi/tpsee-elettrotecnici/guida-sicurezza.qmd
                 text: "Guida completa di sicurezza / provvisoria"
-              - href: risorse/fondamenti/index.qmd
-                text: Fondamenti condivisi
               - href: corsi/tpsee-elettrotecnici/prima-di-iniziare-conoscenze-di-base.qmd
-                text: "Prima di iniziare / Conoscenze di base"
+                text: "Prerequisiti in breve"
               - href: corsi/tpsee-elettrotecnici/conoscenze-di-base.qmd
-                text: "Conoscenze di base"
-              - href: risorse/componenti/index.qmd
-                text: Componenti
+                text: "Calcolo e lettura degli schemi"
           - section: "Moduli di approfondimento"
             contents:
               - href: corsi/tpsee-elettrotecnici/moduli/modulo-1.qmd
@@ -127,8 +131,6 @@ website:
                 text: "Modulo 4 / Tecnologia dei materiali"
               - href: corsi/tpsee-elettrotecnici/moduli/modulo-5.qmd
                 text: "Modulo 5 / Illuminotecnica"
-          - href: laboratori/index.qmd
-            text: Laboratorio
           - section: "Altre risorse"
             contents:
               - href: corsi/tpsee-elettrotecnici/esercizi-metti-insieme-i-moduli.qmd
@@ -136,14 +138,14 @@ website:
               - href: corsi/tpsee-elettrotecnici/educazione-civica-sicurezza-e-responsabilita.qmd
                 text: "Educazione civica / Sicurezza e responsabilità"
               - href: corsi/tpsee-elettrotecnici/approfondimenti.qmd
-                text: "Approfondimenti"
+                text: "Schede di approfondimento"
               - href: corsi/tpsee-elettrotecnici/glossario.qmd
                 text: "Glossario"
       - section: "Sistemi automatici"
         href: corsi/sistemi-automatici/index.qmd
         contents:
           - href: corsi/sistemi-automatici/index.qmd
-            text: Percorso di lettura
+            text: Indice del percorso
           - section: "Panoramica del Programma"
             contents:
               - href: corsi/sistemi-automatici/percorso.qmd
@@ -164,14 +166,10 @@ website:
             contents:
               - href: corsi/sistemi-automatici/guida-sicurezza.qmd
                 text: "Guida completa di sicurezza / provvisoria"
-              - href: risorse/fondamenti/index.qmd
-                text: Fondamenti condivisi
               - href: corsi/sistemi-automatici/prima-di-iniziare-conoscenze-di-base.qmd
-                text: "Prima di iniziare / Conoscenze di base"
+                text: "Prerequisiti in breve"
               - href: corsi/sistemi-automatici/conoscenze-di-base.qmd
-                text: "Conoscenze di base"
-              - href: risorse/componenti/index.qmd
-                text: Componenti
+                text: "Numeri, dati e variabili"
           - section: "Moduli di approfondimento"
             contents:
               - href: corsi/sistemi-automatici/moduli/modulo-1.qmd
@@ -186,8 +184,6 @@ website:
                 text: "Modulo 5 / Circuiti sequenziali"
               - href: corsi/sistemi-automatici/moduli/modulo-6.qmd
                 text: "Modulo 6 / Tempi, eventi e grandezze analogiche"
-          - href: laboratori/index.qmd
-            text: Laboratorio
           - section: "Altre risorse"
             contents:
               - href: corsi/sistemi-automatici/esercizi-un-controllo-ragionato.qmd
@@ -195,14 +191,14 @@ website:
               - href: corsi/sistemi-automatici/educazione-civica-emergenza-climatica.qmd
                 text: "Educazione civica / Emergenza climatica"
               - href: corsi/sistemi-automatici/approfondimenti.qmd
-                text: "Approfondimenti"
+                text: "Schede di approfondimento"
               - href: corsi/sistemi-automatici/glossario.qmd
                 text: "Glossario"
       - section: "Domotica e automazione"
         href: corsi/domotica/index.qmd
         contents:
           - href: corsi/domotica/index.qmd
-            text: Percorso di lettura
+            text: Indice del percorso
           - section: "Panoramica del Programma"
             contents:
               - href: corsi/domotica/percorso.qmd
@@ -221,12 +217,8 @@ website:
             contents:
               - href: corsi/domotica/guida-sicurezza.qmd
                 text: "Guida completa di sicurezza / provvisoria"
-              - href: risorse/fondamenti/index.qmd
-                text: Fondamenti condivisi
               - href: corsi/domotica/conoscenze-di-base.qmd
-                text: "Conoscenze di base"
-              - href: risorse/componenti/index.qmd
-                text: Componenti
+                text: "Richieste, sensori e segnali"
           - section: "Moduli di approfondimento"
             contents:
               - href: corsi/domotica/moduli/modulo-1.qmd
@@ -239,12 +231,10 @@ website:
                 text: "Modulo 4 / Linguaggio SFC"
               - href: corsi/domotica/moduli/modulo-5.qmd
                 text: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
-          - href: laboratori/index.qmd
-            text: Laboratorio
           - section: "Altre risorse"
             contents:
               - href: corsi/domotica/approfondimenti.qmd
-                text: "Approfondimenti"
+                text: "Schede di approfondimento"
               - href: corsi/domotica/educazione-civica-efficientamento-energetico.qmd
                 text: "Educazione civica / Efficientamento energetico"
               - href: corsi/domotica/esercizi-verifica-trasversale.qmd
@@ -286,13 +276,18 @@ website:
           - risorse/componenti/induttore.qmd
           - risorse/componenti/diodo.qmd
           - risorse/componenti/transistor.qmd
+      - href: risorse/esterne/index.qmd
+        text: Risorse esterne
   page-footer:
     left: "Daniele Bonicoli · Materiali didattici personali · A.S. 2026–2027"
     right: "Versione in sviluppo"
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css:
+      - styles.css
+      - assets/modern.css
+    include-after-body: scripts/navigation.html
     lang: it
     toc: true
     toc-title: In questa pagina
@@ -301,6 +296,8 @@ format:
     html-math-method: mathjax
     smooth-scroll: true
 lang: it
+language:
+  search-text-placeholder: "Cerca nel sito…"
 execute:
   enabled: false
 

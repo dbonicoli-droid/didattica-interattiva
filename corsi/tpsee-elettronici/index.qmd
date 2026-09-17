@@ -7,7 +7,7 @@ Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti racco
 
 [Scarica la dispensa PDF della panoramica](/downloads/tpsee-elettronici.pdf){.btn .btn-primary}
 
-## Percorso di lettura
+## Indice del percorso
 
 ### Panoramica del Programma {#panoramica-del-programma}
 
@@ -25,9 +25,9 @@ Una breve presentazione degli argomenti e delle unità didattiche previste.
 
 Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
 
-- [Prima di iniziare / Conoscenze di base](prima-di-iniziare-conoscenze-di-base.qmd)
+- [Prerequisiti in breve](prima-di-iniziare-conoscenze-di-base.qmd)
 - [Sicurezza e Buone pratiche](sicurezza-e-buone-pratiche.qmd)
-- [Conoscenze di base](conoscenze-di-base.qmd)
+- [Numeri e codifiche](conoscenze-di-base.qmd)
 - [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
 - [Esplora i fondamenti condivisi](/risorse/fondamenti/index.qmd)
 
@@ -51,5 +51,5 @@ Le risorse di laboratorio possono essere utilizzate in più percorsi.
 ### Altre risorse {#altre-risorse}
 
 - [Metti insieme il percorso](metti-insieme-il-percorso.qmd)
-- [Approfondimenti](approfondimenti.qmd)
+- [Schede di approfondimento](approfondimenti.qmd)
 - [Glossario](glossario.qmd)

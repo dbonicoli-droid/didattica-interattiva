@@ -7,7 +7,7 @@ Scegli da dove iniziare: la panoramica presenta il programma, i fondamenti racco
 
 [Scarica la dispensa PDF della panoramica](/downloads/domotica.pdf){.btn .btn-primary}
 
-## Percorso di lettura
+## Indice del percorso
 
 ### Panoramica del Programma {#panoramica-del-programma}
 
@@ -26,7 +26,7 @@ Una breve presentazione degli argomenti e delle unità didattiche previste.
 
 Risorse propedeutiche da consultare prima dei moduli e durante lo studio.
 
-- [Conoscenze di base](conoscenze-di-base.qmd)
+- [Richieste, sensori e segnali](conoscenze-di-base.qmd)
 - [Componenti / resistore, condensatore, induttore, diodo e transistor](/risorse/componenti/index.qmd)
 > **Guida provvisoria:** per ora è disponibile il documento di Fanucchi per elettronica; sarà sostituito con la guida specifica del corso.
 
@@ -52,7 +52,7 @@ Le risorse di laboratorio possono essere utilizzate in più percorsi.
 
 ### Altre risorse {#altre-risorse}
 
-- [Approfondimenti](approfondimenti.qmd)
+- [Schede di approfondimento](approfondimenti.qmd)
 - [Educazione civica / Efficientamento energetico](educazione-civica-efficientamento-energetico.qmd)
 - [Esercizi / Verifica trasversale](esercizi-verifica-trasversale.qmd)
 - [Glossario](glossario.qmd)

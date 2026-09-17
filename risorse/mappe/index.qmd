@@ -1,0 +1,63 @@
+---
+title: "Mappe per orientarsi e ripassare"
+description: "Indici grafici dei percorsi e collegamenti fra i concetti."
+toc: false
+---
+
+Le **mappe del percorso** mostrano l’organizzazione del programma. Le **mappe concettuali** aiutano a collegare le idee: ogni blocco porta alla spiegazione corrispondente.
+
+## Mappe dei percorsi
+
+::: {.resource-grid}
+::: {.resource-card}
+### [TPSEE · Elettronica](../../corsi/tpsee-elettronici/percorso.qmd)
+Dal progetto alla logica combinatoria e sequenziale.
+:::
+::: {.resource-card}
+### [TPSEE · Elettrotecnica](../../corsi/tpsee-elettrotecnici/percorso.qmd)
+Normativa, rappresentazione, componenti, materiali e illuminazione.
+:::
+::: {.resource-card}
+### [Sistemi automatici](../../corsi/sistemi-automatici/percorso.qmd)
+Modelli, logica digitale e controllo con PLC.
+:::
+::: {.resource-card}
+### [Domotica e automazione](../../corsi/domotica/percorso.qmd)
+Dagli automatismi ai linguaggi di programmazione.
+:::
+:::
+
+## Componenti ed energia
+
+Parti dalle grandezze, confronta il comportamento dei componenti e passa al circuito. I collegamenti restano utilizzabili anche come indice testuale.
+
+::: {.resource-card}
+### [Carica, corrente e tensione](../fondamenti/carica-corrente-tensione.qmd)
+La corrente descrive il trasferimento di carica; la tensione è una differenza di potenziale.
+:::
+
+**Queste grandezze permettono di descrivere tre comportamenti:**
+
+::: {.process-map}
+::: {.map-card .map-card-linked}
+### [Resistore](../componenti/resistore.qmd#livello-2){.map-destination}
+Lega tensione e corrente attraverso la resistenza e **dissipa energia**.
+:::
+::: {.map-card .map-card-linked}
+### [Condensatore](../componenti/condensatore.qmd#livello-2){.map-destination}
+Lega carica e tensione e **immagazzina energia nel campo elettrico**.
+:::
+::: {.map-card .map-card-linked}
+### [Induttore](../componenti/induttore.qmd#livello-2){.map-destination}
+Lega corrente e flusso concatenato e **immagazzina energia nel campo magnetico**.
+:::
+:::
+
+**Collegando resistore e condensatore otteniamo un esempio di evoluzione nel tempo:**
+
+::: {.resource-card}
+### [Circuito RC e costante di tempo](../../laboratori/rc.qmd)
+Il resistore limita la corrente di carica; mentre la tensione del condensatore cresce, la corrente diminuisce. Esplora come R e C cambiano la durata del transitorio.
+:::
+
+[Rivedi potenza ed energia](../fondamenti/potenza-energia.qmd) · [Consulta tutti i componenti](../componenti/index.qmd)

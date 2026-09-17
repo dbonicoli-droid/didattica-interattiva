@@ -34,3 +34,10 @@ Creare un file `.qmd` nella cartella del corso, aggiornare l'indice del corso, c
 Le pagine in `risorse/componenti/` sono condivise dai percorsi. Il filtro `scripts/component-links.lua` collega automaticamente i nomi dei componenti nel testo HTML, anche al plurale; conserva i suggerimenti del glossario. Esclude formule, codice, immagini, titoli, collegamenti espliciti e rimandi alla stessa pagina. Per usi non elettrici scrivere `[resistenza]{.no-component-link}`. I riferimenti PDF non vengono trasformati dal filtro.
 
 Gli schemi si rigenerano con `node scripts/build_component_figures.cjs`.
+
+## Navigazione e aspetto
+
+- `assets/modern.css`: tema, colori dei percorsi e adattamento mobile.
+- `scripts/navigation.html`: selezione della barra laterale e contesto delle risorse condivise. Il percorso viene ricavato dall’URL del corso, dal parametro `percorso` o dalla sessione della scheda. La pagina iniziale permette di cambiare percorso e azzera la selezione precedente. Il sito funziona anche se la memoria di sessione è disabilitata; senza JavaScript rimane disponibile l’indice completo.
+- `risorse/mappe/` e `risorse/esterne/`: mappe e collegamenti commentati.
+- `PROJECT_ROADMAP.md`: funzionalità da progettare, incluse discussioni e interazioni. Non viene pubblicato come pagina del sito.

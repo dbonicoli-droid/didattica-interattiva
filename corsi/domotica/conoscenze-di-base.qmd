@@ -1,5 +1,5 @@
 ---
-title: "Conoscenze di base"
+title: "Richieste, sensori e segnali"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/domotica.pdf)

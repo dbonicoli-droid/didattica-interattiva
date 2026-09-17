@@ -1,0 +1,80 @@
+<script>
+(() => {
+  const courses = {
+    'tpsee-elettronici': ['TPSEE · Elettronica', '#087f8c'],
+    'tpsee-elettrotecnici': ['TPSEE · Elettrotecnica', '#325ac6'],
+    'sistemi-automatici': ['Sistemi automatici', '#a55113'],
+    'domotica': ['Domotica e automazione', '#7950ba']
+  };
+  const init = () => {
+    const root = new URL(document.querySelector('meta[name="quarto:offset"]')?.content || './', location.href);
+    const relative = location.pathname.slice(root.pathname.length);
+    const params = new URLSearchParams(location.search);
+    const fromPath = relative.match(/^corsi\/([^/]+)\//)?.[1];
+    const requested = params.get('percorso');
+    let saved;
+    try { saved = sessionStorage.getItem('percorso-attivo'); } catch (_) {}
+    const home = relative === '' || relative === 'index.html';
+    const course = home ? null : courses[fromPath] ? fromPath : courses[requested] ? requested : courses[saved] ? saved : null;
+    try { if (course) sessionStorage.setItem('percorso-attivo', course); else if (home) sessionStorage.removeItem('percorso-attivo'); } catch (_) {}
+    document.body.dataset.course = course || 'common';
+    if (course) document.documentElement.style.setProperty('--course-accent', courses[course][1]);
+    const href = p => new URL(p, root).href;
+    const topSection = fromPath || home ? 'Percorsi' : relative.startsWith('laboratori/') ? 'Laboratorio' : relative.startsWith('risorse/mappe/') ? 'Mappe' : relative === 'materiali.html' ? 'Dispense PDF' : 'Risorse';
+    document.querySelectorAll('.navbar-nav > li > .nav-link').forEach(a => {
+      const active = a.textContent.trim() === topSection;
+      a.classList.toggle('active', active);
+      if (active) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    const sidebar = document.querySelector('#quarto-sidebar');
+    sidebar?.querySelectorAll('.sidebar-menu-container > ul > li').forEach(item => {
+      const a = item.querySelector(':scope > .sidebar-item-container > a[href]');
+      const c = a?.getAttribute('href')?.match(/corsi\/([^/]+)\//)?.[1];
+      if (c) {
+        item.hidden = c !== course;
+        if (c === course) {
+          item.classList.add('active-course');
+          item.querySelector(':scope > ul')?.classList.add('show');
+          item.querySelector(':scope > .sidebar-item-container [aria-expanded]')?.setAttribute('aria-expanded', 'true');
+        }
+      }
+    });
+    sidebar?.querySelectorAll('a.active').forEach(a => {
+      if (new URL(a.href).pathname !== location.pathname) a.classList.remove('active');
+    });
+    if (sidebar) {
+      const heading = document.createElement('div');
+      heading.className = 'navigation-heading';
+      const label = document.createElement('span'); label.textContent = course ? 'IL TUO PERCORSO' : 'ESPLORA LE RISORSE';
+      const change = document.createElement('a'); change.href = href('index.html'); change.textContent = course ? 'Cambia percorso ↗' : 'Scegli un percorso ↗';
+      heading.append(label, change); sidebar.prepend(heading);
+    }
+    if (!fromPath && !home) {
+      document.querySelectorAll('.quarto-page-breadcrumbs').forEach(el => el.hidden = true);
+      document.querySelectorAll('#quarto-secondary-nav .quarto-secondary-nav-title').forEach(el => el.textContent = 'Risorse condivise');
+      const main = document.querySelector('main');
+      const banner = document.createElement('nav'); banner.className = 'course-context'; banner.setAttribute('aria-label','Percorso di provenienza');
+      const link = document.createElement('a'); link.href = href(course ? `corsi/${course}/index.html` : 'index.html');
+      link.textContent = course ? `← Torna a ${courses[course][0]}` : '← Scegli un percorso';
+      const tag = document.createElement('span'); tag.textContent = 'Risorsa condivisa';
+      banner.append(link, tag); main?.prepend(banner);
+    }
+    document.querySelectorAll('a[href]').forEach(a => {
+      const u = new URL(a.href, location.href);
+      if (u.origin === location.origin && u.pathname.startsWith(root.pathname) && !/\.(pdf|svg|png|webp)$/.test(u.pathname)) a.removeAttribute('target');
+    });
+    if (course) {
+      document.querySelectorAll('a[href]').forEach(a => {
+        const original = a.getAttribute('href');
+        if (!original || original.startsWith('#')) return;
+        const url = new URL(a.href, location.href);
+        const rel = url.pathname.slice(root.pathname.length);
+        if (url.origin === location.origin && url.pathname.startsWith(root.pathname) && /^(risorse\/|laboratori\/|materiali\.html|guida\.html)/.test(rel) && !/\.(pdf|svg|png|webp)$/.test(rel)) {
+          url.searchParams.set('percorso', course); a.href = url.href;
+        }
+      });
+    }
+  };
+  if (document.readyState === 'complete') init(); else window.addEventListener('load', init, {once:true});
+})();
+</script>

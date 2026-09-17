@@ -1,5 +1,5 @@
 ---
-title: "Conoscenze di base"
+title: "Calcolo e lettura degli schemi"
 ---
 
 [← Panoramica del corso](index.qmd) · [PDF completo](/downloads/tpsee-elettrotecnici.pdf)

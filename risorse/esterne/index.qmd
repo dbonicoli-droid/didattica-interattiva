@@ -1,0 +1,55 @@
+---
+title: "Risorse esterne"
+description: "Lezioni, esercizi e strumenti selezionati per ripassare e sperimentare."
+toc: false
+---
+
+Una selezione di materiali da affiancare alle spiegazioni del corso. Per ogni risorsa trovi uno scopo concreto e le conoscenze necessarie per iniziare.
+
+## Matematica da richiamare quando serve
+
+Prima di passare ai materiali esterni puoi consultare i nostri [richiami di matematica](../fondamenti/matematica-per-approfondire.qmd) e la pagina su [grandezze e calcolo](../fondamenti/grandezze-e-calcolo.qmd).
+
+::: {.resource-grid}
+::: {.resource-card}
+[LEZIONI ED ESERCIZI]{.resource-label}
+
+### Precorsi di Gobbino e Ghisi
+
+**Per ripassare:** frazioni, potenze, polinomi, equazioni, esponenziali, logaritmi e trigonometria.
+
+Parti da frazioni e potenze per consolidare il calcolo; richiama esponenziali e logaritmi quando studi i transitori. Le lezioni di trigonometria aiutano a preparare lo studio delle sinusoidi. Scegli l’argomento insieme al docente, secondo i prerequisiti già affrontati.
+
+[Apri i precorsi dell’Università di Pisa →](https://pagine.dm.unipi.it/gobbino/Home_Page/AD_Precorsi.html)
+
+Sono disponibili PDF ed esercizi; diversi video sono proposti come file AVI da aprire con un lettore compatibile.
+:::
+
+::: {.resource-card}
+[GRAFICI INTERATTIVI]{.resource-label}
+
+### GeoGebra
+
+**Per esplorare:** rette, parabole e altre funzioni, confrontando espressione e grafico.
+
+**Da sapere:** coordinate cartesiane e significato di funzione. Prova a tracciare una retta e a modificarne la pendenza; successivamente confronta una retta con una curva esponenziale.
+
+[Apri la calcolatrice grafica →](https://www.geogebra.org/calculator)
+:::
+:::
+
+## Circuiti da esplorare
+
+::: {.resource-card}
+[LABORATORIO VIRTUALE]{.resource-label}
+
+### PhET · Circuiti in corrente continua
+
+**Per esercitarti:** costruire semplici circuiti, confrontare serie e parallelo e osservare le misure di tensione e corrente.
+
+**Da sapere:** generatore, resistore e circuito chiuso. Formula una previsione con la legge di Ohm, poi confrontala con la simulazione.
+
+[Apri il laboratorio virtuale PhET →](https://phet.colorado.edu/it/simulations/circuit-construction-kit-dc-virtual-lab)
+
+Per studiare la carica del condensatore usa anche il nostro [laboratorio RC](../../laboratori/rc.qmd).
+:::
