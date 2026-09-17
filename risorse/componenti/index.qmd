@@ -25,7 +25,7 @@ Le pagine di diodi e transistor offrono una trattazione introduttiva con esempi 
 ## Una progressione adatta alla terza
 
 1. **Osservare e riconoscere:** circuito, simbolo, grandezze e comportamento.
-2. **Calcolare:** relazioni elementari, valori in un istante e unità.
+2. **Calcolare:** relazioni elementari, valori istantanei e unità di misura.
 3. **Comprendere le variazioni e il transitorio:** intervalli di tempo, pendenza media, accumulo e simulazione, senza derivate.
 4. **Formalizzare:** prime spiegazioni di derivate, integrali ed equazioni differenziali; approfondimento negli anni successivi.
 5. **Approfondire:** fasori (5A), Fourier (5B) e Laplace (5C), con una spiegazione introduttiva del loro significato.
