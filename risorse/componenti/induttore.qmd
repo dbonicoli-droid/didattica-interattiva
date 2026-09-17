@@ -1,6 +1,6 @@
 ---
 title: "Induttore"
-description: "Dall'energia magnetica alla dinamica RL, alla risposta in frequenza e a Laplace."
+description: "Dall'energia magnetica alla dinamica RL, alla risposta in frequenza e alla trasformata di Laplace."
 toc-depth: 2
 ---
 
@@ -12,7 +12,7 @@ toc-depth: 2
 ## Come leggere questa pagina in terza
 Studia prima osservazioni, calcoli elementari e variazioni su intervalli. Le sezioni con derivate, integrali, fasori e trasformate sono anticipazioni: saranno approfondite negli anni successivi e non sono prerequisiti per capire il comportamento di base.
 
-[Richiami: pendenza, accumulo e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
+[Richiami: rapidità di variazione, somma di contributi e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
 :::
 
 ## Livello 1 / Riconoscere il componente {#livello-1}
@@ -23,7 +23,7 @@ L'**induttanza** $L$ si misura in henry ($\mathrm H$). Useremo $L=100\,\mathrm{m
 
 In questo circuito $u(t)=v_R(t)+v_L(t)$ e la corrente $i(t)$ è comune ai due componenti. Cambieremo l'alimentazione nei diversi livelli mantenendo lo stesso schema.
 
-## Livello 2 / Regime continuo e singolo istante {#livello-2}
+## Livello 2 / Regime continuo e valori istantanei {#livello-2}
 
 ### Flusso concatenato ed energia
 
@@ -43,7 +43,7 @@ Se la corrente è costante, anche il flusso è costante e la tensione sull'indut
 
 È una proprietà del modello ideale: una bobina reale ha anche la resistenza del filo. Inoltre il regime non è sempre raggiungibile: senza R, una tensione continua non nulla su L ideale farebbe crescere la corrente senza limite.
 
-### La fotografia di un istante
+### Valori istantanei {#la-fotografia-di-un-istante}
 
 Nel circuito RL, se conosciamo $u(t_0)$ e $i(t_0)$:
 
@@ -81,7 +81,7 @@ $$i(t)=\frac{U_0}{R}+\left(I_0-\frac{U_0}{R}\right)e^{-t/\tau}.$$
 
 $I_0$ è la corrente iniziale. Allo spegnimento l'energia già presente richiede un percorso di scarica: osserva il [diodo di ricircolo](diodo.qmd#ricircolo).
 
-### Accumulare le variazioni
+### Sommare le variazioni di corrente {#accumulare-le-variazioni}
 
 Somma le variazioni $\Delta I$ dei vari intervalli al valore iniziale. Il prodotto tensione media × durata è un'area nel grafico tensione–tempo. Il calcolo integrale formalizzerà questa somma negli anni successivi.
 
@@ -89,7 +89,7 @@ Somma le variazioni $\Delta I$ dei vari intervalli al valore iniziale. Il prodot
 
 ## Livello 4 / Formalizzare: Dalle variazioni alla derivata {#livello-3}
 
-**Anticipazione per gli anni successivi.** La derivata descrive la pendenza in un istante; l’integrale somma contributi nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
+**Anticipazione per gli anni successivi.** La derivata descrive la rapidità istantanea di variazione di una grandezza, cioè la pendenza del suo grafico nel tempo; l’integrale permette di sommare contributi distribuiti nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
 
 ### La velocità di variazione della corrente
 
@@ -147,9 +147,9 @@ $$\underline I=\frac{\underline U}{R+j\omega L}.$$
 
 Con tensione del generatore di picco $10\,\mathrm V$ a $50\,\mathrm{Hz}$, la corrente di picco è circa $95{,}40\,\mathrm{mA}$ e ritarda di circa $17{,}44^\circ$. Il ritardo non è $90^\circ$, perché stiamo confrontando la corrente con la tensione dell'intero circuito, non con la sola $v_L$.
 
-## Livello 5B / Fourier: ogni armonica vede un'impedenza diversa {#livello-5}
+## Livello 5B / Serie e trasformata di Fourier: ogni armonica vede un'impedenza diversa {#livello-5}
 
-**Per gli anni successivi.** Fourier permette di vedere un segnale come somma di componenti a frequenze diverse. Ogni componente può essere modificata dal circuito in modo differente; le formule seguenti anticipano lo studio completo.
+**Per gli anni successivi.** La serie di Fourier rappresenta un segnale periodico mediante una componente continua e armoniche sinusoidali. La trasformata di Fourier descrive il contenuto in frequenza anche di segnali non periodici, quando applicabile. Nei circuiti lineari studiati qui possiamo calcolare separatamente la risposta a ciascuna armonica e sommare i risultati.
 
 Per un generatore periodico:
 
@@ -176,11 +176,11 @@ $$\widehat V_L(\omega)=j\omega L\widehat I_L(\omega).$$
 
 Per i segnali periodici abbiamo usato la serie di Fourier. Le [convenzioni comuni](index.qmd#fourier-e-laplace-una-distinzione-utile) chiariscono il rapporto con la trasformata e con il transitorio.
 
-## Livello 5C / Laplace e condizioni iniziali {#livello-6}
+## Livello 5C / Trasformata di Laplace e condizioni iniziali {#livello-6}
 
-**Per gli anni successivi.** Laplace trasforma il problema nel tempo in relazioni algebriche e, nella forma usata qui, mantiene le condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
+**Per gli anni successivi.** La trasformata unilaterale di Laplace converte le equazioni differenziali dei circuiti lineari qui studiati in equazioni algebriche, includendo i termini dovuti alle condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
 
-Con la trasformata unilaterale da $0^-$ e $I_0=i_L(0^-)$:
+Con la trasformata unilaterale di Laplace da $0^-$ e $I_0=i_L(0^-)$:
 
 $$V_L(s)=L\,[sI_L(s)-I_0]=sLI_L(s)-LI_0.$$
 

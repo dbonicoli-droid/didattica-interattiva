@@ -26,9 +26,9 @@ Le pagine di diodi e transistor offrono una trattazione introduttiva con esempi 
 
 1. **Osservare e riconoscere:** circuito, simbolo, grandezze e comportamento.
 2. **Calcolare:** relazioni elementari, valori istantanei e unità di misura.
-3. **Comprendere le variazioni e il transitorio:** intervalli di tempo, pendenza media, accumulo e simulazione, senza derivate.
+3. **Comprendere le variazioni e il transitorio:** osservare come cambiano tensione e corrente nel tempo, calcolarne la rapidità media di variazione e comprendere come condensatori e induttori immagazzinano energia. Le simulazioni permettono di esplorare questi comportamenti senza usare le derivate.
 4. **Formalizzare:** prime spiegazioni di derivate, integrali ed equazioni differenziali; approfondimento negli anni successivi.
-5. **Approfondire:** fasori (5A), Fourier (5B) e Laplace (5C), con una spiegazione introduttiva del loro significato.
+5. **Approfondire:** fasori (5A), serie e trasformata di Fourier (5B) e trasformata di Laplace (5C), con una spiegazione introduttiva del loro significato.
 
 In terza il nucleo è nei livelli 1–3. Le formule avanzate restano disponibili nella stessa pagina, chiaramente indicate come anticipazioni: non occorre padroneggiarle per capire il componente. [Richiami matematici di base](../fondamenti/matematica-per-approfondire.qmd).
 
@@ -42,11 +42,13 @@ Per resistore, condensatore e induttore studiamo modelli **ideali, lineari, con 
 - $V(s)$ e $I(s)$: trasformate unilaterali di Laplace; $s=\sigma+j\omega$.
 - $j^2=-1$ e $\omega=2\pi f$, con $f$ in hertz e $\omega$ in rad/s.
 
-### Fourier e Laplace: una distinzione utile
+### Serie di Fourier e trasformate: a cosa servono {#fourier-e-laplace-una-distinzione-utile}
 
 Per una sola sinusoide a regime bastano i **fasori**. Per un segnale periodico più complesso, la **serie di Fourier** permette di lavorare sulle sue armoniche. La **trasformata di Fourier** estende la rappresentazione in frequenza a segnali non periodici, quando esiste o usando un'estensione matematica appropriata.
 
-**Fourier non è limitata al regime e Laplace non è limitata ai transitori.** In queste pagine usiamo questa progressione didattica perché Laplace unilaterale rende particolarmente esplicite le condizioni iniziali. Il regime sinusoidale è una risposta particolare; rappresenta il comportamento finale soltanto quando i transitori del circuito si esauriscono.
+La **trasformata di Fourier** descrive il contenuto in frequenza di un segnale: può essere applicata anche a un impulso di durata finita o a un segnale che decade nel tempo, nelle condizioni matematiche appropriate. La **trasformata di Laplace** permette di calcolare la risposta nel tempo di un circuito, comprendendo sia il transitorio sia il comportamento a regime, quando questo esiste. Per esempio, nella carica di un circuito RC la stessa soluzione contiene il termine esponenziale che si esaurisce e la tensione finale.
+
+In queste pagine partiamo dalle sinusoidi e dalle armoniche per studiare il regime permanente; introduciamo poi la **trasformata unilaterale di Laplace** per calcolare l’evoluzione a partire dalla tensione iniziale del condensatore o dalla corrente iniziale dell’induttore. È una scelta di percorso didattico, non un limite di validità dei due strumenti. Con alimentazione sinusoidale, la risposta a regime rappresenta il comportamento finale solo se il transitorio si esaurisce.
 
 ## Sperimenta
 
@@ -55,4 +57,6 @@ Nel [confronto fra due circuiti RC](../../laboratori/rc.qmd) puoi applicare insi
 ## Per approfondire
 
 - [MIT — Regime sinusoidale, fasori e impedenza](https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/96c80ce0d5513139310a9526fdadb419_sss_phsor_impdce.pdf).
-- [MIT Open Learning Library — Laplace, schemi a blocchi e impedenza](https://openlearninglibrary.mit.edu/courses/course-v1%3AOCW%2B18.031%2B2019_Spring/courseware/week4/lec6/).
+- [MIT Open Learning Library — Trasformata di Laplace, schemi a blocchi e impedenza](https://openlearninglibrary.mit.edu/courses/course-v1%3AOCW%2B18.031%2B2019_Spring/courseware/week4/lec6/).
+
+- [MIT — Serie e trasformata di Fourier: segnali periodici e non periodici](https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/3ab918dbe6a0376dbd9216e404fee31b_fourier.pdf).

@@ -9,13 +9,13 @@ title: "Matematica per approfondire: una prima lettura"
 Questa pagina introduce il significato degli strumenti, senza richiederne già l'uso formale. Per studiare i primi livelli di condensatore e induttore bastano algebra, grafici e variazioni su intervalli.
 :::
 
-## Derivata: pendenza in un istante
+## Derivata: rapidità istantanea di variazione {#derivata-pendenza-in-un-istante}
 
 Fra due istanti calcoliamo $\Delta V/\Delta t$. Se il rapporto cambia lungo la curva, restringere l'intervallo permette di descrivere sempre meglio la pendenza locale. Il limite di questa operazione, quando esiste, è la derivata $dV/dt$.
 
 Non è il valore della tensione: è la sua rapidità di variazione. Una tensione può essere grande ma costante, quindi avere derivata nulla. Nel condensatore ideale $i=C\,dv/dt$: una pendenza maggiore richiede più corrente.
 
-## Integrale: accumulare contributi
+## Integrale: sommare contributi nel tempo {#integrale-accumulare-contributi}
 
 Con corrente costante, $\Delta Q=I\Delta t$. Se la corrente cambia, possiamo suddividere il tempo e sommare piccoli contributi. L'integrale descrive il limite di questa somma e coincide con l'area con segno nel grafico corrente–tempo.
 
@@ -31,15 +31,17 @@ Un numero complesso ha una parte reale e una immaginaria: $a+jb$, con $j^2=-1$. 
 
 L'**impedenza** lega i fasori di tensione e corrente. Per R è reale; per C e L dipende dalla frequenza. Le regole operative verranno sviluppate dopo lo studio dei numeri complessi.
 
-## Fourier: quali frequenze compongono un segnale?
+## Serie e trasformata di Fourier: quali frequenze compongono un segnale? {#fourier-quali-frequenze-compongono-un-segnale}
 
-Un segnale periodico può essere descritto, nelle condizioni appropriate, come somma di una componente continua e sinusoidi: è la serie di Fourier. Un filtro può attenuare alcune componenti più di altre. La trasformata estende l'analisi a segnali non periodici con opportune condizioni matematiche.
+Un segnale periodico può essere descritto, nelle condizioni appropriate, come somma di una componente continua e sinusoidi: è la serie di Fourier. Un filtro può attenuare alcune componenti più di altre. La trasformata di Fourier estende l'analisi a segnali non periodici con opportune condizioni matematiche.
 
-## Laplace: descrivere anche le condizioni iniziali
+## Trasformata di Laplace: includere le condizioni iniziali {#laplace-descrivere-anche-le-condizioni-iniziali}
 
-Laplace trasforma equazioni nel tempo in relazioni algebriche in una variabile $s$. Nella forma unilaterale usata nelle schede tiene conto della tensione iniziale di un condensatore e della corrente iniziale di un induttore. Dopo il calcolo, l'antitrasformata riporta al tempo.
+La trasformata di Laplace converte le equazioni differenziali lineari a coefficienti costanti dei nostri circuiti in equazioni algebriche nella variabile complessa $s$. Nella forma unilaterale usata nelle schede tiene conto della tensione iniziale di un condensatore e della corrente iniziale di un induttore. Dopo il calcolo, l'antitrasformata riporta al tempo.
 
-Non sono compartimenti rigidi “Fourier solo regime, Laplace solo transitori”: qui queste associazioni aiutano a scegliere una prima applicazione didattica.
+La **trasformata di Fourier** descrive il contenuto in frequenza di un segnale: può essere applicata anche a un impulso di durata finita o a un segnale che decade nel tempo, nelle condizioni matematiche appropriate. La **trasformata di Laplace** permette di calcolare la risposta nel tempo di un circuito, comprendendo sia il transitorio sia il comportamento a regime, quando questo esiste. Per esempio, nella carica di un circuito RC la stessa soluzione contiene il termine esponenziale che si esaurisce e la tensione finale.
+
+[Confronto e riferimenti sulle trasformate](../componenti/index.qmd#fourier-e-laplace-una-distinzione-utile).
 
 [Torna ai livelli dei componenti](../componenti/index.qmd).
 

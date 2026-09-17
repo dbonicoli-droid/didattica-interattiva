@@ -83,7 +83,7 @@ In un filo isolato, il rame conduce la [corrente](glossario.qmd#gloss-new55); il
 
 ### Scala e lettura del disegno
 
-- La **scala 1:50** significa che una lunghezza sul foglio rappresenta una lunghezza reale 50 volte maggiore. Prima del calcolo, usa la stessa unità.
+- La **scala 1:50** significa che una lunghezza sul foglio rappresenta una lunghezza reale 50 volte maggiore. Prima del calcolo, usa la stessa unità di misura.
 
 - Il **formato** indica le dimensioni del foglio; il **[cartiglio](glossario.qmd#gloss-e48)** riporta titolo, autore, data e scala del disegno.
 

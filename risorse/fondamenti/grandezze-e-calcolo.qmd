@@ -1,12 +1,12 @@
 ---
-title: "Grandezze, unità e calcolo"
+title: "Grandezze, unità di misura e calcolo"
 ---
 
 [← Fondamenti](index.qmd)
 
 ## Prima il significato, poi il numero
 
-Una misura comprende un numero e un'unità: $I=5\,\mathrm{mA}$. Il simbolo $I$ identifica la corrente, mA l'unità usata. Una formula collega grandezze; i numeri devono essere espressi in unità coerenti.
+Una misura comprende un valore numerico e un'unità di misura: $I=5\,\mathrm{mA}$. Il simbolo $I$ identifica la corrente, mA l’unità di misura usata. Una formula collega grandezze; i numeri devono essere espressi in unità coerenti.
 
 | Prefisso | Simbolo | Fattore | Esempio |
 |---|---|---|---|
@@ -31,7 +31,7 @@ Controllo dimensionale: $\mathrm V/\Omega=\mathrm A$. Se il risultato avesse uni
 
 A resistenza costante, raddoppiare $V$ raddoppia $I$. A tensione costante, raddoppiare $R$ dimezza $I$. Prima di dire che due grandezze sono proporzionali bisogna specificare che cosa resta costante.
 
-Leggi sempre titolo, assi, unità e scala di un grafico. Il punto $(2\,\mathrm s,4\,\mathrm V)$ dice che a due secondi la tensione vale quattro volt. La pendenza fra due punti è una variazione verticale divisa per quella orizzontale: da 1 a 3 V in 2 s corrisponde a $1\,\mathrm{V/s}$.
+Leggi sempre titolo, assi, unità di misura e scala di un grafico. Il punto $(2\,\mathrm s,4\,\mathrm V)$ dice che a due secondi la tensione vale quattro volt. La pendenza fra due punti è una variazione verticale divisa per quella orizzontale: da 1 a 3 V in 2 s corrisponde a $1\,\mathrm{V/s}$.
 
 ## Verifica
 

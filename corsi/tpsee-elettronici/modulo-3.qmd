@@ -264,7 +264,7 @@ S_1\overline{S_0}D_2+S_1S_0D_3.$$
 
 ## U.D. 3.13 / Implementazioni di funzioni logiche tramite [MUX](glossario.qmd#gloss-g38) {#ud:3.13}
 
-Per realizzare una funzione di $n$ variabili con un [MUX](glossario.qmd#gloss-g38) $2^n\to1$, collega le variabili ai selettori e gli ingressi dati a 0 o 1 secondo la [tabella di verità](glossario.qmd#gloss-g48). [Un esempio con meno selettori](approfondimenti.qmd#app:logica) è disponibile a p. .
+Per realizzare una funzione di $n$ variabili con un [MUX](glossario.qmd#gloss-g38) $2^n\to1$, collega le variabili ai selettori e gli ingressi dati a 0 o 1 secondo la [tabella di verità](glossario.qmd#gloss-g48). [Un esempio con meno selettori](approfondimenti.qmd#app:logica) è disponibile nell’approfondimento collegato.
 
 #### Realizzare una [XOR](glossario.qmd#gloss-g56) con un [MUX](glossario.qmd#gloss-g38) a quattro ingressi
 

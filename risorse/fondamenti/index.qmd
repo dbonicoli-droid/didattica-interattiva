@@ -6,7 +6,7 @@ Le basi comuni ai percorsi, da studiare prima dei moduli e da richiamare quando 
 
 ## Percorso consigliato
 
-1. [Grandezze, unità e calcolo](grandezze-e-calcolo.qmd)
+1. [Grandezze, unità di misura e calcolo](grandezze-e-calcolo.qmd)
 2. [Carica, corrente e tensione](carica-corrente-tensione.qmd)
 3. [Corrente nei materiali](corrente-nei-materiali.qmd)
 4. [Leggere uno schema elettrico](leggere-gli-schemi.qmd)
@@ -18,6 +18,6 @@ Le basi comuni ai percorsi, da studiare prima dei moduli e da richiamare quando 
 ## Strumenti da richiamare durante lo studio
 
 - [Segnali e dinamica](segnali-e-dinamica.qmd)
-- [Matematica per approfondire](matematica-per-approfondire.qmd): pendenza, accumulo, fasori e trasformate.
+- [Matematica per approfondire](matematica-per-approfondire.qmd): rapidità di variazione, somma di contributi nel tempo, fasori e trasformate.
 - [Guida completa di laboratorio e sicurezza](../sicurezza/index.qmd)
 - [Laboratorio: simulazioni e attività](/laboratori/index.qmd)

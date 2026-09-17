@@ -260,7 +260,7 @@ website:
         href: risorse/fondamenti/index.qmd
         contents:
           - href: risorse/fondamenti/grandezze-e-calcolo.qmd
-            text: "Grandezze, unità e calcolo"
+            text: "Grandezze, unità di misura e calcolo"
           - href: risorse/fondamenti/carica-corrente-tensione.qmd
             text: "Carica, corrente e tensione"
           - href: risorse/fondamenti/corrente-nei-materiali.qmd

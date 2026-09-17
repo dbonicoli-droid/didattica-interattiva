@@ -64,7 +64,7 @@ Una **termoresistenza** varia la resistenza con la temperatura. Per una [Pt100](
 
 $$R(T)\simeq R_0(1+\alpha T),\qquad\alpha\simeq0{,}00385\,^{\circ}\mathrm C^{-1}.$$ La legge completa non è perfettamente affine. Corrente di misura, autoriscaldamento e resistenza dei collegamenti influenzano la lettura; le connessioni a tre o quattro fili aiutano a trattare l'effetto dei conduttori.
 
-**Potenziometro.** Un cursore preleva una frazione della tensione applicata a una pista resistiva. Se la pista è uniforme e l'uscita non è caricata: La tensione di uscita \[V\] è la tensione di alimentazione \[V\] moltiplicata per la frazione di corsa del cursore: $x$ è la posizione, $L$ la corsa totale, espresse nella stessa unità. $$V_{out}=V_{exc}\frac{x}{L}.$$
+**Potenziometro.** Un cursore preleva una frazione della tensione applicata a una pista resistiva. Se la pista è uniforme e l'uscita non è caricata: La tensione di uscita \[V\] è la tensione di alimentazione \[V\] moltiplicata per la frazione di corsa del cursore: $x$ è la posizione, $L$ la corsa totale, espresse nella stessa unità di misura. $$V_{out}=V_{exc}\frac{x}{L}.$$
 
 ::: center
 ![Schema didattico 14](/assets/dispense/domotica/figura-14.png){fig-alt="Schema didattico 14 della dispensa Domotica e automazione"}
@@ -178,7 +178,7 @@ Un trasduttore fornisce 1 V a 0 bar e 9 V a 10 bar. $$S=\frac{9-1}{10-0}=0{,}8\,
 
 #### Controllo dimensionale
 
-Una [sensibilità](glossario.qmd#gloss-d37) in V/bar si inverte per ottenere bar/V. Un segnale in mV va convertito in V prima di usarlo con una [sensibilità](glossario.qmd#gloss-d37) espressa in V per unità fisica. Gli errori di fattore 1000 sono spesso errori di unità.
+Una [sensibilità](glossario.qmd#gloss-d37) in V/bar si inverte per ottenere bar/V. Un segnale in mV va convertito in V prima di usarlo con una [sensibilità](glossario.qmd#gloss-d37) espressa in V per unità fisica. Gli errori di fattore 1000 sono spesso errori di conversione delle unità di misura.
 
 ## Conversione analogico-digitale {#app:old-1.6}
 

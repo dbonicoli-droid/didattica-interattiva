@@ -32,7 +32,7 @@ Nel comune oscilloscopio da banco il riferimento della sonda può essere collega
 
 | Passo | Cosa registrare |
 |---|---|
-| Previsione | Formula, ipotesi, valori e unità |
+| Previsione | Formula, ipotesi, valori e unità di misura |
 | Simulazione | Circuito, parametri dei modelli e risultato |
 | Misura | Strumento, configurazione, valore e condizioni |
 | Confronto | Differenza e possibili spiegazioni |

@@ -76,7 +76,7 @@ $Q^+$ è lo stato successivo. Con $S=R=1$, entrambe le uscite delle [NOR](glossa
 
 Un [latch](glossario.qmd#gloss-g33) abilitato è sensibile a un **livello**: mentre l'[enable](glossario.qmd#gloss-g16) è attivo risponde agli ingressi. Un [flip-flop](glossario.qmd#gloss-g18) è sensibile a un **fronte** del [clock](glossario.qmd#gloss-g11): aggiorna lo stato soltanto sul fronte previsto e lo mantiene fra due fronti.
 
-Per un [flip-flop](glossario.qmd#gloss-g18) [SR](glossario.qmd#gloss-g46) ideale la tabella precedente si applica al fronte attivo; negli altri istanti lo stato è mantenuto, salvo eventuali comandi asincroni. Gli ingressi devono restare stabili per un breve intervallo prima e dopo il fronte. I [tempi richiesti dal componente](approfondimenti.qmd#app:tempi) sono spiegati a p. . Il triangolo sul [clock](glossario.qmd#gloss-g11) indica il comando a fronte; una bolla sul [clock](glossario.qmd#gloss-g11) indica il [fronte di discesa](glossario.qmd#gloss-new75).
+Per un [flip-flop](glossario.qmd#gloss-g18) [SR](glossario.qmd#gloss-g46) ideale la tabella precedente si applica al fronte attivo; negli altri istanti lo stato è mantenuto, salvo eventuali comandi asincroni. Gli ingressi devono restare stabili per un breve intervallo prima e dopo il fronte. I [tempi richiesti dal componente](approfondimenti.qmd#app:tempi) sono spiegati nella sezione collegata. Il triangolo sul [clock](glossario.qmd#gloss-g11) indica il comando a fronte; una bolla sul [clock](glossario.qmd#gloss-g11) indica il [fronte di discesa](glossario.qmd#gloss-new75).
 
 #### Una memoria di evento
 
@@ -101,7 +101,7 @@ f_{Q_2}=\frac{f_{\mathrm{CLK}}}{8}.$$
 
 ## Perché si chiama ripple?
 
-Il cambiamento passa da un [flip-flop](glossario.qmd#gloss-g18) al successivo, come un'onda. Le uscite impiegano un breve tempo a stabilizzarsi: i [passaggi intermedi e il calcolo del ritardo](approfondimenti.qmd#app:tempi) sono approfonditi a p. .
+Il cambiamento passa da un [flip-flop](glossario.qmd#gloss-g18) al successivo, come un'onda. Le uscite impiegano un breve tempo a stabilizzarsi: i [passaggi intermedi e il calcolo del ritardo](approfondimenti.qmd#app:tempi) sono approfonditi nella sezione collegata.
 
 #### Dividere la frequenza
 

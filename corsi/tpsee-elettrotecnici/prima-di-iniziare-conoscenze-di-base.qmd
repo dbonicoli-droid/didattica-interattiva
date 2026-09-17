@@ -6,7 +6,7 @@ title: "Prima di iniziare / Conoscenze di base"
 
 []{#sec:basi}
 
-- **Calcolo**: proporzioni, potenze di dieci e conversioni delle unità.
+- **Calcolo**: proporzioni, potenze di dieci e conversioni delle unità di misura.
 
 - **Elettricità**: [tensione](glossario.qmd#gloss-new54), [corrente](glossario.qmd#gloss-new55), [resistenza](glossario.qmd#gloss-new56); collegamenti in serie e parallelo.
 

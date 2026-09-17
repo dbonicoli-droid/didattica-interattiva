@@ -1,6 +1,6 @@
 ---
 title: "Condensatore"
-description: "Da carica e tensione alla dinamica RC, alla risposta in frequenza e a Laplace."
+description: "Da carica e tensione alla dinamica RC, alla risposta in frequenza e alla trasformata di Laplace."
 toc-depth: 2
 ---
 
@@ -12,7 +12,7 @@ toc-depth: 2
 ## Come leggere questa pagina in terza
 Studia prima osservazioni, calcoli elementari e variazioni su intervalli. Le sezioni con derivate, integrali, fasori e trasformate sono anticipazioni: saranno approfondite negli anni successivi e non sono prerequisiti per capire il comportamento di base.
 
-[Richiami: pendenza, accumulo e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
+[Richiami: rapidità di variazione, somma di contributi e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
 :::
 
 ## Livello 1 / Riconoscere il componente {#livello-1}
@@ -23,7 +23,7 @@ La **capacità** $C$ si misura in farad ($\mathrm F$). Useremo $C=100\,\mathrm{\
 
 La stessa corrente $i(t)$ attraversa R e C. Le tensioni si sommano: $u(t)=v_R(t)+v_C(t)$. Il circuito rimane lo stesso nei diversi livelli; cambieremo il segnale del generatore.
 
-## Livello 2 / Regime continuo e singolo istante {#livello-2}
+## Livello 2 / Regime continuo e valori istantanei {#livello-2}
 
 ### Carica, tensione ed energia
 
@@ -41,7 +41,7 @@ Quando la tensione è costante, la carica non cambia e la corrente è nulla. Il 
 
 Questo non descrive l'intera carica: subito dopo una variazione del generatore può circolare corrente.
 
-### La fotografia di un istante
+### Valori istantanei {#la-fotografia-di-un-istante}
 
 Nel circuito RC, conoscendo sia $u(t_0)$ sia $v_C(t_0)$:
 
@@ -81,7 +81,7 @@ $V_0$ è la tensione iniziale, $U_0$ quella finale. Non occorre sapere risolvere
 
 [Confronta le curve nel laboratorio RC](/laboratori/rc.qmd).
 
-### Accumulare contributi
+### Sommare la carica trasferita {#accumulare-contributi}
 
 In intervalli successivi si trasferiscono quantità di carica che si sommano. Nel grafico corrente–tempo ogni prodotto corrente media × durata corrisponde a un'area. Questa idea prepara all'integrale, che formalizzeremo in seguito.
 
@@ -89,7 +89,7 @@ In intervalli successivi si trasferiscono quantità di carica che si sommano. Ne
 
 ## Livello 4 / Formalizzare: Dalle variazioni alla derivata {#livello-3}
 
-**Anticipazione per gli anni successivi.** La derivata descrive la pendenza in un istante; l’integrale somma contributi nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
+**Anticipazione per gli anni successivi.** La derivata descrive la rapidità istantanea di variazione di una grandezza, cioè la pendenza del suo grafico nel tempo; l’integrale permette di sommare contributi distribuiti nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
 
 ### Prima un intervallo, poi un istante
 
@@ -147,9 +147,9 @@ $$\frac{\underline V_C}{\underline U}=\frac{Z_C}{R+Z_C}=\frac{1}{1+j\omega RC}.$
 
 Il circuito è un **passa-basso** con uscita sul condensatore. Alla frequenza $f_c=1/(2\pi RC)\simeq1{,}592\,\mathrm{Hz}$ il rapporto delle ampiezze è $1/\sqrt2$ e la fase dell'uscita è $-45^\circ$.
 
-## Livello 5B / Fourier: dalle armoniche al filtro {#livello-5}
+## Livello 5B / Serie e trasformata di Fourier: dalle armoniche al filtro {#livello-5}
 
-**Per gli anni successivi.** Fourier permette di vedere un segnale come somma di componenti a frequenze diverse. Ogni componente può essere modificata dal circuito in modo differente; le formule seguenti anticipano lo studio completo.
+**Per gli anni successivi.** La serie di Fourier rappresenta un segnale periodico mediante una componente continua e armoniche sinusoidali. La trasformata di Fourier descrive il contenuto in frequenza anche di segnali non periodici, quando applicabile. Nei circuiti lineari studiati qui possiamo calcolare separatamente la risposta a ciascuna armonica e sommare i risultati.
 
 Scriviamo una tensione periodica del generatore come somma di armoniche:
 
@@ -167,11 +167,11 @@ $$\widehat I_C(\omega)=j\omega C\widehat V_C(\omega),\qquad \widehat V_C(\omega)
 
 La serie periodica e la trasformata non sono la stessa operazione: vedi le [convenzioni comuni](index.qmd#fourier-e-laplace-una-distinzione-utile). La formula della serie sopra descrive il regime; un'eventuale differenza dalle condizioni iniziali produce anche il transitorio.
 
-## Livello 5C / Laplace e condizioni iniziali {#livello-6}
+## Livello 5C / Trasformata di Laplace e condizioni iniziali {#livello-6}
 
-**Per gli anni successivi.** Laplace trasforma il problema nel tempo in relazioni algebriche e, nella forma usata qui, mantiene le condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
+**Per gli anni successivi.** La trasformata unilaterale di Laplace converte le equazioni differenziali dei circuiti lineari qui studiati in equazioni algebriche, includendo i termini dovuti alle condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
 
-Con la trasformata unilaterale da $0^-$ e $V_0=v_C(0^-)$:
+Con la trasformata unilaterale di Laplace da $0^-$ e $V_0=v_C(0^-)$:
 
 $$\mathcal L\!\left\{\frac{dv_C}{dt}\right\}=sV_C(s)-V_0.$$
 

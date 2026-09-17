@@ -12,7 +12,7 @@ toc-depth: 2
 ## Come leggere questa pagina in terza
 Studia prima osservazioni, calcoli elementari e variazioni su intervalli. Le sezioni con derivate, integrali, fasori e trasformate sono anticipazioni: saranno approfondite negli anni successivi e non sono prerequisiti per capire il comportamento di base.
 
-[Richiami: pendenza, accumulo e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
+[Richiami: rapidità di variazione, somma di contributi e strumenti matematici](../fondamenti/matematica-per-approfondire.qmd).
 :::
 
 ## Livello 1 / Riconoscere il componente {#livello-1}
@@ -23,7 +23,7 @@ Il **resistore** è il componente; la **resistenza** $R$ è la grandezza che ne 
 
 Useremo questo circuito in tutti gli esempi: il generatore impone $u(t)$ e, essendo collegato direttamente al resistore, $v_R(t)=u(t)$. Il valore di riferimento è $R=1\,\mathrm{k\Omega}$.
 
-## Livello 2 / Regime continuo e singolo istante {#livello-2}
+## Livello 2 / Regime continuo e valori istantanei {#livello-2}
 
 ### La legge di Ohm
 
@@ -58,11 +58,11 @@ Se il cambiamento avviene linearmente in 2 ms, la pendenza della tensione è $2\
 
 Nel modello con solo generatore ideale e resistore la corrente segue direttamente la tensione: il resistore non deve caricarsi né accumula uno stato elettrico. Se il generatore varia gradualmente, varia gradualmente anche la corrente. Eventuali ritardi reali richiedono altri elementi del modello.
 
-Per calcolare energia con potenza diversa in più intervalli, somma i prodotti potenza media × durata. Questa idea di accumulo prepara all'integrale.
+Per calcolare energia con potenza diversa in più intervalli, somma i prodotti potenza media × durata. Questa somma di contributi prepara al calcolo integrale: determina l’energia complessivamente dissipata, non energia immagazzinata nel resistore.
 
 ## Livello 4 / Formalizzare: Segnali variabili e derivate {#livello-3}
 
-**Anticipazione per gli anni successivi.** La derivata descrive la pendenza in un istante; l’integrale somma contributi nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
+**Anticipazione per gli anni successivi.** La derivata descrive la rapidità istantanea di variazione di una grandezza, cioè la pendenza del suo grafico nel tempo; l’integrale permette di sommare contributi distribuiti nel tempo. Qui introduciamo le relazioni formali, da approfondire dopo lo studio di questi strumenti.
 
 ### Una relazione istantanea
 
@@ -106,9 +106,9 @@ $$P=\frac{V_{\mathrm{eff}}^2}{R}=\frac{V_m^2}{2R}=12{,}5\,\mathrm{mW}.$$
 
 Non confondere questa sinusoide di picco $5\,\mathrm V$ con la tensione continua di $5\,\mathrm V$ del livello 2.
 
-## Livello 5B / Fourier: più frequenze insieme {#livello-5}
+## Livello 5B / Serie e trasformata di Fourier: più frequenze insieme {#livello-5}
 
-**Per gli anni successivi.** Fourier permette di vedere un segnale come somma di componenti a frequenze diverse. Ogni componente può essere modificata dal circuito in modo differente; le formule seguenti anticipano lo studio completo.
+**Per gli anni successivi.** La serie di Fourier rappresenta un segnale periodico mediante una componente continua e armoniche sinusoidali. La trasformata di Fourier descrive il contenuto in frequenza anche di segnali non periodici, quando applicabile. Nei circuiti lineari studiati qui possiamo calcolare separatamente la risposta a ciascuna armonica e sommare i risultati.
 
 Nel medesimo circuito scegliamo:
 
@@ -130,11 +130,11 @@ $$\widehat V_R(\omega)=R\widehat I_R(\omega).$$
 
 Per segnali periodici persistenti come quello dell'esempio si usa direttamente la **serie di Fourier**; la trasformata con righe spettrali richiede le distribuzioni. Non serve introdurle per calcolare le singole armoniche.
 
-## Livello 5C / Laplace e confronto con i componenti con memoria {#livello-6}
+## Livello 5C / Trasformata di Laplace e confronto con i componenti con memoria {#livello-6}
 
-**Per gli anni successivi.** Laplace trasforma il problema nel tempo in relazioni algebriche e, nella forma usata qui, mantiene le condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
+**Per gli anni successivi.** La trasformata unilaterale di Laplace converte le equazioni differenziali dei circuiti lineari qui studiati in equazioni algebriche, includendo i termini dovuti alle condizioni iniziali. Le derivazioni seguenti sono un approfondimento facoltativo per la terza.
 
-Con la trasformata unilaterale, definita da $0^-$ in avanti:
+Con la trasformata unilaterale di Laplace, definita da $0^-$ in avanti:
 
 $$V_R(s)=RI_R(s),\qquad Z_R(s)=R.$$
 
