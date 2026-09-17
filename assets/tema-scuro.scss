@@ -52,18 +52,25 @@ $border-color: #2a3644;
   --etichetta-bg: #223040;
   --etichetta-testo: #b7cade;
 
-  --stato-bozza: #9aabbf;
-  --stato-sviluppo: #ffc46b;
+  --stato-da-scrivere: #9aabbf;
+  --stato-bozza: #ffc46b;
   --stato-revisione: #ff9d8a;
   --stato-completo: #7fd99a;
 
   --ombra: 0 6px 24px rgb(0 0 0 / 34%);
   --ombra-alta: 0 12px 30px rgb(0 0 0 / 46%);
-  --vignetta: .05;
+  --tabella-bg: #1b232e;
+  --tabella-testata: #232e3c;
+
+  /* Su fondo scuro la vignetta invertita diventa chiara e disturba la
+     lettura molto più che sul bianco: qui va tenuta appena accennata. */
+  --vignetta: .022;
 }
 
 /* La vignetta è un disegno a tratto scuro: nel tema scuro va invertita. */
-.course-background main::before { filter: invert(1) hue-rotate(180deg); }
+.course-background main::before {
+  filter: invert(1) hue-rotate(180deg) blur(.3px);
+}
 
 /* Gli schemi SVG e le figure delle dispense hanno fondo bianco:
    un fondo chiaro esplicito evita che "galleggino" sul buio. */

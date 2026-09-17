@@ -1,21 +1,29 @@
 -- Stato di lavorazione della pagina, dichiarato nel front matter:
 --
---   stato: bozza | in-sviluppo | da-revisionare | completo
+--   stato: da-scrivere | bozza | da-revisionare | completo
+--
+-- Ogni stato ha una prova che lo distingue dagli altri, così due pagine
+-- nella stessa condizione portano sempre la stessa etichetta:
+--
+--   da-scrivere    c'è solo la struttura: titoli e rimandi, nessuna spiegazione
+--   bozza          il testo c'è, ma è un primo getto e non è stato riletto
+--   da-revisionare i contenuti sono completi, manca la rilettura
+--   completo       contenuti completi e riletti
 --
 -- Il badge compare accanto al titolo. Una pagina senza campo `stato`
 -- non mostra nulla: l'assenza non è un'affermazione.
 local ETICHETTE = {
+  ["da-scrivere"]    = "Da scrivere",
   ["bozza"]          = "Bozza",
-  ["in-sviluppo"]    = "In sviluppo",
   ["da-revisionare"] = "Da revisionare",
   ["completo"]       = "Completo"
 }
 
 local DESCRIZIONI = {
-  ["bozza"]          = "Appunti iniziali, non ancora rivisti.",
-  ["in-sviluppo"]    = "Contenuti in scrittura, si arricchiranno con le lezioni.",
-  ["da-revisionare"] = "Contenuti completi, in attesa di revisione.",
-  ["completo"]       = "Contenuti completi e rivisti."
+  ["da-scrivere"]    = "C'è solo la struttura della pagina: i contenuti non sono ancora stati scritti.",
+  ["bozza"]          = "Il testo c'è, ma è un primo getto e non è ancora stato riletto.",
+  ["da-revisionare"] = "Contenuti completi, in attesa di rilettura.",
+  ["completo"]       = "Contenuti completi e riletti."
 }
 
 function Meta(meta)

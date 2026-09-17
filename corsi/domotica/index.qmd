@@ -28,6 +28,8 @@ Dal comando alla sequenza: si parte dai circuiti elettromeccanici, si passa al P
 
 **Educazione civica:** efficientamento energetico, 2 ore.
 
+---
+
 :::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}

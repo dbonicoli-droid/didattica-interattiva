@@ -1,5 +1,5 @@
 ---
-stato: in-sviluppo
+stato: da-scrivere
 title: "Modulo 4 / Reti sequenziali"
 subtitle: "Modulo di approfondimento"
 ---
@@ -7,9 +7,9 @@ subtitle: "Modulo di approfondimento"
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-4.qmd)
 
 ::: {.callout-note icon=false}
-## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Contenuti in preparazione
+## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
 
-Le spiegazioni estese, gli esempi e gli esercizi di questo modulo saranno pubblicati con lo svolgimento delle lezioni. La **sintesi del programma** è già consultabile.
+Qui trovi per ora solo la struttura: i titoli delle unità didattiche e i rimandi. Le spiegazioni, gli esempi e gli esercizi arriveranno con lo svolgimento delle lezioni. La **sintesi del programma** è invece già scritta.
 
 [Vai alla sintesi del modulo 4 →](../modulo-4.qmd){.btn .btn-primary}
 

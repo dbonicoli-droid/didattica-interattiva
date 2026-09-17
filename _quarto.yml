@@ -5,6 +5,7 @@ project:
     - index.qmd
     - guida.qmd
     - materiali.qmd
+    - roba-da-periti.qmd
     - corsi/**/*.qmd
     - laboratori/*.qmd
     - risorse/**/*.qmd
@@ -43,6 +44,8 @@ website:
             text: Come studiare
       - href: materiali.qmd
         text: Dispense PDF
+      - href: roba-da-periti.qmd
+        text: Roba da periti
   # Una barra laterale per percorso, più una per le risorse condivise.
   # Quarto sceglie da sé quella che contiene la pagina aperta: nessun JavaScript,
   # nessun lampeggio iniziale, e la navigazione resta corretta anche senza script.
@@ -247,6 +250,8 @@ website:
           text: "Come studiare"
         - href: materiali.qmd
           text: "Dispense PDF"
+        - href: roba-da-periti.qmd
+          text: "Roba da periti"
   page-footer:
     left: "Daniele Bonicoli · Materiali didattici personali · A.S. 2026–2027"
     right: "Versione in sviluppo"

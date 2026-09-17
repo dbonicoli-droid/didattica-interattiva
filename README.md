@@ -19,7 +19,7 @@ I medesimi comandi sono disponibili nelle attività VS Code.
 - `documentazione/`: note tecniche non incluse nel sito.
 
 ## Pubblicare quando si decide
-Salvare e caricare i sorgenti su GitHub non aggiorna automaticamente il sito. Aprire **Actions → Pubblica sito → Run workflow** per generare e pubblicare una nuova versione. Il sito è ospitato da GitHub Pages usando GitHub Actions.
+Salvare e caricare i sorgenti su GitHub non aggiorna automaticamente il sito: serve avviare il workflow **Pubblica sito**, da **Actions → Pubblica sito → Run workflow** oppure via API. Il sito è ospitato da GitHub Pages usando GitHub Actions. Una esecuzione riuscita su un commit precedente non pubblica le modifiche nuove: verificare sempre che sia partita sul commit giusto.
 
 ## Contenuti e stato
 Le dispense iniziali costituiscono una panoramica del programma. La migrazione web conserva testi, formule e schemi; consultare `documentazione/migrazione.md` per i limiti. Gli appunti OneNote entrano dopo revisione come PDF e immagini. Le fonti dei libri e i dati degli studenti devono rimanere fuori da questo repository pubblico.
@@ -47,7 +47,16 @@ Il vocabolario minimo resta scelto percorso per percorso, come sezioni della ste
 
 ## Stato di lavorazione
 
-Nel front matter di una pagina si può dichiarare `stato: bozza | in-sviluppo | da-revisionare | completo`. `scripts/stato-pagina.lua` mostra il badge accanto al titolo. Una pagina senza il campo non mostra nulla: l'assenza non è un'affermazione.
+Nel front matter di una pagina si può dichiarare `stato:`. `scripts/stato-pagina.lua` mostra il badge accanto al titolo. Una pagina senza il campo non mostra nulla: l'assenza non è un'affermazione.
+
+| valore | etichetta | prova |
+|---|---|---|
+| `da-scrivere` | Da scrivere | c'è solo la struttura: titoli e rimandi, nessuna spiegazione |
+| `bozza` | Bozza | il testo c'è, ma è un primo getto e non è stato riletto |
+| `da-revisionare` | Da revisionare | contenuti completi, manca la rilettura |
+| `completo` | Completo | contenuti completi e riletti |
+
+Ogni stato ha una prova che lo distingue: due pagine nella stessa condizione portano la stessa etichetta.
 
 ## Navigazione e aspetto
 

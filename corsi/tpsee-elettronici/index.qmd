@@ -27,6 +27,8 @@ Dal progetto di un circuito alla logica digitale: prima si impara a disegnare, s
 
 **Educazione civica:** argomento e ore da definire.
 
+---
+
 :::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}

@@ -28,6 +28,8 @@ Dalla norma all'impianto: si parte dalle regole e dai simboli del disegno elettr
 
 **Educazione civica:** sicurezza e responsabilità, 5 ore.
 
+---
+
 :::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}

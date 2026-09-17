@@ -1,0 +1,34 @@
+---
+sidebar: risorse
+title: "Roba da periti"
+subtitle: "Vignette, battute e cose che si capiscono solo dopo tre anni di laboratorio"
+description: "La parte leggera del sito: disegni e battute sul mestiere."
+toc: false
+---
+
+Ci sono cose che fanno ridere solo chi ha passato un pomeriggio a cercare un falso contatto. Questa pagina le raccoglie. Si arricchirà con l'anno.
+
+## Stargate: schema elettrico (quasi) definitivo
+
+::: {.vignetta-grande}
+![Schema elettrico disegnato a mano su carta millimetrata, in stile fumetto. Il cartiglio in alto dice «Materia: Tutti Pronti a Scappare: Estremamente Esplosivo» e «Istituto: ITIS Alessandro Voltaggio». Al posto dei componenti compaiono battute: un timer siglato 666, una bussola, un cervello colorato, uno scoiattolo, una bottiglia di acqua santa, un barattolo di scarabei stercorari. Fra le annotazioni: «quanto basta», «tirare forte qui», «mettere qui la lingua», «fumo magico», «il chip più caro del catalogo», «elettroni in fila indiana», «non è un resistore: è il filo che fa così». Il cartiglio in basso riporta «Disegnato: John Travolt», «Verificato: quello bravo al primo banco», «Scala: a occhio», «Collaudo: esplosione contenuta».](/assets/vignetta-circuiti-colori.png)
+:::
+
+[Apri la vignetta a dimensione intera](/assets/vignetta-circuiti-colori.png)
+
+### Qualche dettaglio da cercare
+
+- Il **timer 666** al posto del 555, con la nota «attivo medio».
+- «**Chiedere al compagno di aprire e chiudere l'interruttore molto velocemente**» come generatore di segnale.
+- «**Arduino: solo per i like su TikTok**».
+- Il **fumo magico**: quello che esce dai componenti quando li bruci e che, secondo la leggenda del mestiere, è ciò che li faceva funzionare.
+- «**Togliersi la maglietta mentre si cabla questa parte, funziona meglio**».
+- Nel cartiglio: **revisione «finale_v3_definitiva»**. Chiunque abbia consegnato una relazione sa di cosa si parla.
+
+::: {.callout-note collapse="true"}
+## Fonte e licenza
+
+Originale: **Randall Munroe**, [xkcd 730 — *Circuit Diagram*](https://xkcd.com/730/), pubblicato con licenza [Creative Commons BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/). Colori, traduzione e adattamento sono stati fatti a scopo didattico per questo sito, che non ha fini commerciali.
+
+La stessa immagine compare, quasi trasparente, come sfondo delle pagine dei corsi.
+:::

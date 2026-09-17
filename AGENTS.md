@@ -24,3 +24,5 @@
 - Colori, spaziature e caratteri stanno solo in `assets/tema*.scss`, come variabili CSS. Nessun valore di colore ripetuto in JavaScript o nei QMD.
 - Ogni pagina dichiara la propria barra laterale con `sidebar:` nel front matter. La navigazione deve restare corretta senza JavaScript.
 - Nelle pagine pubbliche non compaiono nomi di colleghi legati a impegni non ancora presi: quelle note stanno in `PROJECT_ROADMAP.md`.
+
+- Stato delle pagine: `da-scrivere` (solo struttura), `bozza` (primo getto), `da-revisionare` (completo ma non riletto), `completo`. Assegnare solo quando i fatti lo sostengono; niente campo significa nessuna affermazione.

@@ -29,6 +29,8 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 
 **Educazione civica:** emergenza climatica, ore da definire.
 
+---
+
 :::: {.learning-map aria-label="Moduli in ordine di studio"}
 
 ::: {.map-card}

@@ -59,7 +59,7 @@
       const testa = document.createElement('div');
       testa.className = 'navigation-heading';
       const etichetta = document.createElement('span');
-      etichetta.textContent = corso ? 'IL TUO PERCORSO' : 'RISORSE CONDIVISE';
+      etichetta.textContent = corso ? CORSI[corso] : 'Risorse condivise';
       const cambia = document.createElement('a');
       cambia.href = href('index.html');
       cambia.textContent = corso ? 'Cambia percorso ↗' : 'Scegli un percorso ↗';
@@ -134,6 +134,26 @@
       document.querySelectorAll('a.percorso-attivo').forEach(a => {
         a.href = href(`corsi/${corso}/index.html`);
       });
+    }
+
+    // L'interruttore del tema di Quarto è una sola icona: senza parola accanto
+    // non si capisce a che serve. L'etichetta dice che cosa si ottiene
+    // cliccando, non in che tema ci si trova.
+    const interruttore = document.querySelector('.quarto-color-scheme-toggle');
+    if (interruttore) {
+      const parola = document.createElement('span');
+      parola.className = 'tema-etichetta';
+      interruttore.append(parola);
+      const aggiornaTema = () => {
+        const scuro = document.body.classList.contains('quarto-dark');
+        parola.textContent = scuro ? 'Tema chiaro' : 'Tema scuro';
+        const descrizione = scuro ? 'Passa al tema chiaro' : 'Passa al tema scuro';
+        interruttore.setAttribute('title', descrizione);
+        interruttore.setAttribute('aria-label', descrizione);
+      };
+      aggiornaTema();
+      new MutationObserver(aggiornaTema)
+        .observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
 
     // Barra di avanzamento della lettura

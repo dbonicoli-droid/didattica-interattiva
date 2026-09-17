@@ -56,13 +56,17 @@ local function process(inlines)
   elseif el.t=='Link' then
    local c=aliases[pandoc.utils.stringify(el.content):lower()]
    -- un rimando al glossario per un nome di componente porta alla pagina del componente
-   if c and not is_self(c) and el.target:match('glossario[^#]*#') then
-    if seen[c] then
+   local dal_glossario = c and el.target:match('glossario[^#]*#')
+   -- un collegamento scritto a mano che punta gia` alla pagina del componente:
+   -- va lasciato dov'e`, ma merita lo stesso suggerimento di quelli automatici
+   local gia_al_componente = c and el.target:match('componenti/'..c..'%.[qh]')
+   if c and not is_self(c) and (dal_glossario or gia_al_componente) then
+    if seen[c] and dal_glossario then
      result:extend(el.content)
     else
      seen[c]=true
-     el.target=target(c);el=decorate(el,c)
-     result:insert(el)
+     if dal_glossario then el.target=target(c) end
+     result:insert(decorate(el,c))
     end
    else
     result:insert(el)
