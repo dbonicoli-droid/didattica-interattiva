@@ -45,6 +45,8 @@ Progetta sul piano didattico una stanza $4\times3$ m con luce comandata da due p
 Il progetto è comprensibile a un compagno: simboli e sigle coerenti; misure e formule con unità; ipotesi dichiarate; distinzione fra verifica funzionale e sicurezza; conclusioni sostenute dai dati.
 
 
-## Guida completa di laboratorio
+## 🚧 Guida completa di laboratorio
+
+![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"}
 
 [Consulta la guida di Fanucchi per elettronica, provvisoria e da sostituire per questo corso](guida-sicurezza.qmd). Segui le indicazioni dei docenti e le procedure del laboratorio.

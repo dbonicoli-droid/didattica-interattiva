@@ -11,9 +11,9 @@ La guida del Prof. **Jacopo Fanucchi** riguarda il **laboratorio di elettronica*
 | Percorso | Stato del materiale |
 |---|---|
 | TPSEE · Elettronici | Guida di elettronica fornita da Jacopo Fanucchi |
-| TPSEE · Elettrotecnici | Guida di elettronica usata provvisoriamente; da sostituire con la guida del corso, da concordare con l'ITP Maurizio Signorini |
-| Sistemi automatici | Guida di elettronica usata provvisoriamente; da sostituire con quella predisposta dai docenti del corso |
-| Domotica e automazione | Guida di elettronica usata provvisoriamente; da sostituire con quella predisposta dai docenti del corso |
+| TPSEE · Elettrotecnici | ![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"} 🚧 Guida di elettronica usata provvisoriamente; da sostituire con la guida del corso, da concordare con l'ITP Maurizio Signorini |
+| Sistemi automatici | ![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"} 🚧 Guida di elettronica usata provvisoriamente; da sostituire con quella predisposta dai docenti del corso |
+| Domotica e automazione | ![](/assets/cartello-lavori-in-corso.webp){width=64 fig-alt="Cartello triangolare di lavori in corso"} 🚧 Guida di elettronica usata provvisoriamente; da sostituire con quella predisposta dai docenti del corso |
 
 Le sintesi nelle pagine dei corsi restano richiami introduttivi. Per le attività pratiche valgono le indicazioni dei docenti, le procedure dell'istituto e la guida specifica del laboratorio; il documento provvisorio non estende automaticamente le procedure di elettronica agli altri laboratori.
 
