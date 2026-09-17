@@ -2,7 +2,8 @@
 - Scrivere in italiano; preservare correttezza matematica, unità e leggibilità in aula.
 - Le sorgenti dei contenuti sono i file Quarto. La struttura del sito è autonoma dalle dispense iniziali: privilegiare navigazione e apprendimento. Le raccolte PDF possono selezionare e ordinare i contenuti del sito senza imporne l’architettura.
 - Non pubblicare materiale da libri, dati studenti, credenziali o report di sessione privati.
-- Pubblicare solo su richiesta; workflow GitHub manuale.
+- Pubblicare per default dopo una modifica, senza chiedere conferma; fermarsi al commit solo se l'utente lo dice esplicitamente.
+- Non dare per pubblicato un push: verificare che l'esecuzione del workflow sia partita sul commit appena spinto (`curl -s "https://api.github.com/repos/dbonicoli-droid/didattica-interattiva/actions/runs?per_page=3"`, confrontando `head_sha`).
 - Le app devono funzionare senza servizi AI. RC resta un singolo HTML offline.
 - Prima di pubblicare: quarto render, verifica link, node scripts/check_rc.cjs e controllo visivo pagine/app.
 - Non sovrascrivere modifiche ai QMD rilanciando la migrazione dalle vecchie dispense.
