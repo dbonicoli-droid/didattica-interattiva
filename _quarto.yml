@@ -209,6 +209,8 @@ website:
           contents:
             - href: laboratori/rc.qmd
               text: Circuito RC
+            - href: laboratori/sinusoidi.qmd
+              text: Sinusoidi
         - section: "Fondamenti condivisi"
           href: risorse/fondamenti/index.qmd
           contents:

@@ -1,0 +1,51 @@
+---
+title: "Sinusoidi: confronto, somma e differenza"
+sidebar: risorse
+description: "Ampiezza, frequenza e fase: esplora due sinusoidi e la loro combinazione."
+stato: bozza
+---
+
+[← Indice del laboratorio](index.qmd)
+
+Modifica due segnali e confrontali sullo stesso grafico. **La somma e la differenza si calcolano istante per istante.** Non servono derivate o integrali per iniziare.
+
+## Prova il laboratorio
+
+{{< include _sinusoidi-app.html >}}
+
+## Il modello
+
+$$v_i(t)=A_i\sin(2\pi f_i t+\varphi_i),\qquad i=1,2.$$
+
+- $A_i$ è l'ampiezza di picco, in volt; $f_i$ è la frequenza in hertz e $t$ il tempo in secondi.
+- La fase iniziale $\varphi_i$ si imposta in gradi: l'app la converte in radianti per il calcolo.
+- Per una sinusoide a frequenza positiva, il valore efficace è $V_{\mathrm{eff}}=A/\sqrt{2}$ e il periodo è $T=1/f$.
+- La somma è $s(t)=v_1(t)+v_2(t)$; la differenza è $d(t)=v_1(t)-v_2(t)$.
+
+Le scale restano ferme quando modifichi i segnali. Usa **Adatta il grafico** per impostare un intervallo adatto ai parametri correnti, oppure regola manualmente durata e limite verticale. Il cursore legge i valori istantanei anche tramite tastiera. L'esportazione SVG conserva grafico, parametri e preset per inserirli nelle dispense.
+
+## I preset domestici
+
+Quando scegli uno di questi preset, lo schema sopra il grafico mostra i conduttori e le polarità di riferimento. Sono modelli ideali delle tensioni, senza cadute sui conduttori. Modificando i parametri passi a una configurazione libera.
+
+### Italia: fase e neutro
+
+La fornitura monofase nominale è **230 V efficaci, 50 Hz**: il picco della tensione fase-neutro è $230\sqrt{2}\approx325{,}3$ V. Il neutro scelto come riferimento è la linea a zero, non una seconda tensione alternata. Questo riferimento non implica che neutro e terra abbiano sempre lo stesso potenziale nell'impianto reale. [Dati della rete e-distribuzione](https://www.e-distribuzione.it/content/dam/e-distribuzione/documenti/connessione_alla_rete/regole_tecniche/Guida_per_le_connessioni_Marzo%202015_sez_H_aggiornata.pdf).
+
+### Stati Uniti: monofase con presa centrale (*split-phase*)
+
+Il preset rappresenta una comune fornitura domestica **120/240 V, 60 Hz**, con due conduttori attivi L₁ e L₂ e neutro N alla presa centrale. Le tensioni $v_{L1N}$ e $v_{L2N}$ hanno ciascuna valore efficace 120 V e sono in opposizione di fase. Non è un sistema bifase indipendente.
+
+La tensione tra i conduttori attivi è **la differenza** $v_{L1L2}=v_{L1N}-v_{L2N}$: 240 V efficaci, circa 339,4 V di picco. La somma delle due tensioni rispetto al neutro è invece zero nel modello ideale. [Spiegazione del sistema 120/240 V — IAEI](https://iaeimagazine.org/2006/january2006/basic-electricity-part-10/).
+
+## Prima prevedi, poi verifica
+
+1. **Concordi:** con ampiezze uguali e stessa fase, quanto vale il picco della somma?
+2. **Opposte:** imposta 180° tra i segnali. Perché la somma è nulla e la differenza raddoppia?
+3. **In quadratura:** imposta 90°. La somma ha un picco pari alla somma dei due picchi?
+4. **Battimenti:** confronta 50 e 55 Hz. Osserva come cresce e diminuisce l'ampiezza dell'oscillazione risultante.
+5. **Split-phase:** mostra somma e differenza. Quale curva descrive la tensione applicata a un carico tra L₁ e L₂?
+
+Con la stessa frequenza, la somma è ancora una sinusoide (oppure il segnale nullo). Con frequenze diverse, **in generale la somma non è una singola sinusoide**. Il confronto prepara allo studio dei fasori e, negli anni successivi, della trasformata di Fourier.
+
+[Riprendi segnali e dinamica](../risorse/fondamenti/segnali-e-dinamica.qmd).

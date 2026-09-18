@@ -19,6 +19,12 @@ La risorsa comprende schemi elettrici, spiegazione del modello, un'app interatti
 
 [Apri il circuito RC →](rc.qmd){.btn .btn-primary}
 
+### [Sinusoidi: confronto, somma e differenza](sinusoidi.qmd)
+
+Regola ampiezza, frequenza e fase di due sinusoidi. Confronta somma e differenza, esplora i battimenti e i preset delle forniture domestiche italiana e statunitense. Esporta il grafico con i parametri impostati.
+
+[Apri il laboratorio delle sinusoidi →](sinusoidi.qmd){.btn .btn-primary}
+
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
 
 ## Componenti: risorse comuni ai percorsi

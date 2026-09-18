@@ -476,3 +476,34 @@ mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: h
   .course-background main::before { display: none; }
   a { color: #000; }
 }
+
+/* Laboratorio sinusoidi: colori ereditati dal tema attivo. */
+.sine-lab { --sine-gap: 1rem; padding: var(--sine-gap); border: 1px solid var(--bordo); border-radius: var(--raggio); background: var(--superficie); }
+.sine-lab label { display: block; }
+.sine-lab input, .sine-lab select, .sine-lab button { color: var(--testo); background: var(--campo-bg); border: 1px solid var(--bordo-forte); border-radius: var(--raggio-s); padding: .35rem .55rem; max-width: 100%; }
+.sine-lab input[type=range] { width: 100%; padding: 0; accent-color: var(--accento); }
+.sine-lab input[type=checkbox] { accent-color: var(--accento); }
+.sine-lab button { cursor: pointer; }
+.sine-lab button[aria-pressed=true] { border-color: var(--accento); background: var(--evidenza); }
+.sine-lab :focus-visible { outline: 2px solid var(--fuoco); outline-offset: 3px; }
+.sine-controls { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--sine-gap); margin-block: var(--sine-gap); }
+.sine-controls fieldset { min-width: 0; border: 1px solid var(--bordo); padding: var(--sine-gap); border-radius: var(--raggio-s); }
+.sine-controls legend { font-size: 1.1rem; }
+.sine-controls fieldset:first-child legend { color: var(--c-elettronici); }
+.sine-controls fieldset:nth-child(2) legend { color: var(--c-elettrotecnici); }
+.sine-controls p { font-size: .85rem; margin-block: .6rem; }
+.sine-pair { display: grid; grid-template-columns: minmax(0,1fr) 6rem; gap: .5rem; margin-bottom: .65rem; }
+.sine-pair input[type=number] { width: 100%; min-width: 0; }
+.sine-actions, .sine-scales, .sine-legend { display: flex; flex-wrap: wrap; gap: .65rem; margin-block: var(--sine-gap); }
+.sine-scales label { flex: 1 1 10rem; }
+.sine-scales input { width: 100%; }
+#sine-plot { width: 100%; height: auto; font: 15px sans-serif; }
+#sine-reading { display: block; font-variant-numeric: tabular-nums; }
+.sine-circuit svg { width: 100%; fill: none; stroke: var(--testo); stroke-width: 2; }
+.sine-circuit text { fill: var(--testo); stroke: none; font: 17px sans-serif; }
+.sine-circuit p, #sine-notice { font-size: .9rem; }
+@media (max-width: 600px) { .sine-controls { grid-template-columns: 1fr; } .sine-lab { padding: .6rem; } }
+
+@media (max-width: 600px) { #sine-plot { font-size: 25px; } }
+
+#sine-circuit svg { background: var(--superficie); }

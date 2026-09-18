@@ -1,0 +1,31 @@
+<div id="sine-lab" class="sine-lab">
+ <label for="sine-preset">Configurazione</label>
+ <select id="sine-preset">
+  <option value="same">Stessa fase</option><option value="opposite">Opposizione di fase</option>
+  <option value="quadrature">Sfasamento di 90°</option><option value="beats">Battimenti: 50 e 55 Hz</option>
+  <option value="italy">Italia: fase e neutro, 230 V · 50 Hz</option>
+  <option value="usa">USA: split-phase, 120/240 V · 60 Hz</option><option value="custom">Configurazione libera</option>
+ </select>
+ <div id="sine-circuit" class="sine-circuit" hidden></div>
+ <div id="sine-controls" class="sine-controls"></div>
+ <div class="sine-actions">
+  <button type="button" id="sine-sum" aria-pressed="false">Mostra la somma</button>
+  <button type="button" id="sine-diff" aria-pressed="false">Mostra la differenza</button>
+  <button type="button" id="sine-fit">Adatta il grafico</button>
+  <button type="button" id="sine-reset">Ripristina</button>
+  <button type="button" id="sine-export">Esporta grafico SVG</button>
+ </div>
+ <div class="sine-scales">
+  <label>Durata (ms) <input id="sine-duration" type="number" min="0.1" max="10000" step="any" value="60"></label>
+  <label>Limite verticale ± (V) <input id="sine-limit" type="number" min="0.01" max="5000" step="any" value="12"></label>
+ </div>
+ <p id="sine-notice" role="status"></p>
+ <svg id="sine-plot" viewBox="0 0 900 440" role="img" aria-label="Grafico delle tensioni in funzione del tempo"></svg>
+ <div id="sine-legend" class="sine-legend"></div>
+ <label for="sine-time">Istante di lettura</label>
+ <input id="sine-time" type="range" min="0" max="1000" value="250">
+ <output id="sine-reading" aria-live="polite"></output>
+ <noscript>Per utilizzare il simulatore abilita JavaScript. Il modello e le attività restano consultabili sotto.</noscript>
+</div>
+<script src="../assets/sinusoidi/model.js"></script>
+<script src="../assets/sinusoidi/app.js"></script>
