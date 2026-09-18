@@ -44,6 +44,7 @@
 
     // Voce attiva nella barra in alto
     const sezione = daPercorso || home ? 'Percorsi'
+      : relative.startsWith('lezioni/') ? 'Lezioni in classe'
       : relative.startsWith('laboratori/') ? 'Laboratorio'
       : relative.startsWith('risorse/mappe/') ? 'Mappe concettuali'
       : relative === 'materiali.html' ? 'Dispense PDF' : 'Risorse';
@@ -124,7 +125,7 @@
         const url = new URL(a.href, location.href);
         const rel = url.pathname.slice(root.pathname.length);
         if (url.origin === location.origin && url.pathname.startsWith(root.pathname)
-            && /^(risorse\/|laboratori\/|materiali\.html|guida\.html)/.test(rel)
+            && /^(risorse\/|laboratori\/|lezioni\/|materiali\.html|guida\.html)/.test(rel)
             && !/\.(pdf|svg|png|webp)$/.test(rel)) {
           url.searchParams.set('percorso', corso);
           a.href = url.href;

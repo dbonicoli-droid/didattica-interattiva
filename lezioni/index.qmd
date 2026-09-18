@@ -1,0 +1,23 @@
+---
+title: "Lezioni in classe"
+sidebar: risorse
+toc: false
+listing:
+  contents: "2026-2027/*.qmd"
+  type: table
+  fields: [date, title, classe, materia]
+  field-display-names:
+    date: Data
+    title: Lezione
+    classe: Classe
+    materia: Materia
+  sort: "date desc"
+  filter-ui: true
+  date-format: "DD/MM/YYYY"
+---
+
+Gli appunti delle lezioni, scritti in classe e pubblicati dopo la revisione, sono consultabili direttamente nel sito e scaricabili in PDF.
+
+## Anno scolastico 2026–2027
+
+Cerca per argomento, classe o materia nell'elenco. Apri una lezione per leggere gli appunti, ingrandirli o scaricare il documento originale.

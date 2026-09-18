@@ -1,0 +1,46 @@
+---
+title: "Leggi di Ohm, resistori in serie e parallelo"
+sidebar: risorse
+date: 2026-09-18
+date-format: "DD/MM/YYYY"
+classe: "3A ETC"
+materia: "Sistemi automatici"
+description: "Appunti del 18 settembre 2026: prima e seconda legge di Ohm, resistenza equivalente, partitore di tensione ed esercizio sui circuiti misti."
+toc: false
+---
+
+**3A ETC · Sistemi automatici · A.S. 2026–2027**
+
+Appunti manoscritti della lezione: prima legge di Ohm, resistori in serie, partitore di tensione, resistori in parallelo, seconda legge di Ohm ed esercizio su un circuito misto.
+
+<div class="lesson-downloads">
+<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf" download="3A_ETC_18_09_2026.pdf">Scarica il PDF originale · 3,7 MB</a>
+<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf" target="_blank" rel="noopener">Apri il PDF separatamente</a>
+</div>
+
+## Leggi gli appunti
+
+Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso; usa lo zoom per ingrandire la scrittura. Dopo un ingrandimento puoi scorrere anche lateralmente. Su telefono lo schermo intero offre più spazio.
+
+<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf" aria-label="Lettore degli appunti">
+<div class="lesson-toolbar" role="group" aria-label="Controlli del documento">
+<button type="button" data-action="out" disabled aria-label="Riduci zoom">−</button>
+<output class="lesson-zoom" aria-live="polite">Caricamento…</output>
+<button type="button" data-action="in" disabled aria-label="Aumenta zoom">+</button>
+<button type="button" data-action="fit" disabled>Adatta alla larghezza</button>
+<button type="button" data-action="full">Schermo intero</button>
+</div>
+<p class="lesson-status" role="status">Caricamento degli appunti…</p>
+<div class="lesson-scroll" tabindex="0" role="region" aria-label="Appunti: scorri verticalmente e usa i pulsanti per ingrandire"><div class="lesson-pages"></div></div>
+<noscript>Abilita JavaScript per il lettore integrato, oppure usa i collegamenti per aprire e scaricare il PDF.</noscript>
+</div>
+<script type="module" src="../../assets/lezioni/reader.js"></script>
+
+## Collegamenti per ripassare
+
+- [Ohm, Kirchhoff, serie e parallelo](../../risorse/fondamenti/leggi-dei-circuiti.qmd)
+- [Il resistore](../../risorse/componenti/resistore.qmd)
+- [Indice di Sistemi automatici](../../corsi/sistemi-automatici/index.qmd)
+- [Tutte le lezioni in classe](../index.qmd)
+
+Gli appunti conservano la scrittura originale di OneNote; la ricerca del sito trova il titolo e gli argomenti descritti in questa pagina, non le parole scritte a penna.

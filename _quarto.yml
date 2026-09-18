@@ -8,6 +8,7 @@ project:
     - roba-da-periti.qmd
     - corsi/**/*.qmd
     - laboratori/*.qmd
+    - lezioni/**/*.qmd
     - risorse/**/*.qmd
   resources:
     - assets/**
@@ -26,6 +27,8 @@ website:
     left:
       - href: index.qmd
         text: Percorsi
+      - href: lezioni/index.qmd
+        text: Lezioni in classe
       - href: laboratori/index.qmd
         text: Laboratorio
       - href: risorse/mappe/index.qmd
@@ -204,6 +207,8 @@ website:
       search: false
       collapse-level: 2
       contents:
+        - href: lezioni/index.qmd
+          text: "Lezioni in classe"
         - section: "Laboratorio"
           href: laboratori/index.qmd
           contents:

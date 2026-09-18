@@ -157,6 +157,10 @@ Richiami e strumenti che puoi consultare quando un argomento richiede una base d
 
 Le risorse di laboratorio possono essere utilizzate in più percorsi.
 
+## Lezioni in classe {#lezioni-in-classe}
+
+[Consulta gli appunti delle lezioni, organizzati per data, classe e materia](/lezioni/index.qmd).
+
 ## Altre risorse {#altre-risorse}
 
 - [Esercizi / Metti insieme i moduli](esercizi-metti-insieme-i-moduli.qmd)
