@@ -235,11 +235,16 @@ website:
         - section: "Componenti"
           href: risorse/componenti/index.qmd
           contents:
-            - risorse/componenti/resistore.qmd
-            - risorse/componenti/condensatore.qmd
-            - risorse/componenti/induttore.qmd
-            - risorse/componenti/diodo.qmd
-            - risorse/componenti/transistor.qmd
+            - href: risorse/componenti/resistore.qmd
+              text: "Resistore"
+            - href: risorse/componenti/condensatore.qmd
+              text: "Condensatore"
+            - href: risorse/componenti/induttore.qmd
+              text: "Induttore"
+            - href: risorse/componenti/diodo.qmd
+              text: "Diodo"
+            - href: risorse/componenti/transistor.qmd
+              text: "Transistor"
         - href: risorse/mappe/index.qmd
           text: "Mappe concettuali"
         - href: risorse/glossario/index.qmd

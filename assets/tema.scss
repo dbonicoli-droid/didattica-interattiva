@@ -285,6 +285,17 @@ mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: h
 .unit-index { background: var(--evidenza); border-radius: var(--raggio-s); padding: 1rem 1.3rem; margin: 1.5rem 0; }
 .unit-index h2 { margin-top: .3rem; border: 0; font-size: 1.05rem; }
 
+/* Spazio riservato a una mappa non ancora disegnata: si vede che manca
+   qualcosa, senza fingere che ci sia. */
+.mappa-segnaposto {
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  margin: 1.2rem 0; padding: 1.5rem 1.3rem;
+  border: 2px dashed var(--bordo-forte); border-radius: var(--raggio-s);
+  background: var(--evidenza); color: var(--testo-tenue); font-size: .92rem;
+}
+.mappa-segnaposto strong { color: var(--testo); }
+.mappa-segnaposto p { margin: 0; }
+
 /* Una vignetta si guarda, quindi può uscire dalla misura del testo */
 .vignetta-grande { max-width: none !important; margin: 1.5rem 0; }
 .vignetta-grande img {

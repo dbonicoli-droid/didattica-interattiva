@@ -78,6 +78,16 @@ local function process(inlines)
  return result
 end
 
+-- Un blocco che contiene soltanto il nome di un componente non e` prosa: e`
+-- un'etichetta. Quarto fa passare da questo filtro anche le voci della barra
+-- laterale e del menu, e agganciarle produrrebbe un collegamento dentro un
+-- collegamento, che il browser spezza.
+local function e_etichetta(block)
+ if block.t~='Para' and block.t~='Plain' then return false end
+ local testo=pandoc.utils.stringify(block):gsub('^%s+',''):gsub('%s+$','')
+ return aliases[testo:lower()]~=nil
+end
+
 function Pandoc(doc)
  if not quarto.doc.is_format('html') then return nil end
  if current:match('/risorse/glossario/index%.qmd$') then return nil end
@@ -85,12 +95,14 @@ function Pandoc(doc)
  for _,block in ipairs(doc.blocks) do
   if block.t=='Header' then
    if block.level<=2 then seen={} end
+  elseif e_etichetta(block) then
+   -- lasciata com'e`
   elseif block.t=='Para' or block.t=='Plain' then
    block.content=process(block.content)
   else
    block=pandoc.walk_block(block,{
-    Para=function(b) b.content=process(b.content); return b end,
-    Plain=function(b) b.content=process(b.content); return b end
+    Para=function(b) if e_etichetta(b) then return b end b.content=process(b.content); return b end,
+    Plain=function(b) if e_etichetta(b) then return b end b.content=process(b.content); return b end
    })
   end
   blocks[#blocks+1]=block

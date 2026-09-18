@@ -5,20 +5,34 @@ description: "Collegamenti fra i concetti per studiare e ripassare."
 toc: false
 ---
 
-Le mappe concettuali mettono in relazione le idee. Ogni blocco porta alla spiegazione corrispondente. Per scegliere un modulo usa invece l’[indice del tuo percorso](../../index.qmd){.percorso-attivo}.
+In questa sezione saranno aggiunte mappe concettuali durante il corso. Alcune serviranno per studiare e consolidare gli argomenti; altre sarà possibile stamparle e tenerle a disposizione durante i compiti in classe.
+
+Nel frattempo i blocchi qui sotto funzionano già come indice: ognuno porta alla spiegazione corrispondente.
 
 ## Componenti ed energia
 
 *Mappa condivisa da tutti i percorsi.*
 
-Parti dalle grandezze, confronta il comportamento dei componenti e passa al circuito. I collegamenti restano utilizzabili anche come indice testuale.
+::: {.mappa-segnaposto}
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+**Mappa da inserire** · il disegno con le relazioni fra grandezze, componenti e circuiti arriverà con le lezioni.
+:::
+
+### Le grandezze di partenza
 
 ::: {.resource-card}
 ### [Carica, corrente e tensione](../fondamenti/carica-corrente-tensione.qmd)
-La corrente descrive il trasferimento di carica; la tensione è una differenza di potenziale.
+La carica è la grandezza di base; la corrente ne descrive il trasferimento nel tempo e la tensione è una differenza di potenziale. Il **campo elettrico** è ciò che mette in moto le cariche: la tensione fra due punti nasce dal lavoro che il campo compie per spostarle.
 :::
 
+### Componenti di base
+
 **Queste grandezze permettono di descrivere tre comportamenti:**
+
+::: {.mappa-segnaposto}
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+**Mappa da inserire** · il confronto fra i tre componenti in un solo disegno.
+:::
 
 ::: {.process-map}
 ::: {.map-card .map-card-linked}
@@ -35,6 +49,8 @@ Lega corrente e flusso concatenato e **immagazzina energia nel campo magnetico**
 :::
 :::
 
+### Alcuni circuiti fondamentali
+
 **Collegando resistore e condensatore otteniamo un esempio di evoluzione nel tempo:**
 
 ::: {.resource-card}
@@ -46,7 +62,7 @@ Il resistore limita la corrente di carica; mentre la tensione del condensatore c
 
 ## Mappe dei percorsi
 
-Ogni percorso avrà la propria mappa, con i concetti del corso collegati fra loro. Le mappe saranno pubblicate con lo svolgimento delle lezioni.
+Ogni percorso avrà la propria mappa, con i concetti del corso collegati fra loro.
 
 ::: {.resource-grid}
 
