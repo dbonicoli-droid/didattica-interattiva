@@ -56,7 +56,9 @@ Per il livello di un serbatoio: portata della pompa = [ingresso](/risorse/glossa
 
 *Possibile risposta: tensione di alimentazione, flusso luminoso, caratteristica della lampada. Il [modello](/risorse/glossario/index.qmd#gloss-modello) va dichiarato.*
 
-## Classificare e controllare un [sistema](/risorse/glossario/index.qmd#gloss-sistema) {#topic:2}
+::: {#topic:2 .tema}
+Classificare e controllare un [sistema](/risorse/glossario/index.qmd#gloss-sistema)
+:::
 
 ## U.D. 1.3 / Classificazione dei sistemi {#ud:1.3}
 
@@ -124,7 +126,9 @@ Nel diagramma il rombo rappresenta una decisione; i blocchi etichettati indicano
 
 *[Algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo) di una singola valutazione; un controllo ripetuto richiede un ciclo. A $T=30$ la condizione è falsa.*
 
-## Eseguire un [algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo) passo per passo {#topic:3}
+::: {#topic:3 .tema}
+Eseguire un [algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo) passo per passo
+:::
 
 ## U.D. 1.7 / Applicazioni e simulazioni con software [Flowgorithm](/risorse/glossario/index.qmd#gloss-flowgorithm) {#ud:1.7}
 

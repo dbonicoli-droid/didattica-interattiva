@@ -53,7 +53,9 @@ Il simbolo descrive la funzione di un oggetto, non il suo aspetto. Si studiano [
 
 *Risposta: la planimetria; per seguirne i collegamenti servono gli schemi.*
 
-## Dal disegno al progetto di un appartamento {#topic:3}
+::: {#topic:3 .tema}
+Dal disegno al progetto di un appartamento
+:::
 
 ## U.D. 2.3 / Disegno elettrico con [ProgeCAD](/risorse/glossario/index.qmd#gloss-progecad) {#ud:2.3}
 

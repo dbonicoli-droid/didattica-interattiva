@@ -63,7 +63,9 @@ La stessa funzione si può esprimere con formula, porte, [contatti](/risorse/glo
 
 **Prova tu.** Con $A=0$, $B=1$, $C=1$ si ottiene $Y=1$; portando $C$ a 0, $Y$ diventa 0 qualunque siano $A$ e $B$.
 
-## Dalla tabella alla funzione semplificata {#topic:4}
+::: {#topic:4 .tema}
+Dalla tabella alla funzione semplificata
+:::
 
 ## U.D. 2.3 / Metodi per determinare le [tabelle di verità](/risorse/glossario/index.qmd#gloss-tabella-di-verita) e ottenere funzioni logiche negate {#ud:2.3}
 
@@ -90,7 +92,9 @@ $$F=AB+A\overline B=A(B+\overline B)=A.$$ L'[ingresso](/risorse/glossario/index.
 
 **Controllo rapido.** Con $A=1$, $B=0$, $C=0$, $Y=0$ e $\overline Y=1$. Un singolo caso può smentire un'identità sbagliata; per confermarla con una tabella servono tutte le righe.
 
-## Semplificare con le mappe {#topic:5}
+::: {#topic:5 .tema}
+Semplificare con le mappe
+:::
 
 ## U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh) {#ud:2.5}
 
@@ -110,7 +114,9 @@ Per ottenere un prodotto di somme si raggruppano gli 0. Se una [variabile](/riso
 
 *Soluzione: $C=0$, quindi $G=\overline C$. I quattro 1 si raggruppano attraversando il bordo laterale della mappa.*
 
-## Organizzare la semplificazione in una tabella {#topic:6}
+::: {#topic:6 .tema}
+Organizzare la semplificazione in una tabella
+:::
 
 ## U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey {#ud:2.6}
 

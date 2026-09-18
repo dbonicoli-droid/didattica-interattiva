@@ -55,7 +55,9 @@ La **[rigidità dielettrica](/risorse/glossario/index.qmd#gloss-rigidita-dielett
 
 Per un cavo flessibile non basta cercare bassa [resistività](/risorse/glossario/index.qmd#gloss-resistivita): servono anche flessibilità dei conduttori, isolamento adatto e [resistenza]{.no-component-link} alle condizioni d'uso. La scelta nasce dalla funzione e dall'ambiente.
 
-## Scegliere i materiali conduttori {#topic:8}
+::: {#topic:8 .tema}
+Scegliere i materiali conduttori
+:::
 
 ## U.D. 4.3 / Materiali conduttori: caratteristiche. Rame e alluminio e loro leghe {#ud:4.3}
 
@@ -78,7 +80,9 @@ Per uguale lunghezza e [resistenza](/risorse/glossario/index.qmd#gloss-resistenz
 
 Nei metalli la [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) tende ad aumentare con la temperatura. [Il modello di calcolo e il grafico sono negli approfondimenti](approfondimenti.qmd#app:temperatura).
 
-## Isolare e resistere al calore {#topic:9}
+::: {#topic:9 .tema}
+Isolare e resistere al calore
+:::
 
 ## U.D. 4.4 / Materiali isolanti: caratteristiche. Tipi di isolanti, invecchiamento termico e classi di isolamento {#ud:4.4}
 

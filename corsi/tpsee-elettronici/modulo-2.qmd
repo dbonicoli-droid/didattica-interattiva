@@ -77,7 +77,9 @@ In $A+AB$, se $A=1$ l'uscita è già 1; se $A=0$ anche $AB=0$. Il termine $AB$ n
 
 **Prova tu.** Riduci $X+X\overline Y$ e $X(X+Y)$. In entrambi i casi il risultato è $X$: verifica le quattro combinazioni di $X,Y$.
 
-## Trasformare e semplificare {#topic:6}
+::: {#topic:6 .tema}
+Trasformare e semplificare
+:::
 
 ## U.D. 2.3 / Leggi di De Morgan {#ud:2.3}
 

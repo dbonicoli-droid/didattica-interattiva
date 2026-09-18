@@ -51,7 +51,9 @@ Se 2400 lm arrivano complessivamente su un tavolo di $6\,\mathrm{m^2}$, l'[illum
 
 *Risposta: no. La [CCT](/risorse/glossario/index.qmd#gloss-cct) descrive l'aspetto cromatico, non il [flusso luminoso](/risorse/glossario/index.qmd#gloss-flusso-luminoso).*
 
-## Distribuire la luce nell'ambiente {#topic:10}
+::: {#topic:10 .tema}
+Distribuire la luce nell'ambiente
+:::
 
 ## U.D. 5.2 / Tipi di illuminazione, apparecchi illuminanti, solido e curva fotometrica {#ud:5.2}
 
@@ -75,7 +77,9 @@ L'apparecchio sostiene e alimenta la sorgente e ne modifica la distribuzione con
 
 **Da osservare.** Un elevato [illuminamento](/risorse/glossario/index.qmd#gloss-illuminamento) medio non assicura comfort: contano anche uniformità, ombre, abbagliamento e riflessi sul compito visivo.
 
-## Scegliere le sorgenti e dimensionare l'illuminazione {#topic:11}
+::: {#topic:11 .tema}
+Scegliere le sorgenti e dimensionare l'illuminazione
+:::
 
 ## U.D. 5.3 / Principali tipi di sorgenti luminose. Dimensionamento illuminotecnico {#ud:5.3}
 

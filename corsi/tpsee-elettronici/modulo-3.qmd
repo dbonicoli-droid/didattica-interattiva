@@ -60,7 +60,9 @@ Una porta realizza un'operazione booleana. [NAND](/risorse/glossario/index.qmd#g
     1     1                    0                                 1                              1                                0                                0                                0
 :::
 
-## Cambiare codice: binario e [Gray](/risorse/glossario/index.qmd#gloss-gray) {#topic:7}
+::: {#topic:7 .tema}
+Cambiare codice: binario e [Gray](/risorse/glossario/index.qmd#gloss-gray)
+:::
 
 ## U.D. 3.2 / [GRAY](/risorse/glossario/index.qmd#gloss-gray) - binario e binario - [GRAY](/risorse/glossario/index.qmd#gloss-gray) {#ud:3.2}
 
@@ -85,7 +87,9 @@ Per tornare indietro: copiamo 1, poi $1\oplus1=0$, $0\oplus1=1$, $1\oplus0=1$. R
 
 **Prova tu.** Scrivi [Gray](/risorse/glossario/index.qmd#gloss-gray) per i binari $000,001,010,011$: ottieni $000,001,011,010$. È lo stesso ordine che useremo nelle mappe di [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).
 
-## Una funzione, molte realizzazioni {#topic:8}
+::: {#topic:8 .tema}
+Una funzione, molte realizzazioni
+:::
 
 ## U.D. 3.3 / Universalità delle porte [NAND](/risorse/glossario/index.qmd#gloss-nand) e [NOR](/risorse/glossario/index.qmd#gloss-nor) {#ud:3.3}
 
@@ -133,7 +137,9 @@ L'uscita vale sempre 1: quindi $\boxed{A+\overline A=1}$, indipendentemente da $
 
 Nella mappa a una variabile raggruppiamo entrambe le celle. $A$ cambia da 0 a 1 e quindi scompare dall'espressione: resta il valore costante 1.
 
-## Progettare circuiti che calcolano {#topic:9}
+::: {#topic:9 .tema}
+Progettare circuiti che calcolano
+:::
 
 ## U.D. 3.5 / Circuiti Combinatori {#ud:3.5}
 
@@ -173,7 +179,9 @@ C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B).$$
 
 **Esempio.** In $0111_2+0001_2=1000_2$, il riporto attraversa più posizioni. Collegando $C_{\mathrm{out}}$ di uno stadio a $C_{\mathrm{in}}$ del successivo si ottiene un sommatore a propagazione del riporto: l'uscita non si stabilizza istantaneamente.
 
-## Confrontare e decodificare {#topic:10}
+::: {#topic:10 .tema}
+Confrontare e decodificare
+:::
 
 ## U.D. 3.7 / Comparatori {#ud:3.7}
 
@@ -205,7 +213,9 @@ In un [decoder](/risorse/glossario/index.qmd#gloss-decoder) con uscite attive ba
 
 **Prova tu.** Nel [decoder](/risorse/glossario/index.qmd#gloss-decoder) ideale sopra, $E=0$ forza tutte le uscite a 0; con $E=1$ e $AB=11$, si attiva soltanto $Y_3$.
 
-## Dai quattro [bit](/risorse/glossario/index.qmd#gloss-bit) alla cifra luminosa {#topic:11}
+::: {#topic:11 .tema}
+Dai quattro [bit](/risorse/glossario/index.qmd#gloss-bit) alla cifra luminosa
+:::
 
 ## U.D. 3.9 / [Decoder](/risorse/glossario/index.qmd#gloss-decoder) [BCD](/risorse/glossario/index.qmd#gloss-bcd) - 7 segmenti {#ud:3.9}
 
@@ -248,7 +258,9 @@ Con [pilotaggio](/risorse/glossario/index.qmd#gloss-pilotaggio-driver) ideale da
 
 I codici da 1010 a 1111 non sono cifre [BCD](/risorse/glossario/index.qmd#gloss-bcd) valide: la visualizzazione dipende dal [decoder](/risorse/glossario/index.qmd#gloss-decoder). Non assumere che il display si spenga automaticamente.
 
-## Il [multiplexer](/risorse/glossario/index.qmd#gloss-mux): scegliere un segnale {#topic:12}
+::: {#topic:12 .tema}
+Il [multiplexer](/risorse/glossario/index.qmd#gloss-mux): scegliere un segnale
+:::
 
 ## U.D. 3.11 / MULTIPLEX: Principio di funzionamento e implementazione circuitale {#ud:3.11}
 
@@ -296,7 +308,9 @@ Quando un [integrato](/risorse/glossario/index.qmd#gloss-integrato) cambia stato
 
 Consideriamo un [MUX](/risorse/glossario/index.qmd#gloss-mux) a 16 ingressi (74LS150) e uno a 8 ingressi (74LS151). Il 151 dispone di uscita diretta e complementata; il 150 ha uscita invertita. Con [strobe](/risorse/glossario/index.qmd#gloss-strobe) [attivo basso](/risorse/glossario/index.qmd#gloss-attivo-alto-basso) a 0 il dato è selezionato; con [strobe](/risorse/glossario/index.qmd#gloss-strobe) a 1, nel 151 l'uscita diretta è 0 e la complementata è 1, mentre nel 150 l'uscita è 1. **Esempio.** Con $CBA=101$ nel 151 viene selezionato $D_5$. Se $D_5=1$ e lo [strobe](/risorse/glossario/index.qmd#gloss-strobe) è 0, l'uscita diretta è 1 e quella complementata è 0. Le lettere $A,B,C$ del datasheet corrispondono qui ai selettori dal meno al più significativo.
 
-## [Decoder](/risorse/glossario/index.qmd#gloss-decoder) e comparatori reali {#topic:14}
+::: {#topic:14 .tema}
+[Decoder](/risorse/glossario/index.qmd#gloss-decoder) e comparatori reali
+:::
 
 ## U.D. 3.15 / [DECODER](/risorse/glossario/index.qmd#gloss-decoder): 74LS154, 74LS138 {#ud:3.15}
 

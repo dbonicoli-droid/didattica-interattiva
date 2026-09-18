@@ -50,7 +50,9 @@ Il **periodo** è la durata di un ciclo; la **frequenza** indica quanti cicli si
 
 [Asincrono](/risorse/glossario/index.qmd#gloss-asincrono) non significa quindi necessariamente "senza [clock](/risorse/glossario/index.qmd#gloss-clock-clk)". Un comando [asincrono](/risorse/glossario/index.qmd#gloss-asincrono), come un reset, può invece agire senza attendere il fronte di [clock](/risorse/glossario/index.qmd#gloss-clock-clk).
 
-## Memorizzare un [bit](/risorse/glossario/index.qmd#gloss-bit) {#topic:15}
+::: {#topic:15 .tema}
+Memorizzare un [bit](/risorse/glossario/index.qmd#gloss-bit)
+:::
 
 ## U.D. 4.1 / [Latch](/risorse/glossario/index.qmd#gloss-latch) e [Flip-Flop](/risorse/glossario/index.qmd#gloss-flip-flop-ff) ([SR](/risorse/glossario/index.qmd#gloss-sr)) {#ud:4.1}
 
@@ -83,7 +85,9 @@ Per un [flip-flop](/risorse/glossario/index.qmd#gloss-flip-flop-ff) [SR](/risors
 
 Parti da $Q=0$: applica $S=1,R=0$ e poi torna a $S=R=0$. L'uscita resta 1. Applicando $S=0,R=1$ torna a 0. In un [flip-flop](/risorse/glossario/index.qmd#gloss-flip-flop-ff) [SR](/risorse/glossario/index.qmd#gloss-sr) le azioni avvengono al fronte di [clock](/risorse/glossario/index.qmd#gloss-clock-clk), non appena cambia l'ingresso.
 
-## Il contatore che propaga il cambio di stato {#topic:16}
+::: {#topic:16 .tema}
+Il contatore che propaga il cambio di stato
+:::
 
 ## U.D. 4.2 / Realizzazione di contatori asincroni {#ud:4.2}
 
@@ -120,7 +124,9 @@ Usa un [clock](/risorse/glossario/index.qmd#gloss-clock-clk) lento per osservare
 
 **Prova tu.** Quanti stati e quale divisione sull'ultimo stadio si ottengono con quattro [flip-flop](/risorse/glossario/index.qmd#gloss-flip-flop-ff)? **Risposta:** 16 stati e $f_{\mathrm{CLK}}/16$.
 
-## Il contatore con [clock](/risorse/glossario/index.qmd#gloss-clock-clk) comune {#topic:17}
+::: {#topic:17 .tema}
+Il contatore con [clock](/risorse/glossario/index.qmd#gloss-clock-clk) comune
+:::
 
 ## U.D. 4.3 / Realizzazione di contatori sincroni {#ud:4.3}
 

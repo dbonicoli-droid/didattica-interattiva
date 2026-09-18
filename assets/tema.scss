@@ -162,6 +162,23 @@ table code, .table code { font-variant-numeric: tabular-nums; }
   main.content table { display: block; overflow-x: auto; }
 }
 
+/* Stacco tematico: annuncia il gruppo di unità didattiche che segue.
+   Non è un titolo, quindi non entra nel sommario e non aggiunge un livello
+   di gerarchia sopra unità che oggi non hanno tutte una categoria. */
+.tema {
+  margin: 3.2rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--accento);
+  font-family: $headings-font-family;
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--accento);
+}
+.tema p { margin: 0; }
+.tema a { color: inherit; }
+.tema + section > h2, .tema + h2 { margin-top: 1.1rem; border-top: 0; }
+
 /* Separatore fra i blocchi di una pagina */
 main.content hr {
   border: 0;

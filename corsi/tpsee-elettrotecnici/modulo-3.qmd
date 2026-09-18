@@ -54,7 +54,9 @@ La sezione influenza [resistenza](/risorse/glossario/index.qmd#gloss-resistenza)
 
 Un cavo più lungo ha una [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) maggiore; aumentando la sezione, la [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) diminuisce. [Calcola caduta di [tensione](/risorse/glossario/index.qmd#gloss-tensione) e perdite con un esempio guidato](approfondimenti.qmd#app:cavi).
 
-## Proteggere i percorsi e collegare gli utilizzatori {#topic:4}
+::: {#topic:4 .tema}
+Proteggere i percorsi e collegare gli utilizzatori
+:::
 
 ## U.D. 3.2 / Tubi protettivi e canali {#ud:3.2}
 
@@ -104,7 +106,9 @@ Per un utilizzatore resistivo monofase da 1500 W a 230 V: $$I\simeq\frac{P}{V}=\
 
 *Risposta: i carichi continuano a gravare sullo stesso collegamento a monte.*
 
-## Comandare una luce da più punti {#topic:5}
+::: {#topic:5 .tema}
+Comandare una luce da più punti
+:::
 
 ## U.D. 3.4 / Interruttore di comando unipolare e bipolare, [deviatore](/risorse/glossario/index.qmd#gloss-deviatore), [invertitore](/risorse/glossario/index.qmd#gloss-invertitore) {#ud:3.4}
 
@@ -142,7 +146,9 @@ La posizione di un singolo [deviatore](/risorse/glossario/index.qmd#gloss-deviat
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/invertitore.svg)
 
-## Comandare con impulsi e relè {#topic:6}
+::: {#topic:6 .tema}
+Comandare con impulsi e relè
+:::
 
 ## U.D. 3.5 / Relè interruttore e relè commutatore {#ud:3.5}
 
@@ -172,7 +178,9 @@ Un dispositivo per due gruppi di lampade può realizzare: $$00\longrightarrow10\
 
 *Risposta: finisce spento. Un numero dispari di impulsi inverte lo stato iniziale; un numero pari lo ripristina.*
 
-## Funzioni e dotazioni dell'abitazione {#topic:7}
+::: {#topic:7 .tema}
+Funzioni e dotazioni dell'abitazione
+:::
 
 ## U.D. 3.6 / Luci scale, elettroserrature, suonerie e citofoni {#ud:3.6}
 

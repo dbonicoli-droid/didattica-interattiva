@@ -50,7 +50,9 @@ La resistenza equivalente di due resistori in parallelo è $R_{\mathrm{eq}}=R_2R
 
 Se colleghi un [carico](/risorse/glossario/index.qmd#gloss-carico) da $1\,\mathrm{k\Omega}$ in parallelo a $R_2$, la [resistenza](/risorse/glossario/index.qmd#gloss-resistenza) inferiore equivalente diventa $500\,\Omega$ e l'uscita scende a circa $1{,}67\,\mathrm{V}$. La misura modifica il sistema se lo strumento o il [carico](/risorse/glossario/index.qmd#gloss-carico) assorbe [corrente](/risorse/glossario/index.qmd#gloss-corrente) apprezzabile.
 
-## Dalla simulazione al progetto {#topic:3}
+::: {#topic:3 .tema}
+Dalla simulazione al progetto
+:::
 
 ## U.D. 1.2 / [Ultiboard](/risorse/glossario/index.qmd#gloss-ultiboard) {#ud:1.2}
 
@@ -70,7 +72,9 @@ Si parte da un bisogno e lo si traduce in requisiti verificabili: ingressi, usci
 
 **Prova tu.** Per una spia che si accende premendo un pulsante, definisci almeno tre specifiche: alimentazione, condizione di accensione e [corrente](/risorse/glossario/index.qmd#gloss-corrente) del [LED](/risorse/glossario/index.qmd#gloss-led).
 
-## Dal disegno al banco di lavoro {#topic:4}
+::: {#topic:4 .tema}
+Dal disegno al banco di lavoro
+:::
 
 ## U.D. 1.4 / La simbologia [IEC](/risorse/glossario/index.qmd#gloss-iec) nel disegno elettronico {#ud:1.4}
 
@@ -94,7 +98,9 @@ La griglia usa i simboli rettangolari [IEC](/risorse/glossario/index.qmd#gloss-i
 ![Porte logiche con simboli sagomati](/assets/dispense/tpsee-elettronici/figura-6.png)
 :::
 
-## Montare il circuito sulla [breadboard](/risorse/glossario/index.qmd#gloss-breadboard) {#topic:5}
+::: {#topic:5 .tema}
+Montare il circuito sulla [breadboard](/risorse/glossario/index.qmd#gloss-breadboard)
+:::
 
 ## U.D. 1.5 / La realizzazione del circuito elettronico {#ud:1.5}
 
