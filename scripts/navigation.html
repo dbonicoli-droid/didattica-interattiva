@@ -32,7 +32,7 @@
     document.body.dataset.course = corso || 'comune';
     // Il colore vive nei fogli di stile: qui si sceglie solo quale usare.
     if (corso) {
-      document.documentElement.style.setProperty('--accento', `var(--c-${corso})`);
+      document.documentElement.style.setProperty('--accento', `var(--c-${corso.replace(/^tpsee-/, '')}, var(--tinta-accento))`);
     }
 
     const href = p => new URL(p, root).href;
