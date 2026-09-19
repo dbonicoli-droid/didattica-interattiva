@@ -13,6 +13,8 @@ Modifica due segnali e confrontali sullo stesso grafico. **La somma e la differe
 
 {{< include _sinusoidi-app.html >}}
 
+I parametri sono sotto il grafico. Per ogni valore puoi scegliere il **Passo** e usare le frecce ▲ / ▼ (oppure i tasti freccia nel campo numerico). Il passo usa la stessa unità del parametro; l’ampiezza è il valore di picco. **Schermo intero** amplia lo spazio di lavoro.
+
 ## Il modello
 
 $$v_i(t)=A_i\sin(2\pi f_i t+\varphi_i),\qquad i=1,2.$$

@@ -8,17 +8,19 @@ const esc=x=>String(x).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll
 const controls=$('controls');
 for(let i=0;i<2;i++){
  const box=document.createElement('fieldset');box.innerHTML=`<legend>Sinusoide ${i+1}</legend>`;
- for(const [key,label,min,max,step] of [['a','Ampiezza di picco (V)',0,500,.1],['f','Frequenza (Hz)',.1,1000,.1],['p','Fase iniziale (°)',-180,180,1]]){
-  const id=`sine-${key}${i}`;
-  box.insertAdjacentHTML('beforeend',`<label for="${id}">${label}</label><div class="sine-pair"><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" aria-label="${label}, sinusoide ${i+1}"><input id="${id}-n" type="number" min="${min}" max="${max}" step="any" aria-label="${label}, valore numerico sinusoide ${i+1}"></div>`);
-  for(const suffix of ['', '-n'])box.querySelector('#'+id+suffix).addEventListener('input',e=>{
-   const n=e.target.valueAsNumber;if(!Number.isFinite(n)||n<min||n>max){e.target.setCustomValidity(`Inserisci un valore tra ${min} e ${max}`);return;}e.target.setCustomValidity('');
-   s[key][i]=n;preset='custom';$('preset').value='custom';$('circuit').hidden=true;
-   document.getElementById(id+(suffix?'':'-n')).value=n;draw();
-  });
+ for(const [key,label,min,max,initial] of [['a','Ampiezza (V)',0,500,.1],['f','Frequenza (Hz)',.1,1000,.1],['p','Fase (°)',-180,180,1]]){
+  const id=`sine-${key}${i}`,options=(key==='p'?[.1,1,5,10,15,30]:[.01,.1,1,5,10]).map(n=>`<option value="${n}" ${n===initial?'selected':''}>${String(n).replace('.',',')}</option>`).join('');
+  box.insertAdjacentHTML('beforeend',`<div class="sine-parameter"><label for="${id}">${label}</label><div class="sine-pair"><input id="${id}" type="range" min="${min}" max="${max}" step="${initial}" aria-label="${label}, sinusoide ${i+1}"><input id="${id}-n" type="number" min="${min}" max="${max}" step="any" aria-label="${label}, valore numerico sinusoide ${i+1}"><span class="sine-arrows"><button type="button" id="${id}-up" aria-label="Aumenta ${label}, sinusoide ${i+1}">▲</button><button type="button" id="${id}-down" aria-label="Diminuisci ${label}, sinusoide ${i+1}">▼</button></span><label class="sine-step">Passo<select id="${id}-step" aria-label="Passo ${label}, sinusoide ${i+1}">${options}</select></label></div></div>`);
+  const range=box.querySelector('#'+id),number=box.querySelector('#'+id+'-n'),step=box.querySelector('#'+id+'-step');
+  const apply=n=>{if(!Number.isFinite(n)||n<min||n>max){number.setCustomValidity(`Inserisci un valore tra ${min} e ${max}`);return;}number.setCustomValidity('');s[key][i]=n;range.value=n;number.value=n;preset='custom';$('preset').value='custom';$('circuit').hidden=true;draw();};
+  range.addEventListener('input',()=>apply(range.valueAsNumber));number.addEventListener('input',()=>apply(number.valueAsNumber));
+  const nudge=direction=>apply(Math.min(max,Math.max(min,Number((s[key][i]+direction*Number(step.value)).toFixed(10)))));
+  box.querySelector('#'+id+'-up').onclick=()=>nudge(1);box.querySelector('#'+id+'-down').onclick=()=>nudge(-1);
+  number.addEventListener('keydown',e=>{if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault();nudge(e.key==='ArrowUp'?1:-1);}});
+  step.onchange=()=>{range.step=step.value;};
  }
- box.insertAdjacentHTML('beforeend',`<p id="sine-info${i}"></p><label><input id="sine-visible${i}" type="checkbox" checked> Mostra la curva ${i+1}</label>`);
- box.querySelector('input[type=checkbox]').addEventListener('change',e=>{shown[i]=e.target.checked;draw()});controls.append(box);
+ box.insertAdjacentHTML('beforeend',`<p id="sine-info${i}"></p>`);controls.append(box);
+ $('visible'+i).addEventListener('change',e=>{shown[i]=e.target.checked;draw()});
 }
 function circuit(){
  const usa=preset==='usa';$('circuit').hidden=!['usa','italy'].includes(preset);if($('circuit').hidden)return;
@@ -55,6 +57,9 @@ function draw(){
  for(const [key,k,name] of [['sum',2,'somma'],['diff',3,'differenza']]){$(key).setAttribute('aria-pressed',String(shown[k]));$(key).textContent=(shown[k]?'Nascondi':'Mostra')+' la '+name;}
  $('notice').textContent=[clipped?'Parte delle curve supera il limite verticale: aumenta il limite o adatta il grafico.':'',sparse?'Troppi periodi per distinguere le oscillazioni: riduci la durata del grafico.':''].filter(Boolean).join(' ');
 }
+$('full').onclick=async()=>{if(root.classList.contains('sine-expanded')){root.classList.remove('sine-expanded');document.body.classList.remove('sine-open');$('full').textContent='Schermo intero';}else if(document.fullscreenElement===root)await document.exitFullscreen();else {try{await root.requestFullscreen();}catch{root.classList.toggle('sine-expanded');document.body.classList.toggle('sine-open',root.classList.contains('sine-expanded'));$('full').textContent=root.classList.contains('sine-expanded')?'Esci da schermo intero':'Schermo intero';}}};
+document.addEventListener('fullscreenchange',()=>{$('full').textContent=document.fullscreenElement===root?'Esci da schermo intero':'Schermo intero';});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&root.classList.contains('sine-expanded')){root.classList.remove('sine-expanded');document.body.classList.remove('sine-open');$('full').textContent='Schermo intero';}});
 $('preset').addEventListener('change',e=>{if(e.target.value==='custom'){preset='custom';circuit();draw();}else load(e.target.value)});
 $('sum').onclick=()=>{shown[2]=!shown[2];draw()};$('diff').onclick=()=>{shown[3]=!shown[3];draw()};
 $('fit').onclick=fit;$('reset').onclick=()=>load(preset==='custom'?'same':preset);$('time').oninput=draw;
