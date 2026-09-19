@@ -25,6 +25,12 @@ Regola ampiezza, frequenza e fase di due sinusoidi. Confronta somma e differenza
 
 [Apri il laboratorio delle sinusoidi →](sinusoidi.qmd){.btn .btn-primary}
 
+### [Resistori: serie e parallelo](resistori.qmd)
+
+Confronta tensioni e correnti su due schemi interattivi. Scegli un generatore ideale di tensione o di corrente, modifica le resistenze e osserva i valori direttamente sui circuiti.
+
+[Apri il laboratorio dei resistori](resistori.qmd){.btn .btn-primary}
+
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
 
 ## Componenti: risorse comuni ai percorsi

@@ -216,6 +216,8 @@ website:
               text: Circuito RC
             - href: laboratori/sinusoidi.qmd
               text: Sinusoidi
+            - href: laboratori/resistori.qmd
+              text: "Resistori: serie e parallelo"
         - section: "Fondamenti condivisi"
           href: risorse/fondamenti/index.qmd
           contents:

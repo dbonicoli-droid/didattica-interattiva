@@ -586,3 +586,37 @@ body.sine-open { overflow:hidden; }
 @media(max-width:600px) { #sine-plot { height:auto; } }
 
 #sine-plot { background: var(--superficie); font-size: 23px; }
+
+/* Laboratorio resistori: colori e spaziature seguono il tema del sito. */
+.resistor-lab { container-type:inline-size; --res-gap:.65rem; border:1px solid var(--bordo); border-radius:var(--raggio); padding:var(--res-gap); background:var(--superficie); }
+.resistor-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:var(--res-gap); }
+.resistor-lab button,.resistor-lab select,.resistor-lab input[type=number] { background:var(--campo-bg); color:var(--testo); border:1px solid var(--bordo-forte); border-radius:var(--raggio-s); font:inherit; padding:.3rem .5rem; }
+.resistor-lab button { cursor:pointer; }
+.resistor-lab button[aria-pressed=true] { background:var(--evidenza); border-color:var(--accento); font-weight:700; }
+.resistor-lab :focus-visible { outline:2px solid var(--fuoco); outline-offset:2px; }
+.resistor-toolbar label { font-size:.85rem; }
+#resistor-constraint { font-size:.88rem; margin:.5rem 0; }
+.resistor-circuits { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:var(--res-gap); }
+.resistor-circuits section { min-width:0; border:1px solid var(--bordo); border-radius:var(--raggio-s); padding:.6rem; }
+.resistor-circuits h3 { font-family:inherit; font-size:1.25rem; margin:0 0 .3rem; }
+#resistor-series h3 { color:var(--c-elettronici); } #resistor-parallel h3 { color:var(--c-sistemi-automatici); }
+.resistor-circuits p { font-size:.85rem; line-height:1.35; margin:.35rem 0; }
+.resistor-circuits section[hidden],.resistor-control[hidden] { display:none; }
+#resistor-lab svg { display:block; width:100%; max-height:48vh; background:var(--superficie); }
+.resistor-controls { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--res-gap); margin-top:.65rem; }
+.resistor-control { min-width:0; border:1px solid var(--bordo); border-radius:var(--raggio-s); padding:.4rem .6rem; }
+.resistor-control>label { display:block; font-weight:600; font-size:.85rem; }
+.resistor-control input[type=range] { display:block; width:100%; accent-color:var(--accento); height:24px; }
+.resistor-value-row { display:grid; grid-template-columns:minmax(0,1fr) 2rem 4.5rem; gap:.4rem; align-items:center; }
+.resistor-value-row input { width:100%; min-width:0; appearance:textfield; }
+.resistor-value-row input::-webkit-inner-spin-button { appearance:none; }
+.resistor-arrows { display:flex; flex-direction:column; }
+.resistor-arrows button { font-size:.65rem; line-height:1; padding:.2rem; min-height:20px; }
+.resistor-value-row label { font-size:.7rem; }
+.resistor-value-row select { display:block; width:100%; padding:.15rem; }
+.resistor-help { font-size:.75rem; margin:.4rem 0 0; }
+.resistor-lab:fullscreen,.resistor-expanded { height:100dvh; width:100%; overflow:auto; padding:.8rem max(.8rem,calc((100vw - 1500px)/2)); border-radius:0; }
+.resistor-expanded { position:fixed; inset:0; z-index:2000; }
+body.resistor-open { overflow:hidden; }
+@container(max-width:620px) { .resistor-controls { grid-template-columns:1fr; } .resistor-control { display:grid; grid-template-columns:1fr 1fr; gap:.3rem; } .resistor-value-row { grid-column:1/-1; } }
+@media(max-width:600px) { .resistor-toolbar button { font-size:.85rem; } .resistor-toolbar select { max-width:100%; } .resistor-arrows button { min-height:26px; } }

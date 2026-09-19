@@ -1,0 +1,23 @@
+<div id="resistor-lab" class="resistor-lab">
+<div class="resistor-toolbar">
+<div role="group" aria-label="Vista dei circuiti">
+<button type="button" data-view="series" aria-pressed="false">Serie</button>
+<button type="button" data-view="parallel" aria-pressed="false">Parallelo</button>
+<button type="button" data-view="both" aria-pressed="true">Confronto</button>
+</div>
+<label>Generatore <select id="resistor-source"><option value="voltage">Ideale di tensione</option><option value="current">Ideale di corrente</option></select></label>
+<button type="button" id="resistor-full">Schermo intero</button>
+<button type="button" id="resistor-reset">Ripristina</button>
+</div>
+<p id="resistor-constraint" role="status"></p>
+<div class="resistor-circuits">
+<section id="resistor-series"><h3>Circuito in serie</h3><div id="resistor-series-svg"></div><p class="resistor-principle"><strong>I resistori in serie condividono la stessa corrente che li attraversa:</strong> I₁ = I₂ = I<sub>tot</sub>.</p><p id="resistor-series-note"></p></section>
+<section id="resistor-parallel"><h3>Circuito in parallelo</h3><div id="resistor-parallel-svg"></div><p class="resistor-principle"><strong>I resistori in parallelo condividono la stessa tensione ai capi:</strong> V₁ = V₂ = v<sub>in</sub>.</p><p id="resistor-parallel-note"></p></section>
+</div>
+<div id="resistor-controls" class="resistor-controls"></div>
+<p class="resistor-help">Valori comuni alle due viste. Il passo ha la stessa unità del parametro. Le frecce ▲ / ▼ e i tasti freccia nei campi numerici applicano il passo selezionato.</p>
+<output id="resistor-readings" class="visually-hidden" aria-live="polite"></output>
+<noscript>Abilita JavaScript per la simulazione. Puoi consultare il modello e gli schemi statici sotto.</noscript>
+</div>
+<script src="../assets/resistori/model.js"></script>
+<script src="../assets/resistori/app.js"></script>
