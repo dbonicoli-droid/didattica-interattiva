@@ -11,8 +11,8 @@ fs.writeFileSync(base+'/assets/rc/confronto.svg',svg);
 const html=fs.readFileSync(base+'/laboratori/rc/index.html','utf8');
 assert(!/\b(?:src|href)=["']https?:/i.test(html),'No remote dependencies');
 const elements={};
-function el(id){if(!elements[id])elements[id]={value:'',textContent:'',innerHTML:'',disabled:false,attrs:{},events:{},setAttribute(k,v){this.attrs[k]=v},addEventListener(k,f){this.events[k]=f}};return elements[id]}
-const context=vm.createContext({document:{getElementById:el},performance:{now:()=>0},requestAnimationFrame:()=>1,cancelAnimationFrame:()=>{},console});
+function el(id){if(!elements[id])elements[id]={value:'',textContent:'',innerHTML:'',disabled:false,attrs:{},events:{},setCustomValidity(){},setAttribute(k,v){this.attrs[k]=v},addEventListener(k,f){this.events[k]=f}};return elements[id]}
+const context=vm.createContext({document:{getElementById:el,addEventListener(){}},performance:{now:()=>0},requestAnimationFrame:()=>1,cancelAnimationFrame:()=>{},console});
 vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
 const run=s=>vm.runInContext(s,context);
 assert(Math.abs(run('voltage(.1,1,100)')-6.321205588)<1e-8);
@@ -30,5 +30,6 @@ assert(el('schematic-r1').textContent.includes('4 kΩ'));
 el('reset').events.click();assert(el('schematic-r1').textContent.includes('1 kΩ'));assert(el('schematic-c1-value').textContent.includes('100 µF'));assert.equal(run('state.r1'),1);assert.equal(run('state.r2'),2);
 run('measure(.9)');el('xmax').value='0';el('xmax').events.input();assert.equal(run('state.selected'),null);assert.equal(run('state.xmax'),.05);
 el('reset').events.click();el('ymax').value='1';el('ymax').events.input();run('measure(.1)');assert(el('readings').innerHTML.includes('fuori scala'));
+el('reset').events.click();el('r1-step').value='.01';el('r1-up').events.click();assert.equal(run('state.r1'),1.01);el('r1-down').events.click();assert.equal(run('state.r1'),1);el('xmax-step').value='.1';el('xmax-up').events.click();assert.equal(run('state.xmax'),1.1);assert.equal(run('state.ymax'),12);
 for(let t=0;t<=10;t+=.01){const v=run('voltage('+t+',1,100)');assert(v>=0&&v<=10);}
 console.log('PASS: formula, SI conversion, equal RC, bounds, independent axes, selected time, animation/pause/reset, clipping notice. SVG generated from saved preset.');

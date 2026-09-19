@@ -40,11 +40,11 @@ Con i controlli in kΩ e µF, $\tau[\mathrm{s}]=0{,}001\,R[\mathrm{k\Omega}]\,C[
 ## Prova il laboratorio
 
 ::: {.content-visible when-format="html"}
-[Apri il laboratorio a schermo intero](rc/index.html){.btn .btn-primary}
+[Apri il laboratorio in una pagina dedicata](rc/index.html){.btn .btn-primary}
 
 <a href="rc/index.html" download="laboratorio-rc.html">Scarica l'HTML autonomo per usarlo offline</a>
 
-<iframe src="rc/index.html" title="Laboratorio interattivo: confronto di due cariche RC" style="width:100%;height:1140px;border:1px solid #dbe1e4;border-radius:12px;" loading="lazy"></iframe>
+<iframe src="rc/index.html" title="Laboratorio interattivo: confronto di due cariche RC" style="width:100%;height:900px;border:1px solid #dbe1e4;border-radius:12px;" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -52,6 +52,8 @@ Con i controlli in kΩ e µF, $\tau[\mathrm{s}]=0{,}001\,R[\mathrm{k\Omega}]\,C[
 
 Il laboratorio interattivo è disponibile nella versione web di questa pagina.
 :::
+
+I controlli sono sotto il grafico: puoi inserire un valore, scegliere il **passo** e usare le frecce ▲ / ▼. Il passo del tempo è espresso in secondi; il suo slider conserva la scala logaritmica. Il pulsante **Schermo intero** amplia il laboratorio senza cambiare i valori. Gli schemi restano disponibili sotto lo spazio di lavoro e nella sezione iniziale della pagina.
 
 ### Configurazione di partenza
 
