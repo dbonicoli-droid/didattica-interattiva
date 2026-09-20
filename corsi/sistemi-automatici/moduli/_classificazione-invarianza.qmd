@@ -1,0 +1,30 @@
+<!-- Generato da scripts/build_classification.cjs -->
+::: {.classification-exercise #esercizio-invarianza}
+
+Spunta solo le proprietà presenti. Conferma ogni riga prima di verificare. Le soluzioni commentate sono disponibili sotto ogni tabella.
+
+| Sistema: ingresso, uscita e ipotesi | Invarianza nel tempo |
+|---|:---:|
+| **Resistore ideale.** Ingresso: corrente $i(t)$. Uscita: tensione $v(t)=Ri(t)$. Resistenza costante, temperatura mantenuta costante; effetti capacitivi e induttivi trascurati. | [□]{.answer-cell data-answer="true"} |
+| **Resistore che si autoriscalda.** Ingresso: corrente. Uscita: tensione $v=R(T)i$. La temperatura interna evolve per effetto della potenza dissipata e dello scambio termico. R dipende da T con coefficiente non nullo; ambiente e coefficienti costanti. | [□]{.answer-cell data-answer="true"} |
+| **Temperatura programmata: tensione.** Ingresso: corrente. Uscita: tensione $v(t)=R(t)i(t)$. Un dispositivo esterno impone una temperatura non costante secondo un orologio, rendendo R(t) non costante e indipendente dalla corrente. Autoriscaldamento ed effetti dinamici elettrici trascurati. | [□]{.answer-cell data-answer="false"} |
+| **Ritardo con guadagno programmato.** Elaboratore discreto: conserva un campione e restituisce $y[n]=k[n]u[n-1]$, con $k[n]=2+\sin(\pi n/4)$ prescritto dall’esterno. Il programma k non viene traslato con l’ingresso. | [□]{.answer-cell data-answer="false"} |
+
+::: {.classification-solutions}
+
+<details>
+<summary>Soluzioni commentate</summary>
+
+- **Resistore ideale:** Invarianza nel tempo **sì**. Basta la corrente attuale. Moltiplicare per R rispetta la sovrapposizione; R non dipende dall’orologio.
+
+- **Resistore che si autoriscalda:** Invarianza nel tempo **sì**. La temperatura conserva gli effetti della storia. Il riscaldamento quadratico accoppia corrente e resistenza: non vale la sovrapposizione. Le leggi non dipendono esplicitamente dal tempo; si confrontano preparazioni iniziali uguali.
+
+- **Temperatura programmata: tensione:** Invarianza nel tempo **no**. Non serve la storia della corrente. R(t) moltiplica linearmente l’ingresso, ma ripetere lo stesso ingresso a un altro orario può produrre una tensione diversa.
+
+- **Ritardo con guadagno programmato:** Invarianza nel tempo **no**. Il campione precedente richiede memoria. Ritardo e moltiplicazione per k[n] sono lineari. Il guadagno esplicito non costante rende il sistema tempo-variante.
+
+</details>
+
+:::
+
+:::

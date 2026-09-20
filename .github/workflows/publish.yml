@@ -22,6 +22,7 @@ jobs:
       - run: node scripts/check_rc.cjs
       - run: node scripts/check_sinusoidi.cjs
       - run: node scripts/check_resistori.cjs
+      - run: node scripts/build_classification.cjs
       - run: quarto render
       - run: node scripts/check_components.cjs
       - uses: actions/configure-pages@v5

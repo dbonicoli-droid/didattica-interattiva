@@ -1,0 +1,30 @@
+<!-- Generato da scripts/build_classification.cjs -->
+::: {.classification-exercise #esercizio-memoria}
+
+Spunta solo le proprietà presenti. Conferma ogni riga prima di verificare. Le soluzioni commentate sono disponibili sotto ogni tabella.
+
+| Sistema: ingresso, uscita e ipotesi | Memoria |
+|---|:---:|
+| **Resistore ideale.** Ingresso: corrente $i(t)$. Uscita: tensione $v(t)=Ri(t)$. Resistenza costante, temperatura mantenuta costante; effetti capacitivi e induttivi trascurati. | [□]{.answer-cell data-answer="false"} |
+| **Circuito RC ideale.** Ingresso: tensione del generatore. Uscita: tensione sul condensatore. R e C costanti, circuito inizialmente a riposo; equazione $RC\,dv_C/dt+v_C=v_{in}$. Negli esperimenti traslati si trasla coerentemente anche la preparazione. | [□]{.answer-cell data-answer="true"} |
+| **Termostato con isteresi.** Ingresso: temperatura misurata. Uscita: comando acceso/spento. Accende sotto 19 °C, spegne sopra 21 °C, conserva il comando precedente nella fascia intermedia. Soglie fisse e stessa preparazione iniziale per ogni esperimento. | [□]{.answer-cell data-answer="true"} |
+| **Temperatura programmata: tensione.** Ingresso: corrente. Uscita: tensione $v(t)=R(t)i(t)$. Un dispositivo esterno impone una temperatura non costante secondo un orologio, rendendo R(t) non costante e indipendente dalla corrente. Autoriscaldamento ed effetti dinamici elettrici trascurati. | [□]{.answer-cell data-answer="false"} |
+
+::: {.classification-solutions}
+
+<details>
+<summary>Soluzioni commentate</summary>
+
+- **Resistore ideale:** Memoria **no**. Basta la corrente attuale. Moltiplicare per R rispetta la sovrapposizione; R non dipende dall’orologio.
+
+- **Circuito RC ideale:** Memoria **sì**. La carica immagazzinata introduce memoria. Con stato iniziale nullo vale la sovrapposizione. I coefficienti costanti rendono il modello tempo-invariante.
+
+- **Termostato con isteresi:** Memoria **sì**. Nella fascia intermedia serve il comando precedente. Soglie e comando binario non rispettano la sovrapposizione. La regola non cambia con l’orario.
+
+- **Temperatura programmata: tensione:** Memoria **no**. Non serve la storia della corrente. R(t) moltiplica linearmente l’ingresso, ma ripetere lo stesso ingresso a un altro orario può produrre una tensione diversa.
+
+</details>
+
+:::
+
+:::

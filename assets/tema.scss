@@ -620,3 +620,42 @@ body.sine-open { overflow:hidden; }
 body.resistor-open { overflow:hidden; }
 @container(max-width:620px) { .resistor-controls { grid-template-columns:1fr; } .resistor-control { display:grid; grid-template-columns:1fr 1fr; gap:.3rem; } .resistor-value-row { grid-column:1/-1; } }
 @media(max-width:600px) { .resistor-toolbar button { font-size:.85rem; } .resistor-toolbar select { max-width:100%; } .resistor-arrows button { min-height:26px; } }
+
+/* Tabelle didattiche: una proprietà per colonna, spazio alla descrizione. */
+.classification-exercise {
+  margin-block: 1.5rem;
+  table { width: 100%; table-layout: fixed; }
+  th:first-child { width: 73%; }
+  th:not(:first-child) { writing-mode: vertical-rl; transform: rotate(180deg); height: 12rem; white-space: nowrap; vertical-align: middle; }
+  td { vertical-align: middle; overflow-wrap: anywhere; }
+  td:first-child { font-size: .96rem; }
+  td:not(:first-child) { text-align: center; }
+  input[type=checkbox] { width: 1.3rem; height: 1.3rem; accent-color: var(--accento); cursor: pointer; }
+  button { background: var(--superficie); color: var(--testo); border: 1px solid var(--bordo-forte); border-radius: .45rem; padding: .4rem .65rem; }
+  button:hover { background: var(--evidenza); }
+  button:focus-visible, input:focus-visible { outline: 3px solid var(--fuoco); outline-offset: 3px; }
+  button:disabled { opacity: .6; cursor: default; }
+  .confirm-row { display: block; margin-top: .6rem; font-size: .82rem; }
+  .row-result { display: block; font-weight: 600; margin-top: .3rem; }
+  .exercise-toolbar { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .exercise-status { min-height: 1.5rem; margin-block: .5rem; }
+  .classification-solutions { padding: .8rem; background: var(--superficie); border: 1px solid var(--bordo); border-radius: .5rem; }
+  summary { cursor: pointer; font-weight: 600; }
+}
+#classification-print { display: none; }
+@media print {
+  body.printing-classification > * { display: none !important; }
+  body.printing-classification > #classification-print { display: block !important; }
+  #classification-print table { width: 100%; border-collapse: collapse; }
+  #classification-print th, #classification-print td { border: 1px solid; padding: .5rem; }
+  #classification-print tr { break-inside: avoid; }
+  #classification-print th:first-child { width: 72%; }
+  #classification-print td:not(:first-child) { text-align: center; }
+  .exercise-toolbar, .confirm-row, .row-result, .exercise-status { display: none !important; }
+}
+
+main.content .classification-exercise table { display: table; width: 100%; table-layout: fixed; }
+.classification-exercise td:not(:first-child), .classification-exercise th:not(:first-child) { padding-inline: .15rem; }
+@media (max-width: 600px) { .classification-exercise th:first-child { width: 64%; } }
+
+.classification-exercise th:first-child { white-space: normal; overflow-wrap: anywhere; }

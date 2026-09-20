@@ -1,20 +1,16 @@
 ---
-stato: da-scrivere
+sidebar: sistemi-automatici
+stato: bozza
 title: "Modulo 1 / Fondamenti di teoria dei sistemi"
-subtitle: "Modulo di approfondimento"
+subtitle: "Modelli, proprietà ed esempi per la classe terza"
+toc-depth: 3
 ---
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd)
 
-::: {.callout-note icon=false}
-## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
+Una stanza riscaldata, un circuito e un programma possono essere studiati con lo stesso metodo: **scegliere che cosa osservare, descrivere come l'ingresso produce l'uscita e dichiarare le ipotesi**. Le classificazioni riguardano il modello scelto: non sono etichette da attribuire automaticamente al nome di un oggetto.
 
-Qui trovi per ora solo la struttura: i titoli delle unità didattiche e i rimandi. Le spiegazioni, gli esempi e gli esercizi arriveranno con lo svolgimento delle lezioni. La **sintesi del programma** è invece già scritta.
-
-[Vai alla sintesi del modulo 1 →](../modulo-1.qmd){.btn .btn-primary}
-
-Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
-:::
+Per iniziare bastano proporzioni, equazioni di primo grado e lettura di grafici. I passaggi con derivate e integrali sono presentati come anticipazioni: il loro studio sistematico sarà approfondito negli anni successivi.
 
 ::: {.unit-index}
 ## Unità didattiche del modulo {.unnumbered}
@@ -28,30 +24,418 @@ Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [labora
 - [U.D. 1.7 / Applicazioni e simulazioni con software Flowgorithm](#ud:1.7)
 :::
 
-## U.D. 1.1 / Concetto di sistema ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.1}
+## U.D. 1.1 / Concetto di sistema {#ud:1.1}
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.1){.wip-link}
+Un **sistema** è un insieme di elementi che interagiscono. Per studiarlo occorre definirne il **confine**, distinguendolo dall'ambiente. Il confine non è necessariamente una parete fisica: è una scelta legata alla domanda che vogliamo risolvere.
 
-## U.D. 1.2 / Ingressi, parametri, disturbi e uscite dei sistemi ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.2}
+### Tre esempi, tre domande
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.2){.wip-link}
+| Sistema scelto | Domanda | Elementi inclusi nel modello |
+|---|---|---|
+| Stanza riscaldata | Quanto cambia la temperatura quando accendiamo il riscaldamento? | Aria, pareti e oggetti rappresentati da una capacità termica e da scambi di calore. |
+| Serbatoio | Come cambia il livello quando varia la portata? | Recipiente, acqua e connessioni idrauliche; la pompa può restare esterna al confine. |
+| Regolatore di temperatura | Quando deve accendere il riscaldamento? | Regola di comando e, se necessaria, memoria del comando precedente. La stanza è il processo da controllare. |
 
-## U.D. 1.3 / Classificazione dei sistemi ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.3}
+Il **sistema fisico** è l'oggetto reale; il **modello** è la descrizione che usiamo per prevederne il comportamento. Un modello utile non riproduce ogni dettaglio: conserva quelli pertinenti e dichiara quelli trascurati.
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.3){.wip-link}
+**Esempio:** per studiare un partitore a bassa frequenza possiamo trattare i resistori come ideali. Per prevedere il riscaldamento dobbiamo aggiungere potenza dissipata, temperatura e scambio termico. Non è una contraddizione: cambia lo scopo del modello.
 
-## U.D. 1.4 / Esercitazioni e applicazione a casi reali ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.4}
+### Il sistema come trasformazione di segnali
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.4){.wip-link}
+Scriviamo:
 
-## U.D. 1.5 / Classificazione dei modelli dei sistemi ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.5}
+$$y=\mathcal{T}[u].$$
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.5){.wip-link}
+$u$ rappresenta l'intero segnale di ingresso, $y$ l'intero segnale di uscita e $\mathcal{T}$ la regola del sistema. Non significa che l'uscita attuale dipenda sempre e soltanto dall'ingresso attuale: il sistema può avere memoria.
 
-## U.D. 1.6 / Algoritmi e diagrammi di flusso ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.6}
+- $u(t)$ e $y(t)$ indicano valori a tempo continuo, con $t$ espresso per esempio in secondi.
+- $u[n]$ e $y[n]$ indicano campioni, con $n$ intero. Se si misura ogni $T_s$ secondi, il campione $n$ corrisponde a $t_n=nT_s$.
+- Gli ingressi e le uscite possono essere più di uno: si raccolgono allora in vettori. Qui iniziamo soprattutto con un ingresso e un'uscita.
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.6){.wip-link}
+**Prima domanda da fare:** «Quali grandezze sto mettendo in relazione?». Dire soltanto «il sistema è una resistenza» non basta.
 
-## U.D. 1.7 / Applicazioni e simulazioni con software Flowgorithm ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.7}
+## U.D. 1.2 / Ingressi, parametri, disturbi e uscite dei sistemi {#ud:1.2}
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.7){.wip-link}
+| Grandezza | Significato | Esempio: serbatoio alimentato da una pompa |
+|---|---|---|
+| Ingresso comandato $u$ | Grandezza esterna che possiamo modificare per agire sul sistema. | Portata in ingresso $q_{in}$. |
+| Disturbo $d$ | Azione esterna che influenza il risultato, ma non è comandata dal regolatore considerato. | Portata prelevata dagli utilizzatori $q_{out}$. |
+| Uscita $y$ | Grandezza che scegliamo di osservare. | Livello $h$. |
+| Parametro $p$ | Coefficiente o caratteristica della descrizione. | Sezione costante $A$ del recipiente. |
+| Stato $x$ | Informazione interna che, insieme agli ingressi futuri, permette di prevedere l'evoluzione nel modello deterministico. | Livello attuale: quanta acqua c'è già. |
+
+![Schema a blocchi con ingresso, disturbo e uscita.](/assets/dispense/sistemi-automatici/figura-2.png)
+
+Un disturbo è comunque un ingresso esterno dal punto di vista matematico. Lo distinguiamo dall'ingresso comandato per il ruolo che ha nel problema di controllo. Se cambiamo il confine, la tensione del motore della pompa può diventare l'ingresso, mentre la portata diventa una grandezza interna.
+
+### Parametro e stato non sono sinonimi
+
+Nel modello di una stanza, la capacità termica è un parametro; la temperatura è uno stato. Nel resistore ideale $R$ è un parametro costante. Nel resistore che si autoriscalda, $R$ può dipendere dallo stato termico $T$: scrivere $R(T(t))$ non significa automaticamente introdurre una dipendenza esplicita dall'orologio.
+
+### Un bilancio comprensibile senza derivate
+
+Per un serbatoio di sezione costante e portate costanti nell'intervallo $\Delta t$:
+
+$$\Delta V=(q_{in}-q_{out})\Delta t,\qquad
+\Delta h=\frac{\Delta V}{A},\qquad
+h_{nuovo}=h_{precedente}+\Delta h.$$
+
+Se $A=0{,}5\,\mathrm{m^2}$, $q_{in}=3$ L/s e $q_{out}=1$ L/s, in 10 s si aggiungono 20 L, cioè $0{,}020\,\mathrm{m^3}$. Il livello cresce di $0{,}020/0{,}5=0{,}040$ m, cioè 4 cm. Per conoscere il livello finale serve anche quello iniziale: questa è memoria.
+
+::: {.callout-note title="Anticipazione matematica"}
+Quando le portate variano continuamente, lo stesso bilancio si esprime come
+$$A\frac{dh}{dt}=q_{in}(t)-q_{out}(t).$$
+La derivata $dh/dt$ esprime la velocità di variazione del livello. La formula non introduce un fenomeno diverso: descrive il bilancio su intervalli sempre più piccoli. Derivate e integrali saranno approfonditi negli anni successivi.
+:::
+
+## U.D. 1.3 / Classificazione dei sistemi {#ud:1.3}
+
+Le proprietà descrivono aspetti diversi. **Lineare non significa senza memoria; non lineare non significa tempo-variante.** Prima di classificare, fissiamo ingresso, uscita, modello, intervallo di validità e condizioni iniziali.
+
+### Memoria: definizione verbale e matematica {#memoria}
+
+Un sistema è **senza memoria** se, in ogni istante, l'uscita dipende soltanto dal valore dell'ingresso nello stesso istante, oltre che da eventuali parametri e dal tempo esplicito. Si può scrivere:
+
+$$y(t)=F(t,u(t))\qquad\text{oppure}\qquad y[n]=F(n,u[n]).$$
+
+In modo più preciso, per ogni coppia di ingressi ammessi e per ogni $t_0$:
+
+$$u_1(t_0)=u_2(t_0)\ \Longrightarrow\
+\mathcal{T}[u_1](t_0)=\mathcal{T}[u_2](t_0).$$
+
+Se due storie diverse, con lo stesso ingresso attuale, possono dare uscite attuali diverse, **il sistema ha memoria**. Per i sistemi causali che studiamo, questa dipendenza riguarda il passato o uno stato che ne riassume gli effetti. In generale anche la dipendenza da altri istanti futuri viola la definizione di assenza di memoria, ma non descrive un comportamento realizzabile in tempo reale senza anticipazioni.
+
+- $y(t)=3u(t)$: senza memoria.
+- $y(t)=k(t)u(t)$ con $k(t)$ prestabilito: ancora senza memoria, anche se il guadagno cambia nel tempo.
+- $y[n]=u[n-1]$: con memoria, perché serve il campione precedente.
+
+In questo modulo usiamo **statico** per un modello senza memoria e **dinamico** per uno con memoria. «Statico» non vuol dire che l'uscita sia costante.
+
+#### Esempio fisico: resistore e circuito RC
+
+![Resistore: la corrente i entra dal terminale positivo della tensione v. Lo schema vale anche per i modelli termici, sostituendo R con R(T).](/assets/componenti/resistore.svg)
+
+Nello schema la tensione sul resistore è indicata con $v_R$; nel seguito la abbreviamo in $v$. Il generatore serve a eccitare il componente: per la classificazione scegliamo corrente misurata in ingresso e tensione in uscita. Il valore 1 kΩ è solo esemplificativo.
+
+Per il resistore ideale a temperatura costante, $v(t)=Ri(t)$: sapere la corrente attuale basta a ricavare la tensione attuale.
+
+![Circuito RC: generatore a gradino, R in serie a C, tensione misurata sul condensatore.](/assets/rc/circuito-1.svg)
+
+Nel circuito RC la tensione del condensatore dipende dalla carica già presente. Due condensatori con tensioni iniziali diverse, collegati nello stesso istante alla stessa alimentazione attraverso lo stesso resistore, non danno subito la stessa uscita. Il condensatore introduce memoria.
+
+Nel modello RC generale l'ingresso è $v_{in}(t)$, l'uscita $v_C(t)$ e lo stato può essere scelto uguale a $v_C(t)$. Lo schema mostra un esempio a gradino; il modello vale anche per altri ingressi.
+
+[Esplora le due cariche RC](/laboratori/rc.qmd).
+
+#### Esercizio: riconoscere la memoria
+
+{{< include _classificazione-memoria.qmd >}}
+
+### Linearità: proporzionalità e additività {#linearita}
+
+Un sistema è **lineare** se rispetta la sovrapposizione: per ogni coppia di ingressi ammessi $u_1,u_2$ e per ogni coppia di coefficienti $a,b$ per cui la combinazione è ammessa,
+
+$$\boxed{\mathcal{T}[a u_1+b u_2]=a\mathcal{T}[u_1]+b\mathcal{T}[u_2].}$$
+
+La proprietà comprende:
+
+1. **Omogeneità o proporzionalità:** $\mathcal{T}[a u]=a\mathcal{T}[u]$.
+2. **Additività:** $\mathcal{T}[u_1+u_2]=\mathcal{T}[u_1]+\mathcal{T}[u_2]$.
+
+Per dimostrare la linearità serve una proprietà valida per tutti gli ingressi del modello, non solo per due prove numeriche. **Un solo controesempio basta invece a dimostrare la non linearità.** Il test $\mathcal{T}[0]=0$ è necessario, ma non sufficiente.
+
+#### Il quadrato dell'ingresso
+
+Per $y=u^2$, scegliamo $u=2$ e raddoppiamo l'ingresso:
+
+$$\mathcal{T}[2]=4,\qquad \mathcal{T}[4]=16\ne2\cdot4.$$
+
+Fallisce anche l'additività: $(u_1+u_2)^2=u_1^2+2u_1u_2+u_2^2$, che in generale non coincide con $u_1^2+u_2^2$. Il sistema è non lineare, pur passando per l'origine.
+
+#### Lo stesso resistore, due uscite diverse
+
+Usiamo lo schema del resistore precedente, con convenzione dell'utilizzatore e $R$ costante.
+
+| Ingresso | Uscita osservata | Modello | Classificazione |
+|---|---|---|---|
+| Corrente $i$ | Tensione $v$ | $v=Ri$ | Lineare: moltiplicazione per una costante. |
+| Corrente $i$ | Potenza dissipata $p$ | $p=vi=Ri^2$ | Non lineare: dipendenza quadratica. |
+
+Con $R=100\,\Omega$, a 10 mA la tensione è 1 V e la potenza 10 mW; a 20 mA la tensione è 2 V e la potenza 40 mW. **Raddoppia la tensione, quadruplica la potenza.** Qui la temperatura è mantenuta costante: stiamo studiando la potenza istantanea, non l'evoluzione termica.
+
+#### Resistore che si autoriscalda
+
+Ora manteniamo corrente in ingresso e tensione in uscita, ma consideriamo il riscaldamento. Un modello è
+
+$$v=R(T)i,\qquad R(T)=R_0[1+\alpha(T-T_0)].$$
+
+La temperatura dipende dalla potenza $i^2R(T)$ e dalla dissipazione di calore verso l'ambiente. Il valore attuale di $T$ dipende dalla storia: il modello ha **memoria**. La dipendenza quadratica del riscaldamento e l'accoppiamento tra $T$ e $i$ rendono in generale il sistema **non lineare** (con $\alpha\ne0$). Ambiente, coefficienti e leggi sono qui costanti nel tempo.
+
+::: {.callout-note title="Anticipazione: modello termico dinamico"}
+$$C_{th}\frac{dT}{dt}=i^2R(T)-G_{th}(T-T_a).$$
+$C_{th}$ è la capacità termica, $G_{th}$ la conduttanza termica verso l'ambiente e $T_a$ la temperatura ambiente. A sinistra compare la variazione dell'energia termica; a destra la potenza prodotta meno quella ceduta. Per la classificazione basta leggere questa struttura: non occorre ancora risolvere l'equazione.
+:::
+
+#### Un altro sistema fisico non lineare: il diodo
+
+![Diodo con tensione e corrente di riferimento.](/assets/componenti/diodo.svg)
+
+Lo schema mostra un circuito di polarizzazione esemplificativo. Qui classifichiamo il solo diodo: $v$ indica $v_D$, non la tensione U del generatore.
+
+Consideriamo tensione ai capi in ingresso e corrente in uscita, temperatura costante e capacità parassite trascurate. Nel modello statico a giunzione:
+
+$$i=I_S\left(e^{v/(\eta V_T)}-1\right).$$
+
+$I_S$, $\eta$ e $V_T$ sono parametri costanti nel modello. Non è necessario conoscere già la fisica della giunzione: la relazione esponenziale mostra che raddoppiare $v$ non raddoppia generalmente $i$. Il modello è **non lineare e senza memoria**. In altri modelli, che includono cariche immagazzinate, il diodo può avere memoria.
+
+#### Attenzione agli offset e alle condizioni iniziali
+
+$y=2u+3$ è una relazione **affine**, non lineare nel senso dei sistemi: a ingresso nullo l'uscita vale 3. Una retta sul grafico non basta, deve rispettare la sovrapposizione. Per studiare piccole variazioni attorno a un punto di lavoro può essere utile definire $\Delta u$ e $\Delta y$; il modello delle variazioni va dichiarato.
+
+Nei modelli dinamici lineari, per classificare la relazione ingresso–uscita usiamo **condizioni iniziali nulle**, oppure separiamo la risposta dovuta allo stato iniziale. In un RC con condensatore già carico, l'uscita può essere non nulla anche a ingresso nullo: ciò non rende non lineari le equazioni del circuito, ma la mappa ingresso–uscita a stato iniziale non nullo fissato non è, in generale, lineare.
+
+#### Esercizio: verificare la linearità
+
+{{< include _classificazione-linearita.qmd >}}
+
+### Invarianza nel tempo: la prova della traslazione {#invarianza}
+
+Un sistema è **tempo-invariante** se spostare nel tempo l'ingresso produce soltanto lo stesso spostamento dell'uscita. Se $\mathcal{T}[u](t)=y(t)$, per ogni ritardo $\tau$ compatibile con il dominio dei segnali deve valere:
+
+$$\boxed{\mathcal{T}[u(\cdot-\tau)](t)=y(t-\tau).}$$
+
+Il punto in $u(\cdot-\tau)$ indica che ritardiamo l'intero segnale. A tempo discreto, con spostamento intero $k$:
+
+$$\mathcal{T}[u[\cdot-k]][n]=y[n-k].$$
+
+**Procedura:** calcola prima l'uscita all'ingresso ritardato; poi ritarda l'uscita originale; infine confronta. Se non coincidono anche per un solo caso ammesso, il sistema è tempo-variante.
+
+#### Un guadagno costante e uno programmato
+
+Per $y(t)=R_0u(t)$, entrambi i procedimenti danno $R_0u(t-\tau)$: il sistema è tempo-invariante.
+
+Per $y(t)=R(t)u(t)$, con $R(t)$ programmata dall'esterno:
+
+$$y_A(t)=R(t)u(t-\tau),\qquad y_B(t)=R(t-\tau)u(t-\tau).$$
+
+Se $R(t)$ non è costante, i due risultati in generale differiscono. Per esempio, se $R$ vale 100 Ω al mattino e 200 Ω al pomeriggio, la stessa corrente di 10 mA produce rispettivamente 1 V e 2 V. Supponiamo che il programma sia indipendente dalla corrente e che non intervengano altri effetti dinamici.
+
+Questo sistema è **tempo-variante, lineare e senza memoria**. Per dimostrare la linearità, a ogni istante:
+
+$$R(t)[a u_1(t)+b u_2(t)]=aR(t)u_1(t)+bR(t)u_2(t).$$
+
+#### Resistenza variabile con la temperatura: due casi distinti
+
+| Caso | Origine della variazione di resistenza | Conseguenza |
+|---|---|---|
+| Autoriscaldamento, ambiente costante | La temperatura è uno stato interno determinato dalla corrente e dalla storia termica. | Il modello è dinamico e non lineare, ma le sue leggi sono tempo-invarianti. |
+| Temperatura imposta secondo un orologio esterno | Il programma $T_{ext}(t)$ è fissato indipendentemente dall'ingresso elettrico; autoriscaldamento ed effetti dinamici elettrici trascurati. | Il modello elettrico $v(t)=R(t)i(t)$ è senza memoria, lineare e tempo-variante se $R(t)$ non è costante. |
+
+**Una grandezza che varia nel tempo non basta a rendere il sistema tempo-variante.** La temperatura di una stanza, il livello di un serbatoio e la tensione di un condensatore possono cambiare anche in sistemi tempo-invarianti.
+
+#### Condizioni iniziali e avvio dell'esperimento
+
+Nel confronto temporale occorre traslare coerentemente anche la storia precedente e la preparazione del sistema. Ripetere lo stesso esperimento con il resistore prima freddo e poi già caldo non è una prova di variabilità nel tempo: sono diverse le condizioni iniziali.
+
+Per i modelli lineari usiamo il sistema inizialmente a riposo e ingressi compatibili con questa ipotesi. Non imponiamo un azzeramento a un istante assoluto fisso mentre spostiamo arbitrariamente il resto dell'esperimento: quel reset sarebbe un'azione temporale aggiuntiva.
+
+#### Esercizio: riconoscere l'invarianza nel tempo
+
+{{< include _classificazione-invarianza.qmd >}}
+
+### Tempo continuo, tempo discreto e valori dei segnali
+
+- **Tempo continuo:** $t\in\mathbb{R}$ e $u:\mathbb{R}\to\mathbb{R}$ nel caso scalare reale. Il modello descrive la grandezza in ogni istante.
+- **Tempo discreto:** $n\in\mathbb{Z}$ e $u:\mathbb{Z}\to\mathbb{R}$. La descrizione riguarda una successione di campioni.
+
+Discreto nel tempo non significa necessariamente binario: una misura campionata può assumere molti valori. La **quantizzazione** limita invece i valori a un insieme discreto, per esempio $u[n]\in\{0,1,\ldots,1023\}$ per i codici di un convertitore a 10 bit. Nell'acquisizione reale entrano in gioco sia il campionamento sia la quantizzazione.
+
+### Deterministico e stocastico
+
+Un modello **deterministico**, fissati ingressi, parametri e condizioni iniziali, determina una risposta univoca. Nel modello **stocastico** compaiono variabili o processi aleatori: per esempio
+
+$$y[n]=u[n]+w[n],$$
+
+dove $w[n]$ rappresenta rumore descritto tramite una distribuzione di probabilità, eventualmente a media nulla. Per lo stesso ingresso il modello fornisce una descrizione probabilistica dell'uscita. Non conoscere un parametro non rende automaticamente stocastico il modello: occorre specificare come si rappresenta l'incertezza.
+
+### Causalità: un primo criterio aggiuntivo
+
+Un sistema è **causale** se l'uscita attuale non richiede ingressi futuri. A parità di preparazione iniziale:
+
+$$u_1(t)=u_2(t)\ \text{per ogni }t\le t_0
+\quad\Longrightarrow\quad y_1(t_0)=y_2(t_0).$$
+
+$y[n]=u[n-1]$ ha memoria ed è causale; $y[n]=u[n+1]$ richiede il campione futuro e non è causale. Il secondo può essere usato elaborando una registrazione già disponibile, ma non come risposta in tempo reale a un ingresso futuro sconosciuto. Le tabelle di questo modulo si concentrano sulle tre proprietà principali: memoria, linearità e invarianza nel tempo.
+
+### Anello aperto e anello chiuso
+
+In **anello aperto** il comando non viene corretto usando la misura dell'uscita controllata: per esempio, irrigare per un tempo prefissato senza misurare l'umidità.
+
+In **anello chiuso** l'uscita misurata rientra nel calcolo del comando. Un possibile schema è
+
+$$e(t)=r(t)-y_m(t),\qquad u=\mathcal{C}[e],$$
+
+dove $r$ è il riferimento, $y_m$ l'uscita misurata, $e$ l'errore e $\mathcal{C}$ il controllore.
+
+![Schema di retroazione negativa: confronto tra riferimento e uscita misurata.](/assets/dispense/sistemi-automatici/figura-3.png)
+
+Anello aperto/chiuso riguarda il collegamento del sistema di controllo, non sostituisce le classificazioni precedenti. La retroazione non garantisce da sola precisione o stabilità: contano il processo, il controllore, i sensori e i ritardi.
+
+## U.D. 1.4 / Esercitazioni e applicazione a casi reali {#ud:1.4}
+
+### Come usare le tabelle
+
+Una casella spuntata significa **sì**, non spuntata significa **no**. Le colonne sono solo **Memoria**, **Linearità**, **Invarianza nel tempo**. Conferma ogni riga dopo aver deciso: così una riga ancora da svolgere non viene scambiata per tre risposte negative.
+
+Usa **Verifica risposte** per controllare il lavoro o **Mostra soluzione** per vedere classificazioni e motivazioni. Tornando all'esercizio ritrovi le tue risposte. Non vengono inviati o registrati dati degli studenti; ricaricando la pagina si ricomincia. Per una stampa usa **Stampa esercizio**: produce caselle vuote; **Stampa soluzioni** produce le risposte e le spiegazioni. Le stesse tabelle hanno una versione statica per una futura raccolta PDF.
+
+### Tabella completa: proprietà combinate
+
+{{< include _classificazione-completa.qmd >}}
+
+### Caso guidato: termostato con isteresi
+
+Il regolatore riceve la temperatura $T[n]$ e produce il comando $q[n]\in\{0,1\}$, dove 1 significa riscaldamento acceso. Con soglie costanti 19 °C e 21 °C:
+
+$$q[n]=\begin{cases}
+1 & T[n]<19\,{}^\circ\mathrm{C},\\
+0 & T[n]>21\,{}^\circ\mathrm{C},\\
+q[n-1] & 19\,{}^\circ\mathrm{C}\le T[n]\le21\,{}^\circ\mathrm{C}.
+\end{cases}$$
+
+Tra le soglie, estremi compresi, serve il comando precedente: a 20 °C il riscaldamento può essere acceso oppure spento. Questo dimostra la memoria. Soglie e uscite binarie violano la sovrapposizione; le regole fisse sono tempo-invarianti, confrontando esperimenti con preparazione iniziale coerente. Fissiamo $q[-1]=0$ all'inizio di ciascun esperimento.
+
+**Prova tu:** completa i comandi per le temperature 18, 20, 22, 20, 18 °C.
+
+::: {.callout-note collapse=true title="Soluzione del termostato"}
+I comandi sono **1, 1, 0, 0, 1**. Le due letture di 20 °C producono comandi diversi perché è diverso lo stato precedente.
+:::
+
+### Attività con i laboratori del sito
+
+1. Nel [laboratorio dei resistori](/laboratori/resistori.qmd), usa un generatore di tensione e resistori costanti. Raddoppia $v_{in}$: verifica che raddoppino tensioni e correnti. Stai variando l'ingresso, non i parametri.
+2. Cambia ora una resistenza: stai confrontando due modelli con parametri diversi. Non è una prova di non linearità del singolo modello.
+3. Nel [laboratorio RC](/laboratori/rc.qmd), confronta le tensioni a uno stesso istante per costanti di tempo diverse. Spiega quale stato conserva la memoria.
+4. Nel [laboratorio delle sinusoidi](/laboratori/sinusoidi.qmd), osserva la somma istante per istante. La somma di segnali è l'operazione usata nella prova di sovrapposizione; da sola non dimostra che un dispositivo fisico sia lineare.
+
+## U.D. 1.5 / Classificazione dei modelli dei sistemi {#ud:1.5}
+
+Un sistema può essere rappresentato in più modi, scelti secondo lo scopo.
+
+| Tipo di modello | Che cosa rappresenta | Esempio e limite |
+|---|---|---|
+| Fisico | Un oggetto sperimentale, talvolta in scala. | Un piccolo serbatoio trasparente. Le proporzioni geometriche non garantiscono da sole la somiglianza di tutti i fenomeni. |
+| Grafico | Collegamenti, flussi o relazioni. | Schema elettrico, schema a blocchi, diagramma degli stati. Occorre spiegare simboli e segnali. |
+| Matematico | Equazioni e vincoli quantitativi. | $v=Ri$ oppure bilancio di volume. Le ipotesi determinano dove la formula è attendibile. |
+| Algoritmico | Procedura per ottenere risultati o decidere azioni. | Calcolo del nuovo livello ogni secondo, con controlli sugli ingressi. |
+
+Le categorie possono coesistere: un algoritmo può eseguire un modello matematico descritto anche da un diagramma a blocchi. «Matematico» non significa «lineare»: anche un modello non lineare può essere espresso con equazioni.
+
+### Il serbatoio come esempio di passaggio tra modelli
+
+Sia $u[n]=q_{in}[n]-q_{out}[n]$ la portata netta, costante durante ciascun intervallo $T_s$. Senza trabocco, svuotamento o variazioni della sezione:
+
+$$h[n+1]=h[n]+\frac{T_s}{A}u[n].$$
+
+Il nuovo livello dipende dal precedente. Confrontando variazioni di livello rispetto a un riferimento e stato iniziale nullo per tali variazioni, il modello è lineare e tempo-invariante. Aggiungere il vincolo fisico $0\le h\le h_{max}$ tramite saturazione cambia il modello: non è più globalmente lineare.
+
+**Validare il modello** significa confrontarne le previsioni con misure o con un riferimento attendibile. Per esempio: verifica unità di misura, caso di portate uguali, tempo nullo e aumento proporzionale con la durata. Una simulazione eseguita senza errori di programma può comunque descrivere male il fenomeno.
+
+## U.D. 1.6 / Algoritmi e diagrammi di flusso {#ud:1.6}
+
+Un **algoritmo** è una procedura formata da istruzioni definite, con dati di ingresso e risultati attesi. Gli esercizi di calcolo qui proposti terminano dopo un numero finito di passi; un controllo automatico può invece ripetere ciclicamente la procedura durante il funzionamento.
+
+Le tre strutture fondamentali sono:
+
+- **Sequenza:** eseguire le istruzioni nell'ordine stabilito.
+- **Scelta:** decidere il percorso in base a una condizione.
+- **Ripetizione:** eseguire un blocco finché vale una condizione o per un numero stabilito di volte.
+
+Nel diagramma di flusso usiamo terminali per inizio/fine, parallelogrammi per ingresso/uscita, rettangoli per elaborazioni e rombi per decisioni; le frecce indicano l'ordine di esecuzione. Da una decisione booleana escono due percorsi, etichettati vero/falso o sì/no.
+
+![Esempio di scelta: confronto della temperatura con una soglia.](/assets/dispense/sistemi-automatici/figura-4.png)
+
+La condizione $T>30$ è falsa anche quando $T=30$: **gli estremi fanno parte della specifica**. Questo diagramma descrive una singola valutazione. Per un controllo ripetuto servono una nuova lettura e un ciclo.
+
+### Progettare prima di programmare
+
+1. Definisci ingresso, uscita e unità.
+2. Stabilisci i casi ammessi e gli errori da segnalare.
+3. Descrivi le operazioni in linguaggio naturale.
+4. Disegna il diagramma e controlla tutti i rami.
+5. Esegui a mano almeno un caso normale e un caso limite.
+
+**Esercizio:** calcolare la media di $N$ temperature. Non dividere per $N$ prima di aver verificato che sia un intero positivo. Somma e contatore sono variabili di lavoro; il contatore deve avanzare esattamente una volta per lettura.
+
+## U.D. 1.7 / Applicazioni e simulazioni con software Flowgorithm {#ud:1.7}
+
+Flowgorithm permette di costruire ed eseguire algoritmi tramite diagrammi di flusso. Per questa attività servono dichiarazione delle variabili, lettura, assegnazione, ciclo e visualizzazione del risultato. [Documentazione ufficiale delle istruzioni](https://www.flowgorithm.org/documentation/).
+
+### Attività completa: media di N letture
+
+Dichiara `N` e `i` come interi, `T`, `somma` e `media` come reali. I reali permettono temperature con parte decimale. Il codice seguente è **pseudocodice** da tradurre nei blocchi del diagramma:
+
+```text
+Leggi N
+Se N <= 0
+    Scrivi "Il numero di letture deve essere positivo"
+Altrimenti
+    somma = 0
+    i = 0
+    Finché i < N
+        Leggi T
+        somma = somma + T
+        i = i + 1
+    media = somma / N
+    Scrivi media
+```
+
+![Diagramma di flusso della media di tre letture, caso particolare N = 3.](/assets/dispense/sistemi-automatici/figura-5.png)
+
+Per $N=3$ e letture 20, 22, 24:
+
+| Iterazione | Temperatura letta | Somma dopo l'aggiornamento | Contatore dopo l'aggiornamento |
+|---|---:|---:|---:|
+| 1 | 20 | 20 | 1 |
+| 2 | 22 | 42 | 2 |
+| 3 | 24 | 66 | 3 |
+
+Il test `i < N` diventa falso quando `i` raggiunge 3. Il risultato è $66/3=22$.
+
+### Collaudo e ragionamento
+
+| Dati di prova | Risultato atteso | Che cosa verifica |
+|---|---|---|
+| $N=3$: 20, 20, 20 | 20 | Una sequenza costante deve restare costante nella media. |
+| $N=3$: −3, 0, 3 | 0 | Gestione di valori negativi. |
+| $N=2$: 20,5 e 21,5 | 21 | Conservazione della parte decimale. |
+| $N=1$: 18 | 18 | Caso minimo valido. |
+| $N=0$ o negativo | Messaggio di errore, nessuna divisione | Validazione del numero di letture. |
+
+**Errori da riconoscere:** somma non inizializzata, incremento dimenticato, condizione `i <= N` che legge un dato in più, divisione anticipata o tipi numerici non adatti. Esegui il diagramma passo per passo e osserva come cambia lo stato delle variabili.
+
+### Dal programma alle proprietà del sistema
+
+Una **media mobile di tre campioni**, disponibile a ogni istante discreto, è
+
+$$y[n]=\frac{u[n]+u[n-1]+u[n-2]}{3}.$$
+
+Ha memoria, è lineare ed è tempo-invariante se la stessa regola viene applicata a tutti i campioni. Per l'avvio occorre dichiarare i campioni precedenti, per esempio nulli. Non va confusa con l'algoritmo precedente, che legge un blocco di $N$ dati e restituisce una sola media alla fine.
+
+**Estensione:** realizza il termostato con isteresi della U.D. 1.4. Conserva il comando precedente tra due letture e verifica la sequenza proposta: se reinizializzi il comando a ogni giro, elimini la memoria necessaria e cambi il comportamento.
+
+## Riepilogo per lo studio
+
+Prima di assegnare un'etichetta a un sistema, rispondi a queste domande:
+
+1. Quali sono ingresso e uscita? Quali ipotesi adotto?
+2. L'ingresso attuale basta, oppure serve la storia/stato? **Memoria.**
+3. Vale la sovrapposizione per tutti gli ingressi ammessi? **Linearità.**
+4. Traslando coerentemente l'esperimento ottengo soltanto un'uscita traslata? **Invarianza nel tempo.**
+5. Il modello descrive tutti gli istanti o una successione di campioni? **Tempo continuo/discreto.**
+
+La classificazione non sostituisce il ragionamento: la motivazione è parte della risposta.
+
+Per il docente e per successivi approfondimenti: [MIT OpenCourseWare, lezione sulle proprietà dei sistemi](https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-3-signals-and-systems-part-ii/); [note MIT sulla distinzione tra risposta allo stato iniziale e risposta all'ingresso](https://ocw.mit.edu/courses/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/a6bddaee5966f6e73450e6fe79ab0566_MIT6_011S10_notes.pdf). Sono riferimenti universitari; non sono prerequisiti per questa lezione.
+
+<script src="../../../assets/classificazione/exercises.js"></script>

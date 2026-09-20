@@ -1,0 +1,33 @@
+<!-- Generato da scripts/build_classification.cjs -->
+::: {.classification-exercise #esercizio-linearita}
+
+Spunta solo le proprietà presenti. Conferma ogni riga prima di verificare. Le soluzioni commentate sono disponibili sotto ogni tabella.
+
+| Sistema: ingresso, uscita e ipotesi | Linearità |
+|---|:---:|
+| **Resistore ideale.** Ingresso: corrente $i(t)$. Uscita: tensione $v(t)=Ri(t)$. Resistenza costante, temperatura mantenuta costante; effetti capacitivi e induttivi trascurati. | [□]{.answer-cell data-answer="true"} |
+| **Potenza nel resistore.** Ingresso: corrente $i(t)$. Uscita: potenza istantanea $p(t)=Ri^2(t)$. Resistore ideale con R costante e temperatura controllata; non si considera l’evoluzione termica. | [□]{.answer-cell data-answer="false"} |
+| **Resistore che si autoriscalda.** Ingresso: corrente. Uscita: tensione $v=R(T)i$. La temperatura interna evolve per effetto della potenza dissipata e dello scambio termico. R dipende da T con coefficiente non nullo; ambiente e coefficienti costanti. | [□]{.answer-cell data-answer="false"} |
+| **Diodo nel modello statico.** Ingresso: tensione ai capi. Uscita: corrente. Relazione esponenziale della giunzione a temperatura costante, capacità e fenomeni di immagazzinamento di carica trascurati; funzionamento fuori dalla rottura inversa. | [□]{.answer-cell data-answer="false"} |
+| **Quadrato dell’ingresso.** Elaboratore ideale di segnali normalizzati: ingresso u e uscita $y(t)=u^2(t)$. Calcolo istantaneo, senza limiti di ampiezza o ritardi nel modello. | [□]{.answer-cell data-answer="false"} |
+
+::: {.classification-solutions}
+
+<details>
+<summary>Soluzioni commentate</summary>
+
+- **Resistore ideale:** Linearità **sì**. Basta la corrente attuale. Moltiplicare per R rispetta la sovrapposizione; R non dipende dall’orologio.
+
+- **Potenza nel resistore:** Linearità **no**. La potenza dipende solo dalla corrente attuale, ma raddoppiando la corrente quadruplica. La legge resta la stessa nel tempo.
+
+- **Resistore che si autoriscalda:** Linearità **no**. La temperatura conserva gli effetti della storia. Il riscaldamento quadratico accoppia corrente e resistenza: non vale la sovrapposizione. Le leggi non dipendono esplicitamente dal tempo; si confrontano preparazioni iniziali uguali.
+
+- **Diodo nel modello statico:** Linearità **no**. Il modello statico usa solo la tensione attuale. La relazione esponenziale non rispetta la sovrapposizione. I parametri sono costanti nel tempo.
+
+- **Quadrato dell’ingresso:** Linearità **no**. Usa solo il campione attuale; il quadrato viola la sovrapposizione; la formula non dipende dall’orologio.
+
+</details>
+
+:::
+
+:::
