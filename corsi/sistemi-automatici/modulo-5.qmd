@@ -55,12 +55,12 @@ Se nessuna condizione di transizione è vera, lo [stato](/risorse/glossario/inde
 
 La tabella esprime le stesse regole del diagramma. $S$, $R$ e $M$ hanno il significato introdotto nella [U.D. 5.2](modulo-5.qmd#ud:5.2); l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) qui riportata è quella associata allo [stato](/risorse/glossario/index.qmd#gloss-stato) successivo.
 
-  [Stato](/risorse/glossario/index.qmd#gloss-stato) attuale     $S$    $R$  [Stato](/risorse/glossario/index.qmd#gloss-stato) successivo    $M$
-  ------------------------------------------ ------- ----- --------------------------------------------- -----
-  FERMO                                         0      0   FERMO                                           0
-  FERMO                                         1      0   MARCIA                                          1
-  MARCIA                                      0 o 1    0   MARCIA                                          1
-  Qualsiasi                                   0 o 1    1   FERMO                                           0
+| [Stato](/risorse/glossario/index.qmd#gloss-stato) attuale | $S$ | $R$ | [Stato](/risorse/glossario/index.qmd#gloss-stato) successivo | $M$ |
+|---|:---:|:---:|---|:---:|
+| FERMO | 0 | 0 | FERMO | 0 |
+| FERMO | 1 | 0 | MARCIA | 1 |
+| MARCIA | 0 o 1 | 0 | MARCIA | 1 |
+| Qualsiasi | 0 o 1 | 1 | FERMO | 0 |
 
 Ogni combinazione deve avere un esito definito. La scrittura «0 o 1» abbrevia due righe con lo stesso risultato, senza introdurre un terzo valore logico.
 
