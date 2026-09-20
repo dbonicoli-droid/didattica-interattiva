@@ -626,7 +626,7 @@ body.resistor-open { overflow:hidden; }
   margin-block: 1.5rem;
   table { width: 100%; table-layout: fixed; }
   th:first-child { width: 73%; }
-  th:not(:first-child) { writing-mode: vertical-rl; transform: rotate(180deg); height: 12rem; white-space: nowrap; vertical-align: middle; }
+  th:not(:first-child) { writing-mode: vertical-rl; text-orientation: upright; transform: none; height: auto; white-space: nowrap; vertical-align: middle; }
   td { vertical-align: middle; overflow-wrap: anywhere; }
   td:first-child { font-size: .96rem; }
   td:not(:first-child) { text-align: center; }

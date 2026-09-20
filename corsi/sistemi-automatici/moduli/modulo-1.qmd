@@ -90,6 +90,23 @@ La derivata $dh/dt$ esprime la velocità di variazione del livello. La formula n
 
 ## U.D. 1.3 / Classificazione dei sistemi {#ud:1.3}
 
+Prima di esaminare le singole proprietà, ecco i criteri che useremo. Ogni collegamento porta alla relativa spiegazione.
+
+| Criterio | Domanda da porre al modello | Alternative |
+|---|---|---|
+| [Memoria](#memoria) | Per trovare l’uscita attuale basta l’ingresso attuale? | Senza memoria / con memoria. |
+| [Linearità](#linearita) | Vale il principio di sovrapposizione? | Lineare / non lineare. |
+| [Invarianza nel tempo](#invarianza) | Ripetendo lo stesso esperimento in un altro momento cambia solo l’origine dei tempi? | Tempo-invariante / tempo-variante. |
+| [Dominio temporale](#dominio-temporale) | Descriviamo ogni istante o una successione di campioni? | Tempo continuo / tempo discreto. |
+| [Determinismo](#determinismo) | Il modello determina una risposta univoca o una descrizione probabilistica? | Deterministico / stocastico. |
+| [Causalità](#causalita) | L’uscita attuale richiede valori futuri dell’ingresso? | Causale / non causale. |
+| [Stabilità ingresso–uscita](#stabilita) | Ogni ingresso limitato produce un’uscita limitata? | Stabile BIBO / non stabile BIBO. |
+| [Invertibilità](#invertibilita) | Dall’intera uscita possiamo ricostruire univocamente l’ingresso? | Invertibile / non invertibile, sul dominio dichiarato. |
+
+Considereremo inoltre la **[configurazione ad anello aperto o chiuso](#retroazione)**: descrive come sono collegati processo, sensori e controllore. È un criterio strutturale, da distinguere dalle proprietà della relazione ingresso–uscita.
+
+Le tabelle interattive esercitano le prime tre proprietà; le altre completano il quadro introduttivo.
+
 Le proprietà descrivono aspetti diversi. **Lineare non significa senza memoria; non lineare non significa tempo-variante.** Prima di classificare, fissiamo ingresso, uscita, modello, intervallo di validità e condizioni iniziali.
 
 ### Memoria: definizione verbale e matematica {#memoria}
@@ -243,14 +260,14 @@ Per i modelli lineari usiamo il sistema inizialmente a riposo e ingressi compati
 
 {{< include _classificazione-invarianza.qmd >}}
 
-### Tempo continuo, tempo discreto e valori dei segnali
+### Tempo continuo, tempo discreto e valori dei segnali {#dominio-temporale}
 
 - **Tempo continuo:** $t\in\mathbb{R}$ e $u:\mathbb{R}\to\mathbb{R}$ nel caso scalare reale. Il modello descrive la grandezza in ogni istante.
 - **Tempo discreto:** $n\in\mathbb{Z}$ e $u:\mathbb{Z}\to\mathbb{R}$. La descrizione riguarda una successione di campioni.
 
 Discreto nel tempo non significa necessariamente binario: una misura campionata può assumere molti valori. La **quantizzazione** limita invece i valori a un insieme discreto, per esempio $u[n]\in\{0,1,\ldots,1023\}$ per i codici di un convertitore a 10 bit. Nell'acquisizione reale entrano in gioco sia il campionamento sia la quantizzazione.
 
-### Deterministico e stocastico
+### Deterministico e stocastico {#determinismo}
 
 Un modello **deterministico**, fissati ingressi, parametri e condizioni iniziali, determina una risposta univoca. Nel modello **stocastico** compaiono variabili o processi aleatori: per esempio
 
@@ -258,7 +275,7 @@ $$y[n]=u[n]+w[n],$$
 
 dove $w[n]$ rappresenta rumore descritto tramite una distribuzione di probabilità, eventualmente a media nulla. Per lo stesso ingresso il modello fornisce una descrizione probabilistica dell'uscita. Non conoscere un parametro non rende automaticamente stocastico il modello: occorre specificare come si rappresenta l'incertezza.
 
-### Causalità: un primo criterio aggiuntivo
+### Causalità: dipendenza dagli ingressi presenti e passati {#causalita}
 
 Un sistema è **causale** se l'uscita attuale non richiede ingressi futuri. A parità di preparazione iniziale:
 
@@ -267,7 +284,38 @@ $$u_1(t)=u_2(t)\ \text{per ogni }t\le t_0
 
 $y[n]=u[n-1]$ ha memoria ed è causale; $y[n]=u[n+1]$ richiede il campione futuro e non è causale. Il secondo può essere usato elaborando una registrazione già disponibile, ma non come risposta in tempo reale a un ingresso futuro sconosciuto. Le tabelle di questo modulo si concentrano sulle tre proprietà principali: memoria, linearità e invarianza nel tempo.
 
-### Anello aperto e anello chiuso
+### Stabilità ingresso–uscita: una prima definizione {#stabilita}
+
+Un sistema è **stabile BIBO** (*Bounded Input, Bounded Output*: ingresso limitato, uscita limitata) se ogni ingresso che rimane entro un limite finito produce un’uscita che rimane entro un limite finito per tutto il tempo considerato. Per la mappa ingresso–uscita, con preparazione iniziale fissata (nulla nei modelli lineari qui usati), scriviamo:
+
+$$\forall M_u<\infty,\ M_u\ge0,\quad \exists M_y<\infty:\qquad
+\sup_t|u(t)|\le M_u\ \Longrightarrow\ \sup_t|\mathcal T[u](t)|\le M_y
+\quad\text{per ogni ingresso ammesso}.$$
+
+$M_y$ può dipendere da $M_u$ e dal sistema, ma non dal tempo. A tempo discreto si sostituisce $t$ con $n$. “Limitato” non significa soltanto finito a ogni singolo istante: una rampa cresce senza limite, anche se ha un valore finito a ogni istante finito.
+
+- **Guadagno costante:** $y=ku$, con $k$ finito, è stabile BIBO perché $|y|\le |k|M_u$.
+- **Quadrato:** $y=u^2$ è anch’esso stabile BIBO, perché $|y|\le M_u^2$. La stabilità non implica linearità.
+- **Serbatoio ideale senza limiti di capacità:** una portata netta costante positiva è limitata, ma nel modello $h(t)=h(0)+u_0t/A$ il livello cresce senza limite. Il modello integratore non è stabile BIBO. Un recipiente reale trabocca: quando questo accade, il modello senza trabocco non è più applicabile.
+
+::: {.callout-note title="Da approfondire negli anni successivi"}
+La stabilità BIBO riguarda ingresso e uscita. La **stabilità di un equilibrio** riguarda invece l’evoluzione dello stato dopo una piccola perturbazione; quella **asintotica** richiede anche il ritorno all’equilibrio. Sono nozioni collegate, ma non intercambiabili senza precisare il modello e le ipotesi.
+:::
+
+### Invertibilità: recuperare l’ingresso dall’uscita {#invertibilita}
+
+Un sistema è **invertibile** se due ingressi diversi non producono la stessa intera uscita, sul dominio scelto e a parità di preparazione. In termini matematici:
+
+$$\mathcal T[u_1]=\mathcal T[u_2]\ \Longrightarrow\ u_1=u_2.$$
+
+Esiste quindi una trasformazione inversa sulle uscite ottenibili: $\mathcal T^{-1}[\mathcal T[u]]=u$.
+
+- Per $y=ku$ con $k\ne0$, si recupera $u=y/k$: il modello è invertibile.
+- Per $y=u^2$, gli ingressi $u$ e $-u$ producono la stessa uscita: il modello non è invertibile su tutti i segnali reali. Se imponiamo $u(t)\ge0$, diventa invertibile sul dominio ristretto, con $u=\sqrt y$.
+
+L’esistenza matematica dell’inversa non garantisce che sia causale, stabile o realizzabile in tempo reale. Questi aspetti saranno approfonditi successivamente.
+
+### Configurazione del controllo: anello aperto, anello chiuso e retroazione {#retroazione}
 
 In **anello aperto** il comando non viene corretto usando la misura dell'uscita controllata: per esempio, irrigare per un tempo prefissato senza misurare l'umidità.
 
@@ -279,7 +327,7 @@ dove $r$ è il riferimento, $y_m$ l'uscita misurata, $e$ l'errore e $\mathcal{C}
 
 ![Schema di retroazione negativa: confronto tra riferimento e uscita misurata.](/assets/dispense/sistemi-automatici/figura-3.png)
 
-Anello aperto/chiuso riguarda il collegamento del sistema di controllo, non sostituisce le classificazioni precedenti. La retroazione non garantisce da sola precisione o stabilità: contano il processo, il controllore, i sensori e i ritardi.
+Anello aperto/chiuso riguarda il collegamento del sistema di controllo, non sostituisce le classificazioni precedenti. Un sistema in retroazione può essere lineare oppure non lineare, stabile oppure instabile, tempo-invariante oppure tempo-variante. Per esempio, il termostato con isteresi collegato alla stanza realizza un controllo in retroazione con una legge non lineare. La retroazione non garantisce da sola precisione o stabilità: contano il processo, il controllore, i sensori e i ritardi.
 
 ## U.D. 1.4 / Esercitazioni e applicazione a casi reali {#ud:1.4}
 
