@@ -1,28 +1,28 @@
 ---
-title: "Leggi di Ohm, serie e parallelo · 18–19 settembre"
+title: "Approccio sistemistico e proprietà dei sistemi"
 sidebar: risorse
-date: 2026-09-18
+date: 2026-09-21
 date-format: "DD/MM/YYYY"
 classe: "3A ETC"
 materia: "Sistemi automatici"
-description: "Appunti delle lezioni del 18 e 19 settembre 2026: leggi di Ohm, resistori in serie e parallelo, approssimazioni, circuiti misti e partitori di tensione e corrente."
+description: "Appunti del 21 settembre 2026: approccio sistemistico, ingressi, stato e uscite, linearità, memoria, invarianza nel tempo ed esempi di relazioni ingresso–uscita nei circuiti."
 toc: false
 ---
 
 **3A ETC · Sistemi automatici · A.S. 2026–2027**
 
-Appunti manoscritti delle **lezioni del 18 e 19 settembre 2026**, raccolti in un unico PDF aggiornato: leggi di Ohm, resistori in serie e parallelo, resistenza equivalente, approssimazioni, circuiti misti e partitori di tensione e corrente.
+Appunti manoscritti della **lezione del 21 settembre 2026**: approccio sistemistico, ingressi, stato interno e uscite, modelli, linearità, memoria e invarianza nel tempo. Seguono esempi ed esercizi sulle relazioni ingresso–uscita nei circuiti resistivi.
 
 <div class="lesson-downloads">
-<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf?v=42a328be02ed" download="3A_ETC_18_09_2026.pdf">Scarica il PDF originale · 6,9 MB</a>
-<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf?v=42a328be02ed" target="_blank" rel="noopener">Apri il PDF separatamente</a>
+<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=b60a44ddebcf" download="3A_ETC_21_09_2026.pdf">Scarica il PDF originale · 3,4 MB</a>
+<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=b60a44ddebcf" target="_blank" rel="noopener">Apri il PDF separatamente</a>
 </div>
 
 ## Leggi gli appunti
 
 Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso; usa lo zoom per ingrandire la scrittura. Dopo un ingrandimento puoi scorrere anche lateralmente. Su telefono lo schermo intero offre più spazio.
 
-<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf?v=42a328be02ed" aria-label="Lettore degli appunti">
+<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=b60a44ddebcf" aria-label="Lettore degli appunti">
 <div class="lesson-toolbar" role="group" aria-label="Controlli del documento">
 <button type="button" data-action="out" disabled aria-label="Riduci zoom">−</button>
 <output class="lesson-zoom" aria-live="polite">Caricamento…</output>
@@ -39,7 +39,8 @@ Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso;
 ## Collegamenti per ripassare
 
 - [Ohm, Kirchhoff, serie e parallelo](../../risorse/fondamenti/leggi-dei-circuiti.qmd)
-- [Il resistore](../../risorse/componenti/resistore.qmd)
+- [Fondamenti di teoria dei sistemi](../../corsi/sistemi-automatici/moduli/modulo-1.qmd)
+- [Classificazione dei sistemi](../../corsi/sistemi-automatici/moduli/modulo-1.qmd#ud:1.3)
 - [Indice di Sistemi automatici](../../corsi/sistemi-automatici/index.qmd)
 - [Tutte le lezioni in classe](../index.qmd)
 
