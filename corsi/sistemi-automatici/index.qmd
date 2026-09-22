@@ -136,6 +136,8 @@ Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anch
 - [U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug](moduli/modulo-3.qmd#ud:3.5)
 - [U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC](moduli/modulo-3.qmd#ud:3.6)
 
+[Guida iniziale al Ladder](moduli/modulo-3.qmd#elementi-ladder) · [Autoritenuta e fronti](moduli/modulo-3.qmd#autoritenuta) · [Sequenza a più stati](moduli/modulo-3.qmd#stati)
+
 ### [Modulo 4 / Circuiti combinatori](moduli/modulo-4.qmd)
 
 - [U.D. 4.1 / Caratteristiche dei circuiti combinatori](moduli/modulo-4.qmd#ud:4.1)

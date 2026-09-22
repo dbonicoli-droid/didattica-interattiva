@@ -1,20 +1,14 @@
 ---
-stato: da-scrivere
+sidebar: sistemi-automatici
+stato: bozza
 title: "Modulo 3 / PLC"
-subtitle: "Modulo di approfondimento"
+subtitle: "Introduzione ai PLC e primi passi con il Ladder"
+toc-depth: 3
 ---
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd)
 
-::: {.callout-note icon=false}
-## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
-
-Qui trovi per ora solo la struttura: i titoli delle unità didattiche e i rimandi. Le spiegazioni, gli esempi e gli esercizi arriveranno con lo svolgimento delle lezioni. La **sintesi del programma** è invece già scritta.
-
-[Vai alla sintesi del modulo 3 →](../modulo-3.qmd){.btn .btn-primary}
-
-Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
-:::
+Il **PLC è un computer che legge segnali elettrici ed esegue un programma per comandare un processo**. Il Ladder è uno dei linguaggi con cui si scrive quel programma. In questa introduzione distinguiamo sempre tre aspetti: **cablaggio fisico, variabili e istruzioni**.
 
 ::: {.unit-index}
 ## Unità didattiche del modulo {.unnumbered}
@@ -25,28 +19,312 @@ Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [labora
 - [U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta](#ud:3.4)
 - [U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug](#ud:3.5)
 - [U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC](#ud:3.6)
+
+**Accessi diretti alla guida:** [elementi Ladder](#elementi-ladder) · [pulsante e lampada](#pulsante-lampada) · [autoritenuta](#autoritenuta) · [fronte di salita](#fronte) · [un pulsante per accendere e spegnere](#toggle) · [più stati in Ladder](#stati).
 :::
 
-## U.D. 3.1 / Il PLC: struttura e architettura ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.1}
+## U.D. 3.1 / Il PLC: struttura e architettura {#ud:3.1}
 
-[Vedi nella sintesi →](../modulo-3.qmd#ud:3.1){.wip-link}
+**PLC** significa *Programmable Logic Controller*, controllore logico programmabile. Legge gli ingressi, elabora le informazioni secondo il programma e comanda le uscite.
 
-## U.D. 3.2 / Ciclo di scansione, indirizzamento, tipi di dato e variabili ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.2}
+| Parte | Funzione |
+|---|---|
+| CPU | Esegue le istruzioni del programma. |
+| Memoria | Conserva programma, configurazione e valori delle variabili. |
+| Ingressi | Acquisiscono segnali da pulsanti, interruttori e sensori. |
+| Uscite | Comandano carichi compatibili o interfacce verso gli attuatori. |
+| Alimentazione e comunicazione | Alimentano l’elettronica e permettono configurazione, trasferimento del programma e scambio di dati. |
 
-[Vedi nella sintesi →](../modulo-3.qmd#ud:3.2){.wip-link}
+Il PLC generalmente comanda un motore attraverso un dispositivo di potenza, per esempio un contattore o un azionamento: non si suppone che ogni uscita possa alimentare direttamente qualsiasi carico.
 
-## U.D. 3.3 / Interfacciamento sul campo e schemi funzionali ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.3}
+### Tre piani da distinguere
 
-[Vedi nella sintesi →](../modulo-3.qmd#ud:3.3){.wip-link}
+1. **Cablaggio:** quali dispositivi sono collegati ai morsetti?
+2. **Variabili:** con quali nomi rappresentiamo segnali, comandi e memoria?
+3. **Programma:** quali operazioni determinano le uscite e aggiornano lo stato interno?
 
-## U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.4}
+Il cablaggio rende un pulsante leggibile dal PLC. È il programma a decidere se quel pulsante debba accendere una lampada soltanto mentre è premuto, mantenerla accesa dopo il rilascio oppure alternarla tra accesa e spenta.
 
-[Vedi nella sintesi →](../modulo-3.qmd#ud:3.4){.wip-link}
+Collegamento con la teoria dei sistemi: ingressi fisici → **ingressi del modello**; variabili che conservano informazioni → **stato interno**; comandi verso i dispositivi → **uscite del modello**. Il comando di un motore non è necessariamente una misura del suo moto effettivo.
 
-## U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.5}
+## U.D. 3.2 / Ciclo di scansione, indirizzamento, tipi di dato e variabili {#ud:3.2}
 
-[Vedi nella sintesi →](../modulo-3.qmd#ud:3.5){.wip-link}
+### Il ciclo di scansione
 
-## U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:3.6}
+Come primo modello usiamo una singola esecuzione ciclica:
 
-[Vedi nella sintesi →](../modulo-3.qmd#ud:3.6){.wip-link}
+**Acquisizione degli ingressi → esecuzione delle reti del programma → aggiornamento delle uscite → nuovo ciclo.**
+
+Gli ingressi del programma sono quelli acquisiti per quel ciclo. Le reti sono eseguite nell’ordine stabilito; una scrittura su una variabile interna può essere letta da una rete successiva nello stesso ciclo. Per questo l’ordine delle reti conta.
+
+Questo è un modello didattico: task, accessi diretti agli I/O e aggiornamenti asincroni dipendono dal controllore e dalla configurazione. Un impulso fisico più breve dell’intervallo fra acquisizioni può non essere rilevato.
+
+### Pulsante e interruttore non sono la stessa cosa {#pulsante-interruttore}
+
+Supponiamo che chiudere il contatto fisico produca il valore 1 all’ingresso:
+
+| Dispositivo fisico | Quando lo azioni | Quando togli la mano |
+|---|---|---|
+| Pulsante momentaneo normalmente aperto | Chiude il contatto: ingresso 1. | Torna aperto: ingresso 0. |
+| Interruttore mantenuto | Cambia posizione. | Mantiene la posizione scelta. |
+
+**Leggere l’ingresso non lo azzera.** Se il pulsante resta premuto per dieci cicli, può essere letto a 1 per tutti e dieci. Il PLC non deduce automaticamente se al morsetto è collegato un pulsante, un interruttore o un sensore.
+
+### Dichiarare e collegare le variabili {#variabili-plc}
+
+Nel progetto si assegnano a ogni variabile un nome, un tipo e, quando previsto, un valore iniziale. La dichiarazione può avvenire in una tabella o in un editor testuale. L’associazione ai canali fisici si chiama **mappatura degli I/O**.
+
+| Nome d’esempio | Tipo | Ruolo | Valore iniziale negli esempi |
+|---|---|---|---|
+| `Pulsante`, `Marcia`, `Stop` | `BOOL` | Segnali d’ingresso, usati in esempi distinti. | Determinato dagli ingressi acquisiti. |
+| `Lampada` | `BOOL` | Comando associato a un’uscita fisica. | 0 |
+| `Attivo` | `BOOL` | Comando memorizzato internamente. | 0 |
+| `NuovaPressione` | `BOOL` | Evento prodotto dal rilevatore di fronte. | 0 |
+| `Stato`, `ProssimoStato` | `INT` | Stato corrente e stato da assegnare. | 0 |
+| `FrontePulsante` | Istanza di `R_TRIG` | Blocco con una propria memoria del segnale precedente. | Secondo il blocco; qui si parte con pulsante rilasciato. |
+
+`BOOL` rappresenta falso/vero, `INT` un intero, `REAL` un numero con parte frazionaria e `TIME` una durata. Un nome come `Attivo` non implica un morsetto: può essere solo una posizione di memoria interna. Un’istanza è un esemplare del blocco: due rilevatori di fronte distinti richiedono due istanze con memorie separate.
+
+Nel Ladder, un **contatto legge** una variabile booleana; una **bobina scrive** una variabile booleana. Un confronto può leggere un intero, mentre un blocco `MOVE` può assegnargli un valore. Programmare graficamente significa inserire anche nomi, valori e parametri negli elementi del disegno.
+
+La memoria fra due cicli non va confusa con la conservazione dei dati dopo uno spegnimento. Ritenzione, persistenza e inizializzazione dipendono dal dispositivo e dal tipo di riavvio. Negli esempi assumiamo avvio da stato 0, senza ripristino di comandi precedenti.
+
+## U.D. 3.3 / Interfacciamento sul campo e schemi funzionali {#ud:3.3}
+
+### Dal pulsante al bit, dal bit alla lampada
+
+![Schema elettrico didattico: alimentazione a 24 V in continua, pulsante normalmente aperto verso I0, comune degli ingressi a 0 V, uscita Q0 sourcing verso una lampada a 24 V.](/assets/plc/cablaggio.svg)
+
+[Apri lo schema ingrandito](/assets/plc/cablaggio.svg).
+
+Nello schema `Pulsante` è associato al canale I0 e `Lampada` al canale Q0. Il pulsante chiuso applica +24 V all’ingresso rispetto al comune a 0 V. L’uscita rappresentata è di tipo **sourcing**: quando attiva fornisce il positivo al carico. Alimentazione del gruppo uscite e comuni sono mostrati in forma semplificata; morsetti e collegamenti effettivi vanno verificati sul dispositivo del banco.
+
+Lo schema fisico non dice ancora come deve funzionare la lampada: manca il programma. La stessa configurazione può essere usata per [comando momentaneo](#pulsante-lampada) oppure per [alternanza a ogni pressione](#toggle).
+
+Per il successivo esempio a due pulsanti aggiungiamo un secondo ingresso, con lo stesso collegamento normalmente aperto, e chiamiamo i segnali `Marcia` e `Stop`: entrambi valgono 1 quando il rispettivo pulsante è premuto. È una convenzione didattica per un comando ordinario, non uno schema di arresto di emergenza.
+
+Un **contatto negato Ladder** verifica un valore 0: non impone che il pulsante fisico sia normalmente chiuso. Se il cablaggio cambia, occorre ridefinire il significato logico dei segnali.
+
+## U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta {#ud:3.4}
+
+Incontreremo Ladder (LD), diagrammi a blocchi (FBD) e testo strutturato (ST); SFC organizza sequenze mediante passi, transizioni e azioni. Nei programmi esistenti si può incontrare anche IL. Disponibilità e dettagli dipendono dall’ambiente: qui introduciamo il **Ladder**, lasciando il confronto approfondito alla [sintesi del modulo](../modulo-3.qmd#ud:3.4).
+
+### Come leggere una rete Ladder {#elementi-ladder}
+
+Una rete, o *rung*, combina condizioni e istruzioni. Il disegno ricorda i circuiti a relè, ma rappresenta **operazioni del programma**, non corrente elettrica nei fili del PLC. Si legge normalmente da sinistra verso destra; qui le reti sono eseguite dall’alto verso il basso.
+
+| Elemento | Operazione |
+|---|---|
+| Contatto diretto `—| |—` | Verifica che la variabile associata sia vera. |
+| Contatto negato `—|/|—` | Verifica che la variabile associata sia falsa. |
+| Contatti in serie | Richiedono tutte le condizioni: AND. |
+| Rami in parallelo | Richiedono almeno un ramo vero: OR. |
+| Bobina ordinaria `—( )—` | Assegna alla variabile il risultato della rete: 1 se vero, 0 se falso, quando la rete è eseguita. |
+| Bobina SET | Quando la rete è vera scrive 1; altrimenti non modifica la variabile. |
+| Bobina RESET | Quando la rete è vera scrive 0; altrimenti non modifica la variabile. |
+| Confronto | Verifica condizioni come `Stato = 1` o `Temperatura > Soglia`. |
+| `MOVE` condizionato | Copia un valore nella destinazione solo quando è abilitato. |
+
+Una bobina ordinaria non memorizza automaticamente “l’ultimo vero”: scrive anche falso. SET/RESET e reti di autoritenuta realizzano mantenimenti con regole differenti. Se più istruzioni scrivono la stessa variabile, l’ordine o la priorità prevista dal blocco diventano determinanti: negli esempi manteniamo un solo punto di scrittura per ciascuna uscita.
+
+### Famiglie di blocchi
+
+Non esiste una lista chiusa di tutti i blocchi: ci sono librerie e blocchi definiti dal programmatore. Le principali famiglie da riconoscere sono:
+
+| Famiglia | Esempio e significato |
+|---|---|
+| Rilevatori di fronte | `R_TRIG`: evento sul passaggio 0→1; `F_TRIG`: sul passaggio 1→0. |
+| Temporizzatori | `TON`: ritardo all’attivazione; `TOF`: ritardo alla disattivazione; `TP`: impulso di durata impostata. |
+| Contatori | Conteggio crescente, decrescente o bidirezionale di eventi. |
+| Calcoli | Somma, differenza, prodotto, divisione. |
+| Confronti e selezioni | Uguaglianza, maggiore/minore, scelta fra valori. |
+| Trasferimenti e conversioni | Copia di un valore, conversione fra tipi. |
+| Funzioni e blocchi personalizzati | Parti di programma riutilizzabili, anche con stato interno nei blocchi funzionali. |
+| Controllo dell’esecuzione | Chiamate, salti e ritorni, secondo l’ambiente; non necessari nei primi esempi. |
+
+Un blocco è generalmente un rettangolo con parametri d’ingresso e risultati d’uscita. Un temporizzatore, per esempio, riceve una condizione e una durata; restituisce una condizione temporizzata e il tempo trascorso. Timer e contatori saranno approfonditi nel [Modulo 6](modulo-6.qmd).
+
+### Prima rete: pulsante e lampada {#pulsante-lampada}
+
+![Rete Ladder con contatto Pulsante e bobina ordinaria Lampada.](/assets/plc/momentaneo.svg)
+
+Il contatto legge `Pulsante`; la bobina scrive `Lampada`. La relazione è $Lampada=Pulsante$. Il testo equivalente è `Lampada := Pulsante`, dove `:=` significa **assegna**, non “verifica l’uguaglianza”.
+
+| Ciclo | Pulsante fisico | `Pulsante` | `Lampada` dopo la rete |
+|---|---|---:|---:|
+| 1 | Rilasciato | 0 | 0 |
+| 2 | Premuto | 1 | 1 |
+| 3 | Ancora premuto | 1 | 1 |
+| 4 | Ancora premuto | 1 | 1 |
+| 5 | Rilasciato | 0 | 0 |
+
+**Al ciclo successivo non compare automaticamente zero.** Compare zero quando l’acquisizione rileva il pulsante rilasciato. Questa rete non mantiene accesa la lampada dopo il rilascio.
+
+### AND, OR e NOT
+
+![Tre reti Ladder: contatti in serie per AND, rami paralleli per OR, contatto negato per NOT.](/assets/plc/logica.svg)
+
+[Apri le reti ingrandite](/assets/plc/logica.svg).
+
+- Serie: `Y_AND` è vera solo se A e B sono vere.
+- Parallelo: `Y_OR` è vera se almeno una fra A e B è vera.
+- Contatto negato: `Y_NOT` è vera quando A è falsa.
+
+Sono esempi indipendenti con uscite diverse, non tre scritture sulla stessa uscita.
+
+## U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug {#ud:3.5}
+
+### Dal disegno all’esecuzione {#compilazione}
+
+1. **Crea il progetto e scegli il controllore**, oppure il simulatore.
+2. **Configura gli I/O e dichiara le variabili**, con tipo e valori iniziali. Associa soltanto le variabili pertinenti ai morsetti.
+3. **Inserisci gli elementi nell’editor Ladder:** seleziona un contatto, una bobina o un blocco; digita i nomi delle variabili; aggiungi collegamenti e parametri.
+4. **Associa il programma a un task**, cioè al meccanismo che ne stabilisce l’esecuzione. Qui usiamo un solo task ciclico e una chiamata per ciclo.
+5. **Compila:** il software controlla dichiarazioni, tipi e istruzioni e genera il codice per il controllore scelto.
+6. **Esegui il download:** trasferisci il programma al PLC. Avvialo secondo le modalità dell’ambiente.
+7. **Controlla il funzionamento online:** osserva valori e reti attive e confrontali con la tabella di prova.
+
+Il progetto conserva una struttura di istruzioni e collegamenti, non una fotografia del disegno. La rete pulsante–lampada viene tradotta concettualmente in “leggi `Pulsante`, assegna il valore a `Lampada`”. Il compilatore genera le operazioni eseguibili; l’aggiornamento degli I/O collega i valori ai segnali elettrici.
+
+In CODESYS il codice applicativo generato è codice macchina. L’organizzazione concreta dipende dall’ambiente e dal controllore. Dopo il caricamento il PLC può eseguire autonomamente il programma; per ripartire dopo uno spegnimento occorre anche la configurazione dell’applicazione di avvio prevista dal dispositivo. Riferimenti: [generazione del codice](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_creating_application_code_for_plc.html), [download](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_cmd_load.html).
+
+Compilare senza errori non dimostra che il comportamento sia quello desiderato. Il debug deve verificare anche rilascio dei pulsanti, comandi simultanei, stato iniziale e ordine delle reti. In questa guida gli schemi sono **Ladder didattico indipendente dal produttore**, non un progetto già importabile in uno specifico PLC.
+
+## U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC {#ud:3.6}
+
+### Due pulsanti: autoritenuta con priorità allo Stop {#autoritenuta}
+
+Marcia e Stop sono **due pulsanti distinti**. Usiamo la convenzione `Marcia=1` quando premi Marcia e `Stop=1` quando premi Stop. `Attivo` è una variabile interna inizialmente falsa.
+
+![Autoritenuta Ladder: Stop negato in serie al parallelo fra Marcia e Attivo; bobina Attivo. Una seconda rete copia Attivo su Lampada.](/assets/plc/autoritenuta.svg)
+
+[Apri l’autoritenuta ingrandita](/assets/plc/autoritenuta.svg).
+
+$$Attivo_{nuovo}=\neg Stop\land(Marcia\lor Attivo_{precedente}).$$
+
+Il contatto `Attivo` legge il valore che la variabile aveva prima della scrittura della bobina in questa rete. La rete successiva legge il valore appena aggiornato e lo assegna a `Lampada`.
+
+| Azione | Risultato |
+|---|---|
+| Premi Marcia | `Attivo` diventa 1. |
+| Rilasci Marcia | Il ramo `Attivo` mantiene vera la rete. |
+| Premi Stop | Il contatto negato interrompe entrambe le possibilità: `Attivo=0`. |
+| Premi entrambi | Prevale Stop. |
+| Rilasci Stop con Marcia ancora premuto | La rete torna vera: il comando riparte. |
+
+L’ultima riga è parte del comportamento: questa autoritenuta **non richiede necessariamente una nuova pressione di Marcia dopo il rilascio di Stop**. Se la specifica richiede una nuova pressione, occorre una logica aggiuntiva. Non confondiamo il mantenimento fra cicli con la memoria dopo uno spegnimento.
+
+Per confrontare questo ragionamento con i relè: [schema elettromeccanico di autoritenuta](../modulo-3.qmd#topic:10). Lì il pulsante fisico di arresto è normalmente chiuso; bisogna interpretare correttamente il diverso significato dell’ingresso.
+
+### Il fronte di salita: una pressione, un evento {#fronte}
+
+Il valore dell’ingresso risponde a «il pulsante è premuto?». Il fronte risponde a «è appena passato da rilasciato a premuto?».
+
+![Blocco R_TRIG, istanza FrontePulsante, eseguito ogni ciclo: Pulsante collegato a CLK e Q collegato a NuovaPressione.](/assets/plc/fronte.svg)
+
+[Apri lo schema ingrandito](/assets/plc/fronte.svg).
+
+`R_TRIG` è il **tipo** di blocco; `FrontePulsante` è la sua **istanza**, con memoria propria. `CLK` riceve il valore da controllare; `Q`, assegnata a `NuovaPressione`, vale vero per un’esecuzione al fronte di salita. [Documentazione del blocco](https://content.helpme-codesys.com/en/libs/Standard/Current/Trigger/R_TRIG.html).
+
+$$NuovaPressione_k=Pulsante_k\land\neg Pulsante_{k-1}.$$
+
+| Ciclo | `Pulsante` | `NuovaPressione` |
+|---|---:|---:|
+| 1 | 0 | 0 |
+| 2 | 1 | 1 |
+| 3 | 1 | 0 |
+| 4 | 1 | 0 |
+| 5 | 0 | 0 |
+| 6 | 1 | 1 |
+
+**Esegui la stessa istanza una volta a ogni ciclo**, anche quando il pulsante vale 0. Non abilitare il blocco soltanto mentre il pulsante è premuto: deve osservare anche il rilascio. L’evento vale un ciclo del programma, non una durata fissa in secondi.
+
+Qui partiamo con pulsante rilasciato. Il comportamento se l’ingresso è già alto all’avvio va definito e verificato nel blocco usato. Inoltre il fronte non elimina i rimbalzi del contatto e non recupera impulsi che non sono stati acquisiti: filtraggio e acquisizione sono questioni distinte.
+
+### Un solo pulsante per accendere e spegnere {#toggle}
+
+Con la stessa configurazione fisica pulsante–lampada vogliamo alternare il comando a ogni **nuova pressione**. Prima si esegue `FrontePulsante`, poi questa rete:
+
+![Rete toggle: due rami con NuovaPressione e Attivo negato, oppure NuovaPressione negata e Attivo; bobina Attivo e successiva copia su Lampada.](/assets/plc/toggle.svg)
+
+[Apri la rete ingrandita](/assets/plc/toggle.svg).
+
+$$Attivo_{nuovo}=(NuovaPressione\land\neg Attivo_{precedente})\lor(\neg NuovaPressione\land Attivo_{precedente}).$$
+
+È uno XOR: con evento 1 inverte `Attivo`; con evento 0 lo conserva. La bobina `Attivo` compare una sola volta; i suoi contatti leggono il valore precedente alla scrittura in questa rete. Subito dopo, una rete copia `Attivo` su `Lampada`.
+
+| Azione | Evento | `Attivo` dopo la rete, partendo da 0 |
+|---|---:|---:|
+| Prima pressione | 1 | 1 |
+| Pulsante ancora premuto | 0 | 1 |
+| Rilascio | 0 | 1 |
+| Seconda pressione | 1 | 0 |
+
+Se usassimo direttamente il livello `Pulsante` al posto dell’evento, il comando si invertirebbe **a ogni ciclo durante la pressione**. Questo è il motivo per cui il rilevamento del fronte è essenziale.
+
+### Più stati: una sequenza in Ladder {#stati}
+
+Non siamo limitati a due stati. Una variabile booleana ha due valori, ma possiamo usare più variabili oppure un intero (o un tipo enumerato) per rappresentare uno stato fra molti.
+
+Studiamo una **sequenza logica simulata** con tre stati. Non è il progetto completo di una macchina di miscelazione: i segnali di completamento sono ingressi da simulare.
+
+| `Stato` | Significato | Comando attivo |
+|---:|---|---|
+| 0 | Attesa | Nessuno |
+| 1 | Riempimento | `ValvolaRiempimento` |
+| 2 | Miscelazione | `ComandoMiscelatore` |
+
+Le transizioni sono: **0 → 1** con `NuovaPressione`; **1 → 2** con `LivelloRaggiunto`; **2 → 0** con `FineMiscelazione`. `Stop=1` forza il ritorno a 0 da qualunque stato. All’avvio `Stato=0`, pulsante rilasciato e sensori inizialmente falsi.
+
+`LivelloRaggiunto`, `FineMiscelazione` e `Stop` sono booleani; `Stato` e `ProssimoStato` sono interi. Gli ingressi di completamento devono descrivere correttamente il processo: se restano alti, verranno considerati veri ogni volta che si rientra nello stato pertinente.
+
+#### Le reti, nell’ordine di esecuzione
+
+Prima di queste reti esegui il rilevatore di fronte mostrato sopra. Nello schema i confronti restituiscono una condizione logica; `EN` è l’abilitazione del `MOVE`. Quando `EN=0`, il trasferimento non modifica la destinazione. Un collegamento diretto dalla barra sinistra rappresenta una rete sempre abilitata.
+
+![Sequenza Ladder: inizializzazione di ProssimoStato, tre transizioni, Stop prioritario, aggiornamento di Stato e due uscite.](/assets/plc/stati.svg)
+
+[Apri le reti della sequenza ingrandite](/assets/plc/stati.svg).
+
+1. **Copia `Stato` in `ProssimoStato`.** È il comportamento predefinito: mantenere lo stato se nessuna transizione è vera.
+2. **Se `Stato=0` e `NuovaPressione`, scrivi 1** in `ProssimoStato`.
+3. **Se `Stato=1` e `LivelloRaggiunto`, scrivi 2** in `ProssimoStato`.
+4. **Se `Stato=2` e `FineMiscelazione`, scrivi 0** in `ProssimoStato`.
+5. **Se `Stop`, scrivi 0** in `ProssimoStato`. Questa rete è successiva alle transizioni, quindi prevale su di esse.
+6. **Copia `ProssimoStato` in `Stato`.** Aggiorna lo stato corrente una sola volta.
+7. **Calcola le uscite dal nuovo `Stato`**, usando bobine ordinarie: valvola nello stato 1, miscelatore nello stato 2.
+
+Qui le scritture multiple su `ProssimoStato` sono intenzionali e ordinate; `Stato` viene scritto una sola volta dopo la valutazione delle transizioni. Non inserire fra queste reti altre assegnazioni a `Stato`.
+
+#### Perché non aggiornare subito Stato?
+
+Se all’inizio del ciclo siamo in 0, la seconda rete può preparare il valore 1. La terza continua però a leggere **lo stato corrente 0**, quindi non scatta nello stesso ciclo anche se `LivelloRaggiunto=1`. L’aggiornamento alla rete 6 impedisce di attraversare più transizioni ordinarie nello stesso ciclo.
+
+| Ciclo | Stato all’inizio | Evento o condizione | Stato dopo l’aggiornamento | Valvola / miscelatore |
+|---|---:|---|---:|---|
+| 1 | 0 | Nessuno | 0 | 0 / 0 |
+| 2 | 0 | Nuova pressione | 1 | 1 / 0 |
+| 3 | 1 | Pulsante mantenuto, livello non raggiunto | 1 | 1 / 0 |
+| 4 | 1 | Livello raggiunto | 2 | 0 / 1 |
+| 5 | 2 | Fine miscelazione | 0 | 0 / 0 |
+| 6 | 0 | Nuova pressione e Stop insieme | 0 | 0 / 0 |
+
+L’esempio assume `Stato` sempre in {0,1,2}. In un’applicazione completa vanno progettati anche valori non validi, guasti, riavvii e consensi. Per ora lo scopo è capire **stato corrente, transizioni e uscite** e collegarli alla [teoria dei sistemi](modulo-1.qmd).
+
+### Esercizi e verifica finale
+
+1. Nel comando momentaneo, tieni premuto per cinque cicli: quando si spegne la lampada?
+2. Nell’autoritenuta, premi entrambi i pulsanti e poi rilascia solo Stop: spiega la risposta.
+3. Nel toggle, scrivi la sequenza di `Attivo` per ingressi 0, 1, 1, 0, 1, 0, 1, partendo da 0.
+4. Nella sequenza a stati, poni `LivelloRaggiunto=1` già al momento della nuova pressione: in quale ciclo si entra in 2?
+5. Individua nel disegno un’istruzione che legge una variabile e una che la scrive.
+
+::: {.callout-note collapse=true title="Risposte per il controllo"}
+1. Alla prima esecuzione che acquisisce il rilascio.
+2. Prima prevale Stop; rilasciandolo con Marcia ancora premuto il comando torna attivo.
+3. I valori dopo ogni ciclo sono **0, 1, 1, 1, 0, 0, 1**.
+4. Nel ciclo della pressione si entra in 1; nel ciclo successivo si entra in 2, se il livello resta alto e Stop è falso.
+5. Un contatto legge un booleano; una bobina ordinaria scrive il risultato della rete. Un MOVE legge il valore sorgente e, se abilitato, scrive la destinazione.
+:::
+
+Per proseguire: [circuiti combinatori](modulo-4.qmd), [circuiti sequenziali](modulo-5.qmd), [timer e contatori](modulo-6.qmd). Le attività specifiche sull’ambiente del banco saranno aggiunte quando sarà definita la configurazione utilizzata.
