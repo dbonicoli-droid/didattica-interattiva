@@ -14,15 +14,15 @@ toc: false
 Appunti manoscritti della **lezione del 21 settembre 2026**: approccio sistemistico, ingressi, stato interno e uscite, modelli, linearità, memoria e invarianza nel tempo. Seguono esempi ed esercizi sulle relazioni ingresso–uscita nei circuiti resistivi.
 
 <div class="lesson-downloads">
-<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=b60a44ddebcf" download="3A_ETC_21_09_2026.pdf">Scarica il PDF originale · 3,4 MB</a>
-<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=b60a44ddebcf" target="_blank" rel="noopener">Apri il PDF separatamente</a>
+<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=1b84d07e8462" download="3A_ETC_21_09_2026.pdf">Scarica il PDF originale · 5,7 MB</a>
+<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=1b84d07e8462" target="_blank" rel="noopener">Apri il PDF separatamente</a>
 </div>
 
 ## Leggi gli appunti
 
 Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso; usa lo zoom per ingrandire la scrittura. Dopo un ingrandimento puoi scorrere anche lateralmente. Su telefono lo schermo intero offre più spazio.
 
-<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=b60a44ddebcf" aria-label="Lettore degli appunti">
+<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/3A_ETC_21_09_2026.pdf?v=1b84d07e8462" aria-label="Lettore degli appunti">
 <div class="lesson-toolbar" role="group" aria-label="Controlli del documento">
 <button type="button" data-action="out" disabled aria-label="Riduci zoom">−</button>
 <output class="lesson-zoom" aria-live="polite">Caricamento…</output>
