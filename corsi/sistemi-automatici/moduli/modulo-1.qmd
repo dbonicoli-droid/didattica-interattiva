@@ -8,9 +8,30 @@ toc-depth: 3
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd)
 
-Una stanza riscaldata, un circuito e un programma possono essere studiati con lo stesso metodo: **scegliere che cosa osservare, descrivere come l'ingresso produce l'uscita e dichiarare le ipotesi**. Le classificazioni riguardano il modello scelto: non sono etichette da attribuire automaticamente al nome di un oggetto.
+L’**approccio sistemistico** studia le relazioni tra ingressi, stato e uscite per descrivere e prevedere il comportamento di un sistema. Lo stesso metodo si applica a una stanza riscaldata, a un circuito o a un programma.
 
-Per iniziare bastano proporzioni, equazioni di primo grado e lettura di grafici. I passaggi con derivate e integrali sono presentati come anticipazioni: il loro studio sistematico sarà approfondito negli anni successivi.
+## Per iniziare: i concetti essenziali {#introduzione}
+
+Scegliamo il **sistema** da studiare e lo descriviamo con un **modello**, conservando gli aspetti utili alla domanda che ci interessa.
+
+- **Ingressi:** grandezze esterne che agiscono sul sistema, comprese le azioni comandate e i disturbi.
+- **Stato:** informazioni interne che, insieme agli ingressi successivi, permettono di prevedere l’evoluzione. Riassume gli effetti del passato che servono per determinarne il futuro.
+- **Uscite:** grandezze che scegliamo di osservare o controllare.
+
+Per esempio, in un serbatoio la portata in ingresso fa variare il livello dell’acqua. Il livello attuale è uno stato e può essere anche l’uscita che osserviamo.
+
+### Le prime distinzioni, in breve
+
+| Per descrivere un sistema ci chiediamo… | Concetto |
+|---|---|
+| Basta l’ingresso attuale per determinare l’uscita attuale? | **[Senza memoria / con memoria](#memoria):** nel secondo caso servono anche informazioni relative ad altri istanti; nei sistemi causali, il passato o lo stato. |
+| Combinare gli ingressi combina allo stesso modo le uscite? | **[Lineare / non lineare](#linearita):** un sistema lineare rispetta proporzionalità e additività. |
+| Ripetendo lo stesso esperimento più tardi cambia soltanto l’orario della risposta? | **[Tempo invariante / variante](#invarianza):** nel primo caso la regola resta la stessa. |
+| Descriviamo ogni istante o una successione di campioni? | **[Tempo continuo / discreto](#dominio-temporale).** È una distinzione diversa da [analogico / digitale](#analogico-digitale), che riguarda la rappresentazione dei valori. |
+
+Queste proprietà possono combinarsi: un sistema può essere, per esempio, lineare e avere memoria. **Tempo invariante non significa uscita costante.**
+
+Le unità seguenti sviluppano definizioni, esempi ed esercizi. I riquadri **Per capire meglio** offrono dettagli facoltativi; quelli **Contenuto avanzato** anticipano strumenti da approfondire negli anni successivi.
 
 ::: {.unit-index}
 ## Unità didattiche del modulo {.unnumbered}
@@ -72,7 +93,9 @@ Un disturbo è comunque un ingresso esterno dal punto di vista matematico. Lo di
 
 Nel modello di una stanza, la capacità termica è un parametro; la temperatura è uno stato. Nel resistore ideale $R$ è un parametro costante. Nel resistore che si autoriscalda, $R$ può dipendere dallo stato termico $T$: scrivere $R(T(t))$ non significa automaticamente introdurre una dipendenza esplicita dall'orologio.
 
-### Un bilancio comprensibile senza derivate
+Lo **stato può coincidere con l’uscita**: nel serbatoio il livello descrive la quantità d’acqua già presente ed è anche la grandezza osservata.
+
+### Un bilancio del serbatoio
 
 Per un serbatoio di sezione costante e portate costanti nell'intervallo $\Delta t$:
 
@@ -82,7 +105,7 @@ h_{nuovo}=h_{precedente}+\Delta h.$$
 
 Se $A=0{,}5\,\mathrm{m^2}$, $q_{in}=3$ L/s e $q_{out}=1$ L/s, in 10 s si aggiungono 20 L, cioè $0{,}020\,\mathrm{m^3}$. Il livello cresce di $0{,}020/0{,}5=0{,}040$ m, cioè 4 cm. Per conoscere il livello finale serve anche quello iniziale: questa è memoria.
 
-::: {.callout-note title="Anticipazione matematica"}
+::: {.callout-note collapse=true title="Contenuto avanzato · Il bilancio del serbatoio con le derivate"}
 Quando le portate variano continuamente, lo stesso bilancio si esprime come
 $$A\frac{dh}{dt}=q_{in}(t)-q_{out}(t).$$
 La derivata $dh/dt$ esprime la velocità di variazione del livello. La formula non introduce un fenomeno diverso: descrive il bilancio su intervalli sempre più piccoli. Derivate e integrali saranno approfonditi negli anni successivi.
@@ -94,10 +117,10 @@ Prima di esaminare le singole proprietà, ecco i criteri che useremo. Ogni colle
 
 | Criterio | Domanda da porre al modello | Alternative |
 |---|---|---|
+| [Dominio temporale](#dominio-temporale) | Descriviamo ogni istante o una successione di campioni? | Tempo continuo / tempo discreto. |
 | [Memoria](#memoria) | Per trovare l’uscita attuale basta l’ingresso attuale? | Senza memoria / con memoria. |
 | [Linearità](#linearita) | Vale il principio di sovrapposizione? | Lineare / non lineare. |
 | [Invarianza nel tempo](#invarianza) | Ripetendo lo stesso esperimento in un altro momento cambia solo l’origine dei tempi? | Tempo-invariante / tempo-variante. |
-| [Dominio temporale](#dominio-temporale) | Descriviamo ogni istante o una successione di campioni? | Tempo continuo / tempo discreto. |
 | [Determinismo](#determinismo) | Il modello determina una risposta univoca o una descrizione probabilistica? | Deterministico / stocastico. |
 | [Causalità](#causalita) | L’uscita attuale richiede valori futuri dell’ingresso? | Causale / non causale. |
 | [Stabilità ingresso–uscita](#stabilita) | Ogni ingresso limitato produce un’uscita limitata? | Stabile BIBO / non stabile BIBO. |
@@ -105,9 +128,30 @@ Prima di esaminare le singole proprietà, ecco i criteri che useremo. Ogni colle
 
 Considereremo inoltre la **[configurazione ad anello aperto o chiuso](#retroazione)**: descrive come sono collegati processo, sensori e controllore. È un criterio strutturale, da distinguere dalle proprietà della relazione ingresso–uscita.
 
-Le tabelle interattive esercitano le prime tre proprietà; le altre completano il quadro introduttivo.
+Le tabelle interattive esercitano memoria, linearità e invarianza nel tempo; le altre completano il quadro introduttivo.
 
 Le proprietà descrivono aspetti diversi. **Lineare non significa senza memoria; non lineare non significa tempo-variante.** Prima di classificare, fissiamo ingresso, uscita, modello, intervallo di validità e condizioni iniziali.
+
+### Tempo continuo, tempo discreto e valori dei segnali {#dominio-temporale}
+
+- **Tempo continuo:** descriviamo la grandezza in ogni istante, indicandola con $u(t)$. Esempio: la temperatura di una stanza durante il riscaldamento.
+- **Tempo discreto:** descriviamo una successione di valori, indicandola con $u[n]$. Esempio: le temperature rilevate ogni secondo; $n$ conta le misure.
+
+Questa distinzione riguarda il tempo: un segnale a tempo discreto non è necessariamente binario e, nel modello matematico, può avere valori continui.
+
+#### Analogico e digitale {#analogico-digitale}
+
+Una rappresentazione **analogica** usa una grandezza che può variare con continuità; una rappresentazione **digitale** usa valori discreti espressi mediante un codice, tipicamente binario. Digitale non significa avere soltanto due valori possibili: più bit possono rappresentare molti livelli.
+
+Per acquisire digitalmente una grandezza si considerano i suoi valori in determinati istanti (**campionamento**), li si approssima a livelli disponibili (**quantizzazione**) e li si rappresenta mediante un codice (**codifica**).
+
+::: {.callout-note collapse=true title="Per capire meglio · Misurare una temperatura ogni secondo"}
+
+Leggiamo la temperatura ogni secondo: questa scelta riguarda il **campionamento**. Se lo strumento rappresenta soltanto decimi di grado, una misura di 20,36 °C viene arrotondata a 20,4 °C: è un esempio di **quantizzazione**. Il numero viene poi rappresentato con un codice digitale.
+
+Tempo delle misure e precisione dei valori sono due scelte diverse. Il numero di bit e gli errori introdotti dalla conversione saranno trattati nella sezione dedicata all’acquisizione dei segnali.
+
+:::
 
 ### Memoria: definizione verbale e matematica {#memoria}
 
@@ -115,10 +159,14 @@ Un sistema è **senza memoria** se, in ogni istante, l'uscita dipende soltanto d
 
 $$y(t)=F(t,u(t))\qquad\text{oppure}\qquad y[n]=F(n,u[n]).$$
 
+::: {.callout-note collapse=true title="Per capire meglio · Il criterio matematico della memoria"}
+
 In modo più preciso, per ogni coppia di ingressi ammessi e per ogni $t_0$:
 
 $$u_1(t_0)=u_2(t_0)\ \Longrightarrow\
 \mathcal{T}[u_1](t_0)=\mathcal{T}[u_2](t_0).$$
+
+:::
 
 Se due storie diverse, con lo stesso ingresso attuale, possono dare uscite attuali diverse, **il sistema ha memoria**. Per i sistemi causali che studiamo, questa dipendenza riguarda il passato o uno stato che ne riassume gli effetti. In generale anche la dipendenza da altri istanti futuri viola la definizione di assenza di memoria, ma non descrive un comportamento realizzabile in tempo reale senza anticipazioni.
 
@@ -141,6 +189,16 @@ Per il resistore ideale a temperatura costante, $v(t)=Ri(t)$: sapere la corrente
 Nel circuito RC la tensione del condensatore dipende dalla carica già presente. Due condensatori con tensioni iniziali diverse, collegati nello stesso istante alla stessa alimentazione attraverso lo stesso resistore, non danno subito la stessa uscita. Il condensatore introduce memoria.
 
 Nel modello RC generale l'ingresso è $v_{in}(t)$, l'uscita $v_C(t)$ e lo stato può essere scelto uguale a $v_C(t)$. Lo schema mostra un esempio a gradino; il modello vale anche per altri ingressi.
+
+::: {.callout-note collapse=true title="Contenuto avanzato · L’equazione del circuito RC"}
+
+Il modello del circuito si scrive
+
+$$RC\frac{dv_C}{dt}+v_C=v_{in}.$$
+
+La derivata descrive la velocità con cui cambia la tensione sul condensatore. La risoluzione di questa equazione sarà approfondita negli anni successivi; per riconoscere la memoria basta osservare che la risposta dipende dalla carica già presente.
+
+:::
 
 [Esplora le due cariche RC](/laboratori/rc.qmd).
 
@@ -188,7 +246,7 @@ $$v=R(T)i,\qquad R(T)=R_0[1+\alpha(T-T_0)].$$
 
 La temperatura dipende dalla potenza $i^2R(T)$ e dalla dissipazione di calore verso l'ambiente. Il valore attuale di $T$ dipende dalla storia: il modello ha **memoria**. La dipendenza quadratica del riscaldamento e l'accoppiamento tra $T$ e $i$ rendono in generale il sistema **non lineare** (con $\alpha\ne0$). Ambiente, coefficienti e leggi sono qui costanti nel tempo.
 
-::: {.callout-note title="Anticipazione: modello termico dinamico"}
+::: {.callout-note collapse=true title="Contenuto avanzato · Il modello termico con le derivate"}
 $$C_{th}\frac{dT}{dt}=i^2R(T)-G_{th}(T-T_a).$$
 $C_{th}$ è la capacità termica, $G_{th}$ la conduttanza termica verso l'ambiente e $T_a$ la temperatura ambiente. A sinistra compare la variazione dell'energia termica; a destra la potenza prodotta meno quella ceduta. Per la classificazione basta leggere questa struttura: non occorre ancora risolvere l'equazione.
 :::
@@ -199,17 +257,27 @@ $C_{th}$ è la capacità termica, $G_{th}$ la conduttanza termica verso l'ambien
 
 Lo schema mostra un circuito di polarizzazione esemplificativo. Qui classifichiamo il solo diodo: $v$ indica $v_D$, non la tensione U del generatore.
 
-Consideriamo tensione ai capi in ingresso e corrente in uscita, temperatura costante e capacità parassite trascurate. Nel modello statico a giunzione:
+Consideriamo la tensione ai capi in ingresso e la corrente in uscita, a temperatura costante e trascurando l’immagazzinamento di carica. La corrente non è proporzionale alla tensione: raddoppiare la tensione non raddoppia generalmente la corrente. Il modello è **non lineare e senza memoria**.
+
+::: {.callout-note collapse=true title="Contenuto avanzato · La relazione esponenziale del diodo"}
+
+Nel modello statico a giunzione, fuori dalla rottura inversa:
 
 $$i=I_S\left(e^{v/(\eta V_T)}-1\right).$$
 
-$I_S$, $\eta$ e $V_T$ sono parametri costanti nel modello. Non è necessario conoscere già la fisica della giunzione: la relazione esponenziale mostra che raddoppiare $v$ non raddoppia generalmente $i$. Il modello è **non lineare e senza memoria**. In altri modelli, che includono cariche immagazzinate, il diodo può avere memoria.
+$I_S$, $\eta$ e $V_T$ sono parametri costanti nel modello. La relazione esponenziale non rispetta la sovrapposizione. La fisica della giunzione sarà approfondita successivamente. In modelli che includono cariche immagazzinate, il diodo può avere memoria.
+
+:::
 
 #### Attenzione agli offset e alle condizioni iniziali
 
 $y=2u+3$ è una relazione **affine**, non lineare nel senso dei sistemi: a ingresso nullo l'uscita vale 3. Una retta sul grafico non basta, deve rispettare la sovrapposizione. Per studiare piccole variazioni attorno a un punto di lavoro può essere utile definire $\Delta u$ e $\Delta y$; il modello delle variazioni va dichiarato.
 
+::: {.callout-note collapse=true title="Contenuto avanzato · Linearità e condizioni iniziali"}
+
 Nei modelli dinamici lineari, per classificare la relazione ingresso–uscita usiamo **condizioni iniziali nulle**, oppure separiamo la risposta dovuta allo stato iniziale. In un RC con condensatore già carico, l'uscita può essere non nulla anche a ingresso nullo: ciò non rende non lineari le equazioni del circuito, ma la mappa ingresso–uscita a stato iniziale non nullo fissato non è, in generale, lineare.
+
+:::
 
 #### Esercizio: verificare la linearità
 
@@ -252,20 +320,17 @@ $$R(t)[a u_1(t)+b u_2(t)]=aR(t)u_1(t)+bR(t)u_2(t).$$
 
 #### Condizioni iniziali e avvio dell'esperimento
 
+::: {.callout-note collapse=true title="Per capire meglio · Ripetere lo stesso esperimento"}
+
 Nel confronto temporale occorre traslare coerentemente anche la storia precedente e la preparazione del sistema. Ripetere lo stesso esperimento con il resistore prima freddo e poi già caldo non è una prova di variabilità nel tempo: sono diverse le condizioni iniziali.
 
 Per i modelli lineari usiamo il sistema inizialmente a riposo e ingressi compatibili con questa ipotesi. Non imponiamo un azzeramento a un istante assoluto fisso mentre spostiamo arbitrariamente il resto dell'esperimento: quel reset sarebbe un'azione temporale aggiuntiva.
 
+:::
+
 #### Esercizio: riconoscere l'invarianza nel tempo
 
 {{< include _classificazione-invarianza.qmd >}}
-
-### Tempo continuo, tempo discreto e valori dei segnali {#dominio-temporale}
-
-- **Tempo continuo:** $t\in\mathbb{R}$ e $u:\mathbb{R}\to\mathbb{R}$ nel caso scalare reale. Il modello descrive la grandezza in ogni istante.
-- **Tempo discreto:** $n\in\mathbb{Z}$ e $u:\mathbb{Z}\to\mathbb{R}$. La descrizione riguarda una successione di campioni.
-
-Discreto nel tempo non significa necessariamente binario: una misura campionata può assumere molti valori. La **quantizzazione** limita invece i valori a un insieme discreto, per esempio $u[n]\in\{0,1,\ldots,1023\}$ per i codici di un convertitore a 10 bit. Nell'acquisizione reale entrano in gioco sia il campionamento sia la quantizzazione.
 
 ### Deterministico e stocastico {#determinismo}
 
@@ -286,7 +351,13 @@ $y[n]=u[n-1]$ ha memoria ed è causale; $y[n]=u[n+1]$ richiede il campione futur
 
 ### Stabilità ingresso–uscita: una prima definizione {#stabilita}
 
-Un sistema è **stabile BIBO** (*Bounded Input, Bounded Output*: ingresso limitato, uscita limitata) se ogni ingresso che rimane entro un limite finito produce un’uscita che rimane entro un limite finito per tutto il tempo considerato. Per la mappa ingresso–uscita, con preparazione iniziale fissata (nulla nei modelli lineari qui usati), scriviamo:
+Un sistema è **stabile BIBO** (*Bounded Input, Bounded Output*: ingresso limitato, uscita limitata) se ogni ingresso che rimane entro un limite finito produce un’uscita che rimane entro un limite finito per tutto il tempo considerato.
+
+Per esempio, un guadagno costante finito non trasforma un ingresso limitato in un’uscita che cresce senza limite.
+
+::: {.callout-note collapse=true title="Contenuto avanzato · La definizione matematica di stabilità BIBO"}
+
+Per la mappa ingresso–uscita, con preparazione iniziale fissata (nulla nei modelli lineari qui usati), scriviamo:
 
 $$\forall M_u<\infty,\ M_u\ge0,\quad \exists M_y<\infty:\qquad
 \sup_t|u(t)|\le M_u\ \Longrightarrow\ \sup_t|\mathcal T[u](t)|\le M_y
@@ -294,11 +365,13 @@ $$\forall M_u<\infty,\ M_u\ge0,\quad \exists M_y<\infty:\qquad
 
 $M_y$ può dipendere da $M_u$ e dal sistema, ma non dal tempo. A tempo discreto si sostituisce $t$ con $n$. “Limitato” non significa soltanto finito a ogni singolo istante: una rampa cresce senza limite, anche se ha un valore finito a ogni istante finito.
 
+:::
+
 - **Guadagno costante:** $y=ku$, con $k$ finito, è stabile BIBO perché $|y|\le |k|M_u$.
 - **Quadrato:** $y=u^2$ è anch’esso stabile BIBO, perché $|y|\le M_u^2$. La stabilità non implica linearità.
 - **Serbatoio ideale senza limiti di capacità:** una portata netta costante positiva è limitata, ma nel modello $h(t)=h(0)+u_0t/A$ il livello cresce senza limite. Il modello integratore non è stabile BIBO. Un recipiente reale trabocca: quando questo accade, il modello senza trabocco non è più applicabile.
 
-::: {.callout-note title="Da approfondire negli anni successivi"}
+::: {.callout-note collapse=true title="Contenuto avanzato · Stabilità dell’equilibrio"}
 La stabilità BIBO riguarda ingresso e uscita. La **stabilità di un equilibrio** riguarda invece l’evoluzione dello stato dopo una piccola perturbazione; quella **asintotica** richiede anche il ritorno all’equilibrio. Sono nozioni collegate, ma non intercambiabili senza precisare il modello e le ipotesi.
 :::
 
@@ -314,6 +387,18 @@ Esiste quindi una trasformazione inversa sulle uscite ottenibili: $\mathcal T^{-
 - Per $y=u^2$, gli ingressi $u$ e $-u$ producono la stessa uscita: il modello non è invertibile su tutti i segnali reali. Se imponiamo $u(t)\ge0$, diventa invertibile sul dominio ristretto, con $u=\sqrt y$.
 
 L’esistenza matematica dell’inversa non garantisce che sia causale, stabile o realizzabile in tempo reale. Questi aspetti saranno approfonditi successivamente.
+
+### Più ingressi, più uscite ed eventi {#ingressi-eventi}
+
+Un sistema può avere **uno o più ingressi e una o più uscite**. Per una stanza possiamo considerare come ingressi la potenza del riscaldamento e la temperatura esterna, e come uscita la temperatura interna. Non occorre ancora usare una notazione vettoriale.
+
+Nei sistemi automatici incontreremo anche **eventi**: la pressione di un pulsante o il raggiungimento di una soglia possono far cambiare lo stato di una sequenza. Un evento non coincide necessariamente con il trascorrere di un intervallo di campionamento.
+
+::: {.callout-note collapse=true title="Per capire meglio · Un serbatoio e una sequenza automatica"}
+
+Il livello dell’acqua evolve con continuità. Quando raggiunge una soglia, il controllo può passare dallo stato «riempimento» allo stato «attesa». Il sistema combina quindi una grandezza continua e stati discreti della sequenza: è un primo esempio di sistema **ibrido**. Riprenderemo questi aspetti con i sistemi a stati e il PLC.
+
+:::
 
 ### Configurazione del controllo: anello aperto, anello chiuso e retroazione {#retroazione}
 

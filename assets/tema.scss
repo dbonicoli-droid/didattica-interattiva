@@ -659,3 +659,8 @@ main.content .classification-exercise table { display: table; width: 100%; table
 @media (max-width: 600px) { .classification-exercise th:first-child { width: 64%; } }
 
 .classification-exercise th:first-child { white-space: normal; overflow-wrap: anywhere; }
+
+/* Gli approfondimenti a comparsa restano leggibili nella stampa del sito. */
+@media print {
+  .callout .callout-collapse { display: block !important; height: auto !important; }
+}
