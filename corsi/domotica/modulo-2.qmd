@@ -4,6 +4,9 @@ title: "Modulo 2 / Automazione industriale e PLC"
 subtitle: "Panoramica del Programma"
 ---
 
+[Guida condivisa al Ladder · Livello 1 →](/risorse/ladder/index.qmd#livello-1)
+
+
 Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 ::: {.unit-index}

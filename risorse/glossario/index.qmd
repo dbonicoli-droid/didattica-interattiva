@@ -689,6 +689,8 @@ Mappa per semplificare funzioni booleane raggruppando celle adiacenti, disposte 
 
 Ladder Diagram: linguaggio grafico per PLC che rappresenta il programma come una scala di righe, ciascuna con i contatti che pongono le condizioni a sinistra e la bobina che porta il risultato a destra.
 
+[Guida al Ladder per livelli →](/risorse/ladder/index.qmd#livelli)
+
 ### Latch {#gloss-latch}
 
 [TPSEE · Elettronici]{.gloss-scope}

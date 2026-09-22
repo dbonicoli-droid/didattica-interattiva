@@ -39,6 +39,8 @@ website:
             text: Fondamenti
           - href: risorse/componenti/index.qmd
             text: Componenti
+          - href: risorse/ladder/index.qmd
+            text: Guida al Ladder
           - href: risorse/glossario/index.qmd
             text: Glossario
           - href: risorse/esterne/index.qmd
@@ -254,6 +256,8 @@ website:
               text: "Diodo"
             - href: risorse/componenti/transistor.qmd
               text: "Transistor"
+        - href: risorse/ladder/index.qmd
+          text: Guida al Ladder
         - href: risorse/mappe/index.qmd
           text: "Mappe concettuali"
         - href: risorse/glossario/index.qmd

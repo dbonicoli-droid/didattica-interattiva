@@ -61,6 +61,7 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 
 - Architettura, [I/O](/risorse/glossario/index.qmd#gloss-i-o) e [scansione](/risorse/glossario/index.qmd#gloss-scansione).
 - Configurare e collaudare.
+- [Prima lettura del Ladder](/risorse/ladder/index.qmd#livello-1).
 
 **Secondo periodo · 30 ore** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
@@ -70,7 +71,7 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 
 ### [04 / Circuiti combinatori](moduli/modulo-4.qmd)
 
-- [Ladder](/risorse/glossario/index.qmd#gloss-ladder), blocchi e testo.
+- Realizzare funzioni combinatorie in [Ladder](/risorse/ladder/index.qmd#livello-2), blocchi e testo.
 - Confrontare le simulazioni.
 
 **Secondo periodo · 40 ore** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
@@ -136,7 +137,7 @@ Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anch
 - [U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug](moduli/modulo-3.qmd#ud:3.5)
 - [U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC](moduli/modulo-3.qmd#ud:3.6)
 
-[Guida iniziale al Ladder](moduli/modulo-3.qmd#elementi-ladder) · [Autoritenuta e fronti](moduli/modulo-3.qmd#autoritenuta) · [Sequenza a più stati](moduli/modulo-3.qmd#stati)
+[Guida iniziale al Ladder](/risorse/ladder/index.qmd#livello-1) · [Autoritenuta e fronti](/risorse/ladder/index.qmd#livello-3) · [Sequenza a più stati](/risorse/ladder/index.qmd#livello-4)
 
 ### [Modulo 4 / Circuiti combinatori](moduli/modulo-4.qmd)
 

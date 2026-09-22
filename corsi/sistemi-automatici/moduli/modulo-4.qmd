@@ -1,8 +1,12 @@
 ---
+sidebar: sistemi-automatici
 stato: da-scrivere
 title: "Modulo 4 / Circuiti combinatori"
 subtitle: "Modulo di approfondimento"
 ---
+
+**Guida al Ladder:** [Condizioni logiche in Ladder](/risorse/ladder/index.qmd#livello-2).
+
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-4.qmd)
 

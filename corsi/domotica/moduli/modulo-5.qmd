@@ -1,8 +1,12 @@
 ---
+sidebar: domotica
 stato: da-scrivere
 title: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
 subtitle: "Modulo di approfondimento"
 ---
+
+**Guida condivisa al Ladder:** [timer e contatori: prima panoramica](/risorse/ladder/index.qmd#livello-5) · [valori numerici: prima panoramica](/risorse/ladder/index.qmd#livello-6).
+
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-5.qmd)
 

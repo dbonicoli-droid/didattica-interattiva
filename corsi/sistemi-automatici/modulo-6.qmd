@@ -4,6 +4,9 @@ title: "Modulo 6 / Tempi, eventi e grandezze analogiche"
 subtitle: "Panoramica del Programma"
 ---
 
+**Guida al Ladder:** [Timer e contatori: prima panoramica](/risorse/ladder/index.qmd#livello-5) · [Valori numerici e segnali analogici: prima panoramica](/risorse/ladder/index.qmd#livello-6).
+
+
 Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 ::: {.unit-index}

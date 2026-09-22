@@ -1,8 +1,12 @@
 ---
+sidebar: domotica
 stato: da-scrivere
 title: "Modulo 4 / Linguaggio SFC"
 subtitle: "Modulo di approfondimento"
 ---
+
+Per confrontare la rappresentazione SFC con una realizzazione Ladder: [eventi e sequenze a stati](/risorse/ladder/index.qmd#livello-4).
+
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-4.qmd)
 

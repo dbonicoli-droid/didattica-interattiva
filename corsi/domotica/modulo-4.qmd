@@ -4,6 +4,9 @@ title: "Modulo 4 / Linguaggio SFC"
 subtitle: "Panoramica del Programma"
 ---
 
+Per confrontare la rappresentazione SFC con una realizzazione Ladder: [eventi e sequenze a stati](/risorse/ladder/index.qmd#livello-4).
+
+
 Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 ::: {.unit-index}

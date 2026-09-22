@@ -1,8 +1,12 @@
 ---
+sidebar: sistemi-automatici
 stato: da-scrivere
 title: "Modulo 5 / Circuiti sequenziali"
 subtitle: "Modulo di approfondimento"
 ---
+
+**Guida al Ladder:** [Memoria e autoritenuta](/risorse/ladder/index.qmd#livello-3) · [Eventi e sequenze a stati](/risorse/ladder/index.qmd#livello-4).
+
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-5.qmd)
 

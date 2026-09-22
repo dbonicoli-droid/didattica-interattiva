@@ -6,7 +6,7 @@ subtitle: "Panoramica del Programma"
 
 Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
-[Leggi l’introduzione ai PLC e la guida iniziale al Ladder →](moduli/modulo-3.qmd){.btn .btn-primary}
+[Leggi l’introduzione ai PLC →](moduli/modulo-3.qmd){.btn .btn-primary}
 
 ::: {.unit-index}
 ## Unità didattiche del modulo {.unnumbered}

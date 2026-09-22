@@ -1,8 +1,12 @@
 ---
+sidebar: domotica
 stato: da-scrivere
 title: "Modulo 2 / Automazione industriale e PLC"
 subtitle: "Modulo di approfondimento"
 ---
+
+[Guida condivisa al Ladder · Livello 1 →](/risorse/ladder/index.qmd#livello-1)
+
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd)
 

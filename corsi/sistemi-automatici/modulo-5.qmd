@@ -4,6 +4,9 @@ title: "Modulo 5 / Circuiti sequenziali"
 subtitle: "Panoramica del Programma"
 ---
 
+**Guida al Ladder:** [Memoria e autoritenuta](/risorse/ladder/index.qmd#livello-3) · [Eventi e sequenze a stati](/risorse/ladder/index.qmd#livello-4).
+
+
 Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 ::: {.unit-index}

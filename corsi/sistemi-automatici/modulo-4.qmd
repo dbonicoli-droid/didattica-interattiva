@@ -4,6 +4,9 @@ title: "Modulo 4 / Circuiti combinatori"
 subtitle: "Panoramica del Programma"
 ---
 
+**Guida al Ladder:** [Condizioni logiche in Ladder](/risorse/ladder/index.qmd#livello-2).
+
+
 Questa pagina offre una **sintesi introduttiva** degli argomenti del programma.
 
 ::: {.unit-index}
