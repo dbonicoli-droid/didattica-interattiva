@@ -16,7 +16,7 @@ const examples = [
  ['Ritardo con guadagno programmato', 'Elaboratore discreto: conserva un campione e restituisce $y[n]=k[n]u[n-1]$, con $k[n]=2+\\sin(\\pi n/4)$ prescritto dall’esterno. Il programma k non viene traslato con l’ingresso.', [1,1,0], 'Il campione precedente richiede memoria. Ritardo e moltiplicazione per k[n] sono lineari. Il guadagno esplicito non costante rende il sistema tempo-variante.'],
  ['Quadrato ritardato con guadagno programmato', 'Elaboratore di segnali normalizzati: $y[n]=k[n](u[n-1])^2$, con $k[n]=2+\\sin(\\pi n/4)$ prescritto dall’esterno. Conserva il campione precedente e ne calcola il quadrato.', [1,0,0], 'Il ritardo introduce memoria, il quadrato introduce non linearità e il guadagno programmato introduce variabilità nel tempo.']
 ];
-const props = ['Memoria', 'Linearità', 'Invarianza nel tempo'];
+const props = ['Memoria', 'Linearità', 'Invarianza'];
 const sets = {memoria: [[0,5,7,3],[0]], linearita:[[0,1,2,6,9],[1]], invarianza:[[0,2,3,10],[2]], completa:[examples.map((_,i)=>i),[0,1,2]]};
 for (const [id,[rows,cols]] of Object.entries(sets)) {
  let s = `<!-- Generato da scripts/build_classification.cjs -->\n::: {.classification-exercise #esercizio-${id}}\n\nSpunta solo le proprietà presenti. Conferma ogni riga prima di verificare. Le soluzioni commentate sono disponibili sotto ogni tabella.\n\n`;

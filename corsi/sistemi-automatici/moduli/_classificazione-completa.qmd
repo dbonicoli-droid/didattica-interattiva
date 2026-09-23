@@ -3,7 +3,7 @@
 
 Spunta solo le proprietà presenti. Conferma ogni riga prima di verificare. Le soluzioni commentate sono disponibili sotto ogni tabella.
 
-| Sistema: ingresso, uscita e ipotesi | Memoria | Linearità | Invarianza nel tempo |
+| Sistema: ingresso, uscita e ipotesi | Memoria | Linearità | Invarianza |
 |---|:---:|:---:|:---:|
 | **Resistore ideale.** Ingresso: corrente $i(t)$. Uscita: tensione $v(t)=Ri(t)$. Resistenza costante, temperatura mantenuta costante; effetti capacitivi e induttivi trascurati. | [□]{.answer-cell data-answer="false"} | [□]{.answer-cell data-answer="true"} | [□]{.answer-cell data-answer="true"} |
 | **Potenza nel resistore.** Ingresso: corrente $i(t)$. Uscita: potenza istantanea $p(t)=Ri^2(t)$. Resistore ideale con R costante e temperatura controllata; non si considera l’evoluzione termica. | [□]{.answer-cell data-answer="false"} | [□]{.answer-cell data-answer="false"} | [□]{.answer-cell data-answer="true"} |
@@ -23,29 +23,29 @@ Spunta solo le proprietà presenti. Conferma ogni riga prima di verificare. Le s
 <details>
 <summary>Soluzioni commentate</summary>
 
-- **Resistore ideale:** Memoria **no**; Linearità **sì**; Invarianza nel tempo **sì**. Basta la corrente attuale. Moltiplicare per R rispetta la sovrapposizione; R non dipende dall’orologio.
+- **Resistore ideale:** Memoria **no**; Linearità **sì**; Invarianza **sì**. Basta la corrente attuale. Moltiplicare per R rispetta la sovrapposizione; R non dipende dall’orologio.
 
-- **Potenza nel resistore:** Memoria **no**; Linearità **no**; Invarianza nel tempo **sì**. La potenza dipende solo dalla corrente attuale, ma raddoppiando la corrente quadruplica. La legge resta la stessa nel tempo.
+- **Potenza nel resistore:** Memoria **no**; Linearità **no**; Invarianza **sì**. La potenza dipende solo dalla corrente attuale, ma raddoppiando la corrente quadruplica. La legge resta la stessa nel tempo.
 
-- **Resistore che si autoriscalda:** Memoria **sì**; Linearità **no**; Invarianza nel tempo **sì**. La temperatura conserva gli effetti della storia. Il riscaldamento quadratico accoppia corrente e resistenza: non vale la sovrapposizione. Le leggi non dipendono esplicitamente dal tempo; si confrontano preparazioni iniziali uguali.
+- **Resistore che si autoriscalda:** Memoria **sì**; Linearità **no**; Invarianza **sì**. La temperatura conserva gli effetti della storia. Il riscaldamento quadratico accoppia corrente e resistenza: non vale la sovrapposizione. Le leggi non dipendono esplicitamente dal tempo; si confrontano preparazioni iniziali uguali.
 
-- **Temperatura programmata: tensione:** Memoria **no**; Linearità **sì**; Invarianza nel tempo **no**. Non serve la storia della corrente. R(t) moltiplica linearmente l’ingresso, ma ripetere lo stesso ingresso a un altro orario può produrre una tensione diversa.
+- **Temperatura programmata: tensione:** Memoria **no**; Linearità **sì**; Invarianza **no**. Non serve la storia della corrente. R(t) moltiplica linearmente l’ingresso, ma ripetere lo stesso ingresso a un altro orario può produrre una tensione diversa.
 
-- **Temperatura programmata: potenza:** Memoria **no**; Linearità **no**; Invarianza nel tempo **no**. Il valore attuale basta; il quadrato viola la linearità; il programma esterno rende il modello tempo-variante. Questa riga ha tutte le caselle vuote.
+- **Temperatura programmata: potenza:** Memoria **no**; Linearità **no**; Invarianza **no**. Il valore attuale basta; il quadrato viola la linearità; il programma esterno rende il modello tempo-variante. Questa riga ha tutte le caselle vuote.
 
-- **Circuito RC ideale:** Memoria **sì**; Linearità **sì**; Invarianza nel tempo **sì**. La carica immagazzinata introduce memoria. Con stato iniziale nullo vale la sovrapposizione. I coefficienti costanti rendono il modello tempo-invariante.
+- **Circuito RC ideale:** Memoria **sì**; Linearità **sì**; Invarianza **sì**. La carica immagazzinata introduce memoria. Con stato iniziale nullo vale la sovrapposizione. I coefficienti costanti rendono il modello tempo-invariante.
 
-- **Diodo nel modello statico:** Memoria **no**; Linearità **no**; Invarianza nel tempo **sì**. Il modello statico usa solo la tensione attuale. La relazione esponenziale non rispetta la sovrapposizione. I parametri sono costanti nel tempo.
+- **Diodo nel modello statico:** Memoria **no**; Linearità **no**; Invarianza **sì**. Il modello statico usa solo la tensione attuale. La relazione esponenziale non rispetta la sovrapposizione. I parametri sono costanti nel tempo.
 
-- **Termostato con isteresi:** Memoria **sì**; Linearità **no**; Invarianza nel tempo **sì**. Nella fascia intermedia serve il comando precedente. Soglie e comando binario non rispettano la sovrapposizione. La regola non cambia con l’orario.
+- **Termostato con isteresi:** Memoria **sì**; Linearità **no**; Invarianza **sì**. Nella fascia intermedia serve il comando precedente. Soglie e comando binario non rispettano la sovrapposizione. La regola non cambia con l’orario.
 
-- **Serbatoio a sezione costante:** Memoria **sì**; Linearità **sì**; Invarianza nel tempo **sì**. Il livello accumula gli effetti della portata. Nel modello delle variazioni, con stato iniziale nullo, vale la sovrapposizione. La legge ha coefficienti costanti.
+- **Serbatoio a sezione costante:** Memoria **sì**; Linearità **sì**; Invarianza **sì**. Il livello accumula gli effetti della portata. Nel modello delle variazioni, con stato iniziale nullo, vale la sovrapposizione. La legge ha coefficienti costanti.
 
-- **Quadrato dell’ingresso:** Memoria **no**; Linearità **no**; Invarianza nel tempo **sì**. Usa solo il campione attuale; il quadrato viola la sovrapposizione; la formula non dipende dall’orologio.
+- **Quadrato dell’ingresso:** Memoria **no**; Linearità **no**; Invarianza **sì**. Usa solo il campione attuale; il quadrato viola la sovrapposizione; la formula non dipende dall’orologio.
 
-- **Ritardo con guadagno programmato:** Memoria **sì**; Linearità **sì**; Invarianza nel tempo **no**. Il campione precedente richiede memoria. Ritardo e moltiplicazione per k[n] sono lineari. Il guadagno esplicito non costante rende il sistema tempo-variante.
+- **Ritardo con guadagno programmato:** Memoria **sì**; Linearità **sì**; Invarianza **no**. Il campione precedente richiede memoria. Ritardo e moltiplicazione per k[n] sono lineari. Il guadagno esplicito non costante rende il sistema tempo-variante.
 
-- **Quadrato ritardato con guadagno programmato:** Memoria **sì**; Linearità **no**; Invarianza nel tempo **no**. Il ritardo introduce memoria, il quadrato introduce non linearità e il guadagno programmato introduce variabilità nel tempo.
+- **Quadrato ritardato con guadagno programmato:** Memoria **sì**; Linearità **no**; Invarianza **no**. Il ritardo introduce memoria, il quadrato introduce non linearità e il guadagno programmato introduce variabilità nel tempo.
 
 </details>
 

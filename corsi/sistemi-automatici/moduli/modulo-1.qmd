@@ -323,7 +323,7 @@ Anello aperto o chiuso riguarda **come sono collegati** processo, sensori e cont
 
 ### Come usare le tabelle
 
-Una casella spuntata significa **sì**, non spuntata significa **no**. Le colonne sono solo **Memoria**, **Linearità**, **Invarianza nel tempo**. Conferma ogni riga dopo aver deciso: così una riga ancora da svolgere non viene scambiata per tre risposte negative.
+Una casella spuntata significa **sì**, non spuntata significa **no**. Le colonne sono solo **Memoria**, **Linearità**, **Invarianza** (nel tempo). Conferma ogni riga dopo aver deciso: così una riga ancora da svolgere non viene scambiata per tre risposte negative.
 
 Usa **Verifica risposte** per controllare il lavoro o **Mostra soluzione** per vedere classificazioni e motivazioni. Tornando all'esercizio ritrovi le tue risposte. Non vengono inviati o registrati dati degli studenti; ricaricando la pagina si ricomincia. Per una stampa usa **Stampa esercizio**: produce caselle vuote; **Stampa soluzioni** produce le risposte e le spiegazioni.
 
