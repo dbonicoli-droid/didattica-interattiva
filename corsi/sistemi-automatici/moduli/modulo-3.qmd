@@ -117,7 +117,7 @@ Il **Ladder è un linguaggio grafico per programmare il PLC**. Le reti rappresen
 
 ![Rete Ladder con contatto Pulsante e bobina ordinaria Lampada.](/assets/plc/momentaneo.svg)
 
-Il contatto legge `Pulsante`; la bobina scrive `Lampada`. La relazione è $Lampada=Pulsante$. Il testo equivalente è `Lampada := Pulsante`, dove `:=` significa **assegna**, non “verifica l’uguaglianza”.
+Il contatto legge `Pulsante`; la bobina scrive `Lampada`. Il valore scritto in `Lampada` coincide con quello letto da `Pulsante`. Il testo equivalente è `Lampada := Pulsante`, dove `:=` significa **assegna**, non “verifica l’uguaglianza”.
 
 | Ciclo | Pulsante fisico | `Pulsante` | `Lampada` dopo la rete |
 |---|---|---:|---:|
@@ -128,6 +128,44 @@ Il contatto legge `Pulsante`; la bobina scrive `Lampada`. La relazione è $Lampa
 | 5 | Rilasciato | 0 | 0 |
 
 **Al ciclo successivo non compare automaticamente zero.** Compare zero quando l’acquisizione rileva il pulsante rilasciato. Questa rete non mantiene accesa la lampada dopo il rilascio.
+
+### Come mantenere accesa la lampada dopo il rilascio {#mantenere-lampada}
+
+Serve una **memoria del comando**, distinta dal valore attuale del pulsante. Chiamiamo `Attivo` una variabile interna di tipo `BOOL`, inizialmente 0: quando vale 1, il programma comanda la lampada accesa anche se il pulsante è stato rilasciato.
+
+Possiamo scegliere due comportamenti:
+
+- **Due pulsanti, Marcia e Stop:** Marcia attiva il comando, che viene mantenuto fino a Stop. È l’[autoritenuta, spiegata nel livello 3](/risorse/ladder/index.qmd#autoritenuta); per questo comportamento non occorre necessariamente rilevare un fronte.
+- **Un solo pulsante:** la prima pressione accende, la seconda spegne. Usiamo il **fronte di salita**, cioè il passaggio da 0 a 1, per riconoscere ogni nuova pressione e invertire una sola volta `Attivo`.
+
+**Il fronte segnala l’evento; la memoria conserva il comando.** Collegare il solo impulso di fronte a una bobina ordinaria accenderebbe la lampada per un solo ciclo, non fino alla pressione successiva.
+
+::: {.callout-note collapse=true title="Per capire meglio · Un pulsante per accendere e spegnere"}
+
+Il rilevatore di fronte viene eseguito a ogni ciclo: `NuovaPressione` vale 1 soltanto nel ciclo in cui riconosce il passaggio da pulsante rilasciato a premuto. Negli altri cicli vale 0.
+
+| Azione | Fronte | Lampada |
+|---|---:|---:|
+| Prima pressione | 1 | 1 |
+| Pulsante ancora premuto | 0 | 1 |
+| Rilascio | 0 | 1 |
+| Seconda pressione | 1 | 0 |
+| Secondo rilascio | 0 | 0 |
+
+Partiamo da lampada spenta: la colonna **Fronte** indica `NuovaPressione`; **Lampada** coincide con `Attivo` dopo la rete. La regola è:
+
+1. A ogni ciclo rileva il fronte di salita e aggiorna `NuovaPressione`.
+2. Soltanto se `NuovaPressione` vale 1, esegui `Attivo := NOT Attivo`: inverti lo stato memorizzato.
+3. A ogni ciclo esegui `Lampada := Attivo`.
+
+Se non c’è una nuova pressione, `Attivo` mantiene il valore precedente. Va inizializzato all’avvio, non azzerato a ogni ciclo. L’assegnazione a `Lampada` viene invece eseguita a ogni ciclo, anche quando non premiamo il pulsante.
+
+Usare direttamente `Pulsante` al posto di `NuovaPressione` invertirebbe il comando a ogni ciclo durante la pressione. Il fronte evita queste inversioni ripetute.
+
+Per costruire il programma grafico, segui i due passaggi del livello 4: [rilevatore di fronte](/risorse/ladder/index.qmd#fronte) e [rete Ladder che alterna il comando](/risorse/ladder/index.qmd#toggle). Il cablaggio resta quello dell’esempio pulsante–lampada.
+
+:::
+
 
 [Continua nella guida al Ladder · Livello 1 →](/risorse/ladder/index.qmd#livello-1){.btn .btn-primary}
 
