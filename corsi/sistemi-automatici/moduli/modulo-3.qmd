@@ -6,7 +6,7 @@ subtitle: "Struttura, segnali e sviluppo del programma"
 toc-depth: 3
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-sa-modulo-3)
 
 Il **PLC è un computer che legge segnali elettrici ed esegue un programma per comandare un processo**. Il Ladder è uno dei linguaggi con cui si scrive quel programma. In questa introduzione distinguiamo sempre tre aspetti: **cablaggio fisico, variabili e istruzioni**.
 

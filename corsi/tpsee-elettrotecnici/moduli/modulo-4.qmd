@@ -4,7 +4,7 @@ title: "Modulo 4 / Tecnologia dei materiali"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-4.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-4.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-et-modulo-4)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere

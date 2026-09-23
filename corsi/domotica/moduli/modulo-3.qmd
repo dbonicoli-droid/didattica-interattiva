@@ -8,7 +8,7 @@ subtitle: "Modulo di approfondimento"
 **Guida condivisa al Ladder:** [orientamento e prima rete](/risorse/ladder/index.qmd#livello-1) · [condizioni logiche](/risorse/ladder/index.qmd#livello-2) · [memoria](/risorse/ladder/index.qmd#livello-3).
 
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-do-modulo-3)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere

@@ -225,13 +225,24 @@ dialog.mappa-schermo .tela svg { display: block; width: auto; height: auto; min-
 .mappa-incrocio-testo { font-size: 13px; font-style: italic; font-weight: 600; fill: var(--mappa-incrocio); }
 .mappa-punta-incrocio { fill: var(--mappa-incrocio); }
 
+/* La legenda è scritta come recinto ::: , quindi Pandoc avvolge le voci in un <p>:
+   il flex va messo su quel paragrafo, altrimenti il gap non separa nulla.
+   I campioni di tratto sono gli span vuoti annidati dentro ogni voce. */
 .mappa-legenda {
-  display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center;
   font-size: .8rem; color: var(--testo-tenue); margin-bottom: 1.2rem;
 }
+.mappa-legenda > p {
+  display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin: 0;
+}
 .mappa-legenda span { display: inline-flex; align-items: center; gap: .45rem; }
-.mappa-legenda i { display: inline-block; width: 24px; height: 0; border-top: 2px solid var(--bordo-forte); }
-.mappa-legenda i.incrocio { border-top: 2px dashed var(--mappa-incrocio); }
+.mappa-legenda span span {
+  display: inline-block; width: 24px; height: 0; flex: none;
+  border-top: 2px solid var(--bordo-forte);
+}
+.mappa-legenda span span.incrocio { border-top: 2px dashed var(--mappa-incrocio); }
+.mappa-legenda span span.tinta {
+  width: 13px; height: 13px; border-top: 0; border-radius: 3px; background: var(--mappa-hub);
+}
 
 @media print {
   .mappa-disegno { overflow: visible; }
@@ -786,4 +797,3 @@ main.content .classification-exercise table { display: table; width: 100%; table
 .mappa-anello { stroke: var(--mappa-incrocio); stroke-width: 2; stroke-dasharray: 7 5; fill: none; }
 .mappa-t-anello { font-size: 13px; font-style: italic; font-weight: 600; fill: var(--mappa-incrocio); }
 
-.mappa-legenda b.tinta { display: inline-block; width: 13px; height: 13px; border-radius: 3px; background: var(--mappa-hub); }

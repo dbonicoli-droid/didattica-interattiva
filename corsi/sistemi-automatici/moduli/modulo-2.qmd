@@ -4,7 +4,7 @@ title: "Modulo 2 / Elettronica digitale"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-sa-modulo-2)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
