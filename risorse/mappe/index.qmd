@@ -1009,36 +1009,13 @@ Ed è per questo che un circuito con un condensatore o un induttore ha bisogno d
 :::
 
 
-### Dove approfondire
+### Altre mappe di questa sezione
 
-::: {.resource-card}
-### [Carica, corrente e tensione](../fondamenti/carica-corrente-tensione.qmd)
-La carica è la grandezza di base; la corrente ne descrive il trasferimento nel tempo e la tensione è una differenza di potenziale. Il **campo elettrico** è ciò che mette in moto le cariche: la tensione fra due punti nasce dal lavoro che il campo compie per spostarle.
+::: {.mappa-segnaposto}
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+**In preparazione** · altre mappe su grandezze, componenti e circuiti arriveranno con le lezioni.
 :::
 
-**Queste grandezze permettono di descrivere tre comportamenti:**
+Nel frattempo: la [tavola completa delle unità di misura](/risorse/fondamenti/grandezze-e-calcolo.qmd#tavola-mks) riporta tutte le grandezze del corso ricondotte alle quattro di base del sistema MKSA, con il procedimento per il controllo dimensionale.
 
-
-::: {.process-map}
-::: {.map-card .map-card-linked}
-### [Resistore](../componenti/resistore.qmd#livello-2){.map-destination}
-Lega tensione e corrente attraverso la resistenza e **dissipa energia**.
-:::
-::: {.map-card .map-card-linked}
-### [Condensatore](../componenti/condensatore.qmd#livello-2){.map-destination}
-Lega carica e tensione e **immagazzina energia nel campo elettrico**.
-:::
-::: {.map-card .map-card-linked}
-### [Induttore](../componenti/induttore.qmd#livello-2){.map-destination}
-Lega corrente e flusso concatenato e **immagazzina energia nel campo magnetico**.
-:::
-:::
-
-**Collegando resistore e condensatore otteniamo un esempio di evoluzione nel tempo:**
-
-::: {.resource-card}
-### [Circuito RC e costante di tempo](../../laboratori/rc.qmd)
-Il resistore limita la corrente di carica; mentre la tensione del condensatore cresce, la corrente diminuisce. Esplora come R e C cambiano la durata del transitorio.
-:::
-
-[Rivedi potenza ed energia](../fondamenti/potenza-energia.qmd) · [Consulta tutti i componenti](../componenti/index.qmd)
+[Fondamenti condivisi](/risorse/fondamenti/index.qmd) · [Tutti i componenti](/risorse/componenti/index.qmd) · [Laboratorio RC](/laboratori/rc.qmd)

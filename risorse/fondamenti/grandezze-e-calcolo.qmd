@@ -18,6 +18,61 @@ Una misura comprende un valore numerico e un'unità di misura: $I=5\,\mathrm{mA}
 
 Maiuscole e minuscole contano: m indica milli, M mega. Un'area richiede di convertire anche il quadrato: $1\,\mathrm{mm^2}=10^{-6}\,\mathrm{m^2}$.
 
+## Tutte le grandezze, ridotte a quattro {#tavola-mks}
+
+Le unità dell'elettrotecnica non sono un elenco da imparare a memoria: **nascono tutte da quattro grandezze di base** — metro, chilogrammo, secondo e ampere. È il sistema **MKSA**, che oggi fa parte del Sistema Internazionale.
+
+Sapere come si compone un'unità serve a due cose molto concrete: **controllare un calcolo** prima di fidarsene, e **capire una formula nuova** guardandone le unità.
+
+| Grandezza | Simbolo | Unità | | Come si compone | Scorciatoia |
+|---|---|---|---|---|---|
+| Lunghezza | $l$ | metro | m | base | |
+| Massa | $m$ | chilogrammo | kg | base | |
+| Tempo | $t$ | secondo | s | base | |
+| Corrente | $I$ | ampere | A | base | |
+| Carica | $Q$ | coulomb | C | $\mathrm{A\cdot s}$ | corrente × tempo |
+| Forza | $F$ | newton | N | $\mathrm{kg\cdot m\cdot s^{-2}}$ | massa × accelerazione |
+| Energia, lavoro | $E$, $W$ | joule | J | $\mathrm{kg\cdot m^2\cdot s^{-2}}$ | $\mathrm{N\cdot m}$ |
+| Potenza | $P$ | watt | W | $\mathrm{kg\cdot m^2\cdot s^{-3}}$ | $\mathrm{J/s}$ |
+| Tensione | $V$ | volt | V | $\mathrm{kg\cdot m^2\cdot s^{-3}\cdot A^{-1}}$ | $\mathrm{W/A}$, oppure $\mathrm{J/C}$ |
+| Resistenza | $R$ | ohm | $\Omega$ | $\mathrm{kg\cdot m^2\cdot s^{-3}\cdot A^{-2}}$ | $\mathrm{V/A}$ |
+| Conduttanza | $G$ | siemens | S | $\mathrm{kg^{-1}m^{-2}s^{3}A^{2}}$ | $\mathrm{A/V}$ |
+| Capacità | $C$ | farad | F | $\mathrm{kg^{-1}m^{-2}s^{4}A^{2}}$ | $\mathrm{C/V}$ |
+| Induttanza | $L$ | henry | H | $\mathrm{kg\cdot m^2\cdot s^{-2}\cdot A^{-2}}$ | $\mathrm{Wb/A}$ |
+| Campo elettrico | $E$ | volt al metro | V/m | $\mathrm{kg\cdot m\cdot s^{-3}\cdot A^{-1}}$ | $\mathrm{N/C}$ |
+| Flusso magnetico | $\Phi$ | weber | Wb | $\mathrm{kg\cdot m^2\cdot s^{-2}\cdot A^{-1}}$ | $\mathrm{V\cdot s}$ |
+| Induzione magnetica | $B$ | tesla | T | $\mathrm{kg\cdot s^{-2}\cdot A^{-1}}$ | $\mathrm{Wb/m^2}$ |
+| Frequenza | $f$ | hertz | Hz | $\mathrm{s^{-1}}$ | un ciclo al secondo |
+
+::: {.callout-note collapse=true title="Per capire meglio · Da dove viene il volt"}
+
+Il volt sembra un'unità a sé, e invece si smonta come tutte le altre.
+
+La **tensione** è il lavoro che serve per spostare una carica fra due punti, diviso la carica stessa:
+
+$$1\,\mathrm V=\frac{1\,\mathrm J}{1\,\mathrm C}.$$
+
+Un joule è $\mathrm{kg\cdot m^2\cdot s^{-2}}$ e un coulomb è $\mathrm{A\cdot s}$, quindi
+
+$$\mathrm V=\frac{\mathrm{kg\cdot m^2\cdot s^{-2}}}{\mathrm{A\cdot s}}=\mathrm{kg\cdot m^2\cdot s^{-3}\cdot A^{-1}},$$
+
+che è esattamente la riga della tavola. Lo stesso procedimento vale per l'ohm ($\mathrm{V/A}$), per il farad ($\mathrm{C/V}$) e per tutte le altre.
+
+Nota anche una cosa che torna utile: $1\,\mathrm{V}=1\,\mathrm{W/A}$, cioè **un volt per un ampere fa un watt**. È la ragione per cui $P=VI$ ha le unità giuste.
+
+:::
+
+### Il controllo che salva il compito
+
+Prima di scrivere un risultato, **fai il conto delle sole unità**. Se non tornano, il risultato è sbagliato anche quando i numeri sembrano ragionevoli.
+
+- $P=VI$ → $\mathrm{V\cdot A}=\mathrm{W}$ ✓
+- $P=RI^2$ → $\Omega\cdot\mathrm{A^2}=\frac{\mathrm V}{\mathrm A}\cdot\mathrm{A^2}=\mathrm{V\cdot A}=\mathrm W$ ✓
+- $\tau=RC$ → $\Omega\cdot\mathrm F=\frac{\mathrm V}{\mathrm A}\cdot\frac{\mathrm C}{\mathrm V}=\frac{\mathrm C}{\mathrm A}=\frac{\mathrm{A\cdot s}}{\mathrm A}=\mathrm s$ ✓ — ed è il motivo per cui si chiama **costante di tempo**
+- $\tau=L/R$ → $\frac{\mathrm H}{\Omega}=\frac{\mathrm{V\cdot s/A}}{\mathrm{V/A}}=\mathrm s$ ✓
+
+L'ultimo caso è il più istruttivo: due formule diverse, componenti diversi, e tutte e due danno **secondi**. Non è una coincidenza: sono entrambe una costante di tempo.
+
 ## Ricavare una grandezza
 
 Da $V=RI$, dividendo entrambi i membri per $R\ne0$, otteniamo $I=V/R$. Se invece conosciamo $I\ne0$, ricaviamo $R=V/I$.
