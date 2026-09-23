@@ -125,19 +125,13 @@ Per i sistemi causali che studiamo, la dipendenza riguarda il passato o uno stat
 
 :::
 
-#### L'esempio da tenere a mente: il contattore con autoritenuta
+#### L'esempio da tenere a mente: il serbatoio
 
-![Marcia e arresto con autoritenuta: il contatto ausiliario in parallelo al pulsante di marcia mantiene il comando.](/assets/fondamenti/autoritenuta.svg)
+Torniamo al serbatoio della sezione precedente. Sai che entra una portata di 3 L/s e ne esce 1 L/s: **quanto vale il livello?** La domanda non ha risposta, perché manca il livello di partenza.
 
-Premi **Start**: il contattore chiude. Lo rilasci, e il contattore **resta chiuso**, perché un suo contatto ausiliario è in parallelo al pulsante e tiene alimentata la bobina.
+Ecco il punto: con lo **stesso ingresso attuale**, il serbatoio può essere pieno o quasi vuoto, secondo che cosa è successo prima. L'ingresso del momento non basta, serve il livello già raggiunto — ed è proprio lo stato.
 
-Guarda adesso l'ingresso: nessun pulsante premuto. L'uscita può essere **acceso** oppure **spento**, e dipende da che cosa è successo prima. Lo stesso ingresso attuale, due uscite diverse: **questa è memoria**, e la puoi toccare con mano al banco.
-
-Chiamando Start e StopOK i due comandi e Run la memoria:
-
-$$\mathtt{Run}_{nuovo}=\mathtt{StopOK}\land(\mathtt{Start}\lor\mathtt{Run}_{precedente}).$$
-
-Il termine $\mathtt{Run}_{precedente}$ è lo stato. Senza quel termine il circuito si spegnerebbe appena rilasci il pulsante. Ritroverai questa stessa espressione nel [Ladder](/risorse/glossario/index.qmd#gloss-ladder) e in Domotica.
+Prova a confrontarlo con la corrente in un resistore: lì, sapere la corrente adesso basta a sapere la tensione adesso. Nessun passato da conoscere.
 
 #### Un esempio elettrico: resistore e circuito RC
 
@@ -336,6 +330,22 @@ Usa **Verifica risposte** per controllare il lavoro o **Mostra soluzione** per v
 ### Tabella completa: proprietà combinate
 
 {{< include _classificazione-completa.qmd >}}
+
+### Caso guidato: il contattore con autoritenuta
+
+Il serbatoio conserva memoria in un livello d'acqua, il condensatore in una carica. Qui la memoria è fatta di rame e molle, e la puoi toccare al banco.
+
+![Marcia e arresto con autoritenuta: il contatto ausiliario in parallelo al pulsante di marcia mantiene il comando.](/assets/fondamenti/autoritenuta.svg)
+
+Nello schema i contatti sono marcati **[NO](/risorse/glossario/index.qmd#gloss-no)** e **[NC](/risorse/glossario/index.qmd#gloss-nc)**: indicano com'è il contatto **quando nessuno lo aziona**. Start è normalmente aperto, cioè a riposo non lascia passare e si chiude solo mentre lo premi. Stop e F1, il contatto del relè termico, sono normalmente chiusi: a riposo lasciano passare, e si aprono quando premi Stop o quando il termico interviene. Un arresto si caccia sempre su un contatto normalmente chiuso, così un filo che si stacca ferma la macchina invece di impedirne l'arresto.
+
+**Che cosa succede.** Premi **Start**: la bobina K1 si eccita e il [contattore](/risorse/glossario/index.qmd#gloss-contattore) chiude. Lo rilasci, e il contattore **resta chiuso**: un suo contatto ausiliario, in parallelo al pulsante, continua ad alimentare la bobina. È la funzione di **autoritenuta**.
+
+**Dov'è la memoria.** Guarda l'ingresso: nessun pulsante premuto. L'uscita può essere accesa oppure spenta, secondo che cosa è successo prima. Stesso ingresso attuale, due uscite diverse — la stessa situazione del serbatoio, con un altro corpo.
+
+La regola, a parole: *il comando resta attivo se c'è il consenso all'arresto* (Stop e F1 chiusi) *e, in più, o hai appena premuto Start, o era già attivo.* Quel «era già attivo» è lo stato: senza, il circuito si spegnerebbe appena rilasci il pulsante.
+
+Nel [Modulo 5](../modulo-5.qmd#ud:5.5) scriverai questa regola come espressione booleana e come programma [Ladder](/risorse/glossario/index.qmd#gloss-ladder); lì il consenso all'arresto prende il nome di [StopOK](/risorse/glossario/index.qmd#gloss-stopok). La ritroverai anche in Domotica.
 
 ### Caso guidato: termostato con isteresi
 

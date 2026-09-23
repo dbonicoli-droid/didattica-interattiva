@@ -81,7 +81,7 @@ L'**autoritenuta** mantiene il comando dopo il rilascio del pulsante di avvio. N
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/autoritenuta.svg)
 
-StopOK riassume i consensi fisici: Stop e F1 chiusi e il contatto Consenso chiuso. K1 è il contattore fisico; Run è la memoria logica che ne rappresenta il comando.
+[StopOK](/risorse/glossario/index.qmd#gloss-stopok) riassume i consensi fisici: Stop e F1 chiusi e il contatto Consenso chiuso. K1 è il contattore fisico; Run è la memoria logica che ne rappresenta il comando.
 
 ### Prova della memoria
 

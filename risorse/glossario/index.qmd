@@ -1197,6 +1197,14 @@ Structured Text: linguaggio testuale per assegnazioni, condizioni e calcoli nei 
 
 Informazione memorizzata che serve, insieme agli ingressi, a prevedere l'evoluzione del sistema.
 
+### StopOK {#gloss-stopok}
+
+[Sistemi automatici · Domotica e automazione]{.gloss-scope}
+
+Nome usato nei programmi di questo sito per il **consenso all'arresto**: vale 1 quando nessuno sta chiedendo di fermare la macchina, cioè quando i contatti di arresto sono chiusi. Il nome ricorda che il valore *vero* corrisponde al permesso di funzionare, non alla richiesta di arresto.
+
+Il pulsante di arresto si caccia su un [contatto](#gloss-contatto) normalmente chiuso ([NC](#gloss-nc)): a riposo lascia passare, e si apre quando lo premi o quando un filo si stacca. Così un guasto ferma la macchina invece di impedirne l'arresto.
+
 ### Strobe {#gloss-strobe}
 
 [TPSEE · Elettronici]{.gloss-scope}
