@@ -8,7 +8,7 @@ subtitle: "Modulo di approfondimento"
 **Guida condivisa al Ladder:** [timer e contatori: prima panoramica](/risorse/ladder/index.qmd#livello-5) · [valori numerici: prima panoramica](/risorse/ladder/index.qmd#livello-6).
 
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-5.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-do-modulo-5)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-5.qmd) · [Mappa concettuale](../mappe.qmd#mappa-do-modulo-5)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere

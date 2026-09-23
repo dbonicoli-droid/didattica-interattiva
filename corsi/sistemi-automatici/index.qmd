@@ -17,7 +17,7 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 
 Dal sistema al controllo: si impara a descrivere un sistema con un modello, a trattare le variabili con la logica e a realizzare automatismi con il PLC.
 
-[Guarda la mappa concettuale del corso →](/risorse/mappe/index.qmd#mappa-sistemi-automatici)
+[Guarda la mappa concettuale del corso →](mappe.qmd#mappa-sistemi-automatici)
 
 | **Modulo** | **Argomento** | **Periodo** | **Ore** |
 |---|---|---|---|

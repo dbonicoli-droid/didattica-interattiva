@@ -1,0 +1,842 @@
+---
+sidebar: tpsee-elettrotecnici
+page-layout: full
+title: "Mappe concettuali"
+subtitle: "La mappa d'insieme del percorso e quella di ogni modulo"
+description: "Le mappe concettuali di TPSEE · Elettrotecnici: l'insieme del percorso e i singoli moduli."
+toc: false
+---
+
+[← Indice del percorso](index.qmd)
+
+Ogni mappa mostra **le idee e il modo in cui si tengono insieme**, non l'indice delle pagine: serve per studiare e per ripassare, non per navigare il sito. Sotto ciascuna trovi la stessa mappa in forma di elenco, utile per ripetere a voce e per chi legge con uno strumento vocale.
+
+## Le mappe di questa pagina {#indice}
+
+| Mappa | Di che cosa parla |
+|---|---|
+| [Tutto il percorso — Dalla norma all'impianto](#mappa-tpsee-elettrotecnici) | Regole, documenti e scelte tecniche di un impianto |
+| [Modulo 1 — Chi decide come si fa un impianto](#mappa-et-modulo-1) | Norme, organismi, e differenza fra legge e norma |
+| [Modulo 2 — Disegnare perché qualcuno lo monti](#mappa-et-modulo-2) | Tipi di schema, simboli CEI e strumento CAD |
+| [Modulo 3 — Portare, comandare, utilizzare](#mappa-et-modulo-3) | Portare, comandare e utilizzare l'energia |
+| [Modulo 4 — Perché si sceglie un materiale](#mappa-et-modulo-4) | Proprietà dei materiali, conduttori e isolanti |
+| [Modulo 5 — Quanta luce arriva sul tavolo](#mappa-et-modulo-5) | Grandezze fotometriche, apparecchi e calcolo |
+
+## Dalla norma all'impianto {#mappa-tpsee-elettrotecnici}
+
+*Mappa del percorso: regole, documenti e scelte tecniche.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 750" role="img" aria-labelledby="et-t et-d">
+  <title id="et-t">Dalla norma all'impianto</title>
+  <desc id="et-d">Un impianto elettrico nasce da regole, si documenta con schemi normalizzati e si realizza scegliendo componenti in base a calcoli. Le norme fissano i simboli del disegno; la sezione del cavo si sceglie verificando la caduta di tensione. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Che cosa serve per progettare un impianto e farlo capire a chi lo monta?</text>
+
+  <rect class="mappa-radice" x="446" y="46" width="340" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Un impianto elettrico</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet)"/>
+  <text class="mappa-etichetta" x="106" y="164">obbedisce a</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">Le regole</text>
+  <text class="mappa-etichetta" x="506" y="164">si racconta con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">I documenti</text>
+  <text class="mappa-etichetta" x="906" y="164">si costruisce con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Le scelte</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">tecniche</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptet)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Leggi e norme</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">la legge obbliga,</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">la norma dice come fare bene</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Organismi normatori</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">CEI in Italia, CENELEC</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">in Europa, IEC nel mondo</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Marcatura e conformità</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">dichiarare per iscritto</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">che cosa si è rispettato</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptet)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Tipi di schema</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">funzionale, unifilare,</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">multifilare, planimetria</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Simboli normalizzati</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">lo stesso segno significa</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">la stessa cosa per tutti</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Legenda e cartiglio</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">chi, quando, in che scala,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">e che cosa vuol dire ogni segno</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V648"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M860,648 H896" marker-end="url(#ptet)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Conduttori e isolanti</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">chi lascia passare la corrente</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">e chi la trattiene</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Sezione dei cavi</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">più lungo o più carico,</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">più grossa la sezione</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Caduta di tensione</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">quanto arriva davvero</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">in fondo alla linea</text>
+
+  <rect class="mappa-nodo-c" x="896" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="636" text-anchor="middle">Illuminotecnica</text>
+  <text class="mappa-esempio" x="1016" y="662" text-anchor="middle">flusso e illuminamento:</text>
+  <text class="mappa-esempio" x="1016" y="680" text-anchor="middle">quanta luce arriva sul piano</text>
+
+  <path class="mappa-incrocio" d="M336,342 C404,362 428,414 496,444" marker-end="url(#ptxet)"/>
+  <text class="mappa-incrocio-testo" x="416" y="398" text-anchor="middle">fissano i</text>
+
+  <path class="mappa-incrocio" d="M1136,444 C1176,474 1176,516 1136,546" marker-end="url(#ptxet)"/>
+  <text class="mappa-incrocio-testo" x="1150" y="486" text-anchor="start">si sceglie</text>
+  <text class="mappa-incrocio-testo" x="1150" y="504" text-anchor="start">verificando la</text>
+</svg>
+```
+:::
+
+Il collegamento in basso a destra è un **giro**, non una freccia: si sceglie una sezione, si verifica la caduta di tensione, e se non va si ricomincia. Progettare è quasi sempre questo.
+
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
+
+**Un impianto elettrico** — che cosa serve per progettarlo e farlo capire a chi lo monta?
+
+- **Obbedisce a:** leggi e norme (la legge obbliga, la norma dice come fare bene), organismi normatori (CEI, CENELEC, IEC), marcatura e conformità.
+- **Si racconta con:** i tipi di schema (funzionale, unifilare, multifilare, planimetria), i simboli normalizzati, legenda e cartiglio.
+- **Si costruisce con:** conduttori e isolanti, sezione dei cavi, caduta di tensione, illuminotecnica.
+
+Collegamenti fra rami: le norme **fissano i** simboli del disegno; la sezione del cavo **si sceglie verificando la** caduta di tensione — ed è un giro che si ripete finché il conto torna.
+
+:::
+
+[Vai al programma del corso →](/corsi/tpsee-elettrotecnici/index.qmd#moduli)
+
+
+## Modulo 1 · Chi decide come si fa un impianto {#mappa-et-modulo-1}
+
+*Normativa e legislazione. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="et1-t et1-d">
+  <title id="et1-t">Chi decide come si fa un impianto</title>
+  <desc id="et1-d">Normalizzare, unificare e armonizzare sono tre scopi diversi; CEI, CENELEC e IEC sono i tre livelli che scrivono le regole; la legge obbliga mentre la norma definisce la regola dell’arte. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptet1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Chi decide come si fa un impianto, e con quale autorità?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Le regole del settore elettrico</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet1)"/>
+  <text class="mappa-etichetta" x="106" y="164">servono a</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">Mettere</text>
+  <text class="mappa-ramo-testo" x="216" y="228" text-anchor="middle">d’accordo</text>
+  <text class="mappa-etichetta" x="506" y="164">sono scritte da</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Organismi</text>
+  <text class="mappa-etichetta" x="906" y="164">hanno diverso</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Valore</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptet1)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Normalizzare</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">una regola scritta al posto</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">dell’abitudine di ciascuno</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Unificare</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">misure e forme ripetibili</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">il pezzo di ricambio esiste</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Armonizzare</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">la stessa regola in Europa</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">così il prodotto circola</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptet1)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">CEI</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">livello italiano</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">le norme che citiamo in classe</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">CENELEC</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">livello europeo</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">recepito dai singoli paesi</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">IEC</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">livello mondiale</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">da cui scendono le altre</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptet1)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptet1)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Legge</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">obbliga: si deve</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">sanzione se non si rispetta</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Norma tecnica</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">dice come si fa bene</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">la regola dell’arte</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Presunzione di conformità</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">rispetto la norma</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">e si presume che la legge sia rispettata</text>
+
+  <path class="mappa-incrocio" d="M336,546 C404,546 428,444 496,444" marker-end="url(#ptxet1)"/>
+  <text class="mappa-incrocio-testo" x="416" y="511" text-anchor="middle">armonizzare è il compito</text>
+  <text class="mappa-incrocio-testo" x="416" y="529" text-anchor="middle">del livello europeo</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,546 896,546" marker-end="url(#ptxet1)"/>
+  <text class="mappa-incrocio-testo" x="816" y="511" text-anchor="middle">è la norma che dà</text>
+  <text class="mappa-incrocio-testo" x="816" y="529" text-anchor="middle">la presunzione</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Le regole del settore elettrico.** Chi decide come si fa un impianto, e con quale autorità?
+
+- **Mettere d’accordo** — servono a questo:
+  - *Normalizzare*: una regola scritta al posto, dell’abitudine di ciascuno.
+  - *Unificare*: misure e forme ripetibili, il pezzo di ricambio esiste.
+  - *Armonizzare*: la stessa regola in Europa, così il prodotto circola.
+
+- **Organismi** — sono scritte da questo:
+  - *CEI*: livello italiano, le norme che citiamo in classe.
+  - *CENELEC*: livello europeo, recepito dai singoli paesi.
+  - *IEC*: livello mondiale, da cui scendono le altre.
+
+- **Valore** — hanno diverso questo:
+  - *Legge*: obbliga: si deve, sanzione se non si rispetta.
+  - *Norma tecnica*: dice come si fa bene, la regola dell’arte.
+  - *Presunzione di conformità*: rispetto la norma, e si presume che la legge sia rispettata.
+
+Dove i rami si toccano: armonizzare è il compito del livello europeo; è la norma che dà la presunzione.
+
+:::
+
+[Vai al Modulo 1 →](/corsi/tpsee-elettrotecnici/moduli/modulo-1.qmd) · [Sintesi del modulo](/corsi/tpsee-elettrotecnici/modulo-1.qmd)
+
+## Modulo 2 · Disegnare perché qualcuno lo monti {#mappa-et-modulo-2}
+
+*Rappresentazione grafica di impianti elettrici. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="et2-t et2-d">
+  <title id="et2-t">Disegnare perché qualcuno lo monti</title>
+  <desc id="et2-d">Lo stesso impianto si disegna in schemi diversi perché rispondono a domande diverse; i segni grafici CEI sono il vocabolario condiviso; ProgeCAD è lo strumento con cui si produce il documento. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptet2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si disegna un impianto perché lo capisca chi lo monta?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Il disegno dell’impianto</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet2)"/>
+  <text class="mappa-etichetta" x="106" y="164">si sceglie il</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Tipo di schema</text>
+  <text class="mappa-etichetta" x="506" y="164">si scrive nei</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Segni grafici</text>
+  <text class="mappa-etichetta" x="906" y="164">si produce con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Lo strumento</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptet2)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Funzionale</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">come funziona il comando</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">non dove passano i fili</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Unifilare</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">un tratto per tutta la linea</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">compatto, buono per l’insieme</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Multifilare e planimetria</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">ogni conduttore, oppure</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">la posizione sulla pianta</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptet2)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Simboli CEI</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">un segno, un significato</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">uguale per tutti</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Legenda</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">traduce le sigle usate</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">chi legge non deve indovinare</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Cartiglio</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">chi, quando, quale revisione</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">un disegno senza data è inutile</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptet2)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptet2)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">ProgeCAD</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">disegno in scala</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">e libreria di simboli</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Livelli e quote</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">ogni impianto sul suo livello</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">le misure che servono in cantiere</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">L’appartamento</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">il caso che mette insieme</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">tutti i pezzi del modulo</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,342 496,342" marker-end="url(#ptxet2)"/>
+  <text class="mappa-incrocio-testo" x="416" y="409" text-anchor="middle">ogni schema usa</text>
+  <text class="mappa-incrocio-testo" x="416" y="427" text-anchor="middle">gli stessi simboli</text>
+
+  <path class="mappa-incrocio" d="M736,546 C804,546 828,444 896,444" marker-end="url(#ptxet2)"/>
+  <text class="mappa-incrocio-testo" x="816" y="511" text-anchor="middle">il cartiglio nasce</text>
+  <text class="mappa-incrocio-testo" x="816" y="529" text-anchor="middle">nel disegno, non dopo</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Il disegno dell’impianto.** Come si disegna un impianto perché lo capisca chi lo monta?
+
+- **Tipo di schema** — si sceglie il questo:
+  - *Funzionale*: come funziona il comando, non dove passano i fili.
+  - *Unifilare*: un tratto per tutta la linea, compatto, buono per l’insieme.
+  - *Multifilare e planimetria*: ogni conduttore, oppure, la posizione sulla pianta.
+
+- **Segni grafici** — si scrive nei questo:
+  - *Simboli CEI*: un segno, un significato, uguale per tutti.
+  - *Legenda*: traduce le sigle usate, chi legge non deve indovinare.
+  - *Cartiglio*: chi, quando, quale revisione, un disegno senza data è inutile.
+
+- **Lo strumento** — si produce con questo:
+  - *ProgeCAD*: disegno in scala, e libreria di simboli.
+  - *Livelli e quote*: ogni impianto sul suo livello, le misure che servono in cantiere.
+  - *L’appartamento*: il caso che mette insieme, tutti i pezzi del modulo.
+
+Dove i rami si toccano: ogni schema usa gli stessi simboli; il cartiglio nasce nel disegno, non dopo.
+
+:::
+
+[Vai al Modulo 2 →](/corsi/tpsee-elettrotecnici/moduli/modulo-2.qmd) · [Sintesi del modulo](/corsi/tpsee-elettrotecnici/modulo-2.qmd)
+
+## Modulo 3 · Portare, comandare, utilizzare {#mappa-et-modulo-3}
+
+*Principali componenti degli impianti elettrici. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="et3-t et3-d">
+  <title id="et3-t">Portare, comandare, utilizzare</title>
+  <desc id="et3-d">I componenti di un impianto si dividono per mestiere: portare l’energia, comandarne il passaggio, utilizzarla. Deviatore e invertitore sono la risposta a un punto luce comandato da più posti; il livello prestazionale dice quanta dotazione serve. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptet3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Che cosa c’è dentro un impianto, e a che cosa serve ogni pezzo?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">I componenti dell’impianto</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet3)"/>
+  <text class="mappa-etichetta" x="106" y="164">servono a</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Portare</text>
+  <text class="mappa-etichetta" x="506" y="164">servono a</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Comandare</text>
+  <text class="mappa-etichetta" x="906" y="164">servono a</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Utilizzare</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptet3)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Cavi</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">sezione secondo la corrente</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">sigla e colori non sono a caso</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Tubi e canali</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">proteggono e permettono</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">di sfilare e rifare</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Energia o segnale</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">due mondi da non mescolare</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">nello stesso tubo</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptet3)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Interruttore</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">apre e chiude da un punto</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">uni o bipolare</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Deviatore e invertitore</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">lo stesso punto luce</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">comandato da più posti</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Relè</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">un piccolo comando governa</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">una corrente grande</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptet3)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptet3)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Prese e spine</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">tipi diversi, portate diverse</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">non sono intercambiabili</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Luci scale, citofono</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">le funzioni della parte comune</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">temporizzate o richiamate</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Livelli prestazionali</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">quanta dotazione serve</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">secondo la destinazione</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,444 896,444" marker-end="url(#ptxet3)"/>
+  <text class="mappa-incrocio-testo" x="816" y="460" text-anchor="middle">la luce scale è il caso</text>
+  <text class="mappa-incrocio-testo" x="816" y="478" text-anchor="middle">di comando da più posti</text>
+
+  <path class="mappa-incrocio" d="M336,342 C404,342 428,546 496,546" marker-end="url(#ptxet3)"/>
+  <text class="mappa-incrocio-testo" x="416" y="460" text-anchor="middle">il relè permette cavi</text>
+  <text class="mappa-incrocio-testo" x="416" y="478" text-anchor="middle">piccoli per comandare grandi</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**I componenti dell’impianto.** Che cosa c’è dentro un impianto, e a che cosa serve ogni pezzo?
+
+- **Portare** — servono a questo:
+  - *Cavi*: sezione secondo la corrente, sigla e colori non sono a caso.
+  - *Tubi e canali*: proteggono e permettono, di sfilare e rifare.
+  - *Energia o segnale*: due mondi da non mescolare, nello stesso tubo.
+
+- **Comandare** — servono a questo:
+  - *Interruttore*: apre e chiude da un punto, uni o bipolare.
+  - *Deviatore e invertitore*: lo stesso punto luce, comandato da più posti.
+  - *Relè*: un piccolo comando governa, una corrente grande.
+
+- **Utilizzare** — servono a questo:
+  - *Prese e spine*: tipi diversi, portate diverse, non sono intercambiabili.
+  - *Luci scale, citofono*: le funzioni della parte comune, temporizzate o richiamate.
+  - *Livelli prestazionali*: quanta dotazione serve, secondo la destinazione.
+
+Dove i rami si toccano: la luce scale è il caso di comando da più posti; il relè permette cavi piccoli per comandare grandi.
+
+:::
+
+[Vai al Modulo 3 →](/corsi/tpsee-elettrotecnici/moduli/modulo-3.qmd) · [Sintesi del modulo](/corsi/tpsee-elettrotecnici/modulo-3.qmd)
+
+## Modulo 4 · Perché si sceglie un materiale {#mappa-et-modulo-4}
+
+*Tecnologia dei materiali. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="et4-t et4-d">
+  <title id="et4-t">Perché si sceglie un materiale</title>
+  <desc id="et4-d">La scelta di un materiale nasce dalle sue proprietà; i conduttori si confrontano su resistività, peso e costo; gli isolanti su rigidità dielettrica e tenuta alla temperatura. La temperatura è il filo che lega i due mondi. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptet4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Perché rame e non alluminio, e perché un isolante invecchia?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">La scelta dei materiali</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet4)"/>
+  <text class="mappa-etichetta" x="106" y="164">si giudica dalle</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Proprietà</text>
+  <text class="mappa-etichetta" x="506" y="164">riguarda i</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Conduttori</text>
+  <text class="mappa-etichetta" x="906" y="164">riguarda gli</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Isolanti</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptet4)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Meccaniche</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">resistenza, duttilità</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">un cavo si piega e va tirato</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Elettriche</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">resistività e conducibilità</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">quanto si oppone al passaggio</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Termiche</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">dilatazione e conduzione</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">del calore che si produce</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptet4)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Rame</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">bassa resistività, lavorabile</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">il riferimento, ma costa</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Alluminio</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">più leggero e più economico</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">a parità serve più sezione</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Resistività e temperatura</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">il metallo caldo</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">conduce peggio</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptet4)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptet4)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Rigidità dielettrica</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">la tensione oltre la quale</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">l’isolante cede</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Classi termiche</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">la temperatura massima</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">che può sopportare a lungo</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Invecchiamento</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">calore e tempo</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">lo rendono fragile</text>
+
+  <path class="mappa-incrocio" d="M336,546 C404,546 428,546 496,546" marker-end="url(#ptxet4)"/>
+  <text class="mappa-incrocio-testo" x="416" y="562" text-anchor="middle">scalda: la resistenza</text>
+  <text class="mappa-incrocio-testo" x="416" y="580" text-anchor="middle">sale, e sale ancora</text>
+
+  <path class="mappa-incrocio" d="M736,546 C804,546 828,546 896,546" marker-end="url(#ptxet4)"/>
+  <text class="mappa-incrocio-testo" x="816" y="562" text-anchor="middle">il calore del conduttore</text>
+  <text class="mappa-incrocio-testo" x="816" y="580" text-anchor="middle">invecchia l’isolante</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**La scelta dei materiali.** Perché rame e non alluminio, e perché un isolante invecchia?
+
+- **Proprietà** — si giudica dalle questo:
+  - *Meccaniche*: resistenza, duttilità, un cavo si piega e va tirato.
+  - *Elettriche*: resistività e conducibilità, quanto si oppone al passaggio.
+  - *Termiche*: dilatazione e conduzione, del calore che si produce.
+
+- **Conduttori** — riguarda i questo:
+  - *Rame*: bassa resistività, lavorabile, il riferimento, ma costa.
+  - *Alluminio*: più leggero e più economico, a parità serve più sezione.
+  - *Resistività e temperatura*: il metallo caldo, conduce peggio.
+
+- **Isolanti** — riguarda gli questo:
+  - *Rigidità dielettrica*: la tensione oltre la quale, l’isolante cede.
+  - *Classi termiche*: la temperatura massima, che può sopportare a lungo.
+  - *Invecchiamento*: calore e tempo, lo rendono fragile.
+
+Dove i rami si toccano: scalda: la resistenza sale, e sale ancora; il calore del conduttore invecchia l’isolante.
+
+:::
+
+[Vai al Modulo 4 →](/corsi/tpsee-elettrotecnici/moduli/modulo-4.qmd) · [Sintesi del modulo](/corsi/tpsee-elettrotecnici/modulo-4.qmd)
+
+## Modulo 5 · Quanta luce arriva sul tavolo {#mappa-et-modulo-5}
+
+*Illuminotecnica. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="et5-t et5-d">
+  <title id="et5-t">Quanta luce arriva sul tavolo</title>
+  <desc id="et5-d">Le grandezze fotometriche distinguono la luce emessa dalla luce che arriva; la curva fotometrica dice come il flusso si distribuisce nello spazio; il calcolo traduce tutto nel numero di apparecchi. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptet5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Quanta luce arriva davvero sul piano di lavoro?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Il progetto illuminotecnico</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet5)"/>
+  <text class="mappa-etichetta" x="106" y="164">si misura con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Le grandezze</text>
+  <text class="mappa-etichetta" x="506" y="164">si ottiene dagli</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Apparecchi</text>
+  <text class="mappa-etichetta" x="906" y="164">si chiude con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Il calcolo</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptet5)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Flusso luminoso</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">lumen: quanta luce esce</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">in tutte le direzioni</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Intensità luminosa</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">candela: quanta luce</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">in una direzione</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Illuminamento</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">lux: quanta luce arriva</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">su un metro quadro</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptet5)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Sorgente</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">resa, durata, efficienza</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">e temperatura di colore</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Curva fotometrica</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">il disegno di dove va la luce</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">concentrata o diffusa</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Tipo di illuminazione</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">diretta, indiretta, mista</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">cambia comfort e resa</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptet5)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptet5)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Illuminamento richiesto</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">la norma lo fissa</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">secondo il compito visivo</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Numero di apparecchi</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">dal flusso necessario</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">al conto degli apparecchi</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Disposizione</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">passo e altezza</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">perché sia uniforme</text>
+
+  <path class="mappa-incrocio" d="M336,546 C404,546 428,546 496,546" marker-end="url(#ptxet5)"/>
+  <text class="mappa-incrocio-testo" x="416" y="562" text-anchor="middle">diretta o indiretta:</text>
+  <text class="mappa-incrocio-testo" x="416" y="580" text-anchor="middle">cambia il lux che arriva</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,546 896,546" marker-end="url(#ptxet5)"/>
+  <text class="mappa-incrocio-testo" x="816" y="511" text-anchor="middle">la curva decide</text>
+  <text class="mappa-incrocio-testo" x="816" y="529" text-anchor="middle">il passo fra gli apparecchi</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Il progetto illuminotecnico.** Quanta luce arriva davvero sul piano di lavoro?
+
+- **Le grandezze** — si misura con questo:
+  - *Flusso luminoso*: lumen: quanta luce esce, in tutte le direzioni.
+  - *Intensità luminosa*: candela: quanta luce, in una direzione.
+  - *Illuminamento*: lux: quanta luce arriva, su un metro quadro.
+
+- **Apparecchi** — si ottiene dagli questo:
+  - *Sorgente*: resa, durata, efficienza, e temperatura di colore.
+  - *Curva fotometrica*: il disegno di dove va la luce, concentrata o diffusa.
+  - *Tipo di illuminazione*: diretta, indiretta, mista, cambia comfort e resa.
+
+- **Il calcolo** — si chiude con questo:
+  - *Illuminamento richiesto*: la norma lo fissa, secondo il compito visivo.
+  - *Numero di apparecchi*: dal flusso necessario, al conto degli apparecchi.
+  - *Disposizione*: passo e altezza, perché sia uniforme.
+
+Dove i rami si toccano: diretta o indiretta: cambia il lux che arriva; la curva decide il passo fra gli apparecchi.
+
+:::
+
+[Vai al Modulo 5 →](/corsi/tpsee-elettrotecnici/moduli/modulo-5.qmd) · [Sintesi del modulo](/corsi/tpsee-elettrotecnici/modulo-5.qmd)
+
+## Le mappe degli argomenti comuni
+
+Grandezze, componenti e circuiti valgono per tutti i percorsi: le loro mappe stanno in [Mappe concettuali](/risorse/mappe/index.qmd), insieme a quelle degli altri percorsi ([TPSEE · Elettronici](/corsi/tpsee-elettronici/mappe.qmd) · [Sistemi automatici](/corsi/sistemi-automatici/mappe.qmd) · [Domotica e automazione](/corsi/domotica/mappe.qmd)).

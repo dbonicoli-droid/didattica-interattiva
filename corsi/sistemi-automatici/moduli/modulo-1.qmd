@@ -6,7 +6,7 @@ subtitle: "Riconoscere un sistema, descriverlo con un modello, tradurlo in un al
 toc-depth: 3
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-sa-modulo-1) · [Esercizi](../esercizi.qmd#es:modulo-1)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd) · [Mappa concettuale](../mappe.qmd#mappa-sa-modulo-1) · [Esercizi](../esercizi.qmd#es:modulo-1)
 
 ## In breve {#introduzione}
 

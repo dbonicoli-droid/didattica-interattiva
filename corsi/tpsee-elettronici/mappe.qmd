@@ -1,0 +1,713 @@
+---
+sidebar: tpsee-elettronici
+page-layout: full
+title: "Mappe concettuali"
+subtitle: "La mappa d'insieme del percorso e quella di ogni modulo"
+description: "Le mappe concettuali di TPSEE · Elettronici: l'insieme del percorso e i singoli moduli."
+toc: false
+---
+
+[← Indice del percorso](index.qmd)
+
+Ogni mappa mostra **le idee e il modo in cui si tengono insieme**, non l'indice delle pagine: serve per studiare e per ripassare, non per navigare il sito. Sotto ciascuna trovi la stessa mappa in forma di elenco, utile per ripetere a voce e per chi legge con uno strumento vocale.
+
+## Le mappe di questa pagina {#indice}
+
+| Mappa | Di che cosa parla |
+|---|---|
+| [Tutto il percorso — Dalla logica al circuito](#mappa-tpsee-elettronici) | Dalla funzione da realizzare al circuito che la esegue |
+| [Modulo 1 — Dall’idea alla basetta](#mappa-el-modulo-1) | Dallo schema alla simulazione alla basetta |
+| [Modulo 2 — Scrivere e semplificare una condizione](#mappa-el-modulo-2) | Variabili, regole e forma minima |
+| [Modulo 3 — I blocchi che eseguono una funzione](#mappa-el-modulo-3) | Porte, mappe di Karnaugh e blocchi pronti |
+| [Modulo 4 — Che cosa cambia quando un circuito ricorda](#mappa-el-modulo-4) | Stato, clock e contatori |
+
+## Dalla logica al circuito {#mappa-tpsee-elettronici}
+
+*Mappa del percorso: come una funzione diventa un circuito.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 750" role="img" aria-labelledby="el-t el-d">
+  <title id="el-t">Dalla logica al circuito</title>
+  <desc id="el-d">Da una funzione da realizzare si passa alla tabella di verità, da questa all'espressione booleana, che si semplifica e si realizza con porte e integrati. Le reti sequenziali aggiungono memoria alle combinatorie. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si passa da «voglio che faccia questo» a un circuito che lo fa?</text>
+
+  <rect class="mappa-radice" x="446" y="46" width="340" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Un circuito digitale</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptel)"/>
+  <text class="mappa-etichetta" x="106" y="164">si descrive con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">Descrivere</text>
+  <text class="mappa-ramo-testo" x="216" y="228" text-anchor="middle">la funzione</text>
+  <text class="mappa-etichetta" x="506" y="164">si semplifica con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">Semplificare</text>
+  <text class="mappa-ramo-testo" x="616" y="228" text-anchor="middle">prima di costruire</text>
+  <text class="mappa-etichetta" x="906" y="164">si realizza con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Realizzare</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">il circuito</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptel)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Variabili booleane</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">due soli valori: 0 e 1</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">acceso o spento, vero o falso</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Tabella di verità</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">tutte le combinazioni</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">e che cosa deve uscire</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Espressione booleana</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">la stessa cosa in formula:</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">AND, OR, NOT</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptel)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Algebra di Boole</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">le regole per riscrivere</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">senza cambiare il risultato</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Leggi di De Morgan</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">negare una somma</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">è moltiplicare le negate</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Mappe di Karnaugh</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">si vedono i gruppi,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">si trova la forma minima</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V648"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M860,648 H896" marker-end="url(#ptel)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Porte e integrati</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">NAND e NOR bastano da sole</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">74LS138, 74LS151, 74LS85</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Blocchi combinatori</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">sommatori, comparatori,</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">decoder, multiplexer</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Reti sequenziali</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">l'uscita dipende anche</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">da dove eri prima</text>
+
+  <rect class="mappa-nodo-c" x="896" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="636" text-anchor="middle">Dal disegno al banco</text>
+  <text class="mappa-esempio" x="1016" y="662" text-anchor="middle">schema, simulazione,</text>
+  <text class="mappa-esempio" x="1016" y="680" text-anchor="middle">circuito stampato</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,466 496,504" marker-end="url(#ptxel)"/>
+  <text class="mappa-incrocio-testo" x="416" y="490" text-anchor="middle">si riscrive e</text>
+
+  <path class="mappa-incrocio" d="M736,504 C804,504 828,382 896,342" marker-end="url(#ptxel)"/>
+  <text class="mappa-incrocio-testo" x="816" y="408" text-anchor="middle">la forma minima</text>
+  <text class="mappa-incrocio-testo" x="816" y="426" text-anchor="middle">diventa porte</text>
+
+  <path class="mappa-incrocio" d="M1136,444 C1176,474 1176,516 1136,546" marker-end="url(#ptxel)"/>
+  <text class="mappa-incrocio-testo" x="1150" y="486" text-anchor="start">aggiungono</text>
+  <text class="mappa-incrocio-testo" x="1150" y="504" text-anchor="start">memoria</text>
+</svg>
+```
+:::
+
+Il collegamento che regge il corso è **«la forma minima diventa porte»**: è il punto in cui una formula smette di essere matematica e diventa un oggetto da montare.
+
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
+
+**Un circuito digitale** — come si passa da «voglio che faccia questo» a un circuito che lo fa?
+
+- **Si descrive con:** variabili booleane (due soli valori), **tabella di verità** (tutte le combinazioni e che cosa deve uscire), **espressione booleana** (la stessa cosa in formula).
+- **Si semplifica con:** algebra di Boole, leggi di De Morgan, **mappe di Karnaugh**, da cui esce la forma minima.
+- **Si realizza con:** porte e integrati (NAND e NOR bastano da sole), blocchi combinatori (sommatori, comparatori, decoder, multiplexer), **reti sequenziali** dove l'uscita dipende anche da dove eri prima, e infine schema, simulazione e circuito stampato.
+
+Collegamenti fra rami: l'espressione **si riscrive e** si semplifica con Karnaugh; la **forma minima diventa porte**; le reti sequenziali **aggiungono memoria** ai blocchi combinatori.
+
+:::
+
+[Vai al programma del corso →](/corsi/tpsee-elettronici/index.qmd#moduli)
+
+
+## Modulo 1 · Dall’idea alla basetta {#mappa-el-modulo-1}
+
+*Il progetto di sistemi elettrici ed elettronici. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="el1-t el1-d">
+  <title id="el1-t">Dall’idea alla basetta</title>
+  <desc id="el1-d">Un circuito si descrive con simboli normalizzati, si prova in simulazione e solo alla fine si realizza su basetta. Lo schema diventa netlist e la netlist diventa piste. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptel1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxel1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come nasce un circuito, dall’idea alla basetta?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Progettare un circuito</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptel1)"/>
+  <text class="mappa-etichetta" x="106" y="164">prima si</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Descrivere</text>
+  <text class="mappa-etichetta" x="506" y="164">poi si</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">Provare</text>
+  <text class="mappa-ramo-testo" x="616" y="228" text-anchor="middle">senza saldare</text>
+  <text class="mappa-etichetta" x="906" y="164">infine si</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Realizzare</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptel1)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Simbologia IEC</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">lo stesso segno per tutti</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">chi legge capisce senza spiegazioni</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Schema elettrico</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">che cosa è collegato a che cosa</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">non dice ancora dove sta</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Netlist</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">l’elenco dei collegamenti</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">la forma che capisce il calcolatore</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptel1)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Simulazione</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">Multisim: il circuito prima</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">che esista davvero</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Misure virtuali</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">multimetro e oscilloscopio</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">sullo schermo, non sul banco</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Errori che costano zero</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">qui si sbaglia gratis</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">sulla basetta si sbaglia e si ricomincia</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptel1)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptel1)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Sbroglio</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">Ultiboard: dalle connessioni</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">al disegno delle piste</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Piste e piazzole</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">larghezza secondo la corrente</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">distanza secondo la tensione</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Montaggio e collaudo</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">si salda, si prova, si misura</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">il confronto con la simulazione</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,546 496,546" marker-end="url(#ptxel1)"/>
+  <text class="mappa-incrocio-testo" x="416" y="511" text-anchor="middle">lo schema diventa netlist,</text>
+  <text class="mappa-incrocio-testo" x="416" y="529" text-anchor="middle">la netlist diventa piste</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,342 896,342" marker-end="url(#ptxel1)"/>
+  <text class="mappa-incrocio-testo" x="816" y="409" text-anchor="middle">ciò che funziona in simulazione</text>
+  <text class="mappa-incrocio-testo" x="816" y="427" text-anchor="middle">passa allo sbroglio</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Progettare un circuito.** Come nasce un circuito, dall’idea alla basetta?
+
+- **Descrivere** — prima si questo:
+  - *Simbologia IEC*: lo stesso segno per tutti, chi legge capisce senza spiegazioni.
+  - *Schema elettrico*: che cosa è collegato a che cosa, non dice ancora dove sta.
+  - *Netlist*: l’elenco dei collegamenti, la forma che capisce il calcolatore.
+
+- **Provare senza saldare** — poi si questo:
+  - *Simulazione*: Multisim: il circuito prima, che esista davvero.
+  - *Misure virtuali*: multimetro e oscilloscopio, sullo schermo, non sul banco.
+  - *Errori che costano zero*: qui si sbaglia gratis, sulla basetta si sbaglia e si ricomincia.
+
+- **Realizzare** — infine si questo:
+  - *Sbroglio*: Ultiboard: dalle connessioni, al disegno delle piste.
+  - *Piste e piazzole*: larghezza secondo la corrente, distanza secondo la tensione.
+  - *Montaggio e collaudo*: si salda, si prova, si misura, il confronto con la simulazione.
+
+Dove i rami si toccano: lo schema diventa netlist, la netlist diventa piste; ciò che funziona in simulazione passa allo sbroglio.
+
+:::
+
+[Vai al Modulo 1 →](/corsi/tpsee-elettronici/moduli/modulo-1.qmd) · [Sintesi del modulo](/corsi/tpsee-elettronici/modulo-1.qmd)
+
+## Modulo 2 · Scrivere e semplificare una condizione {#mappa-el-modulo-2}
+
+*Elementi di logica. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="el2-t el2-d">
+  <title id="el2-t">Scrivere e semplificare una condizione</title>
+  <desc id="el2-d">L’algebra di Boole dà gli oggetti (variabili e operazioni), le regole per trasformare le espressioni e il modo di arrivare alla forma minima. De Morgan permette di scambiare AND e OR. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptel2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxel2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si scrive una condizione, e come si riduce all’osso?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">L’algebra di Boole</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptel2)"/>
+  <text class="mappa-etichetta" x="106" y="164">ha i suoi</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Oggetti</text>
+  <text class="mappa-etichetta" x="506" y="164">si governa con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Regole</text>
+  <text class="mappa-etichetta" x="906" y="164">serve per</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Arrivare</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">alla forma minima</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptel2)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Variabile booleana</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">due soli valori: 0 e 1</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">acceso o spento, vero o falso</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">AND, OR, NOT</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">tutte le altre si costruiscono</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">a partire da queste tre</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Tabella di verità</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">la funzione riga per riga</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">non lascia dubbi, ma è lunga</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptel2)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Identità e complemento</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">A+0=A, A·1=A</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">A+Ā=1, A·Ā=0</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Assorbimento</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">A+A·B=A</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">un termine inutile si butta</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">De Morgan</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">la negazione di un AND</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">è l’OR delle negazioni</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptel2)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptel2)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Espressione ↔ tabella</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">si passa da una all’altra</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">sono due facce della stessa cosa</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Semplificazione</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">meno termini, meno porte</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">meno porte, meno costo</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Forma minima</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">la più corta che fa la stessa cosa</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">non è sempre una sola</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,342 496,342" marker-end="url(#ptxel2)"/>
+  <text class="mappa-incrocio-testo" x="416" y="409" text-anchor="middle">le regole valgono</text>
+  <text class="mappa-incrocio-testo" x="416" y="427" text-anchor="middle">per queste tre operazioni</text>
+
+  <path class="mappa-incrocio" d="M736,546 C804,546 828,444 896,444" marker-end="url(#ptxel2)"/>
+  <text class="mappa-incrocio-testo" x="816" y="511" text-anchor="middle">De Morgan è lo strumento</text>
+  <text class="mappa-incrocio-testo" x="816" y="529" text-anchor="middle">che fa accorciare</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**L’algebra di Boole.** Come si scrive una condizione, e come si riduce all’osso?
+
+- **Oggetti** — ha i suoi questo:
+  - *Variabile booleana*: due soli valori: 0 e 1, acceso o spento, vero o falso.
+  - *AND, OR, NOT*: tutte le altre si costruiscono, a partire da queste tre.
+  - *Tabella di verità*: la funzione riga per riga, non lascia dubbi, ma è lunga.
+
+- **Regole** — si governa con questo:
+  - *Identità e complemento*: A+0=A, A·1=A, A+Ā=1, A·Ā=0.
+  - *Assorbimento*: A+A·B=A, un termine inutile si butta.
+  - *De Morgan*: la negazione di un AND, è l’OR delle negazioni.
+
+- **Arrivare alla forma minima** — serve per questo:
+  - *Espressione ↔ tabella*: si passa da una all’altra, sono due facce della stessa cosa.
+  - *Semplificazione*: meno termini, meno porte, meno porte, meno costo.
+  - *Forma minima*: la più corta che fa la stessa cosa, non è sempre una sola.
+
+Dove i rami si toccano: le regole valgono per queste tre operazioni; De Morgan è lo strumento che fa accorciare.
+
+:::
+
+[Vai al Modulo 2 →](/corsi/tpsee-elettronici/moduli/modulo-2.qmd) · [Sintesi del modulo](/corsi/tpsee-elettronici/modulo-2.qmd)
+
+## Modulo 3 · I blocchi che eseguono una funzione {#mappa-el-modulo-3}
+
+*Elettronica digitale in logica cablata. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="el3-t el3-d">
+  <title id="el3-t">I blocchi che eseguono una funzione</title>
+  <desc id="el3-d">Le porte logiche realizzano la funzione, le mappe di Karnaugh la accorciano prima di costruirla, i blocchi funzionali già pronti la risolvono in un colpo. Il codice Gray è la ragione per cui le celle vicine di Karnaugh differiscono per un solo bit. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptel3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxel3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Con quali blocchi si costruisce una funzione logica?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">La logica cablata</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptel3)"/>
+  <text class="mappa-etichetta" x="106" y="164">si costruisce con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Porte</text>
+  <text class="mappa-etichetta" x="506" y="164">si accorcia con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Karnaugh</text>
+  <text class="mappa-etichetta" x="906" y="164">si risolve con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Blocchi</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">funzionali</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptel3)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Le sei porte</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">NOT, AND, OR</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">NAND, NOR, XOR</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Universalità</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">con le sole NAND (o NOR)</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">si fa qualunque funzione</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Integrati 74LS</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">più porte in un contenitore</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">piedini, alimentazione, sigla</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptel3)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Codice Gray</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">fra due valori vicini</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">cambia un solo bit</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Gruppi di 1</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">potenze di 2, il più grandi</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">possibile, anche sovrapposti</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Forma minima</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">dai gruppi si legge</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">direttamente l’espressione</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptel3)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptel3)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Contare e confrontare</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">sommatore, comparatore 74LS85</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">l’aritmetica fatta di porte</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Scegliere e smistare</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">MUX 74LS151, decoder 74LS138</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">una via fra molte</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Mostrare</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">decodifica per 7 segmenti</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">dal numero alla cifra accesa</text>
+
+  <path class="mappa-incrocio" d="M336,342 C404,342 428,444 496,444" marker-end="url(#ptxel3)"/>
+  <text class="mappa-incrocio-testo" x="416" y="409" text-anchor="middle">i gruppi diventano</text>
+  <text class="mappa-incrocio-testo" x="416" y="427" text-anchor="middle">porte da collegare</text>
+
+  <path class="mappa-incrocio" d="M736,342 C804,342 828,444 896,444" marker-end="url(#ptxel3)"/>
+  <text class="mappa-incrocio-testo" x="816" y="409" text-anchor="middle">un MUX realizza</text>
+  <text class="mappa-incrocio-testo" x="816" y="427" text-anchor="middle">qualsiasi funzione</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**La logica cablata.** Con quali blocchi si costruisce una funzione logica?
+
+- **Porte** — si costruisce con questo:
+  - *Le sei porte*: NOT, AND, OR, NAND, NOR, XOR.
+  - *Universalità*: con le sole NAND (o NOR), si fa qualunque funzione.
+  - *Integrati 74LS*: più porte in un contenitore, piedini, alimentazione, sigla.
+
+- **Karnaugh** — si accorcia con questo:
+  - *Codice Gray*: fra due valori vicini, cambia un solo bit.
+  - *Gruppi di 1*: potenze di 2, il più grandi, possibile, anche sovrapposti.
+  - *Forma minima*: dai gruppi si legge, direttamente l’espressione.
+
+- **Blocchi funzionali** — si risolve con questo:
+  - *Contare e confrontare*: sommatore, comparatore 74LS85, l’aritmetica fatta di porte.
+  - *Scegliere e smistare*: MUX 74LS151, decoder 74LS138, una via fra molte.
+  - *Mostrare*: decodifica per 7 segmenti, dal numero alla cifra accesa.
+
+Dove i rami si toccano: i gruppi diventano porte da collegare; un MUX realizza qualsiasi funzione.
+
+:::
+
+[Vai al Modulo 3 →](/corsi/tpsee-elettronici/moduli/modulo-3.qmd) · [Sintesi del modulo](/corsi/tpsee-elettronici/modulo-3.qmd)
+
+## Modulo 4 · Che cosa cambia quando un circuito ricorda {#mappa-el-modulo-4}
+
+*Reti sequenziali. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="el4-t el4-d">
+  <title id="el4-t">Che cosa cambia quando un circuito ricorda</title>
+  <desc id="el4-d">Una rete sequenziale ha uno stato: l’uscita dipende anche dal passato. Il latch e il flip-flop sono la memoria elementare, il clock decide quando lo stato cambia, il contatore è una catena di flip-flop. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptel4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxel4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Che cosa cambia, in un circuito, quando comincia a ricordare?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Le reti sequenziali</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptel4)"/>
+  <text class="mappa-etichetta" x="106" y="164">introducono</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">La memoria</text>
+  <text class="mappa-etichetta" x="506" y="164">hanno bisogno del</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Tempo</text>
+  <text class="mappa-etichetta" x="906" y="164">servono per</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Contare</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptel4)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Lo stato</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">l’uscita dipende anche</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">da com’era prima</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Latch SR</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">Set mette a 1, Reset a 0</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">e senza comandi resta com’è</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Flip-flop</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">un latch che ubbidisce</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">solo quando arriva il clock</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptel4)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Clock</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">il battito che scandisce</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">quando è lecito cambiare</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Fronte</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">conta l’istante del salto</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">non il livello del segnale</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Sincrono o asincrono</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">tutti insieme al clock,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">oppure a catena uno dopo l’altro</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptel4)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptel4)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Contatore asincrono</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">ogni flip-flop comanda</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">il clock del successivo</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Contatore sincrono</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">un solo clock per tutti</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">nessun ritardo che si accumula</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Modulo del conteggio</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">quanti stati prima</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">di ricominciare da zero</text>
+
+  <path class="mappa-incrocio" d="M336,546 C404,546 428,342 496,342" marker-end="url(#ptxel4)"/>
+  <text class="mappa-incrocio-testo" x="416" y="460" text-anchor="middle">il flip-flop è ciò che</text>
+  <text class="mappa-incrocio-testo" x="416" y="478" text-anchor="middle">trasforma il clock in memoria</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,342 896,342" marker-end="url(#ptxel4)"/>
+  <text class="mappa-incrocio-testo" x="816" y="409" text-anchor="middle">nell’asincrono il fronte di uno</text>
+  <text class="mappa-incrocio-testo" x="816" y="427" text-anchor="middle">è il clock del successivo</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Le reti sequenziali.** Che cosa cambia, in un circuito, quando comincia a ricordare?
+
+- **La memoria** — introducono questo:
+  - *Lo stato*: l’uscita dipende anche, da com’era prima.
+  - *Latch SR*: Set mette a 1, Reset a 0, e senza comandi resta com’è.
+  - *Flip-flop*: un latch che ubbidisce, solo quando arriva il clock.
+
+- **Tempo** — hanno bisogno del questo:
+  - *Clock*: il battito che scandisce, quando è lecito cambiare.
+  - *Fronte*: conta l’istante del salto, non il livello del segnale.
+  - *Sincrono o asincrono*: tutti insieme al clock,, oppure a catena uno dopo l’altro.
+
+- **Contare** — servono per questo:
+  - *Contatore asincrono*: ogni flip-flop comanda, il clock del successivo.
+  - *Contatore sincrono*: un solo clock per tutti, nessun ritardo che si accumula.
+  - *Modulo del conteggio*: quanti stati prima, di ricominciare da zero.
+
+Dove i rami si toccano: il flip-flop è ciò che trasforma il clock in memoria; nell’asincrono il fronte di uno è il clock del successivo.
+
+:::
+
+[Vai al Modulo 4 →](/corsi/tpsee-elettronici/moduli/modulo-4.qmd) · [Sintesi del modulo](/corsi/tpsee-elettronici/modulo-4.qmd)
+
+## Le mappe degli argomenti comuni
+
+Grandezze, componenti e circuiti valgono per tutti i percorsi: le loro mappe stanno in [Mappe concettuali](/risorse/mappe/index.qmd), insieme a quelle degli altri percorsi ([TPSEE · Elettrotecnici](/corsi/tpsee-elettrotecnici/mappe.qmd) · [Sistemi automatici](/corsi/sistemi-automatici/mappe.qmd) · [Domotica e automazione](/corsi/domotica/mappe.qmd)).

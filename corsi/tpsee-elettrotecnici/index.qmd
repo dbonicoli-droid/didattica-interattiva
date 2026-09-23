@@ -17,7 +17,7 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 
 Dalla norma all'impianto: si parte dalle regole e dai simboli del disegno elettrico, si passa alla scelta di componenti e materiali e si arriva al progetto illuminotecnico.
 
-[Guarda la mappa concettuale del corso →](/risorse/mappe/index.qmd#mappa-tpsee-elettrotecnici)
+[Guarda la mappa concettuale del corso →](mappe.qmd#mappa-tpsee-elettrotecnici)
 
 | **Modulo** | **Argomento** | **Periodo** | **Ore** |
 |---|---|---|---|

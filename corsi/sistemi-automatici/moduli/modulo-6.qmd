@@ -8,7 +8,7 @@ subtitle: "Modulo di approfondimento"
 **Guida al Ladder:** [Timer e contatori: prima panoramica](/risorse/ladder/index.qmd#livello-5) · [Valori numerici e segnali analogici: prima panoramica](/risorse/ladder/index.qmd#livello-6).
 
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-6.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-sa-modulo-6)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-6.qmd) · [Mappa concettuale](../mappe.qmd#mappa-sa-modulo-6)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere

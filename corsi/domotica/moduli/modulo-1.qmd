@@ -4,7 +4,7 @@ title: "Modulo 1 / Elettromeccanica"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-do-modulo-1)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd) · [Mappa concettuale](../mappe.qmd#mappa-do-modulo-1)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere

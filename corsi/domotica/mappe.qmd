@@ -1,0 +1,846 @@
+---
+sidebar: domotica
+page-layout: full
+title: "Mappe concettuali"
+subtitle: "La mappa d'insieme del percorso e quella di ogni modulo"
+description: "Le mappe concettuali di Domotica e automazione: l'insieme del percorso e i singoli moduli."
+toc: false
+---
+
+[← Indice del percorso](index.qmd)
+
+Ogni mappa mostra **le idee e il modo in cui si tengono insieme**, non l'indice delle pagine: serve per studiare e per ripassare, non per navigare il sito. Sotto ciascuna trovi la stessa mappa in forma di elenco, utile per ripetere a voce e per chi legge con uno strumento vocale.
+
+## Le mappe di questa pagina {#indice}
+
+| Mappa | Di che cosa parla |
+|---|---|
+| [Tutto il percorso — Dal comando alla sequenza](#mappa-domotica) | Dai relè al PLC ai linguaggi di programmazione |
+| [Modulo 1 — Comandare un motore in sicurezza](#mappa-do-modulo-1) | Contattore, relè termico, potenza e comando |
+| [Modulo 2 — Percepire, decidere, agire](#mappa-do-modulo-2) | Sensori, controllore e attuatori |
+| [Modulo 3 — Perché somiglia a uno schema a relè](#mappa-do-modulo-3) | Contatti, bobine e funzioni di base |
+| [Modulo 4 — Descrivere una sequenza, non una condizione](#mappa-do-modulo-4) | Passi, transizioni e sequenze |
+| [Modulo 5 — Che cosa serve oltre contatti e bobine](#mappa-do-modulo-5) | Tempi, memoria e controllo del flusso |
+
+## Dal comando alla sequenza {#mappa-domotica}
+
+*Mappa del percorso: dai relè al programma.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 890" role="img" aria-labelledby="do-t do-d">
+  <title id="do-t">Dal comando alla sequenza</title>
+  <desc id="do-d">Una macchina si comanda prima con i relè, poi con un PLC, infine descrivendo le sequenze in un linguaggio. L'autoritenuta del contattore, la bobina di memoria in Ladder e il passo attivo dell'SFC sono la stessa idea in tre forme. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptdo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si comanda una macchina, e che cosa cambia passando dai relè al programma?</text>
+
+  <rect class="mappa-radice" x="446" y="46" width="340" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Comandare una macchina</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo)"/>
+  <text class="mappa-etichetta" x="106" y="164">prima si fa con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">I relè</text>
+  <text class="mappa-ramo-testo" x="216" y="228" text-anchor="middle">e i contattori</text>
+  <text class="mappa-etichetta" x="506" y="164">poi si fa con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">Il PLC</text>
+  <text class="mappa-etichetta" x="906" y="164">si descrive con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">I linguaggi</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V648"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M60,648 H96" marker-end="url(#ptdo)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Il contattore</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">una bobina comanda</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">contatti di potenza</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Comando e potenza</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">due circuiti separati: uno decide,</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">l'altro porta la corrente</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Autoritenuta</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">rilasci il pulsante</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">e il comando resta</text>
+
+  <rect class="mappa-nodo-a" x="96" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="636" text-anchor="middle">Protezione e interblocco</text>
+  <text class="mappa-esempio" x="216" y="662" text-anchor="middle">il relè termico ferma,</text>
+  <text class="mappa-esempio" x="216" y="680" text-anchor="middle">l'interblocco impedisce</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptdo)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Sensori e attuatori</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">che cosa legge la macchina</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">e che cosa le fa muovere le cose</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Ingressi e uscite</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">morsetti veri, collegati</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">a variabili del programma</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">La scansione ciclica</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">legge tutto, calcola tutto,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">scrive tutto, e ricomincia</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptdo)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Ladder</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">contatti e bobine:</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">sembra uno schema a relè</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">SFC</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">passi, transizioni e azioni:</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">la sequenza si vede</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Tempi e conteggi</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">timer e contatori,</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">per aspettare e per contare</text>
+
+  <rect class="mappa-nodo-condiviso" x="436" y="760" width="360" height="90" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="792" text-anchor="middle">La memoria, tre volte la stessa</text>
+  <text class="mappa-esempio" x="616" y="818" text-anchor="middle">contatto ausiliario · bobina di memoria in Ladder</text>
+  <text class="mappa-esempio" x="616" y="836" text-anchor="middle">passo attivo in SFC</text>
+
+  <path class="mappa-incrocio" d="M216,690 V730 C216,762 372,782 434,790" marker-end="url(#ptxdo)"/>
+  <text class="mappa-incrocio-testo" x="300" y="772" text-anchor="middle">è già memoria</text>
+
+  <path class="mappa-incrocio" d="M1016,588 C1016,690 900,772 798,790" marker-end="url(#ptxdo)"/>
+  <text class="mappa-incrocio-testo" x="952" y="700" text-anchor="start">la stessa idea,</text>
+  <text class="mappa-incrocio-testo" x="952" y="718" text-anchor="start">scritta in programma</text>
+</svg>
+```
+:::
+
+Il nodo tratteggiato in basso è il filo di tutto il corso: **la memoria è la stessa cosa** che sia un contatto ausiliario, una bobina in Ladder o un passo attivo in SFC. Cambia il corpo, non l'idea.
+
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
+
+**Comandare una macchina** — che cosa cambia passando dai relè al programma?
+
+- **Prima si fa con i relè:** il contattore (una bobina comanda contatti di potenza), comando e potenza come due circuiti separati, **autoritenuta**, protezione con relè termico e interblocco.
+- **Poi si fa con il PLC:** sensori e attuatori, ingressi e uscite come morsetti veri collegati a variabili, **scansione ciclica** (legge tutto, calcola tutto, scrive tutto, ricomincia).
+- **Si descrive con i linguaggi:** Ladder (contatti e bobine), SFC (passi, transizioni e azioni), timer e contatori.
+
+Il filo che li unisce: l'**autoritenuta è già memoria**, e la stessa idea si ritrova **scritta in programma** come bobina di memoria in Ladder e come passo attivo in SFC.
+
+:::
+
+[Vai al programma del corso →](/corsi/domotica/index.qmd#moduli)
+
+
+## Modulo 1 · Comandare un motore in sicurezza {#mappa-do-modulo-1}
+
+*Comando e protezione dei motori. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="do1-t do1-d">
+  <title id="do1-t">Comandare un motore in sicurezza</title>
+  <desc id="do1-d">Il comando di un motore usa il contattore per far governare una corrente grande da un comando piccolo, tiene separato il circuito di potenza da quello di comando e realizza le funzioni tipiche: autoritenuta, marcia-arresto, inversione con interblocco. La bobina sta nel comando, i contatti nella potenza. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptdo1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si comanda un motore senza toccare la corrente che lo alimenta?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Il comando di un motore</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo1)"/>
+  <text class="mappa-etichetta" x="106" y="164">si fa con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Gli organi</text>
+  <text class="mappa-etichetta" x="506" y="164">si divide in</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Due circuiti</text>
+  <text class="mappa-etichetta" x="906" y="164">realizza le</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Funzioni</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptdo1)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Contattore</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">una bobina a 24 V chiude</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">contatti da decine di ampere</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Relè termico</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">protegge dal sovraccarico</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">che dura, non dal cortocircuito</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Pulsanti NO e NC</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">Start chiude, Stop apre:</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">lo Stop è NC per sicurezza</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptdo1)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Circuito di potenza</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">trifase, corrente grande</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">va al motore</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Circuito di comando</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">bassa tensione, poca corrente</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">ci sta la logica</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Perché separarli</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">si lavora sul comando</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">senza maneggiare la potenza</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptdo1)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptdo1)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Autoritenuta</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">premo e rilascio,</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">il motore resta in marcia</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Marcia, arresto, segnalazioni</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">l’operatore deve sapere</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">in che stato è la macchina</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Inversione e interblocco</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">due sensi di marcia,</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">mai eccitati insieme</text>
+
+  <path class="mappa-incrocio" d="M336,342 C404,342 428,444 496,444" marker-end="url(#ptxdo1)"/>
+  <text class="mappa-incrocio-testo" x="416" y="409" text-anchor="middle">la bobina sta nel comando,</text>
+  <text class="mappa-incrocio-testo" x="416" y="427" text-anchor="middle">i contatti nella potenza</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,342 896,342" marker-end="url(#ptxdo1)"/>
+  <text class="mappa-incrocio-testo" x="816" y="409" text-anchor="middle">l’autoritenuta vive tutta</text>
+  <text class="mappa-incrocio-testo" x="816" y="427" text-anchor="middle">nel circuito di comando</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Il comando di un motore.** Come si comanda un motore senza toccare la corrente che lo alimenta?
+
+- **Gli organi** — si fa con questo:
+  - *Contattore*: una bobina a 24 V chiude, contatti da decine di ampere.
+  - *Relè termico*: protegge dal sovraccarico, che dura, non dal cortocircuito.
+  - *Pulsanti NO e NC*: Start chiude, Stop apre:, lo Stop è NC per sicurezza.
+
+- **Due circuiti** — si divide in questo:
+  - *Circuito di potenza*: trifase, corrente grande, va al motore.
+  - *Circuito di comando*: bassa tensione, poca corrente, ci sta la logica.
+  - *Perché separarli*: si lavora sul comando, senza maneggiare la potenza.
+
+- **Funzioni** — realizza le questo:
+  - *Autoritenuta*: premo e rilascio,, il motore resta in marcia.
+  - *Marcia, arresto, segnalazioni*: l’operatore deve sapere, in che stato è la macchina.
+  - *Inversione e interblocco*: due sensi di marcia,, mai eccitati insieme.
+
+Dove i rami si toccano: la bobina sta nel comando, i contatti nella potenza; l’autoritenuta vive tutta nel circuito di comando.
+
+:::
+
+[Vai al Modulo 1 →](/corsi/domotica/moduli/modulo-1.qmd) · [Sintesi del modulo](/corsi/domotica/modulo-1.qmd)
+
+## Modulo 2 · Percepire, decidere, agire {#mappa-do-modulo-2}
+
+*Automazione industriale e PLC. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="do2-t do2-d">
+  <title id="do2-t">Percepire, decidere, agire</title>
+  <desc id="do2-d">Un sistema automatico percepisce con sensori e trasduttori, decide con un controllore programmabile e agisce con gli attuatori. Il trasduttore è ciò che trasforma una grandezza fisica in un segnale che il PLC sa leggere. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptdo2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Che cosa serve a una macchina per accorgersi delle cose e agire?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Un sistema automatico</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo2)"/>
+  <text class="mappa-etichetta" x="106" y="164">deve</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Percepire</text>
+  <text class="mappa-etichetta" x="506" y="164">deve</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Decidere</text>
+  <text class="mappa-etichetta" x="906" y="164">deve</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Agire</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptdo2)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Sensore</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">si accorge di una grandezza</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">presenza, posizione, temperatura</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Trasduttore</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">la trasforma in un segnale</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">che l’elettronica sa leggere</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Digitale o analogico</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">due stati oppure</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">tutta una scala di valori</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptdo2)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Hardware del PLC</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">CPU, moduli, alimentazione</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">una macchina per il quadro</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Ingressi e uscite</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">morsetti con un indirizzo</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">e una portata da rispettare</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Linguaggi normalizzati</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">LD, FBD, ST, IL, SFC</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">la norma IEC 61131-3</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptdo2)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptdo2)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Attuatore</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">trasforma il comando</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">in movimento, calore, luce</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Comando di potenza</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">il PLC comanda poco,</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">il contattore comanda molto</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Segnalazione</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">dire all’operatore</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">che cosa sta accadendo</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,444 496,444" marker-end="url(#ptxdo2)"/>
+  <text class="mappa-incrocio-testo" x="416" y="460" text-anchor="middle">il segnale entra</text>
+  <text class="mappa-incrocio-testo" x="416" y="478" text-anchor="middle">da un ingresso</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,444 896,444" marker-end="url(#ptxdo2)"/>
+  <text class="mappa-incrocio-testo" x="816" y="460" text-anchor="middle">l’uscita comanda</text>
+  <text class="mappa-incrocio-testo" x="816" y="478" text-anchor="middle">la bobina, non il motore</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Un sistema automatico.** Che cosa serve a una macchina per accorgersi delle cose e agire?
+
+- **Percepire** — deve questo:
+  - *Sensore*: si accorge di una grandezza, presenza, posizione, temperatura.
+  - *Trasduttore*: la trasforma in un segnale, che l’elettronica sa leggere.
+  - *Digitale o analogico*: due stati oppure, tutta una scala di valori.
+
+- **Decidere** — deve questo:
+  - *Hardware del PLC*: CPU, moduli, alimentazione, una macchina per il quadro.
+  - *Ingressi e uscite*: morsetti con un indirizzo, e una portata da rispettare.
+  - *Linguaggi normalizzati*: LD, FBD, ST, IL, SFC, la norma IEC 61131-3.
+
+- **Agire** — deve questo:
+  - *Attuatore*: trasforma il comando, in movimento, calore, luce.
+  - *Comando di potenza*: il PLC comanda poco,, il contattore comanda molto.
+  - *Segnalazione*: dire all’operatore, che cosa sta accadendo.
+
+Dove i rami si toccano: il segnale entra da un ingresso; l’uscita comanda la bobina, non il motore.
+
+:::
+
+[Vai al Modulo 2 →](/corsi/domotica/moduli/modulo-2.qmd) · [Sintesi del modulo](/corsi/domotica/modulo-2.qmd)
+
+## Modulo 3 · Perché somiglia a uno schema a relè {#mappa-do-modulo-3}
+
+*Il linguaggio Ladder. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="do3-t do3-d">
+  <title id="do3-t">Perché somiglia a uno schema a relè</title>
+  <desc id="do3-d">Il Ladder usa contatti e bobine perché nasce dagli schemi a relè: serie è AND, parallelo è OR, e la bobina che si autoalimenta è l’autoritenuta. Oltre il singolo bit si lavora con gruppi di bit. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptdo3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Perché un programma per PLC somiglia a uno schema a relè?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Il linguaggio Ladder</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo3)"/>
+  <text class="mappa-etichetta" x="106" y="164">ha i suoi</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Simboli</text>
+  <text class="mappa-etichetta" x="506" y="164">realizza</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Funzioni base</text>
+  <text class="mappa-etichetta" x="906" y="164">va oltre il</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Singolo bit</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptdo3)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Contatto NO e NC</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">chiuso quando eccitato,</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">oppure il contrario</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Bobina</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">l’uscita del ramo</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">vale 1 se il ramo conduce</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Serie e parallelo</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">serie è AND,</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">parallelo è OR</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptdo3)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Consenso</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">più condizioni in serie</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">tutte devono valere</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Autoritenuta</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">la bobina si tiene su</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">col proprio contatto</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Sequenza</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">un passo abilita il successivo</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">e disabilita il precedente</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptdo3)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptdo3)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Diagramma di flusso</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">prima si pensa,</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">poi si scrive il ramo</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Bit multipli</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">byte e word: più bit</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">trattati insieme</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Codifica</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">dal numero ai bit</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">che lo rappresentano</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,444 496,444" marker-end="url(#ptxdo3)"/>
+  <text class="mappa-incrocio-testo" x="416" y="460" text-anchor="middle">la bobina di memoria</text>
+  <text class="mappa-incrocio-testo" x="416" y="478" text-anchor="middle">è l’autoritenuta</text>
+
+  <path class="mappa-incrocio" d="M736,546 C804,546 828,342 896,342" marker-end="url(#ptxdo3)"/>
+  <text class="mappa-incrocio-testo" x="816" y="460" text-anchor="middle">la sequenza si disegna</text>
+  <text class="mappa-incrocio-testo" x="816" y="478" text-anchor="middle">prima di scriverla</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Il linguaggio Ladder.** Perché un programma per PLC somiglia a uno schema a relè?
+
+- **Simboli** — ha i suoi questo:
+  - *Contatto NO e NC*: chiuso quando eccitato,, oppure il contrario.
+  - *Bobina*: l’uscita del ramo, vale 1 se il ramo conduce.
+  - *Serie e parallelo*: serie è AND,, parallelo è OR.
+
+- **Funzioni base** — realizza questo:
+  - *Consenso*: più condizioni in serie, tutte devono valere.
+  - *Autoritenuta*: la bobina si tiene su, col proprio contatto.
+  - *Sequenza*: un passo abilita il successivo, e disabilita il precedente.
+
+- **Singolo bit** — va oltre il questo:
+  - *Diagramma di flusso*: prima si pensa,, poi si scrive il ramo.
+  - *Bit multipli*: byte e word: più bit, trattati insieme.
+  - *Codifica*: dal numero ai bit, che lo rappresentano.
+
+Dove i rami si toccano: la bobina di memoria è l’autoritenuta; la sequenza si disegna prima di scriverla.
+
+:::
+
+[Vai al Modulo 3 →](/corsi/domotica/moduli/modulo-3.qmd) · [Sintesi del modulo](/corsi/domotica/modulo-3.qmd)
+
+## Modulo 4 · Descrivere una sequenza, non una condizione {#mappa-do-modulo-4}
+
+*Il linguaggio SFC. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="do4-t do4-d">
+  <title id="do4-t">Descrivere una sequenza, non una condizione</title>
+  <desc id="do4-d">L’SFC descrive la macchina come una successione di passi collegati da transizioni: il passo attivo è lo stato della macchina. Serve quando la sequenza è lunga e in Ladder diventerebbe illeggibile. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptdo4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si descrive una sequenza, invece di una singola condizione?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Il linguaggio SFC</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo4)"/>
+  <text class="mappa-etichetta" x="106" y="164">ha i suoi</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Elementi</text>
+  <text class="mappa-etichetta" x="506" y="164">descrive come</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Evolve</text>
+  <text class="mappa-etichetta" x="906" y="164">si scrive con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Gli strumenti</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptdo4)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Passo</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">una fase del lavoro</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">attivo oppure no</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Transizione</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">la condizione che chiude</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">un passo e apre il successivo</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Azione</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">che cosa fa la macchina</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">mentre il passo è attivo</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptdo4)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Passo attivo</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">in ogni istante</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">è lo stato della macchina</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Sequenza semplice</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">un passo dopo l’altro</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">come una ricetta</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Scelta e parallelo</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">due strade alternative</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">oppure due rami insieme</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptdo4)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptdo4)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">SoMachine Basic</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">ambiente e simulazione</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">dal disegno al programma</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">CODESYS</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">ambiente conforme alla norma</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">più linguaggi nello stesso progetto</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Perché non Ladder</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">una sequenza lunga in Ladder</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">diventa illeggibile</text>
+
+  <path class="mappa-incrocio" d="M336,342 C404,342 428,342 496,342" marker-end="url(#ptxdo4)"/>
+  <text class="mappa-incrocio-testo" x="416" y="358" text-anchor="middle">il passo attivo</text>
+  <text class="mappa-incrocio-testo" x="416" y="376" text-anchor="middle">è lo stato</text>
+
+  <path class="mappa-incrocio" d="M736,546 C804,546 828,546 896,546" marker-end="url(#ptxdo4)"/>
+  <text class="mappa-incrocio-testo" x="816" y="562" text-anchor="middle">è nei rami che l’SFC</text>
+  <text class="mappa-incrocio-testo" x="816" y="580" text-anchor="middle">batte il Ladder</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**Il linguaggio SFC.** Come si descrive una sequenza, invece di una singola condizione?
+
+- **Elementi** — ha i suoi questo:
+  - *Passo*: una fase del lavoro, attivo oppure no.
+  - *Transizione*: la condizione che chiude, un passo e apre il successivo.
+  - *Azione*: che cosa fa la macchina, mentre il passo è attivo.
+
+- **Evolve** — descrive come questo:
+  - *Passo attivo*: in ogni istante, è lo stato della macchina.
+  - *Sequenza semplice*: un passo dopo l’altro, come una ricetta.
+  - *Scelta e parallelo*: due strade alternative, oppure due rami insieme.
+
+- **Gli strumenti** — si scrive con questo:
+  - *SoMachine Basic*: ambiente e simulazione, dal disegno al programma.
+  - *CODESYS*: ambiente conforme alla norma, più linguaggi nello stesso progetto.
+  - *Perché non Ladder*: una sequenza lunga in Ladder, diventa illeggibile.
+
+Dove i rami si toccano: il passo attivo è lo stato; è nei rami che l’SFC batte il Ladder.
+
+:::
+
+[Vai al Modulo 4 →](/corsi/domotica/moduli/modulo-4.qmd) · [Sintesi del modulo](/corsi/domotica/modulo-4.qmd)
+
+## Modulo 5 · Che cosa serve oltre contatti e bobine {#mappa-do-modulo-5}
+
+*Programmazione avanzata. Mappa provvisoria: l'impianto c'è, i contenuti si affineranno con le lezioni.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 616" role="img" aria-labelledby="do5-t do5-d">
+  <title id="do5-t">Che cosa serve oltre contatti e bobine</title>
+  <desc id="do5-d">Un impianto vero chiede tempi, numeri e confronti, aree di memoria da trattare a gruppi e istruzioni che governano il flusso del programma. Un interrupt rompe il ciclo di scansione, ed è il motivo per cui va usato con misura. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="ptdo5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Che cosa serve, oltre a contatti e bobine, per un impianto vero?</text>
+
+  <rect class="mappa-radice" x="426" y="46" width="380" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">La programmazione avanzata</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo5)"/>
+  <text class="mappa-etichetta" x="106" y="164">aggiunge</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="220" text-anchor="middle">Tempi e numeri</text>
+  <text class="mappa-etichetta" x="506" y="164">organizza la</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="220" text-anchor="middle">Memoria</text>
+  <text class="mappa-etichetta" x="906" y="164">governa il</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="220" text-anchor="middle">Flusso</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#ptdo5)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Temporizzazione</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">ritardi, impulsi, attese</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">la macchina non è istantanea</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Conteggio</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">pezzi, giri, cicli</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">e la soglia da raggiungere</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Confronto</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">maggiore, minore, uguale</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">la decisione su un numero</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#ptdo5)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Aree di memoria</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">ingressi, uscite, merker</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">ognuna con il suo mestiere</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Bit, byte, word</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">lo stesso dato letto</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">a grana diversa</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Scorrimento e rotazione</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">far avanzare i bit:</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">utile per le sequenze</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#ptdo5)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#ptdo5)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Controllo del programma</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">salti e sottoprogrammi</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">non tutto va eseguito sempre</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Interrupt</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">un evento interrompe</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">il ciclo di scansione</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Booleane avanzate</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">operazioni su gruppi di bit</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">maschere e filtri</text>
+
+  <path class="mappa-incrocio" d="M736,546 C804,546 828,342 896,342" marker-end="url(#ptxdo5)"/>
+  <text class="mappa-incrocio-testo" x="816" y="460" text-anchor="middle">lo scorrimento realizza</text>
+  <text class="mappa-incrocio-testo" x="816" y="478" text-anchor="middle">una sequenza senza SFC</text>
+
+  <path class="mappa-incrocio" d="M736,444 C804,444 828,546 896,546" marker-end="url(#ptxdo5)"/>
+  <text class="mappa-incrocio-testo" x="816" y="511" text-anchor="middle">la maschera lavora</text>
+  <text class="mappa-incrocio-testo" x="816" y="529" text-anchor="middle">su una word intera</text>
+</svg>
+```
+:::
+
+::: {.callout-note collapse="true" title="La stessa mappa in forma di elenco"}
+
+**La programmazione avanzata.** Che cosa serve, oltre a contatti e bobine, per un impianto vero?
+
+- **Tempi e numeri** — aggiunge questo:
+  - *Temporizzazione*: ritardi, impulsi, attese, la macchina non è istantanea.
+  - *Conteggio*: pezzi, giri, cicli, e la soglia da raggiungere.
+  - *Confronto*: maggiore, minore, uguale, la decisione su un numero.
+
+- **Memoria** — organizza la questo:
+  - *Aree di memoria*: ingressi, uscite, merker, ognuna con il suo mestiere.
+  - *Bit, byte, word*: lo stesso dato letto, a grana diversa.
+  - *Scorrimento e rotazione*: far avanzare i bit:, utile per le sequenze.
+
+- **Flusso** — governa il questo:
+  - *Controllo del programma*: salti e sottoprogrammi, non tutto va eseguito sempre.
+  - *Interrupt*: un evento interrompe, il ciclo di scansione.
+  - *Booleane avanzate*: operazioni su gruppi di bit, maschere e filtri.
+
+Dove i rami si toccano: lo scorrimento realizza una sequenza senza SFC; la maschera lavora su una word intera.
+
+:::
+
+[Vai al Modulo 5 →](/corsi/domotica/moduli/modulo-5.qmd) · [Sintesi del modulo](/corsi/domotica/modulo-5.qmd)
+
+## Le mappe degli argomenti comuni
+
+Grandezze, componenti e circuiti valgono per tutti i percorsi: le loro mappe stanno in [Mappe concettuali](/risorse/mappe/index.qmd), insieme a quelle degli altri percorsi ([TPSEE · Elettronici](/corsi/tpsee-elettronici/mappe.qmd) · [TPSEE · Elettrotecnici](/corsi/tpsee-elettrotecnici/mappe.qmd) · [Sistemi automatici](/corsi/sistemi-automatici/mappe.qmd)).

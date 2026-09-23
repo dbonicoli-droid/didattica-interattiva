@@ -83,6 +83,8 @@ website:
               text: "Modulo 4 / Reti sequenziali"
         - section: "Altre risorse"
           contents:
+            - href: corsi/tpsee-elettronici/mappe.qmd
+              text: "Mappe concettuali"
             - href: corsi/tpsee-elettronici/esercizi-metti-insieme-il-percorso.qmd
               text: "Esercizi / Metti insieme il percorso"
             - href: corsi/tpsee-elettronici/approfondimenti.qmd
@@ -118,6 +120,8 @@ website:
               text: "Modulo 5 / Illuminotecnica"
         - section: "Altre risorse"
           contents:
+            - href: corsi/tpsee-elettrotecnici/mappe.qmd
+              text: "Mappe concettuali"
             - href: corsi/tpsee-elettrotecnici/esercizi-metti-insieme-i-moduli.qmd
               text: "Esercizi / Metti insieme i moduli"
             - href: corsi/tpsee-elettrotecnici/educazione-civica-sicurezza-e-responsabilita.qmd
@@ -157,6 +161,8 @@ website:
               text: "Modulo 6 / Tempi, eventi e grandezze analogiche"
         - section: "Altre risorse"
           contents:
+            - href: corsi/sistemi-automatici/mappe.qmd
+              text: "Mappe concettuali"
             - href: corsi/sistemi-automatici/esercizi.qmd
               text: "Esercizi"
             - href: corsi/sistemi-automatici/educazione-civica-emergenza-climatica.qmd
@@ -194,6 +200,8 @@ website:
               text: "Modulo 5 / Programmazione avanzata e applicazioni dei PLC"
         - section: "Altre risorse"
           contents:
+            - href: corsi/domotica/mappe.qmd
+              text: "Mappe concettuali"
             - href: corsi/domotica/esercizi-verifica-trasversale.qmd
               text: "Esercizi / Verifica trasversale"
             - href: corsi/domotica/educazione-civica-efficientamento-energetico.qmd

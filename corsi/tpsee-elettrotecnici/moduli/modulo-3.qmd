@@ -4,7 +4,7 @@ title: "Modulo 3 / Principali componenti degli impianti elettrici"
 subtitle: "Modulo di approfondimento"
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd) · [Mappa concettuale](/risorse/mappe/index.qmd#mappa-et-modulo-3)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-3.qmd) · [Mappa concettuale](../mappe.qmd#mappa-et-modulo-3)
 
 ::: {.callout-note icon=false}
 ## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
