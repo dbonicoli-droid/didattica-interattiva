@@ -157,6 +157,46 @@
         .observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
 
+    // Le mappe stanno per intero nella larghezza della pagina: quando il testo
+    // risulta piccolo, questo comando le riapre grandi in una finestra propria.
+    document.querySelectorAll('.mappa-disegno').forEach((cornice, i) => {
+      const originale = cornice.querySelector('svg');
+      if (!originale) return;
+
+      const comando = document.createElement('button');
+      comando.type = 'button';
+      comando.className = 'mappa-ingrandisci';
+      comando.textContent = '⤢ Ingrandisci la mappa';
+      cornice.after(comando);
+
+      let finestra = null;
+      comando.addEventListener('click', () => {
+        if (!finestra) {
+          finestra = document.createElement('dialog');
+          finestra.className = 'mappa-schermo';
+          const barra = document.createElement('div');
+          barra.className = 'barra';
+          const nome = document.createElement('span');
+          nome.textContent = originale.querySelector('title')?.textContent || 'Mappa concettuale';
+          const chiudi = document.createElement('button');
+          chiudi.type = 'button';
+          chiudi.textContent = 'Chiudi';
+          chiudi.addEventListener('click', () => finestra.close());
+          barra.append(nome, chiudi);
+          const tela = document.createElement('div');
+          tela.className = 'tela';
+          const copia = originale.cloneNode(true);
+          copia.removeAttribute('id');
+          copia.querySelectorAll('[id]').forEach(el => el.id = el.id + '-grande');
+          copia.innerHTML = copia.innerHTML.replace(/url\(#([^)]+)\)/g, 'url(#$1-grande)');
+          tela.append(copia);
+          finestra.append(barra, tela);
+          document.body.append(finestra);
+        }
+        finestra.showModal();
+      });
+    });
+
     // Barra di avanzamento della lettura
     const avanzamento = document.createElement('div');
     avanzamento.id = 'avanzamento-lettura';

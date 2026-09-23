@@ -17,6 +17,8 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 
 Dal comando alla sequenza: si parte dai circuiti elettromeccanici, si passa al PLC e ai suoi linguaggi e si arriva alle applicazioni di controllo.
 
+[Guarda la mappa concettuale del corso →](/risorse/mappe/index.qmd#mappa-domotica)
+
 | **Modulo** | **Argomento** | **Periodo** | **Ore** |
 |---|---|---|---|
 | 1 | Elettromeccanica | 1 | — |

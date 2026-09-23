@@ -1,66 +1,308 @@
 ---
 sidebar: risorse
+page-layout: full
 title: "Mappe concettuali"
 description: "Collegamenti fra i concetti per studiare e ripassare."
 toc: false
 ---
 
-In questa sezione saranno aggiunte mappe concettuali durante il corso. Alcune serviranno per studiare e consolidare gli argomenti; altre sarà possibile stamparle e tenerle a disposizione durante i compiti in classe.
+In questa sezione trovi le mappe concettuali dei percorsi e dei singoli moduli. Alcune servono per studiare e consolidare gli argomenti; altre puoi stamparle e tenerle a disposizione durante i compiti in classe.
 
-Nel frattempo i blocchi qui sotto funzionano già come indice: ognuno porta alla spiegazione corrispondente.
+Ogni mappa mostra **le idee e il modo in cui si tengono insieme**, non l'indice delle pagine. Sotto ciascuna trovi la stessa mappa in forma di elenco, utile per ripassare a voce e per chi legge con uno strumento vocale.
 
-## Componenti ed energia
+## Le mappe di questa pagina {#indice}
 
-*Mappa condivisa da tutti i percorsi.*
+| Mappa | Di che cosa parla |
+|---|---|
+| [TPSEE · Elettronici — Dalla logica al circuito](#mappa-tpsee-elettronici) | Dalla funzione da realizzare al circuito che la esegue |
+| [TPSEE · Elettrotecnici — Dalla norma all'impianto](#mappa-tpsee-elettrotecnici) | Regole, documenti e scelte tecniche di un impianto |
+| [Sistemi automatici — Dal sistema al controllo](#mappa-sistemi-automatici) | Modello, logica e PLC: i tre pilastri del corso |
+| [Sistemi automatici · Modulo 1 — Che cosa ricorda un sistema](#mappa-sa-modulo-1) | Lo stato, la memoria e le domande di classificazione |
+| [Domotica — Dal comando alla sequenza](#mappa-domotica) | Dai relè al PLC ai linguaggi di programmazione |
+| [Componenti ed energia — Dalle grandezze ai circuiti](#mappa-grandezze) | Carica, corrente, tensione, potenza, energia |
+| [Componenti ed energia — Tre componenti a confronto](#mappa-componenti) | Che cosa lega e che cosa fa dell'energia ciascuno |
 
-::: {.mappa-segnaposto}
-![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
-**Mappa da inserire** · il disegno con le relazioni fra grandezze, componenti e circuiti arriverà con le lezioni.
+## TPSEE · Elettronici
+
+### Dalla logica al circuito {#mappa-tpsee-elettronici}
+
+*Mappa del percorso: come una funzione diventa un circuito.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
 :::
 
-### Le grandezze di partenza
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 750" role="img" aria-labelledby="el-t el-d">
+  <title id="el-t">Dalla logica al circuito</title>
+  <desc id="el-d">Da una funzione da realizzare si passa alla tabella di verità, da questa all'espressione booleana, che si semplifica e si realizza con porte e integrati. Le reti sequenziali aggiungono memoria alle combinatorie. Lo stesso contenuto è in elenco sotto la figura.</desc>
 
-::: {.resource-card}
-### [Carica, corrente e tensione](../fondamenti/carica-corrente-tensione.qmd)
-La carica è la grandezza di base; la corrente ne descrive il trasferimento nel tempo e la tensione è una differenza di potenziale. Il **campo elettrico** è ciò che mette in moto le cariche: la tensione fra due punti nasce dal lavoro che il campo compie per spostarle.
+  <defs>
+    <marker id="ptel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si passa da «voglio che faccia questo» a un circuito che lo fa?</text>
+
+  <rect class="mappa-radice" x="446" y="46" width="340" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Un circuito digitale</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptel)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptel)"/>
+  <text class="mappa-etichetta" x="106" y="164">si descrive con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">Descrivere</text>
+  <text class="mappa-ramo-testo" x="216" y="228" text-anchor="middle">la funzione</text>
+  <text class="mappa-etichetta" x="506" y="164">si semplifica con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">Semplificare</text>
+  <text class="mappa-ramo-testo" x="616" y="228" text-anchor="middle">prima di costruire</text>
+  <text class="mappa-etichetta" x="906" y="164">si realizza con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Realizzare</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">il circuito</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Variabili booleane</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">due soli valori: 0 e 1</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">acceso o spento, vero o falso</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Tabella di verità</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">tutte le combinazioni</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">e che cosa deve uscire</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Espressione booleana</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">la stessa cosa in formula:</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">AND, OR, NOT</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Algebra di Boole</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">le regole per riscrivere</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">senza cambiare il risultato</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Leggi di De Morgan</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">negare una somma</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">è moltiplicare le negate</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Mappe di Karnaugh</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">si vedono i gruppi,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">si trova la forma minima</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V648"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,648 H896" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Porte e integrati</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">NAND e NOR bastano da sole</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">74LS138, 74LS151, 74LS85</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Blocchi combinatori</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">sommatori, comparatori,</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">decoder, multiplexer</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Reti sequenziali</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">l'uscita dipende anche</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">da dove eri prima</text>
+
+  <rect class="mappa-nodo-c" x="896" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="636" text-anchor="middle">Dal disegno al banco</text>
+  <text class="mappa-esempio" x="1016" y="662" text-anchor="middle">schema, simulazione,</text>
+  <text class="mappa-esempio" x="1016" y="680" text-anchor="middle">circuito stampato</text>
+
+  <path class="mappa-incrocio" d="M336,444 C404,444 428,466 496,504" marker-end="url(#ptxel)"/>
+  <text class="mappa-incrocio-testo" x="416" y="490" text-anchor="middle">si riscrive e</text>
+
+  <path class="mappa-incrocio" d="M736,504 C804,504 828,382 896,342" marker-end="url(#ptxel)"/>
+  <text class="mappa-incrocio-testo" x="816" y="408" text-anchor="middle">la forma minima</text>
+  <text class="mappa-incrocio-testo" x="816" y="426" text-anchor="middle">diventa porte</text>
+
+  <path class="mappa-incrocio" d="M1136,444 C1176,474 1176,516 1136,546" marker-end="url(#ptxel)"/>
+  <text class="mappa-incrocio-testo" x="1150" y="486" text-anchor="start">aggiungono</text>
+  <text class="mappa-incrocio-testo" x="1150" y="504" text-anchor="start">memoria</text>
+</svg>
+```
 :::
 
-### Componenti di base
+Il collegamento che regge il corso è **«la forma minima diventa porte»**: è il punto in cui una formula smette di essere matematica e diventa un oggetto da montare.
 
-**Queste grandezze permettono di descrivere tre comportamenti:**
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
 
-::: {.mappa-segnaposto}
-![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
-**Mappa da inserire** · il confronto fra i tre componenti in un solo disegno.
+**Un circuito digitale** — come si passa da «voglio che faccia questo» a un circuito che lo fa?
+
+- **Si descrive con:** variabili booleane (due soli valori), **tabella di verità** (tutte le combinazioni e che cosa deve uscire), **espressione booleana** (la stessa cosa in formula).
+- **Si semplifica con:** algebra di Boole, leggi di De Morgan, **mappe di Karnaugh**, da cui esce la forma minima.
+- **Si realizza con:** porte e integrati (NAND e NOR bastano da sole), blocchi combinatori (sommatori, comparatori, decoder, multiplexer), **reti sequenziali** dove l'uscita dipende anche da dove eri prima, e infine schema, simulazione e circuito stampato.
+
+Collegamenti fra rami: l'espressione **si riscrive e** si semplifica con Karnaugh; la **forma minima diventa porte**; le reti sequenziali **aggiungono memoria** ai blocchi combinatori.
+
 :::
 
-::: {.process-map}
-::: {.map-card .map-card-linked}
-### [Resistore](../componenti/resistore.qmd#livello-2){.map-destination}
-Lega tensione e corrente attraverso la resistenza e **dissipa energia**.
-:::
-::: {.map-card .map-card-linked}
-### [Condensatore](../componenti/condensatore.qmd#livello-2){.map-destination}
-Lega carica e tensione e **immagazzina energia nel campo elettrico**.
-:::
-::: {.map-card .map-card-linked}
-### [Induttore](../componenti/induttore.qmd#livello-2){.map-destination}
-Lega corrente e flusso concatenato e **immagazzina energia nel campo magnetico**.
-:::
+[Vai al programma del corso →](/corsi/tpsee-elettronici/index.qmd#moduli)
+
+
+## TPSEE · Elettrotecnici
+
+### Dalla norma all'impianto {#mappa-tpsee-elettrotecnici}
+
+*Mappa del percorso: regole, documenti e scelte tecniche.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
 :::
 
-### Alcuni circuiti fondamentali
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 750" role="img" aria-labelledby="et-t et-d">
+  <title id="et-t">Dalla norma all'impianto</title>
+  <desc id="et-d">Un impianto elettrico nasce da regole, si documenta con schemi normalizzati e si realizza scegliendo componenti in base a calcoli. Le norme fissano i simboli del disegno; la sezione del cavo si sceglie verificando la caduta di tensione. Lo stesso contenuto è in elenco sotto la figura.</desc>
 
-**Collegando resistore e condensatore otteniamo un esempio di evoluzione nel tempo:**
+  <defs>
+    <marker id="ptet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
 
-::: {.resource-card}
-### [Circuito RC e costante di tempo](../../laboratori/rc.qmd)
-Il resistore limita la corrente di carica; mentre la tensione del condensatore cresce, la corrente diminuisce. Esplora come R e C cambiano la durata del transitorio.
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Che cosa serve per progettare un impianto e farlo capire a chi lo monta?</text>
+
+  <rect class="mappa-radice" x="446" y="46" width="340" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Un impianto elettrico</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptet)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptet)"/>
+  <text class="mappa-etichetta" x="106" y="164">obbedisce a</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">Le regole</text>
+  <text class="mappa-etichetta" x="506" y="164">si racconta con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">I documenti</text>
+  <text class="mappa-etichetta" x="906" y="164">si costruisce con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Le scelte</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">tecniche</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V546"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Leggi e norme</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">la legge obbliga,</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">la norma dice come fare bene</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Organismi normatori</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">CEI in Italia, CENELEC</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">in Europa, IEC nel mondo</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Marcatura e conformità</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">dichiarare per iscritto</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">che cosa si è rispettato</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Tipi di schema</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">funzionale, unifilare,</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">multifilare, planimetria</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Simboli normalizzati</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">lo stesso segno significa</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">la stessa cosa per tutti</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">Legenda e cartiglio</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">chi, quando, in che scala,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">e che cosa vuol dire ogni segno</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V648"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,648 H896" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Conduttori e isolanti</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">chi lascia passare la corrente</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">e chi la trattiene</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">Sezione dei cavi</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">più lungo o più carico,</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">più grossa la sezione</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Caduta di tensione</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">quanto arriva davvero</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">in fondo alla linea</text>
+
+  <rect class="mappa-nodo-c" x="896" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="636" text-anchor="middle">Illuminotecnica</text>
+  <text class="mappa-esempio" x="1016" y="662" text-anchor="middle">flusso e illuminamento:</text>
+  <text class="mappa-esempio" x="1016" y="680" text-anchor="middle">quanta luce arriva sul piano</text>
+
+  <path class="mappa-incrocio" d="M336,342 C404,362 428,414 496,444" marker-end="url(#ptxet)"/>
+  <text class="mappa-incrocio-testo" x="416" y="398" text-anchor="middle">fissano i</text>
+
+  <path class="mappa-incrocio" d="M1136,444 C1176,474 1176,516 1136,546" marker-end="url(#ptxet)"/>
+  <text class="mappa-incrocio-testo" x="1150" y="486" text-anchor="start">si sceglie</text>
+  <text class="mappa-incrocio-testo" x="1150" y="504" text-anchor="start">verificando la</text>
+</svg>
+```
 :::
 
-[Rivedi potenza ed energia](../fondamenti/potenza-energia.qmd) · [Consulta tutti i componenti](../componenti/index.qmd)
+Il collegamento in basso a destra è un **giro**, non una freccia: si sceglie una sezione, si verifica la caduta di tensione, e se non va si ricomincia. Progettare è quasi sempre questo.
 
-## Sistemi automatici · Dal sistema al controllo {#mappa-sistemi-automatici}
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
+
+**Un impianto elettrico** — che cosa serve per progettarlo e farlo capire a chi lo monta?
+
+- **Obbedisce a:** leggi e norme (la legge obbliga, la norma dice come fare bene), organismi normatori (CEI, CENELEC, IEC), marcatura e conformità.
+- **Si racconta con:** i tipi di schema (funzionale, unifilare, multifilare, planimetria), i simboli normalizzati, legenda e cartiglio.
+- **Si costruisce con:** conduttori e isolanti, sezione dei cavi, caduta di tensione, illuminotecnica.
+
+Collegamenti fra rami: le norme **fissano i** simboli del disegno; la sezione del cavo **si sceglie verificando la** caduta di tensione — ed è un giro che si ripete finché il conto torna.
+
+:::
+
+[Vai al programma del corso →](/corsi/tpsee-elettrotecnici/index.qmd#moduli)
+
+
+## Sistemi automatici
+
+### Dal sistema al controllo {#mappa-sistemi-automatici}
 
 *Mappa generale del percorso: come si passa da un sistema reale al suo controllo automatico.*
 
@@ -234,7 +476,7 @@ Collegamenti fra rami diversi:
 
 [Vai al programma del corso →](/corsi/sistemi-automatici/index.qmd#moduli) · [Modulo 1](/corsi/sistemi-automatici/moduli/modulo-1.qmd)
 
-## Modulo 1 · Che cosa ricorda un sistema {#mappa-sa-modulo-1}
+### Modulo 1 · Che cosa ricorda un sistema {#mappa-sa-modulo-1}
 
 *Mappa dei concetti del primo modulo: non l'indice delle unità, ma le idee e il modo in cui si tengono insieme.*
 
@@ -391,40 +633,412 @@ Ogni freccia è una frase. Se le sai dire tutte, hai capito il modulo.
 
 [Vai al Modulo 1 →](/corsi/sistemi-automatici/moduli/modulo-1.qmd) · [Esercizi del modulo](/corsi/sistemi-automatici/esercizi.qmd#es:modulo-1)
 
-## Mappe dei percorsi ancora da disegnare
+## Domotica e automazione
 
-Gli altri tre percorsi avranno la propria mappa, con i concetti del corso collegati fra loro.
+### Dal comando alla sequenza {#mappa-domotica}
 
-::: {.resource-grid}
+*Mappa del percorso: dai relè al programma.*
 
-::: {.resource-card}
-[TPSEE · ELETTRONICI]{.resource-label}
-
-### Dalla logica al circuito ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
-
-Porte logiche, reti combinatorie e sequenziali, dispositivi integrati.
-
-[Vai al programma del corso →](/corsi/tpsee-elettronici/index.qmd#moduli)
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
 :::
 
-::: {.resource-card}
-[TPSEE · ELETTROTECNICI]{.resource-label}
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 890" role="img" aria-labelledby="do-t do-d">
+  <title id="do-t">Dal comando alla sequenza</title>
+  <desc id="do-d">Una macchina si comanda prima con i relè, poi con un PLC, infine descrivendo le sequenze in un linguaggio. L'autoritenuta del contattore, la bobina di memoria in Ladder e il passo attivo dell'SFC sono la stessa idea in tre forme. Lo stesso contenuto è in elenco sotto la figura.</desc>
 
-### Dalla norma all'impianto ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+  <defs>
+    <marker id="ptdo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptxdo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
 
-Normativa, simboli, componenti, materiali e illuminotecnica.
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si comanda una macchina, e che cosa cambia passando dai relè al programma?</text>
 
-[Vai al programma del corso →](/corsi/tpsee-elettrotecnici/index.qmd#moduli)
+  <rect class="mappa-radice" x="446" y="46" width="340" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Comandare una macchina</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#ptdo)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#ptdo)"/>
+  <text class="mappa-etichetta" x="106" y="164">prima si fa con</text>
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">I relè</text>
+  <text class="mappa-ramo-testo" x="216" y="228" text-anchor="middle">e i contattori</text>
+  <text class="mappa-etichetta" x="506" y="164">poi si fa con</text>
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">Il PLC</text>
+  <text class="mappa-etichetta" x="906" y="164">si descrive con</text>
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">I linguaggi</text>
+  <path class="mappa-linea" d="M216,248 V272 H60 V648"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,648 H96" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="330" text-anchor="middle">Il contattore</text>
+  <text class="mappa-esempio" x="216" y="356" text-anchor="middle">una bobina comanda</text>
+  <text class="mappa-esempio" x="216" y="374" text-anchor="middle">contatti di potenza</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="432" text-anchor="middle">Comando e potenza</text>
+  <text class="mappa-esempio" x="216" y="458" text-anchor="middle">due circuiti separati: uno decide,</text>
+  <text class="mappa-esempio" x="216" y="476" text-anchor="middle">l'altro porta la corrente</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="534" text-anchor="middle">Autoritenuta</text>
+  <text class="mappa-esempio" x="216" y="560" text-anchor="middle">rilasci il pulsante</text>
+  <text class="mappa-esempio" x="216" y="578" text-anchor="middle">e il comando resta</text>
+
+  <rect class="mappa-nodo-a" x="96" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="636" text-anchor="middle">Protezione e interblocco</text>
+  <text class="mappa-esempio" x="216" y="662" text-anchor="middle">il relè termico ferma,</text>
+  <text class="mappa-esempio" x="216" y="680" text-anchor="middle">l'interblocco impedisce</text>
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="330" text-anchor="middle">Sensori e attuatori</text>
+  <text class="mappa-esempio" x="616" y="356" text-anchor="middle">che cosa legge la macchina</text>
+  <text class="mappa-esempio" x="616" y="374" text-anchor="middle">e che cosa le fa muovere le cose</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="432" text-anchor="middle">Ingressi e uscite</text>
+  <text class="mappa-esempio" x="616" y="458" text-anchor="middle">morsetti veri, collegati</text>
+  <text class="mappa-esempio" x="616" y="476" text-anchor="middle">a variabili del programma</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="534" text-anchor="middle">La scansione ciclica</text>
+  <text class="mappa-esempio" x="616" y="560" text-anchor="middle">legge tutto, calcola tutto,</text>
+  <text class="mappa-esempio" x="616" y="578" text-anchor="middle">scrive tutto, e ricomincia</text>
+  <path class="mappa-linea" d="M1016,248 V272 H860 V546"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="330" text-anchor="middle">Ladder</text>
+  <text class="mappa-esempio" x="1016" y="356" text-anchor="middle">contatti e bobine:</text>
+  <text class="mappa-esempio" x="1016" y="374" text-anchor="middle">sembra uno schema a relè</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="432" text-anchor="middle">SFC</text>
+  <text class="mappa-esempio" x="1016" y="458" text-anchor="middle">passi, transizioni e azioni:</text>
+  <text class="mappa-esempio" x="1016" y="476" text-anchor="middle">la sequenza si vede</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="534" text-anchor="middle">Tempi e conteggi</text>
+  <text class="mappa-esempio" x="1016" y="560" text-anchor="middle">timer e contatori,</text>
+  <text class="mappa-esempio" x="1016" y="578" text-anchor="middle">per aspettare e per contare</text>
+
+  <rect class="mappa-nodo-condiviso" x="436" y="760" width="360" height="90" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="792" text-anchor="middle">La memoria, tre volte la stessa</text>
+  <text class="mappa-esempio" x="616" y="818" text-anchor="middle">contatto ausiliario · bobina di memoria in Ladder</text>
+  <text class="mappa-esempio" x="616" y="836" text-anchor="middle">passo attivo in SFC</text>
+
+  <path class="mappa-incrocio" d="M216,690 V730 C216,762 372,782 434,790" marker-end="url(#ptxdo)"/>
+  <text class="mappa-incrocio-testo" x="300" y="772" text-anchor="middle">è già memoria</text>
+
+  <path class="mappa-incrocio" d="M1016,588 C1016,690 900,772 798,790" marker-end="url(#ptxdo)"/>
+  <text class="mappa-incrocio-testo" x="952" y="700" text-anchor="start">la stessa idea,</text>
+  <text class="mappa-incrocio-testo" x="952" y="718" text-anchor="start">scritta in programma</text>
+</svg>
+```
 :::
 
-::: {.resource-card}
-[DOMOTICA E AUTOMAZIONE]{.resource-label}
+Il nodo tratteggiato in basso è il filo di tutto il corso: **la memoria è la stessa cosa** che sia un contatto ausiliario, una bobina in Ladder o un passo attivo in SFC. Cambia il corpo, non l'idea.
 
-### Dal comando alla sequenza ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
 
-Elettromeccanica, PLC, Ladder, SFC e applicazioni di controllo.
+**Comandare una macchina** — che cosa cambia passando dai relè al programma?
+
+- **Prima si fa con i relè:** il contattore (una bobina comanda contatti di potenza), comando e potenza come due circuiti separati, **autoritenuta**, protezione con relè termico e interblocco.
+- **Poi si fa con il PLC:** sensori e attuatori, ingressi e uscite come morsetti veri collegati a variabili, **scansione ciclica** (legge tutto, calcola tutto, scrive tutto, ricomincia).
+- **Si descrive con i linguaggi:** Ladder (contatti e bobine), SFC (passi, transizioni e azioni), timer e contatori.
+
+Il filo che li unisce: l'**autoritenuta è già memoria**, e la stessa idea si ritrova **scritta in programma** come bobina di memoria in Ladder e come passo attivo in SFC.
+
+:::
 
 [Vai al programma del corso →](/corsi/domotica/index.qmd#moduli)
+
+
+## Componenti ed energia
+
+*Mappe condivise da tutti i percorsi.*
+
+### Dalle grandezze ai circuiti {#mappa-grandezze}
+
+::: {.mappa-legenda}
+[[]{} relazione]{} [[]{.incrocio} lo stesso fenomeno, dentro un componente]{} [[]{.tinta} l'energia, dove va a finire]{}
 :::
 
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 780" role="img" aria-labelledby="ce-t ce-d">
+  <title id="ce-t">Dalle grandezze ai circuiti</title>
+  <desc id="ce-d">La carica in movimento è la corrente; la carica separata produce un campo elettrico, il cui lavoro fra due punti è la tensione. Corrente e tensione insieme danno la potenza, che accumulata nel tempo è energia. I tre componenti fanno con l'energia tre cose diverse: il resistore la dissipa, il condensatore la immagazzina nel campo elettrico, l'induttore nel campo magnetico. Collegandoli si ottiene un circuito che evolve nel tempo. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="cea" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" class="mappa-punta"/>
+    </marker>
+    <marker id="ceb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="590" y="26" text-anchor="middle">Che cosa mettiamo in relazione quando studiamo un circuito?</text>
+
+  <rect class="mappa-blocco" x="60" y="70" width="230" height="80" rx="11"/>
+  <text class="mappa-t-blocco" x="175" y="100" text-anchor="middle">La carica</text>
+  <text class="mappa-t-piccolo" x="175" y="124" text-anchor="middle">la grandezza di partenza</text>
+  <text class="mappa-t-piccolo" x="175" y="142" text-anchor="middle">si misura in coulomb</text>
+
+  <line class="mappa-linea" x1="290" y1="110" x2="428" y2="110" marker-end="url(#cea)"/>
+  <text class="mappa-etichetta" x="359" y="100" text-anchor="middle">in movimento è</text>
+
+  <rect class="mappa-blocco" x="430" y="70" width="230" height="80" rx="11"/>
+  <text class="mappa-t-blocco" x="545" y="100" text-anchor="middle">La corrente</text>
+  <text class="mappa-t-piccolo" x="545" y="124" text-anchor="middle">quanta carica passa</text>
+  <text class="mappa-t-piccolo" x="545" y="142" text-anchor="middle">al secondo — ampere</text>
+
+  <path class="mappa-linea" d="M175,150 V236" marker-end="url(#cea)"/>
+  <text class="mappa-etichetta" x="189" y="198" text-anchor="start">separata produce un</text>
+
+  <rect class="mappa-blocco" x="60" y="238" width="230" height="80" rx="11"/>
+  <text class="mappa-t-blocco" x="175" y="268" text-anchor="middle">Il campo elettrico</text>
+  <text class="mappa-t-piccolo" x="175" y="292" text-anchor="middle">mette in moto</text>
+  <text class="mappa-t-piccolo" x="175" y="310" text-anchor="middle">le altre cariche</text>
+
+  <line class="mappa-linea" x1="290" y1="278" x2="428" y2="278" marker-end="url(#cea)"/>
+  <text class="mappa-etichetta" x="359" y="268" text-anchor="middle">il suo lavoro dà la</text>
+
+  <rect class="mappa-blocco" x="430" y="238" width="230" height="80" rx="11"/>
+  <text class="mappa-t-blocco" x="545" y="268" text-anchor="middle">La tensione</text>
+  <text class="mappa-t-piccolo" x="545" y="292" text-anchor="middle">differenza fra due punti</text>
+  <text class="mappa-t-piccolo" x="545" y="310" text-anchor="middle">si misura in volt</text>
+
+  <path class="mappa-linea" d="M660,110 H790 V178" marker-end="url(#cea)"/>
+  <path class="mappa-linea" d="M660,278 H790 V218" marker-end="url(#cea)"/>
+  <text class="mappa-etichetta" x="810" y="150" text-anchor="start">moltiplicate</text>
+  <text class="mappa-etichetta" x="810" y="168" text-anchor="start">danno la</text>
+
+  <rect class="mappa-interno-chiave" x="880" y="180" width="230" height="76" rx="11"/>
+  <text class="mappa-t-chiave" x="995" y="208" text-anchor="middle">La potenza</text>
+  <text class="mappa-t-piccolo" x="995" y="232" text-anchor="middle">energia al secondo — watt</text>
+
+  <path class="mappa-linea" d="M995,256 V318" marker-end="url(#cea)"/>
+  <text class="mappa-etichetta" x="1009" y="292" text-anchor="start">nel tempo</text>
+
+  <rect class="mappa-interno-chiave" x="880" y="320" width="230" height="76" rx="11"/>
+  <text class="mappa-t-chiave" x="995" y="348" text-anchor="middle">L'energia</text>
+  <text class="mappa-t-piccolo" x="995" y="372" text-anchor="middle">si misura in joule</text>
+
+  <path class="mappa-linea" d="M995,396 V440 H175 V480" marker-end="url(#cea)"/>
+  <path class="mappa-linea" d="M590,440 V480" marker-end="url(#cea)"/>
+  <path class="mappa-linea" d="M1005,440 V480" marker-end="url(#cea)"/>
+  <text class="mappa-etichetta" x="600" y="432" text-anchor="start">i componenti ne fanno tre cose diverse</text>
+
+  <rect class="mappa-blocco" x="60" y="480" width="230" height="86" rx="11"/>
+  <text class="mappa-t-blocco" x="175" y="510" text-anchor="middle">Il resistore</text>
+  <text class="mappa-t-piccolo" x="175" y="534" text-anchor="middle">la dissipa in calore:</text>
+  <text class="mappa-t-piccolo" x="175" y="552" text-anchor="middle">non torna indietro</text>
+
+  <rect class="mappa-blocco" x="475" y="480" width="230" height="86" rx="11"/>
+  <text class="mappa-t-blocco" x="590" y="510" text-anchor="middle">Il condensatore</text>
+  <text class="mappa-t-piccolo" x="590" y="534" text-anchor="middle">la immagazzina</text>
+  <text class="mappa-t-piccolo" x="590" y="552" text-anchor="middle">nel campo elettrico</text>
+
+  <rect class="mappa-blocco" x="890" y="480" width="230" height="86" rx="11"/>
+  <text class="mappa-t-blocco" x="1005" y="510" text-anchor="middle">L'induttore</text>
+  <text class="mappa-t-piccolo" x="1005" y="534" text-anchor="middle">la immagazzina</text>
+  <text class="mappa-t-piccolo" x="1005" y="552" text-anchor="middle">nel campo magnetico</text>
+
+  <path class="mappa-incrocio" d="M60,278 H30 V520 H58" marker-end="url(#ceb)"/>
+  <text class="mappa-t-anello" x="34" y="410" text-anchor="start">lo stesso campo,</text>
+  <text class="mappa-t-anello" x="34" y="428" text-anchor="start">racchiuso in un componente</text>
+
+  <path class="mappa-linea" d="M175,566 V610 H590 V646" marker-end="url(#cea)"/>
+  <path class="mappa-linea" d="M1005,566 V610 H590"/>
+  <path class="mappa-linea" d="M590,566 V646"/>
+
+  <rect class="mappa-sistema" x="380" y="648" width="420" height="96" rx="13"/>
+  <text class="mappa-t-sistema" x="590" y="682" text-anchor="middle">Il circuito</text>
+  <text class="mappa-t-piccolo" x="590" y="706" text-anchor="middle">collegandoli si ottiene qualcosa che evolve nel tempo:</text>
+  <text class="mappa-t-piccolo" x="590" y="726" text-anchor="middle">un resistore e un condensatore bastano a farlo vedere</text>
+</svg>
+```
 :::
+
+Le frecce, lette di fila: **la carica in movimento è la corrente**; **la carica separata produce un campo elettrico**, il cui lavoro fra due punti **è la tensione**; corrente e tensione moltiplicate **danno la potenza**, che accumulata nel tempo **è energia**.
+
+L'unico tratteggiato dice una cosa che di solito sfugge: il campo elettrico non è un argomento a parte, è **lo stesso fenomeno che il condensatore racchiude fra due armature**.
+
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
+
+- La **carica** è la grandezza di partenza, si misura in coulomb.
+- La carica **in movimento** è la **corrente**: quanta ne passa al secondo, in ampere.
+- La carica **separata** produce un **campo elettrico**, che mette in moto le altre cariche.
+- Il lavoro del campo fra due punti è la **tensione**, in volt.
+- Corrente e tensione **moltiplicate** danno la **potenza**, cioè energia al secondo, in watt.
+- La potenza **accumulata nel tempo** è l'**energia**, in joule.
+- Dell'energia i tre componenti fanno tre cose diverse: il **resistore** la dissipa in calore, il **condensatore** la immagazzina nel campo elettrico, l'**induttore** nel campo magnetico.
+- Il condensatore racchiude **lo stesso campo elettrico** incontrato all'inizio.
+- Collegandoli si ottiene un **circuito**, cioè qualcosa che evolve nel tempo.
+
+:::
+
+
+### Tre componenti a confronto {#mappa-componenti}
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 620" role="img" aria-labelledby="cb-t cb-d">
+  <title id="cb-t">Tre componenti a confronto</title>
+  <desc id="cb-d">Confronto fra resistore, condensatore e induttore su tre righe: quali grandezze lega ciascuno, che cosa fa dell'energia, come si comporta nel tempo. Il resistore risponde subito, condensatore e induttore hanno bisogno di tempo perché conservano memoria. Lo stesso contenuto è in elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="cba" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" class="mappa-punta"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="590" y="26" text-anchor="middle">Che cosa lega ciascun componente, e che cosa fa dell'energia?</text>
+
+  <text class="mappa-t-ambiente" x="30" y="92">LEGA DUE GRANDEZZE</text>
+  <text class="mappa-t-ambiente" x="30" y="252">FA QUESTO ALL'ENERGIA</text>
+  <text class="mappa-t-ambiente" x="30" y="412">NEL TEMPO SI COMPORTA COSÌ</text>
+
+  <rect class="mappa-blocco" x="30" y="46" width="350" height="34" rx="8"/>
+  <text class="mappa-t-blocco" x="205" y="68" text-anchor="middle">Resistore</text>
+  <rect class="mappa-blocco" x="415" y="46" width="350" height="34" rx="8"/>
+  <text class="mappa-t-blocco" x="590" y="68" text-anchor="middle">Condensatore</text>
+  <rect class="mappa-blocco" x="800" y="46" width="350" height="34" rx="8"/>
+  <text class="mappa-t-blocco" x="975" y="68" text-anchor="middle">Induttore</text>
+
+  <rect class="mappa-interno" x="30" y="104" width="350" height="110" rx="10"/>
+  <text class="mappa-t-chiave" x="205" y="140" text-anchor="middle">v = R · i</text>
+  <text class="mappa-t-piccolo" x="205" y="168" text-anchor="middle">tensione e corrente,</text>
+  <text class="mappa-t-piccolo" x="205" y="188" text-anchor="middle">nello stesso istante</text>
+
+  <rect class="mappa-interno" x="415" y="104" width="350" height="110" rx="10"/>
+  <text class="mappa-t-chiave" x="590" y="140" text-anchor="middle">q = C · v</text>
+  <text class="mappa-t-piccolo" x="590" y="168" text-anchor="middle">la tensione dice</text>
+  <text class="mappa-t-piccolo" x="590" y="188" text-anchor="middle">quanta carica c'è dentro</text>
+
+  <rect class="mappa-interno" x="800" y="104" width="350" height="110" rx="10"/>
+  <text class="mappa-t-chiave" x="975" y="140" text-anchor="middle">Φ = L · i</text>
+  <text class="mappa-t-piccolo" x="975" y="168" text-anchor="middle">la corrente dice</text>
+  <text class="mappa-t-piccolo" x="975" y="188" text-anchor="middle">quanto flusso c'è</text>
+
+  <rect class="mappa-interno" x="30" y="264" width="350" height="110" rx="10"/>
+  <text class="mappa-t-blocco" x="205" y="298" text-anchor="middle">La dissipa</text>
+  <text class="mappa-t-piccolo" x="205" y="324" text-anchor="middle">diventa calore e se ne va:</text>
+  <text class="mappa-t-piccolo" x="205" y="344" text-anchor="middle">non si può riprendere</text>
+
+  <rect class="mappa-interno" x="415" y="264" width="350" height="110" rx="10"/>
+  <text class="mappa-t-blocco" x="590" y="298" text-anchor="middle">La conserva</text>
+  <text class="mappa-t-piccolo" x="590" y="324" text-anchor="middle">nel campo elettrico</text>
+  <text class="mappa-t-piccolo" x="590" y="344" text-anchor="middle">fra le armature</text>
+
+  <rect class="mappa-interno" x="800" y="264" width="350" height="110" rx="10"/>
+  <text class="mappa-t-blocco" x="975" y="298" text-anchor="middle">La conserva</text>
+  <text class="mappa-t-piccolo" x="975" y="324" text-anchor="middle">nel campo magnetico</text>
+  <text class="mappa-t-piccolo" x="975" y="344" text-anchor="middle">delle spire</text>
+
+  <rect class="mappa-interno" x="30" y="424" width="350" height="110" rx="10"/>
+  <text class="mappa-t-blocco" x="205" y="458" text-anchor="middle">Risponde subito</text>
+  <text class="mappa-t-piccolo" x="205" y="484" text-anchor="middle">so la corrente adesso,</text>
+  <text class="mappa-t-piccolo" x="205" y="504" text-anchor="middle">so la tensione adesso</text>
+
+  <rect class="mappa-interno-chiave" x="415" y="424" width="350" height="110" rx="10"/>
+  <text class="mappa-t-blocco" x="590" y="458" text-anchor="middle">La tensione non salta</text>
+  <text class="mappa-t-piccolo" x="590" y="484" text-anchor="middle">per cambiarla serve tempo:</text>
+  <text class="mappa-t-chiave" x="590" y="506" text-anchor="middle">c'è memoria</text>
+
+  <rect class="mappa-interno-chiave" x="800" y="424" width="350" height="110" rx="10"/>
+  <text class="mappa-t-blocco" x="975" y="458" text-anchor="middle">La corrente non salta</text>
+  <text class="mappa-t-piccolo" x="975" y="484" text-anchor="middle">per cambiarla serve tempo:</text>
+  <text class="mappa-t-chiave" x="975" y="506" text-anchor="middle">c'è memoria</text>
+
+  <line class="mappa-linea" x1="590" y1="534" x2="590" y2="572" marker-end="url(#cba)"/>
+  <line class="mappa-linea" x1="975" y1="534" x2="975" y2="560" marker-end="url(#cba)"/>
+  <text class="mappa-etichetta" x="604" y="560" text-anchor="start">ed è il motivo per cui un circuito ha bisogno di tempo</text>
+</svg>
+```
+:::
+
+Le tre righe rispondono a tre domande diverse sullo stesso oggetto. La prima mostra un parallelo che conviene notare: **ciascun componente lega due grandezze**, e la costante che le lega è il suo unico parametro.
+
+L'ultima riga è quella che conta per il resto del corso: resistore e condensatore non si distinguono per «quanto», ma per **se serve conoscere il passato**. È la stessa memoria che in Sistemi automatici diventa lo *stato*.
+
+::: {.callout-note collapse=true title="La stessa tabella in forma di elenco"}
+
+**Che cosa lega**
+
+- **Resistore:** $v = R\,i$ — tensione e corrente nello stesso istante.
+- **Condensatore:** $q = C\,v$ — la tensione dice quanta carica c'è dentro.
+- **Induttore:** $\Phi = L\,i$ — la corrente dice quanto flusso c'è.
+
+**Che cosa fa dell'energia**
+
+- **Resistore:** la dissipa in calore; non si può riprendere.
+- **Condensatore:** la conserva nel campo elettrico fra le armature.
+- **Induttore:** la conserva nel campo magnetico delle spire.
+
+**Come si comporta nel tempo**
+
+- **Resistore:** risponde subito. Nota la corrente adesso, sai la tensione adesso.
+- **Condensatore:** la tensione non salta; per cambiarla serve tempo. **C'è memoria.**
+- **Induttore:** la corrente non salta; per cambiarla serve tempo. **C'è memoria.**
+
+Ed è per questo che un circuito con un condensatore o un induttore ha bisogno di tempo per rispondere.
+
+:::
+
+
+### Dove approfondire
+
+::: {.resource-card}
+### [Carica, corrente e tensione](../fondamenti/carica-corrente-tensione.qmd)
+La carica è la grandezza di base; la corrente ne descrive il trasferimento nel tempo e la tensione è una differenza di potenziale. Il **campo elettrico** è ciò che mette in moto le cariche: la tensione fra due punti nasce dal lavoro che il campo compie per spostarle.
+:::
+
+**Queste grandezze permettono di descrivere tre comportamenti:**
+
+
+::: {.process-map}
+::: {.map-card .map-card-linked}
+### [Resistore](../componenti/resistore.qmd#livello-2){.map-destination}
+Lega tensione e corrente attraverso la resistenza e **dissipa energia**.
+:::
+::: {.map-card .map-card-linked}
+### [Condensatore](../componenti/condensatore.qmd#livello-2){.map-destination}
+Lega carica e tensione e **immagazzina energia nel campo elettrico**.
+:::
+::: {.map-card .map-card-linked}
+### [Induttore](../componenti/induttore.qmd#livello-2){.map-destination}
+Lega corrente e flusso concatenato e **immagazzina energia nel campo magnetico**.
+:::
+:::
+
+**Collegando resistore e condensatore otteniamo un esempio di evoluzione nel tempo:**
+
+::: {.resource-card}
+### [Circuito RC e costante di tempo](../../laboratori/rc.qmd)
+Il resistore limita la corrente di carica; mentre la tensione del condensatore cresce, la corrente diminuisce. Esplora come R e C cambiano la durata del transitorio.
+:::
+
+[Rivedi potenza ed energia](../fondamenti/potenza-energia.qmd) · [Consulta tutti i componenti](../componenti/index.qmd)

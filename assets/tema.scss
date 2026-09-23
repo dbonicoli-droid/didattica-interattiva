@@ -173,7 +173,34 @@ table code, .table code { font-variant-numeric: tabular-nums; }
   overflow-x: auto;
   padding-bottom: .6rem;
 }
-.mappa-disegno svg { display: block; width: 100%; min-width: 900px; height: auto; }
+.mappa-disegno svg { display: block; width: 100%; height: auto; }
+
+/* Comando per aprire la mappa a schermo intero, quando il testo risulta piccolo */
+.mappa-ingrandisci {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin: .2rem 0 0; padding: .4rem .8rem;
+  background: none; border: 1px solid var(--bordo-forte); border-radius: .5rem;
+  color: var(--testo-tenue); font-size: .8rem; font-weight: 600; cursor: pointer;
+}
+.mappa-ingrandisci:hover { background: var(--evidenza); color: var(--testo); border-color: var(--accento); }
+
+dialog.mappa-schermo {
+  width: 96vw; max-width: 96vw; height: 92vh; max-height: 92vh;
+  padding: 0; border: 1px solid var(--bordo-forte); border-radius: var(--raggio);
+  background: var(--superficie); color: var(--testo);
+}
+dialog.mappa-schermo::backdrop { background: rgb(0 0 0 / 62%); }
+dialog.mappa-schermo .barra {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: .7rem 1rem; border-bottom: 1px solid var(--bordo);
+  font-size: .85rem; color: var(--testo-tenue);
+}
+dialog.mappa-schermo .barra button {
+  padding: .35rem .8rem; border: 1px solid var(--bordo-forte); border-radius: .45rem;
+  background: none; color: var(--testo); font-size: .85rem; font-weight: 600; cursor: pointer;
+}
+dialog.mappa-schermo .tela { overflow: auto; height: calc(92vh - 3.2rem); padding: 1rem; }
+dialog.mappa-schermo .tela svg { display: block; width: auto; height: auto; min-width: 1100px; }
 
 .mappa-domanda { font-size: 15px; font-style: italic; fill: var(--testo-tenue); }
 .mappa-radice { fill: var(--evidenza); stroke: var(--titolo); stroke-width: 2.5; }
@@ -738,7 +765,7 @@ main.content .classification-exercise table { display: table; width: 100%; table
   color: var(--testo-tenue);
 }
 
-/* Una sola proprietà: intestazione orizzontale. */
+/* Una sola proprietï¿½: intestazione orizzontale. */
 .classification-exercise th:nth-child(2):last-child { writing-mode: horizontal-tb; text-orientation: mixed; white-space: normal; }
 
 /* Mappa a meccanismo: il sistema disegnato con il vocabolario al posto giusto,

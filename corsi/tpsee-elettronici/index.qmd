@@ -17,6 +17,8 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 
 Dal progetto di un circuito alla logica digitale: prima si impara a disegnare, simulare e montare, poi a descrivere il comportamento con l'algebra di Boole e a costruire reti combinatorie e sequenziali.
 
+[Guarda la mappa concettuale del corso →](/risorse/mappe/index.qmd#mappa-tpsee-elettronici)
+
 | **Modulo** | **Argomento** | **Periodo** | **Ore** |
 |---|---|---|---|
 | 1 | Il progetto di sistemi elettrici ed elettronici | 1 | 20 |
