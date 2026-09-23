@@ -162,6 +162,55 @@ table code, .table code { font-variant-numeric: tabular-nums; }
   main.content table { display: block; overflow-x: auto; }
 }
 
+/* ============================================================
+   Mappe concettuali disegnate
+   Il disegno segue i colori del tema; il contenuto è ripetuto in forma
+   testuale sotto, perché una mappa non deve escludere chi non la vede.
+   ============================================================ */
+.mappa-disegno {
+  max-width: none !important;
+  margin: 1.5rem 0 .6rem;
+  overflow-x: auto;
+  padding-bottom: .6rem;
+}
+.mappa-disegno svg { display: block; width: 100%; min-width: 900px; height: auto; }
+
+.mappa-domanda { font-size: 15px; font-style: italic; fill: var(--testo-tenue); }
+.mappa-radice { fill: var(--evidenza); stroke: var(--titolo); stroke-width: 2.5; }
+.mappa-radice-testo { font-size: 21px; font-weight: 700; fill: var(--titolo); }
+
+.mappa-ramo-a { fill: var(--mappa-nodo); stroke: var(--mappa-a); stroke-width: 3; }
+.mappa-ramo-b { fill: var(--mappa-nodo); stroke: var(--mappa-b); stroke-width: 3; }
+.mappa-ramo-c { fill: var(--mappa-nodo); stroke: var(--mappa-c); stroke-width: 3; }
+.mappa-ramo-testo { font-size: 17px; font-weight: 700; fill: var(--titolo); }
+
+.mappa-nodo-a { fill: var(--mappa-nodo); stroke: var(--mappa-a); stroke-width: 1.6; }
+.mappa-nodo-b { fill: var(--mappa-nodo); stroke: var(--mappa-b); stroke-width: 1.6; }
+.mappa-nodo-c { fill: var(--mappa-nodo); stroke: var(--mappa-c); stroke-width: 1.6; }
+.mappa-nodo-condiviso { fill: var(--mappa-nodo); stroke: var(--testo-tenue); stroke-width: 1.6; stroke-dasharray: 5 4; }
+.mappa-nodo-testo { font-size: 15px; font-weight: 600; fill: var(--titolo); }
+.mappa-esempio { font-size: 12.5px; fill: var(--testo-tenue); }
+
+.mappa-linea { stroke: var(--bordo-forte); stroke-width: 2; fill: none; }
+.mappa-etichetta { font-size: 13px; font-style: italic; fill: var(--testo-tenue); }
+.mappa-punta { fill: var(--bordo-forte); }
+.mappa-incrocio { stroke: var(--mappa-incrocio); stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+.mappa-incrocio-testo { font-size: 13px; font-style: italic; font-weight: 600; fill: var(--mappa-incrocio); }
+.mappa-punta-incrocio { fill: var(--mappa-incrocio); }
+
+.mappa-legenda {
+  display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center;
+  font-size: .8rem; color: var(--testo-tenue); margin-bottom: 1.2rem;
+}
+.mappa-legenda span { display: inline-flex; align-items: center; gap: .45rem; }
+.mappa-legenda i { display: inline-block; width: 24px; height: 0; border-top: 2px solid var(--bordo-forte); }
+.mappa-legenda i.incrocio { border-top: 2px dashed var(--mappa-incrocio); }
+
+@media print {
+  .mappa-disegno { overflow: visible; }
+  .mappa-disegno svg { min-width: 0; }
+}
+
 /* Provenienza di una scheda di approfondimento: da quale modulo arriva.
    Serve a impedire che la pagina diventi un magazzino di cose senza casa. */
 .provenienza {
@@ -675,4 +724,16 @@ main.content .classification-exercise table { display: table; width: 100%; table
 /* Gli approfondimenti a comparsa restano leggibili nella stampa del sito. */
 @media print {
   .callout .callout-collapse { display: block !important; height: auto !important; }
+}
+
+/* Frase di raccordo fra un modulo e il successivo: dice che cosa si aggiunge,
+   non ripete il titolo. */
+.ponte {
+  display: block;
+  margin-top: .6rem;
+  padding-top: .55rem;
+  border-top: 1px dashed var(--bordo-forte);
+  font-size: .82rem;
+  font-style: italic;
+  color: var(--testo-tenue);
 }

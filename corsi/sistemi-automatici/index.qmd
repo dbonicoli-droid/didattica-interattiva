@@ -17,6 +17,8 @@ Esplora i moduli, richiama i fondamenti quando servono e collega le spiegazioni 
 
 Dal sistema al controllo: si impara a descrivere un sistema con un modello, a trattare le variabili con la logica e a realizzare automatismi con il PLC.
 
+[Guarda la mappa concettuale del corso →](/risorse/mappe/index.qmd#mappa-sistemi-automatici)
+
 | **Modulo** | **Argomento** | **Periodo** | **Ore** |
 |---|---|---|---|
 | 1 | Fondamenti di teoria dei sistemi | 1 | 15 |
@@ -42,6 +44,8 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 
 **Primo periodo · 15 ore** · [Leggi la sintesi del modulo 1 →](modulo-1.qmd)
 
+[Poi: dal modello alla logica]{.ponte}
+
 :::
 
 ::: {.map-card}
@@ -52,6 +56,8 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 - Semplificare le funzioni.
 
 **Primo periodo · 30 ore** · [Leggi la sintesi del modulo 2 →](modulo-2.qmd)
+
+[Poi: la logica diventa linguaggio del PLC]{.ponte}
 
 :::
 
@@ -65,6 +71,8 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 
 **Secondo periodo · 30 ore** · [Leggi la sintesi del modulo 3 →](modulo-3.qmd)
 
+[Poi: si programmano le funzioni combinatorie]{.ponte}
+
 :::
 
 ::: {.map-card}
@@ -76,6 +84,8 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 
 **Secondo periodo · 40 ore** · [Leggi la sintesi del modulo 4 →](modulo-4.qmd)
 
+[Poi: si aggiunge la memoria di stato]{.ponte}
+
 :::
 
 ::: {.map-card}
@@ -86,6 +96,8 @@ Dal sistema al controllo: si impara a descrivere un sistema con un modello, a tr
 - Memoria e interblocchi.
 
 **Secondo periodo · 24 ore** · [Leggi la sintesi del modulo 5 →](modulo-5.qmd)
+
+[Poi: si aggiungono tempo e grandezze analogiche]{.ponte}
 
 :::
 

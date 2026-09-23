@@ -60,9 +60,183 @@ Il resistore limita la corrente di carica; mentre la tensione del condensatore c
 
 [Rivedi potenza ed energia](../fondamenti/potenza-energia.qmd) · [Consulta tutti i componenti](../componenti/index.qmd)
 
-## Mappe dei percorsi
+## Sistemi automatici · Dal sistema al controllo {#mappa-sistemi-automatici}
 
-Ogni percorso avrà la propria mappa, con i concetti del corso collegati fra loro.
+*Mappa generale del percorso: come si passa da un sistema reale al suo controllo automatico.*
+
+::: {.mappa-legenda}
+[[]{} relazione gerarchica]{} [[]{.incrocio} collegamento fra rami diversi]{}
+:::
+
+::: {.mappa-disegno}
+```{=html}
+<svg viewBox="0 0 1180 1000" role="img" aria-labelledby="mappa-sa-titolo mappa-sa-desc">
+  <title id="mappa-sa-titolo">Dal sistema al controllo</title>
+  <desc id="mappa-sa-desc">Dal concetto di sistema automatico si diramano tre rami: descrivere il sistema, trattare le variabili con la logica, realizzare il controllo. Ogni ramo ha da tre a quattro concetti. Quattro collegamenti trasversali uniscono rami diversi. Lo stesso contenuto è riportato in forma di elenco sotto la figura.</desc>
+
+  <defs>
+    <marker id="pt" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta"/>
+    </marker>
+    <marker id="ptx" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" class="mappa-punta-incrocio"/>
+    </marker>
+  </defs>
+
+  <text class="mappa-domanda" x="616" y="24" text-anchor="middle">Come si passa da un sistema reale al suo controllo automatico?</text>
+
+  <rect class="mappa-radice" x="476" y="46" width="280" height="60" rx="18"/>
+  <text class="mappa-radice-testo" x="616" y="76" text-anchor="middle" dominant-baseline="middle">Sistema automatico</text>
+
+  <path class="mappa-linea" d="M616,106 V140"/>
+  <path class="mappa-linea" d="M216,140 H1016"/>
+  <path class="mappa-linea" d="M216,140 V176" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M616,140 V176" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M1016,140 V176" marker-end="url(#pt)"/>
+  <text class="mappa-etichetta" x="226" y="164">si descrive con</text>
+  <text class="mappa-etichetta" x="626" y="164">ragiona con</text>
+  <text class="mappa-etichetta" x="1026" y="164">si realizza con</text>
+
+  <rect class="mappa-ramo-a" x="96" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="216" y="204" text-anchor="middle">Descrivere</text>
+  <text class="mappa-ramo-testo" x="216" y="228" text-anchor="middle">il sistema</text>
+
+  <rect class="mappa-ramo-b" x="496" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="616" y="204" text-anchor="middle">Logica</text>
+  <text class="mappa-ramo-testo" x="616" y="228" text-anchor="middle">booleana</text>
+
+  <rect class="mappa-ramo-c" x="896" y="176" width="240" height="72" rx="14"/>
+  <text class="mappa-ramo-testo" x="1016" y="204" text-anchor="middle">Realizzare</text>
+  <text class="mappa-ramo-testo" x="1016" y="228" text-anchor="middle">il controllo</text>
+
+  <path class="mappa-linea" d="M216,248 V272 H60 V648"/>
+  <path class="mappa-linea" d="M60,342 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,444 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,546 H96" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M60,648 H96" marker-end="url(#pt)"/>
+
+  <path class="mappa-linea" d="M616,248 V272 H460 V546"/>
+  <path class="mappa-linea" d="M460,342 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,444 H496" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M460,546 H496" marker-end="url(#pt)"/>
+
+  <path class="mappa-linea" d="M1016,248 V272 H860 V648"/>
+  <path class="mappa-linea" d="M860,342 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,444 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,546 H896" marker-end="url(#pt)"/>
+  <path class="mappa-linea" d="M860,648 H896" marker-end="url(#pt)"/>
+
+  <rect class="mappa-nodo-a" x="96" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="328" text-anchor="middle">Ingressi, stato e uscite</text>
+  <text class="mappa-esempio" x="216" y="352" text-anchor="middle">portata, livello, disturbi</text>
+  <text class="mappa-esempio" x="216" y="370" text-anchor="middle">lo stato è ciò che il sistema ricorda</text>
+
+  <rect class="mappa-nodo-a" x="96" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="430" text-anchor="middle">Tre domande</text>
+  <text class="mappa-esempio" x="216" y="454" text-anchor="middle">ha memoria? è lineare?</text>
+  <text class="mappa-esempio" x="216" y="472" text-anchor="middle">è invariante nel tempo?</text>
+
+  <rect class="mappa-nodo-a" x="96" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="532" text-anchor="middle">Anello aperto e chiuso</text>
+  <text class="mappa-esempio" x="216" y="556" text-anchor="middle">la retroazione confronta</text>
+  <text class="mappa-esempio" x="216" y="574" text-anchor="middle">risultato e riferimento</text>
+
+  <rect class="mappa-nodo-a" x="96" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="216" y="634" text-anchor="middle">Modelli e algoritmi</text>
+  <text class="mappa-esempio" x="216" y="658" text-anchor="middle">fisico · grafico</text>
+  <text class="mappa-esempio" x="216" y="676" text-anchor="middle">matematico · algoritmico</text>
+
+  <rect class="mappa-nodo-b" x="496" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="332" text-anchor="middle">Porte logiche</text>
+  <text class="mappa-esempio" x="616" y="358" text-anchor="middle">AND · OR · NOT · XOR</text>
+
+  <rect class="mappa-nodo-b" x="496" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="434" text-anchor="middle">Funzioni logiche</text>
+  <text class="mappa-esempio" x="616" y="460" text-anchor="middle">espressioni e tabelle di verità</text>
+
+  <rect class="mappa-nodo-b" x="496" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="532" text-anchor="middle">Minimizzazione</text>
+  <text class="mappa-esempio" x="616" y="556" text-anchor="middle">De Morgan · Karnaugh</text>
+  <text class="mappa-esempio" x="616" y="574" text-anchor="middle">Quine–McCluskey</text>
+
+  <rect class="mappa-nodo-c" x="896" y="300" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="328" text-anchor="middle">Il PLC</text>
+  <text class="mappa-esempio" x="1016" y="352" text-anchor="middle">architettura · scansione</text>
+  <text class="mappa-esempio" x="1016" y="370" text-anchor="middle">Ladder · ST · FBD · IL</text>
+
+  <rect class="mappa-nodo-c" x="896" y="402" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="434" text-anchor="middle">Circuiti combinatori</text>
+  <text class="mappa-esempio" x="1016" y="460" text-anchor="middle">uscita = f(ingressi)</text>
+
+  <rect class="mappa-nodo-c" x="896" y="504" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="536" text-anchor="middle">Circuiti sequenziali</text>
+  <text class="mappa-esempio" x="1016" y="562" text-anchor="middle">uscita = f(ingressi, stato)</text>
+
+  <rect class="mappa-nodo-c" x="896" y="606" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="1016" y="634" text-anchor="middle">Tempo e analogico</text>
+  <text class="mappa-esempio" x="1016" y="658" text-anchor="middle">timer · contatori</text>
+  <text class="mappa-esempio" x="1016" y="676" text-anchor="middle">segnali e scalatura</text>
+
+  <rect class="mappa-nodo-condiviso" x="496" y="852" width="240" height="84" rx="11"/>
+  <text class="mappa-nodo-testo" x="616" y="884" text-anchor="middle">Simulazione</text>
+  <text class="mappa-esempio" x="616" y="910" text-anchor="middle">verificare prima di realizzare</text>
+
+  <path class="mappa-incrocio" d="M736,444 C800,444 820,360 896,342" marker-end="url(#ptx)"/>
+  <text class="mappa-incrocio-testo" x="816" y="392" text-anchor="middle">si traducono in Ladder</text>
+
+  <path class="mappa-incrocio" d="M96,444 H40 V772 H840 V546 H896" marker-end="url(#ptx)"/>
+  <text class="mappa-incrocio-testo" x="440" y="762" text-anchor="middle">la memoria diventa stato</text>
+
+  <path class="mappa-incrocio" d="M216,690 V800 C216,840 400,860 496,886" marker-end="url(#ptx)"/>
+  <text class="mappa-incrocio-testo" x="300" y="836" text-anchor="middle">si verifica con</text>
+
+  <path class="mappa-incrocio" d="M1016,690 V800 C1016,840 830,860 736,886" marker-end="url(#ptx)"/>
+  <text class="mappa-incrocio-testo" x="930" y="836" text-anchor="middle">si verifica con</text>
+
+  <path class="mappa-incrocio" d="M1136,444 C1172,470 1172,520 1136,546" marker-end="url(#ptx)"/>
+  <text class="mappa-incrocio-testo" x="1148" y="500" text-anchor="start">aggiunge</text>
+  <text class="mappa-incrocio-testo" x="1148" y="518" text-anchor="start">memoria</text>
+</svg>
+```
+:::
+
+Le linee continue vanno dal concetto più generale a quello più particolare; quelle **tratteggiate** collegano rami diversi. Il collegamento che regge tutto il corso è *«le funzioni logiche si traducono in Ladder»*: è il punto in cui la teoria diventa un programma che gira su un PLC.
+
+::: {.callout-note collapse=true title="La stessa mappa in forma di elenco"}
+
+**Sistema automatico** — come si passa da un sistema reale al suo controllo automatico.
+
+- **Si descrive con: Descrivere il sistema**
+  - Ingressi, stato e uscite — portata, livello, disturbi; lo stato è ciò che il sistema ricorda
+  - Tre domande — ha memoria? è lineare? è invariante nel tempo?
+  - Anello aperto e chiuso — la retroazione confronta risultato e riferimento
+  - Modelli e algoritmi — fisico, grafico, matematico, algoritmico
+- **Ragiona con: Logica booleana**
+  - Porte logiche — AND, OR, NOT, XOR
+  - Funzioni logiche — espressioni e tabelle di verità
+  - Minimizzazione — De Morgan, Karnaugh, Quine–McCluskey
+- **Si realizza con: Realizzare il controllo**
+  - Il PLC — architettura, scansione, Ladder, ST, FBD, IL
+  - Circuiti combinatori — uscita = f(ingressi)
+  - Circuiti sequenziali — uscita = f(ingressi, stato)
+  - Tempo e analogico — timer, contatori, segnali e scalatura
+- **Simulazione** — verificare prima di realizzare
+
+Collegamenti fra rami diversi:
+
+- Funzioni logiche → Il PLC: *si traducono in Ladder*
+- Tre domande → Circuiti sequenziali: *la memoria diventa stato*
+- Modelli e algoritmi → Simulazione: *si verifica con*
+- Tempo e analogico → Simulazione: *si verifica con*
+- Circuiti combinatori → Circuiti sequenziali: *aggiunge memoria*
+
+:::
+
+[Vai al programma del corso →](/corsi/sistemi-automatici/index.qmd#moduli) · [Modulo 1](/corsi/sistemi-automatici/moduli/modulo-1.qmd)
+
+## Mappe dei percorsi ancora da disegnare
+
+Gli altri tre percorsi avranno la propria mappa, con i concetti del corso collegati fra loro.
 
 ::: {.resource-grid}
 
@@ -84,16 +258,6 @@ Porte logiche, reti combinatorie e sequenziali, dispositivi integrati.
 Normativa, simboli, componenti, materiali e illuminotecnica.
 
 [Vai al programma del corso →](/corsi/tpsee-elettrotecnici/index.qmd#moduli)
-:::
-
-::: {.resource-card}
-[SISTEMI AUTOMATICI]{.resource-label}
-
-### Dal sistema al controllo ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
-
-Modelli, variabili, logica, PLC e grandezze analogiche.
-
-[Vai al programma del corso →](/corsi/sistemi-automatici/index.qmd#moduli)
 :::
 
 ::: {.resource-card}
