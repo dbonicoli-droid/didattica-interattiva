@@ -567,7 +567,7 @@ International Electrotechnical Commission: organismo internazionale di normazion
 
 [Sistemi automatici]{.gloss-scope}
 
-Instruction List: linguaggio a istruzioni che elaborano un risultato intermedio.
+Instruction List (lista di istruzioni): linguaggio testuale per PLC composto da istruzioni elementari, ciascuna delle quali esegue un’operazione, per esempio caricare un valore, combinarlo con un altro o scrivere un risultato. Si incontra anche nei programmi esistenti.
 
 ### Illuminamento {#gloss-illuminamento}
 

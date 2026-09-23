@@ -145,7 +145,7 @@ Accedi ai moduli e alle singole unità didattiche. Le voci sono disponibili anch
 - [U.D. 3.1 / Il PLC: struttura e architettura](moduli/modulo-3.qmd#ud:3.1)
 - [U.D. 3.2 / Ciclo di scansione, indirizzamento, tipi di dato e variabili](moduli/modulo-3.qmd#ud:3.2)
 - [U.D. 3.3 / Interfacciamento sul campo e schemi funzionali](moduli/modulo-3.qmd#ud:3.3)
-- [U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta](moduli/modulo-3.qmd#ud:3.4)
+- [U.D. 3.4 / Linguaggi di programmazione del PLC e criteri di scelta](moduli/modulo-3.qmd#ud:3.4)
 - [U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug](moduli/modulo-3.qmd#ud:3.5)
 - [U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC](moduli/modulo-3.qmd#ud:3.6)
 

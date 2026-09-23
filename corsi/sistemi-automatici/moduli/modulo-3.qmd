@@ -16,7 +16,7 @@ Il **PLC è un computer che legge segnali elettrici ed esegue un programma per c
 - [U.D. 3.1 / Il PLC: struttura e architettura](#ud:3.1)
 - [U.D. 3.2 / Ciclo di scansione, indirizzamento, tipi di dato e variabili](#ud:3.2)
 - [U.D. 3.3 / Interfacciamento sul campo e schemi funzionali](#ud:3.3)
-- [U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta](#ud:3.4)
+- [U.D. 3.4 / Linguaggi di programmazione del PLC e criteri di scelta](#ud:3.4)
 - [U.D. 3.5 / Ambiente di sviluppo: progetto, configurazione e debug](#ud:3.5)
 - [U.D. 3.6 / Laboratorio: dal quadro elettromeccanico al PLC](#ud:3.6)
 
@@ -105,9 +105,11 @@ Negli esempi della guida dedicata a due pulsanti aggiungiamo un secondo ingresso
 
 Un **contatto negato Ladder** verifica un valore 0: non impone che il pulsante fisico sia normalmente chiuso. Se il cablaggio cambia, occorre ridefinire il significato logico dei segnali.
 
-## U.D. 3.4 / Panoramica dei linguaggi IEC 61131-3 e criteri di scelta {#ud:3.4}
+## U.D. 3.4 / Linguaggi di programmazione del PLC e criteri di scelta {#ud:3.4}
 
-Incontreremo Ladder (LD), diagrammi a blocchi (FBD) e testo strutturato (ST); SFC organizza sequenze mediante passi, transizioni e azioni. Nei programmi esistenti si può incontrare anche IL. Disponibilità e dettagli dipendono dall’ambiente: qui introduciamo il **Ladder**, lasciando il confronto approfondito alla [sintesi del modulo](../modulo-3.qmd#ud:3.4).
+Il riferimento normativo per i linguaggi di programmazione dei PLC è la **IEC 61131-3**.
+
+Incontreremo Ladder (LD), diagrammi a blocchi (FBD) e testo strutturato (ST); SFC organizza sequenze mediante passi, transizioni e azioni. Nei programmi esistenti si può incontrare anche [IL](/risorse/glossario/index.qmd#gloss-il) (**Instruction List**, lista di istruzioni): un linguaggio testuale composto da istruzioni elementari, ciascuna delle quali esegue un’operazione. Disponibilità e dettagli dipendono dall’ambiente: qui introduciamo il **Ladder**, lasciando il confronto approfondito alla [sintesi del modulo](../modulo-3.qmd#ud:3.4).
 
 ### Prima introduzione al Ladder {#elementi-ladder}
 
