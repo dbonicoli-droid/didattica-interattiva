@@ -740,3 +740,23 @@ main.content .classification-exercise table { display: table; width: 100%; table
 
 /* Una sola proprietà: intestazione orizzontale. */
 .classification-exercise th:nth-child(2):last-child { writing-mode: horizontal-tb; text-orientation: mixed; white-space: normal; }
+
+/* Mappa a meccanismo: il sistema disegnato con il vocabolario al posto giusto,
+   invece di un albero di riquadri. */
+.mappa-ambiente { fill: none; stroke: var(--bordo-forte); stroke-width: 1.5; stroke-dasharray: 7 6; }
+.mappa-sistema { fill: var(--superficie); stroke: var(--titolo); stroke-width: 2.5; }
+.mappa-blocco { fill: var(--superficie); stroke: var(--bordo-forte); stroke-width: 1.8; }
+.mappa-interno { fill: var(--evidenza); stroke: var(--bordo-forte); stroke-width: 1.5; }
+.mappa-interno-chiave { fill: var(--evidenza); stroke: var(--mappa-hub); stroke-width: 3; }
+.mappa-controllore { fill: var(--superficie); stroke: var(--mappa-incrocio); stroke-width: 2; stroke-dasharray: 6 5; }
+
+.mappa-t-sistema { font-family: $headings-font-family; font-size: 19px; font-weight: 700; fill: var(--titolo); }
+.mappa-t-blocco { font-size: 15.5px; font-weight: 600; fill: var(--titolo); }
+.mappa-t-piccolo { font-size: 12.5px; fill: var(--testo-tenue); }
+.mappa-t-chiave { font-size: 15.5px; font-weight: 700; fill: var(--mappa-hub); }
+.mappa-t-ambiente { font-size: 13px; font-style: italic; fill: var(--testo-tenue); letter-spacing: .05em; }
+
+.mappa-anello { stroke: var(--mappa-incrocio); stroke-width: 2; stroke-dasharray: 7 5; fill: none; }
+.mappa-t-anello { font-size: 13px; font-style: italic; font-weight: 600; fill: var(--mappa-incrocio); }
+
+.mappa-legenda b.tinta { display: inline-block; width: 13px; height: 13px; border-radius: 3px; background: var(--mappa-hub); }
