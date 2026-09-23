@@ -102,7 +102,17 @@ Per estremi iniziali entrambi nulli: **valore fisico = codice letto / codice mas
 
 Supponiamo che i codici da 0 a 10000 rappresentino da 0 a 100 gradi Celsius. Il codice 2500 corrisponde a 25 gradi. Questi estremi sono dati dell'esempio, non valori universali di un [PLC](/risorse/glossario/index.qmd#gloss-plc).
 
-[Formula di [scalatura](/risorse/glossario/index.qmd#gloss-scalatura) ed esempio commentato negli approfondimenti](approfondimenti.qmd#app:analogico).
+::: {.callout-note collapse=true title="Il conto per esteso: la formula di scalatura"}
+
+Chiamiamo $r$ il codice acquisito, $r_0$ e $r_1$ i codici estremi; $x_0$ e $x_1$ sono le corrispondenti misure fisiche. Assumendo una corrispondenza lineare e $r_1\ne r_0$:
+
+$$x=x_0+\frac{r-r_0}{r_1-r_0}(x_1-x_0).$$
+
+Per $r_0=0$, $r_1=10000$, $x_0=0$ e $x_1=100$ gradi Celsius, $r=2500$ dà $x=25$ gradi.
+
+I codici estremi provengono dalla configurazione del canale; la formula non rileva da sola un guasto del [sensore](/risorse/glossario/index.qmd#gloss-sensore).
+
+:::
 
 ## U.D. 6.6 / Elaborare valori analogici in Testo strutturato e Instruction List {#ud:6.6}
 
@@ -133,7 +143,7 @@ Un [sensore](/risorse/glossario/index.qmd#gloss-sensore) conta i pezzi. Dopo cin
 
 - Verifica separatamente dato analogico non valido e riavvio.
 
-Confronta le realizzazioni disponibili in [OpenPLC](/risorse/glossario/index.qmd#gloss-openplc) usando le stesse tracce. [Altre prove e soluzioni sono negli approfondimenti](approfondimenti.qmd#app:nuove-prove).
+Confronta le realizzazioni disponibili in [OpenPLC](/risorse/glossario/index.qmd#gloss-openplc) usando le stesse tracce. [Altre prove e soluzioni nella pagina degli esercizi](esercizi.qmd#es:moduli-5-6).
 
 
 [Vai al modulo di approfondimento →](moduli/modulo-6.qmd)

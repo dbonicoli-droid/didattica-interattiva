@@ -157,8 +157,8 @@ website:
               text: "Modulo 6 / Tempi, eventi e grandezze analogiche"
         - section: "Altre risorse"
           contents:
-            - href: corsi/sistemi-automatici/esercizi-un-controllo-ragionato.qmd
-              text: "Esercizi / Un controllo ragionato"
+            - href: corsi/sistemi-automatici/esercizi.qmd
+              text: "Esercizi"
             - href: corsi/sistemi-automatici/educazione-civica-emergenza-climatica.qmd
               text: "Educazione civica / Emergenza climatica"
             - href: corsi/sistemi-automatici/approfondimenti.qmd

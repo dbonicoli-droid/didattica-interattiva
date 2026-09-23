@@ -9,18 +9,14 @@ toc-depth: 3
 
 []{#sec:approfondimenti}
 
-Una scheda arriva qui per **un motivo dichiarato**: è oltre il programma dell'anno, è un conto che nel modulo spezzerebbe il discorso, è materiale da consultare invece che da leggere, oppure è un esercizio in più. Ogni scheda dice da quale modulo proviene, e il modulo dice dove trovarla.
+Una scheda arriva qui per **un motivo dichiarato**: è oltre il programma dell'anno, oppure è materiale da consultare quando serve invece che da leggere di seguito. Ogni scheda dice da quale modulo proviene, e il modulo dice dove trovarla.
 
-Se una scheda non rientra in nessuno di questi quattro motivi, il suo posto è dentro un modulo.
+Se una scheda non rientra in uno di questi due motivi, il suo posto è altrove: i conti per esteso stanno nel modulo, in un riquadro a comparsa accanto al risultato; gli esercizi stanno nella [pagina degli esercizi](esercizi.qmd).
 
 | Scheda | Perché è qui | Da |
 |---|---|---|
 | [Altre tre proprietà dei sistemi](#app:proprieta) | Oltre il programma | Modulo 1 |
-| [Il livello di un serbatoio](#app:serbatoio) | Il conto per esteso | Modulo 1 |
-| [Scalatura analogica](#app:analogico) | Il conto per esteso | Modulo 6 |
 | [Quine–McCluskey](#app:quine) | Scheda di consultazione | Modulo 2 |
-| [Esercizi di approfondimento](#app:esercizi) | Esercizi | Moduli 1 e 2 |
-| [Prove su tempi, conteggi e stati](#app:nuove-prove) | Esercizi | Moduli 5 e 6 |
 
 ---
 
@@ -82,36 +78,6 @@ L'esistenza matematica dell'inversa non garantisce che sia causale, stabile o re
 
 ---
 
-# Il conto per esteso
-
-Passaggi che nel modulo interromperebbero il discorso. Il risultato è già nel modulo; qui c'è come ci si arriva.
-
-## Calcolare il livello di un serbatoio {#app:serbatoio}
-
-::: {.provenienza}
-Da [Modulo 1 · U.D. 1.5 — Classificazione dei modelli](modulo-1.qmd#ud:1.5)
-:::
-
-$h_k$ indica il livello attuale, $h_{k+1}$ quello successivo; $\Delta t$ è la durata del passo. Le portate $q_{\mathrm{in}}$ e $q_{\mathrm{out}}$ sono i volumi che entrano ed escono ogni secondo.
-
-### Un serbatoio senza misteri
-
-**Variazione di volume \[$\mathrm{m^3}$\] = portata netta \[$\mathrm{m^3/s}$\] $\times$ tempo \[s\]**; dividendo per la sezione si ottiene la variazione di livello. $h_k$ e $h_{k+1}$ sono i livelli \[m\] all'inizio e alla fine del passo, $\Delta t$ la sua durata \[s\], $A$ la sezione \[$\mathrm{m^2}$\], $q_{\mathrm{in},k}$ e $q_{\mathrm{out},k}$ le portate \[$\mathrm{m^3/s}$\].
-
-Un serbatoio ha sezione costante $A$. Il bilancio dei volumi, in un breve intervallo, dà: $$h_{k+1}=h_k+\frac{\Delta t}{A}(q_{\mathrm{in},k}-q_{\mathrm{out},k}).$$ Con $A=0{,}5\,\mathrm{m^2}$, $\Delta t=10$ s, $q_{\mathrm{in}}=0{,}002\,\mathrm{m^3/s}$ e $q_{\mathrm{out}}=0{,}001\,\mathrm{m^3/s}$, il livello sale di $0{,}02$ m. Partendo da 0,30 m si arriva a 0,32 m.
-
-Questo [modello](/risorse/glossario/index.qmd#gloss-modello) suppone portate costanti nell'intervallo e non descrive traboccamento, fondo raggiunto o dinamica della pompa. Le unità sono un controllo: $(\mathrm{s}/\mathrm{m^2})(\mathrm{m^3/s})=\mathrm m$.
-
-## [Scalatura](/risorse/glossario/index.qmd#gloss-scalatura) analogica: dagli estremi alla misura {#app:analogico}
-
-::: {.provenienza}
-Da [Modulo 6 · U.D. 6.5](modulo-6.qmd#ud:6.5)
-:::
-
-Chiamiamo $r$ il codice acquisito, $r_0$ e $r_1$ i codici estremi; $x_0$ e $x_1$ sono le corrispondenti misure fisiche. Assumendo una corrispondenza lineare e $r_1\ne r_0$: $$x=x_0+\frac{r-r_0}{r_1-r_0}(x_1-x_0).$$ Per $r_0=0$, $r_1=10000$, $x_0=0$ e $x_1=100$ gradi Celsius, $r=2500$ dà $x=25$ gradi. I codici estremi provengono dalla configurazione del canale; la formula non rileva da sola un guasto del [sensore](/risorse/glossario/index.qmd#gloss-sensore).
-
----
-
 # Schede di consultazione
 
 Materiale da cercare quando serve, non da leggere di seguito.
@@ -141,48 +107,3 @@ Combinando `0-1` e `1-1` si ottiene `--1`, dove ciascun trattino rappresenta un 
 
 La scrittura `0-1` copre `001` e `011`. La scrittura `--1` copre quattro righe. Per combinare termini già ridotti devono coincidere le posizioni dei trattini e differire un solo [bit](/risorse/glossario/index.qmd#gloss-bit) restante.
 
----
-
-# Esercizi
-
-Ogni gruppo porta con sé le proprie soluzioni: si aprono quando servono.
-
-## Esercizi di approfondimento {#app:esercizi}
-
-::: {.provenienza}
-Da [Modulo 1](modulo-1.qmd) e [Modulo 2](modulo-2.qmd)
-:::
-
-**1 · Serbatoio.** Un serbatoio ha $A=2\,\mathrm{m^2}$, $q_{in}=0{,}01\,\mathrm{m^3/s}$, $q_{out}=0{,}004\,\mathrm{m^3/s}$. Quanto sale in 30 s, assumendo portate costanti?
-
-**2 · Metodo tabellare.** Semplifica la funzione che vale 1 nelle righe 000, 001, 100 e 101. Scrivi le combinazioni intermedie con i trattini.
-
-::: {#app:soluzioni .callout-tip collapse=true title="Soluzioni"}
-
-**1.** $\Delta h=(30/2)(0{,}01-0{,}004)=0{,}09$ m, cioè 9 cm.
-
-**2.** Le coppie 000/001 e 100/101 diventano `00-` e `10-`. Combinandole si ottiene `-0-`: resta soltanto $B=0$, quindi $F=\overline B$.
-
-:::
-
-## Prove su tempi, conteggi e [stati](/risorse/glossario/index.qmd#gloss-stato) {#app:nuove-prove}
-
-::: {.provenienza}
-Da [Modulo 5](modulo-5.qmd) e [Modulo 6](modulo-6.qmd)
-:::
-
-1.  Un [TON](/risorse/glossario/index.qmd#gloss-ton) con PT=3 s riceve IN vero per 2 s, falso per 1 s e poi vero per 4 s. Quando si attiva Q?
-
-2.  Un [CTU](/risorse/glossario/index.qmd#gloss-ctu) parte da zero, senza reset; CU assume $0,1,1,0,1,0,1$. Quanto vale CV alla fine?
-
-3.  Nel comando della [U.D. 5.6](modulo-5.qmd#ud:5.6), Start e Stop sono entrambi veri. Quale valore assume Marcia?
-
-::: {#app:nuove-soluzioni .callout-tip collapse=true title="Soluzioni delle prove PLC"}
-
-1.  Tre secondi dopo l'inizio della seconda attivazione; la prima è troppo breve e il tratto falso azzera il [timer](/risorse/glossario/index.qmd#gloss-timer).
-
-2.  Tre: si contano i tre [fronti di salita](/risorse/glossario/index.qmd#gloss-fronte-di-salita), non le scansioni con CU alto.
-
-3.  Falso: [NOT](/risorse/glossario/index.qmd#gloss-not) Stop è falso, quindi rende falsa l'intera espressione. L'arresto ha priorità.
-
-:::

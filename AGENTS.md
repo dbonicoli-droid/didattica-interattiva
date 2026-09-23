@@ -35,9 +35,10 @@
 - Preferire qualità e semplicità alla quantità. Si riduce il numero di concetti chiesti insieme, non la precisione di quelli che restano.
 - Gli esempi fisici scelgono il linguaggio dell'indirizzo: per gli elettrotecnici contattore, relè, trasformatore e saturazione prima di diodo e transistor.
 
-## Schede di approfondimento
-- Una scheda entra in `approfondimenti.qmd` solo per uno di **quattro motivi dichiarati**, che danno anche le sezioni della pagina: *Oltre il programma* (corretto ma non richiesto quest'anno), *Il conto per esteso* (passaggi che nel modulo spezzerebbero il discorso), *Schede di consultazione* (materiale da cercare, non da leggere di seguito), *Esercizi*. Se non rientra in nessuno dei quattro, il suo posto è dentro un modulo.
-- Ogni scheda dichiara la **provenienza** (`::: {.provenienza}` con il rimando al modulo e all'unità) e il modulo la richiama con una riga. Il collegamento è sempre nei due sensi: nessuna scheda senza casa.
-- Le **soluzioni stanno dentro il proprio esercizio**, in un riquadro a comparsa, non in una sezione separata a fondo pagina.
+## Schede di approfondimento ed esercizi
+- Una scheda entra in `approfondimenti.qmd` solo per uno di **due motivi dichiarati**, che sono anche le sezioni della pagina: *Oltre il programma* (corretto ma non richiesto quest'anno) e *Schede di consultazione* (materiale da cercare, non da leggere di seguito).
+- **Il conto per esteso resta nel modulo**, in un riquadro a comparsa accanto al risultato: mandare il lettore su un'altra pagina per vedere come si è arrivati a un numero spezza il discorso più del riquadro.
+- **Gli esercizi hanno una pagina propria** (`esercizi.qmd`), divisa per modulo, con le soluzioni in riquadri a comparsa attaccati al proprio gruppo. Non si mescolano con gli approfondimenti. Restano nel modulo solo gli esercizi interattivi che esercitano la teoria immediatamente precedente.
+- Ogni scheda e ogni gruppo di esercizi dichiara la **provenienza** (`::: {.provenienza}` con il rimando al modulo), e il modulo li richiama. Il collegamento è sempre nei due sensi: niente materiale senza casa.
 - La pagina apre con un indice che per ogni scheda dice motivo e modulo di provenienza.
 - Identificatori parlanti: niente `#app:old-...` ereditati dalle migrazioni.

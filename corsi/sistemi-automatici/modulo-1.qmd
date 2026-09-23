@@ -110,7 +110,17 @@ Si sceglie il [modello](/risorse/glossario/index.qmd#gloss-modello) in base alla
 
 Se entra più acqua di quanta ne esca, il livello sale; se ne esce di più, scende. Il [modello](/risorse/glossario/index.qmd#gloss-modello) collega il livello alle portate e al tempo trascorso.
 
-[Il calcolo del livello è negli approfondimenti](approfondimenti.qmd#app:serbatoio).
+::: {.callout-note collapse=true title="Il conto per esteso"}
+
+**Variazione di volume** $[\mathrm{m^3}]$ = **portata netta** $[\mathrm{m^3/s}]$ × **tempo** $[\mathrm s]$; dividendo per la sezione si ottiene la variazione di livello:
+
+$$h_{k+1}=h_k+\frac{\Delta t}{A}\bigl(q_{\mathrm{in},k}-q_{\mathrm{out},k}\bigr).$$
+
+Con $A=0{,}5\,\mathrm{m^2}$, $\Delta t=10$ s, $q_{\mathrm{in}}=0{,}002\,\mathrm{m^3/s}$ e $q_{\mathrm{out}}=0{,}001\,\mathrm{m^3/s}$, il livello sale di $0{,}02$ m: da 0,30 m si arriva a 0,32 m.
+
+Le unità sono un controllo: $(\mathrm{s}/\mathrm{m^2})(\mathrm{m^3/s})=\mathrm m$. Il [modello](/risorse/glossario/index.qmd#gloss-modello) suppone portate costanti nell'intervallo e non descrive traboccamento, fondo raggiunto o dinamica della pompa.
+
+:::
 
 ## U.D. 1.6 / Algoritmi e diagrammi di flusso {#ud:1.6}
 

@@ -1,0 +1,96 @@
+---
+sidebar: sistemi-automatici
+title: "Esercizi"
+subtitle: "Raccolti per modulo, con le soluzioni a portata di clic"
+toc-depth: 2
+---
+
+[← Indice del percorso](index.qmd) · [PDF completo](/downloads/sistemi-automatici.pdf)
+
+[]{#sec:sintesi}
+
+Gli esercizi stanno qui, divisi per modulo, così puoi usarli per ripassare senza rileggere tutto. Ogni gruppo porta con sé le proprie soluzioni: aprile **dopo** aver provato.
+
+Le tabelle interattive di classificazione restano dentro il [Modulo 1](moduli/modulo-1.qmd#ud:1.3), accanto alla teoria che esercitano.
+
+## Modulo 1 · Fondamenti di teoria dei sistemi {#es:modulo-1}
+
+::: {.provenienza}
+Da [Modulo 1 — Fondamenti di teoria dei sistemi](moduli/modulo-1.qmd)
+:::
+
+**1 · [Sistema](/risorse/glossario/index.qmd#gloss-sistema).** Un termostato legge la temperatura e accende il riscaldamento. Indica [ingresso](/risorse/glossario/index.qmd#gloss-ingresso) manipolato, [uscita](/risorse/glossario/index.qmd#gloss-uscita), [disturbo](/risorse/glossario/index.qmd#gloss-disturbo) e natura statica o dinamica della stanza.
+
+**2 · [Modello](/risorse/glossario/index.qmd#gloss-modello).** Se in un serbatoio entra più acqua di quanta ne esca, come cambia il livello? Quali grandezze servono per calcolarne la variazione?
+
+**3 · Il conto del serbatoio.** Un serbatoio ha $A=2\,\mathrm{m^2}$, $q_{in}=0{,}01\,\mathrm{m^3/s}$, $q_{out}=0{,}004\,\mathrm{m^3/s}$. Di quanto sale il livello in 30 s, assumendo portate costanti?
+
+**4 · [Algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo).** Nel ciclo della media si dimentica $i=i+1$. Che cosa succede? Quale controllo lo rende visibile?
+
+**5 · Memoria.** Parti da $Q=0$ e applica $(P,S)=(1,1),(1,0),(0,1),(1,0)$. Calcola gli [stati](/risorse/glossario/index.qmd#gloss-stato) successivi per $Q^+=P(S+Q)$, dove $Q^+$ è lo stato dopo il passo di calcolo.
+
+::: {#es:soluzioni-1 .callout-tip collapse=true title="Soluzioni del Modulo 1"}
+
+**1.** [Ingresso](/risorse/glossario/index.qmd#gloss-ingresso) manipolato: potenza termica; [uscita](/risorse/glossario/index.qmd#gloss-uscita): temperatura; [disturbo](/risorse/glossario/index.qmd#gloss-disturbo): temperatura esterna o finestra aperta. La stanza è dinamica perché accumula energia.
+
+**2.** Il livello sale. Servono le portate in entrata e in uscita, la durata e la sezione del serbatoio.
+
+**3.** $\Delta h=(30/2)(0{,}01-0{,}004)=0{,}09$ m, cioè 9 cm.
+
+**4.** Con $i$ che non avanza, la condizione $i<N$ resta vera e il ciclo non termina normalmente. La traccia delle [variabili](/risorse/glossario/index.qmd#gloss-variabile) mostra il [contatore](/risorse/glossario/index.qmd#gloss-contatore) bloccato.
+
+**5.** Gli stati sono 1, 1, 0, 0. Il terzo passo mostra la priorità dell'arresto.
+
+:::
+
+## Modulo 2 · Elettronica digitale {#es:modulo-2}
+
+::: {.provenienza}
+Da [Modulo 2 — Elettronica digitale](modulo-2.qmd)
+:::
+
+**1 · Logica.** Semplifica $F=\overline AB+AB$. Scrivi anche $\overline F$.
+
+**2 · [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).** Con ordine $ABC$, minimizza $G=\Sigma m(0,1,4,5)$.
+
+**3 · Metodo tabellare.** Semplifica la funzione che vale 1 nelle righe 000, 001, 100 e 101. Scrivi le combinazioni intermedie con i trattini. Il procedimento completo è nella [scheda su Quine–McCluskey](approfondimenti.qmd#app:quine).
+
+::: {#es:soluzioni-2 .callout-tip collapse=true title="Soluzioni del Modulo 2"}
+
+**1.** $F=B(\overline A+A)=B$; $\overline F=\overline B$.
+
+**2.** Gli indici hanno sempre $B=0$, quindi $G=\overline B$.
+
+**3.** Le coppie 000/001 e 100/101 diventano `00-` e `10-`. Combinandole si ottiene `-0-`: resta soltanto $B=0$, quindi $F=\overline B$.
+
+:::
+
+## Moduli 5 e 6 · Sequenze, tempi e misure {#es:moduli-5-6}
+
+::: {.provenienza}
+Da [Modulo 5](modulo-5.qmd) e [Modulo 6](modulo-6.qmd)
+:::
+
+**1 · Temporizzazione.** Un [TON](/risorse/glossario/index.qmd#gloss-ton) con PT=3 s riceve IN vero per 2 s, falso per 1 s e poi vero per 4 s. Quando si attiva Q?
+
+**2 · Conteggio.** Un [CTU](/risorse/glossario/index.qmd#gloss-ctu) parte da zero, senza reset; CU assume $0,1,1,0,1,0,1$. Quanto vale CV alla fine?
+
+**3 · Priorità dell'arresto.** Nel comando della [U.D. 5.6](modulo-5.qmd#ud:5.6), Start e Stop sono entrambi veri. Quale valore assume Marcia?
+
+**4 · Inversione.** Nel [modello](/risorse/glossario/index.qmd#gloss-modello) a tre [stati](/risorse/glossario/index.qmd#gloss-stato) sei fermo e ricevi $A=B=1$ con $P=1$. Che cosa avviene? Durante la marcia avanti, $B=1$ basta a invertire?
+
+::: {#es:soluzioni-5-6 .callout-tip collapse=true title="Soluzioni dei Moduli 5 e 6"}
+
+**1.** Tre secondi dopo l'inizio della seconda attivazione; la prima è troppo breve e il tratto falso azzera il [timer](/risorse/glossario/index.qmd#gloss-timer).
+
+**2.** Tre: si contano i tre [fronti di salita](/risorse/glossario/index.qmd#gloss-fronte-di-salita), non le scansioni con CU alto.
+
+**3.** Falso: [NOT](/risorse/glossario/index.qmd#gloss-not) Stop è falso, quindi rende falsa l'intera espressione. L'arresto ha priorità.
+
+**4.** Il comando rimane fermo per la richiesta simultanea. Durante la marcia avanti la richiesta opposta è ignorata: serve passare dall'arresto, secondo le regole dichiarate.
+
+:::
+
+## Come si verifica un lavoro {#es:verifica}
+
+Non controllare soltanto che l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) si accenda. Controlla **quando si spegne**, se conserva memoria, come reagisce a due richieste contemporanee e che cosa accade allo [stato](/risorse/glossario/index.qmd#gloss-stato) iniziale.

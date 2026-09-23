@@ -201,7 +201,7 @@ Le risorse di laboratorio possono essere utilizzate in più percorsi.
 
 ## Altre risorse {#altre-risorse}
 
-- [Esercizi / Un controllo ragionato](esercizi-un-controllo-ragionato.qmd)
+- [Esercizi del corso](esercizi.qmd)
 - [Educazione civica / Emergenza climatica](educazione-civica-emergenza-climatica.qmd)
 - [Schede di approfondimento](approfondimenti.qmd)
 - [Glossario e vocabolario minimo](/risorse/glossario/index.qmd#vocabolario-sistemi-automatici)
