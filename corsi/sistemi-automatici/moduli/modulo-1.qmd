@@ -8,31 +8,6 @@ toc-depth: 3
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-1.qmd)
 
-L’**approccio sistemistico** studia le relazioni tra ingressi, stato e uscite per descrivere e prevedere il comportamento di un sistema. Lo stesso metodo si applica a una stanza riscaldata, a un circuito o a un programma.
-
-## Per iniziare: i concetti essenziali {#introduzione}
-
-Scegliamo il **sistema** da studiare e lo descriviamo con un **modello**, conservando gli aspetti utili alla domanda che ci interessa.
-
-- **Ingressi:** grandezze esterne che agiscono sul sistema, comprese le azioni comandate e i disturbi.
-- **Stato:** informazioni interne che, insieme agli ingressi successivi, permettono di prevedere l’evoluzione. Riassume gli effetti del passato che servono per determinarne il futuro.
-- **Uscite:** grandezze che scegliamo di osservare o controllare.
-
-Per esempio, in un serbatoio la portata in ingresso fa variare il livello dell’acqua. Il livello attuale è uno stato e può essere anche l’uscita che osserviamo.
-
-### Le prime distinzioni, in breve
-
-| Per descrivere un sistema ci chiediamo… | Concetto |
-|---|---|
-| Basta l’ingresso attuale per determinare l’uscita attuale? | **[Senza memoria / con memoria](#memoria):** nel secondo caso servono anche informazioni relative ad altri istanti; nei sistemi causali, il passato o lo stato. |
-| Combinare gli ingressi combina allo stesso modo le uscite? | **[Lineare / non lineare](#linearita):** un sistema lineare rispetta proporzionalità e additività. |
-| Ripetendo lo stesso esperimento più tardi cambia soltanto l’orario della risposta? | **[Tempo invariante / variante](#invarianza):** nel primo caso la regola resta la stessa. |
-| Descriviamo ogni istante o una successione di campioni? | **[Tempo continuo / discreto](#dominio-temporale).** È una distinzione diversa da [analogico / digitale](#analogico-digitale), che riguarda la rappresentazione dei valori. |
-
-Queste proprietà possono combinarsi: un sistema può essere, per esempio, lineare e avere memoria. **Tempo invariante non significa uscita costante.**
-
-Le unità seguenti sviluppano definizioni, esempi ed esercizi. I riquadri **Per capire meglio** offrono dettagli facoltativi; quelli **Contenuto avanzato** anticipano strumenti da approfondire negli anni successivi.
-
 ::: {.unit-index}
 ## Unità didattiche del modulo {.unnumbered}
 
@@ -44,6 +19,20 @@ Le unità seguenti sviluppano definizioni, esempi ed esercizi. I riquadri **Per 
 - [U.D. 1.6 / Algoritmi e diagrammi di flusso](#ud:1.6)
 - [U.D. 1.7 / Applicazioni e simulazioni con software Flowgorithm](#ud:1.7)
 :::
+
+## Per iniziare {#introduzione}
+
+Studiare un sistema significa scegliere che cosa osservare e descriverlo con un **modello**, tenendo solo gli aspetti utili alla domanda che ci interessa. Tre parole ci servono subito:
+
+- **Ingressi:** le grandezze esterne che agiscono sul sistema.
+- **Stato:** quello che il sistema «si ricorda» e che serve, insieme agli ingressi successivi, per prevedere come andrà avanti.
+- **Uscite:** le grandezze che scegliamo di osservare.
+
+In un serbatoio la portata in ingresso fa variare il livello dell'acqua: il livello è lo stato, ed è anche l'uscita che osserviamo.
+
+Da qui in avanti impareremo a riconoscere i sistemi con **tre domande** — ha memoria? è lineare? è invariante nel tempo? — e a descriverli con modelli e algoritmi.
+
+I riquadri **Per capire meglio** offrono dettagli facoltativi; quelli **Contenuto avanzato** anticipano strumenti degli anni successivi. Si possono saltare a una prima lettura.
 
 ## U.D. 1.1 / Concetto di sistema {#ud:1.1}
 
@@ -117,20 +106,22 @@ Prima di esaminare le singole proprietà, ecco i criteri che useremo. Ogni colle
 
 | Criterio | Domanda da porre al modello | Alternative |
 |---|---|---|
-| [Dominio temporale](#dominio-temporale) | Descriviamo ogni istante o una successione di campioni? | Tempo continuo / tempo discreto. |
 | [Memoria](#memoria) | Per trovare l’uscita attuale basta l’ingresso attuale? | Senza memoria / con memoria. |
 | [Linearità](#linearita) | Vale il principio di sovrapposizione? | Lineare / non lineare. |
 | [Invarianza nel tempo](#invarianza) | Ripetendo lo stesso esperimento in un altro momento cambia solo l’origine dei tempi? | Tempo-invariante / tempo-variante. |
+| [Dominio temporale](#dominio-temporale) | Descriviamo ogni istante o una successione di campioni? | Tempo continuo / tempo discreto. |
 | [Determinismo](#determinismo) | Il modello determina una risposta univoca o una descrizione probabilistica? | Deterministico / stocastico. |
-| [Causalità](#causalita) | L’uscita attuale richiede valori futuri dell’ingresso? | Causale / non causale. |
-| [Stabilità ingresso–uscita](#stabilita) | Ogni ingresso limitato produce un’uscita limitata? | Stabile BIBO / non stabile BIBO. |
-| [Invertibilità](#invertibilita) | Dall’intera uscita possiamo ricostruire univocamente l’ingresso? | Invertibile / non invertibile, sul dominio dichiarato. |
+
+**Le prime tre sono quelle su cui lavoreremo**, con un esercizio ciascuna: sono le domande che useremo per tutto l'anno. Le ultime due servono a descrivere il modello, non a classificarne il comportamento.
 
 Considereremo inoltre la **[configurazione ad anello aperto o chiuso](#retroazione)**: descrive come sono collegati processo, sensori e controllore. È un criterio strutturale, da distinguere dalle proprietà della relazione ingresso–uscita.
 
-Le tabelle interattive esercitano memoria, linearità e invarianza nel tempo; le altre completano il quadro introduttivo.
-
 Le proprietà descrivono aspetti diversi. **Lineare non significa senza memoria; non lineare non significa tempo-variante.** Prima di classificare, fissiamo ingresso, uscita, modello, intervallo di validità e condizioni iniziali.
+
+::: {.callout-note}
+## Oltre il programma di terza
+Causalità, stabilità BIBO e invertibilità sono altre tre proprietà che si incontrano negli anni successivi. Non servono per questo modulo: se vuoi guardare avanti, le trovi nelle [schede di approfondimento](../approfondimenti.qmd#app:proprieta).
+:::
 
 ### Tempo continuo, tempo discreto e valori dei segnali {#dominio-temporale}
 
@@ -340,53 +331,6 @@ $$y[n]=u[n]+w[n],$$
 
 dove $w[n]$ rappresenta rumore descritto tramite una distribuzione di probabilità, eventualmente a media nulla. Per lo stesso ingresso il modello fornisce una descrizione probabilistica dell'uscita. Non conoscere un parametro non rende automaticamente stocastico il modello: occorre specificare come si rappresenta l'incertezza.
 
-### Causalità: dipendenza dagli ingressi presenti e passati {#causalita}
-
-Un sistema è **causale** se l'uscita attuale non richiede ingressi futuri. A parità di preparazione iniziale:
-
-$$u_1(t)=u_2(t)\ \text{per ogni }t\le t_0
-\quad\Longrightarrow\quad y_1(t_0)=y_2(t_0).$$
-
-$y[n]=u[n-1]$ ha memoria ed è causale; $y[n]=u[n+1]$ richiede il campione futuro e non è causale. Il secondo può essere usato elaborando una registrazione già disponibile, ma non come risposta in tempo reale a un ingresso futuro sconosciuto. Le tabelle di questo modulo si concentrano sulle tre proprietà principali: memoria, linearità e invarianza nel tempo.
-
-### Stabilità ingresso–uscita: una prima definizione {#stabilita}
-
-Un sistema è **stabile BIBO** (*Bounded Input, Bounded Output*: ingresso limitato, uscita limitata) se ogni ingresso che rimane entro un limite finito produce un’uscita che rimane entro un limite finito per tutto il tempo considerato.
-
-Per esempio, un guadagno costante finito non trasforma un ingresso limitato in un’uscita che cresce senza limite.
-
-::: {.callout-note collapse=true title="Contenuto avanzato · La definizione matematica di stabilità BIBO"}
-
-Per la mappa ingresso–uscita, con preparazione iniziale fissata (nulla nei modelli lineari qui usati), scriviamo:
-
-$$\forall M_u<\infty,\ M_u\ge0,\quad \exists M_y<\infty:\qquad
-\sup_t|u(t)|\le M_u\ \Longrightarrow\ \sup_t|\mathcal T[u](t)|\le M_y
-\quad\text{per ogni ingresso ammesso}.$$
-
-$M_y$ può dipendere da $M_u$ e dal sistema, ma non dal tempo. A tempo discreto si sostituisce $t$ con $n$. “Limitato” non significa soltanto finito a ogni singolo istante: una rampa cresce senza limite, anche se ha un valore finito a ogni istante finito.
-
-:::
-
-- **Guadagno costante:** $y=ku$, con $k$ finito, è stabile BIBO perché $|y|\le |k|M_u$.
-- **Quadrato:** $y=u^2$ è anch’esso stabile BIBO, perché $|y|\le M_u^2$. La stabilità non implica linearità.
-- **Serbatoio ideale senza limiti di capacità:** una portata netta costante positiva è limitata, ma nel modello $h(t)=h(0)+u_0t/A$ il livello cresce senza limite. Il modello integratore non è stabile BIBO. Un recipiente reale trabocca: quando questo accade, il modello senza trabocco non è più applicabile.
-
-::: {.callout-note collapse=true title="Contenuto avanzato · Stabilità dell’equilibrio"}
-La stabilità BIBO riguarda ingresso e uscita. La **stabilità di un equilibrio** riguarda invece l’evoluzione dello stato dopo una piccola perturbazione; quella **asintotica** richiede anche il ritorno all’equilibrio. Sono nozioni collegate, ma non intercambiabili senza precisare il modello e le ipotesi.
-:::
-
-### Invertibilità: recuperare l’ingresso dall’uscita {#invertibilita}
-
-Un sistema è **invertibile** se due ingressi diversi non producono la stessa intera uscita, sul dominio scelto e a parità di preparazione. In termini matematici:
-
-$$\mathcal T[u_1]=\mathcal T[u_2]\ \Longrightarrow\ u_1=u_2.$$
-
-Esiste quindi una trasformazione inversa sulle uscite ottenibili: $\mathcal T^{-1}[\mathcal T[u]]=u$.
-
-- Per $y=ku$ con $k\ne0$, si recupera $u=y/k$: il modello è invertibile.
-- Per $y=u^2$, gli ingressi $u$ e $-u$ producono la stessa uscita: il modello non è invertibile su tutti i segnali reali. Se imponiamo $u(t)\ge0$, diventa invertibile sul dominio ristretto, con $u=\sqrt y$.
-
-L’esistenza matematica dell’inversa non garantisce che sia causale, stabile o realizzabile in tempo reale. Questi aspetti saranno approfonditi successivamente.
 
 ### Più ingressi, più uscite ed eventi {#ingressi-eventi}
 

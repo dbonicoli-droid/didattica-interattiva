@@ -62,15 +62,17 @@ Classificare e controllare un [sistema](/risorse/glossario/index.qmd#gloss-siste
 
 ## U.D. 1.3 / Classificazione dei sistemi {#ud:1.3}
 
-Le classificazioni descrivono aspetti diversi e possono coesistere. Un [sistema](/risorse/glossario/index.qmd#gloss-sistema) può essere, per esempio, dinamico, non lineare e a tempo continuo.
+Le classificazioni descrivono aspetti diversi e possono coesistere. Un [sistema](/risorse/glossario/index.qmd#gloss-sistema) può essere, per esempio, con memoria, non lineare e a tempo continuo.
 
-  **Distinzione**                                           **Idea ed esempio**
-  --------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Statico / dinamico                                        Lo statico non ha memoria nel [modello](/risorse/glossario/index.qmd#gloss-modello); il dinamico dipende anche dallo [stato](/risorse/glossario/index.qmd#gloss-stato). Resistenza ideale / serbatoio.
-  Continuo / discreto nel tempo                             Il tempo è descritto continuamente oppure per istanti $k$. Temperatura fisica / campioni letti da un [PLC](/risorse/glossario/index.qmd#gloss-plc) (Programmable Logic Controller).
-  Lineare / non lineare                                     Nel lineare vale la sovrapposizione; saturazioni e soglie la violano. $y=2u$ / $y=u^2$.
-  Tempo-invariante / [variabile](/risorse/glossario/index.qmd#gloss-variabile)   La legge del [modello](/risorse/glossario/index.qmd#gloss-modello) resta uguale oppure cambia nel tempo.
-  Deterministico / stocastico                               Date le condizioni, il [modello](/risorse/glossario/index.qmd#gloss-modello) fornisce un esito determinato oppure include componenti aleatorie.
+| **Criterio** | **Domanda da porre al modello** | **Idea ed esempio** |
+|---|---|---|
+| Memoria | Per trovare l'uscita attuale basta l'ingresso attuale? | Senza memoria l'uscita dipende solo dall'ingresso del momento; con memoria serve anche lo [stato](/risorse/glossario/index.qmd#gloss-stato). Resistore ideale / serbatoio. |
+| Linearità | Vale il principio di sovrapposizione? | Nel lineare vale; saturazioni e soglie lo violano. $y=2u$ / $y=u^2$. |
+| Invarianza nel tempo | Ripetendo l'esperimento più tardi cambia solo l'orario della risposta? | La legge del [modello](/risorse/glossario/index.qmd#gloss-modello) resta uguale oppure cambia nel tempo. |
+| Dominio temporale | Descriviamo ogni istante o una successione di campioni? | Temperatura fisica / campioni letti da un [PLC](/risorse/glossario/index.qmd#gloss-plc) (Programmable Logic Controller). |
+| Determinismo | L'esito è univoco o descritto in probabilità? | Il [modello](/risorse/glossario/index.qmd#gloss-modello) fornisce un risultato determinato oppure include componenti aleatorie. |
+
+**Le prime tre sono quelle su cui lavoreremo.** Chiamiamo *statico* un modello senza memoria e *dinamico* uno con memoria: statico non vuol dire che l'uscita sia costante.
 
 Un [sistema](/risorse/glossario/index.qmd#gloss-sistema) **ad anello aperto** non corregge il comando usando l'[uscita](/risorse/glossario/index.qmd#gloss-uscita) misurata. In **anello chiuso**, la [retroazione](/risorse/glossario/index.qmd#gloss-retroazione) permette il confronto fra risultato e [riferimento](/risorse/glossario/index.qmd#gloss-riferimento).
 

@@ -162,6 +162,18 @@ table code, .table code { font-variant-numeric: tabular-nums; }
   main.content table { display: block; overflow-x: auto; }
 }
 
+/* Provenienza di una scheda di approfondimento: da quale modulo arriva.
+   Serve a impedire che la pagina diventi un magazzino di cose senza casa. */
+.provenienza {
+  margin: -.4rem 0 1.1rem;
+  font-size: .82rem;
+  color: var(--testo-tenue);
+}
+.provenienza::before { content: "↩ "; }
+.provenienza p { margin: 0; }
+.provenienza a { color: var(--accento); text-decoration: none; font-weight: 600; }
+.provenienza a:hover { text-decoration: underline; }
+
 /* Stacco tematico: annuncia il gruppo di unità didattiche che segue.
    Non è un titolo, quindi non entra nel sommario e non aggiunge un livello
    di gerarchia sopra unità che oggi non hanno tutte una categoria. */

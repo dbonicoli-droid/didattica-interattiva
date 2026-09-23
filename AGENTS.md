@@ -26,3 +26,18 @@
 - Nelle pagine pubbliche non compaiono nomi di colleghi legati a impegni non ancora presi: quelle note stanno in `PROJECT_ROADMAP.md`.
 
 - Stato delle pagine: `da-scrivere` (solo struttura), `bozza` (primo getto), `da-revisionare` (completo ma non riletto), `completo`. Assegnare solo quando i fatti lo sostengono; niente campo significa nessuna affermazione.
+
+## Struttura delle pagine dei moduli
+- Lo **scheletro della pagina segue l'apprendimento**, non la numerazione del programma: i titoli dicono che cosa si impara. Le unità didattiche restano tracciabili tramite le ancore `{#ud:N.M}`, che viaggiano con la sezione in cui quel materiale vive davvero, e una tabella «Corrispondenza con il programma» in fondo alla pagina.
+- Tutti gli argomenti del programma devono avere una sezione che li tratta; non è richiesto che le sezioni coincidano una a una con le unità didattiche.
+- Diffidare delle unità che sono **contenitori** e non argomenti («Classificazione…», «Esercitazioni…»): assorbono contenuto senza limite. Dichiarare quanti oggetti si insegnano e fermarsi lì.
+- Ciò che esce dal programma dell'anno **non resta nel modulo**: va nelle schede di approfondimento del corso, con un richiamo di una riga nel punto in cui se ne sente la mancanza. I riquadri a comparsa servono per gli strumenti (una derivata, una formula), non per argomenti interi.
+- Preferire qualità e semplicità alla quantità. Si riduce il numero di concetti chiesti insieme, non la precisione di quelli che restano.
+- Gli esempi fisici scelgono il linguaggio dell'indirizzo: per gli elettrotecnici contattore, relè, trasformatore e saturazione prima di diodo e transistor.
+
+## Schede di approfondimento
+- Una scheda entra in `approfondimenti.qmd` solo per uno di **quattro motivi dichiarati**, che danno anche le sezioni della pagina: *Oltre il programma* (corretto ma non richiesto quest'anno), *Il conto per esteso* (passaggi che nel modulo spezzerebbero il discorso), *Schede di consultazione* (materiale da cercare, non da leggere di seguito), *Esercizi*. Se non rientra in nessuno dei quattro, il suo posto è dentro un modulo.
+- Ogni scheda dichiara la **provenienza** (`::: {.provenienza}` con il rimando al modulo e all'unità) e il modulo la richiama con una riga. Il collegamento è sempre nei due sensi: nessuna scheda senza casa.
+- Le **soluzioni stanno dentro il proprio esercizio**, in un riquadro a comparsa, non in una sezione separata a fondo pagina.
+- La pagina apre con un indice che per ogni scheda dice motivo e modulo di provenienza.
+- Identificatori parlanti: niente `#app:old-...` ereditati dalle migrazioni.
