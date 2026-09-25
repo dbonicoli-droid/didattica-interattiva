@@ -24,7 +24,7 @@ if(reader){
   observer=new IntersectionObserver(entries=>{for(const entry of entries){const t=byElement.get(entry.target);if(!t)continue;
    if(entry.isIntersecting)render(t,version);else if(!t.busy){t.tile.replaceChildren();}
   }},{root:scroll,rootMargin:'800px 0px'});
-  tiles.forEach(t=>observer.observe(t.tile));message(`${pdf.numPages} pagina${pdf.numPages===1?'':'e'} · Scorrimento continuo`);
+  tiles.forEach(t=>observer.observe(t.tile));message(`${pdf.numPages} ${pdf.numPages===1?'pagina':'pagine'} · Scorrimento continuo`);
  }
  async function render(t,version){
   if(t.busy||t.tile.firstChild||version!==generation)return;t.busy=true;
