@@ -31,6 +31,12 @@ Confronta tensioni e correnti su due schemi interattivi. Scegli un generatore id
 
 [Apri il laboratorio dei resistori](resistori.qmd){.btn .btn-primary}
 
+### [Due partitori in cascata](partitori-cascata.qmd)
+
+Prevedi e misura il comportamento di due partitori, prima separati e poi collegati. Confronta i casi 220 Ω → 22 kΩ e 22 kΩ → 220 Ω, oppure regola tutte e quattro le resistenze.
+
+[Apri l’esercitazione sui partitori →](partitori-cascata.qmd){.btn .btn-primary}
+
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
 
 ## Componenti: risorse comuni ai percorsi

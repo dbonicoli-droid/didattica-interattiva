@@ -228,6 +228,8 @@ website:
               text: Sinusoidi
             - href: laboratori/resistori.qmd
               text: "Resistori: serie e parallelo"
+            - href: laboratori/partitori-cascata.qmd
+              text: "Due partitori in cascata"
         - section: "Fondamenti condivisi"
           href: risorse/fondamenti/index.qmd
           contents:

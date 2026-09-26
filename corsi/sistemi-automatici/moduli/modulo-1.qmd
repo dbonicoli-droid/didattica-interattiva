@@ -562,3 +562,7 @@ Le sezioni seguono l'ordine in cui conviene impararli; qui trovi dove è trattat
 | U.D. 1.7 / Applicazioni e simulazioni con Flowgorithm | [8 · Farlo funzionare: Flowgorithm](#ud:1.7) |
 
 <script src="../../../assets/classificazione/exercises.js"></script>
+
+### Dal modello al banco: due partitori
+
+Nel [laboratorio dei partitori in cascata](/laboratori/partitori-cascata.qmd), ricava le relazioni ingresso–uscita dei circuiti separati, formula una previsione e confrontala con le misure dopo il collegamento.

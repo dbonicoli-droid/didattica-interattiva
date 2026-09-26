@@ -1,0 +1,77 @@
+---
+title: "Due partitori in cascata"
+sidebar: risorse
+page-layout: full
+toc: false
+stato: bozza
+description: "Prevedi e misura il comportamento di due partitori di tensione, prima separati e poi collegati in cascata."
+---
+
+[← Indice del laboratorio](index.qmd)
+
+Due circuiti possono avere la stessa relazione ingresso–uscita quando vengono studiati separatamente. **Che cosa prevediamo quando li colleghiamo uno dopo l’altro?** In questa esercitazione confronteremo la previsione ottenuta con due blocchi ideali e le misure sul circuito montato.
+
+## I circuiti da montare
+
+Il primo sistema riceve $v_{in}$ e fornisce $v_1$, misurata ai capi di $R_2$. Il secondo riceve $v_2$ e fornisce $v_{out}$, misurata ai capi di $R_4$. Nella cascata colleghiamo l’ingresso del secondo all’uscita del primo: $v_2=v_1$, con riferimento **0 V comune**.
+
+![Primo partitore isolato: ingresso v_in, uscita v_1 su R_2.](../assets/partitori/primo.svg){width=420 .cascade-static}
+
+![Secondo partitore isolato: ingresso v_2, uscita v_out su R_4.](../assets/partitori/secondo.svg){width=420 .cascade-static}
+
+![Collegamento in cascata: il nodo v_1 alimenta R_3; uscita v_out su R_4 e riferimento comune.](../assets/partitori/cascata.svg){.cascade-static}
+
+### Materiale e configurazioni
+
+Alimentatore da banco a **5 V continui**, multimetro, breadboard o pannello didattico, collegamenti, due resistori da **220 Ω** e due da **22 kΩ**, di potenza nominale almeno **0,25 W**. Modifica il cablaggio ad alimentazione disinserita. Misura le tensioni rispetto allo 0 V; annota i valori effettivi dei resistori e la loro tolleranza.
+
+| Caso | $R_1$ | $R_2$ | $R_3$ | $R_4$ |
+|---|---:|---:|---:|---:|
+| A | 220 Ω | 220 Ω | 22 kΩ | 22 kΩ |
+| B | 22 kΩ | 22 kΩ | 220 Ω | 220 Ω |
+
+## Procedura di laboratorio
+
+1. **Prevedere:** ricava i due rapporti ingresso–uscita dei partitori presi singolarmente e quello che ti aspetti dalla cascata di due blocchi ideali. Scrivi la previsione prima di montare la cascata o aprire la vista Confronto.
+2. **Misurare separatamente:** alimenta ciascun partitore a 5 V, senza collegarlo all’altro. Verifica che ciascuno dimezzi la propria tensione d’ingresso, entro le tolleranze di componenti e strumenti.
+3. **Collegare:** disinserisci l’alimentazione, monta la cascata secondo lo schema e poi rialimenta. Misura sia $v_1$ sia $v_{out}$ e confronta i valori con la previsione.
+4. **Scambiare i valori:** ripeti i passaggi con i due gruppi di resistenze invertiti, passando dal caso A al caso B.
+
+### Previsioni e misure da annotare
+
+| Caso | $v_1$ isolato | $v_{out}$ isolato | $v_{out}$ previsto in cascata | $v_1$ misurato in cascata | $v_{out}$ misurato in cascata |
+|---|---|---|---|---|---|
+| A | … V | … V | … V | … V | … V |
+| B | … V | … V | … V | … V | … V |
+
+Conserva le previsioni iniziali accanto alle misure: non sostituirle con i risultati. Le osservazioni saranno il punto di partenza della discussione in classe.
+
+## Simulazione
+
+Inizia da **Partitori separati**, poi passa a **Cascata**. La vista **Confronto** mostra la previsione dei due blocchi ideali e il risultato del circuito collegato. Ogni resistenza è regolabile indipendentemente: puoi mantenere valori uguali oppure esplorare altre combinazioni. I preset cambiano le resistenze conservando la tensione impostata.
+
+::: {.content-visible when-format="html"}
+{{< include _partitori-app.html >}}
+:::
+
+::: {.content-hidden when-format="html"}
+La simulazione interattiva è disponibile nella [versione web del laboratorio](https://dbonicoli-droid.github.io/didattica-interattiva/laboratori/partitori-cascata.html). Gli schemi e la procedura sopra permettono di svolgere l’attività anche su carta.
+:::
+
+La simulazione usa resistori ideali in regime continuo, un generatore ideale di tensione e strumenti di misura che non assorbono corrente. Le letture reali dipendono anche dalle tolleranze e dagli strumenti. Le resistenze dei controlli sono espresse in Ω; le correnti visualizzate in mA. I valori mostrati sono arrotondati.
+
+## Spiegazione e approfondimento
+
+::: {.callout-note collapse=true title="Spiegazione e approfondimento · Dopo l’esercitazione"}
+
+**NO SPOILER**
+
+La spiegazione sarà disponibile dopo la conclusione dell’esercitazione e la discussione in classe.
+
+:::
+
+## Collegamenti
+
+- [Fondamenti di teoria dei sistemi](../corsi/sistemi-automatici/moduli/modulo-1.qmd)
+- [Ohm, Kirchhoff, serie e parallelo](../risorse/fondamenti/leggi-dei-circuiti.qmd)
+- [Laboratorio dei resistori](resistori.qmd)

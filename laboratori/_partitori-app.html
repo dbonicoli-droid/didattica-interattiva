@@ -1,0 +1,17 @@
+<div id="cascade-lab" class="cascade-lab">
+<div class="cascade-toolbar">
+<div role="group" aria-label="Vista della simulazione"><button type="button" data-cascade-view="separate" aria-pressed="true">Partitori separati</button><button type="button" data-cascade-view="cascade" aria-pressed="false">Cascata</button><button type="button" data-cascade-view="compare" aria-pressed="false">Confronto</button></div>
+<label>Preset <select id="cascade-preset"><option value="a">220 Ω → 22 kΩ</option><option value="b">22 kΩ → 220 Ω</option><option value="custom" disabled>Valori personalizzati</option></select></label>
+<button type="button" id="cascade-reset">Ripristina</button><button type="button" id="cascade-full">Schermo intero</button>
+</div>
+<p id="cascade-context"></p>
+<div id="cascade-separated" class="cascade-pair"><section><h3>Primo partitore</h3><div id="cascade-first-svg"></div><p id="cascade-first-ratio"></p></section><section><h3>Secondo partitore</h3><div id="cascade-second-svg"></div><p id="cascade-second-ratio"></p></section></div>
+<section id="cascade-connected" hidden><h3>Partitori collegati</h3><div id="cascade-circuit-svg"></div><div id="cascade-reading" class="cascade-reading" role="status" aria-live="polite"></div></section>
+<div id="cascade-comparison" hidden><h3>Previsione e simulazione</h3><div class="cascade-comparison"><p><strong>Blocchi ideali</strong><br><span id="cascade-ideal"></span><br><small>Prodotto dei rapporti misurati sui partitori separati.</small></p><p><strong>Circuito collegato</strong><br><span id="cascade-actual"></span><br><small>Valore simulato sullo schema elettrico.</small></p><p><strong>Differenza</strong><br><span id="cascade-difference"></span><br><small>Simulazione meno previsione ideale.</small></p></div></div>
+<div id="cascade-controls" class="cascade-controls"></div>
+<p class="cascade-help">Resistenze in Ω, da 100 Ω a 100 kΩ: gli slider hanno scala logaritmica. Le frecce ▲ / ▼ applicano il passo scelto. Alimentazione da 0 a 5 V.</p>
+<details id="cascade-measurements"><summary>Tutte le tensioni e le correnti simulate</summary><div id="cascade-table"></div><p>Tensioni sui resistori positive dall’alto verso il basso nei circuiti separati; nella cascata, da sinistra a destra su R₁ e R₃ e dall’alto verso il basso su R₂ e R₄. Le correnti seguono gli stessi versi.</p></details>
+<noscript>Per usare la simulazione abilita JavaScript. Gli schemi e la traccia dell’esercitazione restano disponibili nella pagina.</noscript>
+</div>
+<script src="../assets/partitori/model.js"></script>
+<script src="../assets/partitori/app.js"></script>
