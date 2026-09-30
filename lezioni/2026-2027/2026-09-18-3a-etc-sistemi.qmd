@@ -3,15 +3,15 @@ title: "Leggi di Ohm, serie e parallelo · 18–19 settembre"
 sidebar: risorse
 date: 2026-09-18
 date-format: "DD/MM/YYYY"
-classe: "3A ETC"
+classe: "3A ETC · 3A ENC"
 materia: "Sistemi automatici"
-description: "Appunti delle lezioni del 18 e 19 settembre 2026: leggi di Ohm, resistori in serie e parallelo, approssimazioni, circuiti misti e partitori di tensione e corrente."
+description: "Appunti per elettronici ed elettrotecnici delle lezioni del 18 e 19 settembre 2026: leggi di Ohm, resistori in serie e parallelo, approssimazioni, circuiti misti e partitori di tensione e corrente."
 toc: false
 ---
 
-**3A ETC · Sistemi automatici · A.S. 2026–2027**
+**3A ETC e 3A ENC · Sistemi automatici · A.S. 2026–2027**
 
-Appunti manoscritti delle **lezioni del 18 e 19 settembre 2026**, raccolti in un unico PDF aggiornato: leggi di Ohm, resistori in serie e parallelo, resistenza equivalente, approssimazioni, circuiti misti e partitori di tensione e corrente.
+Appunti manoscritti delle **lezioni del 18 e 19 settembre 2026**, **per elettronici ed elettrotecnici**, raccolti in un unico PDF aggiornato: leggi di Ohm, resistori in serie e parallelo, resistenza equivalente, approssimazioni, circuiti misti e partitori di tensione e corrente.
 
 <div class="lesson-downloads">
 <a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_18_09_2026.pdf?v=42a328be02ed" download="3A_ETC_18_09_2026.pdf">Scarica il PDF originale · 6,9 MB</a>
