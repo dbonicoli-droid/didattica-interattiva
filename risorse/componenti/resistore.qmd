@@ -28,6 +28,15 @@ Useremo questo circuito in tutti gli esempi: il generatore impone $u(t)$ e, esse
 
 ### La legge di Ohm
 
+Nel circuito mostrato sopra, il generatore mantiene una tensione ai capi del resistore. Il campo elettrico nel conduttore esercita una forza sulle cariche mobili: nei metalli gli elettroni acquistano un moto medio ordinato, sovrapposto al loro moto disordinato. Il trasporto di carica costituisce la **corrente**; il suo verso convenzionale è opposto al moto medio degli elettroni.
+
+Le interazioni con il materiale limitano questo moto e trasferiscono energia al resistore, che si riscalda. La **resistenza** descrive l’opposizione al passaggio della corrente: a parità di tensione, una resistenza maggiore produce una corrente minore.
+
+Per un resistore ohmico, mantenendo circa costante la temperatura, le misure mostrano che tensione e corrente sono **proporzionali**: raddoppiare la tensione raddoppia la corrente. Il rapporto $v_R/i_R$ rimane costante ed è uguale a $R$. Questa relazione sperimentale è la **legge di Ohm**. Il suo campo di validità dipende dal componente e dalle condizioni operative.
+
+[Riparti da carica, corrente e tensione](../fondamenti/carica-corrente-tensione.qmd) · [Dalle cariche alla legge di Ohm](../fondamenti/leggi-dei-circuiti.qmd#legge-di-ohm).
+
+
 Per il modello lineare a resistenza costante:
 
 $$v_R=Ri_R,\qquad i_R=\frac{v_R}{R}.$$

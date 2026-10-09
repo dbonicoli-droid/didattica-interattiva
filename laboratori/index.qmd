@@ -27,7 +27,7 @@ Regola ampiezza, frequenza e fase di due sinusoidi. Confronta somma e differenza
 
 ### [Resistori: serie e parallelo](resistori.qmd)
 
-Confronta tensioni e correnti su due schemi interattivi. Scegli un generatore ideale di tensione o di corrente, modifica le resistenze e osserva i valori direttamente sui circuiti.
+Parti da un generatore di tensione e un solo resistore per esplorare la legge di Ohm, poi confronta tensioni e correnti nei circuiti serie e parallelo. Scegli un generatore ideale di tensione o di corrente, modifica le resistenze e osserva i valori direttamente sui circuiti.
 
 [Apri il laboratorio dei resistori](resistori.qmd){.btn .btn-primary}
 

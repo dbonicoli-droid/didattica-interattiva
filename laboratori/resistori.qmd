@@ -3,11 +3,31 @@ title: "Resistori: serie e parallelo"
 sidebar: risorse
 toc: false
 page-layout: full
-description: "Confronta tensioni e correnti in due resistori, con generatore ideale di tensione o di corrente."
+description: "Esplora la legge di Ohm con un solo resistore, poi confronta tensioni e correnti nei circuiti serie e parallelo."
 stato: bozza
 ---
 
 [← Indice del laboratorio](index.qmd)
+
+## Prima di iniziare: la legge di Ohm
+
+In un circuito chiuso, la tensione mantenuta dal generatore stabilisce un campo elettrico nel conduttore. Le cariche mobili acquistano un moto medio ordinato: il loro trasporto dà origine alla corrente. Il resistore limita la corrente e converte energia elettrica in calore.
+
+Per un resistore ohmico a temperatura circa costante, tensione e corrente sono proporzionali: **raddoppiando la tensione raddoppia la corrente**. La relazione è $V=RI$, quindi $I=V/R$. A tensione costante, raddoppiare la resistenza dimezza la corrente.
+
+## Un generatore e un solo resistore {#un-resistore}
+
+![Generatore da 5 V e resistore da 1 kΩ: corrente di 5 mA, con polarità e verso convenzionale.](/assets/componenti/resistore.svg)
+
+Regola **tensione** e **resistenza**: sullo schema trovi tensione, corrente e potenza dissipata, aggiornate a ogni modifica. Il generatore è ideale e il resistore mantiene il valore impostato di $R$.
+
+::: {.content-visible when-format="html"}
+{{< include _ohm-app.html >}}
+:::
+
+**Prova:** parti da 5 V e 1 kΩ. Prima prevedi la corrente; poi raddoppia la tensione lasciando invariata la resistenza. Ripristina 5 V e raddoppia invece la resistenza. Confronta ogni previsione con la simulazione.
+
+## Due resistori: serie e parallelo
 
 Modifica le resistenze e osserva sullo schema tutte le tensioni e le correnti. Scegli **Serie**, **Parallelo** oppure **Confronto**; con **Schermo intero** puoi dedicare più spazio ai circuiti.
 

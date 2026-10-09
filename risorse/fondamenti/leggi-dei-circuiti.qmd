@@ -7,11 +7,36 @@ title: "Ohm, Kirchhoff, serie e parallelo"
 
 ## Legge di Ohm
 
+### Dalle cariche alla corrente
+
+Nei conduttori metallici ci sono elettroni mobili, particelle con carica elettrica negativa. Anche senza corrente gli elettroni si muovono, ma il loro moto non produce un trasporto netto di carica lungo il filo. Quando un generatore mantiene una tensione ai capi di un circuito chiuso, nel conduttore si stabilisce un **campo elettrico**, che esercita una forza sulle cariche. Al moto disordinato si aggiunge un moto medio ordinato: compare una **corrente elettrica**.
+
+La corrente misura la carica che attraversa una sezione nell’unità di tempo: se passa 1 coulomb in 1 secondo, la corrente media è 1 ampere. Nei metalli il moto medio degli elettroni è opposto al verso convenzionale della corrente. Per i richiami: [carica, corrente e tensione](carica-corrente-tensione.qmd).
+
+La **tensione** è la differenza di potenziale fra due punti: esprime energia per unità di carica. Un volt equivale a un joule per coulomb.
+
+### Dalla tensione alla resistenza
+
+![Circuito chiuso con generatore da 5 V e resistore da 1 kΩ; la corrente entra nel terminale positivo del resistore.](/assets/componenti/resistore.svg)
+
+I processi di interazione degli elettroni con il materiale limitano il moto medio ordinato e trasferiscono energia al materiale, riscaldandolo. **A parità di tensione, materiali e geometrie diversi possono dare correnti diverse.** La resistenza descrive quanto un componente si oppone al passaggio della corrente.
+
+Per introdurre la legge di Ohm facciamo una misura: aumentiamo la tensione su un resistore, mantenendone circa costante la temperatura, e misuriamo la corrente. Per un resistore ohmico osserviamo una proporzionalità: raddoppiando la tensione raddoppia la corrente. Per esempio:
+
+| Tensione sul resistore | Corrente | Rapporto $V/I$ |
+|---|---|---|
+| 1 V | 1 mA | 1 kΩ |
+| 2 V | 2 mA | 1 kΩ |
+| 5 V | 5 mA | 1 kΩ |
+
+Il rapporto $V/I$ rimane costante: lo chiamiamo **resistenza** $R$, misurata in ohm ($\Omega$). Un ohm equivale a un volt per ampere. La proporzionalità osservata si scrive quindi:
+
+
 Per un resistore lineare a resistenza costante, con convenzione dell'utilizzatore:
 
 $$V=RI.$$
 
-È una relazione del componente, non una legge valida nella stessa forma per qualsiasi dispositivo. Per diodi e transistor servono modelli diversi.
+La legge di Ohm è una **relazione sperimentale**, valida per i componenti ohmici nelle condizioni considerate; non si ricava dalla sola definizione di corrente. È una relazione del componente, non una legge valida nella stessa forma per qualsiasi dispositivo. Per diodi e transistor servono modelli diversi.
 
 ## Legge dei nodi
 
