@@ -264,6 +264,10 @@ Codifica degli interi con segno su un numero fissato di bit. Per ottenere l'oppo
 
 Componente che immagazzina energia nel campo elettrico. Nel modello ideale a capacità costante, la carica su un’armatura è proporzionale alla tensione fra le armature. La capacità si misura in farad (F).
 
+### Conduttanza {#gloss-conduttanza}
+
+Per un resistore ohmico, la conduttanza è il reciproco della resistenza: $G=1/R$. Esprime la corrente per unità di tensione, $I=GV$, e si misura in siemens (S). Una conduttanza maggiore corrisponde a una corrente maggiore alla stessa tensione. Nei collegamenti in parallelo le conduttanze si sommano.
+
 ### Contatore {#gloss-contatore}
 
 [Sistemi automatici]{.gloss-scope}

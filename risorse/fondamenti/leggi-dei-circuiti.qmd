@@ -46,9 +46,54 @@ Nel modello a parametri concentrati, la somma delle correnti entranti in un nodo
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/parallelo.svg)
 
-Ogni resistore vede 6 V: $I_1=6/1000=6\,\mathrm{mA}$ e $I_2=6/2000=3\,\mathrm{mA}$. La sorgente fornisce $I=9\,\mathrm{mA}$.
+### Resistori in parallelo {#resistori-in-parallelo}
 
-Per due resistori: $1/R_{eq}=1/R_1+1/R_2$. Nell'esempio $R_{eq}\simeq667\,\Omega$, minore di ciascuna delle due resistenze.
+Due resistori sono **in parallelo** quando sono collegati agli stessi due nodi: hanno quindi la **stessa tensione** ai capi. La corrente totale si divide fra i rami, che possono essere attraversati da correnti diverse.
+
+#### Perché si sommano le conduttanze?
+
+Collegare un altro resistore in parallelo **aggiunge un percorso alternativo per la corrente**. Se manteniamo la stessa tensione, il ramo già presente continua a essere attraversato dalla stessa corrente e il nuovo ramo ne aggiunge un’altra. La corrente totale aumenta: il collegamento conduce più facilmente, quindi la sua resistenza equivalente diminuisce.
+
+La grandezza che descrive questa facilità di conduzione è la **[conduttanza](/risorse/glossario/index.qmd#gloss-conduttanza)**:
+
+$$G=\frac{1}{R},\qquad I=GV.$$
+
+Si misura in **siemens** (S): $1\,\mathrm S=1/\Omega=1\,\mathrm{A/V}$. Una conduttanza maggiore significa più corrente alla stessa tensione. Un resistore da 1 kΩ ha conduttanza 1 mS.
+
+**Ogni percorso aggiunge la propria conduttanza:** per questo in parallelo si sommano le conduttanze, non le resistenze. Un ramo con resistenza molto grande aggiunge poca conduttanza e incide poco; uno con resistenza piccola ne aggiunge molta. Questa spiegazione confronta i circuiti a tensione fissata: con un generatore ideale di corrente, invece, la corrente totale è imposta e cambia la tensione.
+
+#### Dalla somma delle correnti alla formula
+
+Poiché la tensione comune è $V$, per la legge dei nodi e la legge di Ohm:
+
+$$I_{tot}=I_1+I_2=G_1V+G_2V=(G_1+G_2)V.$$
+
+Il resistore equivalente deve assorbire **la stessa corrente totale alla stessa tensione**, quindi $I_{tot}=G_{eq}V$. Confrontando le due relazioni:
+
+$$\boxed{G_{eq}=G_1+G_2},\qquad
+\boxed{\frac{1}{R_{eq}}=\frac{1}{R_1}+\frac{1}{R_2}}.$$
+
+Per **due** resistori facciamo il denominatore comune e poi prendiamo il reciproco:
+
+$$\frac{1}{R_{eq}}=\frac{R_2+R_1}{R_1R_2}
+\quad\Longrightarrow\quad
+\boxed{R_{eq}=\frac{R_1R_2}{R_1+R_2}}.$$
+
+Per più resistori resta valida la somma delle conduttanze:
+
+$$G_{eq}=G_1+\cdots+G_n,\qquad
+R_{eq}=\frac{1}{\frac1{R_1}+\cdots+\frac1{R_n}}.$$
+
+La formula «prodotto diviso somma» vale soltanto per due resistori. Con resistenze finite e positive, $R_{eq}$ è minore della più piccola resistenza del parallelo. Per due resistori uguali a $R$, la conduttanza raddoppia e la resistenza equivalente vale $R/2$.
+
+#### Esempio sullo schema
+
+Con $R_1=1\,\mathrm{k\Omega}$ e $R_2=2\,\mathrm{k\Omega}$:
+
+$$G_1=1\,\mathrm{mS},\qquad G_2=0{,}5\,\mathrm{mS},\qquad
+G_{eq}=1{,}5\,\mathrm{mS}.$$
+
+Quindi $R_{eq}=1/(0{,}0015\,\mathrm S)\simeq667\,\Omega$. A 6 V, il primo ramo assorbe 6 mA e il secondo 3 mA: in totale 9 mA, proprio come un resistore equivalente da circa 667 Ω alimentato a 6 V.
 
 ## Legge delle tensioni
 
@@ -58,7 +103,23 @@ Percorrendo un anello chiuso del modello circuitale, la somma algebrica delle te
 
 [Apri lo schema a dimensione intera](/assets/fondamenti/serie.svg)
 
-Le resistenze in serie si sommano: $R_{eq}=3\,\mathrm{k\Omega}$. La corrente è $I=6/3000=2\,\mathrm{mA}$. Le cadute sono 2 e 4 V, quindi $6-2-4=0$.
+### Resistori in serie {#resistori-in-serie}
+
+Due resistori sono **in serie** quando la corrente percorre entrambi senza diramazioni fra loro. Sono quindi attraversati dalla **stessa corrente**, mentre le tensioni ai capi possono essere diverse.
+
+Ogni resistore richiede una caduta di tensione per essere attraversato da quella corrente. Aggiungendo un resistore lungo lo stesso percorso, le cadute si sommano: aumenta la tensione necessaria per mantenere la stessa corrente e quindi aumenta la resistenza equivalente. A tensione di alimentazione fissata, la corrente diminuisce.
+
+La legge delle tensioni e la legge di Ohm danno:
+
+$$V=V_1+V_2=R_1I+R_2I=(R_1+R_2)I.$$
+
+Poiché il resistore equivalente deve rispettare $V=R_{eq}I$:
+
+$$\boxed{R_{eq}=R_1+R_2}.$$
+
+Per più resistori in serie, $R_{eq}=R_1+\cdots+R_n$. Per due resistori uguali a $R$, la resistenza equivalente vale $2R$.
+
+Nello schema, le resistenze in serie si sommano: $R_{eq}=3\,\mathrm{k\Omega}$. La corrente è $I=6/3000=2\,\mathrm{mA}$. Le cadute sono 2 e 4 V, quindi $6-2-4=0$.
 
 ## Partitore di tensione
 

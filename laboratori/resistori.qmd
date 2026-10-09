@@ -42,6 +42,39 @@ Modifica le resistenze e osserva sullo schema tutte le tensioni e le correnti. S
 
 Queste proprietà valgono con entrambi i tipi di generatore. Nei disegni sono indicate le polarità delle tensioni e i versi delle correnti; ogni resistore è attraversato dalla corrente dal polo positivo al negativo.
 
+### In serie si aggiunge opposizione; in parallelo si aggiungono percorsi
+
+**In serie** la stessa corrente attraversa tutti i resistori e le cadute di tensione si sommano. Per mantenere quella corrente serve più tensione: le resistenze si sommano, $R_{eq}=R_1+R_2$.
+
+**In parallelo** aggiungiamo un percorso alternativo fra gli stessi due nodi. A tensione fissata, il nuovo ramo aggiunge corrente senza modificare quella del ramo già presente. Il circuito conduce di più: aumenta la **[conduttanza](/risorse/glossario/index.qmd#gloss-conduttanza)** $G=1/R$, mentre diminuisce la resistenza equivalente. Si sommano quindi $G_1$ e $G_2$, non $R_1$ e $R_2$.
+
+::: {.callout-note collapse=true title="Passaggi: dalla corrente alla resistenza equivalente"}
+
+**Serie:** la corrente $I$ è comune e le tensioni si sommano:
+
+$$V=R_1I+R_2I=(R_1+R_2)I
+\quad\Longrightarrow\quad R_{eq}=R_1+R_2.$$
+
+**Parallelo:** la tensione $V$ è comune e le correnti si sommano:
+
+$$I_{tot}=\frac{V}{R_1}+\frac{V}{R_2}
+=V\left(\frac1{R_1}+\frac1{R_2}\right)
+=V(G_1+G_2).$$
+
+Confrontando con $I_{tot}=VG_{eq}=V/R_{eq}$:
+
+$$G_{eq}=G_1+G_2,\qquad
+\frac1{R_{eq}}=\frac1{R_1}+\frac1{R_2}
+=\frac{R_1+R_2}{R_1R_2}.$$
+
+Prendendo il reciproco otteniamo $R_{eq}=R_1R_2/(R_1+R_2)$. La formula «prodotto diviso somma» vale per due resistori; con più rami sommiamo tutte le conduttanze.
+
+:::
+
+**Prova nell’app:** scegli il generatore di tensione e imposta $R_1=R_2$. In parallelo i due rami assorbono correnti uguali: la conduttanza equivalente è doppia e la resistenza equivalente è metà di quella di un ramo. In serie, invece, la resistenza equivalente è doppia.
+
+[Spiegazione completa ed esempio numerico](../risorse/fondamenti/leggi-dei-circuiti.qmd#resistori-in-parallelo).
+
 ## Il generatore e il modello
 
 Il **generatore ideale di tensione** mantiene il valore impostato di $v_{in}$ e fornisce la corrente richiesta dal circuito. Il **generatore ideale di corrente** mantiene il valore impostato di $I_{tot}$ e sviluppa la tensione richiesta dal circuito. Nella vista Confronto, il tipo di generatore, il valore imposto e le resistenze sono uguali nelle due viste; la grandezza non imposta può essere diversa.
