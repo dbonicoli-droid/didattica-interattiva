@@ -47,8 +47,8 @@ Con lo stesso resistore, a 10 V la corrente è 10 mA. Se manteniamo 5 V e usiamo
 
 [Prova il circuito con un solo resistore nel laboratorio](/laboratori/resistori.qmd#un-resistore).
 
-## Dai primi concetti ai partitori
+## Dai primi concetti ai circuiti serie e parallelo
 
-Nel [laboratorio dei partitori in cascata](/laboratori/partitori-cascata.qmd) puoi osservare come due resistori dividono la tensione e confrontare due partitori separati con gli stessi circuiti collegati insieme.
+Nel [laboratorio dei circuiti serie e parallelo](/laboratori/resistori.qmd) puoi osservare come si ripartiscono tensioni e correnti fra due resistori, modificare le resistenze e confrontare i due collegamenti.
 
 [← Introduzione](introduzione.qmd) · [Prosegui: prova pratica →](prova-pratica.qmd)
