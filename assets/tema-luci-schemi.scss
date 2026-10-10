@@ -1,2 +1,5 @@
 /* Stile degli schemi statici; palette letta da tema-luci.scss. */
 text{font:22px system-ui,sans-serif;fill:var(--text)}.small{font-size:18px}.title{font-size:26px;font-weight:700}.box{fill:var(--panel);stroke:var(--border);stroke-width:2}.wire{fill:none;stroke:var(--text);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}.phase{stroke:var(--path)}.neutral{stroke:var(--focus)}.terminal{fill:var(--panel);stroke:var(--text);stroke-width:2}.junction{fill:var(--text)}.dash{stroke-dasharray:7 5}
+
+:root { --guide-pe:#287f38; }
+.pe { stroke:var(--guide-pe); }.cross-clear { fill:none; stroke:var(--panel); stroke-width:12; }

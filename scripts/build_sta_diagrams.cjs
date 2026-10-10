@@ -1,0 +1,24 @@
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..'),dir=path.join(root,'assets/sta');fs.mkdirSync(dir,{recursive:true});const theme=fs.readFileSync(path.join(root,'assets/tema-luci.scss'),'utf8').match(/:root\s*\{[^}]*\}/)[0],css=theme+fs.readFileSync(path.join(root,'assets/tema-luci-schemi.scss'),'utf8');
+const t=(x,y,str,cl='',a='start')=>`<text x="${x}" y="${y}" class="${cl}" text-anchor="${a}">${str}</text>`,w=(d,c='')=>`<path class="wire ${c}" d="${d}"/>`,box=(x,y,ww,h)=>`<rect class="box" x="${x}" y="${y}" width="${ww}" height="${h}" rx="10"/>`,pin=(x,y)=>`<circle class="terminal" cx="${x}" cy="${y}" r="5"/>`,dot=(x,y)=>`<circle class="junction" cx="${x}" cy="${y}" r="5"/>`;
+const lamp=(x,y)=>`<circle class="wire" cx="${x}" cy="${y}" r="28"/>`+w(`M${x-17} ${y-17}l34 34 m0 -34l-34 34`);
+function svg(body,title,h=600){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 ${h}" role="img" aria-label="${title}"><style>${css}</style>${body}</svg>`;}
+let a=t(30,40,'Schema elettrico · Punto luce interrotto e presa','title')+t(30,75,'Origine L/N/PE: banco con protezioni predisposte dal docente.','small');
+a+=box(340,315,135,120)+box(735,195,230,175)+t(400,290,'L1 · classe I','','middle')+t(845,225,'X1 · Presa','','middle');
+a+=w('M55 105H1060','phase')+w('M55 460H1060','neutral')+w('M55 520H1060','pe')+t(25,112,'L')+t(25,467,'N')+t(15,527,'PE');
+a+=w('M250 105V200','phase')+w('M250 200L275 263','phase')+pin(250,200)+pin(250,280)+w('M250 280V330H400V337','phase')+lamp(400,365)+w('M400 393V460','neutral')+t(275,230,'S1')+t(500,425,'PE','small');
+a+=w('M770 105V250','phase')+w('M840 310V460','neutral');
+a+=`<path class="cross-clear" d="M450 435V520 M910 340V520"/>`+w('M450 435V520 M910 340V520','pe')+pin(450,435);
+for(const[x,y,label]of [[770,250,'L'],[840,310,'N'],[910,340,'PE']])a+=pin(x,y)+t(x+15,y-12,label,'small');
+for(const[x,y]of [[250,105],[770,105],[400,460],[840,460],[450,520],[910,520]])a+=dot(x,y);
+a+=t(30,575,'S1 comanda solo L1. X1 resta alimentata quando il banco è abilitato.','small');fs.writeFileSync(path.join(dir,'elettrico.svg'),svg(a,'Schema elettrico punto luce interrotto e presa'));
+a=t(30,45,'Schema unifilare · Percorsi e conduttori','title')+box(145,115,860,85)+t(575,166,'J1 · Derivazione','','middle')+w('M40 157H145')+w('M85 143l-12 28')+t(30,100,'L, N, PE')+t(95,183,'3');
+for(const[x,label,role,n]of [[300,'S1','Interruttore',2],[575,'L1','Lampada classe I',3],[850,'X1','Presa',3]])a+=w(`M${x} 200V330`)+w(`M${x-10} 260l20 -20`)+t(x+20,260,String(n))+box(x-100,330,200,100)+t(x,369,label,'','middle')+t(x,403,role,'small','middle');
+a+=t(30,495,'S1: fase + ritorno comandato. L1: ritorno + N + PE. X1: L + N + PE.','small')+t(30,533,'Una linea rappresenta il percorso di più conduttori; il numero ne indica la quantità.','small');fs.writeFileSync(path.join(dir,'unifilare.svg'),svg(a,'Schema unifilare di lampada interrotta e presa',570));
+a=t(30,45,'Schema di montaggio · Collegamenti ai morsetti','title')+box(145,185,175,175)+box(445,170,210,235)+box(785,170,255,235)+t(232,220,'S1','','middle')+t(550,208,'L1 · classe I','','middle')+t(912,208,'X1 · Presa','','middle');
+a+=w('M55 95H1080','phase')+w('M55 480H1080','neutral')+w('M55 540H1080','pe')+t(25,102,'L')+t(25,487,'N')+t(15,547,'PE');
+a+=w('M190 95V245 M265 315H380V245H480 M830 95V245','phase')+w('M540 315V480 M900 315V480','neutral');
+a+=`<path class="cross-clear" d="M600 375V540 M980 375V540"/>`+w('M600 375V540 M980 375V540','pe');
+for(const[x,y,label]of [[190,245,'1'],[265,315,'2'],[480,245,'L'],[540,315,'N'],[600,375,'PE'],[830,245,'L'],[900,315,'N'],[980,375,'PE']])a+=pin(x,y)+t(x+12,y-12,label,'small');
+for(const[x,y]of [[190,95],[830,95],[540,480],[900,480],[600,540],[980,540]])a+=dot(x,y);
+a+=t(30,595,'Morsetti schematici: confrontare sigle e disposizione con il materiale del banco.','small');fs.writeFileSync(path.join(dir,'montaggio.svg'),svg(a,'Schema di montaggio di lampada interrotta e presa',630));
+console.log('Generati schema elettrico, unifilare e montaggio: S1 sulla sola fase di L1, X1 indipendente, N e PE continui.');

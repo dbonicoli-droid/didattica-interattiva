@@ -1,0 +1,54 @@
+---
+sidebar: sta-elettrotecnica
+title: "2 / Concetti base: le cariche e la legge di Ohm"
+stato: bozza
+toc-depth: 2
+---
+
+[← Indice del percorso](index.qmd)
+
+## Le cariche elettriche
+
+La **carica elettrica** è una proprietà delle particelle: i protoni hanno carica positiva e gli elettroni carica negativa. Cariche dello stesso segno si respingono; cariche di segno opposto si attraggono.
+
+Un corpo con uguali quantità di carica positiva e negativa è nel complesso **neutro**: questo non significa che sia privo di cariche.
+
+## Il campo elettrico e il movimento delle cariche
+
+Il **campo elettrico** descrive l’azione elettrica in una regione dello spazio: una carica presente in quella regione subisce una forza. Un campo può quindi mettere in movimento le cariche. Le cariche positive e quelle negative subiscono forze di verso opposto.
+
+La **tensione**, o differenza di potenziale, è legata all’energia trasferita per unità di carica fra due punti. Si misura in volt (V). Un generatore mantiene una tensione ai propri morsetti.
+
+## La conduzione nei metalli
+
+Nei conduttori metallici alcuni elettroni possono muoversi attraverso il materiale. Anche prima di collegare un generatore sono in moto, ma senza un trasporto netto di carica lungo il filo. Nel circuito chiuso, il campo elettrico prodotto dalla tensione introduce un **moto medio ordinato**: compare una corrente.
+
+La **corrente elettrica** misura la quantità di carica che attraversa una sezione nell’unità di tempo. Si misura in ampere (A). Il verso convenzionale della corrente è opposto al moto medio degli elettroni nei metalli.
+
+Le interazioni degli elettroni con il materiale limitano il moto medio ordinato e trasferiscono energia al materiale, che si riscalda. La **resistenza** descrive l’opposizione al passaggio della corrente e si misura in ohm (Ω).
+
+## La legge di Ohm
+
+Per un resistore ohmico, a temperatura circa costante, tensione e corrente sono proporzionali: raddoppiando la tensione raddoppia la corrente. Il rapporto fra tensione e corrente resta uguale alla resistenza:
+
+$$V=RI,\qquad I=\frac{V}{R}.$$
+
+Questa relazione sperimentale è la **legge di Ohm**. Non vale nella stessa forma per tutti i componenti. A tensione fissata, una resistenza maggiore dà una corrente minore.
+
+### Esempio: un generatore e un resistore
+
+![Generatore di tensione collegato a un resistore, con verso convenzionale della corrente e polarità.](/assets/componenti/resistore.svg)
+
+Impostiamo il generatore a **5 V** e usiamo un resistore da **1 kΩ**, cioè 1000 Ω. Nel circuito chiuso il resistore ha 5 V ai capi:
+
+$$I=\frac{5\,\mathrm V}{1000\,\Omega}=0{,}005\,\mathrm A=5\,\mathrm{mA}.$$
+
+Con lo stesso resistore, a 10 V la corrente è 10 mA. Se manteniamo 5 V e usiamo invece 2 kΩ, la corrente diventa 2,5 mA.
+
+[Prova il circuito con un solo resistore nel laboratorio](/laboratori/resistori.qmd#un-resistore).
+
+## Dai primi concetti ai partitori
+
+Nel [laboratorio dei partitori in cascata](/laboratori/partitori-cascata.qmd) puoi osservare come due resistori dividono la tensione e confrontare due partitori separati con gli stessi circuiti collegati insieme.
+
+[← Introduzione](introduzione.qmd) · [Prosegui: prova pratica →](prova-pratica.qmd)

@@ -57,6 +57,16 @@ Sensori, acquisizione dei segnali e controllo degli impianti.
 [Esplora il percorso →](corsi/domotica/index.qmd){.course-link}
 :::
 
+::: {.course-card .course-4}
+### [S&TA Elettrotecnica](corsi/sta-elettrotecnica/index.qmd)
+
+**Percorso introduttivo**
+
+Cariche, legge di Ohm, primo impianto al banco e verifica delle competenze.
+
+[Esplora il percorso →](corsi/sta-elettrotecnica/index.qmd){.course-link}
+:::
+
 :::
 
 ::: {.lab-feature}

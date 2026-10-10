@@ -1,0 +1,159 @@
+---
+sidebar: sta-elettrotecnica
+title: "4 / Verifica delle competenze"
+stato: bozza
+toc-depth: 2
+---
+
+[← Indice del percorso](index.qmd)
+
+## Che cosa occorre conoscere
+
+La verifica riprende i concetti della [sezione 2](concetti-base.qmd): segno delle cariche e loro interazione, azione del campo elettrico, moto degli elettroni nei metalli, significato di corrente e tensione, resistenza, unità di misura e legge di Ohm.
+
+## Esempio di test a crocette
+
+Dieci domande semplici, con **una sola risposta corretta per domanda**. Sono un esempio di possibile test e possono essere usate per esercitarsi.
+
+::: {#sta-quiz}
+
+::: {.sta-question data-answer="1"}
+
+**1. Qual è il segno della carica dell’elettrone?**
+
+- A. Positivo.
+- B. Negativo.
+- C. Non possiede carica.
+- D. Dipende dalla resistenza.
+
+:::
+
+::: {.sta-question data-answer="2"}
+
+**2. Due cariche dello stesso segno…**
+
+- A. si attraggono sempre.
+- B. non interagiscono.
+- C. si respingono.
+- D. diventano neutre.
+
+:::
+
+::: {.sta-question data-answer="0"}
+
+**3. Il campo elettrico può…**
+
+- A. esercitare una forza sulle cariche.
+- B. eliminare tutte le cariche.
+- C. creare una resistenza infinita.
+- D. agire soltanto sugli oggetti senza carica.
+
+:::
+
+::: {.sta-question data-answer="3"}
+
+**4. Nei conduttori metallici i portatori mobili sono…**
+
+- A. i protoni.
+- B. gli atomi immobili.
+- C. le sole cariche positive.
+- D. gli elettroni.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**5. La corrente elettrica descrive…**
+
+- A. la temperatura del resistore.
+- B. il trasporto di carica nell’unità di tempo.
+- C. la lunghezza del filo.
+- D. il numero di interruttori.
+
+:::
+
+::: {.sta-question data-answer="2"}
+
+**6. La tensione è…**
+
+- A. la quantità di filo nel circuito.
+- B. la stessa grandezza della corrente.
+- C. una differenza di potenziale fra due punti.
+- D. la resistenza del generatore.
+
+:::
+
+::: {.sta-question data-answer="0"}
+
+**7. In quale unità si misura la resistenza?**
+
+- A. Ohm (Ω).
+- B. Volt (V).
+- C. Ampere (A).
+- D. Secondi (s).
+
+:::
+
+::: {.sta-question data-answer="3"}
+
+**8. Quale relazione permette di trovare la corrente in un resistore ohmico?**
+
+- A. I = V × R.
+- B. I = R / V.
+- C. I = V + R.
+- D. I = V / R.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**9. Un resistore da 1 kΩ alimentato a 5 V è attraversato da…**
+
+- A. 5 A.
+- B. 5 mA.
+- C. 500 mA.
+- D. 0 A.
+
+:::
+
+::: {.sta-question data-answer="2"}
+
+**10. A tensione costante, se la resistenza raddoppia, la corrente…**
+
+- A. raddoppia.
+- B. rimane uguale.
+- C. si dimezza.
+- D. diventa sempre nulla.
+
+:::
+
+::: {.content-visible when-format="html"}
+<div class="sta-quiz-actions"><button type="button" id="sta-check">Verifica le risposte</button><button type="button" id="sta-solutions">Mostra soluzioni</button><button type="button" id="sta-reset">Ricomincia</button></div>
+<p id="sta-score" role="status" aria-live="polite"></p>
+<script src="../../assets/sta/quiz.js"></script>
+:::
+
+:::
+
+::: {.callout-note collapse=true title="Soluzioni commentate"}
+
+1. **B** — Gli elettroni hanno carica negativa.
+2. **C** — Cariche dello stesso segno si respingono.
+3. **A** — Il campo elettrico esercita una forza sulle cariche.
+4. **D** — La conduzione nei metalli è dovuta agli elettroni mobili.
+5. **B** — La corrente misura quanta carica attraversa una sezione nell’unità di tempo.
+6. **C** — La tensione è una differenza di potenziale e si misura in volt.
+7. **A** — La resistenza si misura in ohm.
+8. **D** — Dalla legge di Ohm V = RI si ottiene I = V/R.
+9. **B** — 1 kΩ = 1000 Ω: 5/1000 A = 0,005 A = 5 mA.
+10. **C** — I = V/R: raddoppiando R, la corrente si dimezza.
+
+:::
+
+## Analisi di un circuito
+
+Nella verifica verrà chiesto anche di **analizzare un circuito con due resistori in serie oppure due resistori in parallelo**. Dovrai riconoscere il collegamento, individuare la grandezza comune (corrente in serie, tensione in parallelo), calcolare la resistenza equivalente e applicare la legge di Ohm per trovare tensioni e correnti richieste, con le unità corrette.
+
+[Ripassa serie e parallelo](/risorse/fondamenti/leggi-dei-circuiti.qmd#resistori-in-serie) · [Esercitati nel laboratorio](/laboratori/resistori.qmd)
+
+[← Prova pratica](prova-pratica.qmd) · [Torna all’indice](index.qmd)

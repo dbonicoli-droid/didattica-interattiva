@@ -1,0 +1,61 @@
+---
+sidebar: sta-elettrotecnica
+title: "3 / Prova pratica: montaggio di un semplice impianto elettrico"
+stato: bozza
+toc-depth: 2
+---
+
+[← Indice del percorso](index.qmd)
+
+Realizziamo sul banco didattico un **punto luce interrotto**, comandato da un interruttore S1, e una **presa X1** alimentata indipendentemente dall’interruttore.
+
+## Prima del montaggio
+
+Il docente/ITP predispone alimentazione e protezioni, indica il materiale adatto e verifica il montaggio prima di abilitare le prove. I collegamenti si eseguono con il banco messo fuori tensione e nelle condizioni di sicurezza stabilite dal laboratorio. Per il riferimento sulle procedure: [INAIL, lavori elettrici in bassa tensione](https://www.inail.it/portale/it/inail-comunica/news/notizia.2018.07.lavori-elettrici-in-bassa-tensione-nuova-pubblicazione-inail.html).
+
+Gli schemi rappresentano i collegamenti funzionali a valle delle protezioni del banco, senza dimensionarle. In questa esercitazione il corpo illuminante L1 è rappresentato con morsetto di protezione PE, come apparecchio di classe I. Materiale, tensione nominale e morsetti effettivi devono corrispondere alle indicazioni del docente.
+
+## Schema elettrico
+
+![Schema elettrico: S1 interrompe la fase della lampada L1; la presa X1 è collegata direttamente a L, N e PE.](../../assets/sta/elettrico.svg)
+
+[Apri lo schema elettrico ingrandito](../../assets/sta/elettrico.svg){target="_blank"}
+
+- **L — fase:** alimenta l’interruttore della lampada e direttamente la presa.
+- **N — neutro:** è collegato alla lampada e alla presa.
+- **PE — conduttore di protezione:** raggiunge il morsetto di protezione del corpo illuminante e quello della presa; non viene interrotto da S1.
+
+S1 interrompe il percorso della **fase verso L1**. Con S1 aperto la lampada è spenta, mentre la presa resta alimentata se il banco è abilitato. Lampada e presa sono due utilizzazioni collegate in parallelo all’alimentazione; S1 è in serie alla sola lampada.
+
+## Schema unifilare
+
+![Schema unifilare: alimentazione L/N/PE alla derivazione; due conduttori all’interruttore, tre al corpo illuminante e tre alla presa.](../../assets/sta/unifilare.svg)
+
+[Apri lo schema unifilare ingrandito](../../assets/sta/unifilare.svg){target="_blank"}
+
+Una linea rappresenta un percorso contenente più conduttori. I numeri indicano quelli rappresentati: due per S1 (fase e ritorno comandato), tre per L1 (ritorno comandato, neutro e PE), tre per X1 (fase, neutro e PE).
+
+## Schema di montaggio
+
+![Collegamenti ai morsetti: L a S1.1 e X1.L, S1.2 a L1.L, N ai due morsetti N e PE ai due morsetti di protezione.](../../assets/sta/montaggio.svg)
+
+[Apri lo schema di montaggio ingrandito](../../assets/sta/montaggio.svg){target="_blank"}
+
+| Collegamento | Morsetti nel disegno |
+|---|---|
+| Fase all’interruttore | L → S1.1 |
+| Ritorno comandato | S1.2 → L1.L |
+| Fase alla presa | L → X1.L |
+| Neutro | N → L1.N e X1.N |
+| Protezione | PE → L1.PE e X1.PE |
+
+I morsetti sono disposti schematicamente. Le sigle e la disposizione reale vanno riconosciute sul materiale del banco. Nei disegni i punti pieni indicano le connessioni; gli attraversamenti senza punto non sono collegamenti.
+
+## Attività al banco
+
+1. Riconosci componenti e morsetti e confronta i tre schemi.
+2. Con il banco predisposto fuori tensione, realizza i collegamenti indicati dal docente.
+3. Fai controllare il circuito e attendi l’abilitazione delle prove.
+4. Verifica che S1 comandi la lampada e che la presa sia indipendente dalla sua posizione, usando le modalità di prova indicate dal docente.
+
+[← Concetti base](concetti-base.qmd) · [Prosegui: verifica delle competenze →](verifica.qmd)

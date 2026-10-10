@@ -1,0 +1,19 @@
+---
+sidebar: sta-elettrotecnica
+title: "S&TA Elettrotecnica"
+stato: bozza
+toc-depth: 2
+---
+
+Un percorso introduttivo per conoscere l’indirizzo di elettrotecnica, comprendere le prime grandezze elettriche e collegarle a una prova pratica al banco.
+
+## Le quattro sezioni
+
+| Sezione | Che cosa trovi |
+|---|---|
+| [1 / Introduzione all’indirizzo di elettrotecnica](introduzione.qmd) | Panoramica della specializzazione: contenuti da aggiungere. |
+| [2 / Concetti base: le cariche e la legge di Ohm](concetti-base.qmd) | Cariche, campo elettrico, conduzione e un circuito con generatore e resistore. |
+| [3 / Prova pratica: montaggio di un semplice impianto elettrico](prova-pratica.qmd) | Punto luce interrotto e presa; schema elettrico, unifilare e di montaggio. |
+| [4 / Verifica delle competenze](verifica.qmd) | Concetti da conoscere, dieci domande a crocette e indicazioni sull’analisi di un circuito. |
+
+[Inizia dal percorso →](introduzione.qmd){.btn .btn-primary}

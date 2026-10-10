@@ -211,6 +211,29 @@ website:
             - href: risorse/glossario/index.qmd#vocabolario-domotica
               text: "Glossario"
 
+    - id: sta-elettrotecnica
+      title: "S&TA Elettrotecnica"
+      style: docked
+      search: false
+      collapse-level: 2
+      contents:
+        - href: corsi/sta-elettrotecnica/index.qmd
+          text: Indice del percorso
+        - href: corsi/sta-elettrotecnica/introduzione.qmd
+          text: "1 / Introduzione all’indirizzo"
+        - href: corsi/sta-elettrotecnica/concetti-base.qmd
+          text: "2 / Concetti base"
+        - href: corsi/sta-elettrotecnica/prova-pratica.qmd
+          text: "3 / Prova pratica"
+        - href: corsi/sta-elettrotecnica/verifica.qmd
+          text: "4 / Verifica delle competenze"
+        - section: "Risorse comuni"
+          contents:
+            - href: laboratori/index.qmd
+              text: Laboratorio
+            - href: risorse/fondamenti/index.qmd
+              text: Fondamenti
+
     - id: risorse
       title: "Risorse condivise"
       style: docked

@@ -1,0 +1,14 @@
+---
+sidebar: sta-elettrotecnica
+title: "1 / Introduzione all’indirizzo di elettrotecnica"
+stato: da-scrivere
+toc-depth: 2
+---
+
+[← Indice del percorso](index.qmd)
+
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"}
+
+La panoramica della specializzazione di elettrotecnica verrà aggiunta in questa sezione.
+
+[Prosegui: concetti base →](concetti-base.qmd)

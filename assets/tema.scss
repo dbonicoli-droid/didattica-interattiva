@@ -857,3 +857,11 @@ main.content .classification-exercise table { display: table; width: 100%; table
 .light-truth :focus-visible { outline:2px solid var(--fuoco); outline-offset:2px; }
 .light-truth td:last-child span { font-weight:600; white-space:nowrap; }
 @media print { .light-truth button,.truth-actions { display:none; } }
+
+:root { --c-sta-elettrotecnica:var(--c-elettrotecnici); }
+.course-4 { --tinta:var(--c-elettrotecnici); }
+.sta-question { padding:.6rem .8rem; border:1px solid var(--bordo); border-radius:var(--raggio-s); margin-bottom:.8rem; background:var(--superficie); }
+.sta-question ul { list-style:none; padding-left:0; }.sta-question label { display:flex; align-items:baseline; gap:.5rem; cursor:pointer; }.sta-question input { accent-color:var(--accento); }
+.sta-quiz-actions { display:flex; flex-wrap:wrap; gap:.5rem; }.sta-quiz-actions button { background:var(--superficie); color:var(--testo); border:1px solid var(--bordo-forte); border-radius:var(--raggio-s); padding:.4rem .7rem; cursor:pointer; }
+.sta-feedback { font-weight:600; }.sta-feedback:empty { display:none; }
+@media print { .sta-quiz-actions { display:none; } }
