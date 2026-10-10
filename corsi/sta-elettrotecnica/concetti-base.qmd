@@ -7,6 +7,14 @@ toc-depth: 2
 
 [← Indice del percorso](index.qmd)
 
+## L’atomo: una prima immagine della materia
+
+La materia è formata da **atomi**. Un atomo contiene un piccolo **nucleo**, composto da protoni e neutroni, e **elettroni** distribuiti nella regione attorno al nucleo. I protoni hanno carica positiva, gli elettroni negativa; i neutroni non hanno carica elettrica.
+
+![Un atomo neutro di elio: due protoni e due neutroni nel nucleo, due elettroni nella regione circostante. Disegno schematico, non in scala: gli elettroni non percorrono le orbite di piccoli pianeti.](/assets/sta/atomo.svg)
+
+In un **atomo neutro** il numero di protoni e di elettroni è uguale: le loro cariche si compensano. Se un atomo perde o acquista elettroni diventa uno **ione**, rispettivamente positivo o negativo.
+
 ## Le cariche elettriche
 
 La **carica elettrica** è una proprietà delle particelle: i protoni hanno carica positiva e gli elettroni carica negativa. Cariche dello stesso segno si respingono; cariche di segno opposto si attraggono.
@@ -19,11 +27,25 @@ Il **campo elettrico** descrive l’azione elettrica in una regione dello spazio
 
 La **tensione**, o differenza di potenziale, è legata all’energia trasferita per unità di carica fra due punti. Si misura in volt (V). Un generatore mantiene una tensione ai propri morsetti.
 
+## Conduttori, isolanti e semiconduttori
+
+I materiali si distinguono anche per la facilità con cui permettono il movimento delle cariche:
+
+- **Conduttori:** le cariche possono muoversi facilmente. Nei metalli, come rame e alluminio, alcuni elettroni sono mobili: per questo si usano per i fili elettrici.
+- **Isolanti:** nelle condizioni d’uso ordinarie le cariche sono fortemente legate al materiale e si muovono con difficoltà. Plastica e vetro sono esempi comuni; la guaina isolante evita il contatto con il metallo del filo.
+- **Semiconduttori:** materiali come il silicio hanno una conducibilità che può essere modificata molto dalla temperatura, dalla luce o dall’aggiunta controllata di altre sostanze. Sono alla base di diodi e transistor.
+
+![Un filo elettrico: il rame interno conduce la corrente, la guaina esterna di materiale isolante protegge dal contatto.](/assets/sta/conduttore-isolante.svg)
+
+Un isolante non è privo di elettroni: questi sono meno liberi di muoversi. La distinzione dipende anche dalle condizioni: tensioni molto elevate possono danneggiare un isolante e renderlo conduttivo.
+
 ## La conduzione nei metalli
 
 Nei conduttori metallici alcuni elettroni possono muoversi attraverso il materiale. Anche prima di collegare un generatore sono in moto, ma senza un trasporto netto di carica lungo il filo. Nel circuito chiuso, il campo elettrico prodotto dalla tensione introduce un **moto medio ordinato**: compare una corrente.
 
-La **corrente elettrica** misura la quantità di carica che attraversa una sezione nell’unità di tempo. Si misura in ampere (A). Il verso convenzionale della corrente è opposto al moto medio degli elettroni nei metalli.
+La **corrente elettrica** misura la quantità di carica che attraversa una sezione nell’unità di tempo. Si misura in ampere (A). Nei **conduttori metallici** la corrente deriva principalmente dal movimento degli **elettroni**, mentre i nuclei restano nelle loro posizioni nel materiale. Per convenzione, il verso della corrente è quello in cui si muoverebbero **ipotetiche cariche positive**: è quindi opposto al moto medio degli elettroni.
+
+![In un tratto di conduttore metallico, il campo elettrico e la corrente convenzionale hanno lo stesso verso; il moto medio degli elettroni ha verso opposto.](/assets/sta/corrente-elettroni.svg)
 
 Le interazioni degli elettroni con il materiale limitano il moto medio ordinato e trasferiscono energia al materiale, che si riscalda. La **resistenza** descrive l’opposizione al passaggio della corrente e si misura in ohm (Ω).
 
