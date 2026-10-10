@@ -1,0 +1,4 @@
+(()=>{'use strict';const root=document.getElementById('light-truth');if(!root)return;const buttons=[...root.querySelectorAll('[data-truth-reveal]')];
+function set(button,shown){const out=document.getElementById(button.getAttribute('aria-controls')),state=[...button.dataset.state].map(Number),on=window.LightLabModel.lamp(state);out.textContent=(on?'1 · Accesa':'0 · Spenta');out.hidden=!shown;button.setAttribute('aria-expanded',String(shown));button.textContent=shown?'Nascondi':'Mostra';button.setAttribute('aria-label',(shown?'Nascondi':'Mostra')+' uscita per '+state.join(' '));}
+buttons.forEach(b=>{set(b,false);b.onclick=()=>set(b,b.getAttribute('aria-expanded')!=='true');});document.getElementById('truth-show-all').onclick=()=>buttons.forEach(b=>set(b,true));document.getElementById('truth-hide-all').onclick=()=>buttons.forEach(b=>set(b,false));
+})();

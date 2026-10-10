@@ -24,6 +24,7 @@ jobs:
       - run: node scripts/check_resistori.cjs
       - run: node scripts/check_light_labs.cjs
       - run: node scripts/build_light_labs.cjs
+      - run: node scripts/build_light_wiring.cjs
       - run: node scripts/build_classification.cjs
       - run: quarto render
       - run: node scripts/check_components.cjs

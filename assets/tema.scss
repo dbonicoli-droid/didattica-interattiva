@@ -850,3 +850,10 @@ main.content .classification-exercise table { display: table; width: 100%; table
 /* Simulazioni autonome del punto luce, incorporate nel laboratorio. */
 .light-lab-frame { display:block; width:100%; min-height:620px; border:1px solid var(--bordo-forte); border-radius:var(--raggio-s); margin-block:1rem; }
 @media print { .light-lab-frame { display:none; } }
+
+.light-truth { margin-block:1rem; }
+.truth-actions { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:.6rem; }
+.light-truth button { background:var(--superficie); color:var(--testo); border:1px solid var(--bordo-forte); border-radius:var(--raggio-s); padding:.3rem .5rem; cursor:pointer; }
+.light-truth :focus-visible { outline:2px solid var(--fuoco); outline-offset:2px; }
+.light-truth td:last-child span { font-weight:600; white-space:nowrap; }
+@media print { .light-truth button,.truth-actions { display:none; } }

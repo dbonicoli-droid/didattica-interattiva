@@ -40,6 +40,15 @@ S1 e S3 selezionano ciascuno un viaggiatore. S2 collega i viaggiatori **direttam
 ![Due deviatori e un invertitore, configurazione 000: la lampada è accesa.](../assets/luci/deviatori.svg)
 :::
 
+### Tabella di verità
+
+Prevedi prima l’uscita, poi usa **Mostra** sulla riga che vuoi verificare. Puoi anche mostrare o nascondere tutte le uscite insieme.
+
+::: {.content-visible when-format="html"}
+{{< include _luce-tabella.html >}}
+:::
+
+::: {.content-hidden when-format="html"}
 | $s_1$ | $s_2$ | $s_3$ | Lampada: 0 spenta, 1 accesa |
 |---:|---:|---:|---|
 | 0 | 0 | 0 | … |
@@ -50,6 +59,8 @@ S1 e S3 selezionano ciascuno un viaggiatore. S2 collega i viaggiatori **direttam
 | 1 | 0 | 1 | … |
 | 1 | 1 | 0 | … |
 | 1 | 1 | 1 | … |
+
+:::
 
 ::: {.callout-note collapse=true title="Soluzione e convenzioni delle posizioni"}
 
@@ -102,6 +113,51 @@ L’uscita non dipende soltanto dai valori attuali dei pulsanti. Nel modello seq
 | Che cosa determina la lampada? | Il percorso selezionato dai tre dispositivi. | Lo stato del contatto K1. |
 | Modello | Combinatorio rispetto alle posizioni attuali. | Con memoria rispetto ai segnali dei pulsanti. |
 | Dopo aver tolto la mano | Le posizioni restano impostate. | La bobina non è alimentata; il contatto mantiene lo stato. |
+
+## Schemi unifilari e di montaggio {#schemi-finali}
+
+Lo **schema unifilare** riassume i percorsi: una sola linea rappresenta il gruppo di conduttori lungo un collegamento; il numero indica quanti conduttori funzionali sono necessari. Lo **schema di montaggio** mostra invece i collegamenti fra i morsetti dei dispositivi.
+
+I conteggi qui riguardano i conduttori funzionali del comando e della lampada. Eventuale conduttore di protezione PE e dispositivi di protezione non sono rappresentati: questi disegni completano il modello didattico e non costituiscono un progetto esecutivo dell’impianto.
+
+### Deviatori e invertitore
+
+![Schema unifilare didattico: alimentazione L/N alla derivazione, tre conduttori a ciascun deviatore, quattro all’invertitore e due alla lampada.](../assets/luci/unifilare-deviatori.svg)
+
+[Apri lo schema unifilare ingrandito](../assets/luci/unifilare-deviatori.svg){target="_blank"}
+
+![Schema di montaggio didattico: L al comune di S1, due viaggiatori a/b verso S2, uscite c/d verso S3, comune di S3 alla lampada e ritorno N.](../assets/luci/montaggio-deviatori.svg)
+
+[Apri lo schema di montaggio ingrandito](../assets/luci/montaggio-deviatori.svg){target="_blank"}
+
+| Collegamento | Morsetti nel disegno |
+|---|---|
+| Fase → primo deviatore | L → S1.C |
+| Prima coppia di viaggiatori | S1.1 → S2.a; S1.2 → S2.b |
+| Seconda coppia di viaggiatori | S2.c → S3.1; S2.d → S3.2 |
+| Alimentazione della lampada | S3.C → L1; altro morsetto di L1 → N |
+
+Le sigle **a/b/c/d** identificano funzionalmente le due coppie dell’invertitore: in posizione diretta a–c e b–d, in posizione incrociata a–d e b–c. La disposizione disegnata dei morsetti è schematica; sul dispositivo reale va riconosciuta dalla marcatura o dalla documentazione.
+
+### Pulsanti e relè passo-passo
+
+![Schema unifilare didattico: derivazione con K1, due conduttori per ogni pulsante e due alla lampada.](../assets/luci/unifilare-rele.svg)
+
+[Apri lo schema unifilare ingrandito](../assets/luci/unifilare-rele.svg){target="_blank"}
+
+![Schema di montaggio didattico: tre pulsanti collegati alla fase e a un ritorno comune verso A1; A2 al neutro, fase a 11, 14 alla lampada e ritorno lampada al neutro.](../assets/luci/montaggio-rele.svg)
+
+[Apri lo schema di montaggio ingrandito](../assets/luci/montaggio-rele.svg){target="_blank"}
+
+| Collegamento | Morsetti nel disegno |
+|---|---|
+| Alimentazione dei pulsanti | L → primo morsetto di S1, S2 e S3 |
+| Ritorno comune di comando | Secondi morsetti di S1, S2 e S3 uniti → K1.A1 |
+| Ritorno bobina | K1.A2 → N |
+| Alimentazione del contatto | L → K1.11 |
+| Alimentazione della lampada | K1.14 → L1; altro morsetto di L1 → N |
+
+Nel montaggio i tre pulsanti restano **in parallelo**: possono trovarsi in posizioni diverse nell’ambiente, ma ciascuno collega gli stessi due nodi del circuito di comando. Anche per K1 la disposizione dei morsetti è indicativa e va confrontata con quella del relè scelto per il banco.
 
 [Ripassa i sistemi con e senza memoria](../corsi/sistemi-automatici/moduli/modulo-1.qmd) · [Guida al Ladder: eventi e stati](../risorse/ladder/index.qmd#livello-4)
 
