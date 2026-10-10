@@ -1,0 +1,110 @@
+---
+title: "Un punto luce comandato da tre punti"
+sidebar: risorse
+stato: bozza
+description: "Due esercitazioni e due simulazioni: deviatori con invertitore, oppure pulsanti con relè passo-passo."
+toc-depth: 2
+---
+
+[← Indice del laboratorio](index.qmd)
+
+**Problema:** accendere e spegnere una lampada da tre punti diversi. Ogni punto deve permettere di invertire lo stato della lampada, indipendentemente da dove è stato dato il comando precedente.
+
+Confrontiamo due soluzioni: **due deviatori e un invertitore**, che modificano direttamente il percorso elettrico, e **tre pulsanti con un relè passo-passo**, che conserva lo stato del contatto dopo il rilascio dei pulsanti.
+
+## Prima di iniziare
+
+Individua fase **L**, neutro **N**, lampada **L1** e dispositivi di comando. Nel primo schema S1/S3 sono deviatori e S2 è un invertitore; nel secondo S1/S2/S3 sono pulsanti normalmente aperti (**NO**, aperti a riposo). Le sigle sono riutilizzate in due circuiti indipendenti.
+
+Gli schemi illustrano il principio di funzionamento. Per l’eventuale montaggio usa il banco didattico predisposto dal docente/ITP: alimentazione, morsetti, protezioni e caratteristiche del relè vanno verificati sul materiale effettivamente utilizzato. La numerazione 11/14 adottata qui identifica il contatto del modello didattico, non sostituisce lo schema del produttore.
+
+## Due deviatori e un invertitore {#deviatori}
+
+La fase entra nel **comune di S1**. Due conduttori viaggiatori raggiungono S2; altri due raggiungono S3. Il **comune di S3** alimenta L1, collegata al neutro dall’altro lato.
+
+S1 e S3 selezionano ciascuno un viaggiatore. S2 collega i viaggiatori **direttamente** oppure li **incrocia**. Nell’incrocio non c’è un nodo elettrico. Le posizioni restano quelle scelte dopo aver tolto la mano.
+
+### Attività
+
+1. Prima di azionare un dispositivo, prevedi se la lampada cambierà stato.
+2. Aziona a turno S1, S2 e S3; segui sullo schema i contatti e il percorso completo fra L e N attraverso la lampada.
+3. Parti da 000 e visita tutte le otto combinazioni. Compila la tabella e verifica che cambiare una sola posizione inverta sempre l’uscita.
+
+::: {.content-visible when-format="html"}
+{{< include _luce-deviatori.html >}}
+
+[Apri l’app separatamente](../downloads/laboratori/luce-tre-punti/deviatori.html){.btn .btn-outline-primary target="_blank"} · [Scarica l’HTML autonomo](../downloads/laboratori/luce-tre-punti/deviatori.html){download="luce-deviatori-invertitore.html"}
+:::
+
+::: {.content-hidden when-format="html"}
+![Due deviatori e un invertitore, configurazione 000: la lampada è accesa.](../assets/luci/deviatori.svg)
+:::
+
+| $s_1$ | $s_2$ | $s_3$ | Lampada: 0 spenta, 1 accesa |
+|---:|---:|---:|---|
+| 0 | 0 | 0 | … |
+| 0 | 0 | 1 | … |
+| 0 | 1 | 0 | … |
+| 0 | 1 | 1 | … |
+| 1 | 0 | 0 | … |
+| 1 | 0 | 1 | … |
+| 1 | 1 | 0 | … |
+| 1 | 1 | 1 | … |
+
+::: {.callout-note collapse=true title="Soluzione e convenzioni delle posizioni"}
+
+Per S1/S3, 0 significa viaggiatore superiore e 1 inferiore. Per S2, 0 significa diretto e 1 incrociato. La lampada si accende quando il viaggiatore scelto da S1, eventualmente scambiato da S2, coincide con quello scelto da S3:
+
+$$L_1=\overline{s_1\oplus s_2\oplus s_3}.$$
+
+Nell’ordine della tabella le uscite sono **1, 0, 0, 1, 0, 1, 1, 0**. Con 000 la lampada è accesa. Rinumerando le posizioni si può ottenere l’espressione complementare: il comportamento fisico resta lo stesso. Le posizioni attuali determinano l’uscita; rispetto a queste tre variabili il modello è combinatorio.
+
+:::
+
+## Tre pulsanti e un relè passo-passo {#rele}
+
+I pulsanti NO sono **in parallelo** nel circuito di comando: chiuderne uno alimenta la bobina **K1**, fra **A1** e **A2**. Nel circuito della lampada, il contatto dello stesso relè collega **11** a **14** quando è chiuso. Bobina e contatto hanno ruoli diversi e sono associati dalla sigla K1.
+
+Usiamo un modello di relè passo-passo elettromeccanico a due stati: ogni nuovo impulso valido cambia lo stato del contatto, che viene mantenuto meccanicamente dopo la cessazione dell’impulso. Questo è il principio descritto anche nella [documentazione Finder sui relè passo-passo](https://www.findernet.com/en/usa/news/latch-on-latch-off-20-series/). La durata ammessa degli impulsi dipende dal dispositivo reale.
+
+### Attività
+
+1. Parti con contatto aperto e lampada spenta. Prevedi l’effetto di una pressione di S1.
+2. Premi S1 e osserva la breve alimentazione della bobina. Dopo il rilascio verifica separatamente pulsante, bobina, contatto e lampada.
+3. Premi S2, poi S3. Annota il numero di impulsi e lo stato della lampada dopo ciascuno.
+4. Confronta due situazioni in cui tutti i pulsanti sono rilasciati: una dopo un impulso, l’altra dopo due. Gli ingressi attuali bastano per prevedere l’uscita?
+
+::: {.content-visible when-format="html"}
+{{< include _luce-rele.html >}}
+
+[Apri l’app separatamente](../downloads/laboratori/luce-tre-punti/rele.html){.btn .btn-outline-primary target="_blank"} · [Scarica l’HTML autonomo](../downloads/laboratori/luce-tre-punti/rele.html){download="luce-rele-pulsanti.html"}
+:::
+
+::: {.content-hidden when-format="html"}
+![Comando con tre pulsanti in parallelo e relè K1: circuito di comando e circuito della lampada.](../assets/luci/rele.svg)
+:::
+
+Ogni clic simula una pressione completa con rilascio. La breve animazione serve a distinguere **alimentazione temporanea della bobina** e **stato mantenuto del contatto**; non indica la durata richiesta dal modello fisico. I comandi sono sospesi durante l’impulso, per studiare una pressione alla volta.
+
+::: {.callout-note collapse=true title="Soluzione: dove si trova la memoria?"}
+
+Partendo da spento: dopo il primo impulso la lampada è accesa; dopo il secondo è spenta; dopo il terzo è accesa. Dopo ogni rilascio i pulsanti sono aperti e la bobina non è alimentata. Il contatto, invece, conserva la posizione raggiunta: la memoria è nel meccanismo del relè.
+
+L’uscita non dipende soltanto dai valori attuali dei pulsanti. Nel modello sequenziale, ogni impulso aggiorna lo stato $x$ secondo $x_{nuovo}=\overline{x_{precedente}}$, e la lampada segue $x$. Un relè ordinario monostabile non realizza automaticamente questo comportamento.
+
+:::
+
+## Confronto dei due sistemi
+
+| Aspetto | Deviatori e invertitore | Pulsanti e relè passo-passo |
+|---|---|---|
+| Comandi | Mantengono la posizione selezionata. | Tornano aperti dopo il rilascio. |
+| Che cosa determina la lampada? | Il percorso selezionato dai tre dispositivi. | Lo stato del contatto K1. |
+| Modello | Combinatorio rispetto alle posizioni attuali. | Con memoria rispetto ai segnali dei pulsanti. |
+| Dopo aver tolto la mano | Le posizioni restano impostate. | La bobina non è alimentata; il contatto mantiene lo stato. |
+
+[Ripassa i sistemi con e senza memoria](../corsi/sistemi-automatici/moduli/modulo-1.qmd) · [Guida al Ladder: eventi e stati](../risorse/ladder/index.qmd#livello-4)
+
+::: {.content-visible when-format="html"}
+<script src="../assets/luci/embed.js"></script>
+:::

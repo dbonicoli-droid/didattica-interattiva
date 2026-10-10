@@ -37,6 +37,12 @@ Prevedi e misura il comportamento di due partitori, prima separati e poi collega
 
 [Apri l’esercitazione sui partitori →](partitori-cascata.qmd){.btn .btn-primary}
 
+### [Un punto luce comandato da tre punti](luce-tre-punti.qmd)
+
+Confronta due deviatori con un invertitore e tre pulsanti con un relè passo-passo. Aziona i comandi, segui i contatti e distingui il percorso elettrico dalla memoria del relè. Due app indipendenti, disponibili anche come HTML autonomi.
+
+[Apri l’esercitazione sul punto luce →](luce-tre-punti.qmd){.btn .btn-primary}
+
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
 
 ## Componenti: risorse comuni ai percorsi

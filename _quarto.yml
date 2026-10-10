@@ -230,6 +230,8 @@ website:
               text: "Resistori: serie e parallelo"
             - href: laboratori/partitori-cascata.qmd
               text: "Due partitori in cascata"
+            - href: laboratori/luce-tre-punti.qmd
+              text: "Punto luce da tre punti"
         - section: "Fondamenti condivisi"
           href: risorse/fondamenti/index.qmd
           contents:

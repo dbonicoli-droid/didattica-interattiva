@@ -846,3 +846,7 @@ main.content .classification-exercise table { display: table; width: 100%; table
 #ohm-reading { display:block; font-variant-numeric:tabular-nums; font-weight:600; margin-block:.5rem; }
 @media(max-width:600px) { #ohm-lab .resistor-controls { grid-template-columns:1fr; } }
 @media print { #ohm-lab { display:none; } }
+
+/* Simulazioni autonome del punto luce, incorporate nel laboratorio. */
+.light-lab-frame { display:block; width:100%; min-height:620px; border:1px solid var(--bordo-forte); border-radius:var(--raggio-s); margin-block:1rem; }
+@media print { .light-lab-frame { display:none; } }
