@@ -7,6 +7,8 @@ toc-depth: 2
 
 [← Indice del percorso](index.qmd)
 
+[Leggi e scarica gli appunti della lezione S&TA — 2C ETC](/lezioni/2026-2027/2026-10-12-2c-etc-seta.qmd).
+
 ## L’atomo: una prima immagine della materia
 
 La materia è formata da **atomi**. Un atomo contiene un piccolo **nucleo**, composto da protoni e neutroni, e **elettroni** distribuiti nella regione attorno al nucleo. I protoni hanno carica positiva, gli elettroni negativa; i neutroni non hanno carica elettrica.
