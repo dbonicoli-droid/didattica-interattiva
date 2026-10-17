@@ -3,15 +3,17 @@ title: "Relazioni ingresso–uscita nei circuiti resistivi"
 sidebar: risorse
 date: 2026-09-26
 date-format: "DD/MM/YYYY"
-classe: "3A ENC"
+classe: "3A ETC · 3A ENC"
 materia: "Sistemi automatici"
-description: "Appunti del 26 settembre 2026 per la 3A ENC: esercizi sulle relazioni ingresso–uscita, resistenza equivalente e partitori di tensione e corrente."
+description: "Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC). Appunti del 26 settembre 2026 per elettronici ed elettrotecnici: esercizi sulle relazioni ingresso–uscita, resistenza equivalente e partitori di tensione e corrente."
 toc: false
 ---
 
-**3A ENC · Sistemi automatici · A.S. 2026–2027**
+**3A ETC · 3A ENC · Sistemi automatici · A.S. 2026–2027**
 
-Appunti del 26 settembre 2026 per la 3A ENC: esercizi sulle relazioni ingresso–uscita, resistenza equivalente e partitori di tensione e corrente.
+Appunti del 26 settembre 2026 per elettronici ed elettrotecnici: esercizi sulle relazioni ingresso–uscita, resistenza equivalente e partitori di tensione e corrente.
+
+Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC).
 
 <div class="lesson-downloads">
 <a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ENC_26_09_2026.pdf?v=9ea164f315cc" download="3A_ENC_26_09_2026.pdf">Scarica il PDF originale · 6,7 MB</a>

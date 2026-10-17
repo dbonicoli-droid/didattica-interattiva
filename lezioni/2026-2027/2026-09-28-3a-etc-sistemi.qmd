@@ -3,15 +3,17 @@ title: "Semplificazioni booleane e relazioni ingresso–uscita"
 sidebar: risorse
 date: 2026-09-28
 date-format: "DD/MM/YYYY"
-classe: "3A ETC"
+classe: "3A ETC · 3A ENC"
 materia: "Sistemi automatici"
-description: "Appunti del 28 settembre 2026 per la 3A ETC: semplificazione di espressioni booleane, tabelle di verità ed esercizi sulle relazioni ingresso–uscita nei circuiti resistivi."
+description: "Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC). Appunti del 28 settembre 2026 per elettronici ed elettrotecnici: semplificazione di espressioni booleane, tabelle di verità ed esercizi sulle relazioni ingresso–uscita nei circuiti resistivi."
 toc: false
 ---
 
-**3A ETC · Sistemi automatici · A.S. 2026–2027**
+**3A ETC · 3A ENC · Sistemi automatici · A.S. 2026–2027**
 
-Appunti del 28 settembre 2026 per la 3A ETC: semplificazione di espressioni booleane, tabelle di verità ed esercizi sulle relazioni ingresso–uscita nei circuiti resistivi.
+Appunti del 28 settembre 2026 per elettronici ed elettrotecnici: semplificazione di espressioni booleane, tabelle di verità ed esercizi sulle relazioni ingresso–uscita nei circuiti resistivi.
+
+Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC).
 
 <div class="lesson-downloads">
 <a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/3A_ETC_28_09_2026.pdf?v=67d2075c0531" download="3A_ETC_28_09_2026.pdf">Scarica il PDF originale · 3,3 MB</a>

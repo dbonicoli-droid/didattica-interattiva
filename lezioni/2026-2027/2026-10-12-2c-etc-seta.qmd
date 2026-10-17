@@ -1,17 +1,17 @@
 ---
-title: "S&TA Elettrotecnica: concetti base — 2C"
+title: "S&TA Elettrotecnica: concetti base"
 sidebar: risorse
 date: 2026-10-12
 date-format: "DD/MM/YYYY"
-classe: "2C ETC"
+classe: "Classi di orientamento SETA"
 materia: "S&TA Elettrotecnica"
-description: "Appunti per la 2C ETC: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo."
+description: "Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo."
 toc: false
 ---
 
-**2C ETC · S&TA Elettrotecnica · A.S. 2026–2027**
+**Classi di orientamento SETA · S&TA Elettrotecnica · A.S. 2026–2027**
 
-Appunti per la 2C ETC: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo.
+Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo.
 
 <div class="lesson-downloads">
 <a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=85913133f966" download="SETA_2C_2026.pdf">Scarica il PDF originale · 5,2 MB</a>

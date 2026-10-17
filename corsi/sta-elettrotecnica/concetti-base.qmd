@@ -7,7 +7,7 @@ toc-depth: 2
 
 [← Indice del percorso](index.qmd)
 
-[Leggi e scarica gli appunti della lezione S&TA — 2C ETC](/lezioni/2026-2027/2026-10-12-2c-etc-seta.qmd).
+[Leggi e scarica gli appunti della lezione di orientamento S&TA](/lezioni/2026-2027/2026-10-12-2c-etc-seta.qmd).
 
 ## L’atomo: una prima immagine della materia
 

@@ -3,15 +3,17 @@ title: "Simulazione compito"
 sidebar: risorse
 date: 2026-10-12
 date-format: "DD/MM/YYYY"
-classe: "3A ETC"
+classe: "3A ETC · 3A ENC"
 materia: "Sistemi automatici"
-description: "Materiale per la preparazione alla verifica: esercizi sui circuiti resistivi, sulle relazioni ingresso–uscita e sulla logica booleana."
+description: "Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC). Materiale per la preparazione alla verifica: esercizi sui circuiti resistivi, sulle relazioni ingresso–uscita e sulla logica booleana."
 toc: false
 ---
 
-**3A ETC · Sistemi automatici · A.S. 2026–2027**
+**3A ETC · 3A ENC · Sistemi automatici · A.S. 2026–2027**
 
 Materiale per la preparazione alla verifica: esercizi sui circuiti resistivi, sulle relazioni ingresso–uscita e sulla logica booleana.
+
+Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC).
 
 <div class="lesson-downloads">
 <a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/SimulazioneCompito.pdf?v=8afbb57c20ef" download="SimulazioneCompito.pdf">Scarica il PDF originale · 4,4 MB</a>
