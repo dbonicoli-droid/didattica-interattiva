@@ -14,17 +14,17 @@ toc: false
 Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo.
 
 <div class="lesson-downloads">
-<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=85913133f966" download="SETA_2C_2026.pdf">Scarica il PDF originale · 5,2 MB</a>
-<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=85913133f966" target="_blank" rel="noopener">Apri il PDF separatamente</a>
+<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=04543d98ca1a" download="SETA_2C_2026.pdf">Scarica il PDF originale · 7,9 MB</a>
+<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=04543d98ca1a" target="_blank" rel="noopener">Apri il PDF separatamente</a>
 </div>
 
-Pubblicato il 12 ottobre 2026.
+Pubblicato il 12 ottobre 2026. Aggiornato il 23 ottobre 2026.
 
 ## Leggi gli appunti
 
 Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso; usa lo zoom per ingrandire la scrittura. Dopo un ingrandimento puoi scorrere anche lateralmente. Su telefono lo schermo intero offre più spazio.
 
-<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=85913133f966" aria-label="Lettore degli appunti">
+<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=04543d98ca1a" aria-label="Lettore degli appunti">
 <div class="lesson-toolbar" role="group" aria-label="Controlli del documento">
 <button type="button" data-action="out" disabled aria-label="Riduci zoom">−</button>
 <output class="lesson-zoom" aria-live="polite">Caricamento…</output>
