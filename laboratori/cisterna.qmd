@@ -1,0 +1,112 @@
+---
+title: "Cisterna elettrica: carica e prelievo"
+sidebar: risorse
+page-layout: full
+toc: true
+stato: bozza
+description: "Un condensatore come cisterna: carica e scarica a 4 V, con due interruttori manuali indipendenti."
+---
+
+[← Indice del laboratorio](index.qmd)
+
+## Dalla cisterna al condensatore
+
+Un condensatore permette di rappresentare l’accumulo e il prelievo di acqua: la **tensione ai suoi capi rappresenta il livello**. In questa prima fase studiamo il circuito da comandare; gli interruttori sono azionati direttamente dall’utente.
+
+| Cisterna | Circuito elettrico |
+|---|---|
+| Quantità d’acqua accumulata | Carica elettrica accumulata |
+| Livello | Tensione $v_C$ |
+| Portata in ingresso e in uscita | Correnti $i_R$ e $i_P$ |
+| Valvola di riempimento aperta | Interruttore $S_R$ chiuso |
+| Valvola di prelievo aperta | Interruttore $S_P$ chiuso |
+
+**Una valvola aperta corrisponde a un interruttore elettrico chiuso:** entrambi permettono il flusso. La tensione è analoga al livello per una cisterna con sezione costante; il condensatore è assunto lineare.
+
+## Circuito e materiali
+
+![Generatore da 4 V, ramo di carica con interruttore S_R e resistore R_R, condensatore C e ramo di scarica con resistore R_P e interruttore S_P. Polarità di v_C positiva sul terminale superiore; i_R entra nel nodo, i_P ne esce.](/assets/cisterna/circuito.svg)
+
+- Alimentazione continua: **4 V**, con riferimento 0 V comune.
+- Condensatore: **4700 µF**, elettrolitico con tensione nominale almeno **10 V**, terminale positivo sul nodo $v_C$ e negativo allo 0 V.
+- Due resistori: **2,2 kΩ**, almeno 0,25 W.
+- Due interruttori indipendenti, breadboard, collegamenti e multimetro; oscilloscopio se disponibile.
+
+Ogni ramo comprende un resistore: il condensatore non viene collegato direttamente al generatore né cortocircuitato durante la scarica. Con i valori iniziali la costante di tempo di ciascun ramo, quando è attivo da solo, è circa **10,3 s**. Prima di modificare il montaggio disinserisci l’alimentazione e scarica il condensatore attraverso un resistore.
+
+## Simulazione: due interruttori manuali
+
+Aziona **Riempimento** e **Prelievo** e osserva tensione, correnti, livello e grafico. Gli interruttori sono indipendenti e possono essere entrambi aperti o entrambi chiusi. Puoi modificare le due resistenze e la capacità, mettere in pausa, avanzare di un secondo e usare lo schermo intero.
+
+::: {.content-visible when-format="html"}
+{{< include _cisterna-app.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/cisterna/index.html){target="_blank"} · [Scarica l’app HTML per usarla offline](/downloads/laboratori/cisterna/index.html){download="cisterna.html"}
+
+Il modello usa interruttori, condensatore e generatore ideali. Non include perdite, tolleranze, resistenza degli interruttori reali, comparatori o circuito logico. Se entrambi gli interruttori sono aperti, il livello resta costante nel modello; nella realizzazione fisica può diminuire lentamente per le perdite e per l’assorbimento degli strumenti.
+
+### Soglie fisse di riferimento
+
+L’alimentazione rimane a **4 V**. Le soglie sono fissate a:
+
+- **Vuoto / livello basso:** $V_L=V_{alim}/10=0{,}4\,\mathrm V$.
+- **Pieno / livello alto:** $V_H=9V_{alim}/10=3{,}6\,\mathrm V$.
+
+Nel modello il livello basso comprende $v_C\leq V_L$, quello alto $v_C\geq V_H$. Queste sono soglie operative, non significano condensatore completamente scarico o completamente carico. Le linee tratteggiate sono **solo riferimenti visivi**: non azionano gli interruttori e non limitano la tensione a 0,4–3,6 V. Non è introdotta isteresi.
+
+## Attività guidata
+
+1. Parti da 0 V, chiudi solo il riempimento e osserva la carica. La tensione supera la soglia di pieno se lasci chiuso l’interruttore?
+2. Apri entrambi gli interruttori e osserva il mantenimento del livello nel modello ideale.
+3. Chiudi solo il prelievo e osserva la scarica. Ripeti partendo da 4 V.
+4. Chiudi entrambi gli interruttori: con resistori uguali, quale tensione raggiunge il condensatore? Prova a partire sia sotto sia sopra quel valore.
+5. Cambia una delle due resistenze, poi la capacità. Distingui il cambiamento del livello finale da quello della velocità di evoluzione.
+
+### Leggere le correnti
+
+La corrente $i_R$ arriva dal ramo di carica; $i_P$ esce attraverso il ramo di prelievo. La corrente che entra nel terminale positivo del condensatore è $i_C=i_R-i_P$: se positiva il livello sale, se negativa scende. Se le due correnti si compensano il livello rimane costante, anche se continua a passare corrente nei due rami.
+
+::: {.callout-note collapse=true title="Modello matematico · Approfondimento avanzato"}
+
+Posti $s_R,s_P\in\{0,1\}$, con 1 = interruttore chiuso:
+
+$$i_R=s_R\frac{4-v_C}{R_R},\qquad i_P=s_P\frac{v_C}{R_P},\qquad C\frac{dv_C}{dt}=i_R-i_P.$$
+
+Se almeno un ramo è attivo, definiamo $G_R=s_R/R_R$ e $G_P=s_P/R_P$:
+
+$$V_{eq}=\frac{4G_R}{G_R+G_P},\quad \tau=\frac{C}{G_R+G_P},\quad v_C(t+\Delta t)=V_{eq}+[v_C(t)-V_{eq}]e^{-\Delta t/\tau}.$$
+
+Con entrambi i rami attivi e resistenze uguali il livello tende a 2 V; con entrambi aperti la tensione rimane costante. La simulazione usa questa evoluzione esatta per ogni intervallo con comandi e parametri costanti. Le derivate sono un approfondimento: l’attività introduttiva si svolge leggendo schema, misure e grafico.
+
+:::
+
+## Il comando della cisterna: fase successiva
+
+Gli studenti studieranno una rete **combinatoria, senza memoria**, che riceve due leve manuali e due sensori di livello e comanda due valvole:
+
+- Il pieno disabilita il riempimento.
+- Il vuoto disabilita il prelievo e forza il riempimento.
+- Quando il segnale di vuoto scompare, termina la forzatura: il riempimento torna a dipendere dalla leva. Non si richiede di proseguire automaticamente fino al pieno.
+
+Il lavoro comprende definizione di ingressi e uscite, tabella di verità ed espressioni logiche; va dichiarato anche il comportamento in caso di segnali di pieno e vuoto contemporaneamente attivi (non possibili nel modello ideale con soglie ordinate).
+
+**La logica di comando è senza memoria; il condensatore è un sistema con memoria.** A parità di posizione degli interruttori, l’evoluzione dipende dalla tensione già presente. Anche l’isteresi implica dipendenza dallo stato precedente nella zona fra le soglie: qui non viene usata.
+
+Nella fase successiva gli interruttori manuali del circuito saranno sostituiti da interruttori elettronici comandati dalla rete logica. Il 74HC4066 è una possibile soluzione; in questa fase **non è incluso nella simulazione e non serve nel montaggio manuale**.
+
+::: {.callout-note collapse=true title="Sensori futuri: comparatori e limiti dell’LM393"}
+
+Due comparatori potranno ricavare i segnali di livello dalla tensione del condensatore. Le soglie saranno fisse, tramite partitori resistivi, senza trimmer.
+
+Il classico LM393 non è un comparatore con ingresso utilizzabile fino al positivo di alimentazione. Il limite superiore specificato è circa $V_{CC}-1{,}5\,\mathrm V$ a 25 °C e $V_{CC}-2\,\mathrm V$ sull’intervallo di temperatura indicato: **4,5 V non è quindi un ingresso utilizzabile con alimentazione a 5 V**, e neppure 3,6 V con alimentazione a 4 V. Il superamento del campo di confronto non va confuso con il limite di danneggiamento.
+
+Per il futuro circuito a 4 V si può, ad esempio, confrontare $v_C/3$ con riferimenti fissi $V_{alim}/30$ e $3V_{alim}/10$: il condensatore resta associato a soglie di 0,4 V e 3,6 V, ma gli ingressi del comparatore lavorano a tensioni inferiori. Il dimensionamento dovrà considerare carico dei partitori, tolleranze e offset. Le uscite open collector richiedono pull-up. Questi collegamenti non sono presenti nel circuito attuale.
+
+Vicino a una soglia un comparatore reale senza isteresi può commutare ripetutamente per il rumore: è un limite della realizzazione fisica da osservare, senza introdurre in questa attività un comportamento con memoria.
+
+[Datasheet Texas Instruments LM393, caratteristiche elettriche e applicazioni](https://www.ti.com/lit/ds/symlink/lm393.pdf) · [Datasheet Texas Instruments 74HC4066](https://www.ti.com/lit/ds/symlink/sn74hc4066.pdf)
+
+:::
+
+[Ripassa il condensatore](/risorse/componenti/condensatore.qmd) · [Confronta due circuiti RC](rc.qmd)

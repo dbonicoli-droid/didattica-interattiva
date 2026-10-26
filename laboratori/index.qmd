@@ -43,6 +43,12 @@ Confronta due deviatori con un invertitore e tre pulsanti con un relè passo-pas
 
 [Apri l’esercitazione sul punto luce →](luce-tre-punti.qmd){.btn .btn-primary}
 
+### [Cisterna elettrica: carica e prelievo](cisterna.qmd)
+
+Usa un condensatore come cisterna: aziona due interruttori manuali per carica e prelievo, osserva livello, correnti e grafico a 4 V. Le soglie fisse di 0,4 V e 3,6 V sono riferimenti visivi; il comando automatico sarà affrontato in seguito.
+
+[Apri il laboratorio della cisterna →](cisterna.qmd){.btn .btn-primary}
+
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
 
 ## Componenti: risorse comuni ai percorsi
