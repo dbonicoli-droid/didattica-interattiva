@@ -45,7 +45,7 @@ Confronta due deviatori con un invertitore e tre pulsanti con un relè passo-pas
 
 ### [Cisterna elettrica: carica e prelievo](cisterna.qmd)
 
-Usa un condensatore come cisterna: aziona due interruttori manuali per carica e prelievo, osserva livello, correnti e grafico a 4 V. Le soglie fisse di 0,4 V e 3,6 V sono riferimenti visivi; il comando automatico sarà affrontato in seguito.
+Usa un condensatore come cisterna: aziona due interruttori manuali per carica e prelievo, osserva livello, correnti e grafico con alimentazione regolabile, inizialmente a 5 V. Le soglie del 10% e del 90% dell’alimentazione sono riferimenti visivi; il comando automatico sarà affrontato in seguito.
 
 [Apri il laboratorio della cisterna →](cisterna.qmd){.btn .btn-primary}
 

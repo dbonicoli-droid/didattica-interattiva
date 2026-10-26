@@ -4,7 +4,7 @@ sidebar: risorse
 page-layout: full
 toc: true
 stato: bozza
-description: "Un condensatore come cisterna: carica e scarica a 4 V, con due interruttori manuali indipendenti."
+description: "Un condensatore come cisterna: carica e scarica con alimentazione regolabile, inizialmente a 5 V, con due interruttori manuali indipendenti."
 ---
 
 [← Indice del laboratorio](index.qmd)
@@ -25,18 +25,18 @@ Un condensatore permette di rappresentare l’accumulo e il prelievo di acqua: l
 
 ## Circuito e materiali
 
-![Generatore da 4 V, ramo di carica con interruttore S_R e resistore R_R, condensatore C e ramo di scarica con resistore R_P e interruttore S_P. Polarità di v_C positiva sul terminale superiore; i_R entra nel nodo, i_P ne esce.](/assets/cisterna/circuito.svg)
+![Generatore da 5 V, ramo di carica con interruttore S_R e resistore R_R, condensatore C e ramo di scarica con resistore R_P e interruttore S_P. Polarità di v_C positiva sul terminale superiore; i_R entra nel nodo, i_P ne esce.](/assets/cisterna/circuito.svg)
 
-- Alimentazione continua: **4 V**, con riferimento 0 V comune.
-- Condensatore: **4700 µF**, elettrolitico con tensione nominale almeno **10 V**, terminale positivo sul nodo $v_C$ e negativo allo 0 V.
-- Due resistori: **2,2 kΩ**, almeno 0,25 W.
+- Alimentazione continua: **5 V** iniziali, con riferimento 0 V comune.
+- Condensatore: **47 µF**, elettrolitico con tensione nominale almeno **16 V**, terminale positivo sul nodo $v_C$ e negativo allo 0 V.
+- Due resistori: **110 kΩ**, almeno 0,25 W.
 - Due interruttori indipendenti, breadboard, collegamenti e multimetro; oscilloscopio se disponibile.
 
-Ogni ramo comprende un resistore: il condensatore non viene collegato direttamente al generatore né cortocircuitato durante la scarica. Con i valori iniziali la costante di tempo di ciascun ramo, quando è attivo da solo, è circa **10,3 s**. Prima di modificare il montaggio disinserisci l’alimentazione e scarica il condensatore attraverso un resistore.
+Ogni ramo comprende un resistore: il condensatore non viene collegato direttamente al generatore né cortocircuitato durante la scarica. Con i valori iniziali la costante di tempo di ciascun ramo, quando è attivo da solo, è circa **5,17 s**. Prima di modificare il montaggio disinserisci l’alimentazione e scarica il condensatore attraverso un resistore.
 
 ## Simulazione: due interruttori manuali
 
-Aziona **Riempimento** e **Prelievo** e osserva tensione, correnti, livello e grafico. Gli interruttori sono indipendenti e possono essere entrambi aperti o entrambi chiusi. Puoi modificare le due resistenze e la capacità, mettere in pausa, avanzare di un secondo e usare lo schermo intero.
+Aziona **Riempimento** e **Prelievo** e osserva tensione, correnti, livello e grafico. Gli interruttori sono indipendenti e possono essere entrambi aperti o entrambi chiusi. Puoi modificare le due resistenze, la capacità e l’alimentazione e l’alimentazione (1–10 V), usare **Stop** per fermare il tempo conservando lo stato, riprendere, avanzare di un secondo e usare lo schermo intero.
 
 ::: {.content-visible when-format="html"}
 {{< include _cisterna-app.html >}}
@@ -44,22 +44,24 @@ Aziona **Riempimento** e **Prelievo** e osserva tensione, correnti, livello e gr
 
 [Apri l’app separatamente](/downloads/laboratori/cisterna/index.html){target="_blank"} · [Scarica l’app HTML per usarla offline](/downloads/laboratori/cisterna/index.html){download="cisterna.html"}
 
+Cambiare la tensione di alimentazione non cambia istantaneamente la tensione del condensatore: se questa supera quella del generatore, nel ramo di carica chiuso la corrente può scorrere verso il generatore ideale. Il grafico si adatta per mostrare anche questa tensione residua.
+
 Il modello usa interruttori, condensatore e generatore ideali. Non include perdite, tolleranze, resistenza degli interruttori reali, comparatori o circuito logico. Se entrambi gli interruttori sono aperti, il livello resta costante nel modello; nella realizzazione fisica può diminuire lentamente per le perdite e per l’assorbimento degli strumenti.
 
-### Soglie fisse di riferimento
+### Soglie proporzionali all’alimentazione
 
-L’alimentazione rimane a **4 V**. Le soglie sono fissate a:
+L’alimentazione è inizialmente **5 V** ed è regolabile. Le soglie mantengono rapporti fissi del **10% e del 90%** rispetto alla tensione scelta; con 5 V:
 
-- **Vuoto / livello basso:** $V_L=V_{alim}/10=0{,}4\,\mathrm V$.
-- **Pieno / livello alto:** $V_H=9V_{alim}/10=3{,}6\,\mathrm V$.
+- **Vuoto / livello basso:** $V_L=V_{alim}/10=0{,}5\,\mathrm V$.
+- **Pieno / livello alto:** $V_H=9V_{alim}/10=4{,}5\,\mathrm V$.
 
-Nel modello il livello basso comprende $v_C\leq V_L$, quello alto $v_C\geq V_H$. Queste sono soglie operative, non significano condensatore completamente scarico o completamente carico. Le linee tratteggiate sono **solo riferimenti visivi**: non azionano gli interruttori e non limitano la tensione a 0,4–3,6 V. Non è introdotta isteresi.
+Nel modello il livello basso comprende $v_C\leq V_L$, quello alto $v_C\geq V_H$. Queste sono soglie operative, non significano condensatore completamente scarico o completamente carico. Le linee tratteggiate sono **solo riferimenti visivi**: non azionano gli interruttori e non limitano la tensione fra le due soglie. Non è introdotta isteresi.
 
 ## Attività guidata
 
 1. Parti da 0 V, chiudi solo il riempimento e osserva la carica. La tensione supera la soglia di pieno se lasci chiuso l’interruttore?
 2. Apri entrambi gli interruttori e osserva il mantenimento del livello nel modello ideale.
-3. Chiudi solo il prelievo e osserva la scarica. Ripeti partendo da 4 V.
+3. Chiudi solo il prelievo e osserva la scarica. Ripeti partendo da 5 V.
 4. Chiudi entrambi gli interruttori: con resistori uguali, quale tensione raggiunge il condensatore? Prova a partire sia sotto sia sopra quel valore.
 5. Cambia una delle due resistenze, poi la capacità. Distingui il cambiamento del livello finale da quello della velocità di evoluzione.
 
@@ -71,13 +73,13 @@ La corrente $i_R$ arriva dal ramo di carica; $i_P$ esce attraverso il ramo di pr
 
 Posti $s_R,s_P\in\{0,1\}$, con 1 = interruttore chiuso:
 
-$$i_R=s_R\frac{4-v_C}{R_R},\qquad i_P=s_P\frac{v_C}{R_P},\qquad C\frac{dv_C}{dt}=i_R-i_P.$$
+$$i_R=s_R\frac{V_{alim}-v_C}{R_R},\qquad i_P=s_P\frac{v_C}{R_P},\qquad C\frac{dv_C}{dt}=i_R-i_P.$$
 
 Se almeno un ramo è attivo, definiamo $G_R=s_R/R_R$ e $G_P=s_P/R_P$:
 
-$$V_{eq}=\frac{4G_R}{G_R+G_P},\quad \tau=\frac{C}{G_R+G_P},\quad v_C(t+\Delta t)=V_{eq}+[v_C(t)-V_{eq}]e^{-\Delta t/\tau}.$$
+$$V_{eq}=\frac{V_{alim}G_R}{G_R+G_P},\quad \tau=\frac{C}{G_R+G_P},\quad v_C(t+\Delta t)=V_{eq}+[v_C(t)-V_{eq}]e^{-\Delta t/\tau}.$$
 
-Con entrambi i rami attivi e resistenze uguali il livello tende a 2 V; con entrambi aperti la tensione rimane costante. La simulazione usa questa evoluzione esatta per ogni intervallo con comandi e parametri costanti. Le derivate sono un approfondimento: l’attività introduttiva si svolge leggendo schema, misure e grafico.
+Con entrambi i rami attivi e resistenze uguali il livello tende a metà della tensione di alimentazione (2,5 V con 5 V); con entrambi aperti la tensione rimane costante. La simulazione usa questa evoluzione esatta per ogni intervallo con comandi e parametri costanti. Le derivate sono un approfondimento: l’attività introduttiva si svolge leggendo schema, misure e grafico.
 
 :::
 
@@ -97,11 +99,11 @@ Nella fase successiva gli interruttori manuali del circuito saranno sostituiti d
 
 ::: {.callout-note collapse=true title="Sensori futuri: comparatori e limiti dell’LM393"}
 
-Due comparatori potranno ricavare i segnali di livello dalla tensione del condensatore. Le soglie saranno fisse, tramite partitori resistivi, senza trimmer.
+Due comparatori potranno ricavare i segnali di livello dalla tensione del condensatore. I rapporti delle soglie saranno fissi, tramite partitori resistivi, senza trimmer. Il dimensionamento hardware andrà verificato sull’intervallo di alimentazione scelto; il cursore della simulazione descrive il solo circuito RC ideale.
 
-Il classico LM393 non è un comparatore con ingresso utilizzabile fino al positivo di alimentazione. Il limite superiore specificato è circa $V_{CC}-1{,}5\,\mathrm V$ a 25 °C e $V_{CC}-2\,\mathrm V$ sull’intervallo di temperatura indicato: **4,5 V non è quindi un ingresso utilizzabile con alimentazione a 5 V**, e neppure 3,6 V con alimentazione a 4 V. Il superamento del campo di confronto non va confuso con il limite di danneggiamento.
+Il classico LM393 non è un comparatore con ingresso utilizzabile fino al positivo di alimentazione. Il limite superiore specificato è circa $V_{CC}-1{,}5\,\mathrm V$ a 25 °C e $V_{CC}-2\,\mathrm V$ sull’intervallo di temperatura indicato: **4,5 V non è quindi un ingresso utilizzabile con alimentazione a 5 V**, e neppure una soglia pari al 90% dell’alimentazione confrontata direttamente. Il superamento del campo di confronto non va confuso con il limite di danneggiamento.
 
-Per il futuro circuito a 4 V si può, ad esempio, confrontare $v_C/3$ con riferimenti fissi $V_{alim}/30$ e $3V_{alim}/10$: il condensatore resta associato a soglie di 0,4 V e 3,6 V, ma gli ingressi del comparatore lavorano a tensioni inferiori. Il dimensionamento dovrà considerare carico dei partitori, tolleranze e offset. Le uscite open collector richiedono pull-up. Questi collegamenti non sono presenti nel circuito attuale.
+Per il futuro circuito con alimentazione predefinita a 5 V si può, ad esempio, confrontare $v_C/3$ con riferimenti fissi $V_{alim}/30$ e $3V_{alim}/10$: il condensatore resta associato a soglie del 10% e del 90% dell’alimentazione (0,5 V e 4,5 V a 5 V), ma gli ingressi del comparatore lavorano a tensioni inferiori. Il dimensionamento dovrà considerare carico dei partitori, tolleranze e offset. Le uscite open collector richiedono pull-up. Questi collegamenti non sono presenti nel circuito attuale.
 
 Vicino a una soglia un comparatore reale senza isteresi può commutare ripetutamente per il rumore: è un limite della realizzazione fisica da osservare, senza introdurre in questa attività un comportamento con memoria.
 
