@@ -1,0 +1,21 @@
+![Tangente: grafico con i parametri iniziali.](/assets/funzioni/tan.svg)
+
+### Dominio e trasformazioni
+
+D = ℝ esclusi x = (π/2 + nπ − φ)/α, n ∈ ℤ. Le interruzioni del grafico sono asintoti verticali.
+
+### Periodo e derivata
+
+Periodo T = π/α ≈ 3,1416. Angoli in radianti.<br>f′(x) = Aα / cos²(αx + φ).
+
+### Che cosa osservare
+
+A modifica la scala verticale; α modifica il periodo; φ trasla orizzontalmente di −φ/α; d trasla verticalmente. La tangente è crescente su ogni intervallo del dominio; non si collegano i rami attraverso i poli.
+
+### Intercette, segno e concavità
+
+f(0) = A tan(φ) + d, se cos(φ) ≠ 0. Zeri: x = [arctan(−d/A) + nπ − φ]/α. Il segno è positivo dove tan(αx + φ) &gt; −d/A e negativo dove è minore. Su ogni ramo tan è crescente.<br>f″ = 2Aα² tan(αx + φ)/cos²(αx + φ): il segno è quello della tangente. Flessi in x = (nπ − φ)/α, con ordinata d. Nessun estremo.
+
+### Limiti
+
+Per ogni polo xₙ: limite da sinistra +∞, da destra −∞. I limiti a ±∞ non esistono; nessun asintoto orizzontale o obliquo. Immagine ℝ.

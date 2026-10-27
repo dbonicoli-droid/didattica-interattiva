@@ -1,0 +1,21 @@
+![Studio 2 · Razionale fratta: grafico con i parametri iniziali.](/assets/funzioni/rational.svg)
+
+### Dominio, simmetria e intercette
+
+D = ℝ ∖ {1}. Il numeratore x² + p è sempre positivo. Nessuno zero. f(0) = −p/h = -1.<br>f(x) = x + h + (h² + p)/(x − h): simmetria centrale rispetto a (h; 2h).
+
+### Segno
+
+<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; 1)</td><td>segno −</td></tr><tr><td>(1; +∞)</td><td>segno +</td></tr></tbody></table>
+
+### Limiti e asintoti
+
+x→h⁻: −∞; x→h⁺: +∞. Asintoto verticale x = 1.<br>x→−∞: −∞; x→+∞: +∞. Divisione: f(x) − (x + h) = (h² + p)/(x − h) → 0. Asintoto obliquo y = x + 1. Nessun asintoto orizzontale.
+
+### Derivata prima, monotonia ed estremi
+
+f′ = 1 − (h² + p)/(x − h)².<br>Zeri: x = h ± √(h² + p).<br><table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -0,4142)</td><td>crescente</td></tr><tr><td>(-0,4142; 1)</td><td>decrescente</td></tr><tr><td>(1; 2,4142)</td><td>decrescente</td></tr><tr><td>(2,4142; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (-0,4142; -0,8284)</li><li>minimo locale ≈ (2,4142; 4,8284)</li></ul>Nessun estremo assoluto sull’intero dominio.
+
+### Derivata seconda e concavità
+
+f″ = 2(h² + p)/(x − h)³. Concava verso il basso per x &lt; h, verso l’alto per x &gt; h. Nessun flesso: x = h non appartiene al dominio.

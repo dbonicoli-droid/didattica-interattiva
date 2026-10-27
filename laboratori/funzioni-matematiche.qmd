@@ -1,0 +1,204 @@
+---
+title: "Funzioni matematiche"
+sidebar: risorse
+page-layout: full
+stato: bozza
+toc: true
+description: "Funzioni elementari e cinque studi completi per la quinta ITIS, con parametri e grafici interattivi."
+---
+
+[← Indice del laboratorio](index.qmd)
+
+## Esercitazione per la quinta
+
+Prima prevedi il comportamento, poi verifica sul grafico e apri lo **studio svolto**. Le sei funzioni elementari permettono di esplorare argomento e parametri; i cinque esercizi successivi affrontano dominio, intercette, simmetrie, segno, limiti, asintoti, derivate, monotonia, estremi e concavità.
+
+Usiamo la variabile $x$: se l’argomento rappresenta un tempo, puoi leggerla come $t$. Gli angoli sono espressi in **radianti**. In tutte le app puoi cambiare i parametri con cursori e valori numerici, mostrare $f'$ e $f''$, regolare la finestra, usare lo schermo intero e salvare il grafico in PNG.
+
+### Metodo di lavoro
+
+1. Scrivi il dominio e cerca intercette e simmetrie.
+2. Studia il segno distinguendo numeratore, denominatore e punti esclusi.
+3. Calcola i limiti ai bordi del dominio e all’infinito; individua gli asintoti.
+4. Calcola la derivata prima: studiane il segno e classifica gli estremi.
+5. Calcola la derivata seconda: studia concavità e possibili flessi, controllando che il punto appartenga al dominio.
+6. Disegna il grafico e confrontalo con l’app. Un dettaglio non visibile nella finestra non è necessariamente assente.
+
+I parametri hanno intervalli dichiarati nei controlli. Per il polinomio di secondo grado a ≠ 0 e le radici sono reali; per le funzioni trigonometriche A e α sono positivi; per i logaritmi α è positivo e la base è positiva e diversa da 1. Per l’esponenziale a = 1 oppure α = 0 danno una funzione costante. Gli studi coprono tutti i valori consentiti dai controlli. I valori preceduti da ≈ e le radici trascendenti sono approssimazioni numeriche; le classificazioni dei casi sono ricavate dalle formule.
+
+## Funzioni elementari
+
+### Seno
+
+$A\sin(\alpha x+\varphi)+d$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-sin.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/sin.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/sin.html){download="funzione-sin.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-sin-stampa.qmd >}}
+:::
+
+### Coseno
+
+$A\cos(\alpha x+\varphi)+d$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-cos.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/cos.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/cos.html){download="funzione-cos.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-cos-stampa.qmd >}}
+:::
+
+### Tangente
+
+$A\tan(\alpha x+\varphi)+d$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-tan.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/tan.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/tan.html){download="funzione-tan.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-tan-stampa.qmd >}}
+:::
+
+### Esponenziale
+
+$a^{\alpha x}$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-exp.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/exp.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/exp.html){download="funzione-exp.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-exp-stampa.qmd >}}
+:::
+
+### Logaritmo
+
+$\log_b(\alpha x)$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-log.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/log.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/log.html){download="funzione-log.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-log-stampa.qmd >}}
+:::
+
+
+### Polinomio di secondo grado: radici e coefficienti
+
+$f(x)=a(x-r_1)(x-r_2)=ax^2+bx+c$, con $b=-a(r_1+r_2)$ e $c=ar_1r_2$.
+
+Regola le due radici, anche coincidenti, e il coefficiente a: l’app mostra subito la forma sviluppata e i coefficienti a, b, c. Puoi esplorare sia la concavità verso l’alto sia quella verso il basso; a = 0 viene segnalato perché non darebbe un polinomio di secondo grado.
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-quadratic.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/quadratic.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/quadratic.html){download="funzione-quadratic.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-quadratic-stampa.qmd >}}
+:::
+
+## Cinque studi di funzione
+
+I valori iniziali sono: $x^3/3-x$, $(x^2+1)/(x-1)$, $e^x/[(x-1)(x+3)]$, $x\ln x/(x-2)$. Si aggiunge un quinto esempio: $(x^2-4)/x$, in cui la divisione rende immediato l’asintoto obliquo. I primi due sono esempi tipici di studio polinomiale e razionale; negli ultimi due i denominatori restano quelli richiesti.
+
+### Studio 1: un polinomio cubico
+
+$A(x^3/3-px)+q$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-cubic.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/cubic.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/cubic.html){download="funzione-cubic.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-cubic-stampa.qmd >}}
+:::
+
+### Studio 2: una razionale fratta
+
+$\dfrac{x^2+p}{x-h}$
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-rational.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/rational.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/rational.html){download="funzione-rational.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-rational-stampa.qmd >}}
+:::
+
+### Studio 3: esponenziale e denominatore quadratico
+
+$\dfrac{a^{\alpha x}}{(x-1)(x+3)}$
+
+Le radici del denominatore restano **1 e −3**; variano base ed esponente. Il caso α = 0 permette di isolare il ruolo del denominatore.
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-expfrac.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/expfrac.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/expfrac.html){download="funzione-expfrac.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-expfrac-stampa.qmd >}}
+:::
+
+### Studio 4: prodotto con logaritmo e denominatore lineare
+
+$\dfrac{x\log_b(\alpha x)}{x-2}$
+
+Prova anche **b &lt; 1** e **α = 0,5**. Il secondo caso cambia la natura della discontinuità in x = 2, che resta comunque fuori dal dominio originario.
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-logfrac.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/logfrac.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/logfrac.html){download="funzione-logfrac.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-logfrac-stampa.qmd >}}
+:::
+
+### Studio 5: un asintoto obliquo immediato
+
+$$f(x)=\frac{A x^2+d x-Ar^2}{x}=Ax+d-\frac{Ar^2}{x},\qquad A>0,\ r>0.$$
+
+Con A = 1, r = 2 e d = 0 si ottiene $(x^2-4)/x=x-4/x$: il termine residuo tende a zero e l’asintoto è **y = x**. Variando i parametri, l’asintoto diventa **y = Ax + d**. Lo studio svolto mostra anche il calcolo dei coefficienti dell’asintoto attraverso i limiti.
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-rational2.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/rational2.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/rational2.html){download="funzione-rational2.html"}
+
+::: {.content-hidden when-format="html"}
+{{< include _funzioni-rational2-stampa.qmd >}}
+:::
+
+::: {.content-visible when-format="html"}
+<script src="../assets/funzioni/embed.js"></script>
+:::
+
+## Consegna breve
+
+Scegli uno dei cinque studi e svolgilo su carta prima di aprire la soluzione. Poi modifica un parametro e indica quali conclusioni restano valide e quali cambiano. Distingui sempre un asintoto verticale da una discontinuità eliminabile e un cambio di concavità da un flesso appartenente al dominio.

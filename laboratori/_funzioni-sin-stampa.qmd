@@ -1,0 +1,21 @@
+![Seno: grafico con i parametri iniziali.](/assets/funzioni/sin.svg)
+
+### Dominio e trasformazioni
+
+D = ℝ. Immagine: [d − A; d + A] = [-1; 1].
+
+### Periodo e derivata
+
+Periodo T = 2π/α ≈ 6,2832. Angoli in radianti.<br>f′(x) = Aα cos(αx + φ).
+
+### Che cosa osservare
+
+A modifica la scala verticale; α modifica il periodo; φ trasla orizzontalmente di −φ/α; d trasla verticalmente. Il grafico oscilla fra i valori estremi indicati.
+
+### Intercette e segno
+
+f(0) = 0. Gli zeri soddisfano αx + φ = arcsen(−d/A) + 2nπ oppure π − arcsen(−d/A) + 2nπ (n ∈ ℤ). Il segno è positivo se sen(αx + φ) &gt; −d/A e negativo se è minore. Per |d/A| = 1 gli zeri corrispondono a estremi, senza cambio di segno.
+
+### Estremi, concavità e limiti
+
+Massimo assoluto d + A = 1 per αx + φ = π/2 + 2nπ; minimo assoluto d − A = -1 per αx + φ = 3π/2 + 2nπ.<br>f″ = −Aα² sen(αx + φ): concavità verso il basso quando sen è positivo, verso l’alto quando è negativo. Flessi con ordinata d per αx + φ = nπ. I limiti a ±∞ non esistono: la funzione continua a oscillare. Nessun asintoto.

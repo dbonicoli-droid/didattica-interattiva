@@ -251,6 +251,8 @@ website:
               text: Sinusoidi
             - href: laboratori/resistori.qmd
               text: "Resistori: serie e parallelo"
+            - href: laboratori/funzioni-matematiche.qmd
+              text: "Funzioni matematiche"
             - href: laboratori/cisterna.qmd
               text: "Cisterna elettrica"
             - href: laboratori/partitori-cascata.qmd

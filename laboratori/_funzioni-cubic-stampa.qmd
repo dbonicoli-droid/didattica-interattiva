@@ -1,0 +1,21 @@
+![Studio 1 · Polinomio cubico: grafico con i parametri iniziali.](/assets/funzioni/cubic.svg)
+
+### Dominio, simmetria e intercette
+
+D = ℝ. f(0) = q = 0. Funzione dispari.<br>Zeri reali (approssimati): -1,7321; -4,547E-13; 1,7321. Le radici sono cercate sui tre intervalli di monotonia; nei casi tangenti sono inclusi anche gli estremi con quota zero.
+
+### Segno
+
+<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -1,7321)</td><td>f(x) &lt; 0</td></tr><tr><td>(-1,7321; -4,547E-13)</td><td>f(x) &gt; 0</td></tr><tr><td>(-4,547E-13; 1,7321)</td><td>f(x) &lt; 0</td></tr><tr><td>(1,7321; +∞)</td><td>f(x) &gt; 0</td></tr></tbody></table>
+
+### Derivata prima, monotonia ed estremi
+
+f′(x) = A(x² − p).<br>f′ = 0 per x = ±√p = ±1.<br><table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -1)</td><td>crescente</td></tr><tr><td>(-1; 1)</td><td>decrescente</td></tr><tr><td>(1; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (-1; 0,6667)</li><li>minimo locale ≈ (1; -0,6667)</li></ul>Non esistono estremi assoluti: la funzione è illimitata sopra e sotto.
+
+### Derivata seconda, concavità e flesso
+
+f″(x) = 2Ax. Concava verso il basso per x &lt; 0, verso l’alto per x &gt; 0. Flesso in (0; q) = (0; 0), tangente y = −Ap x + q.
+
+### Limiti e asintoti
+
+x→−∞: −∞; x→+∞: +∞. Nessun asintoto verticale, orizzontale o obliquo: f(x)/x diverge come Ax²/3.

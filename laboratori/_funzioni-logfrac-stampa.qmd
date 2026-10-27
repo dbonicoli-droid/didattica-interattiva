@@ -1,0 +1,17 @@
+![Studio 4 · Logaritmo fratto: grafico con i parametri iniziali.](/assets/funzioni/logfrac.svg)
+
+### Dominio, intercette e segno
+
+D = (0; 2) ∪ (2; +∞), perché α &gt; 0 e x − 2 ≠ 0. Nessuna intersezione con l’asse y. Non è pari né dispari: il dominio non è simmetrico rispetto a 0.<br>Zero: x = 1/α = 1.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(0; 1)</td><td>segno +</td></tr><tr><td>(1; 2)</td><td>segno −</td></tr><tr><td>(2; +∞)</td><td>segno +</td></tr></tbody></table>
+
+### Limiti e asintoti
+
+x→0⁺: 0⁺.<br>x→2⁻: −∞; x→2⁺: +∞. Asintoto verticale x = 2.<br>x→+∞: +∞. Nessun asintoto orizzontale o obliquo: f(x)/x → 0 ma f(x) non tende a un valore finito. Infatti f(x) − log<sub>b</sub>(αx) = 2 ln(αx)/[ln(b)(x − 2)] → 0.
+
+### Derivata prima, monotonia ed estremi
+
+f′ = [x − 2 − 2 ln(αx)]/[ln(b)(x − 2)²].<br>Definiamo H(x) = x − 2 − 2 ln(αx). H′ = 1 − 2/x: H decresce fino a 2 e cresce dopo 2; H(2) = −2 ln(2α).<br>Per α &gt; 0,5 esistono esattamente due zeri di H, uno in (0; 2) e uno in (2; +∞). Sono calcolati numericamente per bisezione.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(0; 0,4639)</td><td>crescente</td></tr><tr><td>(0,4639; 2)</td><td>decrescente</td></tr><tr><td>(2; 5,3567)</td><td>decrescente</td></tr><tr><td>(5,3567; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (0,4639; 0,232)</li><li>minimo locale ≈ (5,3567; 2,6783)</li></ul>Nessun estremo assoluto sull’intero dominio.
+
+### Derivata seconda, concavità e flesso
+
+f″ = [−x + 4/x + 4 ln(αx)]/[ln(b)(x − 2)³].<br>Definiamo N(x) = −x + 4/x + 4 ln(αx). N′ = −(x − 2)²/x² ≤ 0; N è strettamente decrescente e ha un solo zero positivo. Lo zero è ricavato numericamente: flesso ≈ (9,3812; 2,8453).<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(0; 2)</td><td>concavità verso il basso</td></tr><tr><td>(2; 9,3812)</td><td>concavità verso l’alto</td></tr><tr><td>(9,3812; +∞)</td><td>concavità verso il basso</td></tr></tbody></table>

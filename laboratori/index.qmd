@@ -49,6 +49,12 @@ Usa un condensatore come cisterna: aziona due interruttori manuali per carica e 
 
 [Apri il laboratorio della cisterna →](cisterna.qmd){.btn .btn-primary}
 
+### [Funzioni matematiche](funzioni-matematiche.qmd)
+
+Sei app per seno, coseno, tangente, esponenziale, logaritmo e parabola con radici regolabili; cinque studi di funzione per la quinta, con parametri regolabili, grafici, derivate, dominio, segno, estremi, flessi, limiti e asintoti.
+
+[Apri il laboratorio delle funzioni →](funzioni-matematiche.qmd){.btn .btn-primary}
+
 L'indice si arricchirà di nuove risorse durante lo sviluppo dei moduli didattici.
 
 ## Componenti: risorse comuni ai percorsi

@@ -1,0 +1,17 @@
+![Polinomio di secondo grado: grafico con i parametri iniziali.](/assets/funzioni/quadratic.svg)
+
+### Coefficienti, dominio e intercette
+
+f(x) = a(x − r₁)(x − r₂) = ax² + bx + c.<br>a = 1; b = −a(r₁ + r₂) = -1; c = ar₁r₂ = -2.<br>D = ℝ; f(0) = c. Radici: -1; 2. Asse di simmetria x = (r₁ + r₂)/2 = 0,5. La funzione non è pari né dispari.
+
+### Segno
+
+<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -1)</td><td>segno +</td></tr><tr><td>(-1; 2)</td><td>segno −</td></tr><tr><td>(2; +∞)</td><td>segno +</td></tr></tbody></table>
+
+### Derivate, vertice e immagine
+
+f′ = a(2x − r₁ − r₂); f″ = 2a.<br><table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; 0,5)</td><td>decrescente</td></tr><tr><td>(0,5; +∞)</td><td>crescente</td></tr></tbody></table>minimo assoluto nel vertice ≈ (0,5; -2,25).<br>Concavità verso l’alto; nessun flesso. Immagine [-2,25; +∞).
+
+### Limiti e asintoti
+
+Per x→±∞, f(x)→+∞. Nessun asintoto verticale, orizzontale o obliquo.

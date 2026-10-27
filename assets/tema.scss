@@ -865,3 +865,7 @@ main.content .classification-exercise table { display: table; width: 100%; table
 .sta-quiz-actions { display:flex; flex-wrap:wrap; gap:.5rem; }.sta-quiz-actions button { background:var(--superficie); color:var(--testo); border:1px solid var(--bordo-forte); border-radius:var(--raggio-s); padding:.4rem .7rem; cursor:pointer; }
 .sta-feedback { font-weight:600; }.sta-feedback:empty { display:none; }
 @media print { .sta-quiz-actions { display:none; } }
+
+/* Laboratorio di funzioni matematiche */
+.math-lab-frame { display: block; width: 100%; min-height: 760px; border: 1px solid var(--bordo-forte); border-radius: var(--raggio-s); margin-block: 1rem; }
+@media print { .math-lab-frame { display: none; } }

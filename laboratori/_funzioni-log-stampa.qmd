@@ -1,0 +1,13 @@
+![Logaritmo: grafico con i parametri iniziali.](/assets/funzioni/log.svg)
+
+### Dominio, immagine e segno
+
+D = (0; +∞); immagine ℝ. Non incontra l’asse y. Zero x = 1/α = 1. <table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(0; 1)</td><td>segno −</td></tr><tr><td>(1; +∞)</td><td>segno +</td></tr></tbody></table>
+
+### Derivate e monotonia
+
+f′ = 1/[x ln(b)]; f″ = −1/[x² ln(b)].<br>Crescente e concava verso il basso. Nessun massimo, minimo o flesso.
+
+### Limiti e asintoti
+
+x→0⁺: −∞; x→+∞: +∞. Asintoto verticale x = 0; nessun asintoto orizzontale o obliquo.

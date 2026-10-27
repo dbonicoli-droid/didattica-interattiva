@@ -1,0 +1,17 @@
+![Studio 5 · Asintoto obliquo immediato: grafico con i parametri iniziali.](/assets/funzioni/rational2.svg)
+
+### Dominio, simmetria e intercette
+
+D = ℝ ∖ {0}; nessuna intersezione con l’asse y. f(x) = Ax + d − Ar²/x.<br>Funzione dispari. Zeri: x = [−d ± √(d² + 4A²r²)]/(2A), cioè -2; 2.
+
+### Segno
+
+<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -2)</td><td>segno −</td></tr><tr><td>(-2; 0)</td><td>segno +</td></tr><tr><td>(0; 2)</td><td>segno −</td></tr><tr><td>(2; +∞)</td><td>segno +</td></tr></tbody></table>
+
+### Limiti e asintoto obliquo
+
+x→0⁻: +∞; x→0⁺: −∞. Asintoto verticale x = 0.<br>x→−∞: −∞; x→+∞: +∞.<br>Divisione: f(x) = Ax + d − Ar²/x. Poiché −Ar²/x → 0, l’asintoto obliquo è <b>y = Ax + d = 1x + 0</b>. Anche con il metodo dei limiti: m = lim f(x)/x = A, q = lim[f(x) − Ax] = d. Nessun asintoto orizzontale.
+
+### Derivate, monotonia e concavità
+
+f′ = A(1 + r²/x²) &gt; 0: strettamente crescente su ciascuno dei due intervalli del dominio, non sull’intero dominio attraversando 0. Nessun massimo o minimo.<br>f″ = −2Ar²/x³: concavità verso l’alto per x &lt; 0, verso il basso per x &gt; 0. Nessun flesso: 0 è escluso.

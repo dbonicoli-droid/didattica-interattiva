@@ -1,0 +1,13 @@
+![Esponenziale: grafico con i parametri iniziali.](/assets/funzioni/exp.svg)
+
+### Dominio, immagine e intercette
+
+D = ℝ; f(0) = 1; nessuno zero. f(x) &gt; 0; immagine (0; +∞).
+
+### Derivate e monotonia
+
+k = α ln(a) = 1.<br>f′ = k e<sup>kx</sup>; f″ = k² e<sup>kx</sup>.<br>Strettamente crescente, convessa, nessun estremo.
+
+### Limiti e asintoti
+
+x→−∞: 0⁺; x→+∞: +∞. Asintoto orizzontale y = 0 a −∞.
