@@ -51,7 +51,7 @@ Usa un condensatore come cisterna: aziona due interruttori manuali per carica e 
 
 ### [Funzioni matematiche](funzioni-matematiche.qmd)
 
-Sei app per seno, coseno, tangente, esponenziale, logaritmo e parabola con radici regolabili; cinque studi di funzione per la quinta, con parametri regolabili, grafici, derivate, dominio, segno, estremi, flessi, limiti e asintoti.
+Sei app per seno, coseno, tangente, esponenziale, logaritmo e parabola con radici regolabili; cinque studi di funzione per la quinta, con parametri regolabili, grafici, derivate, dominio, segno, estremi, flessi, limiti e asintoti. In fondo, una funzione libera da tastiera per esplorazioni numeriche.
 
 [Apri il laboratorio delle funzioni →](funzioni-matematiche.qmd){.btn .btn-primary}
 

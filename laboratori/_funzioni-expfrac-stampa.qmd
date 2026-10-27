@@ -2,16 +2,16 @@
 
 ### Dominio, intercette e segno
 
-D = ℝ ∖ {−3; 1}. a &gt; 0, k = α ln(a) = 1. Il numeratore e<sup>kx</sup> è sempre positivo. Nessuno zero; f(0) = −1/3. Per k ≠ 0 non è pari né dispari.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -3)</td><td>segno +</td></tr><tr><td>(-3; 1)</td><td>segno −</td></tr><tr><td>(1; +∞)</td><td>segno +</td></tr></tbody></table>
+D = ℝ ∖ {-3; 1}. Il numeratore e<sup>kx</sup> è positivo, con k = α ln(a) = 1: nessuno zero. f(0) = -0,3333. Non è pari né dispari.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -3)</td><td>segno +</td></tr><tr><td>(-3; 1)</td><td>segno −</td></tr><tr><td>(1; +∞)</td><td>segno +</td></tr></tbody></table>
 
 ### Limiti e asintoti
 
-x→−3⁻: +∞; x→−3⁺: −∞; x→1⁻: −∞; x→1⁺: +∞. Asintoti verticali x = −3 e x = 1.<br>k &gt; 0: x→−∞ dà 0⁺, x→+∞ dà +∞. Asintoto orizzontale y = 0 a −∞. Nessun asintoto obliquo. Per k ≠ 0, dal lato divergente la crescita esponenziale supera quella lineare; per k = 0 il limite è finito.
+x→-3⁻: +∞; x→-3⁺: −∞; x→1⁻: −∞; x→1⁺: +∞. Asintoti verticali nelle radici del denominatore.<br>x→−∞: 0⁺; x→+∞: +∞. Asintoto orizzontale y = 0 a −∞. Nessun asintoto obliquo.
 
 ### Derivata prima, monotonia ed estremi
 
-D(x) = (x − 1)(x + 3).<br>f′ = e<sup>kx</sup>[kD(x) − 2(x + 1)]/D(x)².<br>Il segno dipende da Q(x) = kx² + (2k − 2)x − 3k − 2. Gli zeri sono x = −1 + [1 ± √(1 + 4k²)]/k.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -3)</td><td>crescente</td></tr><tr><td>(-3; -2,2361)</td><td>crescente</td></tr><tr><td>(-2,2361; 1)</td><td>decrescente</td></tr><tr><td>(1; 2,2361)</td><td>decrescente</td></tr><tr><td>(2,2361; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (-2,2361; -0,0432)</li><li>minimo locale ≈ (2,2361; 1,4457)</li></ul>Nessun estremo assoluto sul dominio completo.
+Poniamo h = (r₁ + r₂)/2 = -1, d = |r₁ − r₂|/2 = 2, u = x − h e D = u² − d².<br>f′ = e<sup>kx</sup> Q/D², con Q = k(u² − d²) − 2u.<br>Le radici candidate sono u = [1 ± √(1 + k²d²)]/k. Si escludono sempre le radici del denominatore.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -3)</td><td>crescente</td></tr><tr><td>(-3; -2,2361)</td><td>crescente</td></tr><tr><td>(-2,2361; 1)</td><td>decrescente</td></tr><tr><td>(1; 2,2361)</td><td>decrescente</td></tr><tr><td>(2,2361; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (-2,2361; -0,0432)</li><li>minimo locale ≈ (2,2361; 1,4457)</li></ul> Nessun estremo assoluto sul dominio completo.
 
 ### Derivata seconda e concavità
 
-Con u = x + 1 e Q = kD − 2u:<br>f″ = e<sup>kx</sup>[Q² + 2u² + 8]/D³.<br>Il numeratore è strettamente positivo: concavità verso l’alto per x &lt; −3 e x &gt; 1, verso il basso per −3 &lt; x &lt; 1. Nessun flesso: i cambi di concavità avvengono fuori dal dominio.
+f″ = e<sup>kx</sup>[Q² + 2u² + 2d²]/D³. Il numeratore è strettamente positivo nel dominio.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -3)</td><td>concavità verso l’alto</td></tr><tr><td>(-3; 1)</td><td>concavità verso il basso</td></tr><tr><td>(1; +∞)</td><td>concavità verso l’alto</td></tr></tbody></table> Nessun flesso: le radici del denominatore sono escluse.

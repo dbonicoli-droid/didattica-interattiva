@@ -4,7 +4,7 @@ sidebar: risorse
 page-layout: full
 stato: bozza
 toc: true
-description: "Funzioni elementari e cinque studi completi per la quinta ITIS, con parametri e grafici interattivi."
+description: "Funzioni elementari e cinque studi completi per la quinta ITIS, con parametri, grafici interattivi e una funzione libera da tastiera."
 ---
 
 [← Indice del laboratorio](index.qmd)
@@ -117,7 +117,7 @@ Regola le due radici, anche coincidenti, e il coefficiente a: l’app mostra sub
 
 ## Cinque studi di funzione
 
-I valori iniziali sono: $x^3/3-x$, $(x^2+1)/(x-1)$, $e^x/[(x-1)(x+3)]$, $x\ln x/(x-2)$. Si aggiunge un quinto esempio: $(x^2-4)/x$, in cui la divisione rende immediato l’asintoto obliquo. I primi due sono esempi tipici di studio polinomiale e razionale; negli ultimi due i denominatori restano quelli richiesti.
+I valori iniziali sono: $x^3/3-x$, $(x^2-1)/(x-2)$, $e^x/[(x-1)(x+3)]$, $x\ln x/(x-2)$. Si aggiunge un quinto esempio: $(x^2-4)/x$, in cui la divisione rende immediato l’asintoto obliquo. I primi due sono esempi tipici di studio polinomiale e razionale; negli studi 2 e 3 puoi regolare le radici; nello studio 4 puoi scegliere anche il grado del denominatore.
 
 ### Studio 1: un polinomio cubico
 
@@ -135,7 +135,9 @@ $A(x^3/3-px)+q$
 
 ### Studio 2: una razionale fratta
 
-$\dfrac{x^2+p}{x-h}$
+$\dfrac{A(x-r_1)(x-r_2)}{x-h}$
+
+Regola le due radici del numeratore e quella del denominatore. Se un fattore si semplifica, il punto resta escluso dal dominio originario.
 
 ::: {.content-visible when-format="html"}
 {{< include _funzioni-rational.html >}}
@@ -149,9 +151,9 @@ $\dfrac{x^2+p}{x-h}$
 
 ### Studio 3: esponenziale e denominatore quadratico
 
-$\dfrac{a^{\alpha x}}{(x-1)(x+3)}$
+$\dfrac{a^{\alpha x}}{(x-r_1)(x-r_2)}$
 
-Le radici del denominatore restano **1 e −3**; variano base ed esponente. Il caso α = 0 permette di isolare il ruolo del denominatore.
+Le radici del denominatore partono da **1 e −3** e sono regolabili separatamente, anche fino a coincidere; puoi variare anche base ed esponente. Il caso α = 0 permette di isolare il ruolo del denominatore.
 
 ::: {.content-visible when-format="html"}
 {{< include _funzioni-expfrac.html >}}
@@ -163,9 +165,11 @@ Le radici del denominatore restano **1 e −3**; variano base ed esponente. Il c
 {{< include _funzioni-expfrac-stampa.qmd >}}
 :::
 
-### Studio 4: prodotto con logaritmo e denominatore lineare
+### Studio 4: logaritmo e denominatore di grado variabile
 
-$\dfrac{x\log_b(\alpha x)}{x-2}$
+$\dfrac{x\log_b(\alpha x)}{D(x)}$, con $D(x)=1$, $D(x)=x-r_1$ oppure $D(x)=(x-r_1)(x-r_2)$.
+
+Scegli il grado **0, 1 o 2** e regola le radici attive. Il valore iniziale è $D(x)=x-2$.
 
 Prova anche **b &lt; 1** e **α = 0,5**. Il secondo caso cambia la natura della discontinuità in x = 2, che resta comunque fuori dal dominio originario.
 
@@ -196,8 +200,18 @@ Con A = 1, r = 2 e d = 0 si ottiene $(x^2-4)/x=x-4/x$: il termine residuo tende 
 :::
 
 ::: {.content-visible when-format="html"}
-<script src="../assets/funzioni/embed.js"></script>
+<script src="../assets/funzioni/embed.js" defer></script>
 :::
+
+## Studio libero: inserisci una funzione
+
+Scrivi la funzione da tastiera per esplorarne il grafico e le derivate. Questa app offre un **controllo numerico nella finestra scelta**: non sostituisce la determinazione analitica del dominio, dei limiti e degli asintoti e può non rilevare punti molto vicini o isolati.
+
+::: {.content-visible when-format="html"}
+{{< include _funzioni-free.html >}}
+:::
+
+[Apri l’app separatamente](/downloads/laboratori/funzioni/free.html){target="_blank"} · [Scarica HTML offline](/downloads/laboratori/funzioni/free.html){download="studio-funzione-libera.html"}
 
 ## Consegna breve
 

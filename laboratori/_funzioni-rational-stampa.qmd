@@ -1,21 +1,21 @@
 ![Studio 2 · Razionale fratta: grafico con i parametri iniziali.](/assets/funzioni/rational.svg)
 
-### Dominio, simmetria e intercette
+### Dominio, intercette e simmetria
 
-D = ℝ ∖ {1}. Il numeratore x² + p è sempre positivo. Nessuno zero. f(0) = −p/h = -1.<br>f(x) = x + h + (h² + p)/(x − h): simmetria centrale rispetto a (h; 2h).
+D = ℝ ∖ {2}; il punto escluso resta tale anche quando un fattore si semplifica.<br>Zeri: -1; 1. f(0) = 0,5.<br>Divisione: f(x) = A[x + h − r₁ − r₂ + B/(x − h)], con B = (h − r₁)(h − r₂) = 3. Simmetria centrale rispetto a (2; 4).
 
 ### Segno
 
-<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; 1)</td><td>segno −</td></tr><tr><td>(1; +∞)</td><td>segno +</td></tr></tbody></table>
+<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -1)</td><td>segno −</td></tr><tr><td>(-1; 1)</td><td>segno +</td></tr><tr><td>(1; 2)</td><td>segno −</td></tr><tr><td>(2; +∞)</td><td>segno +</td></tr></tbody></table>
 
 ### Limiti e asintoti
 
-x→h⁻: −∞; x→h⁺: +∞. Asintoto verticale x = 1.<br>x→−∞: −∞; x→+∞: +∞. Divisione: f(x) − (x + h) = (h² + p)/(x − h) → 0. Asintoto obliquo y = x + 1. Nessun asintoto orizzontale.
+x→h⁻: −∞; x→h⁺: +∞. Asintoto verticale x = 2.<br>x→−∞: −∞; x→+∞: +∞. Asintoto obliquo <b>y = 1x + 2</b>: il residuo AB/(x − h) tende a 0. Nessun asintoto orizzontale.
 
 ### Derivata prima, monotonia ed estremi
 
-f′ = 1 − (h² + p)/(x − h)².<br>Zeri: x = h ± √(h² + p).<br><table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; -0,4142)</td><td>crescente</td></tr><tr><td>(-0,4142; 1)</td><td>decrescente</td></tr><tr><td>(1; 2,4142)</td><td>decrescente</td></tr><tr><td>(2,4142; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (-0,4142; -0,8284)</li><li>minimo locale ≈ (2,4142; 4,8284)</li></ul>Nessun estremo assoluto sull’intero dominio.
+f′ = A[1 − B/(x − h)²]. Zeri: h ± √B.<table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; 0,2679)</td><td>crescente</td></tr><tr><td>(0,2679; 2)</td><td>decrescente</td></tr><tr><td>(2; 3,7321)</td><td>decrescente</td></tr><tr><td>(3,7321; +∞)</td><td>crescente</td></tr></tbody></table><ul><li>massimo locale ≈ (0,2679; 0,5359)</li><li>minimo locale ≈ (3,7321; 7,4641)</li></ul> Nessun estremo assoluto sull’intero dominio.
 
 ### Derivata seconda e concavità
 
-f″ = 2(h² + p)/(x − h)³. Concava verso il basso per x &lt; h, verso l’alto per x &gt; h. Nessun flesso: x = h non appartiene al dominio.
+f″ = 2AB/(x − h)³.<br><table><thead><tr><th>Intervallo</th><th>Comportamento</th></tr></thead><tbody><tr><td>(−∞; 2)</td><td>concavità verso il basso</td></tr><tr><td>(2; +∞)</td><td>concavità verso l’alto</td></tr></tbody></table> Nessun flesso nel dominio.
