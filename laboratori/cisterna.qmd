@@ -36,7 +36,7 @@ Ogni ramo comprende un resistore: il condensatore non viene collegato direttamen
 
 ## Simulazione: due interruttori manuali
 
-Aziona **Riempimento** e **Prelievo** e osserva tensione, correnti, livello e grafico. Gli interruttori sono indipendenti e possono essere entrambi aperti o entrambi chiusi. Puoi modificare le due resistenze, la capacità e l’alimentazione e l’alimentazione (1–10 V), usare **Stop** per fermare il tempo conservando lo stato, riprendere, avanzare di un secondo e usare lo schermo intero.
+Aziona **Riempimento** e **Prelievo** e osserva tensione, correnti, livello e grafico. Gli interruttori sono indipendenti e possono essere entrambi aperti o entrambi chiusi. Puoi modificare le due resistenze, la capacità e l’alimentazione (1–10 V), usare **Stop** per fermare il tempo conservando lo stato, riprendere, avanzare di un secondo e usare lo schermo intero.
 
 ::: {.content-visible when-format="html"}
 {{< include _cisterna-app.html >}}

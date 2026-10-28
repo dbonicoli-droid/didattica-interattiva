@@ -143,7 +143,7 @@ Per il resistore ideale a temperatura costante, $v(t)=Ri(t)$: sapere la corrente
 
 ![Circuito RC: generatore a gradino, R in serie a C, tensione misurata sul condensatore.](/assets/rc/circuito-1.svg)
 
-Nel circuito RC la tensione del condensatore dipende dalla carica già presente. Due condensatori con tensioni iniziali diverse, collegati nello stesso istante alla stessa alimentazione attraverso lo stesso resistore, non danno subito la stessa uscita. Il condensatore introduce **memoria**, come il contatto ausiliario del contattore: cambia il componente, non il ragionamento.
+Nel circuito RC la tensione del condensatore dipende dalla carica già presente. Due condensatori con tensioni iniziali diverse, collegati nello stesso istante alla stessa alimentazione attraverso lo stesso resistore, non danno subito la stessa uscita. Il circuito RC ha **memoria**, come il circuito di autoritenuta: nel primo l’informazione è conservata nella carica, nel secondo nel comando mantenuto dalla retroazione del contatto ausiliario.
 
 Nel modello RC generale l'ingresso è $v_{in}(t)$, l'uscita $v_C(t)$ e lo stato può essere scelto uguale a $v_C(t)$.
 
@@ -219,7 +219,7 @@ $I_S$, $\eta$ e $V_T$ sono parametri costanti. La relazione esponenziale non ris
 
 $$C_{th}\frac{dT}{dt}=i^2R(T)-G_{th}(T-T_a).$$
 
-$C_{th}$ è la capacità termica, $G_{th}$ la conduttanza verso l'ambiente e $T_a$ la temperatura ambiente. A sinistra la variazione dell'energia termica, a destra la potenza prodotta meno quella ceduta.
+$C_{th}$ è la capacità termica, $G_{th}$ la conduttanza verso l'ambiente e $T_a$ la temperatura ambiente. Entrambi i membri sono potenze, espresse in watt: a sinistra il tasso di variazione dell’energia termica, a destra la potenza prodotta meno quella ceduta.
 
 **Linearità e condizioni iniziali.** Nei modelli dinamici lineari, per classificare la relazione ingresso–uscita usiamo condizioni iniziali nulle, oppure separiamo la risposta dovuta allo stato iniziale. In un RC con condensatore già carico l'uscita può essere non nulla anche a ingresso nullo: ciò non rende non lineari le equazioni del circuito, ma la mappa ingresso–uscita a stato iniziale fissato non è, in generale, lineare.
 
@@ -374,7 +374,7 @@ Il serbatoio conserva memoria in un livello d'acqua, il condensatore in una cari
 
 ![Marcia e arresto con autoritenuta: il contatto ausiliario in parallelo al pulsante di marcia mantiene il comando.](/assets/fondamenti/autoritenuta.svg)
 
-Nello schema i contatti sono marcati **[NO](/risorse/glossario/index.qmd#gloss-no)** e **[NC](/risorse/glossario/index.qmd#gloss-nc)**: indicano com'è il contatto **quando nessuno lo aziona**. Start è normalmente aperto, cioè a riposo non lascia passare e si chiude solo mentre lo premi. Stop e F1, il contatto del relè termico, sono normalmente chiusi: a riposo lasciano passare, e si aprono quando premi Stop o quando il termico interviene. Un arresto si caccia sempre su un contatto normalmente chiuso, così un filo che si stacca ferma la macchina invece di impedirne l'arresto.
+Nello schema i contatti sono marcati **[NO](/risorse/glossario/index.qmd#gloss-no)** e **[NC](/risorse/glossario/index.qmd#gloss-nc)**: indicano com'è il contatto **quando nessuno lo aziona**. Start è normalmente aperto, cioè a riposo non lascia passare e si chiude solo mentre lo premi. Stop e F1, il contatto del relè termico, sono normalmente chiusi: a riposo lasciano passare, e si aprono quando premi Stop o quando il termico interviene. Nel circuito mostrato, l’apertura di Stop o F1 interrompe l’alimentazione della bobina. Anche l’interruzione di un filo in questo ramo la diseccita. È una proprietà di questo collegamento: non significa che ogni possibile guasto venga rilevato o che l’arresto meccanico sia istantaneo.
 
 **Che cosa succede.** Premi **Start**: la bobina K1 si eccita e il [contattore](/risorse/glossario/index.qmd#gloss-contattore) chiude. Lo rilasci, e il contattore **resta chiuso**: un suo contatto ausiliario, in parallelo al pulsante, continua ad alimentare la bobina. È la funzione di **autoritenuta**.
 
@@ -532,19 +532,22 @@ Altrimenti
 
 **Passo 5, e qui si scopre l'errore.** Proviamo $h=50$ cm, con la pompa accesa: la condizione $h<20$ è falsa, quindi il ramo «altrimenti» **spegne** la pompa. Ma 50 non è sopra 80: non avevamo chiesto di spegnerla. La prima stesura ha trasformato due soglie in una sola, e ha perso la memoria del comando.
 
-**La correzione.** Servono tre casi, non due, e nel caso intermedio si conserva il comando precedente:
+**La correzione.** Servono tre casi, non due, e nel caso intermedio si conserva il comando precedente. Definiamo anche il comando iniziale: pompa spenta. Per questo esempio scegliamo di spegnerla anche in caso di lettura non valida; è un comportamento aggiuntivo dichiarato nella specifica:
 
 ```text
-Leggi h
-Se h < 0 oppure h > 100
-    Scrivi "lettura non valida"
-Altrimenti
-    Se h < 20
-        Pompa = accesa
-    Altrimenti se h > 80
+Pompa = spenta              // inizializzazione: una sola volta
+Ripeti ciclicamente
+    Leggi h
+    Se h < 0 oppure h > 100
         Pompa = spenta
+        Scrivi "lettura non valida"
     Altrimenti
-        Pompa = valore precedente
+        Se h < 20
+            Pompa = accesa
+        Altrimenti se h > 80
+            Pompa = spenta
+        Altrimenti
+            Conserva il valore di Pompa
 ```
 
 Riconosci la struttura? È **l'isteresi del termostato**, e prima ancora l'autoritenuta del contattore. Tre problemi diversi, la stessa memoria.

@@ -54,7 +54,7 @@ e. $(A+B)(A+\overline{B})$.
 
 **3 · Negazione.** Trova $\overline{Y}$ per $Y=A(B+C)$ con De Morgan. Verifica le due colonne su tutte le combinazioni.
 
-**4 · Due gruppi di riscaldamento.** Due richieste $S_1,S_2$ comandano due gruppi: $Y_1=S_1+S_2$, $Y_2=S_2$. La spia di guasto $G$ deve attivarsi quando il secondo sensore richiede calore ma il primo no: $G=\overline{S}_1S_2$. Modifica i comandi affinché il guasto blocchi entrambi i gruppi; semplifica i risultati.
+**4 · Due gruppi di riscaldamento.** Due richieste $S_1,S_2$ comandano due gruppi: $Y_1=S_1+S_2$, $Y_2=S_2$. La spia di guasto $G$ deve attivarsi quando il secondo sensore richiede calore ma il primo no: $G=\overline{S_1}S_2$. Modifica i comandi affinché il guasto blocchi entrambi i gruppi; semplifica i risultati.
 
 ::: {.callout-tip collapse=true title="Soluzioni · Modulo 2"}
 
@@ -72,7 +72,7 @@ e. $(A+B)(A+\overline{B})$.
 
 **3.** $\overline{Y}=\overline{A}+\overline{B}\,\overline{C}$. Le uscite sono complementari in tutte le righe: $Y$ vale 1 solo per 101, 110, 111.
 
-**4.** $Y_1'=(S_1+S_2)\overline{G}=(S_1+S_2)(S_1+\overline{S}_2)=S_1$; $Y_2'=S_2\overline{G}=S_2(S_1+\overline{S}_2)=S_1S_2$. La spia conserva $G=\overline{S}_1S_2$.
+**4.** $Y_1'=(S_1+S_2)\overline{G}=(S_1+S_2)(S_1+\overline{S_2})=S_1$; $Y_2'=S_2\overline{G}=S_2(S_1+\overline{S_2})=S_1S_2$. La spia conserva $G=\overline{S_1}S_2$.
 
 :::
 

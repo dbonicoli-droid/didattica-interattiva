@@ -33,7 +33,7 @@ Da [Modulo 1 — Fondamenti di teoria dei sistemi](moduli/modulo-1.qmd)
 
 **4 · [Algoritmo](/risorse/glossario/index.qmd#gloss-algoritmo).** Nel ciclo della media si dimentica $i=i+1$. Che cosa succede? Quale controllo lo rende visibile?
 
-**5 · Memoria.** Parti da $Q=0$ e applica $(P,S)=(1,1),(1,0),(0,1),(1,0)$. Calcola gli [stati](/risorse/glossario/index.qmd#gloss-stato) successivi per $Q^+=P(S+Q)$, dove $Q^+$ è lo stato dopo il passo di calcolo.
+**5 · Memoria.** Parti da $Q=0$ e applica $(P,S)=(1,1),(1,0),(0,1),(1,0)$. Calcola gli [stati](/risorse/glossario/index.qmd#gloss-stato) successivi per $Q^+=P(S+Q)$, dove $P=1$ indica il consenso alla marcia, $S=1$ la richiesta di marcia e $Q^+$ lo stato dopo il passo di calcolo.
 
 ::: {#es:soluzioni-1 .callout-tip collapse=true title="Soluzioni del Modulo 1"}
 
@@ -109,7 +109,7 @@ Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd#ud:2.7) e dagli [eser
 
 **4 · Irrigazione.** Usa le convenzioni e lo [schema del modulo](moduli/modulo-2.qmd#ud:2.7): $G=1$ guasto, $S=1$ terreno umido, $I=1$ richiesta manuale. La coltura 1 si irriga automaticamente con terreno asciutto; la coltura 2 solo manualmente e con terreno asciutto. Un guasto deve spegnere la pompa e chiudere entrambe le valvole. Ricava le tre espressioni, la tabella completa e le porte necessarie.
 
-**5 · Cisterna senza memoria.** Usa lo [schema dell’impianto nel laboratorio](/laboratori/cisterna.qmd): chiama $F=1$ la segnalazione di pieno, $V=1$ quella di vuoto, $R=1$ la leva di riempimento attiva e $P=1$ quella di prelievo attiva. Il pieno vieta il riempimento; il vuoto vieta il prelievo e forza il riempimento. Negli altri casi valgono le leve. Se entrambi i sensori sono attivi, stabilisci esplicitamente il comportamento prima di scrivere le funzioni. Non richiedere che il riempimento automatico continui fino al pieno dopo la scomparsa del vuoto.
+**5 · Cisterna senza memoria.** Riprendi il [problema della cisterna](/laboratori/cisterna.qmd#il-comando-della-cisterna-fase-successiva), distinto dalla simulazione elettrica che usa ancora interruttori manuali: chiama $F=1$ la segnalazione di pieno, $V=1$ quella di vuoto, $R=1$ la leva di riempimento attiva e $P=1$ quella di prelievo attiva. Il pieno vieta il riempimento; il vuoto vieta il prelievo e forza il riempimento. Negli altri casi valgono le leve. Se entrambi i sensori sono attivi, stabilisci esplicitamente il comportamento prima di scrivere le funzioni. Non richiedere che il riempimento automatico continui fino al pieno dopo la scomparsa del vuoto.
 
 **6 · Dalla tabella.** Con ordine $ABC$, un’uscita vale 1 nelle righe 010 e 011. Ricava mintermini e funzione semplificata; indica quali ingressi non influenzano il risultato.
 
