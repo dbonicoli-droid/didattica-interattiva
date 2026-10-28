@@ -869,3 +869,6 @@ main.content .classification-exercise table { display: table; width: 100%; table
 /* Laboratorio di funzioni matematiche */
 .math-lab-frame { display: block; width: 100%; min-height: 760px; border: 1px solid var(--bordo-forte); border-radius: var(--raggio-s); margin-block: 1rem; }
 @media print { .math-lab-frame { display: none; } }
+
+// Pseudocodice non evidenziato: segue il colore del tema attivo.
+main.content pre.text, main.content pre.text code { color: var(--testo); }
