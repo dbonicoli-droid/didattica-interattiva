@@ -333,7 +333,7 @@ Usa **Verifica risposte** per controllare il lavoro o **Mostra soluzione** per v
 
 ### Dal circuito alla relazione ingresso–uscita {#circuiti-ingresso-uscita}
 
-Negli [appunti del 18–19 settembre](/lezioni/2026-2027/2026-09-18-3a-etc-sistemi.qmd) e negli [esercizi del 26 settembre](/lezioni/2026-2027/2026-09-26-3a-enc-sistemi.qmd), lo stesso circuito viene studiato scegliendo uscite diverse. Prima di calcolare occorre dichiarare **ingresso, uscita, parametri e riferimenti**.
+Lo stesso circuito può essere studiato scegliendo uscite diverse. Prima di calcolare occorre dichiarare **ingresso, uscita, parametri e riferimenti**.
 
 ![Circuito resistivo con R1 in serie al parallelo di R2 e R3; uscita VAB e correnti indicate.](/assets/lezioni-teoria/rete-tre-resistori.svg)
 
@@ -453,7 +453,7 @@ Le unità sono un controllo: $(\mathrm{s}/\mathrm{m^2})(\mathrm{m^3/s})=\mathrm 
 
 ### Dalla relazione al diagramma a blocchi {#schemi-a-blocchi}
 
-Gli [appunti introduttivi sugli schemi a blocchi](/lezioni/2026-2027/2026-10-17-introduzione-schemi-blocchi.qmd) mostrano come rappresentare la relazione tra segnali senza disegnare ogni componente. Ogni freccia porta un segnale e ha un verso; un punto di diramazione copia lo stesso segnale su più percorsi.
+Uno schema a blocchi rappresenta le relazioni tra segnali senza disegnare ogni componente. Ogni freccia porta un segnale e ha un verso; un punto di diramazione copia lo stesso segnale su più percorsi.
 
 ![Elementi di uno schema a blocchi: guadagno, sommatore con segni, prodotto e diramazione.](/assets/lezioni-teoria/blocchi-elementi.svg)
 
@@ -552,7 +552,7 @@ Riconosci la struttura? È **l'isteresi del termostato**, e prima ancora l'autor
 
 ### Scegliere la struttura di controllo {#strutture-algoritmi}
 
-Gli [appunti su algoritmi e programmazione](/lezioni/2026-2027/2026-10-17-algoritmi-programmazione.qmd), destinati agli elettrotecnici, distinguono selezione e ripetizione. La sintassi cambia tra linguaggi; qui usiamo pseudocodice.
+Le strutture di selezione permettono di scegliere le operazioni da eseguire; quelle di ripetizione permettono di eseguirle più volte. La sintassi cambia tra linguaggi; qui usiamo pseudocodice.
 
 | Struttura | Quando usarla | Controllo da fare |
 |---|---|---|

@@ -42,3 +42,12 @@
 - Ogni scheda e ogni gruppo di esercizi dichiara la **provenienza** (`::: {.provenienza}` con il rimando al modulo), e il modulo li richiama. Il collegamento è sempre nei due sensi: niente materiale senza casa.
 - La pagina apre con un indice che per ogni scheda dice motivo e modulo di provenienza.
 - Identificatori parlanti: niente `#app:old-...` ereditati dalle migrazioni.
+
+
+## Metodo didattico concordato per sviluppare i moduli
+
+- Gli appunti delle lezioni sono un punto di partenza. I moduli devono essere testi autonomi, semplici, accurati e istruttivi: completare definizioni, motivazioni, nessi ed esempi necessari, anziché limitarsi a riformulare gli appunti.
+- Nel testo rivolto agli studenti evitare commenti sul processo di scrittura, come «il testo riorganizza gli appunti», e raccomandazioni generiche al posto delle spiegazioni.
+- Nel passaggio dalla tabella alla funzione, evidenziare gli 1 o gli 0 selezionati e il rispettivo termine con lo stesso colore. Conservare anche etichette e riferimenti di riga, affinché il procedimento resti leggibile senza distinguere i colori e in stampa.
+- Nei controllori con più uscite, individuare prima gli ingressi pertinenti a ciascuna uscita e ricavare le espressioni da tabelle ridotte. La tabella completa può restare come verifica complessiva.
+- Nuove scelte sul comportamento di un sistema, incluse condizioni iniziali, gestione dei guasti e priorità dei comandi, vanno concordate con il docente prima di inserirle. Non introdurre algoritmi più complessi senza una ragione didattica pertinente.

@@ -1,4 +1,25 @@
-Un ingresso logico assume due valori, **0 oppure 1**. Prima di scrivere una funzione occorre stabilire che cosa significano: per esempio, «sensore attivo = 1» e «sensore non attivo = 0». Il valore logico non è una tensione universale: i livelli elettrici ammessi dipendono dal dispositivo usato.
+L’**algebra booleana**, o **algebra di Boole**, è un sistema di calcolo per variabili che assumono due valori logici, **0 e 1**, combinati mediante operazioni come AND, OR e NOT. Le sue regole permettono di trasformare un’espressione mantenendo lo stesso risultato per ogni combinazione degli ingressi.
+
+### Perché si usa
+
+Molti problemi di comando si esprimono attraverso condizioni: un pulsante è premuto oppure no, una porta è aperta oppure chiusa, una soglia è superata oppure no. L’algebra booleana permette di:
+
+- tradurre queste condizioni in una descrizione precisa;
+- determinare l’uscita in tutti i casi possibili;
+- riconoscere espressioni diverse che descrivono lo stesso comportamento;
+- progettare e semplificare reti di porte logiche.
+
+Un circuito digitale rappresenta i due valori attraverso **livelli elettrici distinguibili**. I simboli 0 e 1 descrivono il valore logico: non impongono due tensioni universali e non significano, da soli, “spento” e “acceso”.
+
+### Dalle condizioni alle variabili
+
+Prima di calcolare si stabilisce il significato dei valori. Per esempio, scegliendo $A=1$ quando una porta è aperta, $A=0$ indica che è chiusa. Una grandezza come la temperatura non è di per sé booleana; lo può essere la condizione “temperatura maggiore della soglia”.
+
+Una **funzione booleana** associa a ogni combinazione degli ingressi un unico valore di uscita, 0 oppure 1. Scrivere $Y=f(A,B)$ significa che la regola $f$ determina $Y$ conoscendo $A$ e $B$. Se il sistema ha più uscite, si può descrivere ciascuna con la propria funzione.
+
+Nei circuiti **combinatori** studiati qui, le uscite dipendono dagli ingressi attuali. La conservazione di informazioni precedenti richiede una descrizione con stato, che verrà affrontata nei circuiti sequenziali.
+
+### Le operazioni fondamentali
 
 Le tre operazioni fondamentali sono:
 
@@ -25,7 +46,7 @@ Le due funzioni coincidono in alcune righe, ma **non sono equivalenti**. De Morg
 
 ![Simboli sagomati tradizionali delle porte logiche e delle uscite negate.](/assets/lezioni-teoria/porte.svg)
 
-Una porta è un dispositivo che realizza una funzione logica. La bolla sul terminale indica la negazione. Con due ingressi:
+Una **porta logica** realizza un’operazione: gli ingressi ricevono i valori logici, l’uscita restituisce il risultato. La bolla sul terminale indica la negazione. NAND significa NOT AND, NOR significa NOT OR: negano rispettivamente il risultato di AND e OR. La tabella permette di confrontare le operazioni sugli stessi ingressi:
 
 | $A$ | $B$ | $AB$ | $A+B$ | $\overline{AB}$ (NAND) | $\overline{A+B}$ (NOR) | $A\oplus B$ (XOR) |
 |---:|---:|---:|---:|---:|---:|---:|
@@ -34,6 +55,6 @@ Una porta è un dispositivo che realizza una funzione logica. La bolla sul termi
 | 1 | 0 | 0 | 1 | 1 | 0 | 1 |
 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-XOR vale 1 quando gli ingressi sono diversi; XNOR è la sua negazione e vale 1 quando sono uguali. Il buffer restituisce invece il valore dell’ingresso: $Y=A$.
+XOR vale 1 quando gli ingressi sono diversi; XNOR è la sua negazione e vale 1 quando sono uguali. La porta buffer ha funzione logica $Y=A$: restituisce il valore dell’ingresso senza invertirlo.
 
 La tabella elenca **tutte** le combinazioni: con $n$ ingressi ci sono $2^n$ righe. Si usa normalmente l’ordine binario crescente. Nelle espressioni si esegue prima la negazione, poi il prodotto, infine la somma; le parentesi cambiano l’ordine.

@@ -10,8 +10,6 @@ toc-depth: 3
 
 In questo modulo progettiamo **controllori combinatori**: le uscite dipendono dagli ingressi attuali, senza conservare lo stato precedente. Il metodo è: **descrivere il comportamento → definire i segnali → compilare la tabella → ricavare le funzioni → realizzarle e verificarle**.
 
-Riferimenti alle lezioni: [algebra booleana](/lezioni/2026-2027/2026-10-12-3a-etc-algebra-booleana.qmd), [semplificazioni e tabelle](/lezioni/2026-2027/2026-09-28-3a-etc-sistemi.qmd), [simulazione del compito](/lezioni/2026-2027/2026-10-12-3a-etc-simulazione-compito.qmd) ed [esercizi per la prima verifica](/lezioni/2026-2027/2026-10-22-esercizi-prima-verifica.qmd).
-
 ::: {.unit-index}
 ## In questo modulo {.unnumbered}
 
@@ -114,11 +112,68 @@ Il controllore comanda una pompa e due elettrovalvole. Separiamo l’impianto, c
 
 Per il modello a soglia adottato qui, l’uguaglianza alla soglia rientra in $S=1$; $S=0$ indica umidità inferiore alla soglia.
 
-Nella **versione della simulazione del compito**, la pompa è comandata finché non viene rilevato un guasto; la coltura 1 riceve acqua se il terreno è asciutto; la coltura 2 riceve acqua se è asciutto **oppure** se il comando manuale è attivo:
+Il controllore deve rispettare queste condizioni:
 
-$$P=\overline{G},\qquad Y_1=\overline{S},\qquad Y_2=\overline{S}+I.$$
+- La pompa è comandata accesa quando non viene rilevato un guasto.
+- La prima valvola è comandata aperta quando il terreno è asciutto.
+- La seconda valvola è comandata aperta quando il terreno è asciutto **oppure** quando il comando manuale è attivo.
 
-Le tre uscite possono essere studiate separatamente: $P$ dipende solo da $G$, $Y_1$ dipende solo da $S$ e $Y_2$ da $I,S$. La tabella completa riunisce i risultati:
+### Una tabella per ciascuna uscita
+
+Prima di elencare tutte le combinazioni, individuiamo **quali ingressi influenzano ciascun comando**. Una variabile necessaria per descrivere l’impianto nel suo insieme può essere irrilevante per una singola uscita.
+
+#### Pompa: dipende soltanto dal guasto
+
+La specifica della pompa non dipende da umidità o comando manuale. Occorrono solo due righe:
+
+| $G$ | $P$ |
+|---:|:---:|
+| 0 | [1]{.bool-mark .bool-c1} |
+| 1 | 0 |
+
+Il comando vale 1 quando $G=0$, quindi:
+
+::: {.bool-equation}
+$P=$ [$\overline{G}$]{.bool-term .bool-c1}.
+:::
+
+#### Prima valvola: dipende soltanto dall’umidità
+
+La prima coltura richiede irrigazione quando il terreno è asciutto. Né $I$ né $G$ intervengono nel comando di questa valvola nella specifica iniziale.
+
+| $S$ | $Y_1$ |
+|---:|:---:|
+| 0 | [1]{.bool-mark .bool-c1} |
+| 1 | 0 |
+
+Si ottiene direttamente:
+
+::: {.bool-equation}
+$Y_1=$ [$\overline{S}$]{.bool-term .bool-c1}.
+:::
+
+#### Seconda valvola: dipende da comando manuale e umidità
+
+La seconda coltura richiede acqua quando il terreno è asciutto oppure quando il comando manuale è attivo. Bastano i due ingressi $I,S$, quindi quattro righe:
+
+| $I$ | $S$ | $Y_2$ |
+|---:|---:|:---:|
+| 0 | 0 | 1 |
+| 0 | 1 | [0]{.bool-mark .bool-c2} |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+È più rapido partire dall’unico 0: compare per $I=0,S=1$. La somma nulla solo in quella riga è $I+\overline{S}$, quindi:
+
+::: {.bool-equation}
+$Y_2=$ [$I+\overline{S}$]{.bool-term .bool-c2}.
+:::
+
+Lo stesso risultato si legge dalla specifica: comando manuale **OR** terreno asciutto. Non occorre costruire una tabella a tre ingressi per ricavarlo.
+
+### Tabella completa: controllo complessivo
+
+Le tabelle ridotte hanno già fornito le tre funzioni. Possiamo ora riunire i risultati, ripetendo il valore di ogni uscita quando cambiano ingressi che non la influenzano. La tabella completa serve a controllare insieme i comandi.
 
 | $G$ | $I$ | $S$ | $P$ | $Y_1$ | $Y_2$ |
 |---:|---:|---:|---:|---:|---:|

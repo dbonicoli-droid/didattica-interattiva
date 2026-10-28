@@ -1,35 +1,79 @@
-Una tabella permette di ricavare una funzione con due procedimenti equivalenti.
+Una tabella di verità contiene già il comportamento completo della funzione. Per ottenere una formula possiamo **selezionare le righe in cui l’uscita vale 1**, oppure **escludere quelle in cui vale 0**. I due procedimenti portano alla stessa funzione.
+
+Consideriamo una funzione di due ingressi che vale 1 quando $A$ e $B$ sono diversi. Usiamo la stessa tabella in entrambi i procedimenti: i colori collegano ogni riga selezionata al termine che la rappresenta.
 
 ### Somma di prodotti: partire dalle righe a 1
 
-Per ogni riga con uscita 1 si costruisce un prodotto che vale 1 **solo in quella riga**: una variabile compare diretta se vale 1, negata se vale 0. Se contiene tutte le variabili, questo prodotto è un **mintermine**. Si sommano poi i prodotti ottenuti.
+Un prodotto logico vale 1 solo se **tutti i suoi fattori valgono 1**. Per selezionare una precisa combinazione degli ingressi:
+
+- scriviamo la variabile **diretta** se nella riga vale 1;
+- scriviamo la variabile **negata** se nella riga vale 0;
+- colleghiamo le condizioni con AND.
+
+::: {.bool-table}
+| $A$ | $B$ | $Y$ | Prodotto che seleziona la riga |
+|---:|---:|:---:|---|
+| 0 | 0 | 0 | — |
+| 0 | 1 | [1]{.bool-mark .bool-c1} | [$m_1=\overline{A}B$]{.bool-term .bool-c1} |
+| 1 | 0 | [1]{.bool-mark .bool-c2} | [$m_2=A\overline{B}$]{.bool-term .bool-c2} |
+| 1 | 1 | 0 | — |
+:::
+
+Nella **riga 01**, $\overline{A}=1$ e $B=1$, quindi $\overline{A}B=1$. Nelle altre righe almeno uno dei due fattori è 0: il prodotto non le seleziona. Lo stesso ragionamento vale per $A\overline{B}$ nella **riga 10**.
+
+Per accettare **una qualunque delle righe a 1**, colleghiamo i prodotti con OR:
+
+::: {.bool-equation}
+$Y=$ [$\overline{A}B$]{.bool-term .bool-c1} $+$ [$A\overline{B}$]{.bool-term .bool-c2} $=A\oplus B$.
+:::
+
+Un prodotto che contiene **tutte le variabili, ciascuna una sola volta**, dirette o negate, si chiama **mintermine**. La somma dei mintermini corrispondenti agli 1 è la **forma canonica somma di prodotti**. Un *letterale* è una variabile oppure la sua negazione: per esempio $A$ e $\overline{A}$.
 
 ### Prodotto di somme: partire dalle righe a 0
 
-Per ogni riga con uscita 0 si costruisce una somma che vale 0 **solo in quella riga**: una variabile compare diretta se vale 0, negata se vale 1. Se contiene tutte le variabili, questa somma è un **maxtermine**. Si moltiplicano poi le somme ottenute.
+Una somma logica vale 0 solo se **tutti i suoi addendi valgono 0**. Per ottenere una somma nulla in una precisa riga:
 
-| $A$ | $B$ | $Y$ | Termine selezionato |
-|---:|---:|---:|---|
-| 0 | 0 | 0 | Maxtermine $A+B$ |
-| 0 | 1 | 1 | Mintermine $\overline{A} B$ |
-| 1 | 0 | 1 | Mintermine $A\overline{B}$ |
-| 1 | 1 | 1 | Mintermine $AB$ |
+- scriviamo la variabile **diretta** se nella riga vale 0;
+- scriviamo la variabile **negata** se nella riga vale 1;
+- colleghiamo le condizioni con OR.
 
-Dalle tre righe a 1:
-
-$$Y=\overline{A} B+A\overline{B}+AB=A+B.$$
-
-Dall’unica riga a 0 si ottiene direttamente $Y=A+B$. Conviene spesso scegliere il procedimento che usa **meno righe**, ma i risultati descrivono la stessa funzione.
-
-Con ordine $AB$, e $A$ bit più significativo, questa funzione si scrive anche $Y=\Sigma m(1,2,3)=\Pi M(0)$. Gli indici identificano le righe in ordine binario, non i valori dell’uscita.
-
-::: {.callout-note collapse=true title="Il conto per esteso: dalla somma dei mintermini a OR"}
-$$\begin{aligned}
-Y&=\overline{A} B+A\overline{B}+AB\\
- &=\overline{A} B+A(\overline{B}+B)\\
- &=\overline{A} B+A\\
- &=(A+\overline{A})(A+B)\\
- &=A+B.
-\end{aligned}$$
-Nell’ultimo passaggio si usano distributività e complementazione. La tabella completa permette di verificare l’equivalenza.
+::: {.bool-table}
+| $A$ | $B$ | $Y$ | Somma nulla nella riga |
+|---:|---:|:---:|---|
+| 0 | 0 | [0]{.bool-mark .bool-c1} | [$M_0=A+B$]{.bool-term .bool-c1} |
+| 0 | 1 | 1 | — |
+| 1 | 0 | 1 | — |
+| 1 | 1 | [0]{.bool-mark .bool-c2} | [$M_3=\overline{A}+\overline{B}$]{.bool-term .bool-c2} |
 :::
+
+Nella **riga 00**, $A+B=0$. Nelle altre tre righe questa somma vale 1. Nella **riga 11**, invece, $\overline{A}+\overline{B}=0$, mentre nelle altre vale 1.
+
+Per annullare l’uscita in **una qualunque delle righe a 0**, basta che uno dei fattori sia 0: moltiplichiamo quindi le somme ottenute.
+
+::: {.bool-equation}
+$Y=$ [$\left(A+B\right)$]{.bool-term .bool-c1} $\cdot$ [$\left(\overline{A}+\overline{B}\right)$]{.bool-term .bool-c2}.
+:::
+
+Una somma che contiene tutte le variabili, ciascuna una sola volta, dirette o negate, si chiama **maxtermine**. Il prodotto dei maxtermini corrispondenti agli 0 è la **forma canonica prodotto di somme**.
+
+### Perché le due formule sono equivalenti?
+
+La prima formula vale 1 nelle righe 01 e 10; la seconda vale 0 nelle righe 00 e 11. Stiamo descrivendo **la stessa colonna di uscita** da due punti di vista.
+
+::: {.callout-note collapse=true title="Verifica algebrica dell’equivalenza"}
+$$\begin{aligned}
+(A+B)(\overline{A}+\overline{B})
+ &=A\overline{A}+A\overline{B}+B\overline{A}+B\overline{B}\\
+ &=0+A\overline{B}+\overline{A}B+0\\
+ &=\overline{A}B+A\overline{B}.
+\end{aligned}$$
+Si ottengono proprio i due mintermini selezionati nella prima tabella.
+:::
+
+Con ordine $AB$, e $A$ bit più significativo, gli indici binari 01 e 10 corrispondono a 1 e 2: si scrive $Y=\Sigma m(1,2)=\Pi M(0,3)$. Gli indici indicano le **righe**, non i valori dell’uscita.
+
+### Scegliere il procedimento più breve
+
+Se gli 1 sono pochi, conviene spesso partire dai mintermini; se gli 0 sono pochi, dai maxtermini. La forma ottenuta è corretta ma **non necessariamente semplificata**: le proprietà dell’algebra booleana permettono di trasformarla in una forma equivalente più semplice.
+
+La regola vale anche con più ingressi. Per esempio, nella riga $ABC=101$, il mintermine è $A\overline{B}C$, mentre il maxtermine è $\overline{A}+B+\overline{C}$. Il primo vale 1 solo in quella riga, il secondo vale 0 solo in quella riga.

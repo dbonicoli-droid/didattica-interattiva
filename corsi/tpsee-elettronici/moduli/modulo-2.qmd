@@ -8,21 +8,19 @@ toc-depth: 3
 
 [← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd) · [Mappa concettuale](../mappe.qmd#mappa-el-modulo-2) · [Esercizi](../esercizi-metti-insieme-il-percorso.qmd#es:modulo-2)
 
-La logica booleana descrive condizioni che possono essere vere o false e permette di progettare circuiti che prendono decisioni. L’obiettivo è passare da **specifiche → tabella di verità → espressione → semplificazione → porte logiche**.
-
-Il testo riorganizza gli [appunti di algebra booleana](/lezioni/2026-2027/2026-10-12-3a-etc-algebra-booleana.qmd) e le [lezioni su semplificazioni e tabelle](/lezioni/2026-2027/2026-09-28-3a-etc-sistemi.qmd). Gli esempi svolti mostrano il metodo; gli esercizi da risolvere sono raccolti nella pagina dedicata.
+Come si passa da condizioni espresse a parole a un circuito che le realizza? In questo modulo impariamo a rappresentare le decisioni con **variabili, tabelle ed espressioni booleane**, a semplificarle e a tradurle in porte logiche.
 
 ::: {.unit-index}
 ## In questo modulo {.unnumbered}
 
-- [Variabili, operazioni e tabelle](#ud:2.1)
+- [Algebra booleana, variabili e operazioni](#ud:2.1)
 - [Regole dell’algebra booleana](#ud:2.2)
 - [De Morgan](#ud:2.3)
 - [Semplificazioni svolte](#ud:2.4)
 - [Progetto dell’allarme](#progetto-allarme)
 :::
 
-## 1 · Variabili, operazioni e tabelle {#ud:2.1}
+## 1 · Che cos’è l’algebra booleana e come si usa {#ud:2.1}
 
 {{< include ../../../_includes/logica-operazioni.qmd >}}
 
@@ -105,12 +103,11 @@ AB+\overline{A} C+BC
 Quando $B=C=1$, almeno uno fra $AB$ e $\overline{A} C$ vale già 1. Il termine $BC$ non aggiunge nuove righe a 1.
 :::
 
-### Un metodo di controllo
+### Riconoscere che cosa si può semplificare
 
-1. Individua complementi, termini ripetuti e fattori comuni.
-2. Applica una proprietà alla volta, scrivendone il nome quando non è evidente.
-3. Controlla l’estensione delle barre e le parentesi.
-4. Confronta le tabelle della funzione iniziale e finale.
+Un fattore comune permette di raccogliere, come in $AB+AC=A(B+C)$. Una variabile e il suo complemento permettono di eliminare una dipendenza, come in $AB+A\overline{B}=A$. Un termine assorbito non aggiunge casi a quelli già coperti.
+
+Per scegliere un passaggio chiediti **quali combinazioni rendono vera l’espressione**. Dopo la trasformazione devono restare esattamente le stesse: è questa l’equivalenza che si verifica confrontando le colonne d’uscita, non la sola somiglianza delle formule.
 
 ## 5 · Un progetto completo: l’allarme di porta e finestra {#progetto-allarme}
 
@@ -139,7 +136,7 @@ Dalla tabella si ricava anche $Y=A\overline{B}C+AB\overline{C}+ABC$. La forma fa
 
 | Unità didattica | Dove è trattata |
 |---|---|
-| U.D. 2.1 / L’algebra di Boole | [Variabili, operazioni e tabelle](#ud:2.1) |
+| U.D. 2.1 / L’algebra di Boole | [Algebra booleana, variabili e operazioni](#ud:2.1) |
 | U.D. 2.2 / Principali regole dell’algebra di Boole | [Le regole](#ud:2.2) |
 | U.D. 2.3 / Leggi di De Morgan | [Negare una funzione](#ud:2.3) |
 | U.D. 2.4 / Semplificazione di espressioni booleane | [Esempi svolti](#ud:2.4) e [progetto dell’allarme](#progetto-allarme) |

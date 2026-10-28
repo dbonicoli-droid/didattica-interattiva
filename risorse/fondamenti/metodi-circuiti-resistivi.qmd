@@ -8,7 +8,7 @@ toc-depth: 3
 
 [← Fondamenti condivisi](index.qmd) · [Ohm, serie e parallelo](leggi-dei-circuiti.qmd) · [Applicazione ai sistemi](/corsi/sistemi-automatici/moduli/modulo-1.qmd#circuiti-ingresso-uscita)
 
-Questa scheda riorganizza gli [appunti sui metodi di soluzione](/lezioni/2026-2027/2026-10-17-circuiti-metodi-soluzione.qmd) e i [circuiti svolti](/lezioni/2026-2027/2026-10-17-circuiti-svolti.qmd). **Risolvere un circuito** significa determinarne le grandezze richieste, rispettando collegamenti, riferimenti e leggi fisiche. Non sempre servono tutte le tensioni e tutte le correnti.
+**Risolvere un circuito** significa determinarne le grandezze richieste, rispettando collegamenti, riferimenti e leggi fisiche. Non sempre servono tutte le tensioni e tutte le correnti.
 
 ## 1 · Prima dei conti: nodi, versi e polarità
 

@@ -872,3 +872,49 @@ main.content .classification-exercise table { display: table; width: 100%; table
 
 // Pseudocodice non evidenziato: segue il colore del tema attivo.
 main.content pre.text, main.content pre.text code { color: var(--testo); }
+
+
+/* Lettura delle tabelle booleane: ogni riga selezionata conserva il suo colore. */
+:root {
+  --bool-gap: .35rem;
+  --bool-radius: .2rem;
+  --bool-padding: .12em .4em;
+  --bool-mark-size: 1.7em;
+  --bool-input-width: 15%;
+  --bool-term-width: 55%;
+  --bool-line-height: 2.8;
+  --bool-mobile-padding: .45rem .35rem;
+}
+.bool-c1 { --bool-ink: var(--mappa-a); }
+.bool-c2 { --bool-ink: var(--mappa-c); }
+.bool-mark, .bool-term {
+  color: var(--bool-ink);
+  border: 2px solid currentColor;
+  border-radius: var(--bool-radius);
+  padding: var(--bool-padding);
+}
+.bool-mark {
+  display: inline-grid;
+  place-items: center;
+  min-width: var(--bool-mark-size);
+  min-height: var(--bool-mark-size);
+  line-height: 1;
+  font-weight: 700;
+}
+.bool-term { display: inline-block; white-space: nowrap; }
+.bool-equation { margin-block: var(--bool-gap); }
+.bool-equation p { line-height: var(--bool-line-height); }
+.bool-table { overflow-x: auto; margin-block: var(--bool-gap); }
+main.content .bool-table table { display: table; width: 100%; table-layout: fixed; }
+main.content .bool-table th:not(:last-child) { width: var(--bool-input-width); }
+main.content .bool-table col:not(:last-child) { width: var(--bool-input-width) !important; }
+main.content .bool-table col:last-child { width: var(--bool-term-width) !important; }
+main.content .bool-table th { white-space: normal; }
+@media (max-width: 600px) {
+  main.content .bool-table th, main.content .bool-table td { padding: var(--bool-mobile-padding); }
+}
+@media print {
+  .bool-c1 { --bool-ink: var(--c-elettronici-l); }
+  .bool-c2 { --bool-ink: var(--c-elettrotecnici-l); }
+  .bool-mark, .bool-term { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
