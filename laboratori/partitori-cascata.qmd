@@ -62,13 +62,99 @@ La simulazione usa resistori ideali in regime continuo, un generatore ideale di 
 
 ## Spiegazione e approfondimento
 
-::: {.callout-note collapse=true title="Spiegazione e approfondimento · Dopo l’esercitazione"}
+### Due rapporti uguali, due cascate diverse
 
-**NO SPOILER**
+Presi separatamente e con l’uscita a vuoto, i due partitori hanno i rapporti:
 
-La spiegazione sarà disponibile dopo la conclusione dell’esercitazione e la discussione in classe.
+$$H_1=\frac{v_1}{v_{in}}=\frac{R_2}{R_1+R_2},\qquad
+H_2=\frac{v_{out}}{v_2}=\frac{R_4}{R_3+R_4}.$$
+
+In entrambi i casi dell’esercitazione, le due resistenze di ciascun partitore sono uguali: **ogni circuito isolato dimezza la tensione**. Moltiplicando i due rapporti si prevede:
+
+$$H_{ideale}=H_1H_2=\frac14,\qquad
+v_{out,ideale}=\frac{v_{in}}4=1{,}25\ \mathrm{V}
+\quad\text{con }v_{in}=5\ \mathrm{V}.$$
+
+Questa previsione usa un’ipotesi: **il secondo blocco non modifica la tensione fornita dal primo**. Il collegamento elettrico dei due partitori non soddisfa esattamente questa ipotesi.
+
+### Che cosa cambia collegando i circuiti
+
+Nello schema della cascata, il ramo formato da $R_3$ e $R_4$ è collegato tra il nodo $v_1$ e lo 0 V, proprio come $R_2$. Il secondo partitore **assorbe corrente dall’uscita del primo**: costituisce un carico.
+
+Per il primo partitore, il ramo inferiore diventa quindi:
+
+$$R_L=R_2\parallel(R_3+R_4)
+=\frac{R_2(R_3+R_4)}{R_2+R_3+R_4}.$$
+
+Poiché $R_L<R_2$, la tensione $v_1$ diminuisce rispetto al valore a vuoto. Il secondo partitore continua a dividere il proprio ingresso nel rapporto $R_4/(R_3+R_4)$, ma **il suo ingresso non è più la tensione prevista per il primo partitore isolato**.
+
+$$v_1=v_{in}\frac{R_L}{R_1+R_L},\qquad
+v_{out}=v_1\frac{R_4}{R_3+R_4}.$$
+
+Sostituendo $R_L$, si ottiene il rapporto complessivo:
+
+$$\boxed{\frac{v_{out}}{v_{in}}
+=\frac{R_2R_4}{R_1R_2+(R_1+R_2)(R_3+R_4)}}.$$
+
+### Confronto con le misure
+
+Valori teorici con alimentazione a 5 V, resistori dei valori nominali e strumenti ideali:
+
+| Grandezza | Caso A | Caso B |
+|---|---:|---:|
+| $v_1$ del primo partitore isolato | 2,50 V | 2,50 V |
+| $v_{out}$ del secondo isolato, alimentato a 5 V | 2,50 V | 2,50 V |
+| $v_{out}$ previsto moltiplicando i rapporti a vuoto | 1,25 V | 1,25 V |
+| $v_1$ nella cascata | ≈ 2,494 V | ≈ 0,09615 V |
+| $v_{out}$ nella cascata | ≈ 1,247 V | ≈ 0,04808 V |
+| Rapporto reale $v_{out}/v_{in}$ | ≈ 0,2494 | ≈ 0,009615 |
+| Riduzione di $v_{out}$ rispetto alla previsione ideale | ≈ 0,249 % | ≈ 96,15 % |
+
+Nel **caso A**, il secondo partitore assorbe poca corrente e la previsione ideale è una buona approssimazione. Nel **caso B**, il secondo partitore assorbe molta più corrente dal nodo intermedio: $v_1$ si abbassa sensibilmente e l’uscita è molto inferiore alla previsione.
+
+Le differenze non richiedono resistenze non ideali o fenomeni non lineari: **anche con resistori perfettamente ohmici, il collegamento modifica le condizioni di funzionamento**. Nelle misure si aggiungono gli effetti delle tolleranze e della resistenza d’ingresso del voltmetro.
+
+### Resistenza d’ingresso e resistenza d’uscita
+
+La sola relazione ingresso–uscita a vuoto non descrive quanto un circuito carica quello che lo precede, né quanto la sua uscita risente del carico.
+
+- **Resistenza d’ingresso del secondo partitore:** vista dal nodo $v_1$, è $R_{in,2}=R_3+R_4$ (con uscita non caricata). A parità di tensione, una resistenza d’ingresso maggiore richiede meno corrente.
+- **Resistenza d’uscita del primo partitore:** per il generatore ideale usato qui è $R_{out,1}=R_1\parallel R_2$. È la resistenza vista dall’uscita dopo aver posto a zero il generatore indipendente di tensione, sostituendolo con un cortocircuito. Una resistenza d’uscita minore rende la tensione meno sensibile al carico.
+
+::: {.callout-note collapse=true title="Calcolo con il circuito equivalente di Thévenin"}
+
+Dal nodo di uscita, il primo partitore equivale a un generatore di tensione $v_{1,0}=H_1v_{in}$ in serie a $R_{out,1}$. Collegando il secondo partitore si forma un’ulteriore divisione di tensione:
+
+$$v_1=v_{1,0}\frac{R_{in,2}}{R_{out,1}+R_{in,2}}.$$
+
+Di conseguenza:
+
+$$\boxed{\frac{v_{out}}{v_{in}}
+=H_1\,\underbrace{\frac{R_{in,2}}{R_{out,1}+R_{in,2}}}_{\text{effetto del collegamento}}\,H_2}.$$
+
+| Caso | $R_{out,1}$ | $R_{in,2}$ | Fattore dovuto al carico |
+|---|---:|---:|---:|
+| A | 110 Ω | 44 kΩ | ≈ 0,9975 |
+| B | 11 kΩ | 440 Ω | ≈ 0,03846 |
+
+Nel caso A il fattore è vicino a 1; nel caso B è molto più piccolo. Si ritrovano gli stessi risultati del calcolo diretto della rete.
 
 :::
+
+### Quando possiamo moltiplicare i rapporti dei blocchi?
+
+Per approssimare la cascata mediante i due rapporti **misurati a vuoto**, serve che il secondo stadio carichi poco il primo:
+
+$$R_{in,2}\gg R_{out,1}.$$
+
+Quanto debba essere grande il rapporto dipende dall’errore accettabile. Per questi circuiti, la riduzione relativa rispetto alla previsione ideale è:
+
+$$\varepsilon=1-\frac{H_{reale}}{H_{ideale}}
+=\frac{R_{out,1}}{R_{out,1}+R_{in,2}}.$$
+
+Ad esempio, $R_{in,2}=100R_{out,1}$ dà una riduzione di circa lo 0,99 %. Un’altra soluzione, da approfondire in seguito, è interporre un **buffer**: uno stadio con elevata resistenza d’ingresso e bassa resistenza d’uscita, capace di separare elettricamente i due partitori.
+
+**Conclusione dell’esercitazione:** due sistemi con lo stesso rapporto ingresso–uscita quando sono isolati possono comportarsi diversamente in cascata. Per prevedere il collegamento occorre considerare anche lo scambio di corrente tra i blocchi e le loro resistenze d’ingresso e d’uscita.
 
 ## Collegamenti
 
