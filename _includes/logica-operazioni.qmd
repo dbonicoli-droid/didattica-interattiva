@@ -1,0 +1,26 @@
+Un ingresso logico assume due valori, **0 oppure 1**. Prima di scrivere una funzione occorre stabilire che cosa significano: per esempio, «sensore attivo = 1» e «sensore non attivo = 0». Il valore logico non è una tensione universale: i livelli elettrici ammessi dipendono dal dispositivo usato.
+
+Le tre operazioni fondamentali sono:
+
+| Operazione | Scrittura | Quando l’uscita vale 1 |
+|---|---|---|
+| NOT, negazione | $Y=\overline A$ | Quando $A=0$. |
+| AND, prodotto logico | $Y=AB=A\cdot B$ | Quando entrambi gli ingressi valgono 1. |
+| OR, somma logica | $Y=A+B$ | Quando almeno un ingresso vale 1, anche entrambi. |
+
+**La somma è logica:** $1+1=1$, non 2. La barra nega tutto ciò che ricopre: $\overline{AB}$ è diverso da $\overline A B$.
+
+![Simboli rettangolari delle porte fondamentali e delle uscite negate.](/assets/lezioni-teoria/porte.svg)
+
+Una porta è un dispositivo che realizza una funzione logica. La bolla sul terminale indica la negazione. Con due ingressi:
+
+| $A$ | $B$ | $AB$ | $A+B$ | $\overline{AB}$ (NAND) | $\overline{A+B}$ (NOR) | $A\oplus B$ (XOR) |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 |
+
+XOR vale 1 quando gli ingressi sono diversi; XNOR è la sua negazione e vale 1 quando sono uguali. Il buffer restituisce invece il valore dell’ingresso: $Y=A$.
+
+La tabella elenca **tutte** le combinazioni: con $n$ ingressi ci sono $2^n$ righe. Si usa normalmente l’ordine binario crescente. Nelle espressioni si esegue prima la negazione, poi il prodotto, infine la somma; le parentesi cambiano l’ordine.

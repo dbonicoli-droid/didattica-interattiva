@@ -10,16 +10,16 @@ subtitle: "Modulo di approfondimento"
 Il progetto collega **teoria, simulazione e realizzazione pratica**. Multisim e Ultiboard sono utilizzati nelle lezioni di laboratorio: queste due introduzioni ne richiamano lo scopo e il collegamento con il lavoro teorico.
 
 ::: {.unit-index}
-## Unità didattiche del modulo {.unnumbered}
+## In questo modulo {.unnumbered}
 
-- [U.D. 1.1 / Multisim](#ud:1.1)
-- [U.D. 1.2 / Ultiboard](#ud:1.2)
-- [U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico](#ud:1.3)
-- [U.D. 1.4 / La simbologia IEC nel disegno elettronico](#ud:1.4)
-- [U.D. 1.5 / La realizzazione del circuito elettronico](#ud:1.5)
+- [Simulare il circuito con Multisim](#ud:1.1)
+- [Progettare il PCB con Ultiboard](#ud:1.2)
+- [Dalla richiesta al progetto](#ud:1.3)
+- [Leggere uno schema elettrico](#ud:1.4)
+- [Dal montaggio alle misure](#ud:1.5)
 :::
 
-## U.D. 1.1 / Multisim {#ud:1.1}
+## 1 · Simulare il circuito con Multisim {#ud:1.1}
 
 **Multisim permette di disegnare lo schema di un circuito e simularne il comportamento.** Si scelgono i componenti, si impostano i valori e si realizzano i collegamenti; strumenti virtuali consentono di osservare tensioni, correnti e segnali.
 
@@ -29,7 +29,7 @@ La simulazione descrive un modello: il risultato dipende dai componenti e dalle 
 
 [Presentazione ufficiale di Multisim e Ultiboard](https://www.ni.com/en/support/documentation/supplemental/10/ni-multisim-and-ultiboard-academic-features.html).
 
-## U.D. 1.2 / Ultiboard {#ud:1.2}
+## 2 · Progettare il PCB con Ultiboard {#ud:1.2}
 
 **Ultiboard serve a progettare il circuito stampato**, chiamato anche **PCB** (*Printed Circuit Board*): la scheda sulla quale saranno montati e collegati i componenti.
 
@@ -39,14 +39,86 @@ La distinzione da ricordare è: **Multisim aiuta a studiare il funzionamento del
 
 [Circuit Design Suite: simulazione e progettazione del PCB](https://www.ni.com/en-in/shop/product/circuit-design-suite.html).
 
-## U.D. 1.3 / Fasi Progettuali di un sistema elettrico ed elettronico ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.3}
+## 3 · Dalla richiesta al progetto {#ud:1.3}
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.3){.wip-link}
+**Progettare significa trasformare una richiesta in una soluzione verificabile.** Prima si decide che cosa deve fare il sistema; poi si scelgono i componenti e si verifica se il comportamento ottenuto corrisponde alle specifiche.
 
-## U.D. 1.4 / La simbologia IEC nel disegno elettronico ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.4}
+| Fase | Che cosa si produce | Esempio: allarme di porta e finestra |
+|---|---|---|
+| Analisi del problema | Ingressi, uscite, vincoli e casi da distinguere. | Consenso allarme, sensore porta, sensore finestra; comando sirena. |
+| Specifiche | Frasi non ambigue e convenzioni dei segnali. | Sirena attiva solo con allarme inserito e almeno un’apertura rilevata. |
+| Modello | Tabella, espressione, schema funzionale. | $Y=A(B+C)$ con bit definiti esplicitamente. |
+| Scelta della soluzione | Componenti e collegamenti compatibili. | Una funzione OR seguita da AND; verifica di alimentazioni e livelli. |
+| Simulazione | Confronto fra risultati attesi e ottenuti. | Verifica delle otto combinazioni degli ingressi. |
+| Montaggio e collaudo | Prototipo e misure documentate. | Controllo del circuito e prova di tutte le combinazioni. |
+| Documentazione | Schema aggiornato, materiali, risultati e correzioni. | Tabella atteso/misurato e descrizione delle anomalie risolte. |
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.4){.wip-link}
+![Schema funzionale del comando di allarme, con ingressi A, B, C e uscita Y.](/assets/lezioni-teoria/allarme.svg)
 
-## U.D. 1.5 / La realizzazione del circuito elettronico ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:1.5}
+La parte di funzionamento è sviluppata nel [modulo 2](modulo-2.qmd#progetto-allarme), a partire dagli [appunti di algebra booleana](/lezioni/2026-2027/2026-10-12-3a-etc-algebra-booleana.qmd). Qui interessa il **metodo di progetto**: una formula non basta se non sono definiti i segnali e il criterio per dichiarare riuscita la prova.
 
-[Vedi nella sintesi →](../modulo-1.qmd#ud:1.5){.wip-link}
+### Specifiche complete e casi limite
+
+«La lampada deve accendersi quando serve» non è verificabile. «Con $A=1$ e $B=1$, l’uscita deve valere 1» lo è. Si deve anche stabilire che cosa succede negli altri casi, quando i comandi arrivano insieme e quando cambia un sensore.
+
+Il modello combinatorio dell’allarme non mantiene il comando dopo la richiusura delle aperture. Se si vuole il mantenimento, cambia la specifica e occorre una memoria: non basta cambiare l’ordine delle porte.
+
+## 4 · Leggere uno schema elettrico {#ud:1.4}
+
+Lo schema descrive **quali terminali sono collegati**, non la posizione fisica dei componenti. Ogni elemento ha un simbolo, un riferimento ($R_1$, $R_2$, …) e, quando necessario, un valore. Il nodo di riferimento permette di esprimere le tensioni dei punti rispetto allo stesso potenziale.
+
+![Un partitore con alimentazione, resistori, corrente e polarità dell’uscita.](/assets/lezioni-teoria/partitore-progetto.svg)
+
+Nel circuito mostrato $R_1$ e $R_2$ sono in serie; l’uscita è la tensione sul resistore inferiore. Le frecce e i segni fissano i riferimenti: una corrente o una tensione negativa indica un verso o una polarità opposti a quelli scelti.
+
+- Un punto pieno indica una giunzione; due fili che si incrociano senza giunzione esplicita non vanno interpretati automaticamente come collegati.
+- Il riferimento **0 V** non coincide necessariamente con la terra di protezione.
+- Il simbolo del componente, la sua piedinatura e il suo footprint sono informazioni diverse.
+- Per le porte logiche si possono incontrare simboli rettangolari IEC o sagomati; la funzione e la negazione vanno riconosciute in entrambi.
+
+![Porte fondamentali con simboli rettangolari e negazione sull’uscita.](/assets/lezioni-teoria/porte.svg)
+
+Per una raccolta dei simboli e delle convenzioni consulta [Leggere uno schema elettrico](/risorse/fondamenti/leggere-gli-schemi.qmd). Il riferimento della simbologia è richiamato anche nella [sintesi dell’unità](../modulo-1.qmd#ud:1.4).
+
+## 5 · Dallo schema al montaggio e alle misure {#ud:1.5}
+
+La breadboard permette di costruire un prototipo senza saldatura. Prima del montaggio si verificano i gruppi di contatti collegati internamente: le file laterali possono essere interrotte e il canale centrale separa le due metà. Non bisogna dedurre le connessioni soltanto dalla vicinanza dei fori.
+
+![Struttura dei gruppi di contatti di una breadboard.](/assets/dispense/tpsee-elettronici/figura-7.png)
+
+### Caso di riferimento: un partitore a metà tensione
+
+Per lo schema precedente scegliamo $v_{in}=5\,\mathrm V$ e $R_1=R_2=1\,\mathrm{k\Omega}$. Con uscita a vuoto:
+
+$$I=\frac{v_{in}}{R_1+R_2}=2{,}5\,\mathrm{mA},\qquad
+v_{out}=IR_2=2{,}5\,\mathrm V.$$
+
+In ciascun resistore $P=I^2R=6{,}25\,\mathrm{mW}$. Il confronto fra questa potenza e quella nominale fa parte della scelta dei componenti.
+
+| Passaggio | Controllo |
+|---|---|
+| A circuito non alimentato | Confronta i nodi dello schema con i contatti della breadboard; controlla valori e collegamenti. |
+| Preparazione dell’alimentazione | Imposta tensione e limite di corrente coerenti con il circuito. |
+| Misura della tensione | Collega il voltmetro in parallelo, con i puntali riferiti ai nodi dichiarati. |
+| Misura della corrente | Inserisci l’amperometro in serie al ramo, usando morsetto e portata corretti; non collegarlo direttamente ai capi dell’alimentatore. |
+| Confronto | Annota atteso e misurato con unità e condizioni della prova; considera tolleranze e strumenti. |
+
+Il collaudo non consiste nel vedere un numero plausibile: deve verificare il requisito. Se il partitore deve dimezzare l’ingresso, occorre confrontare $v_{out}/v_{in}$ con $1/2$, dichiarando lo scostamento ammesso.
+
+### Che cosa cambia collegando un carico
+
+Il voltmetro ideale non assorbe corrente; un altro circuito può assorbirne. Il rapporto calcolato a vuoto non è quindi sempre conservato dopo il collegamento. Il [laboratorio dei partitori in cascata](/laboratori/partitori-cascata.qmd#spiegazione-e-approfondimento) permette di confrontare previsione, simulazione e misure.
+
+Le attività operative, incluse le procedure di Multisim e Ultiboard, vengono svolte in laboratorio. Queste pagine forniscono il quadro teorico per interpretarle e documentarle.
+
+[Esercizi sul progetto e sul collaudo →](../esercizi-metti-insieme-il-percorso.qmd#es:modulo-1)
+
+## Corrispondenza con il programma {#programma}
+
+| Unità didattica | Dove è trattata |
+|---|---|
+| U.D. 1.1 / Multisim | [Introduzione allo strumento](#ud:1.1) |
+| U.D. 1.2 / Ultiboard | [Introduzione al PCB](#ud:1.2) |
+| U.D. 1.3 / Fasi progettuali | [Dalla richiesta al progetto](#ud:1.3) |
+| U.D. 1.4 / Simbologia IEC | [Leggere uno schema](#ud:1.4) |
+| U.D. 1.5 / Realizzazione del circuito elettronico | [Montaggio e misure](#ud:1.5) |

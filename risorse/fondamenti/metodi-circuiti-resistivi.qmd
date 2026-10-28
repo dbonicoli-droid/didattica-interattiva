@@ -1,0 +1,102 @@
+---
+sidebar: risorse
+stato: bozza
+title: "Risolvere un circuito resistivo"
+description: "Dai circuiti equivalenti alle equazioni di Kirchhoff, con esempi e controlli dei risultati."
+toc-depth: 3
+---
+
+[← Fondamenti condivisi](index.qmd) · [Ohm, serie e parallelo](leggi-dei-circuiti.qmd) · [Applicazione ai sistemi](/corsi/sistemi-automatici/moduli/modulo-1.qmd#circuiti-ingresso-uscita)
+
+Questa scheda riorganizza gli [appunti sui metodi di soluzione](/lezioni/2026-2027/2026-10-17-circuiti-metodi-soluzione.qmd) e i [circuiti svolti](/lezioni/2026-2027/2026-10-17-circuiti-svolti.qmd). **Risolvere un circuito** significa determinarne le grandezze richieste, rispettando collegamenti, riferimenti e leggi fisiche. Non sempre servono tutte le tensioni e tutte le correnti.
+
+## 1 · Prima dei conti: nodi, versi e polarità
+
+1. Riconosci i nodi: tutti i punti collegati da filo ideale hanno lo stesso potenziale.
+2. Scegli il riferimento, per esempio $V_B=0$.
+3. Assegna versi alle correnti e polarità alle tensioni.
+4. Cerca resistenze in serie o parallelo in base ai nodi, non alla forma del disegno.
+
+Scriviamo $V_{AB}=V_A-V_B$. Con $B$ come riferimento, $V_{AB}=V_A$. Una corrente calcolata negativa circola nel verso opposto alla freccia scelta: non è necessariamente un errore.
+
+## 2 · Ridurre il circuito, poi ricostruire le grandezze
+
+![Rete con generatore V0, R1 in serie al parallelo di R2 e del ramo R3 più R4 parallelo R5.](/assets/lezioni-teoria/rete-cinque-resistori.svg)
+
+Lo schema contiene un generatore ideale $V_0$; i resistori sono costanti. Nell’esempio poniamo $V_0=160$ V e tutte le resistenze uguali a $80\,\Omega$. **Sono valori per il calcolo teorico, non una consegna di montaggio su breadboard.**
+
+Si procede dal gruppo più interno verso il generatore:
+
+$$R_{45}=R_4\parallel R_5=40\,\Omega,\qquad
+R_{345}=R_3+R_{45}=120\,\Omega,$$
+$$R_A=R_2\parallel R_{345}=48\,\Omega,\qquad
+R_{eq}=R_1+R_A=128\,\Omega.$$
+
+La corrente del generatore è $I_1=V_0/R_{eq}=1{,}25$ A. Tornando al circuito originale:
+
+$$V_{AB}=I_1R_A=60\,\mathrm V,\qquad
+I_2=\frac{60}{80}=0{,}75\,\mathrm A,$$
+$$I_3=\frac{60}{120}=0{,}50\,\mathrm A,\qquad
+V_{CB}=I_3R_{45}=20\,\mathrm V,$$
+$$I_4=I_5=\frac{20}{80}=0{,}25\,\mathrm A.$$
+
+**Controlli:** al nodo A, $1{,}25=0{,}75+0{,}50$ A; al nodo C, $0{,}50=0{,}25+0{,}25$ A. Sul percorso generatore–$R_1$–$R_3$–$R_4$, $160=100+40+20$ V.
+
+Il circuito equivalente conserva il comportamento ai morsetti considerati, ma non mostra direttamente tutte le correnti interne. Per ritrovarle occorre tornare ai gruppi sostituiti.
+
+## 3 · Lo stesso circuito con le tensioni nodali
+
+Non tutte le reti si riducono con serie e parallelo. Le leggi di Kirchhoff permettono di scrivere equazioni anche quando una riduzione non è evidente.
+
+Nel circuito precedente le incognite nodali sono $V_A,V_C$, con $V_B=0$ e il nodo superiore del generatore a $V_0$. Sommando le correnti uscenti:
+
+$$\frac{V_A-V_0}{R_1}+\frac{V_A}{R_2}+\frac{V_A-V_C}{R_3}=0,$$
+$$\frac{V_C-V_A}{R_3}+\frac{V_C}{R_4}+\frac{V_C}{R_5}=0.$$
+
+Per resistenze tutte uguali, diventano $3V_A-V_C=V_0$ e $-V_A+3V_C=0$. Ne segue $V_C=V_0/8$ e $V_A=3V_0/8$: con 160 V ritroviamo 20 V e 60 V. **Due metodi indipendenti devono concordare.**
+
+Per ricavare le correnti si applica poi Ohm fra i nodi, rispettando la freccia: $I_3=(V_A-V_C)/R_3$.
+
+## 4 · Scegliere il metodo
+
+| Metodo | Idea | Quando è utile |
+|---|---|---|
+| Serie, parallelo e partitori | Ridurre gruppi equivalenti e tornare al circuito originale. | Reti riducibili; poche grandezze richieste. |
+| Kirchhoff generale | Equazioni dei nodi e delle maglie indipendenti. | Comprendere i vincoli e controllare i risultati. |
+| Correnti di maglia | Assegnare una corrente a ogni maglia indipendente di una rete planare. | Ridurre il numero di incognite rispetto alle correnti di tutti i rami. |
+| Tensioni nodali | Esprimere le correnti tramite i potenziali dei nodi. | Reti con pochi nodi incogniti. |
+| Sovrapposizione degli effetti | Calcolare il contributo di un generatore indipendente alla volta e sommare. | Reti lineari con più generatori. |
+| Thévenin o Norton | Sostituire una rete lineare a due morsetti con un generatore e una resistenza equivalente. | Studiare un carico o il collegamento fra stadi. |
+| Millman | Calcolare il potenziale di un nodo comune a rami in parallelo compatibili con il metodo. | Rami con generatori di tensione e resistenze in serie. |
+| Trasformazioni stella–triangolo | Sostituire un gruppo a tre morsetti con uno equivalente. | Collegamenti non riducibili direttamente con serie e parallelo. |
+
+La tabella è un orientamento: le procedure complete vanno studiate prima di applicarle. Il numero di equazioni utili dipende dalle incognite e dalle equazioni indipendenti, non dal numero di formule che si riescono a scrivere.
+
+## 5 · Sovrapposizione: che cosa si spegne?
+
+In una rete lineare, per trovare una tensione o una corrente si sommano algebricamente i contributi dei generatori indipendenti. Quando si pone a zero un generatore **ideale**:
+
+- generatore indipendente di tensione → cortocircuito;
+- generatore indipendente di corrente → circuito aperto.
+
+Gli eventuali generatori dipendenti restano attivi. **Le potenze non si sommano con la sovrapposizione**, perché dipendono quadraticamente dalle grandezze elettriche. I resistori non vengono eliminati quando si spegne un generatore.
+
+## 6 · Thévenin, Norton e carico
+
+Una rete lineare vista da due morsetti può essere descritta da una tensione a vuoto $V_{Th}$ e una resistenza $R_{Th}$ in serie; l’equivalente di Norton usa una corrente $I_N=V_{Th}/R_{Th}$ in parallelo alla stessa resistenza, quando $R_{Th}$ è finita e diversa da zero.
+
+![Primo partitore isolato e successivo collegamento del secondo stadio.](/assets/partitori/cascata.svg)
+
+Per il primo partitore dello schema, $V_{Th}=v_{in}R_2/(R_1+R_2)$ e $R_{Th}=R_1\parallel R_2$. La [derivazione con il carico](/laboratori/partitori-cascata.qmd#spiegazione-e-approfondimento) mostra perché il valore a vuoto non è sempre conservato dopo il collegamento.
+
+Per reti contenenti solo resistori e generatori indipendenti, si calcola la resistenza equivalente ponendo a zero questi generatori. In presenza di generatori dipendenti occorre mantenere i loro vincoli e, se necessario, usare una sorgente di prova.
+
+## 7 · Un risultato da controllare
+
+- Unità coerenti: tensioni in V, correnti in A, resistenze in Ω.
+- Legge dei nodi e legge delle maglie rispettate.
+- Correnti e tensioni coerenti con le polarità scelte.
+- Casi limite sensati: un ramo aperto non assorbe corrente; un cortocircuito ideale ha tensione nulla.
+- Potenza erogata e assorbita in equilibrio, con convenzioni dei segni dichiarate.
+
+[Esercizi sui circuiti e sulle relazioni ingresso–uscita](/corsi/sistemi-automatici/esercizi.qmd#es:circuiti-blocchi).

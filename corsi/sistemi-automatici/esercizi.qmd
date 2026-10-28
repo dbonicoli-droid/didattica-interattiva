@@ -13,6 +13,12 @@ Gli esercizi stanno qui, divisi per modulo, così puoi usarli per ripassare senz
 
 Le tabelle interattive di classificazione restano dentro il [Modulo 1](moduli/modulo-1.qmd#ud:1.3), accanto alla teoria che esercitano.
 
+## Indice degli esercizi
+
+- [Modulo 1: sistemi e modelli](#es:modulo-1); [circuiti, blocchi e algoritmi](#es:circuiti-blocchi).
+- [Modulo 2: logica](#es:modulo-2); [progettazione dei comandi](#es:comandi-combinatori).
+- [Moduli 5 e 6: sequenze, tempi e misure](#es:moduli-5-6).
+
 ## Modulo 1 · Fondamenti di teoria dei sistemi {#es:modulo-1}
 
 ::: {.provenienza}
@@ -43,17 +49,47 @@ Da [Modulo 1 — Fondamenti di teoria dei sistemi](moduli/modulo-1.qmd)
 
 :::
 
+### Circuiti e schemi a blocchi dalle lezioni {#es:circuiti-blocchi}
+
+::: {.provenienza}
+Da [relazioni ingresso–uscita](moduli/modulo-1.qmd#circuiti-ingresso-uscita), [schemi a blocchi](moduli/modulo-1.qmd#schemi-a-blocchi) e [algoritmi](moduli/modulo-1.qmd#strutture-algoritmi) del Modulo 1.
+:::
+
+**6 · Circuito come sistema.** Nel [circuito a tre resistori del modulo](moduli/modulo-1.qmd#circuiti-ingresso-uscita), poni $R_1=200\,\Omega$, $R_2=R_3=400\,\Omega$ e $v_{in}=10$ V. Ricava prima le espressioni di $V_{AB}/v_{in}$ e $I_3/v_{in}$, poi i valori di $V_{AB},I_1,I_2,I_3$. Specifica le unità dei due rapporti.
+
+**7 · Dai blocchi all’espressione.** Nello [schema combinato del modulo](moduli/modulo-1.qmd#schemi-a-blocchi), inverti i segni del sommatore: contributo $k_1u_1$ negativo, contributo $k_2u_2$ positivo. Scrivi $y$ e calcola il risultato con $k_1=2,k_2=3,k_3=4,u_1=5,u_2=1$.
+
+**8 · Dall’espressione ai blocchi.** Rappresenta $y=(2u_1-3u_2)u_3$. Indica quali blocchi servono e stabilisci se il sistema, considerato rispetto ai tre ingressi, è lineare e se ha memoria.
+
+**9 · Cascata.** Due partitori isolati dimezzano l’ingresso. Conosci solo questi due rapporti: puoi concludere che il collegamento elettrico dimezza due volte? Quali altre informazioni servono?
+
+**10 · Algoritmo.** Un programma legge un sensore e conta una scatola a ogni lettura alta. La stessa scatola mantiene il sensore alto per dieci letture. Che errore produce il programma? Descrivi una correzione senza introdurre un ritardo arbitrario.
+
+::: {.callout-tip collapse=true title="Soluzioni · Circuiti, blocchi e algoritmi"}
+
+**6.** $R_p=R_2\parallel R_3=200\,\Omega$; $V_{AB}/v_{in}=R_p/(R_1+R_p)=1/2$, adimensionale. $I_3/v_{in}=R_p/[R_3(R_1+R_p)]=1/(800\,\Omega)=1{,}25$ mS. $V_{AB}=5$ V; $I_1=25$ mA; $I_2=I_3=12{,}5$ mA.
+
+**7.** $y=k_3(-k_1u_1+k_2u_2)=4(-10+3)=-28$.
+
+**8.** Due guadagni, un sommatore con segni $+,-$ e un moltiplicatore finale. È senza memoria ma non lineare rispetto all’insieme dei tre ingressi: raddoppiandoli tutti l’uscita quadruplica, invece di raddoppiare.
+
+**9.** No: il secondo circuito può caricare il primo. Servono almeno le condizioni di carico e le resistenze d’ingresso e d’uscita, oppure lo schema completo.
+
+**10.** Conta dieci scatole invece di una. Dopo aver contato l’attivazione, attendi il ritorno del sensore a 0 prima di accettare una nuova scatola; in alternativa riconosci solo il fronte 0→1, conservando la lettura precedente.
+
+:::
+
 ## Modulo 2 · Elettronica digitale {#es:modulo-2}
 
 ::: {.provenienza}
-Da [Modulo 2 — Elettronica digitale](modulo-2.qmd)
+Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd)
 :::
 
 **1 · Logica.** Semplifica $F=\overline AB+AB$. Scrivi anche $\overline F$.
 
-**2 · [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).** Con ordine $ABC$, minimizza $G=\Sigma m(0,1,4,5)$.
+**2 · Attività successiva: [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).** Con ordine $ABC$, minimizza $G=\Sigma m(0,1,4,5)$.
 
-**3 · Metodo tabellare.** Semplifica la funzione che vale 1 nelle righe 000, 001, 100 e 101. Scrivi le combinazioni intermedie con i trattini. Il procedimento completo è nella [scheda su Quine–McCluskey](approfondimenti.qmd#app:quine).
+**3 · Attività successiva: metodo tabellare.** Semplifica la funzione che vale 1 nelle righe 000, 001, 100 e 101. Scrivi le combinazioni intermedie con i trattini. Il procedimento completo è nella [scheda su Quine–McCluskey](approfondimenti.qmd#app:quine).
 
 ::: {#es:soluzioni-2 .callout-tip collapse=true title="Soluzioni del Modulo 2"}
 
@@ -62,6 +98,28 @@ Da [Modulo 2 — Elettronica digitale](modulo-2.qmd)
 **2.** Gli indici hanno sempre $B=0$, quindi $G=\overline B$.
 
 **3.** Le coppie 000/001 e 100/101 diventano `00-` e `10-`. Combinandole si ottiene `-0-`: resta soltanto $B=0$, quindi $F=\overline B$.
+
+:::
+
+### Progettare i comandi {#es:comandi-combinatori}
+
+::: {.provenienza}
+Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd#ud:2.7) e dagli [esercizi per la prima verifica](/lezioni/2026-2027/2026-10-22-esercizi-prima-verifica.qmd).
+:::
+
+**4 · Irrigazione.** Usa le convenzioni e lo [schema del modulo](moduli/modulo-2.qmd#ud:2.7): $G=1$ guasto, $S=1$ terreno umido, $I=1$ richiesta manuale. La coltura 1 si irriga automaticamente con terreno asciutto; la coltura 2 solo manualmente e con terreno asciutto. Un guasto deve spegnere la pompa e chiudere entrambe le valvole. Ricava le tre espressioni, la tabella completa e le porte necessarie.
+
+**5 · Cisterna senza memoria.** Usa lo [schema dell’impianto nel laboratorio](/laboratori/cisterna.qmd): chiama $F=1$ la segnalazione di pieno, $V=1$ quella di vuoto, $R=1$ la leva di riempimento attiva e $P=1$ quella di prelievo attiva. Il pieno vieta il riempimento; il vuoto vieta il prelievo e forza il riempimento. Negli altri casi valgono le leve. Se entrambi i sensori sono attivi, stabilisci esplicitamente il comportamento prima di scrivere le funzioni. Non richiedere che il riempimento automatico continui fino al pieno dopo la scomparsa del vuoto.
+
+**6 · Dalla tabella.** Con ordine $ABC$, un’uscita vale 1 nelle righe 010 e 011. Ricava mintermini e funzione semplificata; indica quali ingressi non influenzano il risultato.
+
+::: {.callout-tip collapse=true title="Soluzioni · Comandi combinatori"}
+
+**4.** $P=\overline G$, $Y_1=\overline G\,\overline S$, $Y_2=\overline G I\overline S$. In ordine $GIS=000,001,010,011,100,101,110,111$, le terne $(P,Y_1,Y_2)$ sono $(1,1,0)$, $(1,0,0)$, $(1,1,1)$, $(1,0,0)$, poi quattro volte $(0,0,0)$. Servono negazioni di $G,S$ e prodotti logici; una negazione può essere condivisa da più rami.
+
+**5.** Una scelta prudenziale per la combinazione incoerente $F=V=1$ è chiudere entrambe le valvole, dichiarandola nella specifica. Le funzioni che rispettano questa scelta e i casi coerenti sono $E_{in}=\overline F(R+V)$ ed $E_{out}=\overline V P$. Per $F=V=1$ entrambe valgono 0; al pieno senza vuoto è ancora possibile prelevare. Quando $V$ torna a 0 e $R=0$, il riempimento si interrompe: proseguire fino al pieno richiederebbe memoria. Le convenzioni $F,V$ sono quelle dichiarate nell’esercizio; se un sensore fisico fornisce un livello attivo basso occorre convertire il suo segnale.
+
+**6.** $Y=\overline AB\overline C+\overline ABC=\overline AB(\overline C+C)=\overline AB$. Il risultato non dipende da $C$.
 
 :::
 

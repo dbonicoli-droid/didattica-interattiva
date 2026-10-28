@@ -1,0 +1,35 @@
+Una tabella permette di ricavare una funzione con due procedimenti equivalenti.
+
+### Somma di prodotti: partire dalle righe a 1
+
+Per ogni riga con uscita 1 si costruisce un prodotto che vale 1 **solo in quella riga**: una variabile compare diretta se vale 1, negata se vale 0. Se contiene tutte le variabili, questo prodotto è un **mintermine**. Si sommano poi i prodotti ottenuti.
+
+### Prodotto di somme: partire dalle righe a 0
+
+Per ogni riga con uscita 0 si costruisce una somma che vale 0 **solo in quella riga**: una variabile compare diretta se vale 0, negata se vale 1. Se contiene tutte le variabili, questa somma è un **maxtermine**. Si moltiplicano poi le somme ottenute.
+
+| $A$ | $B$ | $Y$ | Termine selezionato |
+|---:|---:|---:|---|
+| 0 | 0 | 0 | Maxtermine $A+B$ |
+| 0 | 1 | 1 | Mintermine $\overline A B$ |
+| 1 | 0 | 1 | Mintermine $A\overline B$ |
+| 1 | 1 | 1 | Mintermine $AB$ |
+
+Dalle tre righe a 1:
+
+$$Y=\overline A B+A\overline B+AB=A+B.$$
+
+Dall’unica riga a 0 si ottiene direttamente $Y=A+B$. Conviene spesso scegliere il procedimento che usa **meno righe**, ma i risultati descrivono la stessa funzione.
+
+Con ordine $AB$, e $A$ bit più significativo, questa funzione si scrive anche $Y=\Sigma m(1,2,3)=\Pi M(0)$. Gli indici identificano le righe in ordine binario, non i valori dell’uscita.
+
+::: {.callout-note collapse=true title="Il conto per esteso: dalla somma dei mintermini a OR"}
+$$\begin{aligned}
+Y&=\overline A B+A\overline B+AB\\
+ &=\overline A B+A(\overline B+B)\\
+ &=\overline A B+A\\
+ &=(A+\overline A)(A+B)\\
+ &=A+B.
+\end{aligned}$$
+Nell’ultimo passaggio si usano distributività e complementazione. La tabella completa permette di verificare l’equivalenza.
+:::

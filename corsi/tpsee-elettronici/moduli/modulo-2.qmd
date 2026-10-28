@@ -1,42 +1,145 @@
 ---
-stato: da-scrivere
+sidebar: tpsee-elettronici
+stato: bozza
 title: "Modulo 2 / Elementi di logica"
-subtitle: "Modulo di approfondimento"
+subtitle: "Dalle condizioni di un problema alle espressioni booleane"
+toc-depth: 3
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd) · [Mappa concettuale](../mappe.qmd#mappa-el-modulo-2)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd) · [Mappa concettuale](../mappe.qmd#mappa-el-modulo-2) · [Esercizi](../esercizi-metti-insieme-il-percorso.qmd#es:modulo-2)
 
-::: {.callout-note icon=false}
-## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
+La logica booleana descrive condizioni che possono essere vere o false e permette di progettare circuiti che prendono decisioni. L’obiettivo è passare da **specifiche → tabella di verità → espressione → semplificazione → porte logiche**.
 
-Qui trovi per ora solo la struttura: i titoli delle unità didattiche e i rimandi. Le spiegazioni, gli esempi e gli esercizi arriveranno con lo svolgimento delle lezioni. La **sintesi del programma** è invece già scritta.
-
-[Vai alla sintesi del modulo 2 →](../modulo-2.qmd){.btn .btn-primary}
-
-Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
-:::
+Il testo riorganizza gli [appunti di algebra booleana](/lezioni/2026-2027/2026-10-12-3a-etc-algebra-booleana.qmd) e le [lezioni su semplificazioni e tabelle](/lezioni/2026-2027/2026-09-28-3a-etc-sistemi.qmd). Gli esempi svolti mostrano il metodo; gli esercizi da risolvere sono raccolti nella pagina dedicata.
 
 ::: {.unit-index}
-## Unità didattiche del modulo {.unnumbered}
+## In questo modulo {.unnumbered}
 
-- [U.D. 2.1 / L'algebra di Boole](#ud:2.1)
-- [U.D. 2.2 / Principali regole dell'algebra di Boole](#ud:2.2)
-- [U.D. 2.3 / Leggi di De Morgan](#ud:2.3)
-- [U.D. 2.4 / Semplificazione di espressioni booleane](#ud:2.4)
+- [Variabili, operazioni e tabelle](#ud:2.1)
+- [Regole dell’algebra booleana](#ud:2.2)
+- [De Morgan](#ud:2.3)
+- [Semplificazioni svolte](#ud:2.4)
+- [Progetto dell’allarme](#progetto-allarme)
 :::
 
-## U.D. 2.1 / L'algebra di Boole ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.1}
+## 1 · Variabili, operazioni e tabelle {#ud:2.1}
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.1){.wip-link}
+{{< include ../../../_includes/logica-operazioni.qmd >}}
 
-## U.D. 2.2 / Principali regole dell'algebra di Boole ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.2}
+### Dall’espressione alla tabella
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.2){.wip-link}
+Per $Y=A+\overline A B$, calcola prima $\overline A$, poi $\overline A B$, infine la somma. Una colonna intermedia evita di confondere la negazione del solo ingresso con quella del prodotto.
 
-## U.D. 2.3 / Leggi di De Morgan ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.3}
+| $A$ | $B$ | $\overline A$ | $\overline A B$ | $Y=A+\overline A B$ |
+|---:|---:|---:|---:|---:|
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.3){.wip-link}
+La colonna finale coincide con OR. La tabella dimostra che $A+\overline A B=A+B$, prima ancora di scegliere le porte per realizzarla.
 
-## U.D. 2.4 / Semplificazione di espressioni booleane ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.4}
+### Dalla tabella all’espressione
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.4){.wip-link}
+{{< include ../../../_includes/logica-canoniche.qmd >}}
+
+## 2 · Le regole per trasformare una funzione {#ud:2.2}
+
+{{< include ../../../_includes/logica-identita.qmd >}}
+
+**Semplificare** significa cambiare la forma, preservando l’uscita per ogni ingresso. Una scrittura più corta può richiedere meno porte o meno ingressi delle porte; non garantisce da sola il miglior circuito reale sotto ogni aspetto.
+
+## 3 · Negare una funzione: De Morgan {#ud:2.3}
+
+Le due leggi fondamentali sono:
+
+$$\boxed{\overline{AB}=\overline A+\overline B},\qquad
+\boxed{\overline{A+B}=\overline A\,\overline B}.$$
+
+**Negare un AND** significa chiedere che almeno una condizione non sia verificata. **Negare un OR** significa chiedere che nessuna delle due sia verificata.
+
+Per togliere una barra su un’intera espressione, si scambiano AND e OR e si negano gli operandi; con più livelli si procede dall’esterno verso l’interno:
+
+$$\overline{A(B+C)}=\overline A+\overline{B+C}
+=\overline A+\overline B\,\overline C.$$
+
+Non basta mettere la barra su ogni lettera lasciando invariati gli operatori. Esempio: con $A=B=0$, $\overline{A+B}=1$ mentre $\overline A+\overline B=1$; questa sola riga non distingue le formule, ma con $A=1,B=0$ i risultati sono rispettivamente 0 e 1. **Una riga può smentire un’identità; per verificarla con la tabella servono tutte le righe.**
+
+## 4 · Semplificare un passaggio alla volta {#ud:2.4}
+
+### Esempio 1: una condizione ridondante
+
+$$A+\overline A B=(A+\overline A)(A+B)=1\cdot(A+B)=A+B.$$
+
+Si usa la distributività della somma sul prodotto, poi la complementazione.
+
+### Esempio 2: raccogliere e assorbire
+
+$$AB+\overline A B+AC=B(A+\overline A)+AC=B+AC.$$
+
+Il termine $AC$ non è assorbito da $B$: per $B=0,A=C=1$ serve a mantenere l’uscita a 1.
+
+### Esempio 3: usare anche la distributività booleana
+
+$$\begin{aligned}
+AB+AC+A\overline B\,\overline C
+ &=A(B+C+\overline B\,\overline C)\\
+ &=A\bigl(B+C+\overline{B+C}\bigr)\\
+ &=A.
+\end{aligned}$$
+
+Qui De Morgan permette di riconoscere una condizione e il suo complemento.
+
+### Esempio 4: un termine di consenso
+
+$$AB+\overline A C+BC=AB+\overline A C.$$
+
+::: {.callout-note collapse=true title="Perché BC è ridondante"}
+Si inserisce $A+\overline A=1$ nel termine $BC$:
+$$\begin{aligned}
+AB+\overline A C+BC
+ &=AB+\overline A C+ABC+\overline A BC\\
+ &=AB(1+C)+\overline A C(1+B)\\
+ &=AB+\overline A C.
+\end{aligned}$$
+Quando $B=C=1$, almeno uno fra $AB$ e $\overline A C$ vale già 1. Il termine $BC$ non aggiunge nuove righe a 1.
+:::
+
+### Un metodo di controllo
+
+1. Individua complementi, termini ripetuti e fattori comuni.
+2. Applica una proprietà alla volta, scrivendone il nome quando non è evidente.
+3. Controlla l’estensione delle barre e le parentesi.
+4. Confronta le tabelle della funzione iniziale e finale.
+
+## 5 · Un progetto completo: l’allarme di porta e finestra {#progetto-allarme}
+
+Definiamo $A=1$ se l’allarme è inserito, $B=1$ se la porta è aperta, $C=1$ se la finestra è aperta. L’uscita $Y=1$ comanda la sirena. La specifica è: **la sirena suona se l’allarme è inserito e almeno una delle due aperture è rilevata**.
+
+![La porta e la finestra entrano in una porta OR; il risultato e il consenso A entrano in AND.](/assets/lezioni-teoria/allarme.svg)
+
+$$Y=A(B+C).$$
+
+| $A$ | $B$ | $C$ | $Y$ |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
+
+Dalla tabella si ricava anche $Y=A\overline BC+AB\overline C+ABC$. La forma fattorizzata realizza lo stesso comportamento con una OR e una AND. Il modello è **combinatorio**: non ricorda un’intrusione passata e la sirena si spegne se tutte le aperture vengono richiuse. Per mantenerla attiva servirebbe memoria, non prevista da questo esercizio.
+
+[Allenati con le semplificazioni e i problemi di progetto →](../esercizi-metti-insieme-il-percorso.qmd#es:modulo-2)
+
+## Corrispondenza con il programma {#programma}
+
+| Unità didattica | Dove è trattata |
+|---|---|
+| U.D. 2.1 / L’algebra di Boole | [Variabili, operazioni e tabelle](#ud:2.1) |
+| U.D. 2.2 / Principali regole dell’algebra di Boole | [Le regole](#ud:2.2) |
+| U.D. 2.3 / Leggi di De Morgan | [Negare una funzione](#ud:2.3) |
+| U.D. 2.4 / Semplificazione di espressioni booleane | [Esempi svolti](#ud:2.4) e [progetto dell’allarme](#progetto-allarme) |

@@ -7,6 +7,75 @@ title: "Esercizi / Metti insieme il percorso"
 
 []{#sec:sintesi}
 
+## Indice degli esercizi
+
+- [Modulo 1: progetto e collaudo](#es:modulo-1).
+- [Modulo 2: algebra booleana e comandi](#es:modulo-2).
+- [Progetto complessivo: selettore con indicazione luminosa](#sec:progetto).
+- [Autoverifica sull’intero percorso](#sec:sintesi-domande).
+
+## Modulo 1 · Progetto, simulazione e collaudo {#es:modulo-1}
+
+::: {.provenienza}
+Da [Modulo 1 — Il progetto di sistemi elettrici ed elettronici](moduli/modulo-1.qmd).
+:::
+
+**1.** Un allarme deve attivare una sirena solo se è inserito e almeno uno dei due sensori rileva un’apertura. Definisci i segnali, scrivi il requisito e indica quali prove devono essere eseguite per un collaudo completo.
+
+**2.** Nel [partitore del modulo 1](moduli/modulo-1.qmd#ud:1.5), con alimentazione a 5 V, $R_1=1\,\mathrm{k\Omega}$ e $R_2=2\,\mathrm{k\Omega}$, calcola corrente, uscita a vuoto e potenze dissipate. Indica come collegare voltmetro e amperometro.
+
+**3.** Uno schema è stato simulato correttamente. È sufficiente per affermare che il PCB progettato è pronto e che il montaggio funzionerà? Distingui i controlli sul funzionamento da quelli sulle connessioni e sul layout.
+
+::: {.callout-tip collapse=true title="Soluzioni · Modulo 1"}
+
+**1.** Per esempio $A$ allarme inserito, $B$ porta aperta, $C$ finestra aperta, $Y$ sirena attiva. $Y=A(B+C)$. Occorrono le otto combinazioni, comprese disinserimento con sensori attivi e inserimento con entrambe le aperture chiuse. Non si richiede mantenimento della sirena.
+
+**2.** $I=5/3000\approx1{,}667$ mA, $v_{out}=IR_2\approx3{,}333$ V; $P_1\approx2{,}778$ mW e $P_2\approx5{,}556$ mW. Voltmetro in parallelo fra uscita e riferimento; amperometro in serie al ramo.
+
+**3.** No: simulazione e layout rispondono a verifiche diverse. Servono corrispondenza fra schema e collegamenti, impronte e piedinature corrette, controllo del PCB, del montaggio e misure sul prototipo.
+
+:::
+
+## Modulo 2 · Algebra booleana e progetto combinatorio {#es:modulo-2}
+
+::: {.provenienza}
+Da [Modulo 2 — Elementi di logica](moduli/modulo-2.qmd), con riferimento alle [lezioni condivise](/lezioni/2026-2027/2026-10-12-3a-etc-algebra-booleana.qmd).
+:::
+
+**1 · Semplifica**, indicando le proprietà usate:
+
+a. $A^2+\overline A B$;
+b. $AB+\overline A B+AC$;
+c. $AB+AC+A\overline B\,\overline C$;
+d. $AB+\overline A C+BC$;
+e. $(A+B)(A+\overline B)$.
+
+**2 · Dalla tabella alla funzione.** Con ordine $ABC$, $Y$ vale 1 nelle righe 001, 011, 101 e 111. Ricava la somma dei mintermini, il prodotto dei maxtermini e una forma semplificata.
+
+**3 · Negazione.** Trova $\overline Y$ per $Y=A(B+C)$ con De Morgan. Verifica le due colonne su tutte le combinazioni.
+
+**4 · Due gruppi di riscaldamento.** Due richieste $S_1,S_2$ comandano due gruppi: $Y_1=S_1+S_2$, $Y_2=S_2$. La spia di guasto $G$ deve attivarsi quando il secondo sensore richiede calore ma il primo no: $G=\overline S_1S_2$. Modifica i comandi affinché il guasto blocchi entrambi i gruppi; semplifica i risultati.
+
+::: {.callout-tip collapse=true title="Soluzioni · Modulo 2"}
+
+**1a.** $A^2=A$, quindi $A+\overline A B=A+B$.
+
+**1b.** $B(A+\overline A)+AC=B+AC$.
+
+**1c.** $A(B+C+\overline{B+C})=A$.
+
+**1d.** Inserendo $1=A+\overline A$ nel termine $BC$, si ottengono $ABC$ e $\overline A BC$, assorbiti rispettivamente da $AB$ e $\overline A C$: resta $AB+\overline A C$.
+
+**1e.** $A+B\overline B=A$ per distributività booleana.
+
+**2.** $Y=\overline A\overline BC+\overline ABC+A\overline BC+ABC=C$. Il prodotto canonico è $(A+B+C)(A+\overline B+C)(\overline A+B+C)(\overline A+\overline B+C)=C$.
+
+**3.** $\overline Y=\overline A+\overline B\,\overline C$. Le uscite sono complementari in tutte le righe: $Y$ vale 1 solo per 101, 110, 111.
+
+**4.** $Y_1'=(S_1+S_2)\overline G=(S_1+S_2)(S_1+\overline S_2)=S_1$; $Y_2'=S_2\overline G=S_2(S_1+\overline S_2)=S_1S_2$. La spia conserva $G=\overline S_1S_2$.
+
+:::
+
 ## Progetto guidato / un selettore con indicazione luminosa {#sec:progetto}
 
 **Obiettivo:** selezionare uno fra quattro ingressi digitali con due [bit](/risorse/glossario/index.qmd#gloss-bit) $S_1,S_0$, osservare il dato selezionato su una spia e mostrare l'indice selezionato, da 0 a 3, su un display.

@@ -18,6 +18,8 @@ Le basi comuni ai percorsi, da studiare prima dei moduli e da richiamare quando 
 
 ## Strumenti da richiamare durante lo studio
 
+- [Risolvere un circuito resistivo](metodi-circuiti-resistivi.qmd): riduzioni, tensioni nodali e orientamento fra i metodi, dagli appunti di lezione.
+
 - [Segnali e dinamica](segnali-e-dinamica.qmd)
 - [Matematica per approfondire](matematica-per-approfondire.qmd): rapidità di variazione, somma di contributi nel tempo, fasori e trasformate.
 - [Guida completa di laboratorio e sicurezza](../sicurezza/index.qmd)

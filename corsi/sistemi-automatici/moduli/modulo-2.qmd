@@ -1,57 +1,173 @@
 ---
-stato: da-scrivere
+sidebar: sistemi-automatici
+stato: bozza
 title: "Modulo 2 / Elettronica digitale"
-subtitle: "Modulo di approfondimento"
+subtitle: "Dalle condizioni dei sensori ai comandi del controllore"
+toc-depth: 3
 ---
 
-[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd) · [Mappa concettuale](../mappe.qmd#mappa-sa-modulo-2)
+[← Programma del corso](../index.qmd#moduli) · [Sintesi del modulo](../modulo-2.qmd) · [Mappa concettuale](../mappe.qmd#mappa-sa-modulo-2) · [Esercizi](../esercizi.qmd#es:modulo-2)
 
-::: {.callout-note icon=false}
-## ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} Questa pagina è ancora da scrivere
+In questo modulo progettiamo **controllori combinatori**: le uscite dipendono dagli ingressi attuali, senza conservare lo stato precedente. Il metodo è: **descrivere il comportamento → definire i segnali → compilare la tabella → ricavare le funzioni → realizzarle e verificarle**.
 
-Qui trovi per ora solo la struttura: i titoli delle unità didattiche e i rimandi. Le spiegazioni, gli esempi e gli esercizi arriveranno con lo svolgimento delle lezioni. La **sintesi del programma** è invece già scritta.
-
-[Vai alla sintesi del modulo 2 →](../modulo-2.qmd){.btn .btn-primary}
-
-Puoi consultare anche i [componenti](/risorse/componenti/index.qmd) e il [laboratorio](/laboratori/index.qmd).
-:::
+Riferimenti alle lezioni: [algebra booleana](/lezioni/2026-2027/2026-10-12-3a-etc-algebra-booleana.qmd), [semplificazioni e tabelle](/lezioni/2026-2027/2026-09-28-3a-etc-sistemi.qmd), [simulazione del compito](/lezioni/2026-2027/2026-10-12-3a-etc-simulazione-compito.qmd) ed [esercizi per la prima verifica](/lezioni/2026-2027/2026-10-22-esercizi-prima-verifica.qmd).
 
 ::: {.unit-index}
-## Unità didattiche del modulo {.unnumbered}
+## In questo modulo {.unnumbered}
 
-- [U.D. 2.1 / Porte logiche e funzioni logiche](#ud:2.1)
-- [U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a contatti e con tabelle di verità](#ud:2.2)
-- [U.D. 2.3 / Metodi per determinare le tabelle di verità e ottenere funzioni logiche negate](#ud:2.3)
-- [U.D. 2.4 / Cenni alla minimizzazione di funzioni logiche con algebra di Boole e applicazione leggi di De Morgan](#ud:2.4)
-- [U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di Karnaugh](#ud:2.5)
-- [U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey](#ud:2.6)
-- [U.D. 2.7 / Esercitazioni ed esempi applicativi](#ud:2.7)
+- [Condizioni e porte logiche](#ud:2.1)
+- [Formula, porte, contatti e tabella](#ud:2.2)
+- [Dalla funzione alla tabella e viceversa](#ud:2.3)
+- [Semplificazione e verifica](#ud:2.4)
+- [Controllore per l’irrigazione](#ud:2.7)
+- [Mintermini, maxtermini e Karnaugh](#ud:2.5)
+- [Quine–McCluskey](#ud:2.6)
 :::
 
-## U.D. 2.1 / Porte logiche e funzioni logiche ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.1}
+## 1 · Leggere condizioni e porte logiche {#ud:2.1}
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.1){.wip-link}
+{{< include ../../../_includes/logica-operazioni.qmd >}}
 
-## U.D. 2.2 / Rappresentazione funzioni logiche con porte logiche primarie, con linguaggio a contatti e con tabelle di verità ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.2}
+### Analogico, digitale e scelta delle convenzioni
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.2){.wip-link}
+Una temperatura o una tensione può assumere molti valori; un sensore con soglia può ricondurli a una condizione booleana. Scrivere «$S=1$» ha senso solo se si precisa se indica **umidità sufficiente**, **terreno asciutto**, oppure un’altra condizione. Cambiare convenzione può cambiare le negazioni nella formula pur mantenendo lo stesso comportamento fisico.
 
-## U.D. 2.3 / Metodi per determinare le tabelle di verità e ottenere funzioni logiche negate ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.3}
+I bit sono rappresentati fisicamente da intervalli di tensione: non è necessario che un livello alto sia esattamente uguale all’alimentazione. Le soglie e la zona non ammessa dipendono dal componente. Per campionamento e quantizzazione basta qui il [richiamo del modulo 1](modulo-1.qmd#analogico-digitale).
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.3){.wip-link}
+## 2 · La stessa funzione in tre rappresentazioni {#ud:2.2}
 
-## U.D. 2.4 / Cenni alla minimizzazione di funzioni logiche con algebra di Boole e applicazione leggi di De Morgan ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.4}
+### Formula, porte e tabella
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.4){.wip-link}
+Un allarme riceve $A=1$ quando è inserito, $B=1$ quando la porta è aperta e $C=1$ quando la finestra è aperta. La sirena deve attivarsi se $A$ è attivo **e** almeno uno dei sensori rileva un’apertura:
 
-## U.D. 2.5 / Maxtermini, mintermini e minimizzazione funzioni logiche con mappe di Karnaugh ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.5}
+![Comando combinatorio dell’allarme: OR tra B e C, poi AND con A.](/assets/lezioni-teoria/allarme.svg)
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.5){.wip-link}
+$$Y=A(B+C).$$
 
-## U.D. 2.6 / Minimizzazione funzioni logiche col metodo Quine Mc Cluskey ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.6}
+Il segno $+$ della formula corrisponde alla porta OR; il prodotto corrisponde alla porta AND. Per controllare tutte le combinazioni, si costruisce la tabella:
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.6){.wip-link}
+| $A$ | $B$ | $C$ | $B+C$ | $Y$ |
+|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
-## U.D. 2.7 / Esercitazioni ed esempi applicativi ![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Contenuti in preparazione"} {#ud:2.7}
+### La rappresentazione a contatti
 
-[Vedi nella sintesi →](../modulo-2.qmd#ud:2.7){.wip-link}
+Nel modello ideale, contatti in serie realizzano AND e rami in parallelo realizzano OR. Un contatto che verifica la condizione negata realizza NOT.
+
+![Reti logiche a contatti per AND, OR e NOT: i nomi identificano le variabili lette.](/assets/plc/logica.svg)
+
+Questi sono schemi **logici**, non schemi di cablaggio dei sensori. Nel Ladder un contatto legge una variabile: non è necessariamente il disegno del pulsante fisico. Riprenderemo questa distinzione nell’[introduzione ai PLC](modulo-3.qmd) e nella [guida al Ladder](/risorse/ladder/index.qmd#livello-2).
+
+Il comando dell’allarme qui studiato non memorizza l’apertura: quando entrambi i sensori tornano a 0, la sirena si spegne. Un allarme con mantenimento richiede una specifica con memoria.
+
+## 3 · Dalla funzione alla tabella, e dalla tabella alla funzione {#ud:2.3}
+
+Per costruire una tabella, elenca le $2^n$ combinazioni e valuta le sottoespressioni in colonne separate. Se vuoi la funzione negata, **inverti la colonna dell’uscita**: non basta invertire gli ingressi.
+
+Per l’allarme precedente, $\overline Y=1$ nelle cinque righe con $Y=0$. La forma negata sarà utile anche per descrivere la condizione «nessun comando di sirena».
+
+{{< include ../../../_includes/logica-canoniche.qmd >}}
+
+## 4 · Semplificare e verificare l’equivalenza {#ud:2.4}
+
+{{< include ../../../_includes/logica-identita.qmd >}}
+
+Le leggi di De Morgan completano gli strumenti:
+
+$$\overline{AB}=\overline A+\overline B,\qquad
+\overline{A+B}=\overline A\,\overline B.$$
+
+Per esempio, il comando negato dell’allarme è:
+
+$$\overline Y=\overline{A(B+C)}=\overline A+\overline B\,\overline C.$$
+
+La sirena non è comandata se l’allarme è disinserito, oppure se porta e finestra sono entrambe chiuse. È la stessa specifica letta dal punto di vista dell’uscita 0.
+
+Un’altra semplificazione ricorrente negli appunti è:
+
+$$AB+\overline A B=B(A+\overline A)=B.$$
+
+L’ingresso $A$ non influenza più il risultato. La funzione resta identica su tutte le righe; cambia il circuito necessario a realizzarla. Per ulteriori passaggi svolti consulta gli [esempi algebrici di TPSEE](/corsi/tpsee-elettronici/moduli/modulo-2.qmd#ud:2.4).
+
+## 5 · Un controllore con tre uscite: irrigazione {#ud:2.7}
+
+Il controllore comanda una pompa e due elettrovalvole. Separiamo l’impianto, che muove l’acqua, dalla parte di comando, che elabora i segnali.
+
+![Impianto d’irrigazione e controllore: tre ingressi G, I, S e tre uscite P, Y1, Y2.](/assets/lezioni-teoria/irrigazione.svg)
+
+### Definire prima il significato dei bit
+
+| Segnale | Significato del valore 1 |
+|---|---|
+| $G$ | Guasto della pompa rilevato. |
+| $S$ | Umidità sopra la soglia, quindi nessuna richiesta automatica d’irrigazione. |
+| $I$ | Comando manuale attivo. |
+| $P$ | Pompa comandata accesa. |
+| $Y_1,Y_2$ | Elettrovalvola corrispondente comandata aperta. |
+
+Nella **versione della simulazione del compito**, la pompa è comandata finché non viene rilevato un guasto; la coltura 1 riceve acqua se il terreno è asciutto; la coltura 2 riceve acqua se è asciutto **oppure** se il comando manuale è attivo:
+
+$$P=\overline G,\qquad Y_1=\overline S,\qquad Y_2=\overline S+I.$$
+
+Le tre uscite possono essere studiate separatamente: $P$ dipende solo da $G$, mentre le valvole dipendono da $I,S$. La tabella completa riunisce i risultati:
+
+| $G$ | $I$ | $S$ | $P$ | $Y_1$ | $Y_2$ |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 0 | 1 |
+
+**Comando e risultato fisico sono distinti:** una valvola può essere comandata aperta anche con pompa ferma. La specifica iniziale arresta la pompa in caso di guasto, ma non impone la chiusura delle valvole. Inoltre «pompa accesa» è un comando; la logica non prova che la pompa stia realmente funzionando.
+
+### Cambiare una frase cambia la funzione
+
+Se la coltura 2 può essere irrigata **solo manualmente e soltanto quando il terreno è asciutto**, la nuova specifica diventa:
+
+$$Y_2=I\overline S.$$
+
+Il comando manuale ora è necessario e non può forzare l’apertura con terreno umido. Non è una semplificazione della formula precedente: è **un comportamento diverso**.
+
+Se si richiede anche che un guasto chiuda entrambe le valvole, i nuovi comandi sono $Y_1=\overline G\,\overline S$ e, nella variante solo manuale, $Y_2=\overline G I\overline S$. La priorità del blocco per guasto è esplicita. Sono modelli didattici del comando, non progetti di funzioni di sicurezza.
+
+## 6 · Mintermini, maxtermini e mappe {#ud:2.5}
+
+Mintermini e maxtermini sono già introdotti nel [passaggio dalla tabella alla funzione](#ud:2.3). La parte sulle **mappe di Karnaugh** sarà sviluppata con le lezioni dedicate; resta disponibile la [panoramica del metodo](../modulo-2.qmd#ud:2.5).
+
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Mappe di Karnaugh da sviluppare"} **Mappe di Karnaugh:** trattazione estesa ancora da elaborare.
+
+## 7 · Il metodo tabellare di Quine–McCluskey {#ud:2.6}
+
+![](/assets/lavori-in-corso.svg){.wip-icon fig-alt="Trattazione da sviluppare"} La trattazione nel modulo sarà ampliata con le lezioni dedicate. Per una consultazione è già disponibile la [scheda sul metodo tabellare](../approfondimenti.qmd#app:quine).
+
+## Per ripassare
+
+- Spiega a parole ogni ingresso prima di scrivere una formula.
+- Usa una tabella per separare i casi e controllare le priorità.
+- Distingui una trasformazione equivalente da una modifica delle specifiche.
+- Verifica tutte le combinazioni: una simulazione con pochi ingressi non prova l’equivalenza.
+
+[Esercizi di logica e progettazione, con soluzioni a comparsa →](../esercizi.qmd#es:modulo-2)
+
+## Corrispondenza con il programma {#programma}
+
+| Unità didattica | Dove è trattata |
+|---|---|
+| U.D. 2.1 / Porte logiche e funzioni logiche | [Condizioni e porte](#ud:2.1) |
+| U.D. 2.2 / Rappresentazioni con porte, contatti e tabelle | [Tre rappresentazioni](#ud:2.2) |
+| U.D. 2.3 / Tabelle di verità e funzioni negate | [Dalla funzione alla tabella e viceversa](#ud:2.3) |
+| U.D. 2.4 / Algebra di Boole e De Morgan | [Semplificare](#ud:2.4) |
+| U.D. 2.5 / Mintermini, maxtermini e Karnaugh | [Forme canoniche](#ud:2.3); [Karnaugh da sviluppare](#ud:2.5) |
+| U.D. 2.6 / Quine–McCluskey | [Consultazione e parte da sviluppare](#ud:2.6) |
+| U.D. 2.7 / Esercitazioni ed esempi applicativi | [Irrigazione](#ud:2.7) e [raccolta degli esercizi](../esercizi.qmd#es:modulo-2) |

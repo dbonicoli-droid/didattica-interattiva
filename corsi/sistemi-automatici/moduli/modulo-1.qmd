@@ -10,7 +10,7 @@ toc-depth: 3
 
 ## In breve {#introduzione}
 
-Studiare un sistema significa scegliere che cosa osservare e descriverlo con un **modello**, tenendo solo gli aspetti utili alla domanda che ci interessa. Tre parole ci servono subito:
+Studiare un sistema significa scegliere che cosa osservare e descriverlo con un **modello**, tenendo solo gli aspetti utili al problema che vogliamo risolvere. Tre parole ci servono subito:
 
 - **Ingressi:** le grandezze esterne che agiscono sul sistema.
 - **Stato:** quello che il sistema «si ricorda» e che serve, insieme agli ingressi successivi, per prevedere come andrà avanti.
@@ -331,6 +331,43 @@ Usa **Verifica risposte** per controllare il lavoro o **Mostra soluzione** per v
 
 {{< include _classificazione-completa.qmd >}}
 
+### Dal circuito alla relazione ingresso–uscita {#circuiti-ingresso-uscita}
+
+Negli [appunti del 18–19 settembre](/lezioni/2026-2027/2026-09-18-3a-etc-sistemi.qmd) e negli [esercizi del 26 settembre](/lezioni/2026-2027/2026-09-26-3a-enc-sistemi.qmd), lo stesso circuito viene studiato scegliendo uscite diverse. Prima di calcolare occorre dichiarare **ingresso, uscita, parametri e riferimenti**.
+
+![Circuito resistivo con R1 in serie al parallelo di R2 e R3; uscita VAB e correnti indicate.](/assets/lezioni-teoria/rete-tre-resistori.svg)
+
+Nel circuito, $R_1,R_2,R_3$ sono costanti, il generatore è ideale e il nodo $B$ è il riferimento. Poniamo:
+
+$$R_p=R_2\parallel R_3=\frac{R_2R_3}{R_2+R_3},\qquad R_{eq}=R_1+R_p.$$
+
+| Ingresso | Uscita | Relazione | Unità del rapporto |
+|---|---|---|---|
+| $v_{in}$ | $V_{AB}$ | $V_{AB}=\dfrac{R_p}{R_1+R_p}v_{in}$ | V/V, adimensionale |
+| $v_{in}$ | $I_3$ | $I_3=\dfrac{R_p}{R_3(R_1+R_p)}v_{in}$ | A/V, siemens |
+| $V_{AB}$ | $I_3$ | $I_3=\dfrac{1}{R_3}V_{AB}$ | A/V, siemens |
+| $I_1$ | $I_3$ | $I_3=\dfrac{R_2}{R_2+R_3}I_1$ | A/A, adimensionale |
+
+Queste sono **relazioni ingresso–uscita nel dominio del tempo**, qui algebriche perché il modello non ha memoria. Non occorre usare la trasformata di Laplace né chiamarle funzioni di trasferimento.
+
+Con $v_{in}=12$ V, $R_1=100\,\Omega$, $R_2=R_3=200\,\Omega$:
+
+$$R_p=100\,\Omega,\quad I_1=60\,\mathrm{mA},\quad
+V_{AB}=6\,\mathrm V,\quad I_2=I_3=30\,\mathrm{mA}.$$
+
+Il guadagno tensione–tensione è $1/2$; quello tensione–corrente è $1/(400\,\Omega)=2{,}5\,\mathrm{mS}$. La scelta dell’uscita cambia il rapporto, pur lasciando invariato il circuito.
+
+Per ricavare prima le formule e poi i valori numerici, conserva le lettere fino alla fine. Controlla le unità: un rapporto corrente/tensione non può essere espresso semplicemente con un numero senza unità.
+
+### Quando una resistenza può essere trascurata
+
+Se due resistenze sono in serie e $R_a\gg R_b$, allora $R_a+R_b\approx R_a$. In parallelo, invece, $R_a\parallel R_b\approx R_b$: domina il percorso con minore resistenza.
+
+**L’approssimazione dipende dalla grandezza cercata.** Trascurare una resistenza piccola in serie può dare una buona stima della corrente totale, ma non autorizza a porre a zero la tensione ai suoi capi se è proprio l’uscita richiesta. Analogamente, trascurare un ramo molto resistivo può stimare bene la corrente totale senza calcolare correttamente la piccola corrente di quel ramo.
+
+[Richiamo e metodi di soluzione dei circuiti resistivi](/risorse/fondamenti/metodi-circuiti-resistivi.qmd).
+
+
 ### Caso guidato: il contattore con autoritenuta
 
 Il serbatoio conserva memoria in un livello d'acqua, il condensatore in una carica. Qui la memoria è fatta di rame e molle, e la puoi toccare al banco.
@@ -414,6 +451,43 @@ Le unità sono un controllo: $(\mathrm{s}/\mathrm{m^2})(\mathrm{m^3/s})=\mathrm 
 
 **Validare** significa confrontare le previsioni del modello con misure o con un riferimento attendibile. Per esempio: verifica le unità di misura, il caso di portate uguali, il tempo nullo e l'aumento proporzionale con la durata. Una simulazione eseguita senza errori di programma può comunque descrivere male il fenomeno.
 
+### Dalla relazione al diagramma a blocchi {#schemi-a-blocchi}
+
+Gli [appunti introduttivi sugli schemi a blocchi](/lezioni/2026-2027/2026-10-17-introduzione-schemi-blocchi.qmd) mostrano come rappresentare la relazione tra segnali senza disegnare ogni componente. Ogni freccia porta un segnale e ha un verso; un punto di diramazione copia lo stesso segnale su più percorsi.
+
+![Elementi di uno schema a blocchi: guadagno, sommatore con segni, prodotto e diramazione.](/assets/lezioni-teoria/blocchi-elementi.svg)
+
+| Elemento | Relazione | Attenzione |
+|---|---|---|
+| Blocco guadagno $k$ | $y=ku$ | Le unità di $k$ dipendono da ingresso e uscita. |
+| Sommatore | $y=u_1+u_2$ oppure $u_1-u_2$ | Leggi il segno di ciascuna freccia in ingresso. |
+| Moltiplicatore | $y=u_1u_2$ | Il prodotto di due ingressi è generalmente non lineare. |
+| Blocco generico | $y=F(u)$ | Non implica necessariamente proporzionalità. |
+
+Per ricavare una formula, assegna un nome ai segnali intermedi e sostituisci le relazioni nell’ordine delle frecce.
+
+![Due guadagni in parallelo: il primo contributo è sommato, il secondo sottratto; segue k3.](/assets/lezioni-teoria/blocchi-combinati.svg)
+
+Per lo schema mostrato:
+
+$$z=k_1u_1-k_2u_2,\qquad y=k_3z
+\quad\Longrightarrow\quad y=k_3(k_1u_1-k_2u_2).$$
+
+Con $k_1=2$, $k_2=3$, $k_3=4$, $u_1=5$ e $u_2=1$, si ottiene $z=7$ e $y=28$, supponendo segnali e coefficienti adimensionali. Il segno meno agisce sul contributo $k_2u_2$, non sul guadagno $k_3$.
+
+### Cascata, parallelo e sistemi reali {#collegare-sistemi}
+
+Due blocchi ideali in cascata con $y_1=k_1u$ e $y=k_2y_1$ danno $y=k_2k_1u$. Due rami ideali alimentati dallo stesso ingresso e sommati in uscita danno $y=(k_1+k_2)u$; se il secondo contributo è sottratto, $y=(k_1-k_2)u$.
+
+Questo è il **parallelo di percorsi di segnale**, con un sommatore dichiarato. Non significa collegare direttamente tra loro due uscite elettriche. Inoltre, per circuiti reali, collegare il secondo stadio può cambiare il primo.
+
+![Due partitori collegati in cascata: il secondo assorbe corrente dal nodo di uscita del primo.](/assets/partitori/cascata.svg)
+
+Nei due partitori ciascun rapporto a vuoto può essere $1/2$, ma il rapporto della cascata non è necessariamente $1/4$. La [spiegazione del laboratorio](/laboratori/partitori-cascata.qmd#spiegazione-e-approfondimento) mostra che cosa cambia nel collegamento e introduce resistenza d’ingresso e d’uscita. Gli [appunti della lezione](/lezioni/2026-2027/2026-09-26-3a-enc-sistemi.qmd) documentano il confronto fra le due configurazioni.
+
+Lo schema a blocchi è un modello: **per usarlo bisogna verificare che le interazioni trascurate siano compatibili con il problema**.
+
+
 ## 7 · Dall'idea all'algoritmo {#ud:1.6}
 
 Un **algoritmo** è una procedura formata da istruzioni definite, con dati di ingresso e risultati attesi. Gli esercizi di calcolo qui proposti terminano dopo un numero finito di passi; un controllo automatico può invece ripetere ciclicamente la procedura durante il funzionamento.
@@ -476,6 +550,51 @@ Altrimenti
 Riconosci la struttura? È **l'isteresi del termostato**, e prima ancora l'autoritenuta del contattore. Tre problemi diversi, la stessa memoria.
 
 **Perché l'errore era difficile da vedere.** Il diagramma sbagliato funziona benissimo per $h=10$ e per $h=90$. Si rompe solo nella zona intermedia: per questo il passo 5 chiede un caso normale **e** un caso limite.
+
+### Scegliere la struttura di controllo {#strutture-algoritmi}
+
+Gli [appunti su algoritmi e programmazione](/lezioni/2026-2027/2026-10-17-algoritmi-programmazione.qmd), destinati agli elettrotecnici, distinguono selezione e ripetizione. La sintassi cambia tra linguaggi; qui usiamo pseudocodice.
+
+| Struttura | Quando usarla | Controllo da fare |
+|---|---|---|
+| `IF / ELSE IF / ELSE` | Scegliere un ramo in base a condizioni. | Le condizioni sono valutate nell’ordine scritto. |
+| `SWITCH / CASE` | Scegliere tra valori distinti di una variabile. | Prevedere anche valori non ammessi. |
+| `WHILE` | Ripetere finché una condizione è vera, controllandola prima. | Il corpo può non essere eseguito mai. |
+| `DO ... WHILE` | Controllare la condizione dopo il corpo. | Il corpo viene eseguito almeno una volta. |
+| `REPEAT ... UNTIL` | Ripetere fino a quando la condizione di uscita è vera. | Il criterio di continuazione è opposto a `DO ... WHILE`. |
+| `FOR` | Scorrere un insieme di indici o un numero noto di passi. | Stabilire primo indice, ultimo indice e incremento. |
+
+### Esempio svolto: un braccio che preleva libri
+
+Il braccio visita quattro scaffali, numerati da 0 a 3. Su ciascuno preleva un libro alla volta finché lo scaffale non è vuoto, quindi passa al successivo.
+
+```text
+PER scaffale DA 0 A 3
+    Leggi presenzaLibro(scaffale)
+    FINCHÉ presenzaLibro(scaffale)
+        Preleva un libro
+        Deposita il libro nella scatola
+        Leggi di nuovo presenzaLibro(scaffale)
+Riporta il braccio a riposo
+```
+
+Il `FOR` seleziona lo scaffale; il ciclo interno ripete il prelievo. **Rileggere il sensore** è essenziale: se si usa sempre la prima lettura, la condizione potrebbe non aggiornarsi. L’esempio descrive il flusso delle operazioni, non il controllo dettagliato dei motori.
+
+### Esempio svolto: contare le scatole di un nastro
+
+Se un sensore resta attivo per più letture durante il passaggio della stessa scatola, incrementare il contatore a ogni lettura la conterebbe più volte. Una procedura semplice è:
+
+```text
+contatore = 0
+FINCHÉ contatore < 5
+    Attendi che il sensore diventi attivo
+    contatore = contatore + 1
+    Attendi che il sensore torni non attivo
+Ferma il nastro
+```
+
+Si ipotizza un sensore inizialmente libero e una separazione riconoscibile fra scatole. Il contatore è **stato interno**: conserva ciò che è successo prima. La stessa esigenza porta al rilevamento dei fronti nei PLC, che sarà ripreso più avanti.
+
 
 ## 8 · Farlo funzionare: Flowgorithm {#ud:1.7}
 
@@ -557,12 +676,8 @@ Le sezioni seguono l'ordine in cui conviene impararli; qui trovi dove è trattat
 | U.D. 1.2 / Ingressi, parametri, disturbi e uscite | [2 · Le grandezze in gioco](#ud:1.2) |
 | U.D. 1.3 / Classificazione dei sistemi | [3 · Tre domande per riconoscere un sistema](#ud:1.3) e [4 · Anello aperto e anello chiuso](#retroazione) |
 | U.D. 1.4 / Esercitazioni e applicazione a casi reali | [5 · Casi reali e allenamento](#ud:1.4) e [pagina degli esercizi](../esercizi.qmd#es:modulo-1) |
-| U.D. 1.5 / Classificazione dei modelli dei sistemi | [6 · Descrivere un sistema: quattro modelli](#ud:1.5) |
-| U.D. 1.6 / Algoritmi e diagrammi di flusso | [7 · Dall'idea all'algoritmo](#ud:1.6) |
+| U.D. 1.5 / Classificazione dei modelli dei sistemi | [Quattro modelli](#ud:1.5) e [schemi a blocchi](#schemi-a-blocchi) |
+| U.D. 1.6 / Algoritmi e diagrammi di flusso | [Dall’idea all’algoritmo](#ud:1.6) e [strutture di controllo](#strutture-algoritmi) |
 | U.D. 1.7 / Applicazioni e simulazioni con Flowgorithm | [8 · Farlo funzionare: Flowgorithm](#ud:1.7) |
 
 <script src="../../../assets/classificazione/exercises.js"></script>
-
-### Dal modello al banco: due partitori
-
-Nel [laboratorio dei partitori in cascata](/laboratori/partitori-cascata.qmd), ricava le relazioni ingresso–uscita dei circuiti separati, formula una previsione e confrontala con le misure dopo il collegamento.

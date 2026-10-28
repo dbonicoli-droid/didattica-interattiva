@@ -1,0 +1,21 @@
+Le lettere rappresentano variabili booleane, non numeri reali qualsiasi. Un’identità deve valere per **tutte le combinazioni** degli ingressi.
+
+| Proprietà | Somma logica | Prodotto logico |
+|---|---|---|
+| Elemento neutro | $A+0=A$ | $A\cdot1=A$ |
+| Elemento assorbente | $A+1=1$ | $A\cdot0=0$ |
+| Idempotenza | $A+A=A$ | $AA=A$ |
+| Complementazione | $A+\overline A=1$ | $A\overline A=0$ |
+| Commutativa | $A+B=B+A$ | $AB=BA$ |
+| Associativa | $(A+B)+C=A+(B+C)$ | $(AB)C=A(BC)$ |
+| Assorbimento | $A+AB=A$ | $A(A+B)=A$ |
+
+Valgono inoltre la doppia negazione $\overline{\overline A}=A$ e **due distributività**:
+
+$$A(B+C)=AB+AC,\qquad A+BC=(A+B)(A+C).$$
+
+La seconda è tipica dell’algebra booleana. Sviluppando il secondo membro compare anche $AB$, ma viene assorbito:
+
+$$ (A+B)(A+C)=AA+AC+AB+BC=A+AC+AB+BC=A+BC.$$
+
+Per ogni intero positivo $n$, $A^n=A$: anche $A^2$ e $A^5$ si riducono ad $A$. La stessa proprietà vale per $\overline A$.
