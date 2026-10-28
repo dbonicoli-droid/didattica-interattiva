@@ -14,8 +14,22 @@ Valgono inoltre la doppia negazione $\overline{\overline{A}}=A$ e **due distribu
 
 $$A(B+C)=AB+AC,\qquad A+BC=(A+B)(A+C).$$
 
-La seconda è tipica dell’algebra booleana. Sviluppando il secondo membro compare anche $AB$, ma viene assorbito:
+La seconda è tipica dell’algebra booleana. Sviluppando il secondo membro si ottengono quattro prodotti. Prima si usa $AA=A$, poi si applica l’assorbimento **sia ad $AC$ sia ad $AB$**:
 
-$$ (A+B)(A+C)=AA+AC+AB+BC=A+AC+AB+BC=A+BC.$$
+$$\begin{aligned}
+(A+B)(A+C)&=AA+AC+AB+BC\\
+&=A+AC+AB+BC\\
+&=A+AB+BC &&\text{perché }A+AC=A\\
+&=A+BC &&\text{perché }A+AB=A.
+\end{aligned}$$
+
+**Perché si possono eliminare $AC$ e $AB$?** Nella somma è già presente il termine $A$:
+
+- Se $A=0$, anche $AC$ e $AB$ valgono 0.
+- Se $A=1$, la somma vale già 1 grazie ad $A$, qualunque siano $B$ e $C$.
+
+I due prodotti, quindi, **non aggiungono casi in cui l’uscita vale 1** rispetto a quelli già coperti da $A$. Sono ridondanti in questa somma, non in qualunque espressione.
+
+La regola di assorbimento si verifica anche algebricamente: $A+AX=A(1+X)=A$, perché $1+X=1$. Qui si applica prima con $X=C$ e poi con $X=B$.
 
 Per ogni intero positivo $n$, $A^n=A$: anche $A^2$ e $A^5$ si riducono ad $A$. La stessa proprietà vale per $\overline{A}$.
