@@ -28,16 +28,16 @@ Il testo riorganizza gli [appunti di algebra booleana](/lezioni/2026-2027/2026-1
 
 ### Dall’espressione alla tabella
 
-Per $Y=A+\overline A B$, calcola prima $\overline A$, poi $\overline A B$, infine la somma. Una colonna intermedia evita di confondere la negazione del solo ingresso con quella del prodotto.
+Per $Y=A+\overline{A} B$, calcola prima $\overline{A}$, poi $\overline{A} B$, infine la somma. Una colonna intermedia evita di confondere la negazione del solo ingresso con quella del prodotto.
 
-| $A$ | $B$ | $\overline A$ | $\overline A B$ | $Y=A+\overline A B$ |
-|---:|---:|---:|---:|---:|
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 1 |
-| 1 | 1 | 0 | 0 | 1 |
+| $A$ | $B$ | $\overline{A}$ | $\overline{A}B$ | $Y=A+\overline{A}B$ | $A+B$ |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
 
-La colonna finale coincide con OR. La tabella dimostra che $A+\overline A B=A+B$, prima ancora di scegliere le porte per realizzarla.
+Le ultime due colonne coincidono in tutte e quattro le righe: entrambe valgono **0, 1, 1, 1**, nell’ordine degli ingressi indicato. In questo esempio la barra riguarda solo $A$; negare anche $B$ cambierebbe la funzione. La tabella dimostra che $A+\overline{A} B=A+B$, prima ancora di scegliere le porte per realizzarla.
 
 ### Dalla tabella all’espressione
 
@@ -53,37 +53,37 @@ La colonna finale coincide con OR. La tabella dimostra che $A+\overline A B=A+B$
 
 Le due leggi fondamentali sono:
 
-$$\boxed{\overline{AB}=\overline A+\overline B},\qquad
-\boxed{\overline{A+B}=\overline A\,\overline B}.$$
+$$\boxed{\overline{AB}=\overline{A}+\overline{B}},\qquad
+\boxed{\overline{A+B}=\overline{A}\,\overline{B}}.$$
 
 **Negare un AND** significa chiedere che almeno una condizione non sia verificata. **Negare un OR** significa chiedere che nessuna delle due sia verificata.
 
 Per togliere una barra su un’intera espressione, si scambiano AND e OR e si negano gli operandi; con più livelli si procede dall’esterno verso l’interno:
 
-$$\overline{A(B+C)}=\overline A+\overline{B+C}
-=\overline A+\overline B\,\overline C.$$
+$$\overline{A(B+C)}=\overline{A}+\overline{B+C}
+=\overline{A}+\overline{B}\,\overline{C}.$$
 
-Non basta mettere la barra su ogni lettera lasciando invariati gli operatori. Esempio: con $A=B=0$, $\overline{A+B}=1$ mentre $\overline A+\overline B=1$; questa sola riga non distingue le formule, ma con $A=1,B=0$ i risultati sono rispettivamente 0 e 1. **Una riga può smentire un’identità; per verificarla con la tabella servono tutte le righe.**
+Non basta mettere la barra su ogni lettera lasciando invariati gli operatori. Esempio: con $A=B=0$, $\overline{A+B}=1$ mentre $\overline{A}+\overline{B}=1$; questa sola riga non distingue le formule, ma con $A=1,B=0$ i risultati sono rispettivamente 0 e 1. **Una riga può smentire un’identità; per verificarla con la tabella servono tutte le righe.**
 
 ## 4 · Semplificare un passaggio alla volta {#ud:2.4}
 
 ### Esempio 1: una condizione ridondante
 
-$$A+\overline A B=(A+\overline A)(A+B)=1\cdot(A+B)=A+B.$$
+$$A+\overline{A} B=(A+\overline{A})(A+B)=1\cdot(A+B)=A+B.$$
 
 Si usa la distributività della somma sul prodotto, poi la complementazione.
 
 ### Esempio 2: raccogliere e assorbire
 
-$$AB+\overline A B+AC=B(A+\overline A)+AC=B+AC.$$
+$$AB+\overline{A} B+AC=B(A+\overline{A})+AC=B+AC.$$
 
 Il termine $AC$ non è assorbito da $B$: per $B=0,A=C=1$ serve a mantenere l’uscita a 1.
 
 ### Esempio 3: usare anche la distributività booleana
 
 $$\begin{aligned}
-AB+AC+A\overline B\,\overline C
- &=A(B+C+\overline B\,\overline C)\\
+AB+AC+A\overline{B}\,\overline{C}
+ &=A(B+C+\overline{B}\,\overline{C})\\
  &=A\bigl(B+C+\overline{B+C}\bigr)\\
  &=A.
 \end{aligned}$$
@@ -92,17 +92,17 @@ Qui De Morgan permette di riconoscere una condizione e il suo complemento.
 
 ### Esempio 4: un termine di consenso
 
-$$AB+\overline A C+BC=AB+\overline A C.$$
+$$AB+\overline{A} C+BC=AB+\overline{A} C.$$
 
 ::: {.callout-note collapse=true title="Perché BC è ridondante"}
-Si inserisce $A+\overline A=1$ nel termine $BC$:
+Si inserisce $A+\overline{A}=1$ nel termine $BC$:
 $$\begin{aligned}
-AB+\overline A C+BC
- &=AB+\overline A C+ABC+\overline A BC\\
- &=AB(1+C)+\overline A C(1+B)\\
- &=AB+\overline A C.
+AB+\overline{A} C+BC
+ &=AB+\overline{A} C+ABC+\overline{A} BC\\
+ &=AB(1+C)+\overline{A} C(1+B)\\
+ &=AB+\overline{A} C.
 \end{aligned}$$
-Quando $B=C=1$, almeno uno fra $AB$ e $\overline A C$ vale già 1. Il termine $BC$ non aggiunge nuove righe a 1.
+Quando $B=C=1$, almeno uno fra $AB$ e $\overline{A} C$ vale già 1. Il termine $BC$ non aggiunge nuove righe a 1.
 :::
 
 ### Un metodo di controllo
@@ -131,7 +131,7 @@ $$Y=A(B+C).$$
 | 1 | 1 | 0 | 1 |
 | 1 | 1 | 1 | 1 |
 
-Dalla tabella si ricava anche $Y=A\overline BC+AB\overline C+ABC$. La forma fattorizzata realizza lo stesso comportamento con una OR e una AND. Il modello è **combinatorio**: non ricorda un’intrusione passata e la sirena si spegne se tutte le aperture vengono richiuse. Per mantenerla attiva servirebbe memoria, non prevista da questo esercizio.
+Dalla tabella si ricava anche $Y=A\overline{B}C+AB\overline{C}+ABC$. La forma fattorizzata realizza lo stesso comportamento con una OR e una AND. Il modello è **combinatorio**: non ricorda un’intrusione passata e la sirena si spegne se tutte le aperture vengono richiuse. Per mantenerla attiva servirebbe memoria, non prevista da questo esercizio.
 
 [Allenati con le semplificazioni e i problemi di progetto →](../esercizi-metti-insieme-il-percorso.qmd#es:modulo-2)
 

@@ -85,7 +85,7 @@ Da [relazioni ingresso–uscita](moduli/modulo-1.qmd#circuiti-ingresso-uscita), 
 Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd)
 :::
 
-**1 · Logica.** Semplifica $F=\overline AB+AB$. Scrivi anche $\overline F$.
+**1 · Logica.** Semplifica $F=\overline{A}B+AB$. Scrivi anche $\overline{F}$.
 
 **2 · Attività successiva: [Karnaugh](/risorse/glossario/index.qmd#gloss-karnaugh).** Con ordine $ABC$, minimizza $G=\Sigma m(0,1,4,5)$.
 
@@ -93,11 +93,11 @@ Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd)
 
 ::: {#es:soluzioni-2 .callout-tip collapse=true title="Soluzioni del Modulo 2"}
 
-**1.** $F=B(\overline A+A)=B$; $\overline F=\overline B$.
+**1.** $F=B(\overline{A}+A)=B$; $\overline{F}=\overline{B}$.
 
-**2.** Gli indici hanno sempre $B=0$, quindi $G=\overline B$.
+**2.** Gli indici hanno sempre $B=0$, quindi $G=\overline{B}$.
 
-**3.** Le coppie 000/001 e 100/101 diventano `00-` e `10-`. Combinandole si ottiene `-0-`: resta soltanto $B=0$, quindi $F=\overline B$.
+**3.** Le coppie 000/001 e 100/101 diventano `00-` e `10-`. Combinandole si ottiene `-0-`: resta soltanto $B=0$, quindi $F=\overline{B}$.
 
 :::
 
@@ -115,11 +115,11 @@ Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd#ud:2.7) e dagli [eser
 
 ::: {.callout-tip collapse=true title="Soluzioni · Comandi combinatori"}
 
-**4.** $P=\overline G$, $Y_1=\overline G\,\overline S$, $Y_2=\overline G I\overline S$. In ordine $GIS=000,001,010,011,100,101,110,111$, le terne $(P,Y_1,Y_2)$ sono $(1,1,0)$, $(1,0,0)$, $(1,1,1)$, $(1,0,0)$, poi quattro volte $(0,0,0)$. Servono negazioni di $G,S$ e prodotti logici; una negazione può essere condivisa da più rami.
+**4.** $P=\overline{G}$, $Y_1=\overline{G}\,\overline{S}$, $Y_2=\overline{G} I\overline{S}$. In ordine $GIS=000,001,010,011,100,101,110,111$, le terne $(P,Y_1,Y_2)$ sono $(1,1,0)$, $(1,0,0)$, $(1,1,1)$, $(1,0,0)$, poi quattro volte $(0,0,0)$. Servono negazioni di $G,S$ e prodotti logici; una negazione può essere condivisa da più rami.
 
-**5.** Una scelta prudenziale per la combinazione incoerente $F=V=1$ è chiudere entrambe le valvole, dichiarandola nella specifica. Le funzioni che rispettano questa scelta e i casi coerenti sono $E_{in}=\overline F(R+V)$ ed $E_{out}=\overline V P$. Per $F=V=1$ entrambe valgono 0; al pieno senza vuoto è ancora possibile prelevare. Quando $V$ torna a 0 e $R=0$, il riempimento si interrompe: proseguire fino al pieno richiederebbe memoria. Le convenzioni $F,V$ sono quelle dichiarate nell’esercizio; se un sensore fisico fornisce un livello attivo basso occorre convertire il suo segnale.
+**5.** Una scelta prudenziale per la combinazione incoerente $F=V=1$ è chiudere entrambe le valvole, dichiarandola nella specifica. Le funzioni che rispettano questa scelta e i casi coerenti sono $E_{in}=\overline{F}(R+V)$ ed $E_{out}=\overline{V} P$. Per $F=V=1$ entrambe valgono 0; al pieno senza vuoto è ancora possibile prelevare. Quando $V$ torna a 0 e $R=0$, il riempimento si interrompe: proseguire fino al pieno richiederebbe memoria. Le convenzioni $F,V$ sono quelle dichiarate nell’esercizio; se un sensore fisico fornisce un livello attivo basso occorre convertire il suo segnale.
 
-**6.** $Y=\overline AB\overline C+\overline ABC=\overline AB(\overline C+C)=\overline AB$. Il risultato non dipende da $C$.
+**6.** $Y=\overline{A}B\overline{C}+\overline{A}BC=\overline{A}B(\overline{C}+C)=\overline{A}B$. Il risultato non dipende da $C$.
 
 :::
 

@@ -71,7 +71,7 @@ Il comando dell’allarme qui studiato non memorizza l’apertura: quando entram
 
 Per costruire una tabella, elenca le $2^n$ combinazioni e valuta le sottoespressioni in colonne separate. Se vuoi la funzione negata, **inverti la colonna dell’uscita**: non basta invertire gli ingressi.
 
-Per l’allarme precedente, $\overline Y=1$ nelle cinque righe con $Y=0$. La forma negata sarà utile anche per descrivere la condizione «nessun comando di sirena».
+Per l’allarme precedente, $\overline{Y}=1$ nelle cinque righe con $Y=0$. La forma negata sarà utile anche per descrivere la condizione «nessun comando di sirena».
 
 {{< include ../../../_includes/logica-canoniche.qmd >}}
 
@@ -81,18 +81,18 @@ Per l’allarme precedente, $\overline Y=1$ nelle cinque righe con $Y=0$. La for
 
 Le leggi di De Morgan completano gli strumenti:
 
-$$\overline{AB}=\overline A+\overline B,\qquad
-\overline{A+B}=\overline A\,\overline B.$$
+$$\overline{AB}=\overline{A}+\overline{B},\qquad
+\overline{A+B}=\overline{A}\,\overline{B}.$$
 
 Per esempio, il comando negato dell’allarme è:
 
-$$\overline Y=\overline{A(B+C)}=\overline A+\overline B\,\overline C.$$
+$$\overline{Y}=\overline{A(B+C)}=\overline{A}+\overline{B}\,\overline{C}.$$
 
 La sirena non è comandata se l’allarme è disinserito, oppure se porta e finestra sono entrambe chiuse. È la stessa specifica letta dal punto di vista dell’uscita 0.
 
 Un’altra semplificazione ricorrente negli appunti è:
 
-$$AB+\overline A B=B(A+\overline A)=B.$$
+$$AB+\overline{A} B=B(A+\overline{A})=B.$$
 
 L’ingresso $A$ non influenza più il risultato. La funzione resta identica su tutte le righe; cambia il circuito necessario a realizzarla. Per ulteriori passaggi svolti consulta gli [esempi algebrici di TPSEE](/corsi/tpsee-elettronici/moduli/modulo-2.qmd#ud:2.4).
 
@@ -114,7 +114,7 @@ Il controllore comanda una pompa e due elettrovalvole. Separiamo l’impianto, c
 
 Nella **versione della simulazione del compito**, la pompa è comandata finché non viene rilevato un guasto; la coltura 1 riceve acqua se il terreno è asciutto; la coltura 2 riceve acqua se è asciutto **oppure** se il comando manuale è attivo:
 
-$$P=\overline G,\qquad Y_1=\overline S,\qquad Y_2=\overline S+I.$$
+$$P=\overline{G},\qquad Y_1=\overline{S},\qquad Y_2=\overline{S}+I.$$
 
 Le tre uscite possono essere studiate separatamente: $P$ dipende solo da $G$, mentre le valvole dipendono da $I,S$. La tabella completa riunisce i risultati:
 
@@ -135,11 +135,11 @@ Le tre uscite possono essere studiate separatamente: $P$ dipende solo da $G$, me
 
 Se la coltura 2 può essere irrigata **solo manualmente e soltanto quando il terreno è asciutto**, la nuova specifica diventa:
 
-$$Y_2=I\overline S.$$
+$$Y_2=I\overline{S}.$$
 
 Il comando manuale ora è necessario e non può forzare l’apertura con terreno umido. Non è una semplificazione della formula precedente: è **un comportamento diverso**.
 
-Se si richiede anche che un guasto chiuda entrambe le valvole, i nuovi comandi sono $Y_1=\overline G\,\overline S$ e, nella variante solo manuale, $Y_2=\overline G I\overline S$. La priorità del blocco per guasto è esplicita. Sono modelli didattici del comando, non progetti di funzioni di sicurezza.
+Se si richiede anche che un guasto chiuda entrambe le valvole, i nuovi comandi sono $Y_1=\overline{G}\,\overline{S}$ e, nella variante solo manuale, $Y_2=\overline{G} I\overline{S}$. La priorità del blocco per guasto è esplicita. Sono modelli didattici del comando, non progetti di funzioni di sicurezza.
 
 ## 6 · Mintermini, maxtermini e mappe {#ud:2.5}
 

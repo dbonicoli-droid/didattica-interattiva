@@ -44,35 +44,35 @@ Da [Modulo 2 — Elementi di logica](moduli/modulo-2.qmd), con riferimento alle 
 
 **1 · Semplifica**, indicando le proprietà usate:
 
-a. $A^2+\overline A B$;
-b. $AB+\overline A B+AC$;
-c. $AB+AC+A\overline B\,\overline C$;
-d. $AB+\overline A C+BC$;
-e. $(A+B)(A+\overline B)$.
+a. $A^2+\overline{A} B$;
+b. $AB+\overline{A} B+AC$;
+c. $AB+AC+A\overline{B}\,\overline{C}$;
+d. $AB+\overline{A} C+BC$;
+e. $(A+B)(A+\overline{B})$.
 
 **2 · Dalla tabella alla funzione.** Con ordine $ABC$, $Y$ vale 1 nelle righe 001, 011, 101 e 111. Ricava la somma dei mintermini, il prodotto dei maxtermini e una forma semplificata.
 
-**3 · Negazione.** Trova $\overline Y$ per $Y=A(B+C)$ con De Morgan. Verifica le due colonne su tutte le combinazioni.
+**3 · Negazione.** Trova $\overline{Y}$ per $Y=A(B+C)$ con De Morgan. Verifica le due colonne su tutte le combinazioni.
 
-**4 · Due gruppi di riscaldamento.** Due richieste $S_1,S_2$ comandano due gruppi: $Y_1=S_1+S_2$, $Y_2=S_2$. La spia di guasto $G$ deve attivarsi quando il secondo sensore richiede calore ma il primo no: $G=\overline S_1S_2$. Modifica i comandi affinché il guasto blocchi entrambi i gruppi; semplifica i risultati.
+**4 · Due gruppi di riscaldamento.** Due richieste $S_1,S_2$ comandano due gruppi: $Y_1=S_1+S_2$, $Y_2=S_2$. La spia di guasto $G$ deve attivarsi quando il secondo sensore richiede calore ma il primo no: $G=\overline{S}_1S_2$. Modifica i comandi affinché il guasto blocchi entrambi i gruppi; semplifica i risultati.
 
 ::: {.callout-tip collapse=true title="Soluzioni · Modulo 2"}
 
-**1a.** $A^2=A$, quindi $A+\overline A B=A+B$.
+**1a.** $A^2=A$, quindi $A+\overline{A} B=A+B$.
 
-**1b.** $B(A+\overline A)+AC=B+AC$.
+**1b.** $B(A+\overline{A})+AC=B+AC$.
 
 **1c.** $A(B+C+\overline{B+C})=A$.
 
-**1d.** Inserendo $1=A+\overline A$ nel termine $BC$, si ottengono $ABC$ e $\overline A BC$, assorbiti rispettivamente da $AB$ e $\overline A C$: resta $AB+\overline A C$.
+**1d.** Inserendo $1=A+\overline{A}$ nel termine $BC$, si ottengono $ABC$ e $\overline{A} BC$, assorbiti rispettivamente da $AB$ e $\overline{A} C$: resta $AB+\overline{A} C$.
 
-**1e.** $A+B\overline B=A$ per distributività booleana.
+**1e.** $A+B\overline{B}=A$ per distributività booleana.
 
-**2.** $Y=\overline A\overline BC+\overline ABC+A\overline BC+ABC=C$. Il prodotto canonico è $(A+B+C)(A+\overline B+C)(\overline A+B+C)(\overline A+\overline B+C)=C$.
+**2.** $Y=\overline{A}\overline{B}C+\overline{A}BC+A\overline{B}C+ABC=C$. Il prodotto canonico è $(A+B+C)(A+\overline{B}+C)(\overline{A}+B+C)(\overline{A}+\overline{B}+C)=C$.
 
-**3.** $\overline Y=\overline A+\overline B\,\overline C$. Le uscite sono complementari in tutte le righe: $Y$ vale 1 solo per 101, 110, 111.
+**3.** $\overline{Y}=\overline{A}+\overline{B}\,\overline{C}$. Le uscite sono complementari in tutte le righe: $Y$ vale 1 solo per 101, 110, 111.
 
-**4.** $Y_1'=(S_1+S_2)\overline G=(S_1+S_2)(S_1+\overline S_2)=S_1$; $Y_2'=S_2\overline G=S_2(S_1+\overline S_2)=S_1S_2$. La spia conserva $G=\overline S_1S_2$.
+**4.** $Y_1'=(S_1+S_2)\overline{G}=(S_1+S_2)(S_1+\overline{S}_2)=S_1$; $Y_2'=S_2\overline{G}=S_2(S_1+\overline{S}_2)=S_1S_2$. La spia conserva $G=\overline{S}_1S_2$.
 
 :::
 
@@ -98,7 +98,7 @@ La spia segue soltanto l'ingresso selezionato; il display mostra 0, 1, 2 o 3 sec
 
 1.  Un partitore ha $R_1=2\,\mathrm{k\Omega}$ e $R_2=3\,\mathrm{k\Omega}$, ingresso $5\,\mathrm{V}$ e uscita su $R_2$. Quanto vale l'uscita senza [carico](/risorse/glossario/index.qmd#gloss-carico)?
 
-2.  Semplifica $F=\overline A B+AB+A\overline B$.
+2.  Semplifica $F=\overline{A} B+AB+A\overline{B}$.
 
 3.  Converti $1101_2$ in [Gray](/risorse/glossario/index.qmd#gloss-gray) e ricostruisci il binario.
 
@@ -106,7 +106,7 @@ La spia segue soltanto l'ingresso selezionato; il display mostra 0, 1, 2 o 3 sec
 
 5.  Un [full adder](/risorse/glossario/index.qmd#gloss-full-adder-fa) riceve $A=1,B=0,C_{\mathrm{in}}=1$. Calcola le due uscite.
 
-6.  Quali dati servono a un [MUX](/risorse/glossario/index.qmd#gloss-mux) $4\to1$, con $S_1=A,S_0=B$, per ottenere $F=\overline A+B$?
+6.  Quali dati servono a un [MUX](/risorse/glossario/index.qmd#gloss-mux) $4\to1$, con $S_1=A,S_0=B$, per ottenere $F=\overline{A}+B$?
 
 7.  Quale uscita del 74LS138 abilitato è bassa con $CBA=110$? Che cosa accade disabilitandolo?
 
@@ -127,11 +127,11 @@ La spia segue soltanto l'ingresso selezionato; il display mostra 0, 1, 2 o 3 sec
 
 1.  $V_{\mathrm{out}}=5\cdot3/(2+3)=3\,\mathrm{V}$. La formula presuppone l'assenza di un [carico](/risorse/glossario/index.qmd#gloss-carico) significativo.
 
-2.  $F=B(\overline A+A)+A\overline B=B+A\overline B=A+B$.
+2.  $F=B(\overline{A}+A)+A\overline{B}=B+A\overline{B}=A+B$.
 
 3.  [Gray](/risorse/glossario/index.qmd#gloss-gray) $1011$. Inversa: $1$, poi $1\oplus0=1$, $1\oplus1=0$, $0\oplus1=1$: si ritrova $1101$.
 
-4.  Le quattro celle hanno tutte $C=0$: formano un gruppo che attraversa il bordo della mappa. $F=\overline C$.
+4.  Le quattro celle hanno tutte $C=0$: formano un gruppo che attraversa il bordo della mappa. $F=\overline{C}$.
 
 5.  $S=1\oplus0\oplus1=0$; $C_{\mathrm{out}}=1$. La somma totale è $10_2$.
 

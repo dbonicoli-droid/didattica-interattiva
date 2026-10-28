@@ -4,13 +4,26 @@ Le tre operazioni fondamentali sono:
 
 | Operazione | Scrittura | Quando l’uscita vale 1 |
 |---|---|---|
-| NOT, negazione | $Y=\overline A$ | Quando $A=0$. |
+| NOT, negazione | $Y=\overline{A}$ | Quando $A=0$. |
 | AND, prodotto logico | $Y=AB=A\cdot B$ | Quando entrambi gli ingressi valgono 1. |
 | OR, somma logica | $Y=A+B$ | Quando almeno un ingresso vale 1, anche entrambi. |
 
-**La somma è logica:** $1+1=1$, non 2. La barra nega tutto ciò che ricopre: $\overline{AB}$ è diverso da $\overline A B$.
+**La somma è logica:** $1+1=1$, non 2. La barra nega tutto ciò che ricopre: **negare l’intero prodotto** non equivale a **moltiplicare le due variabili negate**:
 
-![Simboli rettangolari delle porte fondamentali e delle uscite negate.](/assets/lezioni-teoria/porte.svg)
+$$\overline{AB}\ne\overline{A}\,\overline{B}\quad\text{come funzioni booleane}.$$
+
+Le colonne lo mostrano direttamente:
+
+| $A$ | $B$ | $\overline{AB}$ | $\overline{A}\,\overline{B}$ |
+|---:|---:|---:|---:|
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+
+Le due funzioni coincidono in alcune righe, ma **non sono equivalenti**. De Morgan fornisce invece $\overline{AB}=\overline{A}+\overline{B}$ e $\overline{A+B}=\overline{A}\,\overline{B}$.
+
+![Simboli sagomati tradizionali delle porte logiche e delle uscite negate.](/assets/lezioni-teoria/porte.svg)
 
 Una porta è un dispositivo che realizza una funzione logica. La bolla sul terminale indica la negazione. Con due ingressi:
 

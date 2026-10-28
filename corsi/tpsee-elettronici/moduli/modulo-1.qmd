@@ -76,7 +76,7 @@ Nel circuito mostrato $R_1$ e $R_2$ sono in serie; l’uscita è la tensione sul
 - Il simbolo del componente, la sua piedinatura e il suo footprint sono informazioni diverse.
 - Per le porte logiche si possono incontrare simboli rettangolari IEC o sagomati; la funzione e la negazione vanno riconosciute in entrambi.
 
-![Porte fondamentali con simboli rettangolari e negazione sull’uscita.](/assets/lezioni-teoria/porte.svg)
+![Porte fondamentali con simboli sagomati tradizionali e negazione sull’uscita.](/assets/lezioni-teoria/porte.svg)
 
 Per una raccolta dei simboli e delle convenzioni consulta [Leggere uno schema elettrico](/risorse/fondamenti/leggere-gli-schemi.qmd). Il riferimento della simbologia è richiamato anche nella [sintesi dell’unità](../modulo-1.qmd#ud:1.4).
 
