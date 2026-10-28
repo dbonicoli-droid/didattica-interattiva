@@ -516,7 +516,7 @@ Il metodo, in cinque passi:
 
 Proviamo con una richiesta: **accendere una pompa quando il livello scende sotto 20 cm e spegnerla quando supera 80 cm.**
 
-**Passi 1 e 2.** Ingresso: livello $h$ in cm, letto da un sensore. Uscita: comando pompa, acceso o spento. Caso da segnalare: lettura fuori dall'intervallo 0–100 cm, che indica un guasto.
+**Passi 1 e 2.** Ingresso: livello $h$ in cm, letto da un sensore. Uscita: comando pompa, acceso o spento. Per questo esempio consideriamo letture valide e un comando precedente noto: studiamo soltanto la regola delle due soglie.
 
 **Passo 3.** «Leggi il livello. Se è sotto 20, accendi. Se è sopra 80, spegni.»
 
@@ -532,23 +532,19 @@ Altrimenti
 
 **Passo 5, e qui si scopre l'errore.** Proviamo $h=50$ cm, con la pompa accesa: la condizione $h<20$ è falsa, quindi il ramo «altrimenti» **spegne** la pompa. Ma 50 non è sopra 80: non avevamo chiesto di spegnerla. La prima stesura ha trasformato due soglie in una sola, e ha perso la memoria del comando.
 
-**La correzione.** Servono tre casi, non due, e nel caso intermedio si conserva il comando precedente. Definiamo anche il comando iniziale: pompa spenta. Per questo esempio scegliamo di spegnerla anche in caso di lettura non valida; è un comportamento aggiuntivo dichiarato nella specifica:
+**La correzione.** Servono tre casi, non due: sotto la soglia inferiore si accende, sopra quella superiore si spegne, nella zona intermedia si conserva il comando precedente.
 
 ```text
-Pompa = spenta              // inizializzazione: una sola volta
-Ripeti ciclicamente
-    Leggi h
-    Se h < 0 oppure h > 100
-        Pompa = spenta
-        Scrivi "lettura non valida"
-    Altrimenti
-        Se h < 20
-            Pompa = accesa
-        Altrimenti se h > 80
-            Pompa = spenta
-        Altrimenti
-            Conserva il valore di Pompa
+Leggi h
+Se h < 20
+    Pompa = accesa
+Altrimenti se h > 80
+    Pompa = spenta
+Altrimenti
+    Conserva il valore di Pompa
 ```
+
+Il comportamento all’avvio e in caso di lettura non valida non è definito da questo esempio: richiede specifiche da concordare separatamente.
 
 Riconosci la struttura? È **l'isteresi del termostato**, e prima ancora l'autoritenuta del contattore. Tre problemi diversi, la stessa memoria.
 

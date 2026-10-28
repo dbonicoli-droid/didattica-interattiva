@@ -152,7 +152,7 @@ Quanto debba essere grande il rapporto dipende dall’errore accettabile. Per qu
 $$\varepsilon=1-\frac{H_{reale}}{H_{ideale}}
 =\frac{R_{out,1}}{R_{out,1}+R_{in,2}}.$$
 
-Ad esempio, $R_{in,2}=100R_{out,1}$ dà una riduzione di circa lo 0,99 %. Un’altra soluzione, da approfondire in seguito, è interporre un **buffer**: uno stadio con elevata resistenza d’ingresso e bassa resistenza d’uscita, che riduce l’effetto di carico sul primo partitore e permette di pilotare il secondo.
+Ad esempio, $R_{in,2}=100R_{out,1}$ dà una riduzione di circa lo 0,99 %.
 
 **Conclusione dell’esercitazione:** due sistemi con lo stesso rapporto ingresso–uscita quando sono isolati possono comportarsi diversamente in cascata. Per prevedere il collegamento occorre considerare anche lo scambio di corrente tra i blocchi e le loro resistenze d’ingresso e d’uscita.
 
