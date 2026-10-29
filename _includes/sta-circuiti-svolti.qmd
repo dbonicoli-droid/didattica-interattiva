@@ -49,7 +49,7 @@ R_{eq}=\frac{R_1R_2}{R_1+R_2}.$$
 | $I_2$ | $200/200$ | $1\,\mathrm A$ |
 | $I_{tot}$ | $2+1$ | $3\,\mathrm A$ |
 
-L’unica differenza di potenziale fra nodi distinti è $V_{CB}=V_0=200$ V.
+Fra i due nodi abbiamo $V_{CB}=V_C-V_B=V_0=200$ V. Invertendo l’ordine dei nodi cambia il segno: $V_{BC}=-200$ V.
 
 **Controlli:** $V_0/R_{eq}=200/(200/3)=3$ A e $R_{eq}<100\,\Omega$. Le correnti non sono uguali: il ramo con minore resistenza porta più corrente.
 
@@ -57,7 +57,7 @@ L’unica differenza di potenziale fra nodi distinti è $V_{CB}=V_0=200$ V.
 
 ![R1 fra C e A, in serie al parallelo di R2 e R3 fra A e B; il generatore impone VCB uguale a V0.](/assets/sta/verifica-misto-prima.svg)
 
-Tutta la corrente passa attraverso $R_1$; al nodo $A$ si divide fra $R_2$ e $R_3$. **Solo $R_2$ e $R_3$ condividono la stessa tensione**, che non coincide in generale con $V_0$.
+Tutta la corrente passa attraverso $R_1$; al nodo $A$ si divide fra $R_2$ e $R_3$. **$R_2$ e $R_3$ hanno necessariamente la stessa tensione perché sono collegati agli stessi due nodi.** Questa tensione è $V_p=V_0-V_1$: non coincide in generale con quella del generatore.
 
 **1. Riduci il parallelo, poi somma la resistenza in serie:**
 
@@ -86,6 +86,8 @@ I_2=\frac{V_p}{R_2},\qquad I_3=\frac{V_p}{R_3}.$$
 **Tensioni fra i nodi:** $V_{CB}=V_0=230$ V, $V_{CA}=V_1=115$ V, $V_{AB}=V_2=V_3=115$ V.
 
 **Controlli:** $I_1=I_2+I_3=1$ A e $V_1+V_2=230$ V. I due rami hanno correnti uguali perché qui $R_2=R_3$, non perché ogni parallelo imponga correnti uguali.
+
+In questo esempio anche $V_1=115$ V, quindi le tre tensioni hanno lo stesso valore. Accade perché $R_1=R_p=115\,\Omega$, non perché i tre resistori siano in parallelo. Con altri valori, $V_1$ può essere diversa da $V_2=V_3$.
 
 ### 4 · La resistenza singola dopo il parallelo {#circuito-misto-dopo}
 
