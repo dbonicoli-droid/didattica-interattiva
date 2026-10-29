@@ -13,6 +13,8 @@ sidebar: false
 Uno spazio per ritrovare le spiegazioni, consultare le dispense e mettere alla prova le idee. Scegli il tuo corso e segui i collegamenti tra moduli, esempi e laboratori.
 :::
 
+{{< include _includes/notizie.qmd >}}
+
 ## I tuoi percorsi
 
 ::: {.course-grid}
@@ -85,3 +87,5 @@ Il sito collega **moduli, fondamenti, mappe concettuali e laboratori**. Durante 
 ## Materiali in sviluppo
 I contenuti possono ancora contenere errori o imprecisioni. Le attività pratiche richiedono le indicazioni del docente e le procedure del laboratorio scolastico.
 :::
+
+<script src="assets/notizie.js"></script>

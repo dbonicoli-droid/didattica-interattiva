@@ -19,7 +19,7 @@ toc-depth: 3
 
 Scriviamo $V_{AB}=V_A-V_B$. Con $B$ come riferimento, $V_{AB}=V_A$. Una corrente calcolata negativa circola nel verso opposto alla freccia scelta: non è necessariamente un errore.
 
-## 2 · Ridurre il circuito, poi ricostruire le grandezze
+## 2 · Ridurre il circuito, poi ricostruire le grandezze {#ricostruzione}
 
 ![Rete con generatore V0, R1 in serie al parallelo di R2 e del ramo R3 più R4 parallelo R5.](/assets/lezioni-teoria/rete-cinque-resistori.svg)
 
@@ -41,6 +41,10 @@ V_{CB}=I_3R_{45}=20\,\mathrm V,$$
 $$I_4=I_5=\frac{20}{80}=0{,}25\,\mathrm A.$$
 
 **Controlli:** al nodo A, $1{,}25=0{,}75+0{,}50$ A; al nodo C, $0{,}50=0{,}25+0{,}25$ A. Sul percorso generatore–$R_1$–$R_3$–$R_4$, $160=100+40+20$ V.
+
+**Perché non dividere sempre $V_0$ per ogni resistenza?** La legge $I=V/R$ richiede la tensione ai capi di quel resistore. Qui $R_2$ ha 60 V ai capi, $R_4$ e $R_5$ ne hanno 20 V: nessuno dei tre è collegato direttamente ai due morsetti del generatore.
+
+La catena dei risultati è $R_{eq}\to I_1\to V_{AB}\to I_3\to V_{CB}\to I_4,I_5$. Ogni tensione intermedia permette di aprire il gruppo equivalente e calcolare i rami che contiene. Non si assegna la corrente totale a tutti i componenti: è comune solo agli elementi che sono realmente in serie.
 
 Il circuito equivalente conserva il comportamento ai morsetti considerati, ma non mostra direttamente tutte le correnti interne. Per ritrovarle occorre tornare ai gruppi sostituiti.
 

@@ -918,3 +918,32 @@ main.content .bool-table th { white-space: normal; }
   .bool-c2 { --bool-ink: var(--c-elettrotecnici-l); }
   .bool-mark, .bool-term { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
+
+/* Bacheca della homepage: scorrimento locale, anche da tastiera e su touch. */
+:root {
+  --news-height: 22rem;
+  --news-gap: 1rem;
+  --news-padding: 1.25rem;
+  --news-button-size: 2.5rem;
+  --news-font-size: .88rem;
+  --news-title-size: 1.15rem;
+  --news-border-width: .25rem;
+}
+.news-board { margin-block: var(--news-gap); border: 1px solid var(--bordo-forte); border-inline-start: var(--news-border-width) solid var(--accento); border-radius: var(--raggio); background: var(--superficie); overflow: hidden; }
+.news-header { display: flex; align-items: center; justify-content: space-between; gap: var(--news-gap); padding: var(--news-padding); border-bottom: 1px solid var(--bordo); }
+main.content .news-header h2 { margin: 0; border: 0; padding: 0; }
+.news-header p, .news-help { margin: 0; color: var(--testo-secondario, var(--testo)); font-size: var(--news-font-size); }
+.news-actions { display: flex; flex-direction: column; gap: var(--bool-gap); }
+.news-actions[hidden] { display: none; }
+.news-actions button { width: var(--news-button-size); height: var(--news-button-size); border: 1px solid var(--bordo-forte); border-radius: var(--raggio-s); color: var(--testo); background: var(--superficie); cursor: pointer; }
+.news-actions button:hover:not(:disabled) { background: var(--evidenza); }
+.news-actions button:disabled { opacity: .45; cursor: default; }
+.news-feed { max-height: var(--news-height); overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; padding-inline: var(--news-padding); }
+.news-item { padding-block: var(--news-gap); border-bottom: 1px solid var(--bordo); }
+.news-item:last-child { border: 0; }
+.news-item time { display: block; color: var(--accento); font-size: var(--news-font-size); font-variant-numeric: tabular-nums; }
+main.content .news-item h3 { margin-block: var(--bool-gap); font-size: var(--news-title-size); }
+.news-item p { margin: 0; }
+.news-help { padding: var(--news-gap) var(--news-padding); border-top: 1px solid var(--bordo); }
+.news-feed:focus-visible, .news-actions button:focus-visible { outline: 2px solid var(--fuoco); outline-offset: -2px; }
+@media print { .news-feed { max-height: none; overflow: visible; } .news-actions, .news-help { display: none; } }

@@ -7,9 +7,12 @@ title: "Esercizi / Metti insieme il percorso"
 
 []{#sec:sintesi}
 
+Un esempio svolto rimane accanto a ogni argomento nel modulo; qui trovi gli esercizi da affrontare autonomamente, con le soluzioni a comparsa.
+
 ## Indice degli esercizi
 
 - [Modulo 1: progetto e collaudo](#es:modulo-1).
+- [Allenamento per la verifica: tabelle, semplificazioni e riscaldamento](#es:allenamento-verifica).
 - [Modulo 2: algebra booleana e comandi](#es:modulo-2).
 - [Progetto complessivo: selettore con indicazione luminosa](#sec:progetto).
 - [Autoverifica sull’intero percorso](#sec:sintesi-domande).
@@ -75,6 +78,14 @@ e. $(A+B)(A+\overline{B})$.
 **4.** $Y_1'=(S_1+S_2)\overline{G}=(S_1+S_2)(S_1+\overline{S_2})=S_1$; $Y_2'=S_2\overline{G}=S_2(S_1+\overline{S_2})=S_1S_2$. La spia conserva $G=\overline{S_1}S_2$.
 
 :::
+
+### Allenamento per la verifica {#es:allenamento-verifica}
+
+::: {.provenienza}
+Dal [Modulo 2](moduli/modulo-2.qmd), dagli [esercizi aggiornati](/lezioni/2026-2027/2026-10-22-esercizi-prima-verifica.qmd) e dalla [correzione del compito](/lezioni/2026-2027/2026-10-29-correzione-compito.qmd).
+:::
+
+{{< include ../../_includes/esercizi-logica-verifica.qmd >}}
 
 ## Progetto guidato / un selettore con indicazione luminosa {#sec:progetto}
 

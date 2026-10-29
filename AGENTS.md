@@ -51,3 +51,9 @@
 - Nel passaggio dalla tabella alla funzione, evidenziare gli 1 o gli 0 selezionati e il rispettivo termine con lo stesso colore. Conservare anche etichette e riferimenti di riga, affinché il procedimento resti leggibile senza distinguere i colori e in stampa.
 - Nei controllori con più uscite, individuare prima gli ingressi pertinenti a ciascuna uscita e ricavare le espressioni da tabelle ridotte. La tabella completa può restare come verifica complessiva.
 - Nuove scelte sul comportamento di un sistema, incluse condizioni iniziali, gestione dei guasti e priorità dei comandi, vanno concordate con il docente prima di inserirle. Non introdurre algoritmi più complessi senza una ragione didattica pertinente.
+
+
+## Bacheca degli aggiornamenti
+- La homepage include _includes/notizie.qmd: inserire in testa le novità didattiche significative pubblicate, con data e ora reali nel fuso Europe/Rome, link alla risorsa e descrizione concreta.
+- Non usare la data di visita o di compilazione come data delle notizie precedenti. La bacheca è scorrevole senza JavaScript; i pulsanti sono solo un miglioramento.
+- I PDF esportati dalle lezioni vanno controllati anche per eventuali elenchi di studenti: conservare l’originale privato e rimuovere quei dati solo dalla copia pubblica.

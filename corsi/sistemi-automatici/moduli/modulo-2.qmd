@@ -18,6 +18,7 @@ In questo modulo progettiamo **controllori combinatori**: le uscite dipendono da
 - [Dalla funzione alla tabella e viceversa](#ud:2.3)
 - [Semplificazione e verifica](#ud:2.4)
 - [Controllore per l’irrigazione](#ud:2.7)
+- [Comandi con priorità: riscaldamento](#riscaldamento)
 - [Mintermini, maxtermini e Karnaugh](#ud:2.5)
 - [Quine–McCluskey](#ud:2.6)
 :::
@@ -197,6 +198,12 @@ $$Y_2=I\overline{S}.$$
 Il comando manuale ora è necessario e non può forzare l’apertura con terreno umido. Non è una semplificazione della formula precedente: è **un comportamento diverso**.
 
 Se si richiede anche che un guasto chiuda entrambe le valvole, i nuovi comandi sono $Y_1=\overline{G}\,\overline{S}$ e, nella variante solo manuale, $Y_2=\overline{G} I\overline{S}$. La priorità del blocco per guasto è esplicita. Sono modelli didattici del comando, non progetti di funzioni di sicurezza.
+
+## Comandi con priorità: il riscaldamento {#riscaldamento}
+
+{{< include ../../../_includes/logica-riscaldamento.qmd >}}
+
+[Esercitati sulle funzioni e sui comandi →](../esercizi.qmd#es:allenamento-verifica)
 
 ## 6 · Mintermini, maxtermini e mappe {#ud:2.5}
 

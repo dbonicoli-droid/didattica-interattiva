@@ -5,28 +5,28 @@ date: 2026-10-22
 date-format: "DD/MM/YYYY"
 classe: "3A ETC · 3A ENC"
 materia: "Sistemi automatici"
-description: "Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC). Esercizi per preparare la prima verifica di Sistemi automatici, destinati agli studenti di elettronica (ENC) ed elettrotecnica (ETC)."
+description: "Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC). Circuiti resistivi e ricostruzione delle grandezze, schemi a blocchi, tabelle di verità, semplificazioni, comando della cisterna e del riscaldamento con priorità e letture incoerenti dei sensori."
 toc: false
 ---
 
 **3A ETC · 3A ENC · Sistemi automatici · A.S. 2026–2027**
 
-Esercizi per preparare la prima verifica di Sistemi automatici, destinati agli studenti di elettronica (ENC) ed elettrotecnica (ETC).
+Circuiti resistivi e ricostruzione delle grandezze, schemi a blocchi, tabelle di verità, semplificazioni, comando della cisterna e del riscaldamento con priorità e letture incoerenti dei sensori.
 
 Materiale condiviso per elettronici (ENC) ed elettrotecnici (ETC).
 
 <div class="lesson-downloads">
-<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/EserciziPrimaVerifica_ETC-ENC.pdf?v=ea10e36d9490" download="EserciziPrimaVerifica_ETC-ENC.pdf">Scarica il PDF originale · 3,1 MB</a>
-<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/EserciziPrimaVerifica_ETC-ENC.pdf?v=ea10e36d9490" target="_blank" rel="noopener">Apri il PDF separatamente</a>
+<a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/EserciziPrimaVerifica_ETC-ENC.pdf?v=36a35ac9a9eb" download="EserciziPrimaVerifica_ETC-ENC.pdf">Scarica il PDF · 8,4 MB</a>
+<a class="btn btn-outline-primary" href="../../downloads/lezioni/2026-2027/EserciziPrimaVerifica_ETC-ENC.pdf?v=36a35ac9a9eb" target="_blank" rel="noopener">Apri il PDF separatamente</a>
 </div>
 
-Pubblicato il 22 ottobre 2026.
+Pubblicato il 22 ottobre 2026; aggiornato il 29 ottobre 2026. La copia pubblica omette l’elenco dei gruppi di lavoro.
 
 ## Leggi gli appunti
 
 Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso; usa lo zoom per ingrandire la scrittura. Dopo un ingrandimento puoi scorrere anche lateralmente. Su telefono lo schermo intero offre più spazio.
 
-<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/EserciziPrimaVerifica_ETC-ENC.pdf?v=ea10e36d9490" aria-label="Lettore degli appunti">
+<div class="lesson-reader" data-pdf="../../downloads/lezioni/2026-2027/EserciziPrimaVerifica_ETC-ENC.pdf?v=36a35ac9a9eb" aria-label="Lettore degli appunti">
 <div class="lesson-toolbar" role="group" aria-label="Controlli del documento">
 <button type="button" data-action="out" disabled aria-label="Riduci zoom">−</button>
 <output class="lesson-zoom" aria-live="polite">Caricamento…</output>
@@ -42,8 +42,10 @@ Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso;
 
 ## Collegamenti per ripassare
 
-- [Indice di Sistemi automatici](../../corsi/sistemi-automatici/index.qmd)
-- [Ohm, Kirchhoff, serie e parallelo](../../risorse/fondamenti/leggi-dei-circuiti.qmd)
+- [Sistemi · Modulo 1: circuiti e schemi a blocchi](../../corsi/sistemi-automatici/moduli/modulo-1.qmd#circuiti-ingresso-uscita)
+- [Sistemi · Modulo 2: logica e comandi](../../corsi/sistemi-automatici/moduli/modulo-2.qmd)
+- [TPSEE elettronici · Modulo 2: algebra booleana](../../corsi/tpsee-elettronici/moduli/modulo-2.qmd)
+- [Esercizi di Sistemi, divisi per modulo](../../corsi/sistemi-automatici/esercizi.qmd)
 - [Tutte le lezioni in classe](../index.qmd)
 
-Gli appunti conservano la scrittura originale di OneNote; la ricerca del sito trova il titolo e gli argomenti descritti in questa pagina, non le parole scritte a penna.
+Gli appunti conservano la scrittura di OneNote; la ricerca del sito trova il titolo e gli argomenti descritti in questa pagina, non le parole scritte a penna.

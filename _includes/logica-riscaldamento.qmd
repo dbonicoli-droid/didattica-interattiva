@@ -1,0 +1,67 @@
+Due gruppi di termofoni sono comandati da $R_1,R_2$; $C$ è il comando di accensione della caldaia. I comandi valgono 1 quando il rispettivo dispositivo è richiesto acceso. Non sono resistenze elettriche: qui la lettera $R$ indica un comando di riscaldamento.
+
+![Controllore del riscaldamento: temperatura e comando manuale in ingresso, due gruppi di termofoni e caldaia in uscita.](/assets/lezioni-teoria/riscaldamento.svg)
+
+| Ingresso | Significato del valore 1 |
+|---|---|
+| $S_{min}$ | Temperatura $T<12\,{}^\circ\mathrm C$. |
+| $S_0$ | Temperatura $T>19\,{}^\circ\mathrm C$. |
+| $S_{max}$ | Temperatura $T>21\,{}^\circ\mathrm C$. |
+| $I$ | Richiesta manuale di riscaldamento. |
+
+**Le priorità:** sotto 12 °C si attivano entrambi i gruppi anche senza richiesta manuale; sopra 21 °C si disattivano entrambi anche con richiesta manuale. Sopra 19 °C il secondo gruppo viene comunque disattivato. La caldaia è richiesta accesa se almeno un gruppo è attivo. Alle soglie esatte valgono le disuguaglianze della tabella: non si conserva il comando precedente, quindi **non c’è isteresi né memoria**.
+
+### Prima uscita: richiesta manuale e due soglie
+
+Per $R_1$ non serve $S_0$. Le combinazioni coerenti di $S_{min},S_{max}$ sono solo tre:
+
+| $S_{min}$ | $S_{max}$ | $R_1$ con $I=0$ | $R_1$ con $I=1$ |
+|---:|---:|---:|---:|
+| 0 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 |
+
+La soglia minima forza l’accensione; il comando manuale è ammesso quando non è superata la massima:
+
+$$R_1=S_{min}+I\overline{S_{max}}.$$
+
+La combinazione $S_{min}=S_{max}=1$ non può provenire da una stessa temperatura con queste definizioni. La tabella iniziale non ne specifica il comportamento: assegnarle un valore richiede una scelta ulteriore.
+
+### Seconda uscita: riusare un risultato già calcolato
+
+Il secondo gruppo può accendersi solo se il primo è richiesto acceso e non è superata la soglia di 19 °C. Usiamo quindi $R_1$ come **segnale interno**, senza riscriverne ogni volta tutti gli ingressi:
+
+| $S_0$ | $R_1$ | $R_2$ |
+|---:|---:|:---:|
+| 0 | 0 | 0 |
+| 0 | 1 | [1]{.bool-mark .bool-c1} |
+| 1 | 0 | 0 |
+| 1 | 1 | 0 |
+
+::: {.bool-equation}
+$R_2=$ [$\overline{S_0}R_1$]{.bool-term .bool-c1}.
+:::
+
+Per la caldaia basta $C=R_1+R_2$. Poiché $R_2=1$ implica già $R_1=1$, si può anche semplificare:
+
+$$C=R_1+\overline{S_0}R_1=R_1.$$
+
+Riutilizzare un segnale interno **non introduce memoria**: $R_1$ dipende dagli ingressi attuali e non da un comando passato.
+
+::: {.callout-note collapse=true title="Approfondimento · Letture incoerenti e blocco per guasto"}
+La temperatura deve produrre solo queste terne, nell’ordine $(S_{min},S_0,S_{max})$: **100, 000, 010, 011**. Le altre quattro sono incoerenti con le soglie ordinate. Per esempio $S_{min}=S_0=1$ indicherebbe insieme $T<12$ °C e $T>19$ °C.
+
+Il segnale di anomalia può essere scritto:
+
+$$G=S_{min}S_0+S_{max}\overline{S_0}.$$
+
+Vale 1 nelle terne 001, 101, 110, 111 e 0 nelle quattro coerenti. Rileva l’incoerenza dei bit, non ogni possibile guasto fisico.
+
+Negli appunti si considera esplicitamente la **variante che disattiva tutti i comandi in caso di anomalia**:
+
+$$\widehat R_1=(S_{min}+I\overline{S_{max}})\overline G,\qquad
+\widehat R_2=\overline{S_0}\widehat R_1,\qquad
+\widehat C=\widehat R_1+\widehat R_2.$$
+
+Un punto importante: $S_{min}+I\overline{S_{max}}$ e $\overline{S_{max}}(S_{min}+I)$ coincidono sulle combinazioni coerenti, ma differiscono quando $S_{min}=S_{max}=1$. La seconda forza 0, la prima 1. **Equivalenza sui casi ammessi non significa identità su tutte le combinazioni.** Il blocco esplicito con $\overline G$ rende definita la variante richiesta senza confondere le due questioni.
+:::

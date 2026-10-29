@@ -13,9 +13,12 @@ Gli esercizi stanno qui, divisi per modulo, così puoi usarli per ripassare senz
 
 Le tabelle interattive di classificazione restano dentro il [Modulo 1](moduli/modulo-1.qmd#ud:1.3), accanto alla teoria che esercitano.
 
+Un esempio svolto rimane accanto a ogni argomento nel modulo; qui trovi gli esercizi da affrontare autonomamente, con le soluzioni a comparsa.
+
 ## Indice degli esercizi
 
 - [Modulo 1: sistemi e modelli](#es:modulo-1); [circuiti, blocchi e algoritmi](#es:circuiti-blocchi).
+- [Allenamento per la verifica: tabelle, semplificazioni e riscaldamento](#es:allenamento-verifica).
 - [Modulo 2: logica](#es:modulo-2); [progettazione dei comandi](#es:comandi-combinatori).
 - [Moduli 5 e 6: sequenze, tempi e misure](#es:moduli-5-6).
 
@@ -122,6 +125,14 @@ Da [Modulo 2 — Elettronica digitale](moduli/modulo-2.qmd#ud:2.7) e dagli [eser
 **6.** $Y=\overline{A}B\overline{C}+\overline{A}BC=\overline{A}B(\overline{C}+C)=\overline{A}B$. Il risultato non dipende da $C$.
 
 :::
+
+### Allenamento per la verifica {#es:allenamento-verifica}
+
+::: {.provenienza}
+Dal [Modulo 2](moduli/modulo-2.qmd), dagli [esercizi aggiornati](/lezioni/2026-2027/2026-10-22-esercizi-prima-verifica.qmd) e dalla [correzione del compito](/lezioni/2026-2027/2026-10-29-correzione-compito.qmd).
+:::
+
+{{< include ../../_includes/esercizi-logica-verifica.qmd >}}
 
 ## Moduli 5 e 6 · Sequenze, tempi e misure {#es:moduli-5-6}
 

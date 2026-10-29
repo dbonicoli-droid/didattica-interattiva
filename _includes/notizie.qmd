@@ -1,0 +1,37 @@
+<section class="news-board" aria-labelledby="news-title">
+<header class="news-header">
+<div><h2 id="news-title">Bacheca · Ultime novità</h2><p>Materiali e spiegazioni aggiunti di recente · ora italiana</p></div>
+<div class="news-actions" hidden>
+<button type="button" data-news-direction="-1" aria-label="Scorri le notizie verso l’alto" aria-controls="news-feed">↑</button>
+<button type="button" data-news-direction="1" aria-label="Scorri le notizie verso il basso" aria-controls="news-feed">↓</button>
+</div>
+</header>
+<div id="news-feed" class="news-feed" tabindex="0" role="region" aria-label="Aggiornamenti recenti: scorri per leggere le altre notizie">
+<article class="news-item">
+<time datetime="2026-10-29T15:32+01:00">29/10/2026 · 15:32</time>
+<h3><a href="lezioni/2026-2027/2026-10-29-correzione-compito.qmd">Nuovi appunti e correzione del compito</a></h3>
+<p>Aggiornati gli esercizi per la prima verifica; aggiunti la correzione e gli esercizi su circuiti, logica e riscaldamento. Tutto in <a href="lezioni/index.qmd">Lezioni in classe</a>.</p>
+</article>
+<article class="news-item">
+<time datetime="2026-10-29T15:32+01:00">29/10/2026 · 15:32</time>
+<h3><a href="corsi/sistemi-automatici/moduli/modulo-2.qmd#riscaldamento">Riscaldamento: un comando con priorità</a></h3>
+<p>Tabelle ridotte, segnali interni e controllo delle letture incoerenti, nei moduli di logica di Sistemi e TPSEE elettronici.</p>
+</article>
+<article class="news-item">
+<time datetime="2026-10-29T15:32+01:00">29/10/2026 · 15:32</time>
+<h3><a href="corsi/sistemi-automatici/esercizi.qmd#es:allenamento-verifica">Allenamento per la verifica</a></h3>
+<p>Nuovi esercizi di tabelle, semplificazioni e riscaldamento, raccolti per modulo con soluzioni a comparsa.</p>
+</article>
+<article class="news-item">
+<time datetime="2026-10-29T00:19:00+01:00">29/10/2026 · 00:19</time>
+<h3><a href="corsi/tpsee-elettronici/moduli/modulo-2.qmd#ud:2.2">Assorbimento: perché AB e AC sono ridondanti</a></h3>
+<p>Una derivazione completa e il significato dei termini eliminati nell’algebra booleana.</p>
+</article>
+<article class="news-item">
+<time datetime="2026-10-29T00:10:00+01:00">29/10/2026 · 00:10</time>
+<h3><a href="corsi/sistemi-automatici/moduli/modulo-2.qmd#ud:2.3">Dalla tabella alla funzione, a colori</a></h3>
+<p>Righe selezionate e termini corrispondenti hanno lo stesso colore; per l’irrigazione si parte dalle tabelle di ciascuna uscita.</p>
+</article>
+</div>
+<p class="news-help">Scorri nel riquadro, usa le frecce oppure selezionalo e premi ↑ e ↓.</p>
+</section>

@@ -357,6 +357,22 @@ V_{AB}=6\,\mathrm V,\quad I_2=I_3=30\,\mathrm{mA}.$$
 
 Il guadagno tensione–tensione è $1/2$; quello tensione–corrente è $1/(400\,\Omega)=2{,}5\,\mathrm{mS}$. La scelta dell’uscita cambia il rapporto, pur lasciando invariato il circuito.
 
+#### Ridurre, poi tornare al circuito originale {#ricostruire-circuito}
+
+La tensione $v_{in}$ è ai capi dell’intera rete: **non è la tensione di ciascun resistore**. Nel circuito mostrato, $R_2$ e $R_3$ condividono $V_{AB}$, mentre $R_1$ ha ai capi $v_{in}-V_{AB}$.
+
+La sequenza dei conti è:
+
+1. Sostituisci $R_2,R_3$ con $R_p$ e ricava $R_{eq}$.
+2. Calcola $I_1=v_{in}/R_{eq}$.
+3. Ricava la tensione del gruppo parallelo: $V_{AB}=R_p I_1$.
+4. Torna ai due rami: $I_2=V_{AB}/R_2$, $I_3=V_{AB}/R_3$.
+5. Verifica $I_1=I_2+I_3$ e $v_{in}=R_1 I_1+V_{AB}$.
+
+Il generatore ideale impone la propria tensione anche prima dei conti: se due nodi sono direttamente ai suoi morsetti, la loro differenza di potenziale è già nota, con il segno stabilito dalla polarità. Negli altri casi occorre ricavarla dalle tensioni intermedie.
+
+Per una rete con più gruppi, lo stesso metodo si ripete: riduzioni verso il generatore, poi ricostruzione in ordine inverso. Un [esempio completo a cinque resistori](/risorse/fondamenti/metodi-circuiti-resistivi.qmd#ricostruzione) e la [correzione scritta in classe](/lezioni/2026-2027/2026-10-29-correzione-compito.qmd) mostrano i passaggi.
+
 Per ricavare prima le formule e poi i valori numerici, conserva le lettere fino alla fine. Controlla le unità: un rapporto corrente/tensione non può essere espresso semplicemente con un numero senza unità.
 
 ### Quando una resistenza può essere trascurata

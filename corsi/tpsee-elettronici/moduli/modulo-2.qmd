@@ -18,6 +18,7 @@ Come si passa da condizioni espresse a parole a un circuito che le realizza? In 
 - [De Morgan](#ud:2.3)
 - [Semplificazioni svolte](#ud:2.4)
 - [Progetto dell’allarme](#progetto-allarme)
+- [Comandi con priorità: riscaldamento](#riscaldamento)
 :::
 
 ## 1 · Che cos’è l’algebra booleana e come si usa {#ud:2.1}
@@ -69,7 +70,19 @@ Non basta mettere la barra su ogni lettera lasciando invariati gli operatori. Es
 
 $$A+\overline{A} B=(A+\overline{A})(A+B)=1\cdot(A+B)=A+B.$$
 
-Si usa la distributività della somma sul prodotto, poi la complementazione.
+Si applica la **distributività booleana**
+
+$$X+YZ=(X+Y)(X+Z).$$
+
+Qui il termine isolato è $X=A$, mentre i due fattori del prodotto sono $Y=\overline{A}$ e $Z=B$. Sostituendoli nella regola si ottiene proprio la prima uguaglianza:
+
+$$\underbrace{A}_{X}+\underbrace{\overline{A}}_{Y}\underbrace{B}_{Z}
+=(\underbrace{A}_{X}+\underbrace{\overline{A}}_{Y})
+(\underbrace{A}_{X}+\underbrace{B}_{Z}).$$
+
+Non stiamo raccogliendo un fattore comune: stiamo trasformando una **somma con un prodotto** in un **prodotto di due somme**. Nel primo fattore compare ora $A+\overline{A}=1$; quindi resta $1\cdot(A+B)=A+B$.
+
+Lo si può capire anche senza trasformazioni: se $A=1$, l’uscita è già 1; se $A=0$, $\overline{A}=1$ e l’uscita coincide con $B$. In entrambi i casi si comporta come $A+B$.
 
 ### Esempio 2: raccogliere e assorbire
 
@@ -131,6 +144,12 @@ $$Y=A(B+C).$$
 Dalla tabella si ricava anche $Y=A\overline{B}C+AB\overline{C}+ABC$. La forma fattorizzata realizza lo stesso comportamento con una OR e una AND. Il modello è **combinatorio**: non ricorda un’intrusione passata e la sirena si spegne se tutte le aperture vengono richiuse. Per mantenerla attiva servirebbe memoria, non prevista da questo esercizio.
 
 [Allenati con le semplificazioni e i problemi di progetto →](../esercizi-metti-insieme-il-percorso.qmd#es:modulo-2)
+
+## Comandi con priorità: il riscaldamento {#riscaldamento}
+
+{{< include ../../../_includes/logica-riscaldamento.qmd >}}
+
+[Esercitati sulle funzioni e sui comandi →](../esercizi-metti-insieme-il-percorso.qmd#es:allenamento-verifica)
 
 ## Corrispondenza con il programma {#programma}
 
