@@ -19,6 +19,8 @@ Dieci affermazioni vero/falso e dodici domande a scelta multipla. Per ogni doman
 
 ### Vero o falso
 
+:::: {.sta-question-grid .sta-vf-grid}
+
 ::: {.sta-question data-answer="0"}
 
 **1. Nei conduttori metallici la corrente elettrica è dovuta principalmente al movimento degli elettroni.**
@@ -109,7 +111,11 @@ Dieci affermazioni vero/falso e dodici domande a scelta multipla. Per ogni doman
 
 :::
 
+::::
+
 ### Scelta multipla
+
+:::: {.sta-question-grid .sta-mc-grid}
 
 ::: {.sta-question data-answer="1"}
 
@@ -242,6 +248,8 @@ Dieci affermazioni vero/falso e dodici domande a scelta multipla. Per ogni doman
 - D. Nel conduttore sono presenti soltanto cariche positive.
 
 :::
+
+::::
 
 ::: {.content-visible when-format="html"}
 <div class="sta-quiz-actions"><button type="button" id="sta-check">Verifica le risposte</button><button type="button" id="sta-solutions">Mostra soluzioni</button><button type="button" id="sta-reset">Ricomincia</button></div>
