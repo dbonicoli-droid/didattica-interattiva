@@ -1,0 +1,122 @@
+## Quattro circuiti svolti {#circuiti-svolti}
+
+Usiamo generatori ideali e resistori ohmici con resistenze positive e costanti. $V_0$ è la tensione del generatore; $V_k$ è la tensione ai capi di $R_k$, positiva dal lato in cui entra la corrente indicata. Il nodo $B$ è il riferimento: $V_B=0$. I valori sono esempi di calcolo.
+
+Per ogni circuito segui lo stesso ordine: **riconosci i gruppi → trova $R_{eq}$ → calcola la corrente del generatore → ricava tensioni e correnti dei componenti**.
+
+### 1 · Due resistori in serie {#circuito-serie}
+
+![Generatore V0 e resistori R1 e R2 in serie; corrente comune e polarità delle tensioni V1 e V2.](/assets/sta/verifica-serie.svg)
+
+Non ci sono diramazioni fra i due resistori: **la stessa corrente attraversa entrambi**. Le tensioni si sommano.
+
+$$R_{eq}=R_1+R_2,\qquad I_{tot}=\frac{V_0}{R_1+R_2},\qquad I_1=I_2=I_{tot}.$$
+
+$$V_1=R_1I_{tot}=V_0\frac{R_1}{R_1+R_2},\qquad
+V_2=R_2I_{tot}=V_0\frac{R_2}{R_1+R_2}.$$
+
+**Come negli appunti:** $V_0=300\,\mathrm V$, $R_1=100\,\Omega$, $R_2=200\,\Omega$.
+
+| Grandezza | Calcolo | Risultato |
+|---|---|---|
+| $R_{eq}$ | $100+200$ | $300\,\Omega$ |
+| $I_{tot}=I_1=I_2$ | $300/300$ | $1\,\mathrm A$ |
+| $V_1$ | $100\cdot1$ | $100\,\mathrm V$ |
+| $V_2$ | $200\cdot1$ | $200\,\mathrm V$ |
+
+**Tensioni fra i nodi:** $V_{CB}=V_0=300$ V, $V_{CA}=V_1=100$ V, $V_{AB}=V_2=200$ V.
+
+**Controllo:** $V_1+V_2=100+200=300$ V. Le tensioni non sono uguali, perché le resistenze non sono uguali.
+
+### 2 · Due resistori in parallelo {#circuito-parallelo}
+
+![R1 e R2 collegati agli stessi due nodi del generatore: V1 e V2 hanno la stessa polarità e lo stesso valore V0; le correnti di ramo sono I1 e I2.](/assets/sta/verifica-parallelo.svg)
+
+I resistori sono collegati agli **stessi due nodi**: hanno la stessa tensione. La corrente del generatore si divide fra i rami.
+
+$$V_1=V_2=V_0,\qquad I_1=\frac{V_0}{R_1},\qquad I_2=\frac{V_0}{R_2}.$$
+
+$$I_{tot}=I_1+I_2,\qquad
+R_{eq}=\frac{R_1R_2}{R_1+R_2}.$$
+
+**Esempio degli appunti:** $V_0=200\,\mathrm V$, $R_1=100\,\Omega$, $R_2=200\,\Omega$.
+
+| Grandezza | Calcolo | Risultato |
+|---|---|---|
+| $R_{eq}$ | $(100\cdot200)/(100+200)$ | $\frac{200}{3}\,\Omega\approx66{,}67\,\Omega$ |
+| $V_1=V_2$ | $V_0$ | $200\,\mathrm V$ |
+| $I_1$ | $200/100$ | $2\,\mathrm A$ |
+| $I_2$ | $200/200$ | $1\,\mathrm A$ |
+| $I_{tot}$ | $2+1$ | $3\,\mathrm A$ |
+
+L’unica differenza di potenziale fra nodi distinti è $V_{CB}=V_0=200$ V.
+
+**Controlli:** $V_0/R_{eq}=200/(200/3)=3$ A e $R_{eq}<100\,\Omega$. Le correnti non sono uguali: il ramo con minore resistenza porta più corrente.
+
+### 3 · Una resistenza prima del parallelo {#circuito-misto-prima}
+
+![R1 fra C e A, in serie al parallelo di R2 e R3 fra A e B; il generatore impone VCB uguale a V0.](/assets/sta/verifica-misto-prima.svg)
+
+Tutta la corrente passa attraverso $R_1$; al nodo $A$ si divide fra $R_2$ e $R_3$. **Solo $R_2$ e $R_3$ condividono la stessa tensione**, che non coincide in generale con $V_0$.
+
+**1. Riduci il parallelo, poi somma la resistenza in serie:**
+
+$$R_p=\frac{R_2R_3}{R_2+R_3},\qquad R_{eq}=R_1+R_p.$$
+
+**2. Calcola la corrente del generatore e la tensione su $R_1$:**
+
+$$I_{tot}=I_1=\frac{V_0}{R_1+R_p},\qquad V_1=R_1I_1.$$
+
+**3. Torna al parallelo:**
+
+$$V_2=V_3=V_p=V_0-V_1=R_pI_1,\qquad
+I_2=\frac{V_p}{R_2},\qquad I_3=\frac{V_p}{R_3}.$$
+
+**Esempio degli appunti:** $V_0=230\,\mathrm V$, $R_1=115\,\Omega$, $R_2=R_3=230\,\Omega$.
+
+| Grandezza | Calcolo | Risultato |
+|---|---|---|
+| $R_p$ | $(230\cdot230)/(230+230)$ | $115\,\Omega$ |
+| $R_{eq}$ | $115+115$ | $230\,\Omega$ |
+| $I_{tot}=I_1$ | $230/230$ | $1\,\mathrm A$ |
+| $V_1$ | $115\cdot1$ | $115\,\mathrm V$ |
+| $V_2=V_3$ | $230-115$ | $115\,\mathrm V$ |
+| $I_2=I_3$ | $115/230$ | $0{,}5\,\mathrm A$ ciascuna |
+
+**Tensioni fra i nodi:** $V_{CB}=V_0=230$ V, $V_{CA}=V_1=115$ V, $V_{AB}=V_2=V_3=115$ V.
+
+**Controlli:** $I_1=I_2+I_3=1$ A e $V_1+V_2=230$ V. I due rami hanno correnti uguali perché qui $R_2=R_3$, non perché ogni parallelo imponga correnti uguali.
+
+### 4 · La resistenza singola dopo il parallelo {#circuito-misto-dopo}
+
+![R2 e R3 in parallelo fra C e A, seguiti da R1 fra A e B; le correnti si ricongiungono prima di attraversare R1.](/assets/sta/verifica-misto-dopo.svg)
+
+Ora la corrente si divide prima fra $R_2$ e $R_3$, si ricongiunge al nodo $A$ e attraversa $R_1$. La struttura resta **$R_1$ in serie al parallelo di $R_2,R_3$**: conta il collegamento ai nodi.
+
+$$R_p=\frac{R_2R_3}{R_2+R_3},\qquad
+R_{eq}=R_p+R_1,\qquad I_{tot}=I_1=\frac{V_0}{R_p+R_1}.$$
+
+$$\begin{gathered}
+V_1=R_1I_1\\V_2=V_3=V_p=V_0-V_1=R_pI_1\\I_2=\frac{V_p}{R_2},\quad I_3=\frac{V_p}{R_3}.
+\end{gathered}$$
+
+Con gli stessi valori del caso precedente:
+
+| Grandezza | Calcolo | Risultato |
+|---|---|---|
+| $R_p$ | $(230\cdot230)/(230+230)$ | $115\,\Omega$ |
+| $R_{eq}$ | $115+115$ | $230\,\Omega$ |
+| $I_{tot}=I_1$ | $230/230$ | $1\,\mathrm A$ |
+| $V_1$ | $115\cdot1$ | $115\,\mathrm V$ |
+| $V_2=V_3$ | $R_pI_1=115\cdot1$ | $115\,\mathrm V$ |
+| $I_2=I_3$ | $115/230$ | $0{,}5\,\mathrm A$ ciascuna |
+
+**Tensioni fra i nodi:** $V_{CB}=V_0=230$ V, $V_{CA}=V_2=V_3=115$ V, $V_{AB}=V_1=115$ V.
+
+Le grandezze dei resistori sono uguali a quelle del caso 3; cambia quale tratto del circuito corrisponde a ciascuna tensione fra nodi. **Controlli:** $I_2+I_3=I_1$ e $V_p+V_1=V_0$.
+
+::: {.callout-note collapse=true title="Stesso collegamento, tensioni dei nodi diverse"}
+L’uguaglianza numerica $V_{AB}=115$ V nei due disegni dipende dai valori scelti. Con $V_0=100$ V, $R_1=10\,\Omega$ e $R_2=R_3=80\,\Omega$, in entrambi i circuiti $R_p=40\,\Omega$, $R_{eq}=50\,\Omega$, $I_1=2$ A, $I_2=I_3=1$ A, $V_1=20$ V e $V_2=V_3=80$ V.
+
+Nel caso 3, però, $V_{AB}$ è la tensione del parallelo e vale **80 V**; nel caso 4 è la tensione su $R_1$ e vale **20 V**. Prima di applicare una formula occorre sempre individuare i morsetti della tensione richiesta.
+:::

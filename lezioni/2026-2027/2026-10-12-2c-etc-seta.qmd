@@ -5,13 +5,13 @@ date: 2026-10-12
 date-format: "DD/MM/YYYY"
 classe: "Classi di orientamento SETA"
 materia: "S&TA Elettrotecnica"
-description: "Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo."
+description: "Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm, effetto Joule, resistori in serie e in parallelo e circuiti misti."
 toc: false
 ---
 
 **Classi di orientamento SETA · S&TA Elettrotecnica · A.S. 2026–2027**
 
-Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm e resistori in serie e in parallelo.
+Appunti per le classi che partecipano all’orientamento del progetto SETA: cariche elettriche, corrente, tensione, legge di Ohm, effetto Joule, resistori in serie e in parallelo e circuiti misti.
 
 <div class="lesson-downloads">
 <a class="btn btn-primary" href="../../downloads/lezioni/2026-2027/SETA_2C_2026.pdf?v=04543d98ca1a" download="SETA_2C_2026.pdf">Scarica il PDF originale · 7,9 MB</a>
@@ -42,6 +42,7 @@ Il documento si apre adattato alla larghezza. Scorri gli appunti verso il basso;
 
 - [Concetti base: le cariche e la legge di Ohm](../../corsi/sta-elettrotecnica/concetti-base.qmd)
 - [Laboratorio dei circuiti serie e parallelo](../../laboratori/resistori.html?percorso=sta-elettrotecnica)
+- [Quattro circuiti svolti e domande di ripasso](../../corsi/sta-elettrotecnica/verifica.qmd#circuiti-svolti)
 - [Indice di S&TA Elettrotecnica](../../corsi/sta-elettrotecnica/index.qmd)
 - [Tutte le lezioni in classe](../index.qmd)
 

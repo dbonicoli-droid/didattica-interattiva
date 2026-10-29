@@ -9,13 +9,107 @@ toc-depth: 2
 
 ## Che cosa occorre conoscere
 
-La verifica riprende i concetti della [sezione 2](concetti-base.qmd): segno delle cariche e loro interazione, azione del campo elettrico, moto degli elettroni nei metalli, significato di corrente e tensione, resistenza, unità di misura e legge di Ohm.
+La verifica riprende i concetti della [sezione 2](concetti-base.qmd) e degli [appunti SETA](/lezioni/2026-2027/2026-10-12-2c-etc-seta.qmd): cariche e loro interazione, campo elettrico, moto degli elettroni nei metalli, corrente e tensione, resistenza, unità di misura, legge di Ohm, effetto Joule, collegamenti in serie e in parallelo.
 
-## Esempio di test a crocette
+## Allenati con le domande
 
-Dieci domande semplici, con **una sola risposta corretta per domanda**. Sono un esempio di possibile test e possono essere usate per esercitarsi.
+Dieci affermazioni vero/falso e dodici domande a scelta multipla. Per ogni domanda scegli **una sola risposta**, poi controlla il risultato. Sono una raccolta di ripasso: non tutte le domande devono comparire nella stessa verifica.
 
 ::: {#sta-quiz}
+
+### Vero o falso
+
+::: {.sta-question data-answer="0"}
+
+**1. Nei conduttori metallici la corrente elettrica è dovuta principalmente al movimento degli elettroni.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**2. Due cariche elettriche dello stesso segno si attraggono.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**3. Il verso convenzionale della corrente coincide con il verso del movimento degli elettroni nei metalli.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="0"}
+
+**4. Due resistori collegati in parallelo hanno la stessa tensione ai loro capi.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="0"}
+
+**5. Un atomo neutro contiene lo stesso numero di protoni e di elettroni.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**6. Due resistori collegati in parallelo sono sempre attraversati dalla stessa corrente.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="0"}
+
+**7. Due resistori collegati in serie sono attraversati dalla stessa corrente.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**8. Due resistori collegati in serie hanno sempre la stessa tensione ai loro capi.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="0"}
+
+**9. La resistenza equivalente di due resistori in serie è uguale alla somma delle loro resistenze.**
+
+- Vero.
+- Falso.
+
+:::
+
+::: {.sta-question data-answer="1"}
+
+**10. La resistenza equivalente di due resistori in parallelo, con resistenze positive, è maggiore di entrambe le resistenze.**
+
+- Vero.
+- Falso.
+
+:::
+
+### Scelta multipla
 
 ::: {.sta-question data-answer="1"}
 
@@ -66,7 +160,7 @@ Dieci domande semplici, con **una sola risposta corretta per domanda**. Sono un 
 **5. La corrente elettrica descrive…**
 
 - A. la temperatura del resistore.
-- B. il trasporto di carica nell’unità di tempo.
+- B. il passaggio di carica nell’unità di tempo.
 - C. la lunghezza del filo.
 - D. il numero di interruttori.
 
@@ -127,6 +221,28 @@ Dieci domande semplici, con **una sola risposta corretta per domanda**. Sono un 
 
 :::
 
+::: {.sta-question data-answer="2"}
+
+**11. In un circuito con due resistori in parallelo, la corrente erogata dal generatore è:**
+
+- A. Sempre uguale alla corrente nel ramo 1.
+- B. La differenza fra le correnti nei due rami.
+- C. La somma delle correnti nei due rami.
+- D. Sempre uguale alla corrente nel ramo 2.
+
+:::
+
+::: {.sta-question data-answer="2"}
+
+**12. Quale affermazione descrive correttamente la differenza tra un conduttore metallico e un isolante?**
+
+- A. Il conduttore contiene elettroni, mentre l’isolante ne è privo.
+- B. Nel conduttore si muovono i protoni, nell’isolante gli elettroni.
+- C. Nel conduttore alcuni elettroni possono muoversi facilmente attraverso il materiale; nell’isolante sono fortemente legati.
+- D. Nel conduttore sono presenti soltanto cariche positive.
+
+:::
+
 ::: {.content-visible when-format="html"}
 <div class="sta-quiz-actions"><button type="button" id="sta-check">Verifica le risposte</button><button type="button" id="sta-solutions">Mostra soluzioni</button><button type="button" id="sta-reset">Ricomincia</button></div>
 <p id="sta-score" role="status" aria-live="polite"></p>
@@ -135,25 +251,46 @@ Dieci domande semplici, con **una sola risposta corretta per domanda**. Sono un 
 
 :::
 
-::: {.callout-note collapse=true title="Soluzioni commentate"}
+::: {.callout-note collapse=true title="Vero/falso · Soluzioni commentate"}
+
+1. **Vero** — Nei metalli i portatori mobili sono gli elettroni.
+2. **Falso** — Cariche dello stesso segno si respingono.
+3. **Falso** — Il verso convenzionale è opposto al moto medio degli elettroni.
+4. **Vero** — Sono collegati agli stessi due nodi.
+5. **Vero** — Le cariche positive e negative si compensano.
+6. **Falso** — La corrente di ramo dipende dalla resistenza: a tensione comune, I = V/R.
+7. **Vero** — Fra i due resistori non ci sono diramazioni.
+8. **Falso** — Con la stessa corrente, V = RI: le tensioni sono uguali solo se le resistenze sono uguali (oppure la corrente è nulla).
+9. **Vero** — In serie R_eq = R_1 + R_2.
+10. **Falso** — Il parallelo ha resistenza equivalente minore di ciascuna resistenza.
+
+:::
+
+::: {.callout-note collapse=true title="Scelta multipla · Soluzioni commentate"}
 
 1. **B** — Gli elettroni hanno carica negativa.
 2. **C** — Cariche dello stesso segno si respingono.
 3. **A** — Il campo elettrico esercita una forza sulle cariche.
-4. **D** — La conduzione nei metalli è dovuta agli elettroni mobili.
-5. **B** — La corrente misura quanta carica attraversa una sezione nell’unità di tempo.
+4. **D** — Nei metalli i portatori mobili sono gli elettroni.
+5. **B** — La corrente misura il passaggio di carica nell’unità di tempo.
 6. **C** — La tensione è una differenza di potenziale e si misura in volt.
 7. **A** — La resistenza si misura in ohm.
-8. **D** — Dalla legge di Ohm V = RI si ottiene I = V/R.
-9. **B** — 1 kΩ = 1000 Ω: 5/1000 A = 0,005 A = 5 mA.
-10. **C** — I = V/R: raddoppiando R, la corrente si dimezza.
+8. **D** — Da V = RI si ottiene I = V/R.
+9. **B** — 5/1000 A = 0,005 A = 5 mA.
+10. **C** — A tensione costante, raddoppiando la resistenza la corrente si dimezza.
+11. **C** — Al nodo la corrente del generatore si divide fra i due rami: I_tot = I_1 + I_2.
+12. **C** — Conduttori e isolanti contengono elettroni, ma la loro mobilità è diversa.
 
 :::
 
 ## Analisi di un circuito
 
-Nella verifica verrà chiesto anche di **analizzare un circuito con due resistori in serie oppure due resistori in parallelo**. Dovrai riconoscere il collegamento, individuare la grandezza comune (corrente in serie, tensione in parallelo), calcolare la resistenza equivalente e applicare la legge di Ohm per trovare tensioni e correnti richieste, con le unità corrette.
+Nella verifica potrà essere chiesto di **analizzare uno dei circuiti visti a lezione**: due resistori in serie, due resistori in parallelo oppure una resistenza in serie al parallelo di altre due. Il circuito misto può essere disegnato anche con la resistenza singola dopo il parallelo.
+
+Dovrai riconoscere i collegamenti, individuare le grandezze comuni, calcolare la resistenza equivalente vista dal generatore e ricavare **tutte le correnti e tutte le tensioni richieste**, usando la legge di Ohm e riportando le unità corrette.
 
 [Ripassa serie e parallelo](/risorse/fondamenti/leggi-dei-circuiti.qmd#resistori-in-serie) · [Esercitati nel laboratorio](/laboratori/resistori.qmd)
+
+{{< include ../../_includes/sta-circuiti-svolti.qmd >}}
 
 [← Prova pratica](prova-pratica.qmd) · [Torna all’indice](index.qmd)

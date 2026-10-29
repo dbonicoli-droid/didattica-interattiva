@@ -71,6 +71,41 @@ Con lo stesso resistore, a 10 V la corrente è 10 mA. Se manteniamo 5 V e usiamo
 
 [Prova il circuito con un solo resistore nel laboratorio](/laboratori/resistori.qmd#un-resistore).
 
+## Il calore prodotto dalla corrente
+
+Quando una corrente attraversa un resistore, energia elettrica viene trasformata in energia termica: è l’**effetto Joule**. La potenza indica quanta energia viene trasferita ogni secondo e si misura in **watt (W)**.
+
+$$P=VI.$$
+
+Per un resistore ohmico, sostituendo la legge di Ohm si ricavano anche:
+
+$$P=RI^2=\frac{V^2}{R}.$$
+
+Nell’esempio precedente, con 5 V e 5 mA, $P=5\cdot0{,}005=0{,}025$ W, cioè 25 mW. La potenza non è una carica né una corrente: è energia per unità di tempo.
+
+## Dal componente ai collegamenti
+
+- **Serie:** i resistori sono uno dopo l’altro, senza diramazioni intermedie. Hanno la stessa corrente; le tensioni si sommano e $R_{eq}=R_1+R_2$.
+- **Parallelo:** i resistori sono collegati agli stessi due nodi. Hanno la stessa tensione; le correnti dei rami si sommano. Per due resistori, $R_{eq}=R_1R_2/(R_1+R_2)$.
+- **Circuito misto:** si riduce prima il gruppo parallelo e poi si somma la resistenza che è in serie al gruppo. Infine si torna al circuito originale per trovare le grandezze dei singoli componenti.
+
+Trovi **gli schemi e gli svolgimenti completi** nella [sezione sui quattro circuiti della verifica](verifica.qmd#circuiti-svolti), con gli esempi numerici degli appunti.
+
+::: {.callout-note collapse=true title="Perché in parallelo si sommano le conduttanze"}
+La **conduttanza** $G=1/R$ descrive la facilità con cui il ramo lascia passare corrente. Aggiungere un percorso in parallelo permette il passaggio di altra corrente, alla stessa tensione: aumenta la conduttanza totale.
+
+$$I_{tot}=\frac{V}{R_1}+\frac{V}{R_2}
+=V\left(\frac1{R_1}+\frac1{R_2}\right),\qquad
+G_{eq}=G_1+G_2.$$
+
+Quindi $1/R_{eq}=1/R_1+1/R_2$ e, invertendo la somma,
+
+$$R_{eq}=\frac{1}{(R_1+R_2)/(R_1R_2)}
+=\frac{R_1R_2}{R_1+R_2}.$$
+
+Per due resistenze uguali a $R$, la serie vale $2R$ e il parallelo vale $R/2$.
+:::
+
 ## Dai primi concetti ai circuiti serie e parallelo
 
 Nel [laboratorio dei circuiti serie e parallelo](/laboratori/resistori.qmd) puoi osservare come si ripartiscono tensioni e correnti fra due resistori, modificare le resistenze e confrontare i due collegamenti.

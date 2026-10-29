@@ -8,6 +8,11 @@
 </header>
 <div id="news-feed" class="news-feed" tabindex="0" role="region" aria-label="Aggiornamenti recenti: scorri per leggere le altre notizie">
 <article class="news-item">
+<time datetime="2026-10-29T18:01+01:00">29/10/2026 · 18:01</time>
+<h3><a href="corsi/sta-elettrotecnica/verifica.qmd">S&amp;TA: ripasso e circuiti svolti</a></h3>
+<p>Vero/falso e domande a scelta multipla, serie, parallelo e due disposizioni del circuito misto: formule, passaggi e risultati.</p>
+</article>
+<article class="news-item">
 <time datetime="2026-10-29T15:32+01:00">29/10/2026 · 15:32</time>
 <h3><a href="lezioni/2026-2027/2026-10-29-correzione-compito.qmd">Nuovi appunti e correzione del compito</a></h3>
 <p>Aggiornati gli esercizi per la prima verifica; aggiunti la correzione e gli esercizi su circuiti, logica e riscaldamento. Tutto in <a href="lezioni/index.qmd">Lezioni in classe</a>.</p>
