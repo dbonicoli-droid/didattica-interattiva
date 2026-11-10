@@ -40,6 +40,7 @@ Il documento si apre adattato alla larghezza. Scorri verso il basso; usa lo zoom
 
 ## Materiali collegati
 
+- [Mappe di Karnaugh](2026-11-10-mappe-di-karnaugh.qmd)
 - [Correzione compito 3A ETC Fila A](2026-11-10-correzione-compito-3a-etc-fila-a.qmd)
 - [Sistemi · Modulo 1: circuiti e schemi a blocchi](../../corsi/sistemi-automatici/moduli/modulo-1.qmd#circuiti-ingresso-uscita)
 - [Sistemi · Modulo 2: logica e comandi](../../corsi/sistemi-automatici/moduli/modulo-2.qmd)
