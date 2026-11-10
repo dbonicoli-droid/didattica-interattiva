@@ -8,6 +8,11 @@
 </header>
 <div id="news-feed" class="news-feed" tabindex="0" role="region" aria-label="Aggiornamenti recenti: scorri per leggere le altre notizie">
 <article class="news-item">
+<time datetime="2026-11-10T15:52:53+01:00">10/11/2026 · 15:52</time>
+<h3><a href="lezioni/index.qmd">Nuovi materiali: compito, correzione e funzioni logiche</a></h3>
+<p><a href="lezioni/2026-2027/2026-11-10-compito-3a-etc-fila-a.qmd">Compito 3A ETC · Fila A</a> e <a href="lezioni/2026-2027/2026-11-10-correzione-compito-3a-etc-fila-a.qmd">relativa correzione</a>; aggiunti anche gli appunti di <a href="lezioni/2026-2027/2026-11-10-funzioni-logiche.qmd">Funzioni Logiche</a>. Tutti consultabili e scaricabili in PDF.</p>
+</article>
+<article class="news-item">
 <time datetime="2026-10-29T18:01+01:00">29/10/2026 · 18:01</time>
 <h3><a href="corsi/sta-elettrotecnica/verifica.qmd">S&amp;TA: ripasso e circuiti svolti</a></h3>
 <p>Vero/falso e domande a scelta multipla, serie, parallelo e due disposizioni del circuito misto: formule, passaggi e risultati.</p>
